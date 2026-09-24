@@ -1,0 +1,30 @@
+\begin{table}[tp]
+\centering
+\caption{Partial Identification of $M^*(C)$ beyond the Design: Illustration}
+\label{tab:ra5-pi}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}cccccc@{}}
+\toprule
+ & Path slope & $M^*(10^{24})$ & \multicolumn{3}{c}{Share of models} & Median bounds \\
+\cmidrule(lr){4-6}
+Assumption on $M^*(C)$ & $e$ & bounds & $w>1$ & $w<1$ & not identified & on $w$ \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A. Anchor: Chinchilla IsoFLOP minima (largest budget $2.9\times10^{21}$ FLOP)}} \\
+Normal inputs only & $[-1.000,1.000]$ & [0.03, 12{,}651] & 0.31 & 0.00 & 0.69 & [0.42, 164.0] \\
+Slope in cross-sweep range & $[-0.140,0.260]$ & [5.0, 168] & 0.77 & 0.01 & 0.21 & [1.58, 16.1] \\
+Cross-sweep range + $M^*$ nondecreasing & $[0.000,0.260]$ & [11.4, 168] & 0.77 & 0.02 & 0.21 & [1.58, 10.9] \\
+Anchor's own slope persists (95\% CI) & $[-0.164,0.172]$ & [4.3, 100] & 0.83 & 0.01 & 0.16 & [1.77, 17.2] \\
+Parametric extrapolation (point) & $0.005$ & 21.1 & 0.97 & 0.03 & 0.00 & [2.69, 7.2] \\
+\multicolumn{7}{@{}l}{\textit{Panel B. Anchor: Llama 3 IsoFLOP minima (largest budget $10^{22}$ FLOP)}} \\
+Normal inputs only & $[-1.000,1.000]$ & [0.12, 4{,}020] & 0.34 & 0.00 & 0.66 & [0.83, 74.1] \\
+Slope in cross-sweep range & $[-0.140,0.260]$ & [6.4, 133] & 0.81 & 0.01 & 0.18 & [1.71, 14.8] \\
+Cross-sweep range + $M^*$ nondecreasing & $[0.000,0.260]$ & [12.2, 133] & 0.81 & 0.02 & 0.17 & [1.71, 11.8] \\
+Anchor's own slope persists (95\% CI) & $[-0.095,0.236]$ & [7.9, 119] & 0.84 & 0.02 & 0.14 & [1.74, 13.4] \\
+Parametric extrapolation (point) & $0.074$ & 31.3 & 0.90 & 0.10 & 0.00 & [2.50, 6.2] \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Identified sets from Online Appendix A, Proposition A11: $\ln M^*(C)\in[\underline\mu+e_L\ln(C/C_J),\ \bar\mu+e_U\ln(C/C_J)]$ for $C>C_J$, where $[\underline\mu,\bar\mu]$ is a 95 percent interval for $\ln M^*$ at the largest budget $C_J$ (path fitted to the IsoFLOP minima by OLS; wild bootstrap-$t$ with HC2-rescaled residuals, HC2 standard errors and Webb weights, $B=9{,}999$; simulated coverage at these nine- and ten-point designs is about 90 percent) and $e=d\ln M^*/d\ln C=1-2a$. Normal inputs: $e\in[-1,1]$; cross-sweep range: $a\in[0.37,0.57]$; point extrapolation uses the fitted path without sampling error. Shares are of the verified-sample models with $C>C_J$ (149 for Chinchilla, 137 for Llama 3), in each model's own parameter and token conventions (units are not harmonized). The sign of $w-1$ equals the sign of $\ln M-\ln M^*(C)$ for any technology with single-peaked IsoFLOP profiles; median bounds on $w$ use $\ln w=(1/\sigma^*-1)\ln(M/M^*(C))$ with $\sigma^*\in[0.6,0.75]$ (the medians of the models' lower and upper bounds). Illustration of the logic only; the paper's application with harmonized units and lab-own anchors is in Section IV.\end{tablenotes}
+\begin{tablenotes}[Source]Authors' calculations from \texttt{output/tables/m1\_chinchilla\_a2\_minima.csv}, \texttt{m1\_chinchilla\_labs\_a2\_minima.csv} and \texttt{m3\_wedge\_models.csv}; \texttt{code/analysis/ra5\_theory}.\end{tablenotes}
+\end{table}

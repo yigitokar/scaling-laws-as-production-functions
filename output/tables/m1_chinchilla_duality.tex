@@ -1,0 +1,46 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Duality: Approaches 1, 2 and 3 as Cost Function, Factor Demand and Primal}
+\label{tab:m1_duality}
+\begin{threeparttable}
+\begin{tabular}{lcccccc}
+\toprule
+ & A2/A1 & A1, $E$ fixed & A3 analytic & A3 design &  &  \\
+\midrule
+\multicolumn{7}{l}{\textit{Panel A. Dual objects, $n=240$ (standard errors: within-budget stratified bootstrap, 300 draws)}} \\
+Path slope $a$ & 0.4977 (0.0202) & 0.4977 & 0.5139 (0.0177) & 0.5152 (0.0199) &  &  \\
+Path level $\ln N^*(\bar C)$ & 20.5893 (0.0266) & 20.5893 & 20.5277 (0.0358) & 20.5597 (0.0451) &  &  \\
+Frontier exponent $\gamma$ & 0.1682 (0.0075) & 0.1814 & 0.1785 (0.0048) & 0.1769 (0.0061) &  &  \\
+Frontier level $L^*(\bar C)$ & 2.5570 (0.0022) & 2.5537 & 2.5621 (0.0013) & 2.5627 (0.0019) &  &  \\
+\multicolumn{7}{l}{\textit{Panel B. Wald tests of the cross-equation restrictions: statistic (p-value)}} \\
+\textit{Null technology} & \textit{Path} ($\chi^2_2$) & \textit{Path}, boot.\ $p$ & \textit{Frontier} ($\chi^2_2$) & \textit{All} ($\chi^2_4$) & $a_{A2}-a_0$ & $t$ (OLS) \\
+\textit{$n=240$, stratified pairs bootstrap} &  &  &  &  &  &  \\
+\quad A3 (this fit), analytic & 6.8 (0.033) & 0.053/0.047 & 16.7 ($<$0.001) & 21.5 ($<$0.001) & $-$0.016 & $-$0.64 (0.542) \\
+\quad A3 (this fit), design-consistent & 2.9 (0.238) & 0.233/0.249 & 20.7 ($<$0.001) & 23.8 ($<$0.001) & $-$0.017 & $-$0.69 (0.512) \\
+\quad Hoffmann (fixed), analytic & 53.5 ($<$0.001) & 0.010/0.010 & 7.7 (0.022) & 65.2 ($<$0.001) & 0.041 & 1.63 (0.146) \\
+\quad Hoffmann (fixed), design & 15.6 ($<$0.001) & 0.060/0.060 & 14.4 ($<$0.001) & 33.1 ($<$0.001) & 0.042 & 1.65 (0.143) \\
+\quad Besiroglu (fixed), analytic & 13.5 (0.001) & 0.027/0.017 & 32.0 ($<$0.001) & 39.2 ($<$0.001) & $-$0.015 & $-$0.59 (0.574) \\
+\quad Besiroglu (fixed), design & 4.3 (0.118) & 0.176/0.156 & 42.5 ($<$0.001) & 48.7 ($<$0.001) & $-$0.016 & $-$0.64 (0.543) \\
+\textit{$n=240$, wild, fixed design bootstrap} &  &  &  &  &  &  \\
+\quad A3 (this fit), analytic & 5.3 (0.071) & 0.357/0.259 & 17.2 ($<$0.001) & 18.3 (0.001) & $-$0.016 & $-$0.64 (0.542) \\
+\quad A3 (this fit), design-consistent & 2.1 (0.355) & 0.698/0.606 & 18.2 ($<$0.001) & 18.6 ($<$0.001) & $-$0.017 & $-$0.69 (0.512) \\
+\quad Hoffmann (fixed), analytic & 15.6 ($<$0.001) & 0.055/0.080 & 7.5 (0.023) & 19.4 ($<$0.001) & 0.041 & 1.63 (0.146) \\
+\quad Hoffmann (fixed), design & 7.9 (0.019) & 0.209/0.377 & 10.8 (0.005) & 15.9 (0.003) & 0.042 & 1.65 (0.143) \\
+\quad Besiroglu (fixed), analytic & 5.3 (0.072) & 0.406/0.284 & 20.5 ($<$0.001) & 22.2 ($<$0.001) & $-$0.015 & $-$0.59 (0.574) \\
+\quad Besiroglu (fixed), design & 2.1 (0.356) & 0.746/0.628 & 21.9 ($<$0.001) & 22.2 ($<$0.001) & $-$0.016 & $-$0.64 (0.543) \\
+\textit{$n=245$, stratified pairs bootstrap} &  &  &  &  &  &  \\
+\quad A3 (this fit), analytic & 15.9 ($<$0.001) & 0.023/0.023 & 14.0 ($<$0.001) & 27.2 ($<$0.001) & $-$0.079 & $-$2.92 (0.022) \\
+\quad A3 (this fit), design-consistent & 11.6 (0.003) & 0.054/0.080 & 16.8 ($<$0.001) & 24.8 ($<$0.001) & $-$0.075 & $-$2.78 (0.027) \\
+\quad Hoffmann (fixed), analytic & 61.7 ($<$0.001) & 0.030/0.013 & 12.7 (0.002) & 72.3 ($<$0.001) & 0.029 & 1.06 (0.323) \\
+\quad Hoffmann (fixed), design & 20.3 ($<$0.001) & 0.070/0.067 & 15.8 ($<$0.001) & 35.8 ($<$0.001) & 0.027 & 1.01 (0.346) \\
+\quad Besiroglu (fixed), analytic & 20.3 ($<$0.001) & 0.040/0.020 & 18.2 ($<$0.001) & 33.1 ($<$0.001) & $-$0.027 & $-$1.00 (0.349) \\
+\quad Besiroglu (fixed), design & 9.5 (0.009) & 0.107/0.211 & 20.4 ($<$0.001) & 25.6 ($<$0.001) & $-$0.028 & $-$1.03 (0.339) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Approach 2 (conditional factor demand): per-budget parabola of $L$ in $\ln N$ on the IsoFLOP-profile runs, argmins regressed on $\ln(C/6)$. Approach 1 (inverse cost function): $L^*_b=E+K(C_b/6)^{-\gamma}$ fitted by NLS to the 9 per-budget minima (column 2 fixes $E$ at the Approach-3 value). Approach 3: Huber-LSE primal. ``Analytic'': closed forms $a=\beta/(\alpha+\beta)$, $\gamma=\alpha\beta/(\alpha+\beta)$, $N^*=G(C/6)^a$, $L^*=E+K(C/6)^{-\gamma}$. ``Design'': the Approach-2/1 procedure applied to the Approach-3 fitted values at the observed design (removes the finite-grid bias of parabola fits, \citealt{czech2026problems}). $\bar C$ = geometric mean of the IsoFLOP budgets. Wald statistics use the bootstrap covariance of the difference; for published parameter sets \citep{hoffmann2022training,besiroglu2024chinchilla} only the Approach-2/1 side is random. Path = $(a,\ln N^*(\bar C))$; frontier = $(\gamma,L^*(\bar C))$. Wald covariances are outlier-robust (IQR scales, Spearman correlations) because parabola argmins in resampled designs are heavy-tailed; SD-based versions are in the CSV. Main scheme: within-budget stratified pairs bootstrap (300 draws); the fixed-design wild bootstrap (400 Rademacher draws on the Approach-3 log residuals) is a sensitivity check (it flips the sign of the gross outliers at the $10^{19}$ budget). Last two columns: difference between the Approach-2 path slope and the null's slope, and its $t$-statistic using the classical OLS standard error of the 9-point path regression (7 d.f.; it treats the null slope as known). ``Boot.\ $p$'': bootstrap-calibrated $p$-value of the path statistic (critical value from the bootstrap distribution of the same quadratic form recentred at the estimate, instead of $\chi^2_2$), with the robust / SD covariance; the $\chi^2$ $p$-values depend strongly on the covariance choice because the resampled argmins are heavy-tailed, the calibrated ones do not. Bootstrap-free benchmark (fixed design, iid normal argmin errors): regressing the 9 argmin gaps on $[1,\ln C_b]$ and testing both coefficients, A3 (this fit) $F=0.45$ ($p=0.653$); Hoffmann $F=5.29$ ($p=0.040$); Besiroglu $F=0.43$ ($p=0.664$) ($F_{2,7}$).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

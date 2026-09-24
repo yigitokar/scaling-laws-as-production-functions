@@ -1,0 +1,55 @@
+\begin{table}[tp]
+\centering
+\caption{Compute-Only Estimators: Measurement Error, Reverse Regression and Instruments}
+\label{tab:app-compute}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l cccc l@{}}
+\toprule
+ & Obs. & Exp. & Bias & $\lambda$, $R^2$, $F$ & AR set; $\hat\theta/R^2$ \\
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel A. HellaSwag, 57 models (benchmark including OLMo-2)}} \\
+OLS, EIV, $\sigma_u=0.29$ & 0.335 & 0.329 & 0.006 & 0.980 &  \\
+ & (0.038) & (0.007) & (0.039) [0.90] &  &  \\
+Family FE, EIV, $\sigma_u=0.29$ & 0.461 & 0.409 & 0.052 & 0.955 &  \\
+ & (0.047) & (0.013) & (0.049) [0.30] &  &  \\
+Family FE, EIV, $\sigma_u=0.67$ & 0.576 & 0.409 & 0.166 & 0.766 &  \\
+ & (0.059) & (0.013) & (0.060) [0.12] &  &  \\
+Family FE, EIV, $\sigma_u=0.67$, $n-1$ & 0.858 & 0.409 & 0.448 & 0.514 &  \\
+ & (0.088) & (0.013) & (0.089) [0.016] &  &  \\
+Reverse regression & 0.560 & 0.352 & 0.209 & 0.585 & $0.328/0.585$ \\
+ & (0.126) & (0.006) &  &  &  \\
+Reverse, family FE & 0.580 & 0.432 & 0.147 & 0.760 & $0.441/0.760$ \\
+ & (0.122) & (0.012) &  &  &  \\
+IV, frontier FLOP/\$ ($n=57$) & 0.724 & 0.012 & 0.712 & 0.90 & $(-\infty,\infty)$ \\
+ &  & (0.047) &  &  & $(-\infty,\infty)$ \\
+IV, frontier, developer FE ($n=57$) & 8.535 & $-$2.287 & 10.822 & 0.01 & $(-\infty,\infty)$ \\
+ &  & (0.190) &  &  & $(-\infty,\infty)$ \\
+IV, own hardware ($n=10$) & $-$0.090 & 0.195 & $-$0.285 & 14.3 & $[-1.50,0.34]$ \\
+ &  & (0.014) &  &  & $[-0.94,0.27]$ \\
+\addlinespace[3pt]
+\multicolumn{6}{@{}l}{\textit{Panel B. HellaSwag, 20 models (strictly experimental benchmark)}} \\
+OLS, EIV, $\sigma_u=0.29$ & 0.417 & 0.430 & $-$0.013 & 0.973 &  \\
+ & (0.019) & (0.007) & (0.020) [0.44] &  &  \\
+Family FE, EIV, $\sigma_u=0.29$ & 0.488 & 0.464 & 0.024 & 0.969 &  \\
+ & (0.055) & (0.010) & (0.056) [0.65] &  &  \\
+Reverse regression & 0.551 & 0.442 & 0.109 & 0.737 & $0.406/0.737$ \\
+ & (0.129) & (0.006) &  &  &  \\
+Reverse, family FE & 0.505 & 0.476 & 0.029 & 0.937 & $0.473/0.937$ \\
+ & (0.081) & (0.009) &  &  &  \\
+IV, frontier FLOP/\$ ($n=20$) & 0.008 & 0.384 & $-$0.376 & 5.15 & $(-\infty,\infty)$ \\
+ &  & (0.014) &  &  & $[-1.85,0.27]$ \\
+IV, frontier, developer FE ($n=20$) & $-$0.237 & 0.332 & $-$0.569 & 3.09 & $(-\infty,\infty)$ \\
+ &  & (0.017) &  &  & $(-\infty,\infty)$ \\
+IV, own hardware & \multicolumn{5}{l}{fewer than 8 models with the instrument} \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+Compute-only estimators of $\theta_C$ on the design-matched samples of Table~\ref{tab:app-matched}. EIV: slope divided by the reliability $\lambda=1-\sigma_u^2/\text{Var}(\ln C)$ (column 4), with $\text{Var}(\ln C)$ pooled or within family; the within-family variance is $\sum\tilde c_i^2/(n-F)$, net of the $F$ family means. $\sigma_u=0.29$ is the standard deviation of $\ln(C_{\text{hw}}/6ND)$ across the 27 main-sample models with hardware-time records (Table~\ref{tab:app-reliability}), an upper bound on the error in $\ln 6ND$; $\sigma_u=\ln3/1.645$ is Epoch's `Confident' class, which describes the uncertainty of Epoch's own estimate, not of $6ND$. `$n-1$': the within-family variance computed with an $n-1$ denominator, as in an earlier version of this paper (reliability 0.514 instead of 0.766 for the same $\sigma_u$). Exp.\ applies the same estimator to the experimental outputs, which are built from the same measured inputs and need no correction. Brackets: restricted wild-cluster bootstrap-$t$ $p$-values for zero bias (CR1-studentized, developer clusters, Webb weights, 9,999 draws, each with an independent draw of the benchmark). Reverse regression: $1/b$ from regressing $\ln C$ on the output. By construction $1/b=\hat\theta_C/R^2$ of the forward regression (column 5), so its gap to Exp.\ measures the output variance not explained by compute (productivity dispersion and noise), not a bias. IV: $\ln C$ instrumented by the log FLOP/s per dollar of the best data-center accelerator released six months before the model, or of the model's own training hardware (Epoch); $F$: cluster-robust first-stage statistic; Anderson--Rubin sets by inversion over $\theta_C\in[-3,4]$ with $t(G-1)$ critical values (second line: normal critical values); $(-\infty,\infty)$: the set covers the whole grid.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations; see Table~\ref{tab:app-matched}; hardware records from \citet{epochai2026data}.
+\end{tablenotes}
+\end{table}

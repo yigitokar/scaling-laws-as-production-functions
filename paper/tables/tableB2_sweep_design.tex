@@ -1,0 +1,42 @@
+% Online Appendix Table B2: design of our controlled experiment (code/sweep/run_grid.py, gpt_mlx.py, lr_fit.json).
+\begin{table}[tp]
+\centering
+\caption{Design of the Controlled Experiment}
+\label{tab:app_sweepdesign}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}rrrrcccccc@{}}
+\toprule
+ & & \multicolumn{2}{c}{$N$ (millions)} & Embedding & Peak LR & Budgets & \multicolumn{2}{c}{$M=D/N$} & FLOP per \\
+\cmidrule(lr){3-4}\cmidrule(lr){8-9}
+Width & Layers & Non-emb. & Total & share & ($10^{-3}$) & $D_k$ (M) & Non-emb. & Total & $6N_{\mathrm{ne}}D$ \\
+\midrule
+128 & 2 & 0.394 & 1.44 & 0.73 & 5.72 & 25--800 & 63--2,031 & 17--555 & 3.83 \\
+192 & 3 & 1.33 & 2.90 & 0.54 & 3.97 & 25--800 & 19--602 & 8.6--276 & 2.29 \\
+256 & 4 & 3.15 & 5.25 & 0.40 & 3.07 & 25--800 & 7.9--254 & 4.8--153 & 1.75 \\
+320 & 5 & 6.15 & 8.77 & 0.30 & 2.51 & 25--800 & 4.1--130 & 2.9--91 & 1.49 \\
+384 & 6 & 10.6 & 13.8 & 0.23 & 2.13 & 25--800 & 2.4--75 & 1.8--58 & 1.35 \\
+448 & 7 & 16.9 & 20.5 & 0.18 & 1.85 & 25--400 & 1.5--24 & 1.2--19 & 1.27 \\
+512 & 8 & 25.2 & 29.4 & 0.14 & 1.64 & 25--400 & 0.99--16 & 0.85--14 & 1.21 \\
+640 & 10 & 49.2 & 54.4 & 0.10 & 1.35 & 25--200 & 0.51--4.1 & 0.46--3.7 & 1.14 \\
+\addlinespace
+\multicolumn{10}{@{}l}{\textit{High-$M$ runs with a four-layer floor (extension data)}} \\
+128 & 4 & 0.788 & 1.84 & 0.57 & 5.72 & 200--3,200 & 254--4,063 & 109--1,743 & 2.50 \\
+256 & 4 & 3.15 & 5.25 & 0.40 & 3.07 & 200--3,200 & 64--1,017 & 38--610 & 1.75 \\
+\bottomrule
+\end{tabular*}
+\vspace{3pt}
+\begin{tablenotes}
+Main grid: each width is trained once per corpus (FineWeb-Edu and FineWeb) with a constant-learning-rate trunk. The
+token budgets $D_k$ are taken from $\{25,50,100,200,400,800\}$ million; each budget below the largest is a cooldown
+branch started at $0.8D_k$, and the largest is the trunk's own cooldown, which gives 44 endpoints per corpus. There are $d_{\rm model}/64$ attention heads of dimension 64; sequence length 256; batch $64\times256$ tokens.
+Non-embedding parameters are $n_{\rm layer}(12d_{\rm model}^2+2d_{\rm model})+d_{\rm model}$ for width $d_{\rm model}$ and $n_{\rm layer}$ layers; the tied embedding adds $8{,}192\,d_{\rm model}$. The
+peak learning rate is $3.07\times10^{-3}(d_{\rm model}/256)^{-0.90}$. The last column is training FLOP per token, including
+attention and the output projection, relative to $6N_{\mathrm{ne}}$; relative to $6N$ with the total count it is
+1.03--1.07 at every shape. High-$M$ runs: budgets $\{200,800,1{,}600,3{,}200\}$ million on a longer data stream (the
+width-256 shape on FineWeb-Edu only). Further runs, all on both corpora unless stated: learning-rate calibration for
+FineWeb (widths 128, 320 and 512 at four peak rates, 50 million tokens); peak rates of 0.5 and 2 times the rule at
+width 128 over the full budget ladder and at width 640 at 25 and 50 million tokens; a second seed at width 128 with
+200--800 million tokens; and two further seeds at widths 128, 256 and 384 with 50--200 million tokens.
+\end{tablenotes}
+\end{table}

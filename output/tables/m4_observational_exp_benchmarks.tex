@@ -1,0 +1,34 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Experimental elasticities of benchmark log-odds (designed sweeps)}
+\label{tab:m4_exp_benchmarks}
+\begin{tabular}{lccccccccccccc}
+\toprule
+\multicolumn{1}{c}{} & \multicolumn{3}{c}{HellaSwag} & \multicolumn{3}{c}{ARC-Challenge} & \multicolumn{3}{c}{Winogrande} & \multicolumn{3}{c}{Composite} & \\ \cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}
+ & $\theta_N$ & $\theta_D$ & $\theta_C$ & $\theta_N$ & $\theta_D$ & $\theta_C$ & $\theta_N$ & $\theta_D$ & $\theta_C$ & $\theta_N$ & $\theta_D$ & $\theta_C$ & Runs \\
+\midrule
+OLMo ladder & 0.48 & 0.44 & 0.46 & 0.71 & 0.54 & 0.62 & 0.39 & 0.58 & 0.49 & 0.47 & 0.50 & 0.48 & 30 \\
+ & (0.03) & (0.03) & (0.02) & (0.14) & (0.09) & (0.05) & (0.21) & (0.11) & (0.07) & (0.06) & (0.05) & (0.03) &  \\
+OLMo ladder + OLMo-2 & 0.46 & 0.35 & 0.41 & 0.69 & 0.43 & 0.56 & 0.38 & 0.52 & 0.45 & 0.45 & 0.40 & 0.43 & 32 \\
+ & (0.04) & (0.04) & (0.03) & (0.16) & (0.09) & (0.05) & (0.21) & (0.10) & (0.07) & (0.07) & (0.06) & (0.03) &  \\
+Gadre et al. (N$\geq$0.1B) & 0.51 & 0.51 & 0.51 & 0.65 & 0.12 & 0.38 & 0.58 & 0.27 & 0.43 & 0.55 & 0.47 & 0.51 & 56 \\
+ & (0.05) & (0.03) & (0.02) & (0.05) & (0.04) & (0.03) & (0.09) & (0.06) & (0.03) & (0.06) & (0.03) & (0.02) &  \\
+Gadre et al. & 0.48 & 0.35 & 0.41 & 0.21 & 0.05 & 0.13 & 0.22 & 0.11 & 0.17 & 0.34 & 0.24 & 0.29 & 104 \\
+ & (0.04) & (0.04) & (0.02) & (0.06) & (0.03) & (0.03) & (0.07) & (0.05) & (0.03) & (0.05) & (0.04) & (0.02) &  \\
+DataDecide &  &  & 0.46 &  &  & 0.51 &  &  & 0.45 &  &  & 0.52 & 525 \\
+ &  &  & (0.01) &  &  & (0.02) &  &  & (0.02) &  &  & (0.01) &  \\
+\midrule
+Pythia (0-shot), ARC-C / WG &  &  &  & 0.68 & 0.46 &  & 0.59 & 0.48 &  &  &  &  & 15 / 210 \\
+ &  &  &  & (0.06) & (0.11) &  & (0.09) & (0.08) &  &  &  &  &  \\
+Pythia (5-shot), ARC-C / WG &  &  &  & 0.74 & 0.42 &  & 0.67 & 0.54 &  &  &  &  & 15 / 210 \\
+ &  &  &  & (0.05) & (0.09) &  & (0.09) & (0.10) &  &  &  &  &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Global log-linear fits $y=a+\theta_N\ln N+\theta_D\ln D$ on designed sweeps, $y=\text{logit}((acc-\text{chance})/(1-\text{chance}))$; $\theta_C=(\theta_N+\theta_D)/2$ is the elasticity along a proportional ray. OLMo ladder: 190M--3B $\times$ 0.5--10$\times$ Chinchilla tokens (30 runs incl.\ reruns), OLMES 5-shot cloze formats; + OLMo-2 7B (3.9T) and 13B (5.0T). Gadre et al.: 3 corpora (corpus effects), 11M--6.9B, 5--640 tokens/parameter, LLM-foundry ICL evals. DataDecide: 25 recipes (recipe effects, SEs clustered by recipe), final checkpoints with $N\geq$60M on the $D=100N$ ray, so only $\theta_C$ is identified. Pythia: $\theta_N$ from the 15 final models with released evals (no pythia-1b standard) at $D=300$B (dedup dummy); $\theta_D$ from within-run checkpoints $\geq$27B tokens (model effects; confounded by the cosine schedule), composite = ARC-C and Winogrande (the released Pythia evals contain no HellaSwag). HC1 standard errors in parentheses.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

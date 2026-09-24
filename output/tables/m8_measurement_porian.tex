@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{threeparttable}
+\caption{Measurement and Flexible Inputs in the Kaplan--Chinchilla Allocation Exponent}
+\label{tab:m8_porian}
+\begin{tabular}{llccccccc}
+\toprule
+\multicolumn{9}{l}{\textit{Panel A. Porian et al. (2024) step-by-step path, re-estimated from the 975 released runs}} \\
+\addlinespace
+ & & \multicolumn{3}{c}{RefinedWeb} & \multicolumn{3}{c}{OpenWebText2} & $N^*(5.88\mathrm{e}23)$ \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Step & IO concept & $\hat a$ & Porian & $\Delta \hat a$ & $\hat a$ & Porian & $\Delta \hat a$ & (billions, RW) \\
+\midrule
+1. Kaplan reproduction & Baseline & 0.837 & 0.835 &  & 0.862 & 0.864 &  & 3,089 \\
+ & & [0.82, 0.85] & [0.82, 0.85] & & [0.82, 0.90] & [0.82, 0.90] & &  \\
+2. + head FLOPs in $N$, $C$ & Measurement & 0.705 & 0.706 & $-$0.132 & 0.700 & 0.699 & $-$0.162 & 767 \\
+ & & [0.69, 0.72] & [0.69, 0.72] & & [0.67, 0.72] & [0.66, 0.72] & &  \\
+3. + warmup $\propto N$ & Flexible: warmup & 0.602 & 0.602 & $-$0.103 & 0.602 & 0.603 & $-$0.098 & 291 \\
+ & & [0.59, 0.62] & [0.59, 0.62] & & [0.57, 0.63] & [0.57, 0.63] & &  \\
+4. + cosine decay & Flexible: schedule & 0.572 & 0.571 & $-$0.030 & 0.574 & 0.574 & $-$0.028 & 183 \\
+ & & [0.56, 0.59] & [0.56, 0.59] & & [0.54, 0.60] & [0.54, 0.61] & &  \\
+5. + tuned LR, $B$, $\beta_2$ & Flexible: tuned & 0.496 & 0.497 & $-$0.075 & 0.517 & 0.518 & $-$0.057 & 76 \\
+ & & [0.49, 0.50] & [0.49, 0.50] & & [0.49, 0.54] & [0.49, 0.54] & &  \\
+Kaplan-adjusted & Mismeasured & 0.711 & 0.717 & & & & & 725 \\
+ & & [0.70, 0.72] & & & & & &  \\
+\addlinespace
+\multicolumn{9}{l}{\textit{Panel B. Same runs, only the counting convention for $N$ and $C=6ND$ changes (train loss)}}  \\
+ & & \multicolumn{3}{c}{RefinedWeb} & \multicolumn{3}{c}{OpenWebText2} &  \\
+ & & Kaplan setup & Tuned & $\Delta$ & Kaplan setup & Tuned & $\Delta$ &  \\
+Kaplan: non-embedding & & 0.837 & 0.620 & 0.217 & 0.862 & 0.631 & 0.231 &  \\
+ & & (0.006) & (0.005) & & (0.020) & (0.017) & &  \\
+Standard: + head & & 0.700 & 0.502 & 0.198 & 0.696 & 0.501 & 0.194 &  \\
+ & & (0.006) & (0.004) & & (0.017) & (0.012) & &  \\
++ head + attention & & 0.717 & 0.505 & 0.212 & 0.713 & 0.507 & 0.206 &  \\
+ & & (0.006) & (0.004) & & (0.018) & (0.013) & &  \\
+Total: + input embedding & & 0.661 & 0.460 & 0.202 & 0.670 & 0.471 & 0.199 &  \\
+ & & (0.007) & (0.003) & & (0.017) & (0.012) & &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} $a$ is the allocation exponent in $N^*\propto C^{a}$ estimated by the IsoFLOP method of Porian et al. (2024), re-implemented from their released runs (\texttt{experiment\_results.pickle.xz}, 975 runs, 16 architectures of 5M--901M parameters, FLOP grid $1.25\mathrm{e}16\cdot 2^i$, $i=0,\dots,11$): loss at each budget by log-log interpolation along each run, Akima interpolation across model sizes, IsoFLOP argmin, and weighted log-OLS of $N^*$ on $C$ with weights from a 1,000-draw noise-and-interpolate bootstrap (noise s.d.\ 0.002 RW, 0.01 OWT2, as in their code). Brackets: 95\% bootstrap intervals; `Porian' = their Table 1. Panel A steps 2--5 use validation loss and the standard count (non-embedding parameters plus the head); step 1 uses the smoothed train loss and Kaplan's count. Panel B holds the runs fixed (smoothed train loss) and changes only how $N$ and $C$ are counted; `Kaplan setup' = untuned runs with Kaplan's 1.57B-token warmup, `Tuned' = per-size tuned LR, batch and $\beta_2$ with constant LR; $\Delta$ = Kaplan setup minus tuned. Counts: Kaplan = non-embedding parameters, no head FLOPs; standard = + unembedding (head); attention = + attention FLOPs; total = precise body + input and positional embeddings + head (Pearce--Song). Step 2 is `input measurement' in the sense of Nerlove (1963) and Collard-Wexler and De Loecker (2016); `Kaplan-adjusted' uses tuned hyperparameters with Kaplan's count and 1.57B-token warmup (Porian et al., App.~H), i.e.\ it keeps both the mismeasured inputs and the long warmup. Standard errors (bootstrap) in parentheses.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,137 @@
+param,by,unit,share
+theta_N,developer,Meta,0.3636073205068322
+theta_N,developer,BigScience,0.23412994821184993
+theta_N,developer,EleutherAI,0.20230476510111225
+theta_N,developer,Microsoft,0.04866336014102139
+theta_N,developer,OpenLM Research,0.04463105898592265
+theta_N,developer,Stability AI,0.041193747674713524
+theta_N,developer,BigCode,0.026314841186372454
+theta_N,developer,TII,0.01624010624030123
+theta_N,developer,Together,0.013338677743172942
+theta_N,developer,Cerebras,0.007742030397516583
+theta_N,developer,01.AI,0.0009257019131972323
+theta_N,developer,AI2,0.0009084418979877288
+theta_N,developer,DeepSeek,3.217134701837596e-29
+theta_N,developer,Alibaba,1.9616675011204854e-29
+theta_N,developer,LLM360,1.2554672007171107e-29
+theta_N,developer,MosaicML,1.2554672007171107e-29
+theta_N,developer,H2O.ai,1.2554672007171107e-29
+theta_N,developer,Salesforce,1.2554672007171107e-29
+theta_N,developer,Hugging Face,1.2554672007171107e-29
+theta_N,family,OPT,0.2899945004748665
+theta_N,family,BLOOM,0.23412994821184993
+theta_N,family,Pythia,0.13382861229566456
+theta_N,family,XGLM,0.07361282003196566
+theta_N,family,GPT-Neo/J,0.06847615280544768
+theta_N,family,Phi,0.04866336014102139
+theta_N,family,StableLM,0.041193747674713524
+theta_N,family,StarCoder,0.026314841186372454
+theta_N,family,OpenLlamaV2,0.022315529492961325
+theta_N,family,OpenLlama,0.02231552949296132
+theta_N,family,Falcon,0.01624010624030123
+theta_N,family,RedPajama-INCITE-Base,0.013338677743172942
+theta_N,family,Cerebras-GPT,0.007742030397516583
+theta_N,family,Yi,0.0009257019131972323
+theta_N,family,OLMo,0.0009084418979877288
+theta_N,family,StarCoder2,1.9616675011204854e-29
+theta_N,family,Qwen,1.9616675011204854e-29
+theta_N,family,Yi-1.5,1.9616675011204854e-29
+theta_N,family,Yi-200K,1.9616675011204854e-29
+theta_N,family,DeepSeek-Coder,1.9616675011204854e-29
+theta_N,family,CodeLlama,1.9616675011204854e-29
+theta_N,family,MPT,1.2554672007171107e-29
+theta_N,family,Llama-2,1.2554672007171107e-29
+theta_N,family,Llama,1.2554672007171107e-29
+theta_N,family,SmolLM,1.2554672007171107e-29
+theta_N,family,H2O-Danube,1.2554672007171107e-29
+theta_N,family,DeepSeek-LLM,1.2554672007171107e-29
+theta_N,family,Codegen,1.2554672007171107e-29
+theta_N,family,BTLM,1.2554672007171107e-29
+theta_N,family,Amber,1.2554672007171107e-29
+theta_N,loo_bias_developer_dropped,01.AI,0.20280592920882068
+theta_N,loo_bias_developer_dropped,AI2,0.20264806581450973
+theta_N,loo_bias_developer_dropped,Alibaba,0.20285276377335765
+theta_N,loo_bias_developer_dropped,BigCode,0.20660995435776613
+theta_N,loo_bias_developer_dropped,BigScience,0.20996088347067904
+theta_N,loo_bias_developer_dropped,Cerebras,0.20115572239459445
+theta_N,loo_bias_developer_dropped,DeepSeek,0.2028527637732665
+theta_N,loo_bias_developer_dropped,EleutherAI,0.21043630942468555
+theta_N,loo_bias_developer_dropped,H2O.ai,0.20285276377328926
+theta_N,loo_bias_developer_dropped,Hugging Face,0.20285276377340192
+theta_N,loo_bias_developer_dropped,LLM360,0.20285276377317835
+theta_N,loo_bias_developer_dropped,Meta,0.19794738818682872
+theta_N,loo_bias_developer_dropped,Microsoft,0.22376813531010187
+theta_N,loo_bias_developer_dropped,MosaicML,0.2028527637736203
+theta_N,loo_bias_developer_dropped,OpenLM Research,0.21370432721763133
+theta_N,loo_bias_developer_dropped,Salesforce,0.2028527637737671
+theta_N,loo_bias_developer_dropped,Stability AI,0.15746233099686813
+theta_N,loo_bias_developer_dropped,TII,0.2094699500015046
+theta_N,loo_bias_developer_dropped,Together,0.20399370506671183
+theta_D,developer,Cerebras,0.3704512565807221
+theta_D,developer,Microsoft,0.28407066742713416
+theta_D,developer,Meta,0.11621241784471761
+theta_D,developer,BigScience,0.07483019685530871
+theta_D,developer,EleutherAI,0.06239911425959007
+theta_D,developer,TII,0.037621042619937976
+theta_D,developer,Stability AI,0.0276210333484285
+theta_D,developer,OpenLM Research,0.014264518295436414
+theta_D,developer,BigCode,0.008410477861681621
+theta_D,developer,AI2,0.0028423479219305634
+theta_D,developer,01.AI,0.0006764133573859152
+theta_D,developer,Together,0.0006005136277262733
+theta_D,developer,DeepSeek,1.2479922994142163e-27
+theta_D,developer,Alibaba,6.577010512241345e-28
+theta_D,developer,Hugging Face,6.577010512241345e-28
+theta_D,developer,LLM360,5.902912481900818e-28
+theta_D,developer,MosaicML,5.902912481900818e-28
+theta_D,developer,H2O.ai,5.902912481900818e-28
+theta_D,developer,Salesforce,5.902912481900818e-28
+theta_D,family,Cerebras-GPT,0.3704512565807221
+theta_D,family,Phi,0.28407066742713416
+theta_D,family,OPT,0.0926850482957263
+theta_D,family,BLOOM,0.07483019685530871
+theta_D,family,Pythia,0.042772919395582594
+theta_D,family,Falcon,0.037621042619937976
+theta_D,family,StableLM,0.0276210333484285
+theta_D,family,XGLM,0.023527369548991307
+theta_D,family,GPT-Neo/J,0.019626194864007476
+theta_D,family,StarCoder,0.008410477861681621
+theta_D,family,OpenLlama,0.0071322591477182866
+theta_D,family,OpenLlamaV2,0.007132259147718125
+theta_D,family,OLMo,0.0028423479219305634
+theta_D,family,Yi,0.000676413357385915
+theta_D,family,RedPajama-INCITE-Base,0.0006005136277262733
+theta_D,family,SmolLM,6.577010512241345e-28
+theta_D,family,DeepSeek-Coder,6.577010512241345e-28
+theta_D,family,CodeLlama,6.577010512241345e-28
+theta_D,family,BTLM,6.577010512241345e-28
+theta_D,family,Qwen,6.577010512241345e-28
+theta_D,family,Yi-1.5,5.902912481900818e-28
+theta_D,family,StarCoder2,5.902912481900818e-28
+theta_D,family,Amber,5.902912481900818e-28
+theta_D,family,MPT,5.902912481900818e-28
+theta_D,family,Llama-2,5.902912481900818e-28
+theta_D,family,Llama,5.902912481900818e-28
+theta_D,family,H2O-Danube,5.902912481900818e-28
+theta_D,family,DeepSeek-LLM,5.902912481900818e-28
+theta_D,family,Codegen,5.902912481900818e-28
+theta_D,family,Yi-200K,5.902912481900818e-28
+theta_D,loo_bias_developer_dropped,01.AI,-0.2619297152220863
+theta_D,loo_bias_developer_dropped,AI2,-0.2613169881315487
+theta_D,loo_bias_developer_dropped,Alibaba,-0.2618687116855545
+theta_D,loo_bias_developer_dropped,BigCode,-0.2651053275472031
+theta_D,loo_bias_developer_dropped,BigScience,-0.2679919711788831
+theta_D,loo_bias_developer_dropped,Cerebras,-0.27975616464213876
+theta_D,loo_bias_developer_dropped,DeepSeek,-0.2618687116893416
+theta_D,loo_bias_developer_dropped,EleutherAI,-0.2682962889269729
+theta_D,loo_bias_developer_dropped,H2O.ai,-0.261868711685677
+theta_D,loo_bias_developer_dropped,Hugging Face,-0.2618687116942075
+theta_D,loo_bias_developer_dropped,LLM360,-0.26186871168645065
+theta_D,loo_bias_developer_dropped,Meta,-0.2576429967396045
+theta_D,loo_bias_developer_dropped,Microsoft,-0.3388695947535271
+theta_D,loo_bias_developer_dropped,MosaicML,-0.26186871168861725
+theta_D,loo_bias_developer_dropped,OpenLM Research,-0.2712167448829901
+theta_D,loo_bias_developer_dropped,Salesforce,-0.26186871169999265
+theta_D,loo_bias_developer_dropped,Stability AI,-0.19289449757112442
+theta_D,loo_bias_developer_dropped,TII,-0.24652210685360082
+theta_D,loo_bias_developer_dropped,Together,-0.26223759271494146

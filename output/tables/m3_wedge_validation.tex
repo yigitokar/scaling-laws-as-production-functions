@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Does Revealed Inference Demand Predict Usage?}
+\label{tab:m3_validation}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & All-time & 30-day & HF & OpenRouter & OpenRouter & LMArena \\
+ & downloads & downloads & likes & listed & providers & votes \\
+\midrule
+$\ln\hat w$, no controls & 1.54*** & 2.60*** & 0.13 & 0.11*** & 0.14*** & -0.17 \\
+ & (0.40) & (0.34) & (0.25) & (0.04) & (0.05) & (0.40) \\
+$\ln\hat w$ $|$ $\ln N$, year, age & 3.83*** & 4.04*** & 1.59** & 0.34*** & 0.50*** & 2.11** \\
+ & (0.93) & (1.05) & (0.79) & (0.12) & (0.16) & (0.84) \\
+$\ln M$ $|$ $\ln C$, year, age & 0.97*** & 1.13*** & 0.27* & 0.05* & 0.08** & 0.29* \\
+ & (0.18) & (0.19) & (0.16) & (0.03) & (0.04) & (0.16) \\
+$\ln M$ $|$ $\ln C$, year, age, developer & 0.72*** & 0.94*** & 0.29* & 0.04 & 0.06 & 0.25* \\
+ & (0.14) & (0.14) & (0.16) & (0.03) & (0.04) & (0.14) \\
+\midrule
+Models ($\ln M$ $|$ $\ln C$) & 164 & 164 & 164 & 164 & 164 & 46 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Each cell is the coefficient on the over-training measure in a separate OLS regression; standard errors clustered by developer in parentheses (*** $p<0.01$, ** $p<0.05$, * $p<0.1$). Sample B models with Hugging Face metadata (downloads summed over the base repository and the developer's official post-trained releases; snapshot 2026-09-24). OpenRouter: listed in the 2026-09-23 models snapshot (linear probability model) and number of distinct providers serving the model. LMArena: maximum cumulative vote count of the matched post-trained release in the text arena (CC-BY-4.0 leaderboard dataset). Year: release-year effects; age: log months since release. Because $\ln w$ is a function of $(\ln N,\ln D)$, the unconditional correlation confounds size; conditional on compute $C$, a higher $M$ means a smaller, cheaper-to-serve model that has \emph{higher} loss than the compute-optimal one, so a positive coefficient cannot come from quality.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

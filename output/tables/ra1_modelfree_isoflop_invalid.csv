@@ -1,0 +1,6 @@
+design,budget_C,reason,n_budget
+Llama 3,3e+21,argmin not bracketed (<2 runs on a side),6
+Llama 3,1e+22,argmin not bracketed (<2 runs on a side),6
+"Marin, Comma",3e+19,argmin not bracketed (<2 runs on a side),10
+"Marin, Comma",9e+19,no interior minimum in the window,15
+"Marin, Nemotron-CC",1.8e+18,too few runs in window,3

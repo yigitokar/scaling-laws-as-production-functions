@@ -1,0 +1,43 @@
+\begin{table}[tp]
+\centering
+\caption{How Well Is Training Compute Measured?}
+\label{tab:app-reliability}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}l ccccc@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textit{Panel A. Discrepancy between two compute measures, $\ln(C_{\text{alt}}/6ND)$}} \\
+ & Models (fam.) & Mean & S.d. & 95\% interval & MAD s.d. \\
+\cmidrule(lr){2-6}
+Hardware time (independent) & 27 (12) & 0.017 & 0.292 & $[0.197,0.409]$ & 0.296 \\
+Epoch `Hardware'/`Reported' & 14 (8) & 0.074 & 0.195 & $[0.033,0.244]$ & 0.051 \\
+Epoch operation counting & 51 (22) & 0.000 & 0.129 & $[0.029,0.205]$ & 0.015 \\
+Developer-reported FLOP & 5 (3) & $-$0.015 & 0.033 & $[0.000,0.038]$ & 0.025 \\
+\addlinespace[4pt]
+\multicolumn{6}{@{}l}{\textit{Panel B. Implied reliability of $\ln C$, $\lambda=1-\sigma_u^2/\text{Var}(\ln C)$}} \\
+ & Models & $\sigma_u$ & Pooled & Within family & Within, $n-1$ \\
+\cmidrule(lr){2-6}
+Hardware-time s.d. & 57 & 0.292 & 0.980 & 0.955 & 0.907 \\
+\quad upper 95\% bound & 57 & 0.409 & 0.961 & 0.912 & 0.818 \\
+Epoch `Hardware'/`Reported' & 57 & 0.195 & 0.991 & 0.980 & 0.959 \\
+Epoch `Confident' class & 57 & 0.668 & 0.895 & 0.766 & 0.514 \\
+\addlinespace[2pt]
+Hardware-time s.d. & 20 & 0.292 & 0.973 & 0.969 & 0.947 \\
+\quad upper 95\% bound & 20 & 0.409 & 0.948 & 0.939 & 0.895 \\
+Epoch `Hardware'/`Reported' & 20 & 0.195 & 0.988 & 0.986 & 0.976 \\
+Epoch `Confident' class & 20 & 0.668 & 0.861 & 0.838 & 0.721 \\
+\addlinespace[2pt]
+Hardware-time s.d. & 128 & 0.292 & 0.988 & 0.973 & 0.961 \\
+\quad upper 95\% bound & 128 & 0.409 & 0.977 & 0.946 & 0.924 \\
+Epoch `Hardware'/`Reported' & 128 & 0.195 & 0.995 & 0.988 & 0.983 \\
+Epoch `Confident' class & 128 & 0.668 & 0.939 & 0.857 & 0.798 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+Panel A compares $C=6ND$ (reported $N$ and $D$; exact Hugging Face parameter counts where available) with other compute measures for main-sample models matched to Epoch \citep{epochai2026data}. Only hardware time is independent of reported $N$ and $D$: chip-hours (or chips $\times$ training hours) $\times$ peak dense 16-bit FLOP/s $\times$ a common utilization of 0.3. Epoch's utilization field is back-calculated from its own compute estimate for most rows and is not used. Epoch's reported compute is itself $6ND$ (operation counting), a developer-reported count (usually $6ND$), or a geometric mean of $6ND$ and hardware time; the `Hardware'/`Reported' set, used as an independent comparison in an earlier version of this paper, mixes all three. The hardware-time s.d.\ also contains the dispersion of true utilization and any error in chip-hours, so it bounds the error s.d.\ of $\ln 6ND$ from above; its within-family value is 0.208 (6 families with two or more records). Intervals: family-cluster bootstrap, 9,999 draws; MAD s.d.: $1.4826\times$ median absolute deviation. Panel B: within-family variance $\sum\tilde c_i^2/(n-F)$, net of the $F$ family means; the last column divides by $n-1$, as an earlier version of this paper did. Within-family reliabilities assume errors independent across a family's models; an error in a family-wide token count is absorbed by the family effect.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

@@ -1,0 +1,510 @@
+% =====================================================================================================
+% Online Appendix E. Observational production functions and algorithmic progress.
+% v2 (writer appendix_E, 2026-09-24). Replaces v1 Section VI and the observational/progress parts of v1 Appendix D.
+% Sources: output/memos/ra4_obsfix(.md, _review.md) [binding where it differs from m4/m5]; m4_observational, m5_progress,
+% m6_montecarlo memos and reviews; theory from paper/sections/appendix_proofs.tex (Props. A3-A7, Cors. A2, A4, A5).
+% Numbers verified against output/tables/ra4_obsfix_*.csv, m4_observational_*.csv, m5_progress_*.csv,
+% m6_montecarlo_industry_summary.csv and data/processed/ra4_obsfix/*.json (see paper/notes/writer2_appendix_E.md).
+% Figures: ra4_obsfix_fig_matched, ra4_obsfix_fig_allocative, appE_ridge (code/paper/make_appendix_e_ridge.py; m5 ridge relabeled).
+% Tables: paper/tables/appE_*.tex (copies of output/tables/ra4_obsfix_tabE*.tex and v1 appD_attenuation/ceg_sahal,
+% with notation and cross-references updated for v2).
+% =====================================================================================================
+
+\section{Observational Production Functions and Algorithmic Progress}\label{app:obs}
+
+The main text reads developers' choices through a technology measured in designed experiments. This appendix asks the
+reverse question: what do released models, used as production data, reveal about the technology and about its change
+over time? Much of what is known about returns to compute at scale, and about the pace of algorithmic progress, comes
+from such data: regressions of benchmark scores on the inputs of models released by many developers
+\citep{ruan2024observational,maiapolo2024sloth,owen2024predictable,mertens2026secret}, and of perplexity on the inputs
+and publication dates of published models \citep{ho2024algorithmic}. In these data the firms chose the inputs, and
+\citet{whitfill2025note} and \citet{konig2026validity} warn that the estimates may be confounded.
+Section~\ref{app:obs-theory} collects the results of Online Appendix~\ref{app:proofs} that apply to such data, and the
+remaining sections take them to the data.
+
+There are four findings. First, once the design is matched, cross-lab returns to compute on HellaSwag do not differ
+detectably from the experimental technology. This is a failure to reject in a low-power joint test, not evidence of
+unbiasedness, and the split between parameters and data is not reliably estimated. Second, compute is measured well
+enough that errors in variables do not matter, but the standard remedies for transmission bias (instruments, dynamic
+panels, proxy inversion) cannot be applied to these data. Third, in the data of \citet{ho2024algorithmic} the rate of
+algorithmic progress is weakly identified: estimates lie on a ridge along which the bias of technical change trades off
+against its rate, and the published point is not the minimizer of the authors' objective. Fourth, counting only the
+elimination of under-training, the move from Kaplan-rule to Chinchilla-rule allocations raised the training-cost
+efficiency of large models by a factor of 2.0 under the reference technology of Section~\ref{sec:wedge} (1.1 to 4.9
+across technologies). The tenfold gain of \citet{gundlach2025origin} is the counterfactual cost of keeping the earlier
+rule at 2025 frontier compute, not a gain realized between eras.
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{What Cross-Lab Data Can Identify}\label{app:obs-theory}
+
+The results below, proved in Online Appendix~\ref{app:proofs}, concern a common technology with Hicks-neutral
+productivity $\omega$ that the developer knows when it chooses inputs, and log output $y=\omega+F(n,d)-\epsilon$, where
+$F$ is the technology in output units and $\epsilon$ is noise.
+
+\emph{Transmission.}---If compute responds to productivity, $c=\pi_0+\pi_1\omega+\eta$, the least-squares slope of output
+on compute is biased with the sign of $\pi_1$ (Proposition~\ref{prop:A-transmission}). The bias is upward when more
+productive developers raise more compute (funding, $\pi_1>0$) and downward when every developer trains to a common
+capability target ($\pi_1=-1/\gamma$); if the target is hit exactly, cross-lab data carry no information about the
+frontier elasticity $\gamma$. The forward and reverse regressions bracket $\gamma$ under target and exogenous budgets but
+not under funding, so the errors-in-variables bracket of \citet{klepper1984consistent} does not survive transmission
+from productivity to compute. Hicks-neutral transmission leaves the allocation exponent $a$ unbiased, because
+productivity does not move the input mix at given compute, and it compresses measured productivity dispersion.
+
+Proposition~\ref{prop:A-transmission} places runs on the expansion path. Released models are far off it
+(Section~\ref{sec:wedge}), and their log wedges enter output through the Farrell loss of Lemma~\ref{lem:ce}. Two
+consequences follow by linear projection. When the regression is run on both inputs, the Farrell loss is part of the
+technology $F$, and transmission loads on the mix only if developers' wedges covary with their productivity at given
+compute. If they do not, the projection of $\omega$ on $(n,d)$ runs along $c=\ln6+n+d$, and transmission shifts the
+two input elasticities by the same amount. If more productive developers also over-train more (or less), the two
+biases differ and can have opposite signs. When the regression is run on compute alone, it imposes equal weights on
+the two inputs, and the productivity residual inherits the Hall-type term of Corollary~\ref{cor:hall}
+(Section~\ref{app:obs-matched}).
+
+\emph{Selection.}---If a model is released only when its output clears a threshold, least squares on released models is
+attenuated. This is the classical result for truncation on the dependent variable
+\citep{goldberger1981linear,hausman1977social}. What Proposition~\ref{prop:selection} adds is the interaction with
+transmission. Under funding, mild selection leaves the upward transmission bias dominant and severe selection reverses
+it. Under target or exogenous budgets the net bias is negative, and the forward--reverse bracket survives in released
+samples.
+
+\emph{Proxies.}---Proxy estimators \citep{olley1996dynamics,levinsohn2003estimating,ackerberg2015identification} recover
+productivity by inverting a policy function, so they need a state variable, a flexible input and a timing assumption.
+Here the natural state variable is the developer's compute capacity, the provisioned cluster, which is fixed before a
+run. The flexible input is the run's split of its compute budget between $N$ and $D$, chosen at the start of the run
+given capacity and the recipe's quality. Release follows the observed outcome. The flexible input cannot proxy
+Hicks-neutral productivity, because at given compute the policy function is flat in $\omega$
+(Proposition~\ref{prop:proxy}(ii)). Compute itself fails as a Levinsohn--Petrin-type proxy for a different reason.
+Under a strictly monotone budget rule the inputs on the path are functions of $c$ alone, so a control function in $c$
+absorbs the technology: this is the functional-dependence problem of \citet{ackerberg2015identification}
+(Proposition~\ref{prop:proxy}(iii)). Identification would then require timing, for example compute committed before a
+recipe innovation, or an observed capacity investment, which public data do not record. Under a capability target the
+mix chosen for a given loss does co-move with $\omega$ when $\alpha\neq\beta$, but only through compute
+(Lemma~\ref{lem:alloc}(v)). Conditional on $c$, the mix remains uninformative about $\omega$.
+
+\emph{Technical change.}---\citet{diamond1978measurement} show that time series of outputs, inputs and marginal
+products cannot separate the elasticity of substitution from the bias of technical change. Time series of
+compute-optimal models still identify the sign of the bias, though not its size. Because the FLOP accounting fixes the relative cost of a
+parameter and a token, the compute-optimal ratio $M^*(C,t)$ drifts at given compute as
+$\partial\ln M^*/\partial t=-\mathcal B_t\,\sigma^*_t/(1-\sigma^*_t)$. Here $\mathcal B_t$, the Hicks bias, is the
+change over time in the marginal rate of technical substitution at fixed inputs (Proposition~\ref{prop:A-dmr}(i)).
+Since $0<\sigma^*<1$ at interior optima (Lemma~\ref{lemma:sigma}), $M^*$ falls if and only if technical change is
+parameter-using ($\mathcal B_t>0$). In the generalized family, with inner exponents $a_1$ and $b_1$ and factor augmentation at rates
+$g_N$ and $g_D$, the bias is $\mathcal B=b_1g_D-a_1g_N$, which is $\beta g_D-\alpha g_N$ when $\kappa=1$. The drift
+therefore signs $\beta g_D-\alpha g_N$, not $g_D-g_N$. For example, with $(\alpha,\beta)=(0.30,0.45)$ and
+$(g_N,g_D)=(0.5,0.4)$, $\mathcal B=0.03>0$ and the compute-optimal $D/N$ falls, although parameters are augmented faster.
+Within the family $g_N$ and $g_D$ are identified separately, but only through its functional form; the curvature, and
+with it the size of the bias, is not. The result is methodological. We do not take it to published compute-optimal laws
+of different vintages, which differ in tokenizers, parameter-counting conventions and outputs. The sign result also
+requires that the effective relative cost of tokens not drift through data costs, data constraints or serving demand
+(Proposition~\ref{prop:wedge}). A designed IsoFLOP sweep at each vintage on a common output would identify the sign,
+and through Proposition~\ref{prop:modelfree} the size.
+
+\emph{Allocative versus technical change.}---A model's log excess compute over best practice splits into an allocative
+term $\Phi(w)=\ln(C/C_{\min})$, which depends only on its wedge (Lemma~\ref{lem:ce}), and a technical term, the
+productivity gap in compute-equivalent units (Proposition~\ref{prop:farrell}). A reallocation at fixed productivity,
+such as the move from Kaplan-rule to Chinchilla-rule allocations, is purely allocative. Three corollaries concern
+growth accounting. First, the compute-equivalent gain of \citet{gundlach2025origin} between two technologies is the
+same at every compute level if and only if they share the irreducible loss $E$ and the frontier elasticity $\gamma$
+(Corollary~\ref{cor:ceg}). Second, regressions of frontier loss on compute that omit time effects attribute part of
+algorithmic progress to scale, overstating the compute elasticity by the factor $1/(1-s_A)$, where $s_A$ is the
+algorithmic share of effective-compute growth (Corollary~\ref{cor:sahal}; \citealp{nagy2013statistical}). Third, a
+productivity residual computed with equal weights on $\ln N$ and $\ln D$, as $C=6ND$ suggests, misattributes
+$\tfrac12(\varepsilon_N-\varepsilon_D)(\Delta n-\Delta d)$ to productivity. When over-trained models ($w>1$) shift
+further toward tokens, the residual understates progress (Corollary~\ref{cor:hall}; \citealp{hall1988relation}).
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Returns to Compute: A Design-Matched Validation}\label{app:obs-matched}
+
+\emph{Data and specification.}---The observational sample has 128 dense base models from 38 families and 22 developers,
+released between March 2021 and July 2024 (Online Appendix~\ref{app:data}). The models share no validation loss, so
+output is the log-odds of above-chance accuracy, $q=\ln[\tilde a/(1-\tilde a)]$, where $\tilde a$ is accuracy net of
+chance, rescaled to the unit interval and clipped to $[0.01,0.99]$. The main benchmark is HellaSwag
+\citep{zellers2019hellaswag}, evaluated 10-shot on the Open LLM Leaderboard. We estimate
+$q_i=\theta_0+\theta_Nn_i+\theta_Dd_i+\omega_i+e_i$, which is Cobb--Douglas in the odds with Hicks-neutral productivity
+$\omega_i$, and the regression of $q_i$ on $c_i$ alone. Its slope $\theta_C$ is what observational scaling studies
+report.
+
+\emph{Why the design must be matched.}---A comparison with global experimental elasticities misleads, because the
+technology is curved and released models sit in a different part of it. In the designed sweeps, HellaSwag log-odds are
+strongly concave in $(n,d)$; the $F$-statistic for the quadratic terms is 70 in the sweep of \citet{gadre2024language}.
+On the experimental surface described below, at $N=1$B the local data elasticity falls from 0.57 at 20 tokens per
+parameter to 0.07 at 500. Released models are heavily over-trained (median $D/N$ of 213, ninetieth percentile 1,715), so
+they sit where an extra token is worth little. Global log-linear fits give observational data elasticities of 0.19 to
+0.26, against 0.44 in the OLMo ladder and 0.51 in \citet{gadre2024language}, but much of that gap is the technology,
+not bias.
+
+We therefore match the design. We fit a quadratic surface $\hat f(n,d)$ with design intercepts to the designed runs of
+the OLMo ladder \citep{bhagia2024establishing} and of \citet{gadre2024language} with $N\geq0.1$B, 86 runs in all
+($R^2=0.994$). We keep the released models inside the convex hull of the experimental inputs, the common-support
+trimming of \citet{dehejia1999causal}. We then apply each estimator twice, with the same fixed effects and controls: to
+the observed outputs, and to the outputs $q^*_i=\hat f(n_i,d_i)$ that the experimental technology produces with the
+same inputs. The difference is the estimator's bias. The benchmark comes from other developers' recipes, not from the
+treated population. The exercise is therefore a validation across populations, in the sense of
+\citet{todd2006assessing} and \citet{hotz2005predicting}, rather than a comparison with an experiment on the same units
+as in \citet{lalonde1986evaluating}. The null hypothesis is joint: a common technology up to Hicks-neutral shifts,
+outputs that map one to one across evaluation harnesses, and no transmission or selection bias. Section~\ref{sec:tech} documents factor-biased differences across
+recipes, which would violate the first part, so a null bias can also reflect offsetting failures.
+
+\emph{Support.}---An earlier version of this paper included the released OLMo-2 7B and 13B models
+\citep{teamolmo2024olmo} among the benchmark runs. Their developer chose their inputs, so they are no longer part of the
+experimental benchmark. The cost is support. Without them the largest designed $D$ is 921B tokens (one run of
+\citealp{gadre2024language} at 1.4B parameters), and above 3.8B parameters it is 634B. The strict support contains
+20 released models from 9 families and 6 developers, all released between March 2021 and September 2023 with
+$N\le6.7$B and $D\le627$B; five of the nine families have two or more models, 16 models in all. The benchmark that
+includes OLMo-2 (88 runs) covers 57 models from 30 families and 19 developers, with $N\le8.8$B. Fifteen of its families
+have two or more models (42 models) and fifteen are singletons. We report both designs.
+
+\emph{Inference.}---Inference must allow for few clusters and for the benchmark's own uncertainty. Standard errors are
+CV3 jackknife standard errors by developer \citep{mackinnon2023cluster}. The benchmark's uncertainty comes from a
+design-conditional wild bootstrap of the surface, clustered by design and model size. For each bias we compute three
+few-cluster $p$-values that include the benchmark's uncertainty: CV3 with $t(G-1)$ critical values, and restricted
+wild-cluster bootstrap-$t$ tests studentized by CR1 or by CV3
+\citep{cameron2008bootstrap,webb2023reworking}. Table~\ref{tab:app-matched} reports the largest of the three, so a
+rejection requires all three to reject. The effective number of clusters \citep{carter2017asymptotic} is 2.5 to 6.7 of
+19 on the 57-model design. On the strict design it is 1.2 to 3.8 of 6; there the three procedures disagree by up to a
+factor of ten, and none is reliable.
+
+\input{tables/appE_matched}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\textwidth]{ra4_obsfix_fig_matched}
+\caption{Observational Estimates against the Experimental Technology on the Same Design}\label{fig:app-obs-matched}
+\begin{figurenotes}
+Bias of each observational estimator relative to the same estimator applied to the outputs of the experimental
+technology on the same models (Obs.\ $-$ Exp.), with 95 percent intervals ($\pm1.96$ CV3 standard errors of the bias,
+including the benchmark's uncertainty). Blue: strict benchmark (OLMo ladder and \citealp{gadre2024language}; 20 models).
+Orange: benchmark including the released OLMo-2 7B and 13B models (57 models). Panels (a) and (b): HellaSwag,
+compute-only elasticity $\theta_C$ and data elasticity $\theta_D$. Panel (c): pooled OLS bias in $\theta_C$ by output;
+ARC-Challenge and Winogrande use the censored (Tobit) benchmark. Estimates and conservative few-cluster $p$-values are
+in Table~\ref{tab:app-matched}.
+\end{figurenotes}
+\end{figure}
+
+\emph{Returns to compute.}---Once the design is matched, cross-lab returns to compute on HellaSwag do not differ
+detectably from the experimental technology (Table~\ref{tab:app-matched}, Figure~\ref{fig:app-obs-matched}). On the
+57-model design, pooled OLS gives $\theta_C=0.328$ against 0.329 from the experimental technology on the same models,
+a bias of $-0.001$ (0.041) with $p=0.98$. Across six estimators, from pooled OLS to lab-by-period fixed effects and a
+notability-propensity control, the biases lie between $-0.029$ and $+0.037$, and every $p$-value is at least 0.36. The
+strict surface evaluated on the same 57 models, an extrapolation for 37 of them, gives $+0.014$ (0.045), so the result
+does not rest on anchoring the surface with OLMo-2. On the strict support itself the point estimates do not move (from
+$-0.024$ to $+0.037$ across five estimators), but with six clusters they carry no inferential weight.
+
+This is a failure to reject in a low-power joint test, not evidence of unbiasedness. On 57 models the 95 percent
+interval for the OLS bias is $[-0.088,0.086]$ with $t(18)$ critical values, about $\pm26$ percent of the benchmark. The
+bias detectable with 80 percent power is 0.12, or 37 percent of the benchmark; on the strict support it is 0.27, or 62
+percent. The test covers only models with at most 8.8B parameters, and its benchmark is the technology of the AI2 and
+OpenLM recipes.
+
+\emph{Other benchmarks.}---ARC-Challenge and Winogrande are less informative, because many small designed runs score
+at or below chance: 52 of the 86 runs are at the floor of chance-adjusted accuracy on ARC-Challenge and 16 on
+Winogrande, against 2 on HellaSwag. A least-squares surface fitted to the clipped log-odds makes the observational
+compute elasticity on ARC-Challenge look attenuated, with a bias of $-0.098$ on 57 models (as reported in an earlier
+version of this paper). The attenuation does not survive
+modeling the censoring. We fit a Tobit surface censored at the floor, match its level to the observed outputs, and clip
+the counterfactual at the same floor; the bias is then $+0.036$ (0.069), with $p=0.61$ (Table~\ref{tab:app-matched},
+Panel~C). The Tobit benchmark extrapolates a Gaussian latent surface below the floor for 60 percent of the runs, so we
+do not read it as showing that the attenuation was an artifact. Winogrande keeps a borderline attenuation: $-0.150$
+(0.077) on 57 models, with $p$-values between 0.068 and 0.084 across the three procedures. On the strict support the
+Winogrande estimate is similar but uninformative ($-0.179$, $p=0.53$). The three-benchmark composite gives $-0.018$
+(0.050).
+
+Two parts of the joint null are not tested. Observational outputs come from the Open LLM Leaderboard (HellaSwag 10-shot,
+ARC-Challenge 25-shot, Winogrande 5-shot), whereas the designed runs were evaluated in the OLMES and LLM-foundry
+harnesses with other prompts and shot counts; we harmonize them only through the log-odds of chance-adjusted accuracy.
+And benchmark contamination, or classifier-filtered corpora that favor benchmark-like text, raise output at given
+inputs; family effects absorb such shifts only when they are common to a family.
+
+\emph{The split between parameters and data.}---The split is not reliably estimated. With family fixed effects on the
+57-model design, the observational parameter elasticity exceeds the benchmark by 0.203 (0.059) and the data elasticity
+falls short of it by 0.262 (0.106). The conservative $p$-values are 0.048 and 0.027, and dropping any one developer
+leaves both signs unchanged (Table~\ref{tab:app-inference}). But the identifying variation is thin. In the full panel
+the within-family standard deviation of $\ln D$ is 0.42, against 1.29 for $\ln N$. The effective number of clusters is
+about 4 of 19, and two families supply 65 percent of the leverage for $\theta_D$: Cerebras-GPT, trained at exactly 20
+tokens per parameter, and Phi, trained on synthetic data. Under the strict benchmark the biases have similar size
+($+0.185$ and $-0.227$) but conservative $p$-values of 0.14 and 0.15. Biases of opposite sign are also hard to
+reconcile with transmission. If wedges are unrelated to productivity at given compute, transmission shifts both
+elasticities by the same amount (Section~\ref{app:obs-theory}). Opposite signs point instead to factor-biased recipe
+changes within families or to errors in $D$, which the benchmark cannot distinguish from bias. We read them as a
+within-family disagreement driven by two families, not as a finding.
+
+\input{tables/appE_inference}
+
+Table~\ref{tab:app-inference} also explains why an earlier version of this paper paired a $t$-ratio of 1.6 with a
+wild-bootstrap $p$-value of 0.02 for the same $\theta_D$ bias. The benchmark's uncertainty is not the cause; its
+standard error (0.020) is small against the observational one. The cause is the small-sample factor of the CR1
+variance. That version counted the 29 family dummies in $k$ although families are nested within developer clusters,
+which raises $(n-1)/(n-k)$ from 1.04 to 2.24 \citep{cameron2015practitioner}. The standard error was therefore 1.47
+times too large; a bootstrap-$t$ is invariant to that constant, and a normal reference is not. With the nested
+convention, the CV3 jackknife or any restricted wild-cluster variant, the $p$-values are 0.01 to 0.03 for $\theta_D$ and
+0.003 to 0.05 for $\theta_N$.
+
+\emph{A Hall-type bias.}---Both worlds agree that $\theta_N>\theta_D$ on this design: 0.42 against 0.27 under the
+experimental technology on the 57 models, and $\theta_N-\theta_D=0.21$ (0.08) in the observational data on all 128.
+Over-trained models have wedges above one, so their output elasticity with respect to parameters exceeds that with
+respect to data. A regression on $\ln C=\ln6ND$ alone therefore imposes equal weights that the data reject, and the
+residual of such an equal-weight index misattributes $\tfrac12(\theta_N-\theta_D)(\Delta n-\Delta d)$ to productivity.
+This is the Hall-type bias of Corollary~\ref{cor:hall}: as models shift further toward tokens, measured productivity
+understates progress.
+
+\emph{How large could transmission bias be?}---We treat the 25 pretraining recipes of \citet{magnusson2025datadecide}
+as developers with real outcomes and simulate how they choose model size. Pooled OLS is then unbiased under exogenous
+budgets. It overstates $\theta_C$ by 0.044 when funding rises with productivity rank, and understates it by 0.18 (40
+percent) when each developer trains to a common capability target. Cross-family productivity dispersion in the
+observational panel is about five times that of the recipes, which scales the funding bias to about $+0.2$ and the
+target bias beyond $-0.18$. The 95 percent interval of the matched OLS bias excludes both. The data are therefore
+consistent with budgets roughly orthogonal to productivity, or with offsetting funding and release selection; the
+simulated rules are stylized. In the simulated industry of Online Appendix~\ref{app:mc}, pooled estimation overstates
+the frontier elasticity by 13 percent under funding, understates it by 30 percent under a capability target, and
+overstates it by 66 percent with one flagship per developer and generation. Estimation within developer and generation,
+the observational analogue of an IsoFLOP sweep, is unbiased under every rule, but it requires at least two released
+siblings.
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Measurement of Compute and the Standard Remedies}\label{app:obs-compute}
+
+\emph{Measurement error.}---Measurement error in compute is small, but showing it requires an independent measure.
+Compute in the panel is $C=6ND$ from reported $N$ and $D$, and Epoch's compute figures for these models are mostly
+$6ND$ itself (operation counting) or developer-reported counts of the same kind \citep{epochai2026data}. Only
+hardware-time records measure compute independently of the reported inputs. We rebuild compute from them as chip-hours
+times peak dense 16-bit throughput times a common utilization of 0.3. Epoch's utilization field is not used, because it
+is back-calculated from Epoch's own compute estimate in every record we checked. Across the 27 models with such records, from 12 families,
+$\ln(C_{\text{hw}}/6ND)$ has standard deviation 0.29, with 95 percent interval $[0.20,0.41]$
+(Table~\ref{tab:app-reliability}). This bounds the error in $\ln6ND$ from above, because it also contains differences
+in true utilization and errors in chip-hours. The implied reliability of $\ln C$ on the 57-model design is at least
+0.98 pooled and 0.955 within families (0.96 and 0.91 at the upper end of the interval). Correcting for errors in
+variables raises the pooled compute elasticity by 0.007 and the within-family one by 0.021, or by 0.042 at the upper
+end (Table~\ref{tab:app-compute}).
+
+\input{tables/appE_reliability}
+
+An earlier version of this paper reported a within-family errors-in-variables estimate of 0.858 against a benchmark of
+0.409. It combined two errors. It used Epoch's `Confident' uncertainty class ($\sigma_u=\ln3/1.645=0.67$), which
+describes the uncertainty of Epoch's own estimate rather than the error in $6ND$. And it computed the within-family
+variance of $\ln C$ with an $n-1$ denominator, ignoring the 30 family means. With the correct variance and the
+hardware-time bound, the within-family bias is $+0.052$ (0.049), with $p=0.30$.
+
+\emph{Reverse regression.}---The reverse regression of $\ln C$ on output gives an inverse slope of 0.560. By
+construction this equals the forward slope, 0.328, divided by the forward $R^2$ of 0.585 (with family effects,
+$0.441/0.760=0.580$). Its distance from the same statistic computed on the experimental outputs, 0.352, therefore
+measures output variation not explained by compute, that is, productivity dispersion and noise, not a bias. Under
+funding the forward--reverse pair need not bracket the truth at all (Proposition~\ref{prop:A-transmission}(iii)).
+
+\input{tables/appE_compute}
+
+\emph{Instruments, panels and proxies.}---The standard remedies for transmission bias cannot be used, for reasons that
+concern the data rather than the estimators. The price-performance of the best available data-center accelerator is a
+step function of calendar time. On the 57-model design its first-stage $F$ is 0.90 (0.01 with developer fixed effects),
+and the Anderson--Rubin sets are unbounded. Applied to the experimental outputs, the same instrument recovers 0.012
+against a design-matched elasticity of 0.33: the instrument fails, not the data. The price-performance of each model's
+own training hardware is strong only on 10 models from 7 developers ($F=14.3$), and it takes three values, so it acts
+as a vintage indicator; its Anderson--Rubin set is $[-1.50,0.34]$. An export-control instrument (Chinese developers
+after October 2023, with developer and year effects) is strong among the 90 models with at most 14B parameters and
+5T tokens ($F=10.6$). It gives $\theta_C=0.90$ (0.25), with Anderson--Rubin set $[0.49,2.23]$, which is 1.7 to 2.3 times the
+least-squares and fixed-effects estimates on that sample. Its exclusion restriction fails because recipes and data
+changed at the same time. Dynamic-panel estimators \citep{arellano1991some,blundell1998initial} and the moments of
+Proposition~\ref{prop:A-transmission}(v) need three consecutive generations, which only six product-line cells have.
+Proxy inversion is unavailable for the reasons given in Section~\ref{app:obs-theory}. The notability-propensity control
+of Table~\ref{tab:app-matched} (a quadratic in the estimated propensity of Epoch notability) is selection on
+observables, not an Olley--Pakes correction; it barely moves the matched bias ($-0.015$, $p=0.80$).
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Productivity Dispersion}\label{app:obs-tfp}
+
+How dispersed is productivity across model families? The answer depends on the units in which it is measured
+(Table~\ref{tab:app-tfp-units}). Let $\Delta$ be the gap between the 90th and 10th percentiles of family productivity
+in HellaSwag log-odds, net of inputs. In output units, the 90--10 ratio of the odds, $e^{\Delta}$, is 1.9 to 3.0 across
+samples and netting methods. In reducible-loss units, $e^{\gamma\Delta/\theta_C}$ with the frontier elasticity
+$\gamma=0.178$ of \citet{besiroglu2024chinchilla}, it is 1.3 to 1.8. Both ranges bracket the 90--10 ratio of 1.92
+within US manufacturing industries \citep[see also \citealp{syverson2011determines}]{syverson2004product}. In
+compute-equivalent units, $e^{\Delta/\theta_C}$, the compute that the 10th-percentile family needs to match the 90th,
+the ratio is 7 to 24 with the 57-model benchmark $\theta_C=0.33$, or 4 to 13 with the strict benchmark's 0.43. Within
+developers, in the design of \citet{mertens2026secret}, it is 11.1 in compute units (90 percent interval
+$[4.1,18.1]$), against their 41 on another benchmark.
+
+Manufacturing's ratio is both an output-unit and an input-unit ratio, because returns to scale are near one. For
+language models the two differ by the factor $1/\theta_C$ in logs, between 2.3 and 3, because returns to compute are
+small. The comparison with manufacturing is therefore a choice of cardinalization, not a finding.
+
+\input{tables/appE_tfp}
+
+Three caveats apply. First, family effects absorb benchmark contamination and the similarity of training data to the
+benchmark, as well as productivity. Second, training compute omits the compute of teachers and synthetic-data
+generators. With inputs netted within families, the synthetic-data families Phi and SmolLM rank first and third of 38,
+so measured productivity credits the student with an intermediate input, the gross-output problem of
+\citet{gandhi2020identification}. Third, the conversion to compute rests on a single cardinal elasticity from one
+benchmark; the intervals in Table~\ref{tab:app-tfp-units} draw $\theta_C$ from its bootstrap. Transmission, finally,
+would make all of these ratios understate dispersion (Proposition~\ref{prop:A-transmission}(ii)).
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Algorithmic Progress}\label{app:obs-progress}
+
+\citet{ho2024algorithmic} estimate that the compute needed to reach a given perplexity halves every 8.4 months, from 231
+model--benchmark observations in 144 papers. Their preferred model is the technology of Section~\ref{sec:framework}
+with $E=0$ and factor-augmenting productivity growing linearly in time, $\psi_N=g_Nt$ and $\psi_D=g_Dt$:
+\[
+\ln\text{ppl}=\exp(\alpha_{0b}-\alpha g_Nt-\alpha\ln N)+\exp(\beta_{0b}-\beta g_Dt-\beta\ln D),
+\]
+where $b$ indexes three benchmarks and $t$ is time in years. Effective compute grows at $g_C=g_N+g_D$ per year and
+doubles every $\tau_C=12\ln2/g_C$ months; Hicks neutrality is $\alpha g_N=\beta g_D$.
+
+\emph{The ridge.}---The rate is weakly identified because the sample is not on the expansion path, a problem of the kind
+studied by \citet{diamond1978measurement}. To first order the data pin down how fast loss falls at fixed inputs, an
+average of $\alpha g_N$ and $\beta g_D$ weighted by the mean shares of the two terms in loss (0.55 and 0.45). The
+doubling time instead weights the two rates by $1/\alpha$ and $1/\beta$. The two combinations coincide only on the
+expansion path, along which parameters would grow with compute at elasticity $a=0.37$ under their exponents. Off the
+path, rate pairs that fit equally well imply different doubling times.
+
+Figure~\ref{fig:app-obs-ridge} shows the resulting ridge. The bootstrap correlation between $\alpha g_N$ and $\beta g_D$
+is $-0.73$ with the authors' code and $-0.82$ at the converged estimates. The profile-likelihood interval for $\tau_C$
+is $[4.1,40.5]$ months. The parameter-augmenting share $g_N/g_C$ can lie anywhere in $[-0.44,3.37]$ (95 percent
+profile interval), and over that range $\tau_C$ runs from 5.3 to 39.6 months (Table~\ref{tab:app-progress}). These
+likelihood ratios assume independent Gaussian errors, although observations are clustered by paper. The profile over
+$g_N/g_C$ also has a second local minimum near $-0.28$; a missed global minimum could only widen the interval.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\textwidth]{appE_ridge}
+\caption{The Ridge in Estimates of Algorithmic Progress}\label{fig:app-obs-ridge}
+\begin{figurenotes}
+Data of \citet{ho2024algorithmic}, 231 model--benchmark observations. Panel (a): 95 percent joint profile-likelihood
+region for the year terms $(\alpha g_N,\beta g_D)$, bootstrap draws from the authors' code, the optimizer's iterates
+from its default stopping point to the converged minimum of the same objective, the unpenalized least-squares minimum,
+and the Hicks-neutral line. Panel (b): doubling time of effective compute $\tau_C$ along the floor of the profile; the
+thick segment lies inside the 95 percent region. Panel (c): profile likelihood-ratio statistic over the
+parameter-augmenting share $g_N/g_C$, with the implied $\tau_C$ in months at selected points; the dashed line is the 95
+percent cutoff and the shaded band the 95 percent interval, $[-0.44,3.37]$. Likelihood ratios assume independent
+Gaussian errors.
+\end{figurenotes}
+\end{figure}
+
+\emph{Neutrality.}---Precision about the rate is bought with an assumption about the bias. Hicks neutrality is not
+rejected (bootstrap $p=0.29$ and 0.94 for the converged penalized and the unpenalized estimators), which reflects low
+power rather than evidence of neutrality. Imposing it gives 9.2 months with unpenalized least squares, with interval
+$[6.3,14.3]$, or 11.6 months with the converged penalized estimator: the tightest intervals among the specifications
+that the data do not reject. As \citet{diamond1978measurement} predict, the rate is identified here by the restriction
+on the bias. Even that restriction is fragile. If the true technology has $E>0$, neutrality imposed within the $E=0$
+form is misspecified. In simulations on Ho et al.'s design with a true doubling time of 12 months, it yields 4.2 to 4.4
+months, so the neutral estimates may overstate progress.
+
+\input{tables/appE_progress}
+
+\emph{The published estimate.}---The published point also depends on the optimizer. We reproduce Ho et al.'s estimates
+exactly: the same objective value (0.0518), every parameter within $4\times10^{-7}$, and a bootstrap median of 8.44
+months under their protocol. The published 8.4 months is that median; the point estimate is 8.7. It is not the
+minimizer of the authors' objective, mean squared error plus an $L_1$ penalty. SciPy's default stopping rule halts the
+optimizer after 18 iterations, part of the way along the ridge. Run to convergence, the objective falls to 0.0507, all
+300 random starts end below the published value, and $\tau_C=6.1$ months with a paper-cluster interval of $[3.0,22.7]$,
+about twice as wide as published. Mean squared error changes by only 0.27 percent: almost all of the improvement in
+the objective comes from the penalty on constants whose values depend on an arbitrary normalization. Unpenalized least
+squares gives 10.2 months, with interval $[4.1,27.6]$. Estimators of the same model thus give 6.1 to 10.2 months, and
+the data cannot arbitrate between them. The finding concerns numerical optimization, not the order of magnitude of
+progress. It parallels the finding of \citet{besiroglu2024chinchilla} for the third approach of
+\citet{hoffmann2022training}, and convergence problems in demand estimation
+\citep{knittel2014estimation,dube2012improving}.
+
+\emph{Attenuated exponents.}---Ho et al.'s data exponent is 0.04, against about 0.37 in experiments, and
+\citet{whitfill2025note} reads the gap as evidence that progress is overstated about ninefold: dividing their year
+coefficients by experimental exponents gives 76.5 months. Imposing experimental exponents in estimation is rejected
+(mean squared error rises by a factor of 1.3 to 4.8 across 14 experimental technologies) and implies negative or
+implausibly slow progress. Two specification choices explain much of the exponent gap while moving $\tau_C$ much less
+(Table~\ref{tab:app-obs-attenuation}). First, fitting the $E=0$ form to the Chinchilla sweep itself lowers the frontier
+elasticity from 0.178 to 0.053, close to the sweep's mean elasticity of total rather than reducible loss (0.054). The
+like-for-like gap is therefore about 2 to 2.5-fold, not 7 to 9-fold. Dropping $E$ rescales exponents and year
+coefficients by similar factors, so rates barely move: imposing a common $E$ from 0 to 1.5 nats per word doubles
+$\hat\gamma$ but moves $\tau_C$ only from 10.2 to 12.4 months. Ho et al.'s data themselves prefer $E=0$ within this
+form, so this argument rests on the sweep and on simulations; in the simulations the authors' procedure can also stop
+at a local optimum that overstates progress. Second, their $D$ is dataset size, while small models were trained for a
+median of 62 to 140 epochs. Measuring effective data under repetition \citep{muennighoff2023scaling} raises $\tau_C$ by
+a factor of 1.5 to 4, with an unbounded upper confidence limit.
+
+\input{tables/appE_attenuation}
+
+\emph{Scale dependence and frontier regressions.}---Two further questions need designed data. Whether the
+compute-equivalent gain of transformers over earlier architectures depends on scale turns on whether their frontier
+elasticities differ (Corollary~\ref{cor:ceg}). In Ho et al.'s data the difference is 0.008, with interval
+$[-0.012,0.034]$, and bootstrap intervals for the implied gains span six orders of magnitude
+(Table~\ref{tab:app-obs-ceg-sahal}). And regressions of loss on compute that omit time effects overstate the compute
+elasticity by a factor of 1.15 on all 231 rows and 1.44 among 36 record-setting releases (Corollary~\ref{cor:sahal}).
+Among record setters, whose compute moves closely with time, independently measured growth rates imply an algorithmic
+share of 0.37 and a predicted factor of 1.58, consistent with the estimate. On all rows the prediction fails, because
+compute and time are only moderately correlated (0.62) and the ordinary omitted-variable formula applies instead.
+
+\input{tables/appE_ceg_sahal}
+
+\emph{The missing data.}---Proposition~\ref{prop:A-dmr} names the data that would settle these questions: IsoFLOP
+sweeps at several vintages on a common output, whose drift in the compute-optimal $M^*$ signs the bias of technical
+change and whose curvature fixes its size. Our controlled experiment (Section~\ref{sec:tech}) supplies the
+cross-sectional analogue for a change in data quality at one date.
+\textcolor{red}{[TBD-m9: one sentence on the shift in the compute-optimal $M^*$ at fixed compute between the two
+corpora of our experiment, and hence the sign of the Hicks bias of the data-quality difference
+(Proposition~\ref{prop:A-dmr}(i) applied across corpora rather than dates); delete if m9 cannot answer it.]}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Allocative versus Technical Change}\label{app:obs-allocative}
+
+Measured progress, the fall in the compute needed to reach a given loss, mixes shifts of the frontier with movements
+toward it. By Proposition~\ref{prop:farrell}, the move from the allocations of \citet{kaplan2020scaling} to those of
+\citet{hoffmann2022training} changed the mix, not the technology, so its gain is allocative; under the
+\citet{besiroglu2024chinchilla} parameters, Gopher's allocation used about twice the compute its loss required.
+\citet{gundlach2025origin} define the compute-equivalent gain from such rebalancing and count it as algorithmic
+progress.
+
+\emph{Measurement.}---Measuring the gain actually realized between eras requires a choice. Training-cost efficiency, the
+Farrell efficiency against the training-only frontier, $C_{\min}(L(N,D))/6ND$, counts deliberate over-training as
+waste, although over-training reflects the value that developers place on compact models (Section~\ref{sec:wedge}).
+Serving demand cannot produce a wedge below one (Proposition~\ref{prop:wedge}). We therefore count only the
+elimination of under-training: training-cost efficiency evaluated at $\min(w,1)$, which within the Chinchilla family
+depends on the wedge alone. The truncated measure attributes every wedge below one to allocative error. A wedge below
+one can also reveal a binding data constraint or data-augmenting productivity specific to the developer
+(Proposition~\ref{prop:A-wedge}(ii) and (iv)). For 2020--21 models trained on a few hundred billion tokens, a belief in the
+\citet{kaplan2020scaling} law is the more plausible reading, but it remains an assumption.
+
+\emph{Realized gains.}---We compare models in the Epoch database with at least $10^{23}$ FLOP: 7 released in 2020--21
+(era 1) and 92 in 2022--24 (era 2), all dense, trained for at most four epochs, with $D=C/6N$
+(Table~\ref{tab:app-allocative}, Figure~\ref{fig:app-obs-allocative}). Every era-1 model has $w<1$ under every
+technology, and the median ratio of tokens to parameters rose from 1.7 to 92 between the eras. Counting only the
+elimination of under-training, geometric-mean training-cost efficiency rose by a factor of 2.0 under the reference
+technology (Chinchilla with $\kappa$ free) and 1.7 under \citet{besiroglu2024chinchilla}, with 95 percent interval
+$[1.21,2.44]$. Across all 14 estimated technologies the factor ranges from 1.1 to 4.9. Era-2 releases closed 80 to 94
+percent of the era-1 under-training gap, in logs. The positive sign is close to mechanical, because every era-1 model is
+under-trained and truncation can only raise era-2 efficiency; the content is in the size. Without truncation the gain
+ranges from 0.55 to 4.3 across technologies: counting over-training as waste can reverse its sign.
+
+\input{tables/appE_allocative}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.85\textwidth]{ra4_obsfix_fig_allocative}
+\caption{Realized Allocative Gains from Rebalancing, by Technology}\label{fig:app-obs-allocative}
+\begin{figurenotes}
+Ratio of geometric-mean training-cost efficiency, 2022--24 against 2020--21, for Epoch models with at least $10^{23}$
+FLOP (7 and 92 models), under each technology, with 95 percent percentile-bootstrap intervals over models within era
+(log scale). Orange: efficiency against the training-only frontier, which counts over-training as waste. Blue: the
+wedge truncated at one, which counts only the elimination of under-training. Only the \citet{besiroglu2024chinchilla}
+interval also reflects uncertainty in the technology's parameters. Estimates in Table~\ref{tab:app-allocative}.
+\end{figurenotes}
+\end{figure}
+
+The intervals resample models within era; only the Besiroglu interval also draws the technology's parameters, and with
+seven era-1 models all intervals are rough. Technologies estimated on other sweeps use their own conventions for $N$,
+$D$ and the loss corpus, so their levels are indicative. The Marin fits, whose parameter exponents are about twice
+Chinchilla's, give the largest gains (3.5 to 4.9). Samples of the five largest models per year and of Epoch's frontier
+models give smaller and noisier truncated gains (1.3 and 1.5 under Besiroglu).
+
+\emph{Comparison with progress.}---Against the effective-compute gain implied by Ho et al.'s published rate over the
+same interval, 8.9-fold over 2.28 years, the realized allocative gain amounts to 6 to 73 percent in logs across
+technologies (31 percent under the reference technology). The denominator itself ranges from 6.4 to 22.5 across the
+estimators of Section~\ref{app:obs-progress}. \citet{gundlach2025origin} report that the Kaplan-to-Chinchilla
+rebalancing is worth about a factor of 10 at the 2025 frontier. Our counterfactual agrees: under the Besiroglu
+technology, continuing Kaplan's rule from GPT-3 would cost a factor of 1.6 at GPT-3's compute, 5.2 at
+$3.8\times10^{25}$ FLOP and 11.7 at $5\times10^{26}$ FLOP. Because Kaplan-rule allocations have $w<1$ under every
+technology, truncation does not affect this counterfactual. What we add is the contrast with the gain realized between
+eras, 1.1 to 4.9, which is smaller than both. Under Ho et al.'s own exponents, finally, every model has $w>1$. An
+attenuated data exponent makes tokens nearly worthless, so a regression with those exponents cannot credit rebalancing
+to inputs and loads it onto the time trend.
+
+\emph{Summary.}---Cross-lab data thus deliver returns to compute once the design is matched, though only as a
+low-power failure to reject, and measures of productivity dispersion whose size depends on the units. They do not
+deliver the split between inputs, the bias of technical change, or its rate without a restriction on the bias. In each
+case the missing variation is the transverse variation that designed IsoFLOP sweeps supply.

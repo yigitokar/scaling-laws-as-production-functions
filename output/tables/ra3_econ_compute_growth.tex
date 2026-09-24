@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Growth of Frontier Training Compute, 2018--2026}
+\label{tab:ra3_compute_growth}
+\begin{tabular}{lccccccc}
+\toprule
+Sample & $n$ & Developers & Growth ($\times$/yr) & 95\% CI & $p$ (4.5$\times$) & Trend, Sep. 2026 & Largest run \\
+\midrule
+Running top-10 at release (all domains) & 92 & 27 & 5.06 & [4.29, 5.93] & 0.149 & $9.4\times10^{26}$ & $1.0\times10^{27}$ \\
+Running top-10, excl. `Speculative' compute & 73 & 23 & 4.84 & [4.14, 5.67] & 0.374 & $7.7\times10^{26}$ & $1.0\times10^{27}$ \\
+Running top-10 among language models & 93 & 28 & 6.45 & [5.65, 7.37] & 0.005 & $2.1\times10^{27}$ & $1.0\times10^{27}$ \\
+Record-setting runs & 18 & 6 & 4.85 & [3.98, 5.91] & 0.513 & $3.3\times10^{27}$ & $1.0\times10^{27}$ \\
+Epoch `Frontier model' flag (to 2025-07) & 53 & 20 & 4.97 & [4.06, 6.12] & 0.235 & $1.6\times10^{27}$ & $5.0\times10^{26}$ \\
+Running top-10, 2018 to May 2024 & 78 & 26 & 5.23 & [4.02, 6.74] & 0.289 & $1.1\times10^{27}$ & $5.0\times10^{25}$ \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} OLS of $\log_{10}C$ on release date, 2018-01 to 2026-09 (Epoch AI snapshot of 23 September 2026). Standard errors clustered by developer (first listed organization). 95\% intervals: wild cluster bootstrap-$t$ (unrestricted, Webb weights, $B=9{,}999$); $p$-values: restricted wild cluster bootstrap for $H_0$: growth $=4.5\times$ per year (floor $10^{-4}$). Record-setting runs have only six developer clusters; treat that interval as indicative. Epoch AI's published estimates (Sevilla and Rold\'an 2024): 4.1$\times$ (notable models), 4.2$\times$ [90\%: 3.6, 4.9] (frontier since 2018), 5.3$\times$ (frontier since 2010).
+\end{tablenotes}
+\end{table}

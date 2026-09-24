@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\small
+\begin{threeparttable}
+\caption{Observationally equivalent technologies on the expansion path}
+\label{tab:m7_dmr}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$S=a_1+b_1$ & $\sigma^*$ & $\kappa$ & Hicks bias $b_1g_D-a_1g_N$ & Loss above frontier at $M=5M^*$ (\%) \\
+\midrule
+0.250 & 0.889 & 2.854 & 0.046 & 1.4 \\
+0.714 & 0.737 & 1.000 & 0.133 & 4.1 \\
+1.500 & 0.571 & 0.476 & 0.279 & 8.4 \\
+4.000 & 0.333 & 0.178 & 0.743 & 18.2 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Members of the family $L=E+(A N^{-a_1}+B D^{-b_1})^{\kappa}$ with $a_1=(1-a)S$, $b_1=aS$, $\kappa=\gamma/(a(1-a)S)$ and $(A,B)$ chosen to reproduce the Besiroglu et al. (2024) expansion path and frontier ($a=0.513$, $\gamma=0.178$). With factor-augmenting progress $g_N=0.25$, $g_D=0.60$ per year, brute-force compute-optimal frontiers coincide across members to $10^{-14}$ in $\ln R^*$ and the argmin $n^*$ to $4\times10^{-7}$ (optimizer tolerance) at six dates and seven budgets. The row with $\kappa=1$ is the Chinchilla law. Hicks bias is $d\ln\mathrm{MRTS}/dt$ per year at fixed inputs. Last column: reducible loss of a run with five times the compute-optimal tokens per parameter, in percent above the common frontier at the same compute ($C=10^{22}$).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

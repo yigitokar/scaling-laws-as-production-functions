@@ -1,0 +1,43 @@
+\begin{table}[tp]
+\centering
+\caption{Power of the Controlled Experiment (Computed before Estimation)}
+\label{tab:m9-power}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+& \multicolumn{3}{c}{Log-loss noise s.d.} \\
+\cmidrule(lr){2-4}
+Statistic & 0.002 & 0.005 & 0.010 \\
+\midrule
+\multicolumn{4}{l}{\emph{Panel A. Expected standard errors (Monte Carlo s.d.), FineWeb-Edu design}} \\
+$\sigma^*_\kappa$, convention P & 0.003 & 0.007 & 0.014 \\
+$\sigma^*_\kappa$, convention T & 0.004 & 0.007 & 0.014 \\
+$\sigma^*$ ($\kappa=1$), convention P & 0.002 & 0.006 & 0.014 \\
+Model-free $\sigma^*$, P (FLOP path) & 0.009 & 0.019 & 0.028 \\
+Model-free $\sigma^*$, P ($w=1$) & 0.005 & 0.013 & 0.020 \\
+Model-free $\sigma^*$, T & 0.008 & 0.018 & 0.034 \\
+Q3 slope, P (with high-$M$ runs) & 0.030 & 0.062 & 0.107 \\
+Q3 slope, T (with high-$M$ runs) & 0.018 & 0.044 & 0.088 \\
+Q3 slope, P (main grid only) & 0.030 & 0.073 & 0.119 \\
+\multicolumn{4}{l}{\emph{Panel B. Between-corpus tilt $\hat\chi$ (true $\chi=0.22$)}} \\
+S.e. of $\hat\chi$, P & 0.007 & 0.018 & 0.038 \\
+S.e. of $\hat\chi$, T & 0.009 & 0.020 & 0.040 \\
+Power, one validation set (normal approx.), P & 1.00 & 1.00 & 1.00 \\
+Minimum detectable $\chi$ (80\% power), P & 0.020 & 0.051 & 0.107 \\
+Pr(``factor-biased''), wild bootstrap rule, P & 1.00 & 1.00 & 1.00 \\
+Mean 95\% CI half-width, wild bootstrap, P & 0.009 & 0.023 & 0.043 \\
+\multicolumn{4}{l}{\emph{Panel C. Under $\chi=0$}} \\
+Pr(``factor-biased''), wild bootstrap rule, P & 0.17 & 0.08 & 0.12 \\
+Pr(``neutral''), wild bootstrap rule, P & 0.57 & 0.50 & 0.58 \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Monte Carlo from the design only (code/sweep/run\_grid.py), computed before any estimation on the sweep results. Truth: Chinchilla form with Besiroglu et al.'s exponents ($\sigma^*=0.737$), anchored at $M^*=20$ and 3.8 nats at the design's central compute; FineWeb-Edu has a data-augmenting shift $\chi$ relative to FineWeb. Noise: $\ln L$ error with a common within-trunk component (share $\rho=0.5$ of the variance) and a second validation set with noise correlated 0.8. 150 replications per cell (Panels A--B, rows 1--4); the wild-bootstrap rows use 60 replications with 199 Webb draws each and the plan's decision rule on two validation sets. Sensitivity cells ($\rho=0$, 0.9; $M^*=60$; $\kappa$-family truth) are in m9\_sweeps\_power.csv.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

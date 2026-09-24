@@ -1,0 +1,285 @@
+% =====================================================================================================
+% Section I. Scaling Laws and the Production Problem
+% Writer: framework section writer, 2026-09-24. Sources: paper/notes/model_spec.md, paper/notes/theory_main_text.md,
+% output/memos/m7_theory.md (+ review), paper/sections/appendix_proofs.tex, lit/SYNTHESIS.md section 4.
+% Numbers: output/tables/m7_theory_ledger_checks.csv (Besiroglu parameters), appendix Lemma A1(v) (Kaplan sigma),
+% output/tables/m7_theory_harberger.csv and m7 memo section 5 (Harberger accuracy). See paper/notes/writer_framework.md.
+% =====================================================================================================
+
+\section{Scaling Laws and the Production Problem}\label{sec:framework}
+
+This section writes the scaling law as a production technology, sets out the cost side of a lab's training problem,
+and translates the vocabulary of the scaling literature into that of production economics
+(Table~\ref{tab:dictionary}). It then states three results used throughout: duality between the scaling law, the
+compute-optimal allocation and the loss--compute frontier (Proposition~\ref{prop:duality}); gross complementarity as
+a condition for interior compute optima (Lemma~\ref{lemma:sigma}); and revealed inference demand
+(Proposition~\ref{prop:wedge}). Proofs are in Online Appendix~A.
+
+\subsection{Technology, Cost, and Output}\label{sec:framework:tech}
+
+A lab trains a language model with $N$ parameters on $D$ tokens (tokens processed, counting repetitions) and
+measures its cross-entropy loss $L$, in nats per token, on a fixed held-out corpus. Following
+\citet{hoffmann2022training}, and adding the productivity terms of the production-function literature, we write
+\begin{equation}\label{eq:tech}
+L=E+e^{-\omega}\Big[A\big(e^{\psi_N}N\big)^{-\alpha}+B\big(e^{\psi_D}D\big)^{-\beta}\Big]e^{\epsilon},
+\qquad A,B,\alpha,\beta>0 .
+\end{equation}
+Here $E$ is the irreducible loss, and the power terms are the losses due to finite parameters and finite data.
+Hicks-neutral productivity $\omega$ (an architecture or recipe that scales both terms) and parameter- and
+data-augmenting productivity $\psi_N$ and $\psi_D$ (a cleaner corpus raises $\psi_D$) are known to the lab when it
+chooses inputs: they are transmitted in the sense of \citet{marschak1944random}. Seed and evaluation noise $\epsilon$
+is not \citep{zellner1966specification}. The Chinchilla law sets $\omega=\psi_N=\psi_D=\epsilon=0$.
+
+Lower-case letters denote logs, $n\equiv\ln N$ and $d\equiv\ln D$. We call $R\equiv L-E$ the reducible loss and use
+$y\equiv-\ln R$ as the log output index. Taking logs of \eqref{eq:tech} gives, exactly,
+$y=\omega+F(n+\psi_N,d+\psi_D)-\epsilon$ with $F(n,d)\equiv-\ln(Ae^{-\alpha n}+Be^{-\beta d})$: a log production
+function with Hicks-neutral productivity and an additive disturbance. With $u\equiv A(e^{\psi_N}N)^{-\alpha}$ and
+$v\equiv B(e^{\psi_D}D)^{-\beta}$, the output elasticities are
+\begin{equation}\label{eq:elast}
+\varepsilon_N\equiv\frac{\partial y}{\partial n}=\frac{\alpha u}{u+v},\qquad
+\varepsilon_D\equiv\frac{\partial y}{\partial d}=\frac{\beta v}{u+v},
+\end{equation}
+and neither depends on $\omega$, $\epsilon$ or $E$. When $\alpha=\beta$, $R^{-1/\alpha}$ is a constant-returns CES
+aggregate of $N$ and $D$. When $\alpha\neq\beta$, the technology is directly additive and non-homothetic: the
+elasticity of substitution varies with the input mix, and the compute-optimal ratio of tokens to parameters drifts
+with scale. We also use the generalized family that raises the bracket in \eqref{eq:tech} to a power $\kappa>0$,
+with inner exponents $\alpha$ and $\beta$. Chinchilla is $\kappa=1$; Kaplan's law is
+$\kappa\approx0.103$ with inner exponents $0.738$ and $1$ and $E=0$. The outer exponent scales both elasticities by
+$\kappa$ and leaves the isoquants unchanged, so it separates returns to scale from substitution; $\kappa=1$ is a
+testable restriction (Section~\ref{sec:tech}).
+
+Training a dense transformer takes about six floating-point operations (FLOPs) per parameter per token, so training
+compute is $C=6ND$ and $c\equiv\ln C=\ln6+n+d$ \citep{kaplan2020scaling}; Section~\ref{sec:tech} treats the
+attention and embedding FLOPs this approximation omits. The cost is multiplicative rather than linear: both log-cost
+weights, $\partial c/\partial n$ and $\partial c/\partial d$, equal one, and the implicit price of a parameter, $6D$,
+rises with the quantity of the other input. Two consequences follow. First, minimizing compute for a given loss
+equates the output elasticities, $\varepsilon_N=\varepsilon_D$. The first-order conditions behind the share-equation
+approaches of \citet{deloecker2012markups} and \citet{gandhi2020identification} link output elasticities to cost
+shares; here the shares are known from FLOP accounting, so no price data are needed. Second, isocosts are straight
+lines in logs, $n+d=c-\ln6$, which sharpens the curvature condition for an interior optimum
+(Section~\ref{sec:framework:sigma}).
+
+A deployed model spends about $2N$ FLOPs per token it processes, so a lab that expects to serve $T$ tokens over the
+model's life faces lifetime compute $6ND+2NT$ \citep{sardana2024beyond}. We take lifetime compute as the lab's
+cost, minimized subject to a loss target $L\le\bar L$ and possibly a data constraint $D\le\bar D$ or a memory
+constraint $N\le\bar N$. In this language, iso-loss curves are isoquants, IsoFLOP profiles are isocosts, the
+compute-optimal allocation is a conditional factor demand, and the loss--compute frontier is the inverse of a cost
+function (Figure~\ref{fig:geometry}, panel (a)). We write $M\equiv D/N$ for tokens per parameter and $M^*(C)$ for the
+training-optimal ratio at compute $C$.
+
+Loss is measured in units specific to a tokenizer and an evaluation corpus, so it matters which objects depend on
+them. Isoquants, the elasticity of substitution, the compute-optimal allocation and the wedge defined below are
+ordinal: they are unchanged by any strictly increasing transformation of output (loss, bits per byte or a monotone
+benchmark link) and do not depend on $E$, $\omega$ or $\kappa$ (Online Appendix~A, Lemma~\ref{lem:sigma};
+Proposition~\ref{prop:wedge} below). The
+frontier elasticity, returns to scale and productivity levels are cardinal: they are defined in units of reducible
+loss. Input units matter too: $M^*$ counts tokens and so depends on the tokenizer, while the exponents do not.
+
+\subsection{A Dictionary}\label{sec:framework:dict}
+
+Table~\ref{tab:dictionary} lists eighteen correspondences between scaling-law concepts and concepts of production
+theory and IO econometrics. The cost-side entries in panel A are exact: once $C=6ND$, they are identities of duality
+theory. The others are close analogies: the econometric problem is the same, but its source can differ. The
+collinearity of inputs along the expansion path, for example, is generated by optimizing behavior in cross-lab data
+and by design choices in single-lab sweeps (Section~\ref{sec:ident}).
+
+Three analogies break down. There are no market prices for parameters and tokens; returns to scale measured in loss
+depend on the cardinalization of output, so ``diminishing returns to compute'' has no unit-free content; and the
+inputs of a designed sweep are not chosen by optimizing firms, so the endogeneity machinery of IO applies to cross-lab
+data (Section~\ref{sec:obs}), not to single-lab experiments. Many entries have precursors in machine learning,
+reviewed in the introduction; the table links each to the econometric problem it instantiates and to that
+literature's remedies.
+
+\input{tables/table1_dictionary}
+
+\subsection{Duality}\label{sec:framework:duality}
+
+\begin{proposition}[Duality]\label{prop:duality}
+Let $\kappa=1$ and $\psi_N=\psi_D=0$ in \eqref{eq:tech}.
+\begin{enumerate}
+\item[(i)] The allocation that minimizes training compute $6ND$ subject to $L\le\bar L$, or equivalently maximizes
+$y$ at given $C$, satisfies $\varepsilon_N=\varepsilon_D$. The conditional factor demands are
+\[
+N^*(C)=G\,(C/6)^{a},\qquad D^*(C)=G^{-1}(C/6)^{b},
+\]
+with $a\equiv\beta/(\alpha+\beta)$, $b\equiv1-a$ and $G\equiv(\alpha A/\beta B)^{1/(\alpha+\beta)}$, so that
+$M^*(C)=G^{-2}(C/6)^{b-a}$.
+\item[(ii)] The loss--compute frontier and the cost function are
+\[
+L^*(C)=E+K\,(C/6)^{-\gamma},\qquad C^*(L)=6\,\big[K/(L-E)\big]^{1/\gamma},
+\]
+with $\gamma\equiv\alpha\beta/(\alpha+\beta)$ and $K\equiv\frac{\alpha+\beta}{\beta}AG^{-\alpha}$. Along the
+expansion path, $\varepsilon_N=\varepsilon_D=\gamma$.
+\item[(iii)] With productivity, $y^*=\omega+\gamma(c-\ln6+\psi_N+\psi_D)-\ln K$ and
+\[
+\ln M^*(C)=-2\ln G+(b-a)(c-\ln6)-\frac{2\chi}{\alpha+\beta},\qquad \chi\equiv\beta\psi_D-\alpha\psi_N .
+\]
+At given compute, Hicks-neutral productivity $\omega$ does not affect the allocation; better data (higher
+$\psi_D$) raise $N^*$ and lower both $D^*$ and $M^*$.
+\end{enumerate}
+\end{proposition}
+
+\noindent The proof is in Online Appendix~A (Lemma~\ref{lem:alloc}). The proposition is the scaling-law instance of
+Shephard--Uzawa duality \citep{shephard1953cost,uzawa1964duality}: the technology, the conditional factor demands and
+the cost function carry the same information, linked by $a=\beta/(\alpha+\beta)$ and
+$\gamma=\alpha\beta/(\alpha+\beta)$. Allowing $\kappa\neq1$ leaves part (i) unchanged and multiplies $\gamma$ by
+$\kappa$. By part (ii), $-1/\gamma$ is the elasticity of compute with respect to reducible loss along the frontier,
+the object \citet{nerlove1963returns} estimated for electricity supply. Under the parameters of
+\citet{besiroglu2024chinchilla}, $\gamma=0.178$: a one percent reduction in reducible loss requires about 5.6 percent
+more compute.
+
+The proposition also classifies the three estimation strategies of \citet{hoffmann2022training}. Approach~1, the
+lower envelope of loss against compute across runs of fixed size, estimates the cost function in part (ii).
+Approach~2, the regression of the IsoFLOP-minimizing $\ln N$ on $\ln C$, estimates the conditional factor demand in
+part (i), which identifies $a$ and $G$ but not $\alpha$ and $\beta$. Approach~3, a fit of \eqref{eq:tech} to all
+runs, is a primal estimator. Together they form a system of a production function and its first-order conditions
+\citep{klump2007factor,leonledesma2010identifying}, and their differences are a test of duality.
+\citet{hoffmann2022training} report values of $a$ between 0.46 and 0.50 across the approaches;
+Section~\ref{sec:tech} asks whether such gaps exceed sampling error.
+
+Part (iii) holds at given compute. Because Hicks-neutral productivity does not tilt the expansion path, the input mix
+cannot proxy for it, and the control-function inversion of \citet{olley1996dynamics} is unavailable for the
+productivity that differs most across labs (Section~\ref{sec:ident}). At a given loss target, by contrast, better data
+leave $N^*$ unchanged and lower $D^*$ one for one, and Hicks-neutral productivity moves the chosen mix when
+$\alpha\neq\beta$, because the technology is non-homothetic (Online Appendix~A, Lemma~\ref{lem:alloc}(v)).
+
+\subsection{Substitution}\label{sec:framework:sigma}
+
+For the technology \eqref{eq:tech}, the Hicks elasticity of substitution between parameters and data is
+\begin{equation}\label{eq:sigma}
+\sigma=\frac{\alpha u+\beta v}{\alpha u(1+\beta)+\beta v(1+\alpha)},
+\end{equation}
+a formula derived by \citet{hao2026theory}. Because $u$ and $v$ enter only through their ratio, $\sigma$ depends on
+the input mix only through the wedge $w\equiv\varepsilon_N/\varepsilon_D=\alpha u/(\beta v)$:
+\begin{equation}\label{eq:sigmaw}
+\sigma(w)=\frac{1+w}{1+\alpha+w(1+\beta)},\qquad
+\sigma^*\equiv\sigma(1)=\frac{2}{2+\alpha+\beta}.
+\end{equation}
+The local elasticity lies between $1/(1+\alpha)$ and $1/(1+\beta)$ and equals $\sigma^*$ on the compute-optimal path,
+where $w=1$. Under the \citet{besiroglu2024chinchilla} parameters ($\alpha=0.348$, $\beta=0.366$), $\sigma^*=0.737$,
+and $\sigma$ varies only between 0.732 and 0.742 over all input mixes. Because $\sigma^*=1/[1+(\alpha+\beta)/2]$, the
+value of 0.762 that \citet{hao2026theory} obtain by averaging the exponents of \citet{hoffmann2022training} is exactly
+$\sigma^*$ for those exponents. The joint law of \citet{kaplan2020scaling} implies $\sigma\in[0.500,0.575]$ and
+$\sigma^*=0.535$ (Online Appendix~A, Lemma~\ref{lem:sigma}): the two canonical laws disagree about the curvature of
+the isoquants, not only about the expansion path.
+
+\begin{lemma}[Compute-optimal training reveals gross complementarity]\label{lemma:sigma}
+Let $y=F(n,d)$ be any twice continuously differentiable technology with $F_n,F_d>0$, and let training compute be
+$C=6ND$. At an allocation with $\varepsilon_N=\varepsilon_D$:
+\begin{enumerate}
+\item[(i)] the second-order condition for minimizing compute at given output holds strictly if and only if
+$0<\sigma<1$ there;
+\item[(ii)] if $\sigma>1$ or $\sigma<0$ there, the allocation minimizes rather than maximizes output along its
+isocost, and if $\sigma>1$ everywhere, compute-optimal training is a corner solution.
+\end{enumerate}
+Hence every interior compute-optimal allocation at which the second-order condition holds strictly has $\sigma<1$.
+In the generalized family, $\sigma<1$ at every input mix, so the first-order conditions of
+Propositions~\ref{prop:duality} and~\ref{prop:wedge} are sufficient.
+\end{lemma}
+
+\noindent The proof is in Online Appendix~A (Lemma~\ref{lem:soc} and Corollary~\ref{cor:complements}). With a linear
+cost $p_NN+p_DD$, isocosts are straight lines in levels, and any convex isoquant ($\sigma>0$) gives an interior
+tangency. With $C=6ND$ they are straight lines in logs, so the isoquant must be convex in logs, which requires
+$\sigma<1$. Economically, the implicit price of each input rises with the quantity of the other, so shifting toward
+one input raises its own price; that pays only if the inputs are complements. The existence of a compute-optimal
+frontier, on which neither very large under-trained nor very small over-trained models are efficient, is therefore
+evidence of gross complementarity. The families we fit impose $\sigma<1$, but on the
+best-designed sweep, estimates from forms that do not impose it also imply $\sigma<1$ (Section~\ref{sec:tech}).
+
+The lemma has two further uses. Observational-equivalence arguments can move $\sigma^*$ anywhere in $(0,1)$ but
+never to one or above, which bounds the non-identification results of Section~\ref{sec:ident}. And $\sigma>0$ is what
+makes over-training a sensible response to inference demand: under the Leontief approximation of
+\citet{hao2026theory} ($\sigma=0$), the optimal allocation sits at the kink whatever the inference load, whereas under
+complementarity trading parameters for tokens is feasible at a cost governed by $\sigma^*$ (Figure~\ref{fig:geometry},
+panel (b)).
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\textwidth]{m7_theory_geometry}
+\caption{The Geometry of the Training Problem}\label{fig:geometry}
+\begin{figurenotes}
+Panel (a): the $(\log_{10}N,\log_{10}D)$ plane under the \citet{besiroglu2024chinchilla} parameters. Solid gray curves
+are iso-loss curves (isoquants) at the frontier losses for $C=10^{20},\dots,10^{24}$ FLOP; dotted lines are isocosts
+$6ND=C$; the blue line is the compute-optimal expansion path. The orange dot is a run with $N=8\times10^{9}$ and
+$D=1.5\times10^{13}$ (the configuration of Llama~3~8B), joined to the path at equal compute; its wedge is $w=5.2$.
+Panel (b): three members of the generalized family, with $\sigma^*=0.60$, $0.74$ and $0.85$, constructed to share the
+expansion path and the loss--compute frontier (Online Appendix~A, Proposition~\ref{prop:fd}(iv)). The vertical axis
+is reducible loss in excess of the frontier at $C=10^{22}$ FLOP, as a function of the deviation of tokens per
+parameter from the compute-optimal ratio. The technologies coincide on the path and differ off it.
+\end{figurenotes}
+\end{figure}
+
+\subsection{Wedges, Inference Demand, and Efficiency}\label{sec:framework:wedge}
+
+\begin{proposition}[Revealed inference demand]\label{prop:wedge}
+A lab chooses $(N,D)$ to minimize lifetime compute $6ND+2NT$ subject to $L\le\bar L$, where $L$ belongs to the
+generalized family with inner exponents $\alpha$ and $\beta$.
+\begin{enumerate}
+\item[(i)] If neither a data nor a memory constraint binds, the optimum satisfies
+\[
+w\equiv\frac{\varepsilon_N}{\varepsilon_D}=1+\frac{T}{3D}=\frac{6ND+2NT}{6ND},
+\]
+so the wedge equals the ratio of lifetime to training compute, and $T=3D(w-1)$. The wedge is invariant to
+$\omega$, $\epsilon$, $E$ and $\kappa$.
+\item[(ii)] For a model with compute $C$ and ratio $M$,
+\[
+\ln w=\Big(\frac{1}{\sigma^*}-1\Big)\ln\frac{M}{M^*(C)},\qquad\text{so}\qquad
+\frac TD=3\bigg[\Big(\frac{M}{M^*(C)}\Big)^{1/\sigma^*-1}-1\bigg],
+\]
+where $M^*(C)$ is the training-optimal ratio at the model's own compute.
+\item[(iii)] Relative to the training-only frontier, the model uses
+\[
+\frac{C}{C_{\min}}=\Big(\frac{\alpha+\beta w}{\alpha+\beta}\Big)^{(\alpha+\beta)/(\alpha\beta)}w^{-1/\alpha}
+\]
+times the least training compute that attains its loss. This ratio depends on $(w,\alpha,\beta)$ alone, not on
+$A$, $B$, $E$ or productivity; with $\kappa=1$ the first exponent is $1/\gamma$.
+\item[(iv)] A binding data constraint gives $w=1/(\theta_D+\mu)<1+T/(3D)$, where $\theta_D\equiv6D/(6D+2T)$ and
+$\mu>0$ is the constraint's shadow cost, so that $w<1$ is possible; a binding memory constraint gives
+$w=(1+\nu)(1+T/3D)>1+T/(3D)$ with shadow cost $\nu>0$. If labs differ in factor-augmenting productivity, the wedge
+computed with a common technology is $\hat w=we^{-\chi}$.
+\end{enumerate}
+\end{proposition}
+
+\noindent The proof is in Online Appendix~A (Proposition~\ref{prop:A-wedge}, Lemmas~\ref{lem:geometry}
+and~\ref{lem:ce}, and Corollary~\ref{cor:suff}). Each parameter is used twice: in training, where it costs $6D$ FLOPs, and in serving, where it
+costs $2T$ more; tokens are used only in training. At the lifetime optimum the lab equates the ratio of output
+elasticities to the ratio of lifetime log-cost weights, $1:\theta_D$. An econometrician who sees only training cost,
+with weights $1:1$, observes a wedge: the lab acts as if parameters were $w$ times as expensive, relative to tokens,
+as training accounting says. Inverting the first-order condition makes the wedge a revealed quantity: $T/D=3(w-1)$ is
+anticipated lifetime inference per training token, and $w-1$ is anticipated lifetime inference compute relative to
+training compute. \citet{sardana2024beyond} solve the forward problem of choosing $N$ and $D$ given $T$;
+Proposition~\ref{prop:wedge} runs it backward and needs neither the lab's productivity nor its loss.
+
+The construction is the production approach of \citet{deloecker2012markups} applied to a different wedge. They
+recover a markup as the ratio of a variable input's output elasticity to its revenue share, using cost minimization
+and no demand model; here the ratio of two output elasticities, set against the ratio of their training-cost weights,
+recovers the cost of a second use of one input. The wedge is input-specific, like the capital wedge of
+\citet{hsieh2009misallocation}, but it is neither a distortion nor market power, and it is not a markup: it is the
+shadow cost of serving, which optimal behavior should reveal. The analogy carries over one known weakness of the
+production approach \citep{raval2023testing,demirer2020production}: by part (iv), factor-biased productivity
+contaminates the wedge, as labor-augmenting technology contaminates markups estimated from labor.
+
+By part (ii), revealed inference demand depends on the technology only through $M^*(C)$, the training-optimal ratio
+at the model's own compute, and $\sigma^*$. The log wedge is the model's
+distance from the expansion path at equal compute (Figure~\ref{fig:geometry}, panel (a)), scaled by curvature. A model
+with 8 billion parameters trained on 15 trillion tokens, the configuration of Llama~3~8B, has $M\approx1{,}875$ and,
+under the \citet{besiroglu2024chinchilla} parameters, $w\approx5.2$ (5.3 under the reference technology of
+Section~\ref{sec:wedge}): it is built as if the lab expected about 12.7 inference tokens per training token, roughly $1.9\times10^{14}$ tokens over its life. Section~\ref{sec:wedge}
+estimates such wedges, with confidence bands, for 173 open-weight models; their uncertainty is dominated by $M^*(C)$,
+which on-path data identify only by assuming optimality (Section~\ref{sec:ident}).
+
+Part (iii) is \citeauthor{farrell1957measurement}'s \citeyearpar{farrell1957measurement} input-oriented measure of
+allocative efficiency relative to the training-only frontier. The model above uses 5.5 times the training compute
+that a compute-optimal allocation would need for its loss, a Farrell cost efficiency of 0.18. That is not waste in
+lifetime terms but the training-cost price of a model that is cheaper to serve. To second order,
+$\ln(C/C_{\min})\approx\sigma^*(\ln w)^2/[4(1-\sigma^*)]$, a Harberger triangle whose curvature is set by $\sigma^*$.
+The approximation is accurate to within 1 percent for $|\ln w|\le0.7$ but overstates the loss by 23 percent at
+$w=5.2$, so we use the exact formula.
+
+Wedges below one cannot come from inference demand. Gopher (280 billion parameters, 300 billion tokens) has $w=0.36$
+under the same parameters and used 2.0 times the compute its loss required; GPT-3 has $w=0.43$. Such wedges reveal
+a binding data constraint (part iv), data-augmenting productivity, or a belief error, here optimization against the
+\citet{kaplan2020scaling} law; Section~\ref{sec:obs} separates this allocative component from technical change. More
+generally, the rival sources of a wedge have known signs: data scarcity and data-augmenting productivity ($\chi>0$)
+lower the measured wedge and so understate $T$, while memory or latency constraints and parameter-augmenting
+productivity raise it. Section~\ref{sec:wedge} evaluates each.

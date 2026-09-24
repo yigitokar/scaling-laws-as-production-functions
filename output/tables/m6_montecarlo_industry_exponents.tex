@@ -1,0 +1,60 @@
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\caption{Monte Carlo: exponents and on-path elasticity of substitution in the simulated industry}
+\label{tab:mc_industry_exponents}
+\footnotesize
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & \multicolumn{2}{c}{(a) Exogenous} & \multicolumn{2}{c}{(b) Funding} & \multicolumn{2}{c}{(c) Target} & \multicolumn{2}{c}{(d) Predet.} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+Estimator & Bias & RMSE & Bias & RMSE & Bias & RMSE & Bias & RMSE \\
+\midrule
+\multicolumn{9}{l}{\textit{Panel A. $\alpha$ (truth 0.348)}} \\
+Pooled Huber-LSE, $E$ free (ML practice) & 0.056 & 0.096 & 0.072 & 0.107 & 0.001 & 0.052 & 0.072 & 0.106 \\
+Pooled Huber-LSE, $E$ at truth & 0.098 & 0.104 & 0.115 & 0.119 & 0.026 & 0.040 & 0.113 & 0.118 \\
+Pooled NLS + generation FE & 0.007 & 0.050 & 0.043 & 0.052 & $-$0.039 & 0.096 & 0.037 & 0.048 \\
+Lab FE & 0.003 & 0.036 & 0.017 & 0.031 & $-$0.024 & 0.061 & 0.010 & 0.036 \\
+Mundlak (CRE) & 0.008 & 0.048 & 0.019 & 0.032 & $-$0.011 & 0.072 & 0.012 & 0.031 \\
+Lab $\times$ generation FE & 0.001 & 0.014 & 0.000 & 0.015 & 0.000 & 0.013 & 0.000 & 0.015 \\
+ACF GMM ($c$ predetermined) & 0.012 & 0.073 & 0.016 & 0.036 & 0.066 & 0.187 & 0.011 & 0.075 \\
+ACF GMM (lagged instruments) & 0.017 & 0.082 & 0.015 & 0.076 & 0.015 & 0.079 & 0.016 & 0.085 \\
+IV (compute price) + path$^{\ddagger}$ & $-$0.005 & 0.060 & 0.008 & 0.060 & $-$0.003 & 0.053 & $-$0.003 & 0.055 \\
+Heckman selection correction & 0.007 & 0.050 & 0.043 & 0.052 & $-$0.039 & 0.096 & 0.037 & 0.048 \\
+FOC system, $T$ ignored & $-$0.003 & 0.004 & $-$0.003 & 0.004 & $-$0.002 & 0.004 & $-$0.003 & 0.004 \\
+FOC system, $T$ proxied & $-$0.001 & 0.003 & $-$0.001 & 0.003 & $-$0.001 & 0.003 & $-$0.001 & 0.003 \\
+\midrule
+\multicolumn{9}{l}{\textit{Panel B. $\beta$ (truth 0.366)}} \\
+Pooled Huber-LSE, $E$ free (ML practice) & 0.060 & 0.144 & 0.081 & 0.156 & 0.001 & 0.084 & 0.066 & 0.131 \\
+Pooled Huber-LSE, $E$ at truth & 0.106 & 0.118 & 0.129 & 0.141 & 0.031 & 0.061 & 0.119 & 0.126 \\
+Pooled NLS + generation FE & 0.011 & 0.087 & 0.054 & 0.071 & $-$0.092 & 0.168 & 0.041 & 0.063 \\
+Lab FE & 0.009 & 0.066 & 0.022 & 0.048 & $-$0.030 & 0.101 & 0.016 & 0.061 \\
+Mundlak (CRE) & 0.011 & 0.085 & 0.029 & 0.054 & $-$0.040 & 0.125 & 0.018 & 0.050 \\
+Lab $\times$ generation FE & 0.002 & 0.024 & 0.003 & 0.026 & 0.001 & 0.023 & 0.003 & 0.025 \\
+ACF GMM ($c$ predetermined) & 0.032 & 0.132 & 0.022 & 0.062 & 0.025 & 0.287 & 0.039 & 0.138 \\
+ACF GMM (lagged instruments) & 0.030 & 0.142 & 0.029 & 0.138 & 0.030 & 0.141 & 0.036 & 0.146 \\
+IV (compute price) + path$^{\ddagger}$ & $-$0.004 & 0.063 & 0.008 & 0.065 & $-$0.006 & 0.057 & $-$0.003 & 0.057 \\
+Heckman selection correction & 0.011 & 0.087 & 0.054 & 0.071 & $-$0.092 & 0.168 & 0.041 & 0.063 \\
+FOC system, $T$ ignored & $-$0.006 & 0.007 & $-$0.006 & 0.007 & $-$0.009 & 0.009 & $-$0.006 & 0.008 \\
+FOC system, $T$ proxied & $-$0.002 & 0.004 & $-$0.002 & 0.004 & $-$0.002 & 0.004 & $-$0.002 & 0.004 \\
+\midrule
+\multicolumn{9}{l}{\textit{Panel C. $\sigma^*$ (truth 0.737)}} \\
+Pooled Huber-LSE, $E$ free (ML practice) & $-$0.029 & 0.037 & $-$0.039 & 0.044 & 0.000 & 0.022 & $-$0.035 & 0.040 \\
+Pooled Huber-LSE, $E$ at truth & $-$0.052 & 0.052 & $-$0.061 & 0.061 & $-$0.015 & 0.019 & $-$0.058 & 0.058 \\
+Pooled NLS + generation FE & $-$0.005 & 0.014 & $-$0.025 & 0.027 & 0.038 & 0.044 & $-$0.020 & 0.022 \\
+Lab FE & $-$0.003 & 0.010 & $-$0.010 & 0.012 & 0.015 & 0.020 & $-$0.007 & 0.011 \\
+Mundlak (CRE) & $-$0.005 & 0.013 & $-$0.013 & 0.014 & 0.015 & 0.021 & $-$0.008 & 0.010 \\
+Lab $\times$ generation FE & $-$0.001 & 0.003 & $-$0.001 & 0.004 & 0.000 & 0.003 & $-$0.001 & 0.003 \\
+ACF GMM ($c$ predetermined) & $-$0.011 & 0.022 & $-$0.010 & 0.014 & $-$0.021 & 0.047 & $-$0.013 & 0.024 \\
+ACF GMM (lagged instruments) & $-$0.012 & 0.024 & $-$0.011 & 0.024 & $-$0.011 & 0.023 & $-$0.013 & 0.025 \\
+IV (compute price) + path$^{\ddagger}$ & 0.002 & 0.033 & $-$0.005 & 0.034 & 0.002 & 0.030 & 0.002 & 0.031 \\
+Heckman selection correction & $-$0.005 & 0.014 & $-$0.025 & 0.027 & 0.038 & 0.044 & $-$0.020 & 0.022 \\
+FOC system, $T$ ignored & 0.002 & 0.003 & 0.002 & 0.003 & 0.003 & 0.003 & 0.003 & 0.003 \\
+FOC system, $T$ proxied & 0.001 & 0.001 & 0.001 & 0.002 & 0.001 & 0.002 & 0.001 & 0.002 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} 400 replications per scenario. Simulated industry: 40 labs $\times$ 6 generations, 1--4 models per lab-generation (tier compute offsets $\approx 8\times$), Chinchilla technology at the Besiroglu et al.\ (2024) truth, Hicks-neutral productivity $\omega_{ft}=\delta_t+x_{ft}$, $x_{ft}=0.8x_{f,t-1}+\xi_{ft}$, sd$(x)=0.25$, TFP growth $0.15$ per generation; seed noise sd $0.05$ in $y=-\ln(L-E)$. Compute rules: (a) budget independent of $\omega$; (b) $c_{ft}$ rises by $2x_{ft}$; (c) labs buy the compute that reaches a loss target; (d) $c_{ft}$ rises by $2x_{f,t-1}$ (provisioned a generation ahead). Allocation: lifetime-compute optimum with log-normal inference demand $T$ (mean $\ln w\approx0.46$) plus allocation error (sd $0.2$ in $\ln D/N$). $E$ is known to every estimator except the pooled Huber-LSE with $E$ free (ML practice). TFP growth and sd$(\omega)$ are computed from lab-generation means of $y-\hat F(n,d)$. Both ACF rows use current within-lab-generation deviations of $n$ and $d$ as instruments (valid here because tier offsets and inference demand are independent of $\omega$); without them the lagged-instrument moment set is under-identified. `--': not identified in that design. $^{\ddagger}$Just-identified 2SLS has no finite moments; for this row the table reports the median bias and the median absolute error instead of the mean bias and the RMSE. 
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

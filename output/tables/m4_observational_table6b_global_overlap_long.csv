@@ -1,0 +1,56 @@
+estimator,spec,param,est,se,n_obs,n_clusters,n_families,lo,hi,rho,F,ar_lo,ar_hi,ar_type,reliability,output,sample
+OLS,"n,d",theta_N,0.5742631378992216,0.06737322846737581,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OLS,"n,d",theta_D,0.23920352519813326,0.05739610510904123,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OLS,"n,d",theta_C_ray,0.4067333315486774,0.0306727746511234,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OLS,"n,d",thetaN_minus_thetaD,0.3350596127010883,0.10910386414979197,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OLS,c only,theta_C,0.3985793159027755,0.04037541297963067,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Year FE,"n,d",theta_N,0.6243478910870234,0.04130314671168894,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Year FE,"n,d",theta_D,0.14091554157059813,0.08688704577731969,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Year FE,"n,d",theta_C_ray,0.38263171632881077,0.038966634705388935,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Year FE,"n,d",thetaN_minus_thetaD,0.4834323495164252,0.11152140074148015,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Year FE,c only,theta_C,0.39673682951979883,0.043148561583397436,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Developer FE,"n,d",theta_N,0.6487268996106785,0.04111470836342924,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Developer FE,"n,d",theta_D,0.1809151224715379,0.12550158168901665,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Developer FE,"n,d",theta_C_ray,0.41482101104110825,0.05471441074817325,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Developer FE,"n,d",thetaN_minus_thetaD,0.4678117771391406,0.15135212428780193,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Developer FE,c only,theta_C,0.4822817333803382,0.05967399064965189,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Family FE,"n,d",theta_N,0.6421413907179431,0.047103944350891325,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Family FE,"n,d",theta_D,0.17854384952298885,0.07853141806037972,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Family FE,"n,d",theta_C_ray,0.41034262012046596,0.03617925768047987,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Family FE,"n,d",thetaN_minus_thetaD,0.4635975411949542,0.10740659033192403,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Family FE,c only,theta_C,0.5393932482756906,0.08104660828119171,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Lab x period FE,"n,d",theta_N,0.656336505599786,0.03824772739107208,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Lab x period FE,"n,d",theta_D,0.21673952345463823,0.1238925569313048,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Lab x period FE,"n,d",theta_C_ray,0.4365380145272121,0.056415677045407175,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Lab x period FE,"n,d",thetaN_minus_thetaD,0.43959698214514775,0.14454616619319244,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Lab x period FE,c only,theta_C,0.5275527417799795,0.07072674878245876,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,"n,d",theta_N,0.6421413907179462,0.03754435885627602,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,"n,d",theta_D,0.17854384952298522,0.06259373353427773,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,"n,d",theta_C_ray,0.4103426201204657,0.028836800234356766,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,"n,d",thetaN_minus_thetaD,0.463597541194961,0.08560878768183323,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,"n,d",between_minus_within_n,-0.22533761160698149,0.10349564372367334,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,"n,d",between_minus_within_d,0.12008971724558645,0.08638301966498296,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,c only,theta_C,0.5393932482756896,0.06444015304814874,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Mundlak,c only,between_minus_within_c,-0.19944400194021017,0.06260943060881889,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+Reverse (c on y),c only,theta_C,0.57600080320925,0.08411151583512229,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+"Reverse (c on y), family FE",c only,theta_C,0.6420037265479283,0.09831886219732644,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OP-style selection control,"n,d",theta_N,0.6180638437502894,0.07843519155487283,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OP-style selection control,"n,d",theta_D,0.23643609905350002,0.05800634574775377,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OP-style selection control,"n,d",theta_C_ray,0.42724997140189475,0.04100747915918529,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OP-style selection control,"n,d",thetaN_minus_thetaD,0.3816277446967894,0.11093771880902828,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+OP-style selection control,c only,theta_C,0.3897691717736951,0.047987966787643666,90,21.0,34.0,,,,,,,,,y_hellaswag,overlap
+FD across generations,,theta_N,-1.8299480032353719,1.7764799585603668,16,10.0,,,,,,,,,,y_hellaswag,overlap
+FD across generations,,theta_D,-0.008520188307534385,0.22573682789210725,16,10.0,,,,,,,,,,y_hellaswag,overlap
+FD across generations,,theta_C_ray,-0.9192340957714531,0.9785451072121171,16,10.0,,,,,,,,,,y_hellaswag,overlap
+"ACF-style (AR(1) omega, gens)",,theta_N,0.6231921611530168,6.000406956912601,16,10.0,,-14.626951446097996,1.4673017456833042,0.8200000000000001,,,,,,y_hellaswag,overlap
+"ACF-style (AR(1) omega, gens)",,theta_D,0.542056009885699,0.9007700994995489,16,10.0,,-1.3645590396647487,2.326133229242128,0.8200000000000001,,,,,,y_hellaswag,overlap
+"ACF-style (AR(1) omega, gens)",,theta_C_ray,0.5826240855193578,3.180184578692416,16,10.0,,-7.4994466921635485,1.383833753197157,0.8200000000000001,,,,,,y_hellaswag,overlap
+IV: frontier FLOP/$,,theta_C,9.738900181429926,243.326823259177,90,21.0,,,,,0.0014091397997466528,-1.0,2.5,unbounded,,y_hellaswag,overlap
+IV: frontier FLOP/$ + developer FE,,theta_C,0.4571558824316071,0.2225391164125605,90,21.0,,,,,0.24360108758817428,-1.0,2.5,unbounded,,y_hellaswag,overlap
+IV: frontier FLOP/$ + developer FE + trend,,theta_C,0.5278794256096262,0.29124033478840367,90,21.0,,,,,3.760426263802514,-0.13,2.5,unbounded,,y_hellaswag,overlap
+IV: own-hardware FLOP/$,,theta_C,0.1684814717455403,0.17425152306334218,19,7.0,,,,,19.233828066047007,-0.38,0.4950000000000001,interval,,y_hellaswag,overlap
+IV: China x post-export-control + dev FE + year FE,,theta_C,0.9027219973060028,0.2533037861526706,90,21.0,,,,,10.562077403289878,0.4850000000000001,2.225,interval,,y_hellaswag,overlap
+"OLS, EIV-corrected (empirical)",,theta_C,0.39862612247935103,0.04038015440695516,90,,,,,,,,,,0.9998825802577002,y_hellaswag,overlap
+"OLS, EIV-corrected (Epoch 'Confident')",,theta_C,0.4345118165053641,0.044015314734026346,90,,,,,,,,,,0.9173037435631052,y_hellaswag,overlap
+"Family FE, EIV-corrected (empirical)",,theta_C,0.5395288466189778,0.08106698262930806,90,,,,,,,,,,0.9997486726722085,y_hellaswag,overlap
+"Family FE, EIV-corrected (Epoch 'Confident')",,theta_C,0.6554024704223106,0.09847759024913304,90,,,,,,,,,,0.8229954457268538,y_hellaswag,overlap

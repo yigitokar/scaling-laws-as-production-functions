@@ -1,0 +1,31 @@
+anchor,assumption,e_lo,e_hi,C,Mstar_lo,Mstar_hi
+Chinchilla (Epoch extraction),Normal inputs only,-1.0,1.0,1e+23,0.33015253259364047,1265.0814915973685
+Chinchilla (Epoch extraction),Normal inputs only,-1.0,1.0,1e+24,0.03301525325936413,12650.814915973653
+Chinchilla (Epoch extraction),Normal inputs only,-1.0,1.0,1e+25,0.003301525325936399,126508.14915973714
+Chinchilla (Epoch extraction),Slope in cross-sweep range,-0.1399999999999999,0.26,1e+23,6.920011157566879,92.27979944288171
+Chinchilla (Epoch extraction),Slope in cross-sweep range,-0.1399999999999999,0.26,1e+24,5.013104926661609,167.9216302785688
+Chinchilla (Epoch extraction),Slope in cross-sweep range,-0.1399999999999999,0.26,1e+25,3.6316734805027626,305.56713479710015
+Chinchilla (Epoch extraction),Cross-sweep range + M* nondecreasing,0.0,0.26,1e+23,11.355784612719843,92.27979944288171
+Chinchilla (Epoch extraction),Cross-sweep range + M* nondecreasing,0.0,0.26,1e+24,11.355784612719843,167.9216302785688
+Chinchilla (Epoch extraction),Cross-sweep range + M* nondecreasing,0.0,0.26,1e+25,11.355784612719843,305.56713479710015
+Chinchilla (Epoch extraction),Anchor's own slope persists (95% CI),-0.1643626574366155,0.17179364323128368,1e+23,6.348534884180063,67.54253446903438
+Chinchilla (Epoch extraction),Anchor's own slope persists (95% CI),-0.1643626574366155,0.17179364323128368,1e+24,4.348213427969723,100.31618237460881
+Chinchilla (Epoch extraction),Anchor's own slope persists (95% CI),-0.1643626574366155,0.17179364323128368,1e+25,2.9781611600324527,148.99257964371242
+Chinchilla (Epoch extraction),Parametric extrapolation (point),0.004508570390483746,0.004508570390483746,1e+23,20.843404023719025,20.843404023719025
+Chinchilla (Epoch extraction),Parametric extrapolation (point),0.004508570390483746,0.004508570390483746,1e+24,21.060914122440245,21.060914122440245
+Chinchilla (Epoch extraction),Parametric extrapolation (point),0.004508570390483746,0.004508570390483746,1e+25,21.280694034815323,21.280694034815323
+Meta Llama 3 (digitized),Normal inputs only,-1.0,1.0,1e+23,1.2179136448588233,402.0271799707553
+Meta Llama 3 (digitized),Normal inputs only,-1.0,1.0,1e+24,0.12179136448588262,4020.2717997075397
+Meta Llama 3 (digitized),Normal inputs only,-1.0,1.0,1e+25,0.012179136448588207,40202.71799707558
+Meta Llama 3 (digitized),Slope in cross-sweep range,-0.1399999999999999,0.26,1e+23,8.82300440601725,73.15692045773389
+Meta Llama 3 (digitized),Slope in cross-sweep range,-0.1399999999999999,0.26,1e+24,6.391701667618979,133.12371097020053
+Meta Llama 3 (digitized),Slope in cross-sweep range,-0.1399999999999999,0.26,1e+25,4.630378534094468,242.24533115382144
+Meta Llama 3 (digitized),Cross-sweep range + M* nondecreasing,0.0,0.26,1e+23,12.179136448588116,73.15692045773389
+Meta Llama 3 (digitized),Cross-sweep range + M* nondecreasing,0.0,0.26,1e+24,12.179136448588116,133.12371097020053
+Meta Llama 3 (digitized),Cross-sweep range + M* nondecreasing,0.0,0.26,1e+25,12.179136448588116,242.24533115382144
+Meta Llama 3 (digitized),Anchor's own slope persists (95% CI),-0.09461318961302115,0.2361872407870739,1e+23,9.794974427614962,69.25364818132897
+Meta Llama 3 (digitized),Anchor's own slope persists (95% CI),-0.09461318961302115,0.2361872407870739,1e+24,7.8775309269774345,119.29710291657716
+Meta Llama 3 (digitized),Anchor's own slope persists (95% CI),-0.09461318961302115,0.2361872407870739,1e+25,6.335442115145594,205.5025134130821
+Meta Llama 3 (digitized),Parametric extrapolation (point),0.0735582541891916,0.0735582541891916,1e+23,26.44627742796821,26.44627742796821
+Meta Llama 3 (digitized),Parametric extrapolation (point),0.0735582541891916,0.0735582541891916,1e+24,31.32728828763809,31.32728828763809
+Meta Llama 3 (digitized),Parametric extrapolation (point),0.0735582541891916,0.0735582541891916,1e+25,37.1091543651021,37.1091543651021

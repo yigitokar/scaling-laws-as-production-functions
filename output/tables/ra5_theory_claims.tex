@@ -1,0 +1,71 @@
+\begin{table}[tp]
+\centering
+\caption{Verification of the Revised Formal Results: Symbolic Checks}
+\label{tab:ra5-claims}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l >{\raggedright\arraybackslash}p{0.13\textwidth} >{\raggedright\arraybackslash}p{0.47\textwidth} l@{}}
+\toprule
+ID & Result & Statement tested & Verdict \\
+\midrule
+GW.foc & Prop. A8(i) & Any $V(L,N)$: $w=(1+\delta+m_N+\xi g_n/X_T)/(1+m_D+\xi g_d/X_T)$; $w-1=m_N$ when $\delta=m_D=0$ & New \\
+GW.a.sym & Prop. A8(iii)(a) & Serving borne at rate $\lambda$: $w=1+\lambda p(\phi+\eta)T/(3D)$ & New \\
+GW.a.share & Prop. A8(iii)(a) & $s=\lambda X_S/(X_T+\lambda X_S)$: no FLOP-to-dollar conversion needed & New \\
+GW.d.sym & Prop. A8(iii)(d) & Data cost: $w=(1+m_N)/(1+m_D)$; $\hat T/D=(T/D-3m_D)/(1+m_D)<T/D$ & New \\
+GW.e.sym & Prop. A8(iii)(e) & Distillation: $w=(1+T/3D)/(1+N_T/3N)$ & Verified \\
+GW.f.sym & Prop. A8(iii)(f) & MFU: $w=1+\delta+\lambda(1+\delta_S)pT/(3D)$; product form iff $\delta_S=\delta$ & Corrected \\
+GW.sign & Prop. A8(iv) & A binding constraint raises $w$ iff $g_n>w_0g_d$ & New \\
+FAM.sym & Prop. A9(ii)-(iii) & Family FOC $\sum_i\pi_i(1+m_{N,i})=(1+m_D)\bar w_H$; $1-1/\bar w_H=\sum_i\omega_is_i$ & New \\
+FAM.slope & Prop. A9(i) & Common $D$: $\ln w_i-\ln w_j=-a_1(n_i-n_j)$ & New \\
+MF.w & Prop. A10(i) & $w=(L_c-L_x)/(L_c+L_x)$ for any smooth technology and output & New \\
+MF.sigma & Prop. A10(ii) & $1/\sigma^*-1=L_{nn}|_C/(2|dL^*/dc|)$ at the IsoFLOP minimum & New \\
+MF.inv & Prop. A10(ii) & Invariant to monotone transforms of output at the argmin only & New \\
+MF.slope & Prop. A10(iii) & $\partial\ln w/\partial\ln M|_C=1/\sigma^*-1$ at $M^*(C)$ & New \\
+MF.local & Prop. A10(iv) & Local $\sigma$ from the second-order expansion in $(\ln M,\ln C)$ & New \\
+MF.family & Prop. A10(ii),(v) & Family: formula returns $S/2$ for all $\kappa,E$; $\kappa=1$ imposes $-y_{nn}=\gamma^2/(ab)$ & New \\
+QH & Lemma A4(iv) & $R(\lambda^{b_1}N,\lambda^{a_1}D)=\lambda^{-\kappa a_1b_1}R(N,D)$; $w$ constant on orbits & New \\
+DMR.sign & Prop. A3(i)-(ii), Remark & Drift of $M^*$ signs $\beta g_D-\alpha g_N$, not $g_D-g_N$ & Corrected \\
+PI.sign.sym & Prop. A11(iii) & $w-1=-2Y_x/F_d$, so $\operatorname{sign}(w-1)=\operatorname{sign}(\ln M-\ln M^*)$ & New \\
+PI.normal & Prop. A11(i) & Normal inputs imply $|d\ln M^*/d\ln C|\le1$ & New \\
+SI.twin & Prop. A1(iii) & On-path twin $(\alpha,\beta)\mapsto(\beta b/a,\alpha a/b)$ is observationally equivalent & New \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Each statement was checked symbolically (sympy; identities reduced to zero, or evaluated at random rational points with 40-digit precision) and numerically by a method that does not use the closed form under test: direct maximization of the developer's objective, isoquant tracing, profiling of the least-squares criterion, Monte Carlo, or finite-difference Fisher information. ``Corrected'' marks results that revise a statement of the first draft. The full register, with error metrics, is \texttt{ra5\_theory\_claims.csv}.\end{tablenotes}
+\begin{tablenotes}[Source]Authors' calculations; \texttt{code/analysis/ra5\_theory}.\end{tablenotes}
+\end{table}
+
+\begin{table}[tp]
+\centering
+\caption{Verification of the Revised Formal Results: Numerical Checks}
+\label{tab:ra5-claims-num}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l >{\raggedright\arraybackslash}p{0.13\textwidth} >{\raggedright\arraybackslash}p{0.47\textwidth} l@{}}
+\toprule
+ID & Result & Statement tested & Verdict \\
+\midrule
+GW.num & Prop. A8(i),(iii) & Brute-force maximization, 12 conduct cases: general formula and closed forms & New \\
+GW.sign.num & Prop. A8(iv) & Caps and latency raise $w$; data cost, cap, distillation, deadline lower it & New \\
+GW.misspec.num & Prop. A8(ii) & $\hat w=w\,w_L/w_{L'}$; factor bias gives $e^{-\chi}$ & New \\
+FAM.num & Prop. A9(ii)-(v) & Family problems by brute force: (ii)--(v) hold; member $\hat T_i\neq T_i$ & New \\
+MF.sigma.num & Prop. A10(ii) & Model-free $\sigma^*$ equals isoquant-traced $\sigma^*$, also for a non-separable technology & New \\
+MF.inv.num & Prop. A10(ii) & Same $\sigma^*$ under loss, bits, wrong-$E$ log loss and $e^{L}$ & New \\
+MF.w.num & Prop. A10(i) & Model-free $w$ equals the MRTS off the path & New \\
+MF.slope.num & Prop. A10(iii) & Slope of $\ln w$ at $M^*$ equals $1/\sigma^*-1$ & New \\
+FG.num & Remark after Prop. A10 & Quadratic IsoFLOP fits overstate curvature by $(f^{(4)}/24)\kappa_4$ to leading order & New \\
+QH.num & Lemma A4(iv) & Family path linear in logs; non-separable path curved & New \\
+SI.geom & Prop. A1(iii) & On-path criterion quartic along opposite-rate directions, also when $\alpha=\beta$ & Corrected \\
+SI.split & Prop. A1(iii)(b) & With $A/B$ known, $\sigma^*$ is first-order identified iff $\alpha=\beta$ (v1's statement, now conditional) & Corrected \\
+INFO.E.num & Prop. A2 (E estimated) & Rates $v^4$ and $v^2$ unchanged with $E$ estimated and noise on $\ln L$ & New \\
+DMR.num & Prop. A3, Remark & $M^*$ falls ($\mathcal B>0$) although $g_N>g_D$ & Corrected \\
+PI.sign.num & Prop. A11(iii) & $\operatorname{sign}(w-1)=\operatorname{sign}(\ln M-\ln M^*)$ on a non-separable technology & New \\
+PI.sharp.num & Prop. A11(ii) & Continuations of $M^*(C)$ bending up or down are generated by admissible technologies & New \\
+SI.mc & Prop. A1(iii) & On-path $\hat\sigma^*$ converges at $n^{-1/4}$; the path restriction restores $n^{-1/2}$ & New \\
+PI.illus & Prop. A11, illustration & Nested assumptions give nested identified sets (verified sample) & New \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Each statement was checked symbolically (sympy; identities reduced to zero, or evaluated at random rational points with 40-digit precision) and numerically by a method that does not use the closed form under test: direct maximization of the developer's objective, isoquant tracing, profiling of the least-squares criterion, Monte Carlo, or finite-difference Fisher information. ``Corrected'' marks results that revise a statement of the first draft. The full register, with error metrics, is \texttt{ra5\_theory\_claims.csv}.\end{tablenotes}
+\begin{tablenotes}[Source]Authors' calculations; \texttt{code/analysis/ra5\_theory}.\end{tablenotes}
+\end{table}

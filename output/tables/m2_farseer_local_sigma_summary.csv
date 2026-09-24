@@ -1,0 +1,15 @@
+statistic,value,boot_lo,boot_hi
+median local sigma,0.690471134566276,0.6793965165235109,0.6992664967510137
+p10 local sigma,0.6418719039705673,,
+p90 local sigma,0.8342681187864969,,
+min local sigma,0.6058973013960057,,
+max local sigma,0.9871426466550103,,
+median Farseer-Eq.3 sigma at grid points,0.7062981024838583,,
+min Chinchilla sigma at grid points,0.7670314040450718,,
+max Chinchilla sigma at grid points,0.775832487920337,,
+grid points,42.0,,
+grid points with Chinchilla sigma inside pointwise band,4.0,,
+slope on ln M (simple OLS),-0.016066754727798227,-0.020015611109924853,-0.011950022445164264
+slope on ln N (simple OLS),-0.015585169193656085,-0.02880663609987521,-0.004226671443120459
+slope on ln M holding ln N (joint OLS),-0.031401050361435465,-0.03999298285139662,-0.02400362321258519
+slope on ln N holding ln M (joint OLS),-0.04798071987044561,-0.06894767904047622,-0.030645933695969803

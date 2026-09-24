@@ -1,0 +1,41 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{The Wedge over Time and across Model Types}
+\label{tab:m3_trends}
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+ & $n$ & median $M$ & median $\hat w$ & IQR & median $\hat T/D$ & Share $\hat w<1$ & Share $\hat w>2$ & median PI band \\
+\midrule
+\multicolumn{9}{l}{\textit{Release year}} \\
+\quad 2019 & 4 & 97 & 1.70 & [1.38, 2.12] & 2.1 & 0.00 & 0.25 & [1.35, 3.06] \\
+\quad 2020 & 10 & 79 & 1.59 & [1.13, 2.20] & 1.8 & 0.20 & 0.40 & [1.20, 3.28] \\
+\quad 2021 & 19 & 31 & 1.18 & [0.49, 2.09] & 0.5 & 0.47 & 0.32 & [0.78, 2.96] \\
+\quad 2022 & 34 & 23 & 1.06 & [0.79, 1.74] & 0.2 & 0.41 & 0.21 & [0.70, 2.98] \\
+\quad 2023 & 97 & 107 & 1.83 & [1.12, 2.34] & 2.5 & 0.18 & 0.43 & [1.23, 4.23] \\
+\quad 2024 & 106 & 612 & 3.45 & [2.51, 4.98] & 7.3 & 0.00 & 0.82 & [2.15, 7.86] \\
+\quad 2025 & 61 & 1,303 & 4.68 & [3.26, 5.88] & 11.0 & 0.02 & 0.95 & [2.40, 10.63] \\
+\quad 2026 & 4 & 686 & 3.77 & [3.60, 4.22] & 8.3 & 0.00 & 1.00 & [1.59, 10.49] \\
+\multicolumn{9}{l}{\textit{Weights}} \\
+\quad closed/API & 64 & 27 & 1.12 & [0.78, 1.89] & 0.4 & 0.39 & 0.22 & [0.71, 2.99] \\
+\quad open & 271 & 344 & 2.86 & [1.85, 4.54] & 5.6 & 0.07 & 0.72 & [1.60, 6.42] \\
+\multicolumn{9}{l}{\textit{Architecture}} \\
+\quad dense & 301 & 208 & 2.34 & [1.33, 3.71] & 4.0 & 0.14 & 0.58 & [1.42, 5.13] \\
+\quad MoE & 34 & 736 & 3.84 & [3.09, 5.77] & 8.5 & 0.03 & 0.97 & [1.88, 10.21] \\
+\multicolumn{9}{l}{\textit{Size class (active $N$)}} \\
+\quad $<$4B & 105 & 890 & 3.96 & [2.56, 6.34] & 8.9 & 0.01 & 0.86 & [2.40, 7.30] \\
+\quad 4-9B & 79 & 311 & 2.73 & [2.04, 4.05] & 5.2 & 0.03 & 0.76 & [1.70, 6.12] \\
+\quad 9-16B & 48 & 90 & 1.73 & [1.09, 2.56] & 2.2 & 0.12 & 0.42 & [1.08, 4.28] \\
+\quad 16-40B & 45 & 221 & 2.44 & [1.54, 3.34] & 4.3 & 0.11 & 0.62 & [1.33, 6.54] \\
+\quad 40-80B & 26 & 49 & 1.44 & [1.07, 2.48] & 1.3 & 0.15 & 0.42 & [0.67, 4.58] \\
+\quad $>$80B & 32 & 4.3 & 0.60 & [0.45, 0.95] & -1.2 & 0.78 & 0.00 & [0.27, 2.29] \\
+\multicolumn{9}{l}{\footnotesize $\ln\hat w$ on year effects + open weights 0.57 (0.09); MoE 0.01 (0.08); $n=335$, 94 developer clusters} \\
+\multicolumn{9}{l}{\footnotesize $\ln\hat w$ on year effects + open weights 0.44 (0.09); MoE 0.13 (0.09); ln C -0.12 (0.02); $n=335$, 94 developer clusters} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Production-scale pretrained language models ($6ND\ge10^{21}$ FLOP) released 2019--2026: Sample A (Epoch AI all-models database, open and closed, $N$ and $D$ not graded `Speculative') merged with Sample B (verified open-weight models). Code-specialised models excluded. $\hat w$ under the reference technology. Bottom rows: OLS of $\ln\hat w$ with standard errors clustered by developer (parent organization; e.g.\ Google units merged). Conditional on $\ln C$, $\ln w=\tfrac{\alpha+\beta}{2}\ln(M/M^*(C))$, so the regression compares tokens per parameter at a given compute budget.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

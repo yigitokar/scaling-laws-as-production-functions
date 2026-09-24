@@ -1,0 +1,13 @@
+regime,tag,planned,completed,trunks_with_endpoints,wall_hours_lower_bound,any_nonfinite,any_diverged,duplicate_records
+edu,hiM,8,0,,,,,
+edu,lrcorner,16,16,4.0,4.175883670912849,False,False,0.0
+edu,lrsweep,12,12,12.0,0.9403722042507595,False,False,0.0
+edu,main,44,44,8.0,12.646263597541385,False,False,0.0
+edu,seedcorner,3,0,,,,,
+edu,seeds,18,0,,,,,
+web,hiM,4,0,,,,,
+web,lrcal,12,12,12.0,2.1278640134467017,False,False,0.0
+web,lrcorner,16,15,4.0,4.624954242772526,False,False,0.0
+web,main,44,15,3.0,4.7449565711948605,False,False,0.0
+web,seedcorner,3,0,,,,,
+web,seeds,18,0,,,,,

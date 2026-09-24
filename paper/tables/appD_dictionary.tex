@@ -1,0 +1,53 @@
+% Online Appendix Table D1: the full dictionary between scaling-law practice and production/IO econometrics.
+% Revised from the v1 Table 1 (tables/table1_dictionary.tex) with Referee 1's comment-8 corrections:
+% on-path collinearity = Marschak-Andrews / Bond-Soderbom (not ACF functional dependence); IsoFLOP sweeps assign inputs
+% (no price shock); Nerlove = scale-dependent returns (no "spurious"); tokenizers change units of output AND of D
+% (not Klette-Griliches output prices); benchmark links are measurement maps (not TFPR); Approach 1 also estimates factor
+% demands; w is Raval's ratio statistic and measures the value of compactness (Prop. 2); C = 6ND is FLOP accounting.
+% Writer appendix_D_F, 2026-09-24.
+\begin{table}[tp]
+\centering
+\caption{Scaling Laws in the Language of Production Economics: Full Dictionary}
+\label{tab:app-dictionary}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{24mm}>{\raggedright\arraybackslash}p{29mm}>{\raggedright\arraybackslash}p{50mm}>{\raggedright\arraybackslash}p{24mm}@{}}
+\toprule
+Scaling-law concept & Production / IO concept & What the mapping delivers (where used) & Key reference \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Panel A. Technology and cost}}\\
+Iso-loss contour & Isoquant & $\sigma$, optimal mix and $w$ are ordinal (Lemma~\ref{lemma:sigma}) & \citealt{brandfonbrener2024loss} \\
+Chinchilla law & Additive; CES if $\alpha=\beta$; quasi-homothetic & $\sigma(w)$, $\sigma^*=2/(2+\alpha+\beta)$; interior optima imply $\sigma^*<1$ (Lemma~\ref{lemma:sigma}) & \citealt{hao2026theory} \\
+Outer exponent $\kappa$ & Two-level aggregator & $\kappa=1$ ties IsoFLOP curvature to frontier and path slopes (Prop.~\ref{prop:modelfree}) & \citealt{sato1967twolevel} \\
+IsoFLOP line, $C\approx6ND$ & Isocost with common log-cost weights & Optimality equates output elasticities; FLOP prices that vary with size are wedges (Prop.~\ref{prop:wedge}) & \citealt{shephard1953cost} \\
+Compute-optimal $N^*(C)$, $D^*(C)$ & Conditional factor demands & Allocation exponent $a=\beta/(\alpha+\beta)$ (Prop.~\ref{prop:duality}) & \citealt{uzawa1964duality} \\
+IsoFLOP-minima frontier & Inverse cost function & Frontier elasticity $\gamma$ (Prop.~\ref{prop:duality}) & \citealt{nerlove1963returns} \\
+Hoffmann et al.'s Approaches 1--3 & Cost function and factor demands (1, 2); primal (3) & Design-consistent duality tests (Appendix~\ref{app:add-chinchilla}) & \citealt{hoffmann2022training} \\
+\multicolumn{4}{@{}l}{\textit{Panel B. Identification}}\\
+Compute-optimal or fixed-ratio designs & Collinearity under common prices & $a$ and $\gamma$ identified; $\sigma^*$ only by functional form, at rate $n^{-1/4}$ (Prop.~\ref{prop:ident}) & \citealt{bond2005adjustment} \\
+IsoFLOP sweeps; factorial grids & Assigned inputs, not price shocks & $\sigma^*$ from IsoFLOP curvature and the frontier slope, form-free (Prop.~\ref{prop:modelfree}) & \citealt{box1959design} \\
+Wedges of released models & Relative-price and constraint variation & Information on $\ln M^*$ second order, on $\sigma^*$ fourth order in the log wedges (Prop.~\ref{prop:ident}) & \citealt{kiefer1959optimum} \\
+Lab ``secret sauce'' & Transmitted Hicks-neutral productivity & Biases $\gamma$ across labs; given compute, the mix cannot proxy for it (Appendix~\ref{app:obs}) & \citealt{ackerberg2015identification} \\
+Hyper\-parameters & Flexible inputs & Scale-correlated mis-tuning biases $a$ (Appendix~\ref{app:add-measurement}) & \citealt{gandhi2020identification} \\
+\multicolumn{4}{@{}l}{\textit{Panel C. Measurement}}\\
+Omitted embedding or head parameters & Scale-correlated input error & Upward bias in local $a$ that vanishes at scale (Appendix~\ref{app:add-measurement}) & \citealt{collardwexler2016production} \\
+Loss per token; tokenizer & Units of output and of the data input & Exponents survive proportional rescaling; $E$, $A$, $B$, $M^*$ do not & \citealt{tao2024scaling} \\
+Benchmark accuracy; Elo & Bounded monotone measurement map & Ordinal objects survive the link; $\gamma$ and returns to compute do not & \citealt{gadre2024language} \\
+\multicolumn{4}{@{}l}{\textit{Panel D. Productivity and wedges}}\\
+Algorithmic progress & Factor-augmenting technical change & Drift of $M^*$ signs the Hicks bias $\beta g_D-\alpha g_N$ (Appendix~\ref{app:obs}) & \citealt{ho2024algorithmic} \\
+Rebalancing after Chinchilla & Farrell allocative efficiency & An allocative, not a technical, gain (Appendix~\ref{app:obs}) & \citealt{gundlach2025origin} \\
+Over-training, $M>M^*(C)$ & Input wedge (Raval's ratio statistic) & Value of compactness $s=(w-1)/w$; serving share if the developer serves (Prop.~\ref{prop:wedge}) & \citealt{raval2023testing} \\
+Cross-lab scaling regressions & Transmission and selection bias & Bias signed by the compute regime; low-power benchmark (Appendix~\ref{app:obs}) & \citealt{whitfill2025note} \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}
+Panel A's entries are identities of duality theory once compute is measured by the FLOP-accounting approximation
+$C\approx6ND$; the others are analogies in which the econometric problem is the same but its source can differ.
+$M^*(C)$: compute-optimal $D/N$; $g_N$, $g_D$: rates of parameter- and data-augmenting technical change.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' compilation.
+\end{tablenotes}
+\end{table}

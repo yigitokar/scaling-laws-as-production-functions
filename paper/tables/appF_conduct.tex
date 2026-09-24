@@ -1,0 +1,42 @@
+% Online Appendix table relabelled from output/tables/ra2_wedge_conduct.tex (writer appendix_D_F, 2026-09-24).
+% The aggregate-share block of the module table is dropped: Table 4, panel C, reports it (ra3_econ_inference_share.csv).
+\begin{table}[tp]
+\centering
+\caption{Conduct Tests and Derivative Counts}
+\label{tab:app-conduct}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
+\sbox{\ratabbox}{%
+\begin{tabular}{@{}llrrrrrl@{}}
+\toprule
+Test & Sample & $n$ & $G$ & Coef. & (s.e.) & $p$ (WCR) & Note \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel A. Conduct tests; outcome $\ln w$ (reference), controls year effects and $\ln C$}} \\[1pt]
+(a) Open weights & universe & 186 & 67 & 0.52 & (0.18) & 0.011 & {\footnotesize $G_0$=23 closed} \\
+\quad 2023 and later & universe & 150 & 60 & 0.71 & (0.17) & 0.001 & {\footnotesize $G_0$=15 closed} \\
+(b) Developer serves & clean & 77 & 18 & 0.45 & (0.26) & 0.390 & {\footnotesize $G_1$=7} \\
+\quad On-device target & clean & 77 & 18 & 0.22 & (0.23) & 0.410 & {\footnotesize $G_1$=2} \\
+\quad Local target & clean & 77 & 18 & 0.04 & (0.25) & 0.878 & {\footnotesize $G_1$=3} \\
+\quad Developer serves & clean + suites & 136 & 26 & 0.47 & (0.17) & 0.070 & {\footnotesize $G_1$=8} \\
+\quad On-device target & clean + suites & 136 & 26 & 0.57 & (0.24) & 0.209 & {\footnotesize $G_1$=2} \\
+(c) In a tier window & clean & 75 & 18 & $-$0.39 & (0.28) & 0.340 & {\footnotesize placebo $p$ 1.00} \\
+ & open, 2023+ & 133 & 52 & $-$0.16 & (0.21) & 0.523 & {\footnotesize placebo $p$ 0.59} \\
+\quad ln distance to cap & clean & 75 & 18 & 0.46 & (0.20) & 0.059 & {\footnotesize placebo $p$ 0.61} \\
+ & open, 2023+ & 133 & 52 & 0.62 & (0.16) & 0.005 & {\footnotesize placebo $p$ 0.37} \\
+(c) Excess mass & open 2023--26 & 220 & & 82.6 & (9.8) & & {\footnotesize share 0.51 vs 0.13} \\
+(c) Excess mass & clean & 77 & & 37.2 & (5.5) & & {\footnotesize share 0.58 vs 0.10} \\
+\addlinespace
+\multicolumn{8}{@{}l}{\textit{Panel B. Hugging Face derivative repositories}} \\[1pt]
+HF quantizations on $\ln M$ & clean & 74 & 16 & 0.61 & (0.11) & 0.018 & {\footnotesize } \\
+HF fine-tunes on $\ln M$ & clean & 74 & 16 & 0.87 & (0.18) & 0.029 & {\footnotesize } \\
+HF adapters on $\ln M$ & clean & 74 & 16 & 0.90 & (0.25) & 0.075 & {\footnotesize } \\
+HF all derivatives on $\ln M$ & clean & 74 & 16 & 0.80 & (0.17) & 0.031 & {\footnotesize } \\
+HF all on $\ln(T/D)$ & clean & 74 & 16 & 0.60 & (0.22) & 0.086 & {\footnotesize } \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
+\begin{tablenotes}$G$: developer clusters. s.e.: cluster-robust (CRV1) standard error. $p$ (WCR): restricted wild cluster bootstrap-$t$ with Webb six-point weights, 9,999 draws (floor $10^{-4}$), clustered by developer. (a) Production-scale universe ($6ND\ge10^{21}$ FLOP, 2019--2026; open-weight and closed models), confident $N$ and $D$ only (Epoch `Confident' or documented), no mixture-of-experts or non-transformer models, clean-sample exclusions for verified models; ``open, 2023+'': its open-weight models released 2023--2025. (b) Serving: developer operated a commercial API or consumer product serving its own language models at the model's release (coding and sources in the replication package); on-device/local: stated target in the model card. Both entered jointly; clean + suites adds the research suites and replications. $G_1$ ($G_0$): developer clusters with (without) the attribute, e.g.\ closed models in (a); with $G_1\le3$ the wild cluster bootstrap is unreliable \citep{mackinnon2018wild} and the on-device and local rows are not informative. (c) Tier windows at quantized memory boundaries: 2.4--3.3B, 6.5--9.5B, 11.5--14.9B, 26--32.9B, 65--72.9B parameters; placebo = share of 999 shifted tier menus (edges multiplied by $e^{u}$, $u\sim U(-0.69,0.69)$) giving a coefficient at least as favorable to the tier story; because $\ln w$ is a deterministic function of $(N,C)$ under one technology, tier regressors correlate with $\ln w$ mechanically and only the placebo comparison is informative. Excess mass: open-weight production-scale models released 2023--2026 (total parameters; non-transformers excluded) and the clean sample, against a polynomial (degree 5) counterfactual of the $\log_{10}N$ histogram (0.1 bins) excluding the windows; bootstrap s.e.\ (999). Panel B: HF = number of derivative repositories (quantizations, fine-tunes, adapters, merges) of the base and official post-trained releases, $\ln(1+\cdot)$.\end{tablenotes}
+\begin{tablenotes}[Source]Epoch AI \citep{epochai2026data}; model cards; Hugging Face model tree; authors' calculations.\end{tablenotes}
+\end{table}

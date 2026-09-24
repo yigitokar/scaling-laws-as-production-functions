@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Stochastic Frontier with Scale-Dependent Inefficiency (Step Law Grid)}
+\label{tab:m8_sfa}
+\begin{tabular}{lccccccc}
+\toprule
+$\iota$ distribution & $\sigma_v$ & $\gamma_0$ & $\gamma_N$ & $\gamma_D$ & $\hat\sigma_v$ & $|\hat\mu_c-\ln L^*_c|$ (\%) & $-\log\mathcal{L}$ \\
+\midrule
+Half-normal & estimated & $-$3.31 & $-$0.038 & $-$0.231 & 8.2e$-$7 & 0.00 & $-$4462.8 \\
+ & & (0.02) & (0.037) & (0.020) & & &  \\
+ & & [0.03] & [0.076] & [0.032] & & &  \\
+Half-normal & calibrated 0.0017 & $-$3.31 & $-$0.014 & $-$0.229 & 1.7e$-$3 & 0.04 & $-$4423.5 \\
+ & & (0.02) & (0.038) & (0.020) & & &  \\
+Exponential & estimated & $-$3.68 & $-$0.063 & $-$0.260 & 7.0e$-$4 & 0.04 & $-$4585.0 \\
+ & & (0.03) & (0.053) & (0.028) & & &  \\
+ & & [0.03] & [0.070] & [0.023] & & &  \\
+Exponential & calibrated 0.0017 & $-$3.70 & $-$0.056 & $-$0.262 & 1.7e$-$3 & 0.11 & $-$4575.7 \\
+ & & (0.02) & (0.054) & (0.028) & & &  \\
+\addlinespace
+Cell-level OLS: $\ln\bar\iota_c$ on $\ln N,\ln D$ & -- & $-$3.68 & $-$0.134 & $-$0.266 & & &  \\
+ & & (0.04) & (0.108) & (0.028) & & &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Cost-type stochastic frontier $\ln L_{ij}=\mu_c+\epsilon_{ij}+\iota_{ij}$ with 17 cell fixed effects $\mu_c$ (the concentrated technology, left unrestricted), $\epsilon\sim N(0,\sigma_v^2)$, and inefficiency $\iota\geq0$ half-normal (scale $\sigma_u$) or exponential (mean $\sigma_u$) with $\ln\sigma_{u,ij}=\gamma_0+\gamma_N(\ln N-\overline{\ln N})+\gamma_D(\ln D-\overline{\ln D})$ (heteroskedastic inefficiency, Caudill, Ford and Gropper 1995). Sample: 1,730 non-diverged runs (runs with loss more than 35\% above the cell minimum, 9.5\% of all runs, are treated as failed and excluded). `Calibrated' fixes $\sigma_v$ at the median residual s.d.\ of the within-cell quadratic surfaces. MLE; SEs from the numerical Hessian in parentheses; cluster-robust (by cell, 17 clusters) sandwich SEs in brackets. Column 7: mean absolute gap between the SFA frontier and the grid minimum. Last row: OLS across the 17 cells of the log of the mean inefficiency of non-diverged runs on centred $\ln N$ and $\ln D$ (HC1 SEs); for exponential inefficiency $E[\iota]=\sigma_u$, so its slopes are comparable with $\gamma_N,\gamma_D$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

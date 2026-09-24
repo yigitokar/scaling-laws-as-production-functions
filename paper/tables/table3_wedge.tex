@@ -1,0 +1,60 @@
+% Table 3 (Section IV): revealed wedges and expenditure shares for selected models.
+% Condensed from output/tables/ra2_wedge_models_selected.tex (module ra2_wedge, reviewed run); every cell checked
+% against output/tables/ra2_wedge_models.csv (columns N, D, M, M_over_Mstar, w_chin_q, wlo_chin_q, whi_chin_q,
+% s_ref, w_lab, s_lab, band_lo, band_hi, serve, wtotalN_chin_q). Sources: paper/notes/writer2_wedge.md.
+\begin{table}[tp]
+\centering
+\caption{Revealed Wedges and Expenditure Shares for Selected Models}
+\label{tab:wedge}
+\footnotesize
+\setlength{\tabcolsep}{1.9pt}
+\ifdefined\wedgetabbox\else\newsavebox{\wedgetabbox}\fi
+\sbox{\wedgetabbox}{%
+\begin{tabular}{@{}lcrrrrr@{\hspace{2pt}}lrcl@{}}
+\toprule
+ & & $N$ & $D$ & & & \multicolumn{2}{c}{Reference} & & Lab-own & Band \\
+Model & Serves & (B) & (T) & $M$ & $M/M^*$ & $\hat w$ & {\footnotesize[95\%]} & $s$ & $\hat w$ ($s$) & of $\hat w$ \\
+\midrule
+\multicolumn{11}{@{}l}{\textit{Panel A. Clean inference-demand sample}} \\[1pt]
+Llama 3 8B & Y & 8.03 & 15.0 & 1,868 & 86.4 & 6.73 & {\footnotesize[5.16, 8.84]} & 0.85 & 8.36 (0.88) & {\footnotesize[0.47, 168]} \\
+Llama 3 70B & Y & 70.6 & 15.0 & 213 & 10.0 & 2.67 & {\footnotesize[2.05, 3.48]} & 0.63 & 2.51 (0.60) & {\footnotesize[0.17, 11.7]} \\
+Llama 3.1 405B & Y & 406 & 15.6 & 38 & 1.8 & 1.29 & {\footnotesize[0.99, 1.69]} & 0.23 & 0.97 ($-$0.03) & {\footnotesize[0.04, 8.2]} \\
+Llama 2 70B & N & 69.0 & 2.0 & 29 & 1.3 & 1.13 & {\footnotesize[0.93, 1.37]} & 0.12 & 0.97$^{e}$ ($-$0.03) & {\footnotesize[0.07, 4.1]} \\
+Qwen2.5 7B & Y & 7.62 & 18.0 & 2,364 & 109 & 7.44 & {\footnotesize[5.66, 9.87]} & 0.87 & -- & {\footnotesize[0.49, 231]} \\
+Qwen2.5 72B & Y & 72.7 & 18.0 & 248 & 11.7 & 2.86 & {\footnotesize[2.18, 3.74]} & 0.65 & -- & {\footnotesize[0.17, 13.4]} \\
+Qwen3 0.6B & Y & 0.60 & 36.0 & 60,398 & 2,759 & 29.6 & {\footnotesize[21.1, 43.0]} & 0.97 & -- & {\footnotesize[1.8, 15,362]} \\
+Qwen3 14B & Y & 14.8 & 36.0 & 2,438 & 114 & 7.57 & {\footnotesize[5.60, 10.2]} & 0.87 & -- & {\footnotesize[0.38, 218]} \\
+DeepSeek LLM 7B & Y & 7.00 & 2.0 & 286 & 13.0 & 2.99 & {\footnotesize[2.49, 3.60]} & 0.67 & 3.42 (0.71) & {\footnotesize[0.43, 15.8]} \\
+DeepSeek LLM 67B & Y & 67.0 & 2.0 & 30 & 1.4 & 1.15 & {\footnotesize[0.94, 1.39]} & 0.13 & 1.34 (0.26) & {\footnotesize[0.07, 4.1]} \\
+Gemma 2 27B & Y & 27.2 & 13.0 & 477 & 22.3 & 3.77 & {\footnotesize[2.92, 4.84]} & 0.73 & -- & {\footnotesize[0.27, 29.5]} \\
+OLMo 2 7B & N & 7.30 & 4.05 & 555 & 25.4 & 3.99 & {\footnotesize[3.21, 4.94]} & 0.75 & 4.05 (0.75) & {\footnotesize[0.44, 35.5]} \\
+OLMo 2 32B & N & 32.2 & 6.15 & 191 & 8.9 & 2.54 & {\footnotesize[2.01, 3.20]} & 0.61 & 1.28 (0.22) & {\footnotesize[0.23, 9.7]} \\
+Marin 8B & N & 8.03 & 12.7 & 1,582 & 73.1 & 6.26 & {\footnotesize[4.83, 8.16]} & 0.84 & 5.08$^{e}$ (0.80) & {\footnotesize[0.46, 133]} \\
+SmolLM2 1.7B & N & 1.71 & 11.0 & 6,428 & 293 & 11.3 & {\footnotesize[8.69, 15.1]} & 0.91 & -- & {\footnotesize[0.96, 864]} \\
+SmolLM2 135M & N & 0.13 & 2.0 & 14,868 & 658 & 16.0 & {\footnotesize[12.4, 21.2]} & 0.94 & -- & {\footnotesize[1.9, 2,701]} \\
+\addlinespace
+\multicolumn{11}{@{}l}{\textit{Panel B. Mixture-of-experts models, excluded from the sample (bounds at total and active $N$)}} \\[1pt]
+DeepSeek-V3 & Y & \multicolumn{4}{l}{685/37 B, 14.8 T} & \multicolumn{2}{l}{[1.01, 3.50]} & \multicolumn{2}{l}{[0.01, 0.71]} & \\
+Kimi K2 & Y & \multicolumn{4}{l}{1,026/32 B, 15.5 T} & \multicolumn{2}{l}{[0.87, 3.79]} & \multicolumn{2}{l}{[$-$0.15, 0.74]} & \\
+Qwen3 235B-A22B & Y & \multicolumn{4}{l}{235/22 B, 36.0 T} & \multicolumn{2}{l}{[2.34, 6.39]} & \multicolumn{2}{l}{[0.57, 0.84]} & \\
+Qwen3 30B-A3B & Y & \multicolumn{4}{l}{30.5/3.3 B, 36.0 T} & \multicolumn{2}{l}{[5.56, 14.3]} & \multicolumn{2}{l}{[0.82, 0.93]} & \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\wedgetabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\wedgetabbox}}\else\usebox{\wedgetabbox}\fi\par
+\medskip
+\begin{tablenotes}
+Serves: Y if the developer served its own language models through a first-party API or product when the model was
+released. $N$: total parameters; $D$: documented training tokens; $M=D/N$; $M^*$: the reference technology's
+training-optimal ratio at the model's own compute. Reference: Chinchilla with $\kappa$ free ($\sigma^*_\kappa=0.701$);
+$\hat w$ from equation~(\ref{eq:sIV-inv}); brackets: 95 percent design-conditional wild-bootstrap interval of one
+technology, not the uncertainty of the wedge. $s=(w-1)/w$, negative when $w<1$. Lab-own: Meta, Meta's IsoFLOP path with
+its model-free curvature; DeepSeek, its published law; AI2, the OLMo ladder with $\kappa$ free; Marin, its ladder path
+with its model-free curvature. $^{e}$Lab law postdates the model. Band: union of the 95 percent intervals (points for
+published laws) over the 32 ex-ante technologies.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Per-model values under every technology and convention are in the replication package; see Online
+Appendix~\ref{app:wedge}.
+\end{tablenotes}
+\end{table}

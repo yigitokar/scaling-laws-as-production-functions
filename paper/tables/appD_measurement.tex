@@ -1,0 +1,57 @@
+% Online Appendix Table D12: measurement and flexible inputs in the allocation exponent (moved from v1 Table 5;
+% output/tables/m8_measurement_porian.tex; m8_measurement_porian_steps.csv, _porian_counting.csv). Writer appendix_D_F.
+\begin{table}[tp]
+\centering
+\caption{Measurement and Flexible Inputs in the Allocation Exponent}
+\label{tab:app-measurement}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+\multicolumn{7}{@{}l}{\textit{Panel A. Porian et al.'s path, re-estimated from the 975 released runs}} \\
+ & \multicolumn{3}{c}{RefinedWeb} & \multicolumn{3}{c}{OpenWebText2} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Step & $\hat a$ & Published & $\Delta\hat a$ & $\hat a$ & Published & $\Delta\hat a$ \\
+\midrule
+1. Kaplan reproduction & 0.837 & 0.835 & & 0.862 & 0.864 & \\
+ & [0.823, 0.845] & & & [0.817, 0.896] & & \\
+2. + head in $N$ and $C$ & 0.705 & 0.706 & $-0.132$ & 0.700 & 0.699 & $-0.162$ \\
+ & [0.691, 0.716] & & & [0.666, 0.722] & & \\
+3. + warmup $\propto N$ & 0.602 & 0.602 & $-0.103$ & 0.602 & 0.603 & $-0.098$ \\
+ & [0.591, 0.617] & & & [0.570, 0.631] & & \\
+4. + cosine decay & 0.572 & 0.571 & $-0.030$ & 0.574 & 0.574 & $-0.028$ \\
+ & [0.561, 0.588] & & & [0.543, 0.604] & & \\
+5. + tuned LR, batch, Adam decay & 0.496 & 0.497 & $-0.075$ & 0.517 & 0.518 & $-0.057$ \\
+ & [0.490, 0.504] & & & [0.491, 0.541] & & \\
+Share of step 2 in total & & & 0.39 & & & 0.47 \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel B. Same runs, only the parameter count changes (training loss)}} \\
+ & Kaplan setup & Tuned & Diff. & Kaplan setup & Tuned & Diff. \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Non-embedding (Kaplan) & 0.837 & 0.620 & 0.217 & 0.862 & 0.631 & 0.231 \\
+ & (0.006) & (0.005) & & (0.020) & (0.017) & \\
++ head (standard) & 0.700 & 0.502 & 0.198 & 0.696 & 0.501 & 0.194 \\
+ & (0.006) & (0.004) & & (0.017) & (0.012) & \\
++ head, attention FLOPs & 0.717 & 0.505 & 0.212 & 0.713 & 0.507 & 0.206 \\
+ & (0.006) & (0.004) & & (0.018) & (0.013) & \\
++ head, input embeddings & 0.661 & 0.460 & 0.202 & 0.670 & 0.471 & 0.199 \\
+ & (0.007) & (0.003) & & (0.017) & (0.012) & \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{tablenotes}
+$a$ is the exponent of $N^*\propto C^{a}$ from the IsoFLOP procedure of \citet{porian2024resolving}, re-implemented
+on their released runs (16 architectures, 5M--901M parameters; budgets $1.25\times10^{16}\cdot2^i$, $i=0,\dots,11$).
+Panel A: step 2 is input measurement, steps 3--5 are flexible inputs; brackets, 95 percent intervals from the authors'
+noise-and-interpolate bootstrap (1,000 draws); ``Published'' = their Table~1. Step 1 uses Kaplan's count and training
+loss, steps 2--5 the standard count and validation loss; with training loss throughout, counting the head alone moves
+$a$ by 0.137 (RefinedWeb) and 0.166 (OpenWebText2) on the step-1 runs (Panel B), so the switch of loss accounts for at
+most 0.005 of step 2. Step 5 tunes the learning rate, the batch and Adam's second-moment decay rate at each size, with a
+constant learning rate. Panel B: ``Kaplan setup'' = untuned runs with Kaplan's 1.57-billion-token warmup; ``Tuned'' =
+step-5 runs; training loss; bootstrap standard errors in parentheses. ``Head, input embeddings'' also counts the input
+and positional embeddings (the ``total'' count of \citet{pearce2024reconciling}).
+\end{tablenotes}
+\begin{tablenotes}[Source]
+\citet{porian2024resolving}; authors' calculations.
+\end{tablenotes}
+\end{table}

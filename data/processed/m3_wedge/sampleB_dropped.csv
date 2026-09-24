@@ -1,0 +1,18 @@
+model,reason
+Qwen/Qwen1.5-110B,D not disclosed
+Qwen/Qwen2-57B-A14B,MoE upcycled from a dense Qwen2 model; D for the MoE stage only
+mistralai/Mistral-7B-v0.1,D not disclosed
+mistralai/Mixtral-8x7B-v0.1,D not disclosed
+mistralai/Mixtral-8x22B-v0.1,D not disclosed
+mistralai/Mistral-Nemo-Base-2407,D not disclosed
+ai21labs/Jamba-v0.1,D not disclosed
+01-ai/Yi-6B-200K,long-context continuation of Yi-6B (same pretraining choice)
+01-ai/Yi-34B-200K,long-context continuation of Yi-34B (same pretraining choice)
+openai-community/gpt2,"D not disclosed in tokens (WebText ~40GB, epochs unknown)"
+openai-community/gpt2-medium,D not disclosed in tokens
+openai-community/gpt2-large,D not disclosed in tokens
+openai-community/gpt2-xl,D not disclosed in tokens
+internlm/internlm2-20b,D ambiguous (report: 2.0-2.6T across sizes; Sloth 2.15T; Epoch 2.6T)
+internlm/internlm2-7b,D ambiguous (report: 2.0-2.6T across sizes; Sloth 2.15T)
+Deci/DeciLM-7B,D not disclosed
+RWKV/rwkv-raven-14b,instruction-tuned RWKV (derived model)

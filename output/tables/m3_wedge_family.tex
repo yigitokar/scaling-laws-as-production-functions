@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Within-Family Revealed Preference and Over-Identification}
+\label{tab:m3_family}
+\begin{tabular}{@{}lcccccccc c@{}}
+\toprule
+Family & $n$ & Flagship & $M_f$ & $\hat w_f$ & PI band & $w_f$, Meta & $D$ varies & Share $w^{rel}_i>1$ & Spearman$(T^{rel}_i,N_i)$ \\
+\midrule
+Llama-2 & 3 & Llama-2-70b-hf & 29 & 1.19 & [0.55, 3.77] & 0.98 & no & 1.00 &  \\
+Llama-3.1 & 3 & Llama-3.1-405B & 38 & 1.37 & [0.42, 5.73] & 0.98 & no & 1.00 &  \\
+Qwen2.5 & 7 & Qwen2.5-72B & 248 & 2.62 & [1.06, 8.01] & 1.69 & no & 1.00 & -1.00 \\
+Qwen3 & 6 & Qwen3-32B & 1,099 & 4.46 & [1.98, 11.86] & 2.55 & no & 1.00 & -1.00 \\
+Gemma-2 & 3 & gemma-2-27b & 477 & 3.27 & [1.58, 8.74] & 2.08 & yes & 1.00 &  \\
+Gemma-3 & 5 & gemma-3-27b-pt & 518 & 3.37 & [1.62, 8.98] & 2.12 & yes & 1.00 & -0.40 \\
+OLMo-2 & 4 & OLMo-2-0325-32B & 191 & 2.34 & [0.23, 6.42] & 1.64 & yes & 1.00 & -1.00 \\
+SmolLM2 & 3 & SmolLM2-1.7B & 6,428 & 8.05 & [4.01, 14.97] & 4.50 & yes & 1.00 &  \\
+Phi-3 & 3 & Phi-3-medium-4k-instruct & 344 & 2.86 & [1.63, 6.98] & 1.97 & no & 1.00 &  \\
+Pythia & 8 & pythia-12b & 25 & 1.09 & [0.75, 2.66] & 1.02 & no & 1.00 & -1.00 \\
+Cerebras-GPT & 6 & Cerebras-GPT-6.7B & 20 & 0.99 & [0.78, 2.24] & 0.98 & yes & 0.00 & -1.00 \\
+BLOOM & 5 & bloom & 2.1 & 0.46 & [0.20, 1.78] & 0.48 & no & 1.00 & -1.00 \\
+OPT & 8 & opt-66b & 4.5 & 0.60 & [0.31, 2.00] & 0.61 & no & 1.00 & -1.00 \\
+\midrule
+\multicolumn{10}{l}{absolute (Chinchilla refit), all members, all families: $\hat\eta=0.53$ (0.07); homogeneity $F(41,\cdot)=2.55$, $p=0.001$; $n=138$, 42 families} \\
+\multicolumn{10}{l}{absolute (Chinchilla refit), all members, families with size-varying D: $\hat\eta=0.36$ (0.12); homogeneity $F(17,\cdot)=2.15$, $p=0.047$; $n=58$, 18 families} \\
+\multicolumn{10}{l}{flagship-normalised, siblings, all families: $\hat\eta=0.58$ (0.05); homogeneity $F(22,\cdot)=2.77$, $p=0.004$; $n=80$, 23 families} \\
+\multicolumn{10}{l}{flagship-normalised, siblings, families with size-varying D: $\hat\eta=0.48$ (0.12); homogeneity $F(10,\cdot)=2.08$, $p=0.122$; $n=33$, 11 families} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Families of Sample B with at least two models trained by the same developer on the same data release. The flagship is the largest model (total parameters). $\hat w_f$: flagship wedge under the reference technology; PI band as in Table~5. Siblings' wedges relative to the flagship, $w^{rel}_i=(N_i/N_f)^{-\alpha}(D_i/D_f)^{\beta}$, are identified from the exponents alone if the flagship is training-optimal; they are lower bounds on $w_i$ when $w_f>1$. Bottom panel: demand model $T_i=\kappa_f N_i^{-\eta}$ with family effects; $\hat\eta$ with family-clustered standard error; the $F$ statistic tests a common $\eta$ across families. With a common $D$ within a family, $T_i/D$ is a mechanical function of $N_i$; the size-varying-$D$ rows are the informative ones.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,322 @@
+% =====================================================================================================
+% Online Appendix B: Data construction. Writer: section writer "data" (2026-09-24).
+% Sources: output/memos/m1..m8 (+ reviews), data/processed/m3_wedge/data_appendix.md, code/sweep/*.py,
+% data/processed/sweep/{meta,lr_fit}.json. Every number is listed in paper/notes/writer_data.md.
+% =====================================================================================================
+\section{Data Construction}\label{app:data}
+
+% Table and figure numbers (B1, B2, ...) come from \appendix in main.tex.
+
+This appendix documents the samples summarized in Table~\ref{tab:data}: their sources, the conventions we impose,
+the corrections we make to source data, and the sample restrictions. A single script per module regenerates every
+sample from the raw files with fixed seeds, and the replication package lists the download commands. The snapshots of
+living databases are from September 23 and 24, 2026.
+
+\subsection{Public Sweeps}\label{app:sweeps}
+
+\paragraph{Common conventions.}
+For every sweep we build a run-level panel with the fields $(N,D,L)$, a cluster identifier and the derived
+quantities $M=D/N$ and $C=6ND$. We use $C=6ND$ even when a sweep reports a more detailed FLOP count, so that compute
+means the same thing across sweeps. The sweeps do not share a parameter-count convention, a tokenizer or an output
+measure (Table~\ref{tab:app_conventions}). We keep each sweep's own conventions and compare only unit-free objects
+across sweeps. The exponents $\alpha$ and $\beta$ and the derived $a$, $\gamma$ and $\sigma$ are invariant to the unit
+of loss. They are not invariant to the parameter-count convention, which Section~\ref{sec:tech:measurement} treats as a
+measurement problem. The asymptote $E$, the levels $A$ and $B$, and the compute-optimal ratio $M^{*}$ are not
+comparable across rows.
+
+\input{tables/tableB1_conventions}
+
+\paragraph{Design statistic.}
+The off-path spread $\mathrm{sd}(\ln M\,|\,\ln C)$ in Table~\ref{tab:data} is the residual standard deviation of an OLS
+regression of $\ln M$ on $\ln(6ND)$ over the estimation sample. Figure~\ref{fig:app_designs} plots the six public
+designs with run-level losses against their isocost lines. Farseer is a near-factorial grid in $(\ln N,\ln D)$ with
+$\mathrm{corr}(\ln N,\ln D)=-0.04$. The Chinchilla runs combine nine IsoFLOP profiles with off-profile streaks at
+fixed $D$. Gadre et al.\ and the OLMo ladder are grids in size and token multiplier. DataDecide's final checkpoints
+all lie at $D\approx 85$--$110\,N$, so only the intermediate checkpoints spread the design.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\textwidth]{m2_design_planes}
+\caption{Designs of the Public Sweeps}\label{fig:app_designs}
+\begin{figurenotes}
+Each panel plots $\log_{10}D$ against $\log_{10}N$ for one sweep's estimation sample; gray lines are isocost lines
+$6ND=\text{constant}$. The panel titles give $\mathrm{sd}(\ln M\,|\,\ln C)$. The DataDecide panel shows unique (size,
+step) checkpoints, for which the statistic is 0.71; it is 0.73 over all 21,888 checkpoints (Table~\ref{tab:data}).
+\end{figurenotes}
+\end{figure}
+
+\paragraph{Farseer.}
+The file \texttt{1222\_full.csv} of \citet{li2025predictableb} contains 404 runs: 25 model sizes, each trained on up to
+19 token budgets with one data recipe and with hyperparameters set by the Step Law rules. $N$ excludes both of the
+model's untied 65,536-row embedding matrices; we verified that the reported $N$ including embeddings exceeds $N$ by
+exactly $131{,}072\,h$ for hidden size $h$. The output is English bits per character on the authors' validation set
+(the average of its web, paper and book subsets), which is the output they fit. Three quirks required care. The column
+labeled \texttt{D/N} takes five values unrelated to $D/N$, so we recompute $M$ from $D$ and $N$ (range 0.31--2,570).
+The file's compute column includes attention FLOPs, at 6.6--8.5 FLOP per parameter per token, and we use $6ND$
+instead. Four $(N,D)$ pairs were run twice, and we keep both copies.
+
+\paragraph{Gadre et al.}
+The 104 runs of \citet{gadre2024language} are 34 on C4, 35 on RedPajama and 35 on RefinedWeb. $N$ includes embeddings,
+and $D=20\times\text{multiplier}\times N$ exactly. Our main output is the C4 validation loss (174 million tokens), on
+which every model is evaluated, because tests of neutral data quality need a common output. In-distribution Paloma
+losses serve as a robustness check. The authors' token-level confidence intervals imply a sampling standard error of
+$\ln L$ of only 0.0016. The residual standard deviation of a fitted Chinchilla form is 0.023--0.030, so the residuals
+reflect misspecification rather than evaluation noise.
+
+\paragraph{OLMo ladder.}
+We take the final logged step of 30 runs: five sizes trained to 0.5, 1, 2, 5 and 10 times the Chinchilla token budget,
+plus five reruns \citep{bhagia2024establishing}. $N$ is OLMo's count, which excludes only the input embedding; we
+verified it against the ladder code. $D$ is the logged token count at the final step. The output is C4-en validation
+cross-entropy, and task bits per byte serve as a robustness output. Reruns are clustered with their originals.
+
+\paragraph{Muennighoff et al.}
+We parse 229 final losses from the authors' notebook with their own code. The aggregated third-party file mislabels
+the tokens-per-epoch and epoch columns, so we rebuild $N$, $D$ and the unique tokens $U$ from the model names. The
+primary sample is the 33 single-epoch runs ($D=U$). A robustness variant drops two runs with $D/N<0.4$, following
+Besiroglu et al.'s rule for Chinchilla. The parameter-count convention in the authors' map is not documented.
+
+\paragraph{DataDecide.}
+The DataDecide release \citep{magnusson2025datadecide} crosses 25 data recipes with 14 model sizes (4M to 1.2B
+parameters, excluding the input embedding) and three seeds per size (five at 1B), for 1,100 runs. $D$ is
+step$\times$batch$\times$2,048, using the batch sizes in the authors' code, and the output is C4-en validation
+cross-entropy. We keep 21,888 checkpoints with $D/N\ge5$ that lie at or before the end of the full schedule. The final
+checkpoints have $D\approx85$--$110\,N$, and even with checkpoints $\mathrm{corr}(\ln N,\ln D)=0.91$. The checkpoints
+that break the collinearity are evaluated before the cosine schedule has finished, and schedule progress is itself a
+function of $D/N$. The levels of the fitted technology are therefore not interpretable, and we use DataDecide only for
+comparisons across recipes, which share sizes, steps and schedules. This rests on the untestable assumption that the
+unfinished schedule affects all recipes alike.
+
+\paragraph{Sweeps we did not use.}
+The Hugging Face release of \citet{kricheli2026tokens} contains no validation losses, only per-epoch training losses
+from small multi-epoch runs, so we report no estimates from it. We did not process the open-sci-ref collection of
+reference runs on eight corpora, which would allow a second multi-recipe neutrality test.
+
+\subsection{Chinchilla Extraction}\label{app:chinchilla}
+
+The Epoch AI digitization of Figure~4 of \citet{hoffmann2022training} contains 245 runs \citep{besiroglu2024chinchilla}.
+$N$ is the total parameter count and $C$ is read off the figure's horizontal axis, so $D=C/(6N)$ is constructed. The
+loss is MassiveText validation loss in nats per token, read from a 256-color map and hence quantized to about
+$\pm0.01$. Besiroglu et al.\ drop the five highest-loss runs, all from the $10^{19}$ IsoFLOP budget, and we do the same
+($n=240$). Four of the five have $D/N<0.4$; the fifth has 0.40. The five dropped runs lie in the data-starved corner
+of the design; Section~\ref{sec:tech:chinchilla} shows how the results change when they are kept.
+
+We reconstruct the nine nominal IsoFLOP budgets, $6\times10^{18}$ to $3\times10^{21}$ FLOP, for cluster-robust inference.
+Digitized $\log_{10}C$ sits systematically 0.018 below the nominal budgets. We estimate this offset as the median
+deviation of runs within 0.1 of a budget, remove it, and assign every run to its nearest budget. A run belongs to an
+IsoFLOP profile if its corrected $\log_{10}C$ is within 0.045 of the budget. This rule gives 137 profile runs of 245
+(132 of 240). The remaining runs form streaks of fixed $D$ in Hoffmann et al.'s scatter. In the 240-run sample, 33
+percent of the variance of centered $(\ln N,\ln D)$ lies in the direction transverse to the expansion path. The
+124-row \texttt{ml\_scalefit} Chinchilla series in the open IsoFLOP compilation of \citet{czech2026problems} is a
+snapped subset of the same digitization rather than an independent source, so we do not use it.
+
+\subsection{Laboratory IsoFLOP Profiles and Hyperparameter Sweeps}\label{app:isoflop}
+
+\paragraph{Llama 3.}
+The 133 points of Meta's IsoFLOP figure \citep{grattafiori2024llama} come from the digitization of
+\citet{czech2026llama3isoflop}, distributed in the compilation of \citet{czech2026problems}; we checked that the two
+agree row by row. There are ten budgets from $6\times10^{18}$ to $10^{22}$ FLOP. $D$ is read off the figure and
+$N=C/(6D)$ uses the nominal budget, which assumes that Meta's budgets are $6ND$. The loss units are not stated; the
+losses lie between 0.69 and 0.93.
+
+\paragraph{Marin.}
+The Marin project's scaling ladders \citep{marin2026ladders} train a Llama-2-style architecture on three corpora
+(Comma, DCLM and Nemotron-CC): 85, 85 and 88 runs on seven or eight budgets from $1.8\times10^{18}$ to
+$3\times10^{20}$ FLOP. The output is the macro-averaged Paloma loss. The nominal budgets are three times the forward
+FLOPs and differ from $6ND$ by $-7$ to $+35$ percent. The difference is strongly negatively correlated with $N$ within
+a budget, so FLOP accounting, as well as the finite IsoFLOP grid, affects IsoFLOP-parabola estimates on these data.
+We also use, with caveats, the checkpoint-interpolated FineWeb/C4 profiles of \citet{li2025misfitting} (176 points).
+
+\paragraph{Porian et al.}
+The released results of \citet{porian2024resolving} contain 975 runs (772 on RefinedWeb, 203 on OpenWebText2): 264
+base, 61 tuned, 566 hyperparameter-sweep and 84 seed runs of 16 architectures (width 96--1,504, depth 3--30, vocabulary
+50,432, sequence length 2,048). We count parameters and FLOPs without the output head (Kaplan), with it (standard) and
+with attention FLOPs (attention), as the authors do, and add a fourth count that also includes the input and
+positional embeddings (total). Our re-implementation of the authors' IsoFLOP pipeline reads each run's loss along its
+loss curve at twelve budgets $1.25\times10^{16}\times2^{i}$ ($i=0,\dots,11$), takes the minimum over runs for each $N$,
+locates the minimizing $N$ by spline interpolation, and reproduces the published path estimates to within 0.003.
+
+\paragraph{Step Law.}
+The dense-model file of \citet{li2025predictablea} contains 1,911 runs in 17 $(N,D)$ cells. $N$ takes five values
+between 215M and 1.07B non-embedding parameters, $D$ ranges from 4B to 100B tokens, and $M$ ranges from 19 to 466. Each
+cell has a grid of up to 12 learning rates and 10 batch sizes; one cell has only 5 learning rates and 47 runs. Batch
+size is in sequences of 2,048 tokens, and the output is the smoothed final training loss of a single-epoch run. We
+classify 9.5 percent of runs as diverged: those whose log loss exceeds the cell minimum by more than 0.30.
+
+\subsection{The Controlled Two-Lab Experiment}\label{app:sweep}
+
+\paragraph{Corpora and tokenizer.}
+Lab ``edu'' trains on FineWeb-Edu and lab ``web'' on FineWeb \citep{penedo2024fineweb}. We use the first two
+files of each sample-10BT release. The first 20,000 documents of each corpus are held out for validation (24.6 million
+FineWeb-Edu tokens and 16.7 million FineWeb tokens). The remaining 1.76 billion and 1.70 billion training tokens exceed
+the largest budget (800 million), so no run repeats data. A byte-level BPE tokenizer \citep{sennrich2016neural} with
+8,192 tokens, including an end-of-text token that separates documents, is trained on about 300 million characters of
+each training corpus. Because both labs share the tokenizer, losses are in the same units. On the validation sets a
+token covers 3.89 bytes of FineWeb-Edu and 3.74 bytes of FineWeb. We use these ratios to convert losses to bits per
+byte, $L/(3.89\ln2)$ and $L/(3.74\ln2)$, which expresses losses per byte of raw text and so removes the difference in how well the shared tokenizer
+compresses the two corpora.
+
+\paragraph{Architecture and input counts.}
+The models are decoder-only transformers with RMSNorm pre-normalization \citep{zhang2019root}, rotary position
+embeddings \citep{su2024roformer}, bias-free linear layers, a four-times-wide GELU feed-forward block and an input
+embedding tied to the output projection. Width $d$ determines depth $d/64$ and the number of heads $d/64$, so the head
+dimension is always 64. Table~\ref{tab:app_sweepdesign} lists the eight sizes. We record both parameter counts. The
+non-embedding count is $L(12d^2+2d)+d$ for $L$ layers, and the tied embedding adds $8{,}192\,d$, which is 73 percent of
+all parameters at $d=128$ and 10 percent at $d=640$. This range makes the counting convention matter far more than in
+production models, which is the input-measurement problem of \citet{pearce2024reconciling} and
+\citet{porian2024resolving}. Training FLOP per token, including attention and the output projection, is within 5
+percent of $6N_{\text{total}}$ at every width but 1.14 to 3.83 times $6N_{\text{non-emb}}$. Initialization is Gaussian
+with standard deviation $1/\sqrt{\text{fan-in}}$. Residual-branch output projections are scaled down by
+$1/\sqrt{2L}$, and the embedding has standard deviation 0.02.
+
+\input{tables/tableB2_sweep_design}
+
+\paragraph{Optimization and schedule.}
+All runs use AdamW \citep{loshchilov2019decoupled} with decay rates 0.9 and 0.99 for the first and second moments,
+stability constant $10^{-8}$, decoupled weight decay 0.1 and gradient clipping at norm 1. The sequence length is 256 and the batch is 64 sequences (16,384
+tokens). The learning rate warms up linearly over 250 steps (4.1 million tokens) to its peak and then stays constant on
+the trunk. For each budget $D_k$ the run takes $S_k=\lceil D_k/16{,}384\rceil$ steps. At step $0.8S_k$ the model and
+optimizer state are copied, and the copy is trained to $S_k$ with learning rate
+$\mathrm{lr}^{*}\bigl(1-\sqrt{(s-0.8S_k)/(0.2S_k)}\bigr)$. The largest budget is the trunk's own cooldown. This
+warmup-stable-decay design with cooldown branches follows \citet{hagele2024scaling}, who find that it performs on par
+with cosine schedules tuned to each budget. One trunk thus delivers a whole column of the $(N,D)$ design, and every endpoint is
+annealed. Endpoints of one width share the trunk up to their branch points. Their noise is therefore positively correlated
+across budgets, and inference should cluster by width.
+
+\paragraph{Learning-rate calibration.}
+Before the main grid, we trained widths 128, 320 and 512 at four peak learning rates ($1$, $2$, $4$ and
+$8\times10^{-3}$) for 50 million FineWeb-Edu tokens (12 runs) and evaluated them on FineWeb-Edu. For each width, the
+optimal rate is the minimum of a quadratic in the log learning rate, allowed to extrapolate at most 0.35 log points
+beyond the tested range. The optima are $5.75\times10^{-3}$, $2.47\times10^{-3}$ and $1.66\times10^{-3}$. A log-linear
+fit gives $\mathrm{lr}^{*}(d)=3.07\times10^{-3}(d/256)^{-0.90}$, which we apply to both labs and every budget. The
+learning rate is thus a flexible input optimized over width at one budget and for one lab only. By the argument of
+Section~\ref{sec:tech:measurement}, any remaining inefficiency that varies with $D$ or with the lab would bias the data exponent or
+the measured factor bias. The batch size is the same at every width.
+
+\paragraph{Common random numbers, seeds and evaluation.}
+Within a lab, every width in the main grid uses initialization seed 0 and the same permutation of training sequences,
+so differences across $(N,D)$ cells are not driven by different data draws. The two labs necessarily see different
+data. The seed replicates rerun widths 128, 256 and 384 with two further seeds, each changing both the initialization
+and the data order, to budgets of 50, 100 and 200 million FineWeb-Edu tokens (18 endpoints). With the main grid they give
+three replicates per cell, which measure the variance of pure noise in the output. Every endpoint is evaluated on the
+first 1,048,576 tokens (4,096 sequences of 256) of \emph{both} validation sets. Each lab's models therefore have an
+in-distribution and a cross-distribution loss, and the two labs can be compared on a common output. For each endpoint
+we record $N$ under both conventions, the tokens trained, compute under three conventions, both validation losses and
+the trunk's training loss. Training curves of the constant-learning-rate trunks are logged every 1,000 steps.
+
+\paragraph{Hardware.}
+All models were trained in MLX \citep{hannun2023mlx} on a single Apple M5 Max. Parameters and optimizer moments are
+kept in 32-bit floating point, and every matrix product is computed in bfloat16 by casting the weights on the fly, so
+that small updates late in the cooldown are not lost to rounding. \textcolor{red}{[TBD-m9: completed endpoints per lab,
+seed replicates completed, any diverged or failed runs, and total wall-clock hours.]}
+
+\subsection{Choice Data: Samples A and B}\label{app:choices}
+
+\paragraph{Sample A (Epoch universe).}
+We start from the 2,070 language-model rows of the Epoch AI database \citep{epochai2026data} (snapshot of September
+23, 2026) and exclude 1,728 of them: derived models such as fine-tunes and post-training updates (531); rows without
+$N$ (361) or released outside January 2019--September 2026 (234); rows whose token count cannot be recovered (224);
+multimodal and non-text models, whose $D$ would include other tokens (133); benchmark-scale research models with unique
+corpora below $5\times10^{9}$ tokens (100); encoders and encoder-decoders (58); post-trained variants identified by name
+(16); mixture-of-experts models without an active-parameter count (27); rows with implausible epochs ($>20$) or
+$D/N>30{,}000$ (15); and 29 manual exclusions with recorded reasons, such as post-training updates listed as base models
+(Llama~3.3 70B), systems-paper benchmark runs and leaked GPT-4 figures. This leaves 342 models.
+
+$D$ is the dataset size times the number of epochs, with missing epochs set to 1. Epoch records some older datasets in
+words. Where Epoch's notes indicate a word count, we convert it to tokens, using operation-counted compute when it is
+informative and a ratio of 4/3 tokens per word otherwise (7 rows). Where the dataset size is missing but compute is operation-counted
+and at least ``likely'', we set $D=C/(6N)$ (67 rows). Six token counts are corrected from primary sources, each
+documented in Epoch's own notes. GPT-3 175B was trained on 300B tokens, and GLM-130B on 400B rather than 152B. For
+Cerebras-GPT-13B (257B) and BloombergGPT (569B), Epoch's dataset size already counts tokens seen. Polyglot-Ko-12.8B saw
+167B tokens rather than 96B words, and for GPT-SW3 3.5B we use 102B tokens. For mixture-of-experts models, active
+parameters come from the name, Epoch's notes, or operation-counted compute. Eleven production-scale rows still have $D$
+inconsistent with Epoch's operation-counted or reported compute ($|\ln C/(6ND)|>\ln1.5$). They are flagged, and the
+trends in Section~\ref{sec:wedge} are robust to dropping them.
+
+\paragraph{Sample B (verified open-weight base models).}
+Sample B starts from the 148 base models in the ObsScaling evaluation file \citep{ruan2024observational}, with nine
+documented corrections and fills. For example, OPT's $D$ is 300B tokens, not the 180B-token corpus, and TinyLlama v1.1 was
+trained on 2T tokens, not 3T. We drop 17 models whose token counts are undisclosed (Mistral~7B and NeMo, Mixtral,
+Jamba, DeciLM, Qwen1.5-110B, GPT-2) or ambiguous (InternLM2 7B and 20B), upcycled, duplicated or instruction-tuned.
+We replace the deduplicated Pythia suite with the standard suite \citep{biderman2023pythia}. We then add 57 models
+released in 2024--2026, whose token counts come from model cards or technical reports. For 47 of them, a regular
+expression matches the training-token statement in the saved model card. This gives 188 base models in 73 families.
+Excluding 15 code-specialized models gives the 173 general-purpose models, in 68 families, used in
+Section~\ref{sec:wedge}.
+
+For 143 of the 188 models, $N$ is the exact count of floating-point tensors in the Hugging Face checkpoint. Integer
+buffers such as stored causal masks are excluded; they inflate the count of the smallest GPT-NeoX models by up to 36
+percent. The 417M-parameter vision encoder of the multimodal Gemma~3 checkpoints is subtracted. For the remaining
+models the reported size is used. Mixture-of-experts models enter with active parameters, for example 37B of 671B for
+DeepSeek-V3. Embedding counts, from each model's configuration file, give the non-embedding $N$ that the Farseer
+technology requires (156 models). Of the 119 Sample-B models that also appear in Epoch, 5 have token counts that
+differ from Epoch's by more than 0.05 in $\log_{10}$. All five differences are documented; Phi-2, for instance, saw
+1.4T tokens, whereas Epoch lists the 250B-token dataset. We flag distilled (10), synthetic-data-heavy (16),
+continued-pretraining (8), multimodal (5), mixture-of-experts (13) and recurrent (6) models. The release date is
+Epoch's publication date when matched and otherwise the developer's announcement or the Hub upload date.
+
+\paragraph{Production-scale universe.}
+Trends, rival explanations and the aggregate in Section~\ref{sec:wedge} use models trained with $6ND\ge10^{21}$ FLOP.
+This universe applies the same threshold to both samples. It consists of Sample-A rows that are not speculative, not
+code models and not matched to Sample B (176), plus the Sample-B general-purpose models above the threshold (159). The
+total is 335 models released in 2019--2026, 271 of them open weight, from 94 developers after we merge name variants
+(for example, all Alphabet units into Google).
+
+\paragraph{Usage.}
+For the Sample-B models with Hub metadata (164 models from 26 developers), we record 30-day and all-time downloads and
+likes. Downloads are summed over the base repository and the developer's official post-trained releases, including
+later post-training updates of the same base. From OpenRouter \citep{openrouter2026models} we record whether a model
+(or an official post-trained version) is listed, the number of distinct providers across its listed releases, and the
+minimum completion price. From LMArena \citep{lmarena2026leaderboard} we record the maximum vote count over all
+published text leaderboards (46 matched models).
+
+\paragraph{Units.}
+Wedges are computed in each technology's own conventions. $N$ is the total count for the Chinchilla, Gadre et al.\
+and Meta technologies and the non-embedding count for Farseer's headline row. $D$ is in each model's own tokens, while each technology
+is in its sweep's tokens. A 20 percent difference in tokenizer efficiency moves $\ln w$ by about $\beta\times0.18\approx
+0.07$. Under the reference technology, $\partial\ln w/\partial\ln D=\beta\approx0.37$ and
+$\partial\ln w/\partial\ln N=-\alpha\approx-0.35$.
+
+\subsection{Benchmark Panel}\label{app:obspanel}
+
+The benchmark panel of Section~\ref{sec:obs} combines the ObsScaling base-model file with the Sloth data
+\citep{maiapolo2024sloth}. Sloth adds base models absent from ObsScaling and fills missing scores. Five Sloth rows that
+duplicate ObsScaling's deduplicated Pythia scores are dropped. Parameter counts are Hub floating-point tensor counts
+where available (17 models were affected by the causal-mask correction), and reported token counts are corrected much
+as in Sample B. The outputs are HellaSwag (10-shot), ARC-Challenge (25-shot) and Winogrande (5-shot) accuracies from the
+same evaluation harness. We map accuracy to the log odds of above-chance success,
+$q=\operatorname{logit}\bigl((\text{acc}-\text{chance})/(1-\text{chance})\bigr)$, with chance-adjusted accuracy
+clipped to $[0.01,0.99]$; the composite is the logit of the mean chance-adjusted accuracy of the three tasks.
+The main sample contains 128 dense models with $N$, $D$ and all three outputs, from 38 families and 22 developers,
+released March 2021--July 2024. Mixture-of-experts models are excluded. The overlap sample ($N\le14$B, $D\le5$T)
+has 90 models, and the 57 models inside the convex hull of the experimental designs form the common-support sample.
+
+The panel's design is revealing. $C=6ND$ holds in every row by construction. Within families the standard deviation of
+$\ln D$ is 0.42, against 1.29 for $\ln N$. Only 18 families (66 models) vary $D$ at all, and
+$\mathrm{corr}(\ln N,\ln D)=0.46$. The experimental benchmarks are the OLMo ladder together
+with the OLMo~2 7B and 13B targets, the 104 Gadre et al.\ models, the Pythia checkpoints and the final DataDecide
+checkpoints. They were evaluated with their developers' own harnesses, so the correspondence between output formats is
+part of the maintained null hypothesis in Section~\ref{sec:obs}.
+
+\subsection{Algorithmic-Progress Data}\label{app:ho}
+
+We re-implement line by line the sample construction of \citet{ho2024algorithmic} from their public notebooks, starting
+from the 408-row sheet. We keep rows with numeric $N$ and $D$, not marked as excluded, outliers or uncertain, and with
+at least one perplexity. We stack the rows by benchmark, drop four named systems ($\mu$P and LoRA fine-tunes), and keep the three
+best-performing models per paper. This yields 231 observations from 144 papers: 103 on WikiText-103, 80 on Penn
+Treebank and 48 on WikiText-2. $D$ is the dataset size in unique tokens, not tokens processed. Epochs are known for 155
+of the 231 rows; we impute the rest by the median within bins of $\log_{10}D$, and set epochs to one for $D\ge10^{10}$.
+The effective-data variant follows \citet{muennighoff2023scaling}. The output is log perplexity, mostly per word; its units
+vary with each evaluation's tokenization.
+
+For the allocative-efficiency analysis we build a separate sample of Epoch language models
+\citep{epochai2026data}. Of the 792 models with $N$ and $C$, 544 report a dataset size and 454 are not fine-tunes. Of
+these, 428 are dense. In 339 of them, $C/(6N)$ lies within a factor of three of dataset size times epochs, and 247 of
+those were trained for at most four epochs. We set $D=C/(6N)$ so that $6ND=C$ exactly.
+
+\subsection{Licenses}\label{app:licenses}
+
+Epoch AI data and the LMArena leaderboard are released under CC-BY licenses. ObsScaling, the OLMo ladder, Pythia,
+DataDecide and the Muennighoff et al.\ data are released under Apache-2.0 or ODC-BY licenses, and Porian et al., Sloth
+and Gadre et al.\ under MIT. The Farseer and Step Law repositories and Epoch's Chinchilla-extraction repository carry no
+license. We use them for estimation but redistribute only derived aggregates. The Llama~3 digitization and the Ho et al.\
+data sheet, which carries no explicit license (their code is MIT-licensed), are used on the same basis. Model cards and API payloads were saved only to verify token counts and are not redistributed.

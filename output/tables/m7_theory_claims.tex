@@ -1,0 +1,53 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{threeparttable}
+\caption{Verification of the formal claims}
+\label{tab:m7_claims}
+\begin{tabular}{@{}l p{0.13\textwidth} p{0.47\textwidth} p{0.14\textwidth}@{}}
+\toprule
+ID & Source & Statement (as verified or corrected) & Verdict \\
+\midrule
+\multicolumn{4}{l}{\textit{Model and elasticities}} \\
+MS.T & \raggedright model spec & \raggedright $y=\omega+F(n+\psi_N,d+\psi_D)-\epsilon$ holds exactly given $E$ & \raggedright Imprecise \tabularnewline
+MS.SIG & \raggedright model spec & \raggedright $\sigma=(\alpha u+\beta v)/(\alpha u(1+\beta)+\beta v(1+\alpha))$; $\sigma^*=2/(2+\alpha+\beta)$ & \raggedright Verified \tabularnewline
+MS.SIGW & \raggedright new & \raggedright $\sigma(w)=(1+w)/(1+\alpha+w(1+\beta))$: local $\sigma$ is a function of the wedge & \raggedright New \tabularnewline
+SOC & \raggedright new & \raggedright Interior compute optimum under $C=6ND$ (strict SOC) $\Leftrightarrow$ $0<\sigma<1$ at the optimum & \raggedright New \tabularnewline
+\multicolumn{4}{l}{\textit{Allocation and geometry}} \\
+L1 & \raggedright Lemma 1 & \raggedright $n^*,d^*,y^*$ with $(\omega,\psi_N,\psi_D)$; better data $\Rightarrow$ more $N$, lower $D/N$ & \raggedright Verified (given $c$) \tabularnewline
+L1.target & \raggedright Lemma 1 & \raggedright At a fixed loss target: $\partial n^*/\partial\psi_D=0$; $\omega$ moves the mix if $\alpha\neq\beta$ & \raggedright Imprecise \tabularnewline
+L2 & \raggedright Lemma 2 / P2 & \raggedright Hessian of $\ln R$ rank one, null vector $(\beta,\alpha)$ & \raggedright Verified \tabularnewline
+L2.dec & \raggedright new & \raggedright $\ln R=-(\alpha n+\beta d)/2+g(\tau)$; transverse coordinate $=-\ln w$ & \raggedright New \tabularnewline
+\multicolumn{4}{l}{\textit{Identification}} \\
+P1.path & \raggedright P1 & \raggedright Duality: $C^*(R)$, $N^*$, $D^*$, $K$ (both forms) & \raggedright Verified \tabularnewline
+P2.rank & \raggedright Prop. 1 / P2 & \raggedright On-path Jacobian rank 3; $\sigma^*$ first-order estimable only if $\alpha=\beta$ & \raggedright Verified \tabularnewline
+P5.DMR & \raggedright Props. 1, 5; P2, P3 & \raggedright Explicit $\kappa$-family: identical paths/frontiers for all $\sigma^*\in(0,1)$ & \raggedright Verified \tabularnewline
+P5.ident & \raggedright Prop. 5 / P3 & \raggedright $g_N,g_D$ identified separately; bias magnitude not, bias \emph{sign} identified & \raggedright Corrected \tabularnewline
+INFO.dec & \raggedright new & \raggedright $y=y^*(c)-\gamma\Phi_S+\omega-\epsilon$, $\Phi=\ln(C/C_{\min})$; $\mathcal I(S)\lesssim(\gamma/Ss)^2\sum\Phi_i^2$, $S=\alpha+\beta$ & \raggedright New \tabularnewline
+INFO & \raggedright new & \raggedright $\mathcal I(\sigma^*)\sim v^4$, $\mathcal I(\ln M^*)\sim v^2$ in transverse dispersion $v$ & \raggedright New \tabularnewline
+P2.plim & \raggedright Prop. 2 / P5 & \raggedright OLS slope $\gamma+\pi_1V_\omega/(\pi_1^2V_\omega+V_\eta)$ for any sign of $\pi_1$ & \raggedright Verified \tabularnewline
+P2.bounds & \raggedright P5 & \raggedright Forward/reverse bracket $\gamma$ iff $-(1+V_\epsilon/V_\omega)/\gamma\le\pi_1\le0$ & \raggedright Corrected \tabularnewline
+P3.sel & \raggedright Prop. 3 & \raggedright Outcome-based release attenuates the slope; in $[0,\gamma]$ if log-concave & \raggedright Verified \tabularnewline
+P3.net & \raggedright Prop. 3 & \raggedright Net sign under funding rule: $>0$ iff $r>r^*$ (closed form) & \raggedright New \tabularnewline
+P3.cex & \raggedright Prop. 3 & \raggedright $E[\omega\mid c,\text{released}]$ need not fall in $c$ when $\pi_1>0$ & \raggedright Corrected \tabularnewline
+PROXY & \raggedright new & \raggedright $\ln(D/N)\mid c$ inverts $\chi=\beta\psi_D-\alpha\psi_N$; flat in Hicks-neutral $\omega$ & \raggedright New \tabularnewline
+\multicolumn{4}{l}{\textit{Wedges and technical change}} \\
+P4.foc & \raggedright Prop. 4 / P6 & \raggedright $w=1+T/(3D)$; invariant to $\omega$, $\epsilon$, $E$ & \raggedright Verified \tabularnewline
+P4.contam & \raggedright Prop. 4 & \raggedright $\hat w=w\,e^{\alpha\psi_N-\beta\psi_D}$ & \raggedright Verified \tabularnewline
+HOM & \raggedright P6 & \raggedright $T/D=3[(M/M^*)^\rho-1]$; $C/C_{\min}=\cosh(\tfrac{\rho}{2}\ln\tfrac{M}{M^*})^{2/\rho}$ & \raggedright Verified \tabularnewline
+W1 & \raggedright new & \raggedright Any $\alpha,\beta$: $w=(M/M^*(C))^{1/\sigma^*-1}$ & \raggedright New \tabularnewline
+W2 & \raggedright new & \raggedright $C/C_{\min}=((\alpha+\beta w)/(\alpha+\beta))^{1/\gamma}w^{-1/\alpha}$; $\approx\exp[(\ln w)^2/(2(\alpha+\beta))]$ & \raggedright New \tabularnewline
+D.constr & \raggedright task 2(d) & \raggedright Binding $D\le\bar D$: $w=1/(\theta_D+\mu)<1+T/3D$; binding $N\le\bar N$: $w>1+T/3D$ & \raggedright Verified \tabularnewline
+PI.mono & \raggedright new & \raggedright Concave, supermodular $F$: $w$ monotone in $(-n,d)$; lower bound on $T$ off-support & \raggedright New \tabularnewline
+P5.rates & \raggedright Prop. 5 / P3 & \raggedright Rates of $K_t$, $D^*/N^*$; Hicks bias $\beta g_D-\alpha g_N$ & \raggedright Verified \tabularnewline
+P4S.CEG & \raggedright P4 & \raggedright Constant frontier CEG iff equal $E$ and equal $\gamma$ (not equal $\alpha,\beta$) & \raggedright False; corrected \tabularnewline
+P4S.CEG.rule & \raggedright P4 & \raggedright At a common rule $D=mN$: equal $E$ and exponents necessary, not sufficient (need a common rescaling of $N$) & \raggedright False; corrected \tabularnewline
+P7 & \raggedright P7 & \raggedright Sahal: naive slope $\gamma/(1-s_A)$; with noise $\gamma[1+(g_A/g)R^2]$ & \raggedright Verified \tabularnewline
+P8 & \raggedright P8 & \raggedright Hall-type bias $(\varepsilon_N-\varepsilon_D)(\Delta n-\Delta d)/2$ & \raggedright Verified \tabularnewline
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Each statement was checked symbolically (sympy) and numerically (brute-force optimization, Monte Carlo with $n\geq 4\times10^5$, or Fisher-information computations); scripts in \texttt{code/analysis/m7\_theory}. ``Source'' refers to the project's model specification (Lemma/Proposition numbers of the draft) and the literature synthesis (P1--P8). ``Corrected'' and ``False'' entries give the corrected statement; the original wording is in the module memo. The full register with error metrics is \texttt{m7\_theory\_claims.csv}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

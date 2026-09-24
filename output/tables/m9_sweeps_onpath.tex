@@ -1,0 +1,27 @@
+\begin{table}[tp]
+\centering
+\caption{Functional Dependence with Real Losses (Q6)}
+\label{tab:m9-onpath}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllccccc@{}}
+\toprule
+Corpus & Conv. & Subsample & $n$ & cond$(J'J)$ & sd $\ln(M/M^*)$ & 95\% set, $\sigma^*_\kappa$ & Flat? \\
+\midrule
+FineWeb-Edu & P & Full grid & 44 & 6412 & 1.98 & [0.65, 0.69] & no \\
+FineWeb-Edu & P & On path, 1/bin & 9 & 33{,}961 & 0.48 & [0.35, 0.95] & no \\
+FineWeb-Edu & P & On path, 2/bin & 18 & 13{,}740 & 0.79 & [0.53, 0.71] & no \\
+FineWeb-Edu & T & Full grid & 44 & 6423 & 1.70 & [0.59, 0.61] & no \\
+FineWeb-Edu & T & On path, 1/bin & 9 & 31{,}116 & 0.34 & [0.23, 0.87] & no \\
+FineWeb-Edu & T & On path, 2/bin & 17 & 15{,}655 & 0.58 & [0.41, 0.93] & no \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Q6. On-path subsample: in each doubling bin of compute, the endpoint(s) nearest the $\kappa$-family expansion path fitted on the full grid. Condition number of $J'J$ for the Chinchilla form at the full-grid estimate (KMW-normalized). Profile: Gaussian likelihood ratio over $\sigma^*_\kappa$ on a grid over (0.05, 0.99), relative to the unconstrained $\kappa$-family optimum (Section II Monte Carlo machinery); ``flat'' means no grid value is rejected at 5 percent.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

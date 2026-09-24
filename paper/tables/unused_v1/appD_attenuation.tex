@@ -1,0 +1,53 @@
+\begin{table}[tp]
+\centering
+\caption{Why Is the Cross-Lab Data Elasticity Small? Channels of Attenuation}
+\label{tab:app-attenuation}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+ & & & & & & \multicolumn{2}{c}{Default stop} \\
+\cmidrule(l){7-8}
+ & $n$ & $\hat\alpha$ & $\hat\beta$ & $\hat\gamma$ & $T_C$ [95\% CI] & $\hat\beta$ & $T_C$ \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel A. Cross-lab model on alternative data}} \\
+Baseline (model 7) & 231 & 0.138 & 0.025 & 0.021 & 6.1 [3.0, 26.5] & 0.040 & 8.7 \\
+Benchmark-specific perplexity & 231 & 0.139 & 0.023 & 0.020 & 5.7 [2.8, 21.2] & 0.030 & 9.0 \\
+(a) Tokens seen, epochs $=1$ & 231 & 0.065 & 0.035 & 0.023 & 8.0 [1.1, $\infty$] & 0.018 & 2.6 \\
+(a) Tokens seen, epochs imputed & 231 & 0.121 & 0.028 & 0.023 & 4.7 [2.4, $\infty$] & 0.027 & 4.7 \\
+(a) Effective data & 231 & 0.057 & 0.067 & 0.031 & 25.7 [3.9, $\infty$] & 0.052 & 12.7 \\
+(a) Word-level vocabulary & 134 & 0.040 & 0.000 & 0.000 & n.d. & 0.008 & 0.9 \\
+(a) Vocabulary control & 185 & 0.135 & 0.021 & 0.018 & 3.2 [1.4, 18.7] & 0.036 & 4.6 \\
+(b) Published 2018 or later & 180 & 0.052 & 0.077 & 0.031 & 7.8 [2.0, $\infty$] & 0.040 & 4.3 \\
+(b) Transformers only & 104 & 0.061 & 0.039 & 0.024 & 5.2 [1.6, $\infty$] & 0.032 & 11.3 \\
+(b) No year terms & 231 & 0.063 & 0.084 & 0.036 & -- & 0.037 & -- \\
+(c) Benchmark-specific $E$ & 231 & 0.072 & 0.042 & 0.026 & 10.5 [2.7, 44.3] & 0.042 & 10.5 \\
+(d) All models per paper & 261 & 0.055 & 0.064 & 0.030 & 15.3 [2.7, 79.3] & 0.038 & 7.6 \\
+(d) Top model per paper & 144 & 0.143 & 0.025 & 0.022 & 6.7 [2.5, 56.9] & 0.042 & 9.6 \\
+(d) Flagged outliers kept & 238 & 0.150 & 0.023 & 0.020 & 5.2 [2.5, 17.9] & 0.030 & 7.5 \\
+(d) No zero-shot evaluations & 207 & 0.049 & 0.091 & 0.032 & 16.6 [3.1, 23.5] & 0.059 & 11.4 \\
+\addlinespace
+\multicolumn{8}{@{}l}{\textit{Panel B. Chinchilla sweep}} \\
+$E$ estimated, Huber & 240 & 0.347 & 0.367 & \multicolumn{2}{l}{0.178 [0.169, 0.188]} &  &  \\
+$E=0$, Huber & 240 & 0.375 & 0.061 & \multicolumn{2}{l}{0.053 [0.052, 0.054]} &  &  \\
+$E=0$, least squares & 240 & 0.061 & 0.377 & \multicolumn{2}{l}{0.053} &  &  \\
+Total-loss elasticities & 240 & 0.053 & 0.056 & \multicolumn{2}{l}{0.054} &  &  \\
+\addlinespace
+\multicolumn{8}{@{}l}{\textit{Panel C. Monte Carlo on the cross-lab design}} \\
+ & & \multicolumn{3}{c}{Global optimum} & MC & \multicolumn{2}{c}{Authors' code} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-6}\cmidrule(l){7-8}
+ & & $\hat\alpha$ & $\hat\beta$ & $\hat\gamma$ & $T_C$ [5, 95] & $\hat\beta$ & $T_C$ \\
+Correct specification &  & 0.348 & 0.366 & 0.178 & 9.9 [7.4, 12.8] & 0.366 & 12.0 \\
+(c) $E$ dropped &  & 0.046 & 0.388 & 0.041 & 11.2 [8.8, 15.5] & 0.346 & 11.1 \\
+(c) and neutrality imposed &  & 0.046 & 0.489 & 0.042 & 4.4 [3.7, 5.4] & 0.446 & 4.2 \\
+(c)+(a) $D$ = dataset size &  & 0.032 & 0.389 & 0.029 & 10.4 [7.9, 16.5] & 0.048 & 4.6 \\
+(c)+(a)+(d) best 3 &  & 0.036 & 0.415 & 0.033 & 10.9 [7.6, 18.1] & 0.280 & 11.9 \\
+(c)+(a) random 3 &  & 0.033 & 0.398 & 0.030 & 10.7 [7.5, 17.9] & 0.303 & 10.5 \\
+(c)+(a), $\rho(\psi_D,\ln D)=-0.5$ &  & 0.031 & 0.370 & 0.028 & 9.8 [5.3, 16.5] & 0.045 & 4.6 \\
+(c)+(a), $\rho(\psi_D,\ln D)=+0.5$ &  & 0.025 & 0.384 & 0.023 & 10.5 [5.8, 21.4] & 0.288 & 10.1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Panel A: the model and penalized objective of \citet{ho2024algorithmic} (mean squared error plus $0.0025\sum|\theta|$, $E=0$), minimized to convergence on the indicated data; the last two columns (default stop) stop the optimizer at the default tolerance used in the authors' code. $T_C$ is the doubling time of effective compute, with a 95 percent paper-cluster bootstrap interval (400 draws, each started at zero; ``$\infty$'' when nonpositive growth is inside the interval). Rows: (a) measurement of data, with $D$ as tokens seen (missing epoch counts set to 1 or imputed from dataset size), as effective data under repetition \citep[$R^*=15.4$;][]{muennighoff2023scaling}, or with word-level vocabularies only or a vocabulary control; 33 percent of epoch counts are imputed; (b) time and collinearity; (c) benchmark-specific irreducible loss estimated by NLS; (d) selection, using all models of each paper, only the best, keeping flagged outliers, or dropping zero-shot evaluations. Panel B: the \citet{besiroglu2024chinchilla} estimator on the Chinchilla sweep with $E$ estimated or set to zero, with 95 percent bootstrap intervals for $\gamma=\alpha\beta/(\alpha+\beta)$; the last row gives the sample means of the total-loss elasticities $\alpha u/L$, $\beta v/L$, and $\gamma(L-E)/L$ implied by the full model. Panel C: pseudo-true values (at the global optimum and with the authors' code) from noise-free data when the truth is the Besiroglu technology with Hicks-neutral progress ($T_C=12$ months) evaluated at the actual inputs of the sample; MC median and 5th--95th percentiles of $T_C$ from 204 replications with noise of standard deviation 0.215; rows switch on (c) dropping $E$, (a) measuring $D$ as dataset size, (d) keeping the best three models per paper, and a data-augmenting productivity shock $\psi_D$ correlated with $\ln D$. n.d.: not defined because $\hat\beta=0$.\end{tablenotes}
+\begin{tablenotes}[Source]Data of \citet{ho2024algorithmic}; Epoch AI digitization of \citet{hoffmann2022training}; authors' estimates.\end{tablenotes}
+\end{table}

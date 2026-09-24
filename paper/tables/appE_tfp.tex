@@ -1,0 +1,48 @@
+\begin{table}[tp]
+\centering
+\caption{Productivity Dispersion across Model Families in Output and Input Units}
+\label{tab:app-tfp-units}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l cccccc@{}}
+\toprule
+ & Output units & Compute & Loss & Compute & Loss &  \\
+ & odds & \multicolumn{2}{c}{$\theta_C=0.33^{a}$} & \multicolumn{2}{c}{$\theta_C=0.43$} & $\theta$ used \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{All 128 models (38 families)}} \\
+Family effects, $\theta_C$ netting & 2.68 & 19.9 & 1.70 & 13.1 & 1.58 & 0.33 \\
+ & $[1.94,5.27]$ & $[7.5,160.7]$ & $[1.43,2.47]$ & $[5.1,69.8]$ & $[1.34,2.13]$ &  \\
+Family effects, within netting & 2.83 & 23.7 & 1.76 & 11.2 & 1.54 & 0.33 \\
+ & $[2.02,5.59]$ & $[8.5,193.1]$ & $[1.46,2.56]$ & $[5.1,53.7]$ & $[1.34,2.03]$ &  \\
+Within-developer residuals & 2.78 & 11.1 & 1.54 &  &  & 0.43 \\
+ & $[1.77,3.19]$ & $[4.1,18.1]$ & $[1.29,1.68]$ &  &  &  \\
+\addlinespace[2pt]
+\multicolumn{7}{@{}l}{\textit{Without distilled and synthetic-data models}} \\
+Family effects, $\theta_C$ netting & 2.57 & 17.6 & 1.67 & 13.1 & 1.58 & 0.33 \\
+ & $[1.90,5.13]$ & $[7.0,143.9]$ & $[1.42,2.43]$ & $[5.1,58.9]$ & $[1.34,2.07]$ &  \\
+Family effects, within netting & 2.60 & 18.3 & 1.68 & 9.2 & 1.49 & 0.33 \\
+ & $[1.87,5.90]$ & $[6.8,216.6]$ & $[1.41,2.61]$ & $[4.3,58.9]$ & $[1.30,2.07]$ &  \\
+Within-developer residuals & 2.84 & 11.3 & 1.54 &  &  & 0.43 \\
+ & $[1.78,3.21]$ & $[4.0,18.0]$ & $[1.28,1.67]$ &  &  &  \\
+\addlinespace[2pt]
+\multicolumn{7}{@{}l}{\textit{Also without code families (32 families)}} \\
+Family effects, $\theta_C$ netting & 2.07 & 9.1 & 1.48 & 6.9 & 1.41 & 0.33 \\
+ & $[1.70,2.29]$ & $[4.9,12.7]$ & $[1.33,1.57]$ & $[3.5,10.4]$ & $[1.25,1.52]$ &  \\
+Family effects, within netting & 1.90 & 7.0 & 1.41 & 4.4 & 1.30 & 0.33 \\
+ & $[1.61,5.10]$ & $[4.2,143.4]$ & $[1.29,2.42]$ & $[3.3,37.3]$ & $[1.23,1.91]$ &  \\
+Within-developer residuals & 2.51 & 8.4 & 1.46 &  &  & 0.43 \\
+ & $[1.71,3.04]$ & $[3.8,14.2]$ & $[1.27,1.61]$ &  &  &  \\
+\addlinespace[2pt]
+Manufacturing \citep{syverson2004product} & 1.92 & 1.92 & 1.92 & 1.92 & 1.92 & $\approx1$ \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+90--10 ratios of Hicks-neutral productivity on HellaSwag log-odds $q$. A gap $\Delta$ between the 90th and 10th percentiles is reported as an odds ratio $e^{\Delta}$ (column 1, output units), as compute-equivalents $e^{\Delta/\theta_C}$ (input units: the compute the 10th-percentile family needs to match the 90th), and in reducible-loss units $e^{\gamma\Delta/\theta_C}$ with $\gamma=0.178$ \citep{besiroglu2024chinchilla}; $\gamma=0.155$ \citep{hoffmann2022training} is in the replication files. $\theta_C=0.33$: the design-matched benchmark on 57 models (benchmark including OLMo-2); $\theta_C=0.43$: the strictly experimental benchmark on 20 models (Table~\ref{tab:app-matched}). Family effects net inputs either with the benchmark $\theta_C$ or with the within-family $(\theta_N,\theta_D)$; within-developer residuals follow \citet{mertens2026secret} (developer and year effects, single-model developers dropped) and use the regression's own $\theta_C$ (column 6) in columns 2--3 ($^{a}$). Brackets: 90 percent intervals from a developer-cluster bootstrap (999 draws) that also draws $\theta_C$ from its benchmark bootstrap. Manufacturing's 1.92 is an output-unit ratio and, with returns to scale near one, also an input-equivalent ratio; for LLMs the two differ by the factor $1/\theta_C$ in logs, because returns to compute are small. Family effects also absorb benchmark contamination, similarity of training data to the benchmark and omitted teacher compute (distillation, synthetic data).
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations; outputs from \citet{ruan2024observational} and \citet{maiapolo2024sloth}.
+\end{tablenotes}
+\end{table}

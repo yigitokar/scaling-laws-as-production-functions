@@ -1,0 +1,2 @@
+sample,statistic,critical_value,set_lo,set_hi
+full design (n=240),"Laplace QLR, bootstrap-calibrated",11.360939497832927,0.68,0.72

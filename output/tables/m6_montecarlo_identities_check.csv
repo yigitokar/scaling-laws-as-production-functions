@@ -1,0 +1,6 @@
+check,max_abs_error
+Lemma 1: d*-n* with psi_D=-0.3,1.021405182655144e-14
+Lemma 1: d*-n* with psi_D=+0.0,1.1102230246251564e-14
+Lemma 1: d*-n* with psi_D=+0.3,9.769962616701378e-15
+Prop. 4: w = 1 + T/(3D) at the lifetime optimum,5.773159728050814e-15
+Prop. 4 inversion: T = 3D(w-1),1.0547118733938987e-14

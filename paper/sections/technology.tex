@@ -1,0 +1,263 @@
+% =====================================================================================================
+% Section III. The Technology from Designed Variation (sections/technology.tex), version 2.
+% Sources: output/memos/ra1_modelfree.md (+_review), m2_techpanel.md (+_review), m8_measurement.md (+_review),
+% ra3_econ.md; output/tables/ra1_modelfree_*.csv, m2_*.csv, ra3_econ_data_demand.csv; paper/notes/m9_preanalysis_plan.md;
+% code/sweep/run_grid.py. Number register, referee comments and open issues: paper/notes/writer2_technology.md.
+% =====================================================================================================
+
+\section{The Technology from Designed Variation}\label{sec:tech}
+
+Section~\ref{sec:ident} showed that IsoFLOP profiles, which hold compute fixed and vary the input mix, identify the
+curvature of the technology without a functional form (Proposition~\ref{prop:modelfree}). This section takes that
+result to the data and establishes three facts. First, on every public IsoFLOP design with annealed runs, the
+elasticity of substitution on the expansion path, $\sigma^*$, lies between 0.66 and 0.71, and the estimates from three
+developers' independent designs are consistent with a common value of about 0.70. Second, parametric scaling laws
+match this benchmark, where the data can tell them apart, only when the outer exponent $\kappa$ is free. Third, the
+other objects that the inversion of Section~\ref{sec:wedge} needs, the allocation exponent $a$ and the compute-optimal
+ratio $M^*$, are not portable across designs, conventions and data. Subsection~\ref{sec:tech:experiment} describes
+our own experiment and its pre-registered analysis.
+
+\subsection{Designs}\label{sec:tech:designs}\label{sec:tech:chinchilla}
+
+Table~\ref{tab:designs} lists the designs. The most informative are IsoFLOP designs: at each of several compute
+budgets, the experimenter trains models of different sizes on the isocost line $6ND=C$. Each budget yields a profile
+of loss against $\ln N$ whose minimum lies on the expansion path; these minima are outcomes of assigned inputs, not
+choices.
+
+Four studies provide such profiles. Epoch AI's digitization of the runs in Figure~4 of \citet{hoffmann2022training},
+the sample of \citet{besiroglu2024chinchilla}, has 245 runs with training compute from $1.4\times10^{18}$ to
+$1.3\times10^{22}$ FLOP: 137 on nine IsoFLOP profiles from $6\times10^{18}$ to $3\times10^{21}$ FLOP, and 108 from
+35 fixed-size trunks with different training horizons. Model-free estimates use the 137 profile runs; parametric fits
+use the full design without the five highest-loss runs ($n=240$). Meta's Llama~3 profiles \citep{grattafiori2024llama}, digitized by \citet{czech2026llama3isoflop}, cover ten
+budgets up to $10^{22}$ FLOP; their unstated loss units do not matter, because the model-free estimator is invariant
+to monotone transformations of output. Marin's released ladders \citep{marin2026ladders} repeat the design on three
+corpora with budgets up to $3\times10^{20}$ FLOP. \citet{porian2024resolving} release loss curves of 16 architectures
+trained at a constant learning rate, from which we read IsoFLOP-like profiles at 12 budgets up to
+$2.6\times10^{19}$ FLOP; because the runs are not annealed, these are losses of unfinished schedules.
+
+Farseer \citep{li2025predictableb} is not an IsoFLOP design, but its 404 released runs (of about 1,000 trained) form
+a near-factorial grid dense enough to locate the expansion path inside it. Three smaller sweeps
+of 30--35 runs have no IsoFLOP profiles: the three web corpora of \citet{gadre2024language}, all evaluated on C4, the
+OLMo ladder \citep{bhagia2024establishing}, and the single-epoch runs of \citet{muennighoff2023scaling}. With
+Chinchilla's full design and Farseer, they form the seven sweep--corpus technologies from five studies on which we
+compare functional forms. DataDecide \citep{magnusson2025datadecide}, whose final checkpoints all have $D\approx100N$,
+serves only to compare data recipes.
+
+The model-free estimator requires each profile to be an exact isocost, so $N$ is measured in the convention that
+makes $C=6ND$ hold along it (Table~\ref{tab:designs}, notes), and only unit-free objects are compared across rows. The
+off-path spread, the residual standard deviation of $\ln M$ given $\ln C$ with $M=D/N$, is zero for compute-optimal
+runs and by Proposition~\ref{prop:ident} governs how much a design reveals about curvature: 1.4--2.5 in the IsoFLOP
+designs and 0.94 on the OLMo ladder.
+
+\input{tables/table2_designs}
+
+\subsection{The Elasticity without a Functional Form}\label{sec:tech:modelfree}
+
+By Proposition~\ref{prop:modelfree}(ii), $1/\sigma^*-1$ equals the curvature of the IsoFLOP profile in $n=\ln N$ at
+its minimum divided by twice the slope of the IsoFLOP-minima frontier, the curve traced by the minima
+(equation~\ref{eq:ident-mf}). Both are in the same units of output, so the irreducible loss $E$, the outer exponent and
+the loss units drop out.
+
+We estimate both terms budget by budget. A quadratic in $\ln N$ fitted to the runs within one log point of the path
+gives the curvature and the minimum, a cubic in $\ln C$ through the logged minima gives the frontier slope, and a
+design's estimate is the random-effects mean over budgets \citep{dersimonian1986meta}. Standard errors come from a
+design-conditional wild bootstrap that holds the design fixed and re-estimates every step in each of 999 draws. On
+Farseer we fit a kernel-weighted local quadratic of $\ln L$ in $(\ln N,\ln D)$, find the points where the local wedge
+$w$ equals one on eight isocosts, and read $\sigma^*$ off the slope of $\ln w$ in $\ln M$ there, which equals
+$1/\sigma^*-1$ for any smooth technology (Proposition~\ref{prop:modelfree}(iii)). Online
+Appendix~\ref{app:additional} gives details and robustness.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\textwidth]{ra1_modelfree_sigma_by_design}
+\caption{The Elasticity of Substitution by Design, with and without a Functional Form}\label{fig:sigma}
+\begin{figurenotes}
+Panel a: $\sigma^*$ by design with 95 percent intervals ($\pm1.96$ standard errors). Circles: model-free estimate,
+equation~\eqref{eq:ident-mf}, random-effects mean over budgets; diamonds and squares: $\kappa$ family and Chinchilla
+form ($\kappa=1$) fitted by Huber loss to the same runs. Farseer: Hessian-based estimate on the local expansion path
+(0.703; the first-derivative estimate is 0.708) and full-grid parametric fits. Panel b: model-free estimate by budget
+with 95 percent bootstrap intervals; solid line, design mean; dashed, $\kappa=1$; dotted, $\kappa$ free. Farseer
+(last panel): local-path estimates at eight compute levels, with the path value implied by Farseer's own functional
+form (gray). Porian et al.'s losses come from runs without cooldown.
+\end{figurenotes}
+\begin{figurenotes}[Source]
+Designs of Table~\ref{tab:designs}; authors' calculations.
+\end{figurenotes}
+\end{figure}
+
+Figure~\ref{fig:sigma} and Table~\ref{tab:designs} report the results. On Chinchilla's profiles $\sigma^*=0.673$
+(standard error 0.027), on Meta's 0.660 (0.023), and on Marin's three corpora 0.700, 0.713 and 0.705. Farseer's local
+expansion path gives 0.708, and 0.701--0.711 at every bandwidth we try. The six estimates are consistent with a common
+value. Their random-effects mean is 0.695 (95 percent confidence interval [0.673, 0.717]), the estimated
+between-design standard deviation is zero, and Cochran's homogeneity statistic is 4.1 on five degrees of freedom
+($p=0.54$). With one estimate per study the mean is 0.693. The test has little power against a between-design
+standard deviation below about 0.02, so ``homogeneous'' means within two or three hundredths of 0.70. The summary
+enters Farseer's Hessian-based estimate, 0.703, which is sensitive to the bandwidth: at the narrower cross-validated
+bandwidth it is 0.664, and the mean 0.679.
+
+The estimator is accurate on these grids: on each design's own fitted technology it is biased by at most 0.006, and its
+interval covers the truth in 92--98 percent of Monte Carlo replications (Online Appendix~\ref{app:add-modelfree}). The
+larger threat is FLOP accounting: if FLOPs per token of the measured parameter count vary with size with elasticity
+$\eta$, $\sigma^*$ shifts by about $0.44\eta$. In Marin's configuration parameter count ($\eta=0.087$) its estimates fall
+to 0.64--0.66; Chinchilla's and Meta's FLOP accounting is unobserved, which adds uncertainty of about $\pm0.04$ for
+$|\eta|\le0.1$.
+
+Porian et al.'s profiles are the exception, at 0.518 (0.017) and 0.505 (0.014), and we keep them out of the summary.
+Their losses come from constant-learning-rate runs without cooldown, and the gap between unannealed and annealed loss
+varies with $D/N$ at fixed compute, which bends the profile: the estimates move between 0.45 and 0.55 with the window.
+They also come from the smallest models and budgets in the table. Including them lowers the mean to 0.646 and makes
+the set strongly heterogeneous (Table~\ref{tab:designs}, panel C). Our experiment, with annealed runs at a similar
+scale, can separate schedule from scale (subsection~\ref{sec:tech:experiment}).
+
+Within designs, $\sigma^*$ falls with compute: by 0.072 per decade in Chinchilla (standard error 0.026), by 0.053 in
+Llama~3 (0.010) and by 0.015 in Farseer (0.008), but not detectably in Marin. Neither parametric family allows such
+drift, and the estimator shows none when the truth has none, so this is evidence of non-homotheticity, although weak:
+across windows the Chinchilla drift is 0.034--0.096 per decade. If it is real, $\sigma^*$ at frontier compute is
+below 0.70.
+
+That $\sigma^*<1$ is not a finding: by equation~\eqref{eq:ident-mf} it holds exactly when IsoFLOP profiles are U-shaped
+under a falling frontier (Lemma~\ref{lemma:sigma}). The level matters because it prices departures from the
+compute-optimal mix. With $\sigma^*=0.70$ (and equal
+exponents), a model trained on ten times the compute-optimal tokens per parameter needs 73 percent more compute than
+the compute-optimal model of the same loss, against 57 percent at $\sigma^*=0.74$ (Online
+Appendix~\ref{app:additional}). A developer who makes that choice reveals a value of compactness 1.7 times its
+training expenditure ($w=2.7$, $s=0.63$; Proposition~\ref{prop:wedge}). Because $D$ counts tokens processed,
+$\sigma^*$ is an elasticity between parameters and training tokens, not between compute and a stock of unique text
+(Section~\ref{sec:econ}).
+
+\subsection{Parametric Forms}\label{sec:tech:parametric}\label{sec:tech:sweeps}
+
+Scaling laws are usually fitted in the Chinchilla form, the $\kappa=1$ member of the family
+$L=E+[AN^{-\alpha}+BD^{-\beta}]^{\kappa}$ of Section~\ref{sec:framework}. In every member $\sigma^*=2/(2+\alpha+\beta)$
+depends only on the inner exponents, but imposing $\kappa=1$ ties the curvature of IsoFLOP profiles to the slopes of
+the frontier and the path (Proposition~\ref{prop:modelfree}(iv)). The restriction is rejected wherever it can be
+tested. On Chinchilla's full design $\hat\kappa=0.774$, and $\kappa=1$ is rejected at 1 percent under five of the
+six inference schemes we consider, including a cluster bootstrap over the nine budgets and the 35 off-profile trunks
+($p=0.004$); the exception, the original clustering that assigns off-profile runs to the nearest budget, gives
+$p=0.052$. It is rejected in
+all seven sweep--corpus technologies ($p<0.001$) and on every IsoFLOP design but Chinchilla's profile runs, where the
+quasi-likelihood-ratio statistic of 7.8 is borderline.
+
+Rejection concerns fit; the question here is whether the restriction distorts $\sigma^*$. The model-free estimates
+answer it on the same runs (Figure~\ref{fig:sigma}, panel a). Where the comparison discriminates, the $\kappa$-free
+form agrees with the benchmark and the Chinchilla form does not. On Llama~3, $\kappa=1$ gives 0.769, 4.8 standard
+errors above the model-free 0.660, while $\kappa$ free gives 0.693, 1.5 standard errors away. On Farseer, $\kappa=1$
+gives 0.772, against 0.708 on the local path and 0.710 with $\kappa$ free. Elsewhere the comparison does not
+discriminate: on Chinchilla's profile runs both forms lie within one standard error of the benchmark, on Marin the
+Chinchilla form is slightly closer, and on Porian et al.'s profiles the benchmark lies between the two. On
+Chinchilla's full design the two forms give 0.737 and 0.701, and the bootstrap-calibrated profile-likelihood set for
+$\sigma^*$ with $\kappa$ free, [0.68, 0.72], excludes 0.74 ($p=0.003$, the floor with 299 draws); the contrast between
+0.737 and the model-free 0.673 compares different samples. The form's other restriction, equal exponents, survives
+at 5 percent in every sweep under tests robust to heavy-tailed residuals (Online Appendix~\ref{app:additional}).
+
+With $\kappa$ free, the three sweeps without IsoFLOP profiles give lower values: 0.59--0.62 on Gadre et al.'s
+corpora, 0.544 on the OLMo ladder and 0.511 on Muennighoff et al.'s runs. Across the seven sweep--corpus technologies
+the estimates are strongly heterogeneous: Cochran's statistic is 82.1 on six degrees of freedom ($p<0.001$), the
+between-technology standard deviation is 0.068, and the random-effects mean is 0.622 (95 percent confidence interval
+[0.549, 0.695]). The heterogeneity survives dropping the OLMo ladder or keeping one estimate per study. Chinchilla and
+Farseer agree ($p=0.51$), and each differs from the OLMo ladder and from Muennighoff et al.\ by 3.3 to 7.8 standard
+errors. On the seven IsoFLOP designs, by contrast, the $\kappa$-free fits are close to homogeneous ($p=0.08$).
+
+We cannot tell whether the low values reflect the technology or the $\kappa$ family's fit to small designs dominated
+by off-path runs. With 30--35 runs, $E$ and $\kappa$ are hard to separate: over the confidence set for $E$,
+$\sigma^*$ moves by up to 0.08 on these sweeps, against at most 0.006 on Chinchilla, Farseer and the OLMo ladder
+(Online Appendix Table~\ref{tab:app-kappa-robust}). The OLMo ladder is precise and still low, also with task bits per
+byte as output (0.51), so a difference in recipe cannot be ruled out. The Chinchilla form raises every estimate, to
+0.735--0.825. One more
+restriction of the family fails where it can be checked: the log wedge is linear in $\ln(M/M^*(C))$ in every member,
+but convex inside Farseer's grid (Section~\ref{sec:wedge}).
+
+In sum, where IsoFLOP profiles from annealed runs exist, $\sigma^*$ is about 0.70 with or without a functional form;
+small sweeps fitted parametrically give 0.51--0.62; and the Chinchilla restriction overstates $\sigma^*$ wherever the
+data can detect it. Section~\ref{sec:wedge} therefore uses the $\kappa$-free Chinchilla technology as its reference.
+
+\subsection{What Is Not Portable}\label{sec:tech:portable}\label{sec:tech:quality}\label{sec:tech:measurement}
+
+The inversion of Section~\ref{sec:wedge} needs a scale, $1/\sigma^*-1$, and a zero point, $M^*(C)$. The scale is
+estimated above. The zero point, and the allocation exponent $a$ that carries it across compute, are where designs
+disagree. Under the Chinchilla form, $a$ ranges from 0.37 (OLMo ladder) to 0.57 (Gadre et al., RefinedWeb) across the
+seven sweep--corpus technologies, and from 0.36 to 0.57 once lab laws and Farseer's own functional form are added
+(Section~\ref{sec:econ}). The compute-optimal ratio $M^*(10^{21})$ ranges from 3.4 to 60 tokens per parameter, an
+18-fold spread. Even the model-free minima paths differ, with slopes of 0.50 on Chinchilla and Llama~3 and 0.35--0.43
+on Marin's three corpora.
+
+$M^*$ is a level: it depends on the ratio $A/B$, which absorbs every difference in tokenizers, parameter counts and
+recipes, and $a$ is its slope in compute. Counting Farseer's embedding parameters moves $a$ from 0.53 to 0.41 and
+$M^*(10^{23})$ from 19.5 to 45; counting non-embedding parameters on Chinchilla raises $a$ from 0.514 to 0.556. This is
+not evidence that $\sigma^*$ is intrinsically better determined than $a$: the same change of convention moves
+Farseer's $\kappa$-free $\sigma^*$ from 0.710 to 0.668. The Kaplan--Chinchilla disagreement is the canonical case. On
+the 975 released runs of \citet{porian2024resolving}, the allocation exponent falls from 0.84 in Kaplan et al.'s setup
+to 0.50 (RefinedWeb). Counting the output head's parameters, a correction of input measurement, accounts for 39--47
+percent of the fall; re-tuning warmup, learning rate, schedule and batch size, flexible inputs that were not
+re-optimized at each scale, accounts for the remaining 53--61 percent (Online Appendix~\ref{app:additional}). Both problems are familiar
+from production-function estimation \citep{collardwexler2016production,ackerberg2015identification}.
+
+Data quality moves allocation through one channel. Better data can lower the irreducible loss, scale reducible loss
+neutrally, or tilt the ratio $A/B$; only the tilt changes the isoquant map, $M^*$ and the wedge. Across Gadre et al.'s
+three web corpora, all evaluated on C4, corpus-specific asymptotes with a neutral scale are not rejected ($p=0.90$),
+an asymptote shift alone is ($p=0.004$), and the implied tilts move $M^*$ by only 8--18 percent, although the tests
+have little power. DataDecide's 25 recipes have the power, and every restriction is rejected, yet the tilt adds only
+0.05 points to the 99.7 percent of cross-recipe variation in fit that asymptotes and a neutral scale explain. The tilt
+is small in loss but not in allocation: it spans 0.22--0.26 across recipes, which moves $M^*$ 2.9--3.4-fold and the
+wedge at given inputs 1.25--1.29-fold, and it is carried by the heavily filtered DCLM recipes. DataDecide identifies the
+tilt from checkpoints taken before the schedule ends, and on a common validation set part of any corpus difference is
+distribution match (Online Appendix~\ref{app:add-tech}). DeepSeek's IsoFLOP experiments point the same way: their
+allocation exponent rose from 0.45 to 0.58 as data quality improved \citep{bi2024deepseek}.
+
+The allocation exponent and $M^*$ are thus properties of a recipe, a tokenizer and a counting convention as much as of
+the technology. Section~\ref{sec:wedge} uses developers' own technologies where they exist and reports the range across
+all technologies; Section~\ref{sec:econ} shows that $a$, not $\sigma^*$, drives forecasts of data demand.
+
+\subsection{A Controlled Experiment}\label{sec:tech:experiment}
+
+The public designs confound the technology with recipes, units and schedules, and none offers annealed runs at the
+tokens-per-parameter ratios of released small models. We therefore ran our own (Online Appendix~\ref{app:sweep}). Two
+corpora, FineWeb-Edu and FineWeb (sample-10BT subsets; \citealp{penedo2024fineweb}), draw on the same English web crawl
+and differ in filtering: FineWeb-Edu keeps the documents that an educational-quality classifier rates highly. Both share
+one 8,192-token byte-level BPE tokenizer, so losses are in common units. The main grid crosses eight decoder-only
+transformers of width 128 to 640, with 0.39M--49M non-embedding parameters (1.4M--54M with the tied embedding), with
+token budgets from 25M to 800M: 44 endpoints per corpus. $M$ runs from 0.51 to 2,031 with non-embedding parameters and
+from 0.46 to 555 with total parameters, and the off-path spread, 1.96, matches Farseer's. Each width has one
+constant-learning-rate trunk, from which a copy branches off for each budget and cools down to zero
+\citep{hagele2024scaling}, so every endpoint is an annealed run. Training uses contexts of 256 tokens, batches of 16,384
+tokens and bf16 matrix products on one Apple M5 Max \citep{hannun2023mlx}. Four-layer models trained to 3.2B tokens
+raise the largest $M$ to 4,063 (1,743 with total parameters), so that high $M$ is not reached only by a two-layer
+network; learning-rate checks at the corners of the grid, seed replicates in both corpora and evaluation on
+WikiText-103 \citep{merity2016pointer}, drawn from neither corpus, address the other threats specific to small
+experiments. The largest run uses about $10^{17}$ FLOP, five orders of magnitude below Chinchilla's largest, so the
+experiment tests functional form, neutrality and the direction of extrapolation errors, not production-scale levels.
+
+We fixed the analysis before looking at the results. The pre-analysis plan was committed to the project's
+version-control repository on 24 September 2026 \citep[on such plans, see][]{olken2015promises}, when part of the
+FineWeb-Edu grid had finished but no model had been fitted and no statistic computed. The primary output is loss in bits
+per byte, and a difference between corpora counts as quality only if it has the same sign on the other corpus's
+validation set and on WikiText-103. Every result is reported with both parameter counts. The estimators are the
+model-free $\sigma^*$ and local wedge of subsection~\ref{sec:tech:modelfree} and Huber fits of the Chinchilla form and
+the $\kappa$ family; a conclusion is called robust only if it holds both under a wild cluster bootstrap by width, the
+unit that shares a trunk \citep{webb2023reworking}, and under a parametric bootstrap with the within-trunk covariance
+estimated from seed replicates. The plan poses six questions, each with a decision rule. Data quality is
+``factor-biased'' if the 95 percent interval of the tilt excludes zero with the same sign on both validation sets,
+``neutral'' if it contains zero on both with a half-width below 0.10, and inconclusive otherwise. The extrapolation
+test fits each parametric form on $M\le100$, predicts the wedge at every endpoint with $M>100$, and reports the slope of
+$\ln(w_{\rm restricted}/w_{\rm local})$ in $\ln M$, whose sign is the object. One deviation, made for time after the
+plan was committed, reduces the reach of the extrapolation test on FineWeb and changes no estimator or decision rule
+(Online Appendix~\ref{app:sweep}). Figure~\ref{fig:experiment} summarizes the results.
+
+% TBD-m9: the six questions and their statistics are specified in paper/notes/m9_preanalysis_plan.md.
+\textcolor{red}{[TBD-m9: completed endpoints; the power calculation, dated before the results. Q1: model-free and
+$\kappa$-free $\sigma^*$ by corpus, both parameter counts, against 0.70 and Porian et al.'s 0.51. Q2: tilt between
+corpora on the three validation sets, with the decision and the implied factors for $M^*$ and $\hat w$. Q3: sign of
+the extrapolation slope, against Farseer (Section~\ref{sec:wedge}). Q4--Q6: seed noise, learning-rate excess loss
+and the bound on $a$, on-path versus full-grid profile likelihood.]}
+
+\begin{figure}[tp]
+\centering
+\fbox{\parbox{0.9\textwidth}{\centering\vspace{2em}\textcolor{red}{[TBD-m9: two panels. (a) Loss in bits per byte
+against $D$ by width for both corpora on a common validation set, with fitted curves and the four-layer high-$M$
+runs. (b) Model-free $\sigma^*$ by budget and the local wedge against $\ln M$ for both corpora, with the $M\le100$
+extrapolations. File: output/figures/m9\_*.]}\vspace{2em}}}
+\caption{A Controlled Experiment: Two Corpora That Differ in Data Quality}\label{fig:experiment}
+\begin{figurenotes}
+\textcolor{red}{[TBD-m9: design, output, parameter convention, estimator and bootstrap, as pre-registered.]}
+\end{figurenotes}
+\end{figure}

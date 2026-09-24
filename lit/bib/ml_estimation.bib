@@ -1,0 +1,1082 @@
+% ml_estimation.bib -- Strand: statistical practice, estimation controversies, and measurement in scaling-law fitting
+% All entries verified this session from arXiv abstract pages / arXiv API, OpenReview API, ACL Anthology, or Crossref API.
+% Venue notes reflect what was verified; anything uncertain carries note = {UNVERIFIED: ...}.
+
+%% =====================================================================
+%% ML: canonical scaling-law papers
+%% =====================================================================
+
+@misc{kaplan2020scaling,
+  author        = {Kaplan, Jared and McCandlish, Sam and Henighan, Tom and Brown, Tom B. and Chess, Benjamin and Child, Rewon and Gray, Scott and Radford, Alec and Wu, Jeffrey and Amodei, Dario},
+  title         = {Scaling Laws for Neural Language Models},
+  year          = {2020},
+  eprint        = {2001.08361},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{hoffmann2022training,
+  author        = {Hoffmann, Jordan and Borgeaud, Sebastian and Mensch, Arthur and Buchatskaya, Elena and Cai, Trevor and Rutherford, Eliza and de Las Casas, Diego and Hendricks, Lisa Anne and Welbl, Johannes and Clark, Aidan and Hennigan, Tom and Noland, Eric and Millican, Katie and van den Driessche, George and Damoc, Bogdan and Guy, Aurelia and Osindero, Simon and Simonyan, Karen and Elsen, Erich and Rae, Jack W. and Vinyals, Oriol and Sifre, Laurent},
+  title         = {Training Compute-Optimal Large Language Models},
+  year          = {2022},
+  eprint        = {2203.15556},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {UNVERIFIED: NeurIPS 2022 proceedings version not checked this session; cite arXiv v1}
+}
+
+%% =====================================================================
+%% ML: replication / reconciliation / fitting-practice papers
+%% =====================================================================
+
+@misc{besiroglu2024chinchilla,
+  author        = {Besiroglu, Tamay and Erdil, Ege and Barnett, Matthew and You, Josh},
+  title         = {Chinchilla Scaling: A Replication Attempt},
+  year          = {2024},
+  eprint        = {2404.10102},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  note          = {arXiv v2 (May 2024) reports confirmation from Hoffmann et al. of the optimizer/averaging issue. Code and data: github.com/epoch-research/analyzing-chinchilla}
+}
+
+@article{pearce2024reconciling,
+  author        = {Pearce, Tim and Song, Jinyeop},
+  title         = {Reconciling {Kaplan} and {Chinchilla} Scaling Laws},
+  journal       = {Transactions on Machine Learning Research},
+  year          = {2024},
+  eprint        = {2406.12907},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@inproceedings{porian2024resolving,
+  author        = {Porian, Tomer and Wortsman, Mitchell and Jitsev, Jenia and Schmidt, Ludwig and Carmon, Yair},
+  title         = {Resolving Discrepancies in Compute-Optimal Scaling of Language Models},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2024},
+  eprint        = {2406.19146},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {Spotlight. Data: github.com/formll/resolving-scaling-law-discrepancies}
+}
+
+@inproceedings{choshen2024hitchhikers,
+  author        = {Choshen, Leshem and Zhang, Yang and Andreas, Jacob},
+  title         = {A Hitchhiker's Guide to Scaling Law Estimation},
+  booktitle     = {Proceedings of the International Conference on Machine Learning (ICML)},
+  year          = {2025},
+  eprint        = {2410.11840},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv v1 October 2024; ICML 2025 poster (OpenReview). Data: github.com/IBM/ColPret}
+}
+
+@inproceedings{li2025misfitting,
+  author        = {Li, Margaret and Kudugunta, Sneha and Zettlemoyer, Luke},
+  title         = {(Mis)Fitting Scaling Laws: A Survey of Scaling Law Fitting Techniques in Deep Learning},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2025},
+  eprint        = {2502.18969},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv title: "(Mis)Fitting: A Survey of Scaling Laws"}
+}
+
+@inproceedings{ivgi2022scaling,
+  author    = {Ivgi, Maor and Carmon, Yair and Berant, Jonathan},
+  title     = {Scaling Laws Under the Microscope: Predicting Transformer Performance from Small Scale Experiments},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2022},
+  pages     = {7354--7371},
+  year      = {2022},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2022.findings-emnlp.544},
+  eprint    = {2202.06387},
+  archivePrefix = {arXiv}
+}
+
+@misc{schaeffer2025evaluating,
+  author        = {Schaeffer, Rylan and Levi, Noam and Kirsch, Andreas and Guenais, Theo and Miranda, Brando and Obbad, Elyas and Koyejo, Sanmi},
+  title         = {Evaluating the Robustness of {Chinchilla} Compute-Optimal Scaling},
+  year          = {2025},
+  eprint        = {2509.23963},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{czech2026problems,
+  author        = {Czech, Eric and Xu, Zhiwei and Elmatad, Yael and Wang, Yixin and Held, William},
+  title         = {Problems with {Chinchilla} Approach 2: Systematic Biases in {IsoFLOP} Parabola Fits},
+  year          = {2026},
+  eprint        = {2603.22339},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {Code: github.com/Open-Athena/vpnls; data: huggingface.co/datasets/open-athena/isoflop-experiments}
+}
+
+@inproceedings{alabdulmohsin2022revisiting,
+  author        = {Alabdulmohsin, Ibrahim and Neyshabur, Behnam and Zhai, Xiaohua},
+  title         = {Revisiting Neural Scaling Laws in Language and Vision},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2022},
+  eprint        = {2209.06640},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@inproceedings{gadre2024language,
+  author        = {Gadre, Samir Yitzhak and Smyrnis, Georgios and Shankar, Vaishaal and Gururangan, Suchin and Wortsman, Mitchell and Shao, Rulin and Mercat, Jean and Fang, Alex and Li, Jeffrey and Keh, Sedrick and Xin, Rui and Nezhurina, Marianna and Vasiljevic, Igor and Jitsev, Jenia and Soldaini, Luca and Dimakis, Alexandros G. and Ilharco, Gabriel and Koh, Pang Wei and Song, Shuran and Kollar, Thomas and Carmon, Yair and Dave, Achal and Heckel, Reinhard and Muennighoff, Niklas and Schmidt, Ludwig},
+  title         = {Language Models Scale Reliably with Over-Training and on Downstream Tasks},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2025},
+  eprint        = {2403.08540},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {arXiv v1 March 2024. Data: github.com/mlfoundations/scaling}
+}
+
+@inproceedings{li2025farseer,
+  author        = {Li, Houyi and Zheng, Wenzhen and Wang, Qiufeng and Ding, Zhenyu and Wang, Haoying and Wang, Zili and Xuyang, Shijie and Ding, Ning and Zhou, Shuigeng and Zhang, Xiangyu and Jiang, Daxin},
+  title         = {Predictable Scale: Part {II}, {Farseer}: A Refined Scaling Law in Large Language Models},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2025},
+  eprint        = {2506.10972},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv v1 title: "Farseer: A Refined Scaling Law in Large Language Models"; NeurIPS 2025 spotlight per OpenReview}
+}
+
+@misc{li2025predictable,
+  author        = {Li, Houyi and Zheng, Wenzhen and Wang, Qiufeng and Zhang, Hanshan and Wang, Zili and Xuyang, Shijie and Fan, Yuantao and Ding, Zhenyu and Wang, Haoying and Ding, Ning and Zhou, Shuigeng and Zhang, Xiangyu and Jiang, Daxin},
+  title         = {Predictable Scale: Part {I}, Step Law -- Optimal Hyperparameter Scaling Law in Large Language Model Pretraining},
+  year          = {2025},
+  eprint        = {2503.04715},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {Data: github.com/step-law/steplaw}
+}
+
+@inproceedings{caballero2022broken,
+  author        = {Caballero, Ethan and Gupta, Kshitij and Rish, Irina and Krueger, David},
+  title         = {Broken Neural Scaling Laws},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2023},
+  eprint        = {2210.14891},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{zhang2026configuration,
+  author        = {Zhang, Huaqing and Wen, Kaiyue and Ma, Tengyu},
+  title         = {Configuration-to-Performance Scaling Law with Neural Ansatz},
+  year          = {2026},
+  eprint        = {2602.10300},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{nezhurina2025scaling,
+  author        = {Nezhurina, Marianna and Porian, Tomer and Pucceti, Giovanni and Kerssies, Tommie and Beaumont, Romain and Cherti, Mehdi and Jitsev, Jenia},
+  title         = {Scaling Laws for Robust Comparison of Open Foundation Language-Vision Models and Datasets},
+  year          = {2025},
+  eprint        = {2506.04598},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{cai2025latent,
+  author        = {Cai, Peiyao and Cui, Chengyu and Maia Polo, Felipe and Somerstep, Seamus and Choshen, Leshem and Yurochkin, Mikhail and Sun, Yuekai and Tan, Kean Ming and Xu, Gongjun},
+  title         = {A Latent Variable Framework for Scaling Laws in Large Language Models},
+  year          = {2025},
+  eprint        = {2512.06553},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.AP}
+}
+
+%% =====================================================================
+%% ML: hyperparameters as scale-dependent choices; schedules
+%% =====================================================================
+
+@misc{bi2024deepseek,
+  author        = {{DeepSeek-AI} and Bi, Xiao and Chen, Deli and Chen, Guanting and Chen, Shanhuang and Dai, Damai and Deng, Chengqi and Ding, Honghui and Dong, Kai and others},
+  title         = {{DeepSeek LLM}: Scaling Open-Source Language Models with Longtermism},
+  year          = {2024},
+  eprint        = {2401.02954},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}
+
+@inproceedings{hagele2024scaling,
+  author        = {H{\"a}gele, Alexander and Bakouch, Elie and Kosson, Atli and Ben Allal, Loubna and Von Werra, Leandro and Jaggi, Martin},
+  title         = {Scaling Laws and Compute-Optimal Training Beyond Fixed Training Durations},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2024},
+  eprint        = {2405.18392},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {Spotlight}
+}
+
+@inproceedings{bjorck2024scaling,
+  author        = {Bjorck, Johan and Benhaim, Alon and Chaudhary, Vishrav and Wei, Furu and Song, Xia},
+  title         = {Scaling Optimal {LR} Across Token Horizons},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2025},
+  eprint        = {2409.19913},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv v1 September 2024}
+}
+
+@inproceedings{everett2024scaling,
+  author        = {Everett, Katie and Xiao, Lechao and Wortsman, Mitchell and Alemi, Alexander A. and Novak, Roman and Liu, Peter J. and Gur, Izzeddin and Sohl-Dickstein, Jascha and Kaelbling, Leslie Pack and Lee, Jaehoon and Pennington, Jeffrey},
+  title         = {Scaling Exponents Across Parameterizations and Optimizers},
+  booktitle     = {Proceedings of the International Conference on Machine Learning (ICML)},
+  year          = {2024},
+  eprint        = {2407.05872},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{yang2022tensor,
+  author        = {Yang, Greg and Hu, Edward J. and Babuschkin, Igor and Sidor, Szymon and Liu, Xiaodong and Farhi, David and Ryder, Nick and Pachocki, Jakub and Chen, Weizhu and Gao, Jianfeng},
+  title         = {Tensor Programs {V}: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer},
+  year          = {2022},
+  eprint        = {2203.03466},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv comment states NeurIPS 2021; proceedings entry not independently checked}
+}
+
+@inproceedings{hu2024minicpm,
+  author        = {Hu, Shengding and Tu, Yuge and Han, Xu and He, Chaoqun and Cui, Ganqu and Long, Xiang and Zheng, Zhi and Fang, Yewei and Huang, Yuxiang and Zhao, Weilin and Zhang, Xinrong and Thai, Zheng Leng and Zhang, Kaihuo and Wang, Chongyi and Yao, Yuan and Zhao, Chenyang and Zhou, Jie and Cai, Jie and Zhai, Zhongwu and Ding, Ning and Jia, Chao and Zeng, Guoyang and Li, Dahai and Liu, Zhiyuan and Sun, Maosong},
+  title         = {{MiniCPM}: Unveiling the Potential of Small Language Models with Scalable Training Strategies},
+  booktitle     = {Conference on Language Modeling (COLM)},
+  year          = {2024},
+  eprint        = {2404.06395},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}
+
+@inproceedings{tissue2024scaling,
+  author        = {Tissue, Howe and Wang, Venus and Wang, Lu},
+  title         = {Scaling Law with Learning Rate Annealing},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2025},
+  eprint        = {2408.11029},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {arXiv v1 August 2024; NeurIPS 2025 poster per OpenReview}
+}
+
+@inproceedings{luo2025multipower,
+  author        = {Luo, Kairong and Wen, Haodong and Hu, Shengding and Sun, Zhenbo and Liu, Zhiyuan and Sun, Maosong and Lyu, Kaifeng and Chen, Wenguang},
+  title         = {A Multi-Power Law for Loss Curve Prediction Across Learning Rate Schedules},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2025},
+  eprint        = {2503.12811},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@inproceedings{wortsman2023small,
+  author        = {Wortsman, Mitchell and Liu, Peter J. and Xiao, Lechao and Everett, Katie and Alemi, Alex and Adlam, Ben and Co-Reyes, John D. and Gur, Izzeddin and Kumar, Abhishek and Novak, Roman and Pennington, Jeffrey and Sohl-Dickstein, Jascha and Xu, Kelvin and Lee, Jaehoon and Gilmer, Justin and Kornblith, Simon},
+  title         = {Small-Scale Proxies for Large-Scale Transformer Training Instabilities},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2024},
+  eprint        = {2309.14322},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {Oral}
+}
+
+@misc{mccandlish2018empirical,
+  author        = {McCandlish, Sam and Kaplan, Jared and Amodei, Dario and {OpenAI Dota Team}},
+  title         = {An Empirical Model of Large-Batch Training},
+  year          = {2018},
+  eprint        = {1812.06162},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{lourie2026small,
+  author        = {Lourie, Nicholas and Cho, Kyunghyun and Ullrich, Karen and Lotfi, Sanae},
+  title         = {Small-Scale Experiments: Are We There Yet?},
+  year          = {2026},
+  eprint        = {2608.11859},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+%% =====================================================================
+%% ML: noise, seeds, evaluation variance
+%% =====================================================================
+
+@misc{madaan2024quantifying,
+  author        = {Madaan, Lovish and Singh, Aaditya K. and Schaeffer, Rylan and Poulton, Andrew and Koyejo, Sanmi and Stenetorp, Pontus and Narang, Sharan and Hupkes, Dieuwke},
+  title         = {Quantifying Variance in Evaluation Benchmarks},
+  year          = {2024},
+  eprint        = {2406.10229},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@inproceedings{biderman2023pythia,
+  author        = {Biderman, Stella and Schoelkopf, Hailey and Anthony, Quentin and Bradley, Herbie and O'Brien, Kyle and Hallahan, Eric and Khan, Mohammad Aflah and Purohit, Shivanshu and Prashanth, USVSN Sai and Raff, Edward and Skowron, Aviya and Sutawika, Lintang and van der Wal, Oskar},
+  title         = {Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling},
+  booktitle     = {Proceedings of the International Conference on Machine Learning (ICML)},
+  year          = {2023},
+  eprint        = {2304.01373},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {Code: github.com/EleutherAI/pythia}
+}
+
+@inproceedings{vanderwal2025polypythias,
+  author        = {van der Wal, Oskar and Lesci, Pietro and Muller-Eberstein, Max and Saphra, Naomi and Schoelkopf, Hailey and Zuidema, Willem and Biderman, Stella},
+  title         = {{PolyPythias}: Stability and Outliers across Fifty Language Model Pre-Training Runs},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2025},
+  eprint        = {2503.09543},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}
+
+@inproceedings{heineman2025signal,
+  author        = {Heineman, David and Hofmann, Valentin and Magnusson, Ian and Gu, Yuling and Smith, Noah A. and Hajishirzi, Hannaneh and Lo, Kyle and Dodge, Jesse},
+  title         = {Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2025},
+  eprint        = {2508.13144},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {Spotlight per OpenReview}
+}
+
+%% =====================================================================
+%% ML: output measurement, downstream prediction, emergence
+%% =====================================================================
+
+@misc{gao2020pile,
+  author        = {Gao, Leo and Biderman, Stella and Black, Sid and Golding, Laurence and Hoppe, Travis and Foster, Charles and Phang, Jason and He, Horace and Thite, Anish and Nabeshima, Noa and Presser, Shawn and Leahy, Connor},
+  title         = {The {Pile}: An 800{GB} Dataset of Diverse Text for Language Modeling},
+  year          = {2020},
+  eprint        = {2101.00027},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {Defines bits per UTF-8 byte: BPB = (L_T/L_B) * loss / ln 2}
+}
+
+@inproceedings{tao2024scaling,
+  author        = {Tao, Chaofan and Liu, Qian and Dou, Longxu and Muennighoff, Niklas and Wan, Zhongwei and Luo, Ping and Lin, Min and Wong, Ngai},
+  title         = {Scaling Laws with Vocabulary: Larger Models Deserve Larger Vocabularies},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2024},
+  eprint        = {2407.13623},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}
+
+@inproceedings{huang2024compression,
+  author        = {Huang, Yuzhen and Zhang, Jinghan and Shan, Zifei and He, Junxian},
+  title         = {Compression Represents Intelligence Linearly},
+  booktitle     = {Conference on Language Modeling (COLM)},
+  year          = {2024},
+  eprint        = {2404.09937},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}
+
+@article{brandfonbrener2024loss,
+  author        = {Brandfonbrener, David and Anand, Nikhil and Vyas, Nikhil and Malach, Eran and Kakade, Sham},
+  title         = {Loss-to-Loss Prediction: Scaling Laws for All Datasets},
+  journal       = {Transactions on Machine Learning Research},
+  year          = {2025},
+  eprint        = {2411.12925},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv v1 November 2024; accepted by TMLR per OpenReview. UNVERIFIED: TMLR publication year}
+}
+
+@inproceedings{mayilvahanan2025llms,
+  author        = {Mayilvahanan, Prasanna and Wiedemer, Thadd{\"a}us and Mallick, Sayak and Bethge, Matthias and Brendel, Wieland},
+  title         = {{LLMs} on the Line: Data Determines Loss-to-Loss Scaling Laws},
+  booktitle     = {Proceedings of the International Conference on Machine Learning (ICML)},
+  year          = {2025},
+  eprint        = {2502.12120},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@inproceedings{schaeffer2023emergent,
+  author        = {Schaeffer, Rylan and Miranda, Brando and Koyejo, Sanmi},
+  title         = {Are Emergent Abilities of Large Language Models a Mirage?},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2023},
+  eprint        = {2304.15004},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  note          = {Oral per OpenReview}
+}
+
+@inproceedings{schaeffer2024predicting,
+  author        = {Schaeffer, Rylan and Schoelkopf, Hailey and Miranda, Brando and Mukobi, Gabriel and Madan, Varun and Ibrahim, Adam and Bradley, Herbie and Biderman, Stella and Koyejo, Sanmi},
+  title         = {Why Has Predicting Downstream Capabilities of Frontier {AI} Models with Scale Remained Elusive?},
+  booktitle     = {Proceedings of the International Conference on Machine Learning (ICML)},
+  year          = {2025},
+  eprint        = {2406.04391},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv v1 June 2024; ICML 2025 poster per OpenReview}
+}
+
+@misc{owen2024predictable,
+  author        = {Owen, David},
+  title         = {How Predictable Is Language Model Benchmark Performance?},
+  year          = {2024},
+  eprint        = {2401.04757},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@inproceedings{bhagia2024establishing,
+  author        = {Bhagia, Akshita and Liu, Jiacheng and Wettig, Alexander and Heineman, David and Tafjord, Oyvind and Jha, Ananya Harsh and Soldaini, Luca and Smith, Noah A. and Groeneveld, Dirk and Koh, Pang Wei and Dodge, Jesse and Hajishirzi, Hannaneh},
+  title         = {Establishing Task Scaling Laws via Compute-Efficient Model Ladders},
+  booktitle     = {Conference on Language Modeling (COLM)},
+  year          = {2025},
+  eprint        = {2412.04403},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}
+
+@inproceedings{krajewski2025revisiting,
+  author        = {Krajewski, Jakub and Shidani, Amitis and Busbridge, Dan and Wiseman, Sam and Ramapuram, Jason},
+  title         = {Revisiting the Scaling Properties of Downstream Metrics in Large Language Model Training},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  year          = {2026},
+  eprint        = {2512.08894},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {ICLR 2026 poster per OpenReview}
+}
+
+@inproceedings{lourie2025scaling,
+  author        = {Lourie, Nicholas and Hu, Michael Y. and Cho, Kyunghyun},
+  title         = {Scaling Laws Are Unreliable for Downstream Tasks: A Reality Check},
+  booktitle     = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  year          = {2025},
+  eprint        = {2507.00885},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {ACL Anthology ID 2025.findings-emnlp.877; code github.com/nicholaslourie/scale-fails. UNVERIFIED: page numbers}
+}
+
+@inproceedings{magnusson2025datadecide,
+  author        = {Magnusson, Ian and Tai, Nguyen and Bogin, Ben and Heineman, David and Hwang, Jena D. and Soldaini, Luca and Bhagia, Akshita and Liu, Jiacheng and Groeneveld, Dirk and Tafjord, Oyvind and Smith, Noah A. and Koh, Pang Wei and Dodge, Jesse},
+  title         = {{DataDecide}: How to Predict Best Pretraining Data with Small Experiments},
+  booktitle     = {Proceedings of the International Conference on Machine Learning (ICML)},
+  year          = {2025},
+  eprint        = {2504.11393},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+%% =====================================================================
+%% ML: observational / cross-family scaling; algorithmic progress
+%% =====================================================================
+
+@inproceedings{ruan2024observational,
+  author        = {Ruan, Yangjun and Maddison, Chris J. and Hashimoto, Tatsunori},
+  title         = {Observational Scaling Laws and the Predictability of Language Model Performance},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2024},
+  eprint        = {2405.10938},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {Spotlight}
+}
+
+@inproceedings{polo2024sloth,
+  author        = {Maia Polo, Felipe and Somerstep, Seamus and Choshen, Leshem and Sun, Yuekai and Yurochkin, Mikhail},
+  title         = {Sloth: Scaling Laws for {LLM} Skills to Predict Multi-Benchmark Performance Across Families},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2025},
+  eprint        = {2412.06540},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv v1 December 2024; code github.com/felipemaiapolo/sloth}
+}
+
+@inproceedings{ho2024algorithmic,
+  author        = {Ho, Anson and Besiroglu, Tamay and Erdil, Ege and Owen, David and Rahman, Robi and Guo, Zifan Carl and Atkinson, David and Thompson, Neil and Sevilla, Jaime},
+  title         = {Algorithmic Progress in Language Models},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2024},
+  eprint        = {2403.05812},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}
+
+@misc{grattafiori2024llama,
+  author        = {Grattafiori, Aaron and Dubey, Abhimanyu and Jauhri, Abhinav and Pandey, Abhinav and Kadian, Abhishek and Al-Dahle, Ahmad and Letman, Aiesha and Mathur, Akhil and Schelten, Alan and Vaughan, Alex and others},
+  title         = {The {Llama} 3 Herd of Models},
+  year          = {2024},
+  eprint        = {2407.21783},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI}
+}
+
+@inproceedings{sardana2023beyond,
+  author        = {Sardana, Nikhil and Portes, Jacob and Doubov, Sasha and Frankle, Jonathan},
+  title         = {Beyond {Chinchilla}-Optimal: Accounting for Inference in Language Model Scaling Laws},
+  booktitle     = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+  year          = {2024},
+  eprint        = {2401.00448},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {arXiv v1 dated 31 December 2023}
+}
+
+@inproceedings{muennighoff2023scaling,
+  author        = {Muennighoff, Niklas and Rush, Alexander M. and Barak, Boaz and Le Scao, Teven and Piktus, Aleksandra and Tazi, Nouamane and Pyysalo, Sampo and Wolf, Thomas and Raffel, Colin},
+  title         = {Scaling Data-Constrained Language Models},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2023},
+  eprint        = {2305.16264},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  note          = {Oral; extended version in JMLR 2025 per OpenReview (UNVERIFIED volume/pages)}
+}
+
+%% =====================================================================
+%% Econometrics / IO analogs used in this strand
+%% =====================================================================
+
+@article{marschak1944random,
+  author  = {Marschak, Jacob and Andrews, William H.},
+  title   = {Random Simultaneous Equations and the Theory of Production},
+  journal = {Econometrica},
+  volume  = {12},
+  number  = {3/4},
+  pages   = {143--205},
+  year    = {1944},
+  doi     = {10.2307/1905432},
+  note    = {UNVERIFIED: end page 205 (Crossref gives start page 143 only)}
+}
+
+@article{olley1996dynamics,
+  author  = {Olley, G. Steven and Pakes, Ariel},
+  title   = {The Dynamics of Productivity in the Telecommunications Equipment Industry},
+  journal = {Econometrica},
+  volume  = {64},
+  number  = {6},
+  pages   = {1263--1297},
+  year    = {1996},
+  doi     = {10.2307/2171831},
+  note    = {UNVERIFIED: end page 1297 (Crossref gives start page only)}
+}
+
+@article{levinsohn2003estimating,
+  author  = {Levinsohn, James and Petrin, Amil},
+  title   = {Estimating Production Functions Using Inputs to Control for Unobservables},
+  journal = {Review of Economic Studies},
+  volume  = {70},
+  number  = {2},
+  pages   = {317--341},
+  year    = {2003},
+  doi     = {10.1111/1467-937X.00246}
+}
+
+@article{ackerberg2015identification,
+  author  = {Ackerberg, Daniel A. and Caves, Kevin and Frazer, Garth},
+  title   = {Identification Properties of Recent Production Function Estimators},
+  journal = {Econometrica},
+  volume  = {83},
+  number  = {6},
+  pages   = {2411--2451},
+  year    = {2015},
+  doi     = {10.3982/ECTA13408}
+}
+
+@incollection{ackerberg2007econometric,
+  author    = {Ackerberg, Daniel and Benkard, C. Lanier and Berry, Steven and Pakes, Ariel},
+  title     = {Econometric Tools for Analyzing Market Outcomes},
+  booktitle = {Handbook of Econometrics},
+  volume    = {6A},
+  chapter   = {63},
+  pages     = {4171--4276},
+  year      = {2007},
+  publisher = {Elsevier},
+  doi       = {10.1016/S1573-4412(07)06063-1}
+}
+
+@article{gandhi2020identification,
+  author  = {Gandhi, Amit and Navarro, Salvador and Rivers, David A.},
+  title   = {On the Identification of Gross Output Production Functions},
+  journal = {Journal of Political Economy},
+  volume  = {128},
+  number  = {8},
+  pages   = {2973--3016},
+  year    = {2020},
+  doi     = {10.1086/707736}
+}
+
+@article{deloecker2012markups,
+  author  = {De Loecker, Jan and Warzynski, Frederic},
+  title   = {Markups and Firm-Level Export Status},
+  journal = {American Economic Review},
+  volume  = {102},
+  number  = {6},
+  pages   = {2437--2471},
+  year    = {2012},
+  doi     = {10.1257/aer.102.6.2437}
+}
+
+@techreport{collardwexler2016production,
+  author      = {Collard-Wexler, Allan and De Loecker, Jan},
+  title       = {Production Function Estimation and Capital Measurement Error},
+  institution = {National Bureau of Economic Research},
+  type        = {NBER Working Paper},
+  number      = {22437},
+  year        = {2016},
+  doi         = {10.3386/w22437},
+  note        = {SSRN version titled "Production Function Estimation with Measurement Error in Inputs" (doi:10.2139/ssrn.2832829)}
+}
+
+@incollection{griliches1998production,
+  author    = {Griliches, Zvi and Mairesse, Jacques},
+  title     = {Production Functions: The Search for Identification},
+  booktitle = {Practicing Econometrics: Essays in Method and Application},
+  pages     = {383--415},
+  year      = {1998},
+  publisher = {Edward Elgar},
+  doi       = {10.4337/9781035351442.00028},
+  note      = {Also NBER Working Paper 5067 (1995), doi:10.3386/w5067. UNVERIFIED: the frequently cited version in S. Str{\o}m (ed.), Econometrics and Economic Theory in the 20th Century (CUP 1998) was not checked}
+}
+
+@article{klette1996inconsistency,
+  author  = {Klette, Tor Jakob and Griliches, Zvi},
+  title   = {The Inconsistency of Common Scale Estimators When Output Prices Are Unobserved and Endogenous},
+  journal = {Journal of Applied Econometrics},
+  volume  = {11},
+  number  = {4},
+  pages   = {343--361},
+  year    = {1996},
+  doi     = {10.1002/(SICI)1099-1255(199607)11:4<343::AID-JAE404>3.0.CO;2-4}
+}
+
+@article{zellner1966specification,
+  author  = {Zellner, Arnold and Kmenta, Jan and Dr{\`e}ze, Jacques},
+  title   = {Specification and Estimation of {Cobb-Douglas} Production Function Models},
+  journal = {Econometrica},
+  volume  = {34},
+  number  = {4},
+  pages   = {784--795},
+  year    = {1966},
+  doi     = {10.2307/1910099},
+  note    = {UNVERIFIED: end page 795 (Crossref gives start page only)}
+}
+
+@article{mundlak1961empirical,
+  author  = {Mundlak, Yair},
+  title   = {Empirical Production Function Free of Management Bias},
+  journal = {Journal of Farm Economics},
+  volume  = {43},
+  number  = {1},
+  pages   = {44--56},
+  year    = {1961},
+  doi     = {10.2307/1235460},
+  note    = {UNVERIFIED: end page 56 (Crossref gives start page only)}
+}
+
+@incollection{nerlove1963returns,
+  author    = {Nerlove, Marc},
+  title     = {Returns to Scale in Electricity Supply},
+  booktitle = {Measurement in Economics: Studies in Mathematical Economics and Econometrics in Memory of Yehuda Grunfeld},
+  editor    = {Christ, Carl F.},
+  publisher = {Stanford University Press},
+  year      = {1963},
+  note      = {UNVERIFIED: pages and exact book title. Existence confirmed via Nerlove, "Reminiscences of 'Returns to Scale in Electricity Supply'", Handbook of Production Economics (Springer), doi:10.1007/978-981-10-3455-8_2}
+}
+
+@article{christensen1973transcendental,
+  author  = {Christensen, Laurits R. and Jorgenson, Dale W. and Lau, Lawrence J.},
+  title   = {Transcendental Logarithmic Production Frontiers},
+  journal = {Review of Economics and Statistics},
+  volume  = {55},
+  number  = {1},
+  pages   = {28--45},
+  year    = {1973},
+  doi     = {10.2307/1927992},
+  note    = {UNVERIFIED: end page 45 (Crossref gives start page only)}
+}
+
+@article{christensen1976economies,
+  author  = {Christensen, Laurits R. and Greene, William H.},
+  title   = {Economies of Scale in {U.S.} Electric Power Generation},
+  journal = {Journal of Political Economy},
+  volume  = {84},
+  number  = {4, Part 1},
+  pages   = {655--676},
+  year    = {1976},
+  doi     = {10.1086/260470}
+}
+
+@article{hanoch1971cresh,
+  author  = {Hanoch, Giora},
+  title   = {{CRESH} Production Functions},
+  journal = {Econometrica},
+  volume  = {39},
+  number  = {5},
+  pages   = {695--712},
+  year    = {1971},
+  doi     = {10.2307/1909573},
+  note    = {UNVERIFIED: end page 712 (Crossref gives start page only)}
+}
+
+@article{arrow1961capital,
+  author  = {Arrow, Kenneth J. and Chenery, Hollis B. and Minhas, Bagicha S. and Solow, Robert M.},
+  title   = {Capital-Labor Substitution and Economic Efficiency},
+  journal = {Review of Economics and Statistics},
+  volume  = {43},
+  number  = {3},
+  pages   = {225--250},
+  year    = {1961},
+  doi     = {10.2307/1927286},
+  note    = {UNVERIFIED: end page 250 (Crossref gives start page only)}
+}
+
+@article{kmenta1967estimation,
+  author  = {Kmenta, Jan},
+  title   = {On Estimation of the {CES} Production Function},
+  journal = {International Economic Review},
+  volume  = {8},
+  number  = {2},
+  pages   = {180--189},
+  year    = {1967},
+  doi     = {10.2307/2525600},
+  note    = {UNVERIFIED: end page 189 (Crossref gives start page only)}
+}
+
+@article{klump2007factor,
+  author  = {Klump, Rainer and McAdam, Peter and Willman, Alpo},
+  title   = {Factor Substitution and Factor-Augmenting Technical Progress in the {United States}: A Normalized Supply-Side System Approach},
+  journal = {Review of Economics and Statistics},
+  volume  = {89},
+  number  = {1},
+  pages   = {183--192},
+  year    = {2007},
+  doi     = {10.1162/rest.89.1.183}
+}
+
+@article{klump2012normalized,
+  author  = {Klump, Rainer and McAdam, Peter and Willman, Alpo},
+  title   = {The Normalized {CES} Production Function: Theory and Empirics},
+  journal = {Journal of Economic Surveys},
+  volume  = {26},
+  number  = {5},
+  pages   = {769--799},
+  year    = {2012},
+  doi     = {10.1111/j.1467-6419.2012.00730.x}
+}
+
+@article{leonledesma2010identifying,
+  author  = {Le{\'o}n-Ledesma, Miguel A. and McAdam, Peter and Willman, Alpo},
+  title   = {Identifying the Elasticity of Substitution with Biased Technical Change},
+  journal = {American Economic Review},
+  volume  = {100},
+  number  = {4},
+  pages   = {1330--1357},
+  year    = {2010},
+  doi     = {10.1257/aer.100.4.1330}
+}
+
+@incollection{diamond1978measurement,
+  author    = {Diamond, Peter and McFadden, Daniel and Rodriguez, Miguel},
+  title     = {Measurement of the Elasticity of Factor Substitution and Bias of Technical Change},
+  booktitle = {Production Economics: A Dual Approach to Theory and Applications, Vol. 2},
+  series    = {Contributions to Economic Analysis},
+  pages     = {125--147},
+  year      = {1978},
+  publisher = {North-Holland},
+  doi       = {10.1016/B978-0-444-85013-3.50012-7},
+  note      = {UNVERIFIED: book title/editors (Fuss and McFadden) not checked; DOI and pages from Crossref}
+}
+
+@article{foster2008reallocation,
+  author  = {Foster, Lucia and Haltiwanger, John and Syverson, Chad},
+  title   = {Reallocation, Firm Turnover, and Efficiency: Selection on Productivity or Profitability?},
+  journal = {American Economic Review},
+  volume  = {98},
+  number  = {1},
+  pages   = {394--425},
+  year    = {2008},
+  doi     = {10.1257/aer.98.1.394}
+}
+
+@article{aigner1977formulation,
+  author  = {Aigner, Dennis and Lovell, C. A. Knox and Schmidt, Peter},
+  title   = {Formulation and Estimation of Stochastic Frontier Production Function Models},
+  journal = {Journal of Econometrics},
+  volume  = {6},
+  number  = {1},
+  pages   = {21--37},
+  year    = {1977},
+  doi     = {10.1016/0304-4076(77)90052-5}
+}
+
+%% ---- measurement error ----
+
+@article{griliches1986errors,
+  author  = {Griliches, Zvi and Hausman, Jerry A.},
+  title   = {Errors in Variables in Panel Data},
+  journal = {Journal of Econometrics},
+  volume  = {31},
+  number  = {1},
+  pages   = {93--118},
+  year    = {1986},
+  doi     = {10.1016/0304-4076(86)90058-8}
+}
+
+@article{hausman2001mismeasured,
+  author  = {Hausman, Jerry},
+  title   = {Mismeasured Variables in Econometric Analysis: Problems from the Right and Problems from the Left},
+  journal = {Journal of Economic Perspectives},
+  volume  = {15},
+  number  = {4},
+  pages   = {57--67},
+  year    = {2001},
+  doi     = {10.1257/jep.15.4.57}
+}
+
+@article{schennach2016recent,
+  author  = {Schennach, Susanne M.},
+  title   = {Recent Advances in the Measurement Error Literature},
+  journal = {Annual Review of Economics},
+  volume  = {8},
+  number  = {1},
+  pages   = {341--377},
+  year    = {2016},
+  doi     = {10.1146/annurev-economics-080315-015058}
+}
+
+@article{hu2020estimating,
+  author  = {Hu, Yingyao and Huang, Guofang and Sasaki, Yuya},
+  title   = {Estimating Production Functions with Robustness Against Errors in the Proxy Variables},
+  journal = {Journal of Econometrics},
+  volume  = {215},
+  number  = {2},
+  pages   = {375--398},
+  year    = {2020},
+  doi     = {10.1016/j.jeconom.2019.05.024}
+}
+
+%% ---- nonlinear estimation, robust/quantile, transformation ----
+
+@article{huber1964robust,
+  author  = {Huber, Peter J.},
+  title   = {Robust Estimation of a Location Parameter},
+  journal = {Annals of Mathematical Statistics},
+  volume  = {35},
+  number  = {1},
+  pages   = {73--101},
+  year    = {1964},
+  doi     = {10.1214/aoms/1177703732}
+}
+
+@article{koenker1978regression,
+  author  = {Koenker, Roger and Bassett, Gilbert},
+  title   = {Regression Quantiles},
+  journal = {Econometrica},
+  volume  = {46},
+  number  = {1},
+  pages   = {33--50},
+  year    = {1978},
+  doi     = {10.2307/1913643},
+  note    = {UNVERIFIED: end page 50 (Crossref gives start page only)}
+}
+
+@article{jennrich1969asymptotic,
+  author  = {Jennrich, Robert I.},
+  title   = {Asymptotic Properties of Non-Linear Least Squares Estimators},
+  journal = {Annals of Mathematical Statistics},
+  volume  = {40},
+  number  = {2},
+  pages   = {633--643},
+  year    = {1969},
+  doi     = {10.1214/aoms/1177697731}
+}
+
+@article{white1982maximum,
+  author  = {White, Halbert},
+  title   = {Maximum Likelihood Estimation of Misspecified Models},
+  journal = {Econometrica},
+  volume  = {50},
+  number  = {1},
+  pages   = {1--25},
+  year    = {1982},
+  doi     = {10.2307/1912526},
+  note    = {UNVERIFIED: end page 25 (Crossref gives start page only)}
+}
+
+@article{golub2003separable,
+  author  = {Golub, Gene and Pereyra, Victor},
+  title   = {Separable Nonlinear Least Squares: The Variable Projection Method and Its Applications},
+  journal = {Inverse Problems},
+  volume  = {19},
+  number  = {2},
+  pages   = {R1--R26},
+  year    = {2003},
+  doi     = {10.1088/0266-5611/19/2/201}
+}
+
+@article{santossilva2006log,
+  author  = {Santos Silva, J. M. C. and Tenreyro, Silvana},
+  title   = {The Log of Gravity},
+  journal = {Review of Economics and Statistics},
+  volume  = {88},
+  number  = {4},
+  pages   = {641--658},
+  year    = {2006},
+  doi     = {10.1162/rest.88.4.641}
+}
+
+@article{manning2001estimating,
+  author  = {Manning, Willard G. and Mullahy, John},
+  title   = {Estimating Log Models: To Transform or Not to Transform?},
+  journal = {Journal of Health Economics},
+  volume  = {20},
+  number  = {4},
+  pages   = {461--494},
+  year    = {2001},
+  doi     = {10.1016/S0167-6296(01)00086-8}
+}
+
+@article{duan1983smearing,
+  author  = {Duan, Naihua},
+  title   = {Smearing Estimate: A Nonparametric Retransformation Method},
+  journal = {Journal of the American Statistical Association},
+  volume  = {78},
+  number  = {383},
+  pages   = {605--610},
+  year    = {1983},
+  doi     = {10.1080/01621459.1983.10478017}
+}
+
+%% ---- identification, weak ID, boundaries ----
+
+@article{rothenberg1971identification,
+  author  = {Rothenberg, Thomas J.},
+  title   = {Identification in Parametric Models},
+  journal = {Econometrica},
+  volume  = {39},
+  number  = {3},
+  pages   = {577--591},
+  year    = {1971},
+  doi     = {10.2307/1913267},
+  note    = {UNVERIFIED: end page 591 (Crossref gives start page only)}
+}
+
+@article{andrews2012estimation,
+  author  = {Andrews, Donald W. K. and Cheng, Xu},
+  title   = {Estimation and Inference with Weak, Semi-Strong, and Strong Identification},
+  journal = {Econometrica},
+  volume  = {80},
+  number  = {5},
+  pages   = {2153--2211},
+  year    = {2012},
+  doi     = {10.3982/ECTA9456}
+}
+
+@article{stock2002survey,
+  author  = {Stock, James H. and Wright, Jonathan H. and Yogo, Motohiro},
+  title   = {A Survey of Weak Instruments and Weak Identification in Generalized Method of Moments},
+  journal = {Journal of Business \& Economic Statistics},
+  volume  = {20},
+  number  = {4},
+  pages   = {518--529},
+  year    = {2002},
+  doi     = {10.1198/073500102288618658}
+}
+
+@article{andrews2000inconsistency,
+  author  = {Andrews, Donald W. K.},
+  title   = {Inconsistency of the Bootstrap When a Parameter Is on the Boundary of the Parameter Space},
+  journal = {Econometrica},
+  volume  = {68},
+  number  = {2},
+  pages   = {399--405},
+  year    = {2000},
+  doi     = {10.1111/1468-0262.00114}
+}
+
+@article{andrews2001testing,
+  author  = {Andrews, Donald W. K.},
+  title   = {Testing When a Parameter Is on the Boundary of the Maintained Hypothesis},
+  journal = {Econometrica},
+  volume  = {69},
+  number  = {3},
+  pages   = {683--734},
+  year    = {2001},
+  doi     = {10.1111/1468-0262.00210}
+}
+
+%% ---- resampling ----
+
+@article{efron1979bootstrap,
+  author  = {Efron, Bradley},
+  title   = {Bootstrap Methods: Another Look at the Jackknife},
+  journal = {Annals of Statistics},
+  volume  = {7},
+  number  = {1},
+  pages   = {1--26},
+  year    = {1979},
+  doi     = {10.1214/aos/1176344552},
+  note    = {UNVERIFIED: pages 1--26 (Crossref gives no page range)}
+}
+
+@article{politis1994large,
+  author  = {Politis, Dimitris N. and Romano, Joseph P.},
+  title   = {Large Sample Confidence Regions Based on Subsamples under Minimal Assumptions},
+  journal = {Annals of Statistics},
+  volume  = {22},
+  number  = {4},
+  pages   = {2031--2050},
+  year    = {1994},
+  doi     = {10.1214/aos/1176325770},
+  note    = {UNVERIFIED: pages (Crossref gives no page range)}
+}
+
+@article{cameron2008bootstrap,
+  author  = {Cameron, A. Colin and Gelbach, Jonah B. and Miller, Douglas L.},
+  title   = {Bootstrap-Based Improvements for Inference with Clustered Errors},
+  journal = {Review of Economics and Statistics},
+  volume  = {90},
+  number  = {3},
+  pages   = {414--427},
+  year    = {2008},
+  doi     = {10.1162/rest.90.3.414}
+}
+
+%% ---- numerical optimization pitfalls in IO estimation ----
+
+@article{knittel2014estimation,
+  author  = {Knittel, Christopher R. and Metaxoglou, Konstantinos},
+  title   = {Estimation of Random-Coefficient Demand Models: Two Empiricists' Perspective},
+  journal = {Review of Economics and Statistics},
+  volume  = {96},
+  number  = {1},
+  pages   = {34--59},
+  year    = {2014},
+  doi     = {10.1162/REST_a_00394}
+}
+
+@article{dube2012improving,
+  author  = {Dub{\'e}, Jean-Pierre and Fox, Jeremy T. and Su, Che-Lin},
+  title   = {Improving the Numerical Performance of Static and Dynamic Aggregate Discrete Choice Random Coefficients Demand Estimation},
+  journal = {Econometrica},
+  volume  = {80},
+  number  = {5},
+  pages   = {2231--2267},
+  year    = {2012},
+  doi     = {10.3982/ECTA8585}
+}

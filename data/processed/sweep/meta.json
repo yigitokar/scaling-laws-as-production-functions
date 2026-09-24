@@ -1,0 +1,64 @@
+{
+  "vocab_size": 8192,
+  "edu": {
+    "val": {
+      "tokens": 24646462,
+      "bytes": 95768129,
+      "bytes_per_token": 3.8856745037076723
+    },
+    "train": {
+      "tokens": 1761270521,
+      "bytes": 6846269230,
+      "bytes_per_token": 3.8871196379945543
+    },
+    "train_ext": {
+      "tokens": 1783706780,
+      "bytes": 6959451410,
+      "shards": "002,003"
+    }
+  },
+  "web": {
+    "val": {
+      "tokens": 16672041,
+      "bytes": 62397377,
+      "bytes_per_token": 3.7426357696697123
+    },
+    "train": {
+      "tokens": 1702215496,
+      "bytes": 6385343067,
+      "bytes_per_token": 3.7511954755462993
+    },
+    "train_ext": {
+      "tokens": 1720371661,
+      "bytes": 6450813090,
+      "shards": "002,003"
+    }
+  },
+  "wiki": {
+    "val": {
+      "tokens": 654959,
+      "bytes": 2431904,
+      "bytes_per_token": 3.7130629550857384,
+      "docs": 125,
+      "source": "WikiText-103 raw v1 validation+test"
+    }
+  },
+  "c4": {
+    "val": {
+      "tokens": 1100356,
+      "bytes": 4151886,
+      "bytes_per_token": 3.7732206667660284,
+      "docs": 1963,
+      "source": "allenai/c4 en validation shard 00000"
+    }
+  },
+  "pg19": {
+    "val": {
+      "tokens": 414836,
+      "bytes": 1201846,
+      "bytes_per_token": 2.89715935936129,
+      "docs": 100,
+      "source": "PG-19 test (emozilla/pg19-test), first 12k chars per book"
+    }
+  }
+}

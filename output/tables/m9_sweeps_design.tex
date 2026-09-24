@@ -1,0 +1,40 @@
+\begin{table}[tp]
+\centering
+\caption{The Controlled Experiment: Design and Completed Runs}
+\label{tab:m9-design}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+& \multicolumn{2}{c}{FineWeb-Edu} & \multicolumn{2}{c}{FineWeb} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Runs (tag) & Planned & Completed & Planned & Completed \\
+\midrule
+\multicolumn{5}{l}{\emph{Panel A. Endpoints}} \\
+\texttt{main} & 44 & 44 & 44 & 15 \\
+\texttt{hiM} & 8 & 0 & 4 & 0 \\
+\texttt{lrsweep} & 12 & 12 & 0 & 0 \\
+\texttt{lrcal} & 0 & 0 & 12 & 12 \\
+\texttt{lrcorner} & 16 & 16 & 16 & 15 \\
+\texttt{seedcorner} & 3 & 0 & 3 & 0 \\
+\texttt{seeds} & 18 & 0 & 18 & 0 \\
+\multicolumn{5}{l}{\emph{Panel B. Main grid: design statistics (convention P / T)}} \\
+$M$ minimum & \multicolumn{2}{c}{-- / --} & \multicolumn{2}{c}{-- / --} \\
+$M$ maximum & \multicolumn{2}{c}{-- / --} & \multicolumn{2}{c}{-- / --} \\
+sd$(\ln M\mid\ln C)$ & \multicolumn{2}{c}{-- / --} & \multicolumn{2}{c}{-- / --} \\
+Endpoints with $M>100$ & \multicolumn{2}{c}{-- / --} & \multicolumn{2}{c}{-- / --} \\
+Endpoints with $M>1{,}000$ & \multicolumn{2}{c}{-- / --} & \multicolumn{2}{c}{-- / --} \\
+\multicolumn{5}{l}{\emph{Panel C. Main grid plus high-$M$ runs (P / T)}} \\
+$M$ maximum & \multicolumn{2}{c}{-- / --} & \multicolumn{2}{c}{-- / --} \\
+Endpoints with $M>1{,}000$ & \multicolumn{2}{c}{-- / --} & \multicolumn{2}{c}{-- / --} \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Planned endpoints from code/sweep/run\_grid.py after the trimming of the high-$M$ runs; completed endpoints are those in data/processed/sweep/results.jsonl at the time of the run. P: non-embedding $N$ with actual training FLOPs; T: total $N$ (tied embedding) with $C=6ND$. $M=D/N$.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

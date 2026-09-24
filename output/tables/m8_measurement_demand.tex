@@ -1,0 +1,54 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Flexible-Input Demand Functions: Learning Rate and Batch Size}
+\label{tab:m8_demand}
+\begin{tabular}{lcccc}
+\toprule
+Specification & $\ln N$ & $\ln D$ & $\ln B$ & Obs. \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A. Learning-rate demand, $\ln\eta^*$}} \\
+Unconditional, grid argmin (Step Law's method) & $-$0.823 & 0.288 &  & 17 \\
+ & (0.127) & (0.071) &  &  \\
+Unconditional, smoothed (quadratic surface) argmin & $-$0.693 & 0.210 &  & 17 \\
+ & (0.050) & (0.025) &  &  \\
+Conditional on batch, smoothed & $-$0.534 & 0.046 & 0.320 & 165 \\
+ & (0.027) & (0.015) & (0.034) &  \\
+Conditional on batch, grid argmin & $-$0.612 & 0.016 & 0.295 & 157 \\
+ & (0.048) & (0.029) & (0.038) &  \\
+Conditional, batch fixed at 0.52M tokens & $-$0.495 & 0.040 &  & 16 \\
+ & (0.077) & (0.047) &  &  \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel B. Batch-size demand, $\ln B^*$ (tokens)}} \\
+Grid argmin & $-$0.355 & 0.543 &  & 17 \\
+ & (0.176) & (0.075) &  &  \\
+Smoothed argmin & $-$0.205 & 0.598 &  & 17 \\
+ & (0.041) & (0.021) &  &  \\
+Grid argmin, $D$ only (Step Law form) & -- & 0.498 &  & 17 \\
+ &  & (0.095) &  &  \\
+Smoothed argmin, $D$ only (Step Law form) & -- & 0.572 &  & 17 \\
+ &  & (0.037) &  &  \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel C. Published rules (literature values)}} \\
+Step Law, $\eta$ (their 1,000 bootstrap fits: mean, s.d.) & $-$0.713 & 0.307 & &  \\
+ & (0.030) & (0.019) & &  \\
+Step Law, $B$ & & 0.571 & &  \\
+ & & (0.019) & &  \\
+Step Law, published point estimates & $-0.713$ / -- & $0.307$ / $0.571$ & &  \\
+Bjorck et al., $\eta$ at fixed 0.5M-token batch ($N\geq$760M) & $-0.23$ & $-0.32$ & &  \\
+Porian et al., $\eta$ / $B$ (fit at $D\approx 20N$) & $-0.36$ / $0.703$ & -- & &  \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel D. Le Chatelier decomposition of $d\ln\eta^*/d\ln D$}} \\
+Conditional + complementarity $\times$ batch elasticity & \multicolumn{4}{l}{$0.046 + 0.320\times0.598 = 0.238$ vs.\ unconditional $0.210$} \\
+Batch co-scaling share of unconditional $D$-elast., smoothed & \multicolumn{4}{l}{0.91 (0.15); 90\% CI [0.69, 1.18]} \\
+Same, grid argmins & \multicolumn{4}{l}{0.56 (0.24); 90\% CI [0.36, 0.89]} \\
+Share of published gap ($0.307$ vs.\ $-0.32$) closed & \multicolumn{4}{l}{0.26 (0.02) smoothed; 0.43 (0.13) grid} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Optimal learning rate $\eta^*$ and batch size $B^*$ in each of the 17 Step Law $(N,D)$ cells, regressed on $\ln N$ (non-embedding) and $\ln D$ (tokens). `Grid argmin' uses the best run in the cell; `smoothed' uses the minimum of a quadratic in $(\ln\eta,\ln B)$ fitted to runs within 2\% of the cell minimum. SEs in parentheses: two-level bootstrap (resample cells; draw each cell's optimum from its within-cell sampling distribution; 1,000 draws) for unconditional demands, cell-clustered SEs for pooled conditional regressions (slices = cell $\times$ batch with an interior LR optimum; quadratic in $\ln\eta$ within 3\% of the slice minimum). Conditional demands hold the batch fixed (as in Bjorck et al.\ 2025, who fix 0.5M tokens); unconditional demands let the batch adjust (Step Law). Panel D: the unconditional $D$-elasticity equals the conditional one plus the LR--batch complementarity times the $D$-elasticity of batch demand (chain rule); shares with cell-cluster bootstrap SEs in parentheses (1,000 draws resampling the 17 cells with all their batch slices).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

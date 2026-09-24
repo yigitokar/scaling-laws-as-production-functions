@@ -1,0 +1,37 @@
+\begin{table}[tp]
+\centering
+\caption{Revealed Inference Demand under Homothetic Technologies}
+\label{tab:app-homothetic}
+\footnotesize
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{Compute-optimal tokens per parameter, $M^*$} \\
+\cmidrule(l){2-6}
+Model & 16 & 20 & 24.2 & 41 & 192 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel: $\rho=0.30$}} \\
+Llama 3 8B & 9.5 & 8.7 & 8.1 & 6.4 & 2.9 \\
+Llama 3 70B & 3.5 & 3.1 & 2.8 & 1.9 & 0.1 \\
+Llama 3.1 405B & 0.9 & 0.6 & 0.4 & $-$0.1 & $-$1.1 \\
+Qwen3 8B & 13.2 & 12.1 & 11.3 & 9.2 & 4.7 \\
+Gemma 3 27B & 5.5 & 5.0 & 4.5 & 3.4 & 1.0 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel: $\rho=0.3527$}} \\
+Llama 3 8B & 13.1 & 11.9 & 10.9 & 8.5 & 3.7 \\
+Llama 3 70B & 4.5 & 3.9 & 3.5 & 2.4 & 0.1 \\
+Llama 3.1 405B & 1.1 & 0.8 & 0.5 & $-$0.1 & $-$1.3 \\
+Qwen3 8B & 18.7 & 17.1 & 15.8 & 12.6 & 6.1 \\
+Gemma 3 27B & 7.2 & 6.5 & 5.8 & 4.3 & 1.3 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel: $\rho=0.40$}} \\
+Llama 3 8B & 17.1 & 15.4 & 14.1 & 10.8 & 4.5 \\
+Llama 3 70B & 5.4 & 4.7 & 4.2 & 2.8 & 0.1 \\
+Llama 3.1 405B & 1.3 & 0.9 & 0.6 & $-$0.1 & $-$1.4 \\
+Qwen3 8B & 25.4 & 22.9 & 21.0 & 16.5 & 7.5 \\
+Gemma 3 27B & 9.1 & 8.0 & 7.2 & 5.3 & 1.5 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Entries are revealed lifetime inference tokens per training token, $T/D=3[(M/M^*)^{\rho}-1]$, under a homothetic technology with $\alpha=\beta=\rho$, for which $w=(M/M^*)^{\rho}$. $M^*=16$ \citep{porian2024resolving}, 20 (the Chinchilla rule of thumb), 24.2 (our CES fit to the Chinchilla data), 41 (Meta's Llama 3 law at $3.8\times10^{25}$ FLOP), and 192 \citep{hu2024minicpm}; $\rho=0.3527$ is the tied exponent of \citet{muennighoff2023scaling}. Negative entries mean the model is under-trained relative to that technology.\end{tablenotes}
+\begin{tablenotes}[Source]Model sizes and token counts from developers' reports and Hugging Face; authors' calculations.\end{tablenotes}
+\end{table}

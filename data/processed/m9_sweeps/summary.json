@@ -1,0 +1,169 @@
+{
+ "checks": {
+  "formula_mismatches": {
+   "N_nonemb": 0,
+   "N_total": 0,
+   "flops_per_token": 0
+  },
+  "bytes_per_token": {
+   "edu": {
+    "full": 3.8856745037076723,
+    "meta": 3.8856745037076723,
+    "scored": 3.8888769149780273,
+    "scored_tokens": 1048576
+   },
+   "web": {
+    "full": 3.7426357696697123,
+    "meta": 3.7426357696697123,
+    "scored": 3.7125473022460938,
+    "scored_tokens": 1048576
+   },
+   "wiki": {
+    "full": 3.7130629550857384,
+    "meta": 3.7130629550857384,
+    "scored": 3.7130479134089134,
+    "scored_tokens": 654848
+   }
+  },
+  "C_equals_fpt_times_tokens": true,
+  "n_endpoints": 114,
+  "duplicate_record_keys": 0
+ },
+ "hiM_duplicates": [],
+ "inventory": [
+  {
+   "regime": "edu",
+   "tag": "hiM",
+   "planned": 8,
+   "completed": 0,
+   "trunks_with_endpoints": NaN,
+   "wall_hours_lower_bound": NaN,
+   "any_nonfinite": NaN,
+   "any_diverged": NaN,
+   "duplicate_records": NaN
+  },
+  {
+   "regime": "edu",
+   "tag": "lrcorner",
+   "planned": 16,
+   "completed": 16,
+   "trunks_with_endpoints": 4.0,
+   "wall_hours_lower_bound": 4.175883670912849,
+   "any_nonfinite": false,
+   "any_diverged": false,
+   "duplicate_records": 0.0
+  },
+  {
+   "regime": "edu",
+   "tag": "lrsweep",
+   "planned": 12,
+   "completed": 12,
+   "trunks_with_endpoints": 12.0,
+   "wall_hours_lower_bound": 0.9403722042507595,
+   "any_nonfinite": false,
+   "any_diverged": false,
+   "duplicate_records": 0.0
+  },
+  {
+   "regime": "edu",
+   "tag": "main",
+   "planned": 44,
+   "completed": 44,
+   "trunks_with_endpoints": 8.0,
+   "wall_hours_lower_bound": 12.646263597541385,
+   "any_nonfinite": false,
+   "any_diverged": false,
+   "duplicate_records": 0.0
+  },
+  {
+   "regime": "edu",
+   "tag": "seedcorner",
+   "planned": 3,
+   "completed": 0,
+   "trunks_with_endpoints": NaN,
+   "wall_hours_lower_bound": NaN,
+   "any_nonfinite": NaN,
+   "any_diverged": NaN,
+   "duplicate_records": NaN
+  },
+  {
+   "regime": "edu",
+   "tag": "seeds",
+   "planned": 18,
+   "completed": 0,
+   "trunks_with_endpoints": NaN,
+   "wall_hours_lower_bound": NaN,
+   "any_nonfinite": NaN,
+   "any_diverged": NaN,
+   "duplicate_records": NaN
+  },
+  {
+   "regime": "web",
+   "tag": "hiM",
+   "planned": 4,
+   "completed": 0,
+   "trunks_with_endpoints": NaN,
+   "wall_hours_lower_bound": NaN,
+   "any_nonfinite": NaN,
+   "any_diverged": NaN,
+   "duplicate_records": NaN
+  },
+  {
+   "regime": "web",
+   "tag": "lrcal",
+   "planned": 12,
+   "completed": 12,
+   "trunks_with_endpoints": 12.0,
+   "wall_hours_lower_bound": 2.1278640134467017,
+   "any_nonfinite": false,
+   "any_diverged": false,
+   "duplicate_records": 0.0
+  },
+  {
+   "regime": "web",
+   "tag": "lrcorner",
+   "planned": 16,
+   "completed": 15,
+   "trunks_with_endpoints": 4.0,
+   "wall_hours_lower_bound": 4.624954242772526,
+   "any_nonfinite": false,
+   "any_diverged": false,
+   "duplicate_records": 0.0
+  },
+  {
+   "regime": "web",
+   "tag": "main",
+   "planned": 44,
+   "completed": 15,
+   "trunks_with_endpoints": 3.0,
+   "wall_hours_lower_bound": 4.7449565711948605,
+   "any_nonfinite": false,
+   "any_diverged": false,
+   "duplicate_records": 0.0
+  },
+  {
+   "regime": "web",
+   "tag": "seedcorner",
+   "planned": 3,
+   "completed": 0,
+   "trunks_with_endpoints": NaN,
+   "wall_hours_lower_bound": NaN,
+   "any_nonfinite": NaN,
+   "any_diverged": NaN,
+   "duplicate_records": NaN
+  },
+  {
+   "regime": "web",
+   "tag": "seeds",
+   "planned": 18,
+   "completed": 0,
+   "trunks_with_endpoints": NaN,
+   "wall_hours_lower_bound": NaN,
+   "any_nonfinite": NaN,
+   "any_diverged": NaN,
+   "duplicate_records": NaN
+  }
+ ],
+ "noise": {},
+ "runtime_s": 279.6303360462189
+}

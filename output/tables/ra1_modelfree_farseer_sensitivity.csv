@@ -1,0 +1,625 @@
+variant,key,value
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|ne|M<16,0.15816385731566318
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|ne|16-64,0.0080189196287385
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|ne|64-256,-0.19476720098588873
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_full|ne|256-1,024",-0.48719677752546564
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_full|ne|>=1,024",-0.8213912260707029
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|ne|M>=1000,-0.8213912260707029
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|ne|M<16,0.07886998981648388
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|ne|16-64,-0.23008926900358875
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|ne|64-256,-0.5450651761219039
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_M100|ne|256-1,024",-0.9450231786638704
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_M100|ne|>=1,024",-1.3594615231157274
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|ne|M>=1000,-1.3594615231157274
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|ne|M<16,-0.02119254725098539
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|ne|16-64,0.05303945178803586
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|ne|64-256,0.004130158244471964
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_full|ne|256-1,024",-0.13875930686498594
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_full|ne|>=1,024",-0.3554612772632681
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|ne|M>=1000,-0.3554612772632681
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|ne|M<16,0.022574330734304843
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|ne|16-64,-0.03920861777127969
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|ne|64-256,-0.18409630593635878
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_M100|ne|256-1,024",-0.419023227594969
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_M100|ne|>=1,024",-0.704543192505731
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|ne|M>=1000,-0.704543192505731
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|ne|M<16,-0.027319253170435535
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|ne|16-64,0.013758227663876339
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|ne|64-256,-0.01167017356898596
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_full|ne|256-1,024",-0.1285872872610228
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_full|ne|>=1,024",-0.3136879655633452
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|ne|M>=1000,-0.3136879655633452
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|ne|M<16,0.0005086239539818828
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|ne|16-64,-0.03751131484791957
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|ne|64-256,-0.16720090481154729
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_M100|ne|256-1,024",-0.39996276636957045
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_M100|ne|>=1,024",-0.6945301491620358
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|ne|M>=1000,-0.6945301491620358
+"primary (CV bandwidth, n_eff >= 15)",lnw_local|ne|M<16,-0.6893308484246123
+"primary (CV bandwidth, n_eff >= 15)",lnw_local|ne|16-64,0.058694717209786175
+"primary (CV bandwidth, n_eff >= 15)",lnw_local|ne|64-256,0.6751658858027132
+"primary (CV bandwidth, n_eff >= 15)","lnw_local|ne|256-1,024",1.3679457112677416
+"primary (CV bandwidth, n_eff >= 15)","lnw_local|ne|>=1,024",2.0119530459010617
+"primary (CV bandwidth, n_eff >= 15)",lin|ne|b1_only,0.41971679213031354
+"primary (CV bandwidth, n_eff >= 15)",lin|ne|b1,0.4128153429674366
+"primary (CV bandwidth, n_eff >= 15)",lin|ne|b2,0.02039274009757119
+"primary (CV bandwidth, n_eff >= 15)",lin|ne|path_1_over_sigma_minus_1,0.43350881999130486
+"primary (CV bandwidth, n_eff >= 15)",lin|ne|n,328.0
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|emb|M<16,0.11318146536747585
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|emb|16-64,-0.038294012204192825
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|emb|64-256,-0.26431595337671526
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_full|emb|256-1,024",-0.6558845643307513
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_full|emb|>=1,024",-1.1702695870991477
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_full|emb|M>=1000,-1.1702695870991477
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|emb|M<16,0.06676046774748867
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|emb|16-64,-0.24659442119023542
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|emb|64-256,-0.5865543830882489
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_M100|emb|256-1,024",-1.0867053781196847
+"primary (CV bandwidth, n_eff >= 15)","delta|chin_M100|emb|>=1,024",-1.673374177557064
+"primary (CV bandwidth, n_eff >= 15)",delta|chin_M100|emb|M>=1000,-1.673374177557064
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|emb|M<16,-0.04498836504766926
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|emb|16-64,0.02708507105049962
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|emb|64-256,-0.042789355697593214
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_full|emb|256-1,024",-0.28437250202283976
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_full|emb|>=1,024",-0.6967202359648191
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_full|emb|M>=1000,-0.6967202359648191
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|emb|M<16,-0.004225266647081844
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|emb|16-64,-0.05503003735737474
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|emb|64-256,-0.21048515894886752
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_M100|emb|256-1,024",-0.5345186888013383
+"primary (CV bandwidth, n_eff >= 15)","delta|kappa_M100|emb|>=1,024",-1.0034145400430212
+"primary (CV bandwidth, n_eff >= 15)",delta|kappa_M100|emb|M>=1000,-1.0034145400430212
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|emb|M<16,-0.07352851683644564
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|emb|16-64,-0.013740248665357382
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|emb|64-256,-0.04655141850821278
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_full|emb|256-1,024",-0.2510300962526655
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_full|emb|>=1,024",-0.6176425537742167
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_full|emb|M>=1000,-0.6176425537742167
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|emb|M<16,-0.03588874265849181
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|emb|16-64,-0.05079126764073654
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|emb|64-256,-0.1712641653935686
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_M100|emb|256-1,024",-0.4911539687420384
+"primary (CV bandwidth, n_eff >= 15)","delta|eq3_M100|emb|>=1,024",-0.9782218361751278
+"primary (CV bandwidth, n_eff >= 15)",delta|eq3_M100|emb|M>=1000,-0.9782218361751278
+"primary (CV bandwidth, n_eff >= 15)",lnw_local|emb|M<16,-0.49889297124973586
+"primary (CV bandwidth, n_eff >= 15)",lnw_local|emb|16-64,0.34291055271259446
+"primary (CV bandwidth, n_eff >= 15)",lnw_local|emb|64-256,1.0434371992657767
+"primary (CV bandwidth, n_eff >= 15)","lnw_local|emb|256-1,024",1.8984084358033022
+"primary (CV bandwidth, n_eff >= 15)","lnw_local|emb|>=1,024",2.7421267335156974
+"primary (CV bandwidth, n_eff >= 15)",lin|emb|b1_only,0.5361858973301464
+"primary (CV bandwidth, n_eff >= 15)",lin|emb|b1,0.49242792794585916
+"primary (CV bandwidth, n_eff >= 15)",lin|emb|b2,0.033430088993885006
+"primary (CV bandwidth, n_eff >= 15)",lin|emb|path_1_over_sigma_minus_1,0.47737785100115615
+"primary (CV bandwidth, n_eff >= 15)",lin|emb|n,305.0
+"primary (CV bandwidth, n_eff >= 15)",h_N|ne,0.2367553382436686
+"primary (CV bandwidth, n_eff >= 15)",h_D|ne,0.7448514813327789
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_mean|ne,0.6996013077625894
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_mean_poolC|ne,0.7066120088257621
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_min_poolC|ne,0.657596869451135
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_max_poolC|ne,0.7611634092830982
+"primary (CV bandwidth, n_eff >= 15)",h_N|emb,0.20029903890912398
+"primary (CV bandwidth, n_eff >= 15)",h_D|emb,0.9931353084437051
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_mean|emb,0.6834694487367797
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_mean_poolC|emb,0.6834694487367797
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_min_poolC|emb,0.6052128005010889
+"primary (CV bandwidth, n_eff >= 15)",path_sigma_max_poolC|emb,0.840379077710611
+n_eff >= 25,delta|chin_full|ne|M<16,0.15190672264652474
+n_eff >= 25,delta|chin_full|ne|16-64,0.004495804061217504
+n_eff >= 25,delta|chin_full|ne|64-256,-0.18835157401456554
+n_eff >= 25,"delta|chin_full|ne|256-1,024",-0.46114504288212166
+n_eff >= 25,"delta|chin_full|ne|>=1,024",
+n_eff >= 25,delta|chin_full|ne|M>=1000,
+n_eff >= 25,delta|chin_M100|ne|M<16,0.06477922841533747
+n_eff >= 25,delta|chin_M100|ne|16-64,-0.23342205424779505
+n_eff >= 25,delta|chin_M100|ne|64-256,-0.5365852034279736
+n_eff >= 25,"delta|chin_M100|ne|256-1,024",-0.9116991947951785
+n_eff >= 25,"delta|chin_M100|ne|>=1,024",
+n_eff >= 25,delta|chin_M100|ne|M>=1000,
+n_eff >= 25,delta|kappa_full|ne|M<16,-0.019247138167602887
+n_eff >= 25,delta|kappa_full|ne|16-64,0.04992854513875316
+n_eff >= 25,delta|kappa_full|ne|64-256,0.009640680833211642
+n_eff >= 25,"delta|kappa_full|ne|256-1,024",-0.11818377527520435
+n_eff >= 25,"delta|kappa_full|ne|>=1,024",
+n_eff >= 25,delta|kappa_full|ne|M>=1000,
+n_eff >= 25,delta|kappa_M100|ne|M<16,0.017875980726856668
+n_eff >= 25,delta|kappa_M100|ne|16-64,-0.042172035524945375
+n_eff >= 25,delta|kappa_M100|ne|64-256,-0.17686362147449677
+n_eff >= 25,"delta|kappa_M100|ne|256-1,024",-0.3923287670035721
+n_eff >= 25,"delta|kappa_M100|ne|>=1,024",
+n_eff >= 25,delta|kappa_M100|ne|M>=1000,
+n_eff >= 25,delta|eq3_full|ne|M<16,-0.021683156877035585
+n_eff >= 25,delta|eq3_full|ne|16-64,0.026379173278595555
+n_eff >= 25,delta|eq3_full|ne|64-256,0.006597495175350351
+n_eff >= 25,"delta|eq3_full|ne|256-1,024",-0.0959058620722245
+n_eff >= 25,"delta|eq3_full|ne|>=1,024",
+n_eff >= 25,delta|eq3_full|ne|M>=1000,
+n_eff >= 25,delta|eq3_M100|ne|M<16,0.0012367298343229545
+n_eff >= 25,delta|eq3_M100|ne|16-64,-0.03149371914230832
+n_eff >= 25,delta|eq3_M100|ne|64-256,-0.15431587590586596
+n_eff >= 25,"delta|eq3_M100|ne|256-1,024",-0.3721339368831985
+n_eff >= 25,"delta|eq3_M100|ne|>=1,024",
+n_eff >= 25,delta|eq3_M100|ne|M>=1000,
+n_eff >= 25,lnw_local|ne|M<16,-0.658950611012898
+n_eff >= 25,lnw_local|ne|16-64,0.06277741442491215
+n_eff >= 25,lnw_local|ne|64-256,0.6647473112705432
+n_eff >= 25,"lnw_local|ne|256-1,024",1.323506265064987
+n_eff >= 25,"lnw_local|ne|>=1,024",
+n_eff >= 25,lin|ne|b1_only,0.4055896509017367
+n_eff >= 25,lin|ne|b1,0.4080859638177797
+n_eff >= 25,lin|ne|b2,0.01849561069221584
+n_eff >= 25,lin|ne|path_1_over_sigma_minus_1,0.43350881999130486
+n_eff >= 25,lin|ne|n,282.0
+n_eff >= 25,delta|chin_full|emb|M<16,0.10936404465812662
+n_eff >= 25,delta|chin_full|emb|16-64,-0.03926722853744658
+n_eff >= 25,delta|chin_full|emb|64-256,-0.26308833068125037
+n_eff >= 25,"delta|chin_full|emb|256-1,024",-0.6491328374699418
+n_eff >= 25,"delta|chin_full|emb|>=1,024",-1.0377014188709357
+n_eff >= 25,delta|chin_full|emb|M>=1000,-1.0377014188709357
+n_eff >= 25,delta|chin_M100|emb|M<16,0.06226387082143183
+n_eff >= 25,delta|chin_M100|emb|16-64,-0.24783939860482646
+n_eff >= 25,delta|chin_M100|emb|64-256,-0.5852776274085053
+n_eff >= 25,"delta|chin_M100|emb|256-1,024",-1.0796432868144494
+n_eff >= 25,"delta|chin_M100|emb|>=1,024",-1.53821521386397
+n_eff >= 25,delta|chin_M100|emb|M>=1000,-1.53821521386397
+n_eff >= 25,delta|kappa_full|emb|M<16,-0.0468117098431165
+n_eff >= 25,delta|kappa_full|emb|16-64,0.027011951402099308
+n_eff >= 25,delta|kappa_full|emb|64-256,-0.04091118853816045
+n_eff >= 25,"delta|kappa_full|emb|256-1,024",-0.2776497252035159
+n_eff >= 25,"delta|kappa_full|emb|>=1,024",-0.5691974708002911
+n_eff >= 25,delta|kappa_full|emb|M>=1000,-0.5691974708002911
+n_eff >= 25,delta|kappa_M100|emb|M<16,-0.007364497341356433
+n_eff >= 25,delta|kappa_M100|emb|16-64,-0.055707132663414254
+n_eff >= 25,delta|kappa_M100|emb|64-256,-0.20911408460708836
+n_eff >= 25,"delta|kappa_M100|emb|256-1,024",-0.5278631717619802
+n_eff >= 25,"delta|kappa_M100|emb|>=1,024",-0.8728130348604525
+n_eff >= 25,delta|kappa_M100|emb|M>=1000,-0.8728130348604525
+n_eff >= 25,delta|eq3_full|emb|M<16,-0.059011541186151574
+n_eff >= 25,delta|eq3_full|emb|16-64,-0.010097380642354147
+n_eff >= 25,delta|eq3_full|emb|64-256,-0.040990108257101435
+n_eff >= 25,"delta|eq3_full|emb|256-1,024",-0.2418701225426334
+n_eff >= 25,"delta|eq3_full|emb|>=1,024",-0.5000341662572656
+n_eff >= 25,delta|eq3_full|emb|M>=1000,-0.5000341662572656
+n_eff >= 25,delta|eq3_M100|emb|M<16,-0.0342923959620114
+n_eff >= 25,delta|eq3_M100|emb|16-64,-0.04852043701184012
+n_eff >= 25,delta|eq3_M100|emb|64-256,-0.1689279369542951
+n_eff >= 25,"delta|eq3_M100|emb|256-1,024",-0.4841770574750185
+n_eff >= 25,"delta|eq3_M100|emb|>=1,024",-0.833829552301113
+n_eff >= 25,delta|eq3_M100|emb|M>=1000,-0.833829552301113
+n_eff >= 25,lnw_local|emb|M<16,-0.4821328032277013
+n_eff >= 25,lnw_local|emb|16-64,0.35003474566955967
+n_eff >= 25,lnw_local|emb|64-256,1.0488335781480138
+n_eff >= 25,"lnw_local|emb|256-1,024",1.8941347349569846
+n_eff >= 25,"lnw_local|emb|>=1,024",2.584549917493412
+n_eff >= 25,lin|emb|b1_only,0.5306200628589387
+n_eff >= 25,lin|emb|b1,0.4860822073550349
+n_eff >= 25,lin|emb|b2,0.03357289745455128
+n_eff >= 25,lin|emb|path_1_over_sigma_minus_1,0.47737785100115615
+n_eff >= 25,lin|emb|n,298.0
+n_eff >= 25,h_N|ne,0.2367553382436686
+n_eff >= 25,h_D|ne,0.7448514813327789
+n_eff >= 25,path_sigma_mean|ne,0.6996013077625894
+n_eff >= 25,path_sigma_mean_poolC|ne,0.7066120088257621
+n_eff >= 25,path_sigma_min_poolC|ne,0.657596869451135
+n_eff >= 25,path_sigma_max_poolC|ne,0.7611634092830982
+n_eff >= 25,h_N|emb,0.20029903890912398
+n_eff >= 25,h_D|emb,0.9931353084437051
+n_eff >= 25,path_sigma_mean|emb,0.6834694487367797
+n_eff >= 25,path_sigma_mean_poolC|emb,0.6834694487367797
+n_eff >= 25,path_sigma_min_poolC|emb,0.6052128005010889
+n_eff >= 25,path_sigma_max_poolC|emb,0.840379077710611
+bandwidth x 1.5,delta|chin_full|ne|M<16,0.1544375021226818
+bandwidth x 1.5,delta|chin_full|ne|16-64,0.016405316821150328
+bandwidth x 1.5,delta|chin_full|ne|64-256,-0.17933304955926038
+bandwidth x 1.5,"delta|chin_full|ne|256-1,024",-0.4947963815717946
+bandwidth x 1.5,"delta|chin_full|ne|>=1,024",-0.9569782265991725
+bandwidth x 1.5,delta|chin_full|ne|M>=1000,-0.9569782265991725
+bandwidth x 1.5,delta|chin_M100|ne|M<16,0.07428571551880166
+bandwidth x 1.5,delta|chin_M100|ne|16-64,-0.2207130964634766
+bandwidth x 1.5,delta|chin_M100|ne|64-256,-0.5296310246952756
+bandwidth x 1.5,"delta|chin_M100|ne|256-1,024",-0.9526227827101996
+bandwidth x 1.5,"delta|chin_M100|ne|>=1,024",-1.4977322907516402
+bandwidth x 1.5,delta|chin_M100|ne|M>=1000,-1.4977322907516402
+bandwidth x 1.5,delta|kappa_full|ne|M<16,-0.024082613221192845
+bandwidth x 1.5,delta|kappa_full|ne|16-64,0.060731805611065705
+bandwidth x 1.5,delta|kappa_full|ne|64-256,0.01956430967110031
+bandwidth x 1.5,"delta|kappa_full|ne|256-1,024",-0.14635891091131503
+bandwidth x 1.5,"delta|kappa_full|ne|>=1,024",-0.4854816743897937
+bandwidth x 1.5,delta|kappa_full|ne|M>=1000,-0.4854816743897937
+bandwidth x 1.5,delta|kappa_M100|ne|M<16,0.018958070248840577
+bandwidth x 1.5,delta|kappa_M100|ne|16-64,-0.03068462741281229
+bandwidth x 1.5,delta|kappa_M100|ne|64-256,-0.1686621545097304
+bandwidth x 1.5,"delta|kappa_M100|ne|256-1,024",-0.4266228316412982
+bandwidth x 1.5,"delta|kappa_M100|ne|>=1,024",-0.8369025126165351
+bandwidth x 1.5,delta|kappa_M100|ne|M>=1000,-0.8369025126165351
+bandwidth x 1.5,delta|eq3_full|ne|M<16,-0.031593094885468825
+bandwidth x 1.5,delta|eq3_full|ne|16-64,0.01988012425782494
+bandwidth x 1.5,delta|eq3_full|ne|64-256,0.0037639778576423846
+bandwidth x 1.5,"delta|eq3_full|ne|256-1,024",-0.13618689130735195
+bandwidth x 1.5,"delta|eq3_full|ne|>=1,024",-0.44224764928842114
+bandwidth x 1.5,delta|eq3_full|ne|M>=1000,-0.44224764928842114
+bandwidth x 1.5,delta|eq3_M100|ne|M<16,-0.003664959672668125
+bandwidth x 1.5,delta|eq3_M100|ne|16-64,-0.0301186052864039
+bandwidth x 1.5,delta|eq3_M100|ne|64-256,-0.15176675338491893
+bandwidth x 1.5,"delta|eq3_M100|ne|256-1,024",-0.4075623704158996
+bandwidth x 1.5,"delta|eq3_M100|ne|>=1,024",-0.8306785011478888
+bandwidth x 1.5,delta|eq3_M100|ne|M>=1000,-0.8306785011478888
+bandwidth x 1.5,lnw_local|ne|M<16,-0.6830788141030146
+bandwidth x 1.5,lnw_local|ne|16-64,0.04790178135381274
+bandwidth x 1.5,lnw_local|ne|64-256,0.6597317343760848
+bandwidth x 1.5,"lnw_local|ne|256-1,024",1.3755453153140706
+bandwidth x 1.5,"lnw_local|ne|>=1,024",2.1609689032710477
+bandwidth x 1.5,lin|ne|b1_only,0.42918943761881256
+bandwidth x 1.5,lin|ne|b1,0.41718704101268844
+bandwidth x 1.5,lin|ne|b2,0.022736694904626698
+bandwidth x 1.5,lin|ne|path_1_over_sigma_minus_1,0.3810224483453587
+bandwidth x 1.5,lin|ne|n,311.0
+bandwidth x 1.5,delta|chin_full|emb|M<16,0.11177738427212171
+bandwidth x 1.5,delta|chin_full|emb|16-64,-0.030706227465089532
+bandwidth x 1.5,delta|chin_full|emb|64-256,-0.25325156351437145
+bandwidth x 1.5,"delta|chin_full|emb|256-1,024",-0.733043263566003
+bandwidth x 1.5,"delta|chin_full|emb|>=1,024",-1.522838052654448
+bandwidth x 1.5,delta|chin_full|emb|M>=1000,-1.522838052654448
+bandwidth x 1.5,delta|chin_M100|emb|M<16,0.06535638665213454
+bandwidth x 1.5,delta|chin_M100|emb|16-64,-0.23900663645113215
+bandwidth x 1.5,delta|chin_M100|emb|64-256,-0.575489993225905
+bandwidth x 1.5,"delta|chin_M100|emb|256-1,024",-1.1638640773549365
+bandwidth x 1.5,"delta|chin_M100|emb|>=1,024",-2.025942643112365
+bandwidth x 1.5,delta|chin_M100|emb|M>=1000,-2.025942643112365
+bandwidth x 1.5,delta|kappa_full|emb|M<16,-0.04639244614302339
+bandwidth x 1.5,delta|kappa_full|emb|16-64,0.03467285578960292
+bandwidth x 1.5,delta|kappa_full|emb|64-256,-0.03172496583524938
+bandwidth x 1.5,"delta|kappa_full|emb|256-1,024",-0.3615312012580915
+bandwidth x 1.5,"delta|kappa_full|emb|>=1,024",-1.0492887015201195
+bandwidth x 1.5,delta|kappa_full|emb|M>=1000,-1.0492887015201195
+bandwidth x 1.5,delta|kappa_M100|emb|M<16,-0.005629347742435968
+bandwidth x 1.5,delta|kappa_M100|emb|16-64,-0.04744225261827146
+bandwidth x 1.5,delta|kappa_M100|emb|64-256,-0.19942076908652373
+bandwidth x 1.5,"delta|kappa_M100|emb|256-1,024",-0.6116773880365901
+bandwidth x 1.5,"delta|kappa_M100|emb|>=1,024",-1.3559830055983215
+bandwidth x 1.5,delta|kappa_M100|emb|M>=1000,-1.3559830055983215
+bandwidth x 1.5,delta|eq3_full|emb|M<16,-0.07493259793179977
+bandwidth x 1.5,delta|eq3_full|emb|16-64,-0.006152463926254083
+bandwidth x 1.5,delta|eq3_full|emb|64-256,-0.03548702864586895
+bandwidth x 1.5,"delta|eq3_full|emb|256-1,024",-0.32818879548791724
+bandwidth x 1.5,"delta|eq3_full|emb|>=1,024",-0.9702110193295173
+bandwidth x 1.5,delta|eq3_full|emb|M>=1000,-0.9702110193295173
+bandwidth x 1.5,delta|eq3_M100|emb|M<16,-0.03729282375384593
+bandwidth x 1.5,delta|eq3_M100|emb|16-64,-0.04320348290163324
+bandwidth x 1.5,delta|eq3_M100|emb|64-256,-0.16019977553122478
+bandwidth x 1.5,"delta|eq3_M100|emb|256-1,024",-0.5683126679772903
+bandwidth x 1.5,"delta|eq3_M100|emb|>=1,024",-1.3307903017304281
+bandwidth x 1.5,delta|eq3_M100|emb|M>=1000,-1.3307903017304281
+bandwidth x 1.5,lnw_local|emb|M<16,-0.4974888901543818
+bandwidth x 1.5,lnw_local|emb|16-64,0.3353227679734912
+bandwidth x 1.5,lnw_local|emb|64-256,1.032372809403433
+bandwidth x 1.5,"lnw_local|emb|256-1,024",1.9755671350385542
+bandwidth x 1.5,"lnw_local|emb|>=1,024",3.0946951990709977
+bandwidth x 1.5,lin|emb|b1_only,0.5470264229805056
+bandwidth x 1.5,lin|emb|b1,0.4957194794426637
+bandwidth x 1.5,lin|emb|b2,0.03769762826557953
+bandwidth x 1.5,lin|emb|path_1_over_sigma_minus_1,0.4667618826659047
+bandwidth x 1.5,lin|emb|n,305.0
+bandwidth x 1.5,h_N|ne,0.3551330073655029
+bandwidth x 1.5,h_D|ne,1.1172772219991685
+bandwidth x 1.5,path_sigma_mean|ne,0.7255134497674521
+bandwidth x 1.5,path_sigma_mean_poolC|ne,0.7255134497674522
+bandwidth x 1.5,path_sigma_min_poolC|ne,0.6879168389314356
+bandwidth x 1.5,path_sigma_max_poolC|ne,0.797797932903939
+bandwidth x 1.5,h_N|emb,0.300448558363686
+bandwidth x 1.5,h_D|emb,1.4897029626655578
+bandwidth x 1.5,path_sigma_mean|emb,0.6827814724085753
+bandwidth x 1.5,path_sigma_mean_poolC|emb,0.6827814724085755
+bandwidth x 1.5,path_sigma_min_poolC|emb,0.6398904856803818
+bandwidth x 1.5,path_sigma_max_poolC|emb,0.7174495234838252
+bandwidth x 2,delta|chin_full|ne|M<16,0.15517670047834212
+bandwidth x 2,delta|chin_full|ne|16-64,0.015136194424360656
+bandwidth x 2,delta|chin_full|ne|64-256,-0.1766859931736226
+bandwidth x 2,"delta|chin_full|ne|256-1,024",-0.5281267918468598
+bandwidth x 2,"delta|chin_full|ne|>=1,024",-1.1436289867340055
+bandwidth x 2,delta|chin_full|ne|M>=1000,-1.1436289867340055
+bandwidth x 2,delta|chin_M100|ne|M<16,0.07502491387446193
+bandwidth x 2,delta|chin_M100|ne|16-64,-0.22198221886026623
+bandwidth x 2,delta|chin_M100|ne|64-256,-0.5269839683096377
+bandwidth x 2,"delta|chin_M100|ne|256-1,024",-0.9859531929852647
+bandwidth x 2,"delta|chin_M100|ne|>=1,024",-1.6843830508864732
+bandwidth x 2,delta|chin_M100|ne|M>=1000,-1.6843830508864732
+bandwidth x 2,delta|kappa_full|ne|M<16,-0.023343414865532555
+bandwidth x 2,delta|kappa_full|ne|16-64,0.05946268321427605
+bandwidth x 2,delta|kappa_full|ne|64-256,0.02221136605673808
+bandwidth x 2,"delta|kappa_full|ne|256-1,024",-0.1796893211863802
+bandwidth x 2,"delta|kappa_full|ne|>=1,024",-0.672132434524627
+bandwidth x 2,delta|kappa_full|ne|M>=1000,-0.672132434524627
+bandwidth x 2,delta|kappa_M100|ne|M<16,0.019697268604500866
+bandwidth x 2,delta|kappa_M100|ne|16-64,-0.03195374980960195
+bandwidth x 2,delta|kappa_M100|ne|64-256,-0.16601509812409265
+bandwidth x 2,"delta|kappa_M100|ne|256-1,024",-0.45995324191636333
+bandwidth x 2,"delta|kappa_M100|ne|>=1,024",-1.0235532727513685
+bandwidth x 2,delta|kappa_M100|ne|M>=1000,-1.0235532727513685
+bandwidth x 2,delta|eq3_full|ne|M<16,-0.03085389652980854
+bandwidth x 2,delta|eq3_full|ne|16-64,0.018611001861035273
+bandwidth x 2,delta|eq3_full|ne|64-256,0.006411034243280156
+bandwidth x 2,"delta|eq3_full|ne|256-1,024",-0.1695173015824171
+bandwidth x 2,"delta|eq3_full|ne|>=1,024",-0.6288984094232545
+bandwidth x 2,delta|eq3_full|ne|M>=1000,-0.6288984094232545
+bandwidth x 2,delta|eq3_M100|ne|M<16,-0.002925761317007837
+bandwidth x 2,delta|eq3_M100|ne|16-64,-0.031387727683193575
+bandwidth x 2,delta|eq3_M100|ne|64-256,-0.14911969699928115
+bandwidth x 2,"delta|eq3_M100|ne|256-1,024",-0.44089278069096477
+bandwidth x 2,"delta|eq3_M100|ne|>=1,024",-1.0173292612827218
+bandwidth x 2,delta|eq3_M100|ne|M>=1000,-1.0173292612827218
+bandwidth x 2,lnw_local|ne|M<16,-0.6838180124586749
+bandwidth x 2,lnw_local|ne|16-64,0.04917090375060241
+bandwidth x 2,lnw_local|ne|64-256,0.657084677990447
+bandwidth x 2,"lnw_local|ne|256-1,024",1.4088757255891355
+bandwidth x 2,"lnw_local|ne|>=1,024",2.347619663405881
+bandwidth x 2,lin|ne|b1_only,0.44155715917207794
+bandwidth x 2,lin|ne|b1,0.42700009952454115
+bandwidth x 2,lin|ne|b2,0.026204221882103116
+bandwidth x 2,lin|ne|path_1_over_sigma_minus_1,0.3769494519698634
+bandwidth x 2,lin|ne|n,311.0
+bandwidth x 2,delta|chin_full|emb|M<16,0.11006087835428124
+bandwidth x 2,delta|chin_full|emb|16-64,-0.035635246771712814
+bandwidth x 2,delta|chin_full|emb|64-256,-0.2569929374460325
+bandwidth x 2,"delta|chin_full|emb|256-1,024",-0.8055204098579152
+bandwidth x 2,"delta|chin_full|emb|>=1,024",-1.8887228197530725
+bandwidth x 2,delta|chin_full|emb|M>=1000,-1.8887228197530725
+bandwidth x 2,delta|chin_M100|emb|M<16,0.06363988073429408
+bandwidth x 2,delta|chin_M100|emb|16-64,-0.24393565575775544
+bandwidth x 2,delta|chin_M100|emb|64-256,-0.579231367157566
+bandwidth x 2,"delta|chin_M100|emb|256-1,024",-1.2363412236468485
+bandwidth x 2,"delta|chin_M100|emb|>=1,024",-2.391827410210989
+bandwidth x 2,delta|chin_M100|emb|M>=1000,-2.391827410210989
+bandwidth x 2,delta|kappa_full|emb|M<16,-0.04810895206086383
+bandwidth x 2,delta|kappa_full|emb|16-64,0.029743836482979635
+bandwidth x 2,delta|kappa_full|emb|64-256,-0.03546633976691042
+bandwidth x 2,"delta|kappa_full|emb|256-1,024",-0.4340083475500035
+bandwidth x 2,"delta|kappa_full|emb|>=1,024",-1.4151734686187438
+bandwidth x 2,delta|kappa_full|emb|M>=1000,-1.4151734686187438
+bandwidth x 2,delta|kappa_M100|emb|M<16,-0.007345853660276423
+bandwidth x 2,delta|kappa_M100|emb|16-64,-0.052371271924894734
+bandwidth x 2,delta|kappa_M100|emb|64-256,-0.20316214301818472
+bandwidth x 2,"delta|kappa_M100|emb|256-1,024",-0.6841545343285022
+bandwidth x 2,"delta|kappa_M100|emb|>=1,024",-1.721867772696946
+bandwidth x 2,delta|kappa_M100|emb|M>=1000,-1.721867772696946
+bandwidth x 2,delta|eq3_full|emb|M<16,-0.07664910384964023
+bandwidth x 2,delta|eq3_full|emb|16-64,-0.011081483232877372
+bandwidth x 2,delta|eq3_full|emb|64-256,-0.039228402577529985
+bandwidth x 2,"delta|eq3_full|emb|256-1,024",-0.40066594177982917
+bandwidth x 2,"delta|eq3_full|emb|>=1,024",-1.3360957864281415
+bandwidth x 2,delta|eq3_full|emb|M>=1000,-1.3360957864281415
+bandwidth x 2,delta|eq3_M100|emb|M<16,-0.03900932967168638
+bandwidth x 2,delta|eq3_M100|emb|16-64,-0.048132502208256524
+bandwidth x 2,delta|eq3_M100|emb|64-256,-0.16394114946288574
+bandwidth x 2,"delta|eq3_M100|emb|256-1,024",-0.6407898142692021
+bandwidth x 2,"delta|eq3_M100|emb|>=1,024",-1.6966750688290526
+bandwidth x 2,delta|eq3_M100|emb|M>=1000,-1.6966750688290526
+bandwidth x 2,lnw_local|emb|M<16,-0.49577238423654135
+bandwidth x 2,lnw_local|emb|16-64,0.34025178728011446
+bandwidth x 2,lnw_local|emb|64-256,1.0361141833350942
+bandwidth x 2,"lnw_local|emb|256-1,024",2.048044281330466
+bandwidth x 2,"lnw_local|emb|>=1,024",3.4605799661696217
+bandwidth x 2,lin|emb|b1_only,0.5614232220862796
+bandwidth x 2,lin|emb|b1,0.5036588014792542
+bandwidth x 2,lin|emb|b2,0.04085302122228583
+bandwidth x 2,lin|emb|path_1_over_sigma_minus_1,0.464902233521288
+bandwidth x 2,lin|emb|n,305.0
+bandwidth x 2,h_N|ne,0.4735106764873372
+bandwidth x 2,h_D|ne,1.4897029626655578
+bandwidth x 2,path_sigma_mean|ne,0.7267841781911575
+bandwidth x 2,path_sigma_mean_poolC|ne,0.7267841781911575
+bandwidth x 2,path_sigma_min_poolC|ne,0.700451725320886
+bandwidth x 2,path_sigma_max_poolC|ne,0.7711074872697165
+bandwidth x 2,h_N|emb,0.40059807781824797
+bandwidth x 2,h_D|emb,1.9862706168874102
+bandwidth x 2,path_sigma_mean|emb,0.6830245332148253
+bandwidth x 2,path_sigma_mean_poolC|emb,0.6830245332148253
+bandwidth x 2,path_sigma_min_poolC|emb,0.6584507770946404
+bandwidth x 2,path_sigma_max_poolC|emb,0.7102471152520246
+h_N x 0.75 (h_D unchanged),delta|chin_full|ne|M<16,0.15718280109814625
+h_N x 0.75 (h_D unchanged),delta|chin_full|ne|16-64,0.006018815973766983
+h_N x 0.75 (h_D unchanged),delta|chin_full|ne|64-256,-0.19467919603055012
+h_N x 0.75 (h_D unchanged),"delta|chin_full|ne|256-1,024",-0.48550763972578714
+h_N x 0.75 (h_D unchanged),"delta|chin_full|ne|>=1,024",-0.7795454383981671
+h_N x 0.75 (h_D unchanged),delta|chin_full|ne|M>=1000,-0.7795454383981671
+h_N x 0.75 (h_D unchanged),delta|chin_M100|ne|M<16,0.07743697837967575
+h_N x 0.75 (h_D unchanged),delta|chin_M100|ne|16-64,-0.23231588218589194
+h_N x 0.75 (h_D unchanged),delta|chin_M100|ne|64-256,-0.5431686205429506
+h_N x 0.75 (h_D unchanged),"delta|chin_M100|ne|256-1,024",-0.9413222441557617
+h_N x 0.75 (h_D unchanged),"delta|chin_M100|ne|>=1,024",-1.3147932280220234
+h_N x 0.75 (h_D unchanged),delta|chin_M100|ne|M>=1000,-1.3147932280220234
+h_N x 0.75 (h_D unchanged),delta|kappa_full|ne|M<16,-0.02228260492388109
+h_N x 0.75 (h_D unchanged),delta|kappa_full|ne|16-64,0.051403104586790746
+h_N x 0.75 (h_D unchanged),delta|kappa_full|ne|64-256,0.0036681179599889224
+h_N x 0.75 (h_D unchanged),"delta|kappa_full|ne|256-1,024",-0.13803142220538092
+h_N x 0.75 (h_D unchanged),"delta|kappa_full|ne|>=1,024",-0.3157486602505785
+h_N x 0.75 (h_D unchanged),delta|kappa_full|ne|M>=1000,-0.3157486602505785
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|ne|M<16,0.021114231419173294
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|ne|16-64,-0.0410399532789836
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|ne|64-256,-0.18305511319663267
+h_N x 0.75 (h_D unchanged),"delta|kappa_M100|ne|256-1,024",-0.4166152154691303
+h_N x 0.75 (h_D unchanged),"delta|kappa_M100|ne|>=1,024",-0.662455518585841
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|ne|M>=1000,-0.662455518585841
+h_N x 0.75 (h_D unchanged),delta|eq3_full|ne|M<16,-0.026733304730158385
+h_N x 0.75 (h_D unchanged),delta|eq3_full|ne|16-64,0.018419960047177147
+h_N x 0.75 (h_D unchanged),delta|eq3_full|ne|64-256,-0.008391829230128206
+h_N x 0.75 (h_D unchanged),"delta|eq3_full|ne|256-1,024",-0.12475546726564353
+h_N x 0.75 (h_D unchanged),"delta|eq3_full|ne|>=1,024",-0.2706177954326518
+h_N x 0.75 (h_D unchanged),delta|eq3_full|ne|M>=1000,-0.2706177954326518
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|ne|M<16,5.061012806889315e-05
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|ne|16-64,-0.03560344067724842
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|ne|64-256,-0.16565045497405168
+h_N x 0.75 (h_D unchanged),"delta|eq3_M100|ne|256-1,024",-0.39812703234398694
+h_N x 0.75 (h_D unchanged),"delta|eq3_M100|ne|>=1,024",-0.6534609447363757
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|ne|M>=1000,-0.6534609447363757
+h_N x 0.75 (h_D unchanged),lnw_local|ne|M<16,-0.6880488948534217
+h_N x 0.75 (h_D unchanged),lnw_local|ne|16-64,0.06162949639367734
+h_N x 0.75 (h_D unchanged),lnw_local|ne|64-256,0.6720260442671216
+h_N x 0.75 (h_D unchanged),"lnw_local|ne|256-1,024",1.3622071578734667
+h_N x 0.75 (h_D unchanged),"lnw_local|ne|>=1,024",1.9629561033149459
+h_N x 0.75 (h_D unchanged),lin|ne|b1_only,0.41570453362615606
+h_N x 0.75 (h_D unchanged),lin|ne|b1,0.4111276056468065
+h_N x 0.75 (h_D unchanged),lin|ne|b2,0.01939454122197431
+h_N x 0.75 (h_D unchanged),lin|ne|path_1_over_sigma_minus_1,0.5010401193584324
+h_N x 0.75 (h_D unchanged),lin|ne|n,321.0
+h_N x 0.75 (h_D unchanged),delta|chin_full|emb|M<16,0.10855342211117126
+h_N x 0.75 (h_D unchanged),delta|chin_full|emb|16-64,-0.047359646221061036
+h_N x 0.75 (h_D unchanged),delta|chin_full|emb|64-256,-0.2742220035731407
+h_N x 0.75 (h_D unchanged),"delta|chin_full|emb|256-1,024",-0.6678011263830205
+h_N x 0.75 (h_D unchanged),"delta|chin_full|emb|>=1,024",-1.1692812653180122
+h_N x 0.75 (h_D unchanged),delta|chin_full|emb|M>=1000,-1.1692812653180122
+h_N x 0.75 (h_D unchanged),delta|chin_M100|emb|M<16,0.0630754919378682
+h_N x 0.75 (h_D unchanged),delta|chin_M100|emb|16-64,-0.25566005520710366
+h_N x 0.75 (h_D unchanged),delta|chin_M100|emb|64-256,-0.5964604332846744
+h_N x 0.75 (h_D unchanged),"delta|chin_M100|emb|256-1,024",-1.098621940171954
+h_N x 0.75 (h_D unchanged),"delta|chin_M100|emb|>=1,024",-1.672385855775929
+h_N x 0.75 (h_D unchanged),delta|chin_M100|emb|M>=1000,-1.672385855775929
+h_N x 0.75 (h_D unchanged),delta|kappa_full|emb|M<16,-0.05063793306473859
+h_N x 0.75 (h_D unchanged),delta|kappa_full|emb|16-64,0.01801943703363142
+h_N x 0.75 (h_D unchanged),delta|kappa_full|emb|64-256,-0.05269540589401864
+h_N x 0.75 (h_D unchanged),"delta|kappa_full|emb|256-1,024",-0.29628906407510897
+h_N x 0.75 (h_D unchanged),"delta|kappa_full|emb|>=1,024",-0.6957319141836839
+h_N x 0.75 (h_D unchanged),delta|kappa_full|emb|M>=1000,-0.6957319141836839
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|emb|M<16,-0.009371773861572487
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|emb|16-64,-0.06409567137424295
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|emb|64-256,-0.22039120914529292
+h_N x 0.75 (h_D unchanged),"delta|kappa_M100|emb|256-1,024",-0.5464352508536074
+h_N x 0.75 (h_D unchanged),"delta|kappa_M100|emb|>=1,024",-1.0024262182618857
+h_N x 0.75 (h_D unchanged),delta|kappa_M100|emb|M>=1000,-1.0024262182618857
+h_N x 0.75 (h_D unchanged),delta|eq3_full|emb|M<16,-0.07584362782999245
+h_N x 0.75 (h_D unchanged),delta|eq3_full|emb|16-64,-0.022805882682225588
+h_N x 0.75 (h_D unchanged),delta|eq3_full|emb|64-256,-0.05645746870463822
+h_N x 0.75 (h_D unchanged),"delta|eq3_full|emb|256-1,024",-0.2629466583049347
+h_N x 0.75 (h_D unchanged),"delta|eq3_full|emb|>=1,024",-0.6166542319930814
+h_N x 0.75 (h_D unchanged),delta|eq3_full|emb|M>=1000,-0.6166542319930814
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|emb|M<16,-0.03926223911695476
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|emb|16-64,-0.059856901657604746
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|emb|64-256,-0.18117021558999402
+h_N x 0.75 (h_D unchanged),"delta|eq3_M100|emb|256-1,024",-0.5030705307943076
+h_N x 0.75 (h_D unchanged),"delta|eq3_M100|emb|>=1,024",-0.9772335143939925
+h_N x 0.75 (h_D unchanged),delta|eq3_M100|emb|M>=1000,-0.9772335143939925
+h_N x 0.75 (h_D unchanged),lnw_local|emb|M<16,-0.4956154451716247
+h_N x 0.75 (h_D unchanged),lnw_local|emb|16-64,0.3519761867294626
+h_N x 0.75 (h_D unchanged),lnw_local|emb|64-256,1.0533432494622021
+h_N x 0.75 (h_D unchanged),"lnw_local|emb|256-1,024",1.9103249978555712
+h_N x 0.75 (h_D unchanged),"lnw_local|emb|>=1,024",2.7411384117345623
+h_N x 0.75 (h_D unchanged),lin|emb|b1_only,0.538478107063853
+h_N x 0.75 (h_D unchanged),lin|emb|b1,0.4931424654454285
+h_N x 0.75 (h_D unchanged),lin|emb|b2,0.0338844063299748
+h_N x 0.75 (h_D unchanged),lin|emb|path_1_over_sigma_minus_1,0.5372111726593125
+h_N x 0.75 (h_D unchanged),lin|emb|n,305.0
+h_N x 0.75 (h_D unchanged),h_N|ne,0.17756650368275145
+h_N x 0.75 (h_D unchanged),h_D|ne,0.7448514813327789
+h_N x 0.75 (h_D unchanged),path_sigma_mean|ne,0.6706686873968122
+h_N x 0.75 (h_D unchanged),path_sigma_mean_poolC|ne,0.6828066623004718
+h_N x 0.75 (h_D unchanged),path_sigma_min_poolC|ne,0.6309125345691825
+h_N x 0.75 (h_D unchanged),path_sigma_max_poolC|ne,0.7660468496258767
+h_N x 0.75 (h_D unchanged),h_N|emb,0.150224279181843
+h_N x 0.75 (h_D unchanged),h_D|emb,0.9931353084437051
+h_N x 0.75 (h_D unchanged),path_sigma_mean|emb,0.6597485405033688
+h_N x 0.75 (h_D unchanged),path_sigma_mean_poolC|emb,0.6597485405033687
+h_N x 0.75 (h_D unchanged),path_sigma_min_poolC|emb,0.5446359592330823
+h_N x 0.75 (h_D unchanged),path_sigma_max_poolC|emb,0.8184158652839213
+extended-grid CV optimum,delta|chin_full|ne|M<16,0.15452646314825874
+extended-grid CV optimum,delta|chin_full|ne|16-64,0.008385247647972287
+extended-grid CV optimum,delta|chin_full|ne|64-256,-0.19140344779660776
+extended-grid CV optimum,"delta|chin_full|ne|256-1,024",-0.46126224470013083
+extended-grid CV optimum,"delta|chin_full|ne|>=1,024",-0.6964934735940622
+extended-grid CV optimum,delta|chin_full|ne|M>=1000,-0.6964934735940622
+extended-grid CV optimum,delta|chin_M100|ne|M<16,0.0701397347856271
+extended-grid CV optimum,delta|chin_M100|ne|16-64,-0.22784730471919976
+extended-grid CV optimum,delta|chin_M100|ne|64-256,-0.5408241068498146
+extended-grid CV optimum,"delta|chin_M100|ne|256-1,024",-0.9122580824298321
+extended-grid CV optimum,"delta|chin_M100|ne|>=1,024",-1.2196423899760058
+extended-grid CV optimum,delta|chin_M100|ne|M>=1000,-1.2196423899760058
+extended-grid CV optimum,delta|kappa_full|ne|M<16,-0.019537979547556088
+extended-grid CV optimum,delta|kappa_full|ne|16-64,0.05211297196964518
+extended-grid CV optimum,delta|kappa_full|ne|64-256,0.0076106204868945085
+extended-grid CV optimum,"delta|kappa_full|ne|256-1,024",-0.11842746930313482
+extended-grid CV optimum,"delta|kappa_full|ne|>=1,024",-0.24585870600947274
+extended-grid CV optimum,delta|kappa_full|ne|M>=1000,-0.24585870600947274
+extended-grid CV optimum,delta|kappa_M100|ne|M<16,0.019910532185287003
+extended-grid CV optimum,delta|kappa_M100|ne|16-64,-0.03855964691220517
+extended-grid CV optimum,delta|kappa_M100|ne|64-256,-0.1798953731073406
+extended-grid CV optimum,"delta|kappa_M100|ne|256-1,024",-0.3929336396104295
+extended-grid CV optimum,"delta|kappa_M100|ne|>=1,024",-0.5822931769455595
+extended-grid CV optimum,delta|kappa_M100|ne|M>=1000,-0.5822931769455595
+extended-grid CV optimum,delta|eq3_full|ne|M<16,-0.023330151458121555
+extended-grid CV optimum,delta|eq3_full|ne|16-64,0.023831853352624523
+extended-grid CV optimum,delta|eq3_full|ne|64-256,0.003617679432228933
+extended-grid CV optimum,"delta|eq3_full|ne|256-1,024",-0.09704349292080763
+extended-grid CV optimum,"delta|eq3_full|ne|>=1,024",-0.20105683306614774
+extended-grid CV optimum,delta|eq3_full|ne|M>=1000,-0.20105683306614774
+extended-grid CV optimum,delta|eq3_M100|ne|M<16,0.0013027177430595847
+extended-grid CV optimum,delta|eq3_M100|ne|16-64,-0.03097461369701643
+extended-grid CV optimum,delta|eq3_M100|ne|64-256,-0.15729164902402346
+extended-grid CV optimum,"delta|eq3_M100|ne|256-1,024",-0.37221679364393667
+extended-grid CV optimum,"delta|eq3_M100|ne|>=1,024",-0.5770196521415638
+extended-grid CV optimum,delta|eq3_M100|ne|M>=1000,-0.5770196521415638
+extended-grid CV optimum,lnw_local|ne|M<16,-0.6700866807128039
+extended-grid CV optimum,lnw_local|ne|16-64,0.053809961052215985
+extended-grid CV optimum,lnw_local|ne|64-256,0.6710402798477422
+extended-grid CV optimum,"lnw_local|ne|256-1,024",1.3238801167630576
+extended-grid CV optimum,"lnw_local|ne|>=1,024",1.841722180320453
+extended-grid CV optimum,lin|ne|b1_only,0.4057886461432725
+extended-grid CV optimum,lin|ne|b1,0.4057555027925257
+extended-grid CV optimum,lin|ne|b2,0.01791246067133019
+extended-grid CV optimum,lin|ne|path_1_over_sigma_minus_1,0.5614095928919306
+extended-grid CV optimum,lin|ne|n,294.0
+extended-grid CV optimum,delta|chin_full|emb|M<16,0.10486734833034793
+extended-grid CV optimum,delta|chin_full|emb|16-64,-0.05331706536273099
+extended-grid CV optimum,delta|chin_full|emb|64-256,-0.2948293594838291
+extended-grid CV optimum,"delta|chin_full|emb|256-1,024",-0.6217076046991198
+extended-grid CV optimum,"delta|chin_full|emb|>=1,024",
+extended-grid CV optimum,delta|chin_full|emb|M>=1000,
+extended-grid CV optimum,delta|chin_M100|emb|M<16,0.028036933654975418
+extended-grid CV optimum,delta|chin_M100|emb|16-64,-0.26222276800085786
+extended-grid CV optimum,delta|chin_M100|emb|64-256,-0.6159616086379321
+extended-grid CV optimum,"delta|chin_M100|emb|256-1,024",-1.0415274293418695
+extended-grid CV optimum,"delta|chin_M100|emb|>=1,024",
+extended-grid CV optimum,delta|chin_M100|emb|M>=1000,
+extended-grid CV optimum,delta|kappa_full|emb|M<16,-0.011064853125172214
+extended-grid CV optimum,delta|kappa_full|emb|16-64,0.016152593655305292
+extended-grid CV optimum,delta|kappa_full|emb|64-256,-0.07152737584255835
+extended-grid CV optimum,"delta|kappa_full|emb|256-1,024",-0.2606800470558366
+extended-grid CV optimum,"delta|kappa_full|emb|>=1,024",
+extended-grid CV optimum,delta|kappa_full|emb|M>=1000,
+extended-grid CV optimum,delta|kappa_M100|emb|M<16,0.006430807190373674
+extended-grid CV optimum,delta|kappa_M100|emb|16-64,-0.06888832823109872
+extended-grid CV optimum,delta|kappa_M100|emb|64-256,-0.2408864505538468
+extended-grid CV optimum,"delta|kappa_M100|emb|256-1,024",-0.5060428900806819
+extended-grid CV optimum,"delta|kappa_M100|emb|>=1,024",
+extended-grid CV optimum,delta|kappa_M100|emb|M>=1000,
+extended-grid CV optimum,delta|eq3_full|emb|M<16,-0.03903666536813218
+extended-grid CV optimum,delta|eq3_full|emb|16-64,-0.008365241245278935
+extended-grid CV optimum,delta|eq3_full|emb|64-256,-0.06371833331120182
+extended-grid CV optimum,"delta|eq3_full|emb|256-1,024",-0.2104814730807893
+extended-grid CV optimum,"delta|eq3_full|emb|>=1,024",
+extended-grid CV optimum,delta|eq3_full|emb|M>=1000,
+extended-grid CV optimum,delta|eq3_M100|emb|M<16,-0.01978598848446946
+extended-grid CV optimum,delta|eq3_M100|emb|16-64,-0.051498992208940095
+extended-grid CV optimum,delta|eq3_M100|emb|64-256,-0.20329283713003854
+extended-grid CV optimum,"delta|eq3_M100|emb|256-1,024",-0.4790117648317437
+extended-grid CV optimum,"delta|eq3_M100|emb|>=1,024",
+extended-grid CV optimum,delta|eq3_M100|emb|M>=1000,
+extended-grid CV optimum,lnw_local|emb|M<16,-0.3585833579293004
+extended-grid CV optimum,lnw_local|emb|16-64,0.39147415620886067
+extended-grid CV optimum,lnw_local|emb|64-256,1.1006519590828063
+extended-grid CV optimum,"lnw_local|emb|256-1,024",1.8620961550809656
+extended-grid CV optimum,"lnw_local|emb|>=1,024",
+extended-grid CV optimum,lin|emb|b1_only,0.5409027704175637
+extended-grid CV optimum,lin|emb|b1,0.48375277181119475
+extended-grid CV optimum,lin|emb|b2,0.03179303333892641
+extended-grid CV optimum,lin|emb|path_1_over_sigma_minus_1,0.8309435072990441
+extended-grid CV optimum,lin|emb|n,239.0
+extended-grid CV optimum,h_N|ne,0.14797208640229287
+extended-grid CV optimum,h_D|ne,0.7448514813327789
+extended-grid CV optimum,path_sigma_mean|ne,0.6489222267696901
+extended-grid CV optimum,path_sigma_mean_poolC|ne,0.6638327268352883
+extended-grid CV optimum,path_sigma_min_poolC|ne,0.5803664399695854
+extended-grid CV optimum,path_sigma_max_poolC|ne,0.7943305474754614
+extended-grid CV optimum,h_N|emb,0.10014951945456199
+extended-grid CV optimum,h_D|emb,0.7448514813327789
+extended-grid CV optimum,path_sigma_mean|emb,0.5638129446623451
+extended-grid CV optimum,path_sigma_mean_poolC|emb,0.563812944662345
+extended-grid CV optimum,path_sigma_min_poolC|emb,0.44347626892334613
+extended-grid CV optimum,path_sigma_max_poolC|emb,0.7119593204580091

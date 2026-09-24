@@ -1,0 +1,59 @@
+% Online Appendix Table B1: samples (v2). Revised from v1 table2_data.tex (paper/notes/writer_data.md for Panel A/C
+% sources); clean sample from output/tables/ra2_wedge_models.csv (clean == True); universes from ra2_wedge_conduct.csv,
+% ra2_wedge_bunching.csv and ra3_econ_inference_share.csv; experiment from code/sweep/run_grid.py and
+% tables/tableB2_sweep_design.tex. Writer appendix_D_F, 2026-09-24.
+\begin{table}[tp]
+\centering
+\caption{Samples}
+\label{tab:app-data}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrcccl@{}}
+\toprule
+ & & & & Off-path & \\
+Sample & Units & $N$ & $M=D/N$ & spread & Use \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel A. Public designed sweeps (unit: training run)}}\\[1pt]
+Chinchilla (digitized) & 245$^{a}$ & 57M--16B & 0.04--341 & 1.35 & III; IV; D \\
+Llama 3 (digitized) & 133 & 59M--17B & 0.44--643 & 1.38 & III; IV; D \\
+Marin, 3 corpora & 258 & 0.12--12.6B & 0.09--3,706 & 2.42--2.46 & III; IV; D \\
+Porian et al. & 975$^{b}$ & 5M--0.90B & 0.02--346 & 2.20--2.29 & III; D \\
+Farseer & 404 & 0.10--6.4B$^{c}$ & 0.31--2,570 & 1.97 & III; IV; D \\
+Gadre et al., 3 corpora & 104 & 11M--6.9B & 5--640 & 1.44 & III; D; E \\
+OLMo ladder & 30 & 0.19--3.2B$^{d}$ & 10--200 & 0.94 & III; IV; E \\
+Muennighoff et al. & 33 & 7M--8.7B & 0.04--303 & 1.97 & III; D \\
+DataDecide, 25 recipes & 1,100$^{e}$ & 4M--1.2B$^{d}$ & 5--110 & 0.73 & III; D \\
+Step Law & 1,911$^{f}$ & 0.21--1.07B$^{c}$ & 19--466 & -- & D \\[2pt]
+\multicolumn{6}{@{}l}{\textit{Panel B. Our controlled experiment, FineWeb-Edu and FineWeb (unit: annealed endpoint)}}\\[1pt]
+Main grid, 2 corpora & $2\times44$ & 0.39--49M$^{c}$ & 0.51--2,031 & 1.96 & III.E \\
+\quad High-$M$ runs & 12 & 0.79--3.2M$^{c}$ & 64--4,063 & -- & III.E \\[2pt]
+\multicolumn{6}{@{}l}{\textit{Panel C. Released models (unit: model)}}\\[1pt]
+Verified sample & 173 & 70M--406B$^{g}$ & 2.1--60,398 & -- & IV; F \\
+\quad Clean sample & 77 & 0.13--406B & 19--60,398 & -- & IV; F \\
+Production-scale universe & 335 & 0.13--600B$^{g}$ & 0.2--60,398 & -- & IV; V; F \\
+Benchmark panel & 128 & 70M--180B & 2.1--24,290 & 1.64 & E \\
+Algorithmic-progress sample & 231 & 2M--280B & 0.001--204$^{h}$ & -- & E \\
+Epoch language models & 247 & 65M--540B & 0.3--24,000 & -- & E \\
+\bottomrule
+\end{tabular*}
+\vspace{3pt}
+\begin{tablenotes}
+$N$ is parameters (total, including embeddings, unless marked), $D$ is tokens processed, $M=D/N$ and $C=6ND$; ranges
+are over the estimation sample. Off-path spread: residual standard deviation of an OLS regression of $\ln M$ on $\ln C$,
+zero for compute-optimal runs; ``--'': not computed. Roman numerals refer to sections of the main text, letters to
+Online Appendices. Llama~3 and Marin: $N=C/(6D)$ at the nominal budget; Porian et al.: non-embedding plus output head.
+$^{a}$137 runs on nine IsoFLOP profiles and 108 off-profile runs; parametric fits drop the five highest-loss runs
+($n=240$), model-free estimates use the 137 profile runs.
+$^{b}$16 architectures; losses read along each run's curve at 12 IsoFLOP budgets (121 and 116 profile points).
+$^{c}$Non-embedding parameters. In our experiment $N$ including the tied embedding is 1.4--54M and $M$ is 0.46--555 in
+the main grid (up to 1,743 in the high-$M$ runs).
+$^{d}$Excludes the input embedding only.
+$^{e}$25 recipes $\times$ 14 sizes $\times$ 3 seeds (5 at 1B); 21,888 intermediate checkpoints enter estimation.
+$^{f}$17 $(N,D)$ cells, each with a grid of learning rates and batch sizes.
+$^{g}$Active parameters for mixture-of-experts models.
+$^{h}$$D$ is dataset size (unique tokens), not tokens processed. Algorithmic-progress sample: \citet{ho2024algorithmic}; clean sample: the clean inference-demand sample.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations from the sources cited in the text of this appendix; Panel B: this paper.
+\end{tablenotes}
+\end{table}

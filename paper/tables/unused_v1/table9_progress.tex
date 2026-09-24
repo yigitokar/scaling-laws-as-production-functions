@@ -1,0 +1,47 @@
+\begin{table}[tp]
+\centering
+\caption{Algorithmic Progress under Alternative Estimators and Identifying Assumptions}
+\label{tab:progress}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l ccccccc@{}}
+\toprule
+ & $\hat\alpha$ & $\hat\beta$ & \multicolumn{1}{c}{$g_N$} & \multicolumn{1}{c}{$g_D$} & $T_C$ & 95\% CI & MSE \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel A. Doubling time of effective compute, data of Ho et al.\ (2024)}} \\
+Published (bootstrap median) & 0.068 & 0.040 &  &  & 8.4 & $[4.5, 14.3]$ & -- \\
+(1) Replication, default stop & 0.068 & 0.040 & 0.06 & 0.90 & 8.7 & $[4.1, 16.9]$ & 0.0464 \\
+(2) Run to convergence & 0.138 & 0.025 & $-$0.43 & 1.80 & 6.1 & $[3.0, 22.7]$ & 0.0463 \\
+(3) Unpenalized NLS & 0.078 & 0.031 & 0.35 & 0.46 & 10.2 & $[4.1, 27.6]$ & 0.0453 \\
+\quad profile-likelihood CI & & & & & & $[4.1, 40.5]$ & \\
+(4) $E_b$ estimated & 0.072 & 0.042 & 0.34 & 0.45 & 10.5 & $[2.9, 26.3]$ & 0.0451 \\
+(5) Hicks-neutral, as (2) & 0.059 & 0.050 & 0.33 & 0.39 & 11.6 & $[6.6, 17.6]$ & 0.0465 \\
+(6) Hicks-neutral, as (3) & 0.083 & 0.030 & 0.24 & 0.66 & 9.2 & $[6.3, 14.3]$ & 0.0454 \\
+(7) Effective data & 0.057 & 0.067 & 0.58 & $-$0.25 & 25.7 & $[3.9, \infty)$ & 0.0484 \\
+(8) Impose $\gamma=0.0525$ & 0.058 & 0.574 & 0.22 & 0.17 & 21.5 & $[9.9, 48.2]$ & 0.0509 \\
+(9) Year terms $\div$ exponents & 0.348 & 0.366 & 0.01 & 0.10 & 76.5 & $[46.2, \infty)$ & -- \\
+(10) Besiroglu $(\alpha,\beta)$ & 0.348 & 0.366 & $-$0.39 & 0.28 & $g_C<0$ & $[72.5, \infty)$ & 0.1126 \\
+(11) Hoffmann $(\alpha,\beta)$ & 0.339 & 0.285 & $-$0.44 & 0.35 & $g_C<0$ & $[54.3, \infty)$ & 0.0994 \\
+(12) 12 sweep technologies &  &  &  &  & \multicolumn{2}{c}{$g_C<0$ or 42--122} & 0.060--0.219 \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Panel B. Allocative gain, models with $C\geq10^{23}$ FLOP, 2020--21 to 2022--24}} \\
+Technology & $n_1,n_2$ & $\overline{CE}_1$ & \multicolumn{1}{c}{$\overline{CE}_2$} & \multicolumn{1}{c}{Gain} & 95\% CI & & Share \\
+\cmidrule(l){1-8}
+Besiroglu et al. & 7, 92 & 0.57 & 0.60 & 1.05 & $[0.57, 1.72]$ &  & 0.02 \\
+Hoffmann et al., TeX & 7, 92 & 0.38 & 0.73 & 1.91 & $[1.49, 2.43]$ &  & 0.30 \\
+Hoffmann et al., rounded & 7, 92 & 0.31 & 0.74 & 2.41 & $[1.92, 3.14]$ &  & 0.40 \\
+Farseer grid & 7, 92 & 0.44 & 0.70 & 1.58 & $[1.27, 2.04]$ &  & 0.21 \\
+Nine sweep technologies & 7, 92 &  &  & 0.55--4.31 &  &  & $-$0.27 to 0.67 \\
+Besiroglu, cleaned & 7, 79 & 0.57 & 0.62 & 1.09 & $[0.58, 1.74]$ &  & 0.04 \\
+Besiroglu, top five & 10, 15 & 0.67 & 0.85 & 1.27 & $[0.96, 1.77]$ &  & 0.10 \\
+Ho et al.\ (2024) & 7, 92 & 0.10 & 0.01 & 0.09 & $[0.07, 0.13]$ &  & $-$1.10 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+Panel A re-estimates the preferred model of \citet{ho2024algorithmic}, $\ln\text{ppl}=\exp(\alpha_{0b}-\alpha g_N t-\alpha\ln N)+\exp(\beta_{0b}-\beta g_D t-\beta\ln D)$ with irreducible loss set to zero, under the stated estimator or restriction. $g_N,g_D$: parameter- and data-augmenting growth rates (log points per year); $T_C=12\ln2/(g_N+g_D)$: effective-compute doubling time in months. Rows (1)--(2) minimize their objective, mean squared error plus $0.0025\sum|\theta|$, by SLSQP from zero; row (1) uses the scipy default tolerance of the authors' code and row (2) runs to convergence. The published 8.4 months is a bootstrap median; the point estimate of row (1) is 8.7. Intervals: 95\% paper-cluster bootstrap (400 draws), percentiles of $g_N+g_D$ mapped to $T_C$ ($\infty$ when non-positive growth lies inside the interval); the published interval is the authors' iid bootstrap; the profile-likelihood interval inverts an iid Gaussian likelihood-ratio test. Hicks neutrality: $\alpha g_N=\beta g_D$. (7): data measured as effective data under repetition \citep{muennighoff2023scaling}. (8): the frontier elasticity obtained by fitting the $E=0$ form to the Chinchilla sweep. (9): Ho et al.'s year coefficients divided by the exponents of \citet{besiroglu2024chinchilla}, without re-estimation \citep{whitfill2025note}. (10)--(12): exponents fixed at experimental values, benchmark-specific $E_b$ estimated; row (12) reports the range over the 12 technologies estimated in Section~\ref{sec:tech} (two on the Chinchilla sweep): $g_C<0$ for 9 of them; for the other 3, $T_C$ lies between 42 and 122 months, and every interval includes non-positive growth. Panel B: $\overline{CE}$ is the geometric mean of Farrell cost efficiency $C_{\min}(L(N,D))/6ND$ under the stated technology in each period ($n_1$, $n_2$ models); gain $=\overline{CE}_2/\overline{CE}_1$, with a bootstrap over models (and over parameter draws for Besiroglu et al.). Share $=\ln(\text{gain})/\ln(8.9)$, where 8.9 is the effective-compute gain implied by row (1) over the difference in mean release dates (9.9 for the top-five sample, 8.2 for the cleaned sample); a negative share means that cost efficiency fell. Top five: the five models with the most compute in each year. Cleaned: drops derivatives, systems-paper runs, non-transformers, exact re-releases, models with $D/N$ exactly 20 and Epoch ``speculative'' entries.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations from the data and code of \citet{ho2024algorithmic} (Panel A) and the Epoch AI models database \citep{epochai2026data} (Panel B).
+\end{tablenotes}
+\end{table}

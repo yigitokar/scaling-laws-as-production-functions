@@ -1,0 +1,32 @@
+\begin{table}[tp]
+\centering
+\caption{Estimating $\sigma^*$ from On-Path Data under $\kappa=1$: Rates}
+\label{tab:ra5-singular}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & \multicolumn{3}{c}{Unrestricted: quantiles of $|\hat\sigma^*-\sigma^*|$} & Restricted & Share with \\
+\cmidrule(lr){2-4}
+Noise s.d.\ $\tau$ & 25th & 75th & 90th & 75th pct. & split rates \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel A. $\alpha\neq\beta$ (Hoffmann et al.)}} \\
+$10^{-3}$ & 2.6e-04 & 4.2e-02 & 1.1e-01 & 4.6e-04 & 0.59 \\
+$10^{-4}$ & 2.4e-05 & 1.5e-02 & 2.2e-02 & 3.9e-05 & 0.63 \\
+$10^{-5}$ & 2.6e-06 & 4.8e-03 & 6.5e-03 & 4.3e-06 & 0.60 \\
+$10^{-6}$ & 2.0e-07 & 1.7e-03 & 2.3e-03 & 4.1e-07 & 0.60 \\
+$10^{-7}$ & 2.8e-08 & 5.0e-04 & 6.3e-04 & 4.9e-08 & 0.60 \\
+Slope in $\ln\tau$ & 1.00 & 0.48 & 0.55 & 0.99 & \\[2pt]
+\multicolumn{6}{@{}l}{\textit{Panel B. $\alpha=\beta$}} \\
+$10^{-3}$ & 2.8e-04 & 4.3e-02 & 1.1e-01 & 4.4e-04 & 0.60 \\
+$10^{-4}$ & 2.4e-05 & 8.0e-03 & 1.5e-02 & 4.5e-05 & 0.53 \\
+$10^{-5}$ & 3.2e-06 & 3.9e-03 & 5.2e-03 & 4.5e-06 & 0.57 \\
+$10^{-6}$ & 2.6e-07 & 1.3e-03 & 1.6e-03 & 5.1e-07 & 0.57 \\
+$10^{-7}$ & 2.6e-08 & 4.1e-04 & 5.1e-04 & 4.4e-08 & 0.58 \\
+Slope in $\ln\tau$ & 1.00 & 0.49 & 0.56 & 0.99 & \\[2pt]
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}On-path data: 40 compute levels over four decades, Chinchilla technology ($\kappa=1$), Gaussian noise of s.d.\ $\tau$ on $L$ (a smaller $\tau$ mimics a larger sample, $n_{\rm eff}\propto\tau^{-2}$); 100 replications per cell. Unrestricted: least squares over $(E,A,B,\alpha,\beta)$ with $A,B$ bounded away from zero, solved by variable projection; the error is the larger of the two exactly equivalent twin estimates. Restricted: imposes that the fitted technology's allocation exponent equals the observed path slope, $\beta/(\alpha+\beta)=a$. Theory (Online Appendix A, Proposition A1(iii)): slope $1/2$ ($n^{-1/4}$) for the upper quantiles of the unrestricted estimator, slope 1 ($n^{-1/2}$) for the restricted one; the $n^{-1/4}$ rate is established by this simulation and a heuristic argument, not by a limit theorem.\end{tablenotes}
+\begin{tablenotes}[Source]Authors' simulations; \texttt{code/analysis/ra5\_theory}.\end{tablenotes}
+\end{table}

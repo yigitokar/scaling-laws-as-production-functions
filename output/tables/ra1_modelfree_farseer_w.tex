@@ -1,0 +1,46 @@
+\begin{table}[tp]
+\centering
+\caption{Is the Wedge Extrapolated Correctly? Local and Parametric Wedges on Farseer}
+\label{tab:modelfree-w}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & Local & \multicolumn{5}{c}{$\ln(w_{\text{param}}/w_{\text{local}})$} \\
+\cmidrule(l){3-7}
+$M=D/N$ & $\ln w$ & Chinchilla, all & Chinchilla, $M\le100$ & $\kappa$ free, all & $\kappa$ free, $M\le100$ & Farseer Eq.~3 \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A. Non-embedding parameters (Farseer's convention)}} \\
+$M<16$ & $-$0.69 & 0.16 & 0.08 & $-$0.02 & 0.02 & $-$0.03 \\
+ & (0.004) & [0.15, 0.17] & [0.07, 0.09] & [$-$0.03, $-$0.01] & [0.01, 0.03] & [$-$0.04, $-$0.02] \\
+16--64 & 0.06 & 0.01 & $-$0.23 & 0.05 & $-$0.04 & 0.01 \\
+ & (0.002) & [0.00, 0.01] & [$-$0.24, $-$0.22] & [0.05, 0.06] & [$-$0.05, $-$0.04] & [0.01, 0.02] \\
+64--256 & 0.68 & $-$0.19 & $-$0.55 & 0.00 & $-$0.18 & $-$0.01 \\
+ & (0.003) & [$-$0.21, $-$0.18] & [$-$0.56, $-$0.53] & [0.00, 0.01] & [$-$0.20, $-$0.18] & [$-$0.02, 0.00] \\
+256--1,024 & 1.37 & $-$0.49 & $-$0.95 & $-$0.14 & $-$0.42 & $-$0.13 \\
+ & (0.006) & [$-$0.50, $-$0.47] & [$-$0.97, $-$0.93] & [$-$0.15, $-$0.13] & [$-$0.45, $-$0.41] & [$-$0.14, $-$0.12] \\
+$\ge$1,024 & 2.01 & $-$0.82 & $-$1.36 & $-$0.36 & $-$0.70 & $-$0.31 \\
+ & (0.039) & [$-$0.90, $-$0.75] & [$-$1.44, $-$1.28] & [$-$0.43, $-$0.28] & [$-$0.79, $-$0.64] & [$-$0.38, $-$0.23] \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel B. Parameters including both embeddings}} \\
+$M<16$ & $-$0.50 & 0.11 & 0.07 & $-$0.04 & 0.00 & $-$0.07 \\
+ & (0.004) & [0.10, 0.12] & [0.06, 0.08] & [$-$0.06, $-$0.04] & [$-$0.01, 0.00] & [$-$0.08, $-$0.07] \\
+16--64 & 0.34 & $-$0.04 & $-$0.25 & 0.03 & $-$0.06 & $-$0.01 \\
+ & (0.001) & [$-$0.05, $-$0.04] & [$-$0.26, $-$0.24] & [0.02, 0.03] & [$-$0.06, $-$0.05] & [$-$0.02, $-$0.01] \\
+64--256 & 1.04 & $-$0.26 & $-$0.59 & $-$0.04 & $-$0.21 & $-$0.05 \\
+ & (0.002) & [$-$0.28, $-$0.26] & [$-$0.60, $-$0.58] & [$-$0.05, $-$0.04] & [$-$0.23, $-$0.20] & [$-$0.05, $-$0.04] \\
+256--1,024 & 1.90 & $-$0.66 & $-$1.09 & $-$0.28 & $-$0.53 & $-$0.25 \\
+ & (0.009) & [$-$0.68, $-$0.64] & [$-$1.12, $-$1.07] & [$-$0.30, $-$0.26] & [$-$0.56, $-$0.52] & [$-$0.27, $-$0.23] \\
+$\ge$1,024 & 2.74 & $-$1.17 & $-$1.67 & $-$0.70 & $-$1.00 & $-$0.62 \\
+ & (0.054) & [$-$1.27, $-$1.07] & [$-$1.78, $-$1.57] & [$-$0.80, $-$0.59] & [$-$1.10, $-$0.92] & [$-$0.71, $-$0.51] \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Farseer's 404 runs \citep{li2025predictableb}. Local $\ln w$: kernel-weighted local quadratic of $\ln L$ in $(\ln N,\ln D)$, $w=\partial_{\ln N}\ln L/\partial_{\ln D}\ln L$ (invariant to monotone transformations of the loss; no $E$ or functional form), averaged over grid points inside each model size's observed token range with kernel effective sample size $\ge15$; bandwidths by leave-one-out cross-validation over multiples of the standard deviation ($h_N=0.24$, $h_D=0.74$ in logs; $h_N$ is the smallest multiple on that grid). Other columns: log ratio of the wedge implied by a parametric technology to the local wedge at the same points; negative values mean the parametric form understates the wedge. Chinchilla: $L=E+AN^{-\alpha}+BD^{-\beta}$ (Huber); $\kappa$ free: $L=E+(AN^{-a_1}+BD^{-b_1})^\kappa$ (Huber); Farseer Eq.~3: the authors' form (nonlinear least squares); `$M\le100$': fitted only to runs with $M\le100$ and extrapolated. 95\% basic intervals in brackets from a wild cluster bootstrap by model size (Webb weights, 999 draws; every model refitted); they do not include the local estimator's smoothing bias. With both bandwidths multiplied by 1.5 and 2 the $M\ge1{,}024$ entries become $-$0.96 and $-$1.14 (Chinchilla, all) and $-$0.49 and $-$0.67 ($\kappa$ free, all); at the narrower leave-one-out optimum on an extended grid ($h_N$ 0.148) they become $-$0.70, $-$0.25 and $-$0.20 (Chinchilla, $\kappa$ free, Eq.~3), and the local-path $\sigma^*$ averages 0.664 instead of 0.707. Local path: random-effects mean $\sigma^*$ 0.703 (0.013); slope of local $\ln w$ in $\ln(M/M^*)$ 0.420 against $1/\sigma^*-1=$ 0.434 on the path (at the path the slope equals $1/\sigma^*-1$ for any smooth technology, so only linearity is testable); quadratic term 0.020 (0.001), i.e. $\ln w$ is convex in $\ln(M/M^*)$. The first-derivative path estimate $1/(1+b_1)$, $b_1$ the slope at $M=M^*$, is 0.708 (0.001) and 0.701--0.711 across bandwidths.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{li2025predictableb}; authors' calculations.
+\end{tablenotes}
+\end{table}

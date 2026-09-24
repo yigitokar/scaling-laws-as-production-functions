@@ -1,0 +1,54 @@
+\begin{table}[tp]
+\centering
+\caption{Revealed Serving Shares for Selected Models under the Reference, Lab-Own and All Technologies}
+\label{tab:ra2-models}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
+\sbox{\ratabbox}{%
+\begin{tabular}{@{}lrrrrrrlrcl@{}}
+\toprule
+Model & $N$ (B) & $D$ (T) & $M$ & Emb. & $M/M^*$ & \multicolumn{2}{c}{$w$ ref.\ [95\%]} & $s$ ref. & $w$ lab ($s$) & Band of $w$ \\
+\midrule
+\multicolumn{11}{@{}l}{\textit{Panel A. Clean sample}} \\[1pt]
+Llama 3 8B & 8.03 & 15.0 & 1868 & 13\% & 86.4 & 6.73 & {\scriptsize[5.16, 8.84]} & 0.85 & 8.36 (0.88) & {\scriptsize[0.5, 168]} \\
+Llama 3 70B & 70.55 & 15.0 & 213 & 3\% & 10.0 & 2.67 & {\scriptsize[2.05, 3.48]} & 0.63 & 2.51 (0.60) & {\scriptsize[0.2, 11.7]} \\
+Llama 3.1 405B & 405.85 & 15.6 & 38.4 & 1\% & 1.8 & 1.29 & {\scriptsize[0.99, 1.69]} & 0.23 & 0.97 ($-$0.03) & {\scriptsize[0.0, 8.2]} \\
+Llama 2 7B & 6.74 & 2.0 & 297 & 4\% & 13.5 & 3.04 & {\scriptsize[2.53, 3.66]} & 0.67 & 3.51 (0.72) & {\scriptsize[0.4, 16.5]} \\
+Llama 2 70B & 68.98 & 2.0 & 29.0 & 1\% & 1.3 & 1.13 & {\scriptsize[0.93, 1.37]} & 0.12 & 0.97 ($-$0.03) & {\scriptsize[0.1, 4.1]} \\
+Qwen2.5 7B & 7.62 & 18.0 & 2364 & 14\% & 109 & 7.44 & {\scriptsize[5.66, 9.87]} & 0.87 & -- & {\scriptsize[0.5, 231]} \\
+Qwen2.5 72B & 72.71 & 18.0 & 248 & 3\% & 11.7 & 2.86 & {\scriptsize[2.18, 3.74]} & 0.65 & -- & {\scriptsize[0.2, 13.4]} \\
+Qwen3 0.6B & 0.60 & 36.0 & 60,398 & 26\% & 2759 & 29.56 & {\scriptsize[21.08, 42.96]} & 0.97 & -- & {\scriptsize[1.8, 15,362]} \\
+Qwen3 14B & 14.77 & 36.0 & 2438 & 11\% & 114 & 7.57 & {\scriptsize[5.60, 10.22]} & 0.87 & -- & {\scriptsize[0.4, 218]} \\
+DeepSeek LLM 7B & 7.00 & 2.0 & 286 & 12\% & 13.0 & 2.99 & {\scriptsize[2.49, 3.60]} & 0.67 & 3.42 (0.71) & {\scriptsize[0.4, 15.8]} \\
+DeepSeek LLM 67B & 67.00 & 2.0 & 29.9 & 3\% & 1.4 & 1.15 & {\scriptsize[0.94, 1.39]} & 0.13 & 1.34 (0.26) & {\scriptsize[0.1, 4.1]} \\
+OLMo 2 7B & 7.30 & 4.0 & 555 & 11\% & 25.4 & 3.99 & {\scriptsize[3.21, 4.94]} & 0.75 & 4.05 (0.75) & {\scriptsize[0.4, 35.5]} \\
+OLMo 2 32B & 32.23 & 6.2 & 191 & 3\% & 8.9 & 2.54 & {\scriptsize[2.01, 3.20]} & 0.61 & 1.28 (0.22) & {\scriptsize[0.2, 9.7]} \\
+Marin 8B & 8.03 & 12.7 & 1582 & 13\% & 73.1 & 6.26 & {\scriptsize[4.83, 8.16]} & 0.84 & 5.08 (0.80) & {\scriptsize[0.5, 133]} \\
+Granite 3.0 8B & 8.17 & 12.0 & 1469 & 2\% & 67.8 & 6.07 & {\scriptsize[4.68, 7.88]} & 0.84 & -- & {\scriptsize[0.4, 119]} \\
+Falcon3 7B & 7.46 & 14.0 & 1878 & 11\% & 86.8 & 6.74 & {\scriptsize[5.17, 8.84]} & 0.85 & -- & {\scriptsize[0.5, 174]} \\
+Gemma 2 27B & 27.23 & 13.0 & 477 & 4\% & 22.3 & 3.77 & {\scriptsize[2.92, 4.84]} & 0.73 & -- & {\scriptsize[0.3, 29.5]} \\
+SmolLM2 1.7B & 1.71 & 11.0 & 6428 & 6\% & 293 & 11.34 & {\scriptsize[8.69, 15.06]} & 0.91 & -- & {\scriptsize[1.0, 864]} \\
+SmolLM2 135M & 0.13 & 2.0 & 14,868 & 21\% & 658 & 16.02 & {\scriptsize[12.43, 21.23]} & 0.94 & -- & {\scriptsize[1.9, 2701]} \\
+Apertus 70B & 70.60 & 15.0 & 212 & 3\% & 10.0 & 2.67 & {\scriptsize[2.05, 3.48]} & 0.63 & -- & {\scriptsize[0.2, 11.7]} \\
+MPT 7B & 7.00 & 1.0 & 143 & 3\% & 6.5 & 2.22 & {\scriptsize[1.88, 2.61]} & 0.55 & -- & {\scriptsize[0.4, 6.7]} \\
+\addlinespace
+\multicolumn{11}{@{}l}{\textit{Panel B. Mixture-of-experts (excluded): $N$ and $M$ total/active; $w$ and $s$ at [total-$N$, active-$N$]}} \\[1pt]
+DeepSeek-V3 & 685/37.0 & 14.8 & 21.6/400 & & & \multicolumn{2}{l}{[1.01, 3.50]} & \multicolumn{2}{l}{[0.01, 0.71]} & \\
+Kimi K2 & 1026/32.0 & 15.5 & 15.1/484 & & & \multicolumn{2}{l}{[0.87, 3.79]} & \multicolumn{2}{l}{[$-$0.15, 0.74]} & \\
+Qwen3 235B-A22B & 235/22.0 & 36.0 & 153/1636 & & & \multicolumn{2}{l}{[2.34, 6.39]} & \multicolumn{2}{l}{[0.57, 0.84]} & \\
+Qwen3 30B-A3B & 31/3.3 & 36.0 & 1179/10,909 & & & \multicolumn{2}{l}{[5.56, 14.30]} & \multicolumn{2}{l}{[0.82, 0.93]} & \\
+Llama 4 Scout & 109/17.0 & 40.0 & 368/2353 & & & \multicolumn{2}{l}{[3.40, 7.46]} & \multicolumn{2}{l}{[0.71, 0.87]} & \\
+OLMoE 1B-7B & 7/1.3 & 5.1 & 741/3946 & & & \multicolumn{2}{l}{[4.51, 9.18]} & \multicolumn{2}{l}{[0.78, 0.89]} & \\
+\addlinespace
+\multicolumn{11}{@{}l}{\textit{Panel C. Other excluded models (for reference)}} \\[1pt]
+Gemma 3 27B$^d$ & 27.02 & 14.0 & 518 & 5\% & 24.2 & 3.90 & & 0.74 & & {\scriptsize[0.3, 32.6]} \\
+Llama 3.2 1B$^p$ & 1.24 & 9.0 & 7283 & 21\% & 331 & 11.94 & & 0.92 & & {\scriptsize[1.2, 1024]} \\
+Pythia 1B$^r$ & 1.01 & 0.3 & 296 & 20\% & 13.1 & 3.01 & & 0.67 & & {\scriptsize[0.9, 17.4]} \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
+\begin{tablenotes}$N$: total parameters (Panel B: total/active); $D$: documented training tokens; $M=D/N$; Emb.: embedding share of parameters (config.json). $M^*$: training-only compute-optimal tokens per parameter of the reference technology at the model's own compute. Reference: Chinchilla with the outer exponent $\kappa$ free (inner exponents 0.424/0.431, $\sigma^*_\kappa=0.701$); bracket: 95 percent interval from a design-conditional wild bootstrap of the technology (399 draws); it reflects only sampling uncertainty of one technology and is not the uncertainty of the wedge. $s=(w-1)/w$: planned serving share of lifetime cost when the developer bears serving cost (negative when $w<1$). Lab-own: Meta = Meta's IsoFLOP path with Meta's model-free IsoFLOP curvature; AI2 = OLMo ladder ($\kappa$ free); DeepSeek = DeepSeek LLM's published allocation law with the reference curvature; Marin = Marin's Nemotron-CC ladder path with its model-free curvature. Model-free curvatures are module ra1's random-effects estimates over valid IsoFLOP budgets ($\sigma^*=0.660$ for Llama 3, 0.705 for Marin Nemotron-CC); lab laws postdate Llama 1/2, OLMo 1 and Marin 8B. Band: union of 95 percent intervals (points for literature technologies) over all ex-ante technologies. Panel B: MoE models are excluded from the clean sample because a dense technology at active parameters treats them as parameter-augmenting. Panel C: $^d$ distilled, $^p$ pruned and distilled, $^r$ research suite. Lab-own $w$ with its 95 percent interval and alternatives in \texttt{ra2\_wedge\_labown.csv}.\end{tablenotes}
+\begin{tablenotes}[Source]Module ra2\_wedge; per-model values for every technology in \texttt{output/tables/ra2\_wedge\_models.csv}.\end{tablenotes}
+\end{table}

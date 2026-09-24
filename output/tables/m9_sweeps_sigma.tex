@@ -1,0 +1,68 @@
+\begin{table}[tp]
+\centering
+\caption{Elasticity of Substitution by Corpus (Q1)}
+\label{tab:m9-sigma}
+\footnotesize
+\setlength{\tabcolsep}{1pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+& \multicolumn{2}{c}{FineWeb-Edu} & \multicolumn{2}{c}{FineWeb} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Estimator & P & T & P & T \\
+\midrule
+\multicolumn{5}{l}{\emph{Panel A. Main grid, own validation set}} \\
+Model-free, FLOP & 0.666 &  & pending &  \\
+ & [0.659, 0.673] &  &  &  \\
+ & \{0.652, 0.683\} &  &  &  \\
+Model-free, $w=1$ & 0.665 &  & pending &  \\
+ & [0.660, 0.671] &  &  &  \\
+ & \{0.651, 0.676\} &  &  &  \\
+Model-free, $w=1$ &  & 0.607 &  & pending \\
+ &  & [0.602, 0.614] &  &  \\
+ &  & \{0.596, 0.626\} &  &  \\
+$\kappa$ family & 0.662 & 0.605 & pending & pending \\
+ & [0.635, 0.686] & [0.588, 0.622] &  &  \\
+ & \{0.634, 0.687\} & \{0.578, 0.625\} &  &  \\
+$\kappa$ family, FLOP path & 0.668 &  & pending &  \\
+ & [0.641, 0.693] &  &  &  \\
+ & \{0.641, 0.692\} &  &  &  \\
+$\kappa=1$ & 0.720 & 0.654 & pending & pending \\
+ & [0.691, 0.746] & [0.628, 0.681] &  &  \\
+ & \{0.683, 0.757\} & \{0.618, 0.687\} &  &  \\
+$\kappa$ family, NLS & 0.669 & 0.602 & pending & pending \\
+ & [0.632, 0.707] & [0.569, 0.633] &  &  \\
+ & \{0.626, 0.714\} & \{0.569, 0.633\} &  &  \\
+$\kappa=1$, NLS & 0.717 & 0.647 & pending & pending \\
+ & [0.686, 0.743] & [0.620, 0.672] &  &  \\
+ & \{0.682, 0.751\} & \{0.617, 0.674\} &  &  \\
+$\hat\kappa$ & 0.36 & 0.46 & -- & -- \\
+ & [0.19, 0.50] & [0.28, 0.63] &  &  \\
+\multicolumn{5}{l}{\emph{Panel B. Drop $D=25$M}} \\
+Model-free, FLOP & 0.673 &  & pending &  \\
+ & [0.668, 0.679] &  &  &  \\
+Model-free, $w=1$ &  & 0.629 &  & pending \\
+ &  & [0.626, 0.632] &  &  \\
+$\kappa$ family & 0.675 & 0.619 & pending & pending \\
+ & [0.663, 0.689] & [0.599, 0.638] &  &  \\
+$\kappa=1$ & 0.727 & 0.655 & pending & pending \\
+ & [0.692, 0.760] & [0.623, 0.687] &  &  \\
+\multicolumn{5}{l}{\emph{Panel C. Four-layer floor}} \\
+Model-free, FLOP & 0.660 &  & pending &  \\
+ & [0.658, 0.669] &  &  &  \\
+Model-free, $w=1$ &  & 0.619 &  & pending \\
+ &  & [0.616, 0.629] &  &  \\
+$\kappa$ family & 0.651 & 0.617 & pending & pending \\
+ & [0.639, 0.665] & [0.602, 0.631] &  &  \\
+$\kappa=1$ & 0.698 & 0.658 & pending & pending \\
+ & [0.665, 0.728] & [0.627, 0.686] &  &  \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+$\sigma^*$ is the elasticity of substitution between parameters and data on the compute-optimal path. Model-free: kernel-weighted local quadratic of $\ln L$ in $(\ln N,\ln D)$ (Gaussian kernel, leave-one-out bandwidth), evaluated where the local wedge equals the path value on each isocost (convention P: $w=\eta(N)=d\ln \mathrm{FLOPs}/d\ln N$ on actual-FLOP isocosts, or $w=1$ on $6ND$ isocosts; T: $w=1$ on $6N_{\rm tot}D$ isocosts), averaged over the compute levels whose isocost crosses at least three widths; the plan's identity $1/\sigma^*-1=L_{nn}|_C/(2|dL^*/d\ln C|)$ (generalized for P) gives the same numbers. $\kappa$ family: $L=E+(AN^{-a_1}+BD^{-b_1})^{\kappa}$, $\sigma^*_\kappa=2/(2+a_1+b_1)$. Brackets: 95 percent basic intervals from a wild cluster bootstrap by trunk (Webb weights, 999 draws; eight clusters per corpus), as pre-specified; braces (Panel A): the pre-declared size-corrected companion, the same bootstrap on CR2 leverage-adjusted cluster residuals with the bandwidth re-selected in each draw. On this design the plan's intervals under-cover (coverage 0.83 for $\sigma^*_\kappa$ and 0.40--0.45 for the model-free estimates at nominal 0.95); the companion reaches 0.88 and 0.65--0.70 (Online Appendix power table). Difference column: $p$-value of $H_0$: equal $\sigma^*$, from joint draws with a common weight per width. Output: bits per byte on the corpus's own validation set. ``pending'': the FineWeb grid was incomplete at the time of this run. Parametric fits by Huber loss unless marked NLS (Gaussian).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

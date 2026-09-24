@@ -1,0 +1,275 @@
+% Section V -- Over-training reveals anticipated inference demand (module m3_wedge; theory from m7)
+\section{Over-Training Reveals Anticipated Inference Demand}\label{sec:wedge}
+
+Section~\ref{sec:tech} estimated the technology from designed variation. This section turns the estimates around and
+uses them to read the choices of the labs that release models. A lab that expects its model to process $T$ tokens at inference over its lifetime, and that minimizes lifetime compute
+$6ND+2NT$, equates the ratio of the output elasticities of parameters and data to the ratio of lifetime to training
+compute (Proposition~\ref{prop:wedge}):
+\begin{equation}\label{eq:sV-foc}
+w\equiv\frac{\varepsilon_N}{\varepsilon_D}=1+\frac{T}{3D}=\frac{6ND+2NT}{6ND}.
+\end{equation}
+Two transformations of $w$ recur below: $T/D=3(w-1)$ is planned lifetime inference tokens per training token, and
+$w-1=2NT/(6ND)$ is planned lifetime inference compute as a multiple of training compute. Read forward,
+equation~\eqref{eq:sV-foc} is the inference-aware allocation rule of \citet{sardana2024beyond}. Read backward, it is a
+measurement device: given a technology that delivers the output elasticities at a released model's inputs, the
+allocation reveals how much inference its developer planned for, without any data on usage. The logic is that of the
+production approach to markups \citep{deloecker2012markups}, which recovers a wedge from the gap between an input's
+output elasticity and its cost share. The economics differ: $w$ is the shadow cost of a second use of the same input,
+since every parameter is paid for again on each inference token, not a measure of market power. We measure $w$ for
+open-weight base models, check it against stated intentions, usage, and rival explanations, and aggregate it.
+
+\subsection{Measurement}\label{sec:wedge-measure}
+
+Under the Chinchilla form, the wedge depends on the technology only through the exponents and the level of the
+expansion path:
+\begin{equation}\label{eq:sV-logw}
+\ln\hat w=(\alpha+\beta)\ln G-\alpha\ln N+\beta\ln D=\frac{\alpha+\beta}{2}\,\ln\frac{M}{M^*(C)},
+\end{equation}
+where $M=D/N$ is tokens per parameter, $M^*(C)$ is the training-optimal ratio at the model's own compute, and
+$(\alpha+\beta)/2=1/\sigma^*-1$ (Online Appendix A, Corollary~\ref{cor:suff}). Three properties make the inversion
+usable across labs. First, $w$ does not depend on Hicks-neutral productivity $\omega$, the irreducible loss $E$,
+evaluation noise, or the outer exponent $\kappa$ (Proposition~\ref{prop:wedge}): a lab with a better recipe or a
+different validation corpus has the same wedge at the same $(N,D)$, and the rejection of $\kappa=1$ in
+Section~\ref{sec:tech} matters only through the inner exponents. Second, the level of $\hat w$ is governed by $M^*(C)$, the weakly
+identified object of Section~\ref{sec:ident}, whereas curvature only scales the log distance from the path. Third, at a
+given compute every technology in this family ranks models by $M$, so ranks should be far more robust than levels.
+
+We evaluate equation~\eqref{eq:sV-logw} under several estimated technologies. The reference is our Huber refit of the
+Chinchilla extraction (Section~\ref{sec:tech}; $\alpha=0.347$, $\beta=0.367$, $\sigma^*=0.737$, $M^*(10^{21})=21.4$),
+with 400 pairs-bootstrap draws of $(\alpha,\beta,\ln G)$ that carry the joint sampling uncertainty. The alternatives are
+the published estimates of \citet{besiroglu2024chinchilla}, Approach~3 of \citet{hoffmann2022training}, the Farseer
+sweep \citep{li2025predictableb} with parameter counts including and excluding embeddings, and the RefinedWeb sweep of
+\citet{gadre2024language}. For Meta and AI2 models we add the developers' own technologies: Meta's Llama~3 IsoFLOP law
+\citep{grattafiori2024llama}, the primal technology fitted to the same IsoFLOP points, and AI2's OLMo ladder
+\citep{bhagia2024establishing}. The six common technologies agree on curvature ($\sigma^*$ between 0.72 and 0.80) but
+not on the location of the path: $M^*(10^{21})$ ranges from 3.4 (Gadre et al.) to 34 (Hoffmann et al.). For each model
+we report the reference $\hat w$ with its 95 percent bootstrap interval and a \emph{technology-sensitivity band} (technology band for short), the union of the
+intervals (or points, for published estimates) across technologies. The band is a sensitivity envelope, not an
+identified set: it carries no coverage guarantee, and its bootstrap components reflect sampling error in the sweeps, not
+the error from extrapolating beyond them.
+
+The choice data are Sample B (Section~\ref{sec:data}): 173 general-purpose open-weight base models in 68 families,
+released 2021--2025, with training-token counts documented by their developers and, where available, exact parameter
+counts from the released weights; for mixture-of-experts (MoE) models, $N$ is the number of active parameters. $D$
+counts tokens processed, including repetitions, in each model's own tokenizer. Because $\partial\ln\hat
+w/\partial\ln D=\beta\approx0.37$, a 20 percent difference in tokenizer compression moves $\hat w$ by about 7 percent.
+The lifetime objective also prices an inference FLOP like a training FLOP; if serving costs $p$ times as much per FLOP,
+the first-order condition becomes $w=1+pT/(3D)$, so $\hat T$ is in training-cost-equivalent tokens.
+
+Most of these models lie outside the designs that identify the technologies. For 55 percent, $M$ exceeds the largest
+ratio in the Chinchilla design (341); for 29 percent, it exceeds Farseer's (1,227 with embeddings counted). Seventy-five
+percent use more compute than the largest budget of any design in the band (Chinchilla's $1.3\times10^{22}$ FLOP).
+Proposition~\ref{prop:pi} quantifies the consequence: at a model the size of Llama~3 8B, uncertainty in $M^*$ accounts
+for most of the sampling variance of $\ln\hat w$, and uncertainty in curvature for little of it
+(Section~\ref{sec:ident-pi}). We therefore report levels of $\hat T$ as ranges and rest our conclusions on signs and ranks.
+
+\subsection{Results}\label{sec:wedge-results}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\textwidth]{m3_wedge_fig4}
+\caption{Revealed Wedges and Tokens per Parameter}\label{fig:wedge}
+\begin{figurenotes}
+Revealed wedge $\hat w=\varepsilon_N/\varepsilon_D$ (log scale) against tokens per parameter $M=D/N$ for open-weight
+base models. Blue dots: Sample B under the reference technology, with technology bands (vertical gray bars); hollow
+squares: mixture-of-experts models (active $N$); orange: family flagships; green diamonds: Meta models under Meta's own
+Llama~3 law, linked to their reference wedges; light gray: other open-weight models in \citet{epochai2026data} (token
+counts not verified). Dashed line: the reference technology at $C=10^{24}$ FLOP, $\hat w=(M/M^*(C))^{(\alpha+\beta)/2}$.
+Horizontal bars: ranges of $M$ in the Chinchilla, \citet{gadre2024language} and Farseer designs. Horizontal line: $w=1$,
+the training-optimal allocation.
+\end{figurenotes}
+\end{figure}
+
+Figure~\ref{fig:wedge} plots $\hat w$ against $M$, and Table~\ref{tab:wedge} reports selected models. Under the
+reference technology, the median model in Sample B has $\hat w=3.19$: it was trained as if its developer expected 6.6
+lifetime inference tokens per training token, that is, lifetime inference compute of 2.2 times its training compute.
+The sign is robust. Ninety-five percent of models have $\hat w>1$, and 75 percent have $\hat w>2$. The lower bound of
+the bootstrap interval exceeds 1 for 87 percent of models (80 percent with the budget-clustered bootstrap of
+Section~\ref{sec:tech}), and the whole technology band lies above 1 for 79 percent (136 of 173; median band [1.77,
+6.92]). In cost terms, the median model used 2.4 times the training compute that would have minimized training cost at
+its loss (Farrell cost efficiency 0.41; Section~\ref{sec:framework}).
+
+\input{tables/table6_wedge}
+
+Levels depend on the technology. The median $\hat w$ ranges from 1.91 (Hoffmann et al.) and 2.12 (Meta's law) through
+2.41--2.67 (Farseer) and 3.16 (Besiroglu et al.) to 4.03 (Gadre et al.), and freeing the outer exponent on Farseer gives
+3.85. On the Chinchilla data alone, nonlinear least squares in levels gives 4.11, and keeping the five outlying runs gives
+4.78. These differences dwarf sampling error: the
+median bootstrap interval spans only 0.80 to 1.39 times the point estimate. As Proposition~\ref{prop:pi} predicts, the
+location of the expansion path, not its curvature, drives the uncertainty. Ranks barely move: the Spearman correlation
+between the reference wedges and those under each alternative technology lies between 0.95 and 1.00. The tight curve in
+Figure~\ref{fig:wedge} has the same source. Under the reference technology $M^*(C)$ changes little with compute (21.4 at
+$10^{21}$ and 17.6 at $10^{24}$ FLOP), so $\hat w$ is nearly a function of $M$ alone.
+
+Table~\ref{tab:wedge} makes the magnitudes concrete. Llama~3 8B was trained on 15 trillion tokens ($M=1{,}868$) and has
+$\hat w=5.27$ [3.97, 8.12]: its allocation rationalizes about 13 lifetime inference tokens per training token ($\hat
+T/D=12.8$ [8.9, 21.4]; $\hat T\approx1.9\times10^{14}$ tokens). Under Meta's own law, which imposes $\kappa=1$ on
+Meta's Approach-2 estimates, $\hat w=3.09$ and $\hat T/D=6.3$; the primal fitted to the same IsoFLOP points gives
+$\hat w=4.82$, and the technology band for $\hat T/D$ is [4.4, 33]. The model's cost efficiency is 0.18: Meta spent 5.6
+times the training compute needed for the same loss, which is rational only if the model was expected to serve many
+tokens. Meta's flagships tell the opposite story. Llama~3.1 405B has $\hat w=0.98$ under Meta's law (1.37 [0.99, 2.22]
+under the reference technology), as does Llama~2 70B (0.98; reference 1.19 [0.93, 1.67]). Meta trained its largest
+models on its own training-optimal path and over-trained the small ones. At the extreme, Qwen3 0.6B saw 36 trillion
+tokens ($M=60{,}398$; $\hat w=17.9$), more than 20 times the largest ratio in any design; its level is not credible, but
+its rank is.
+
+Where does extrapolation push the levels? \citet{sardana2024beyond}, who train at up to about 10,000 tokens per
+parameter, find that fitted Chinchilla laws overstate the loss reduction from extra tokens at extreme ratios. If so, the
+true $\varepsilon_D$ at high $M$ is smaller than the extrapolated one, and $\hat w$ understates $w$. On Farseer, the one
+near-factorial public sweep, the nonparametric local elasticity of substitution falls with $M$ at given $N$, which
+suggestively points the same way. Shape restrictions alone deliver a lower bound on $T$ (Proposition~\ref{prop:pi}), but
+on current support it is uninformative: the design points with more parameters and fewer tokens than a Llama-scale model
+are themselves under-trained ($\hat w\le0.77$), so the bound implies only $T\ge0$.
+\textcolor{red}{[TBD-m9: In our controlled sweep, which reaches $M\approx$~X, the Chinchilla form fitted on $M\le$~Y
+over/understates the marginal value of tokens at $M\approx1{,}000$--$2{,}000$ by Z, so reference wedges in this range are
+under/overstated by about W percent.]}
+
+\subsection{Stated Intent}\label{sec:wedge-intent}
+
+The wedge reads developers' stated objectives correctly. Chinchilla, designed to be training-compute-optimal, has $\hat
+w=1.04$ [0.82, 1.42]. The seven Cerebras-GPT models, trained at the 20 tokens per parameter that their developers call
+compute-optimal \citep{dey2023cerebras}, have 0.92--1.00. LLaMA-1 7B and 13B, designed for the best performance at given
+inference budgets \citep{touvron2023llama}, have 1.65--2.07, and Llama~3 8B and 70B, trained well beyond the
+compute-optimal token count to perform better at inference \citep{grattafiori2024llama}, have 2.48--5.27. Pythia is a
+useful warning: every model in the suite saw the same 300 billion tokens by research design \citep{biderman2023pythia},
+and the implied wedges range from 1.09 (12B) to 6.49 (70M). Over-training can be the by-product of a fixed-$D$ design
+rather than of demand. These five cases were chosen because the rule is stated; they are a sanity check without
+statistical power.
+
+\subsection{Trends}\label{sec:wedge-trends}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\textwidth]{m3_wedge_trends}
+\caption{The Revealed Wedge over Time}\label{fig:trends}
+\begin{figurenotes}
+Production-scale language models ($6ND\ge10^{21}$ FLOP) released 2019--2026 ($n=335$): Sample B and open and closed
+models from \citet{epochai2026data}, under the reference technology. Panel (a): median $\hat w$ (log scale) and
+interquartile range by release year, for open-weight and closed or API-only models. Panel (b): shares of models with
+$\hat w<1$ and $\hat w>2$; the number of models per year is shown at the bottom.
+\end{figurenotes}
+\end{figure}
+
+Figure~\ref{fig:trends} turns to time, in a production-scale universe of 335 language models with $6ND\ge10^{21}$ FLOP
+released 2019--2026: Sample B plus open and closed models from Epoch AI's database whose $N$ and $D$ are recoverable
+\citep{epochai2026data}, 271 open-weight and 64 closed. The industry moved from under- to over-training within three
+years. The share of models with $\hat w<1$ was 47 percent in 2021 and 41
+percent in 2022, fell to 18 percent in 2023, and was 0 percent in 2024 and 2 percent in 2025. The median $\hat w$ rose
+from 1.06 in 2022 to 1.83 in 2023, 3.45 in 2024, and 4.68 in 2025, as median tokens per parameter rose from 23 to 1,303.
+The early under-training is concentrated in closed giants: GPT-3 175B (0.43), Gopher (0.37), Megatron-Turing NLG 530B
+(0.28), and PaLM 540B (0.41). It is not negative demand. By Proposition~\ref{prop:wedge}, a wedge below one can reveal
+only a binding data constraint or optimization against a mistaken technology, here the law of
+\citet{kaplan2020scaling}, which prescribed far fewer tokens per parameter.
+
+Open-weight developers led the shift. Conditional on release year and MoE architecture, open-weight models have $\ln\hat
+w$ higher by 0.57 (standard error 0.09), and by 0.44 (0.09) when $\ln C$ is also held fixed (standard errors clustered by
+developer, 94 clusters). Dropping 11 Epoch rows whose token counts are inconsistent with Epoch's own compute estimates
+gives 0.59 and 0.43. Among developers with at least four production-scale models, the median $\hat w$ is 6.6 at Hugging
+Face, 4.8 at Alibaba, 2.3 at Google, 1.8 at Meta, and 1.0 at Cerebras. Two selection caveats apply. Closed developers
+rarely disclose $N$ and $D$ (64 closed models, 3 of them from 2025), and some open developers do not disclose $D$
+(Mistral's models are absent), so the premium compares disclosed allocations.
+
+\subsection{Within-Family Revealed Preference and Over-Identification}\label{sec:wedge-family}
+
+Families offer a way around $M^*$, the least reliable input to the inversion. In the spirit of
+\citet{gandhi2020identification}, a first-order condition at one point can calibrate the technology. If a family's
+flagship, its largest model, sits on its developer's training-optimal path ($w_f=1$), each sibling's wedge relative to
+the flagship is
+\begin{equation}\label{eq:sV-rel}
+w_i^{\mathrm{rel}}=\Big(\frac{N_i}{N_f}\Big)^{-\alpha}\Big(\frac{D_i}{D_f}\Big)^{\beta}.
+\end{equation}
+This ratio depends on the exponents but not on the family's $A/B$, so it removes the dominant source of uncertainty in
+Proposition~\ref{prop:pi}. Smaller siblings are more over-trained than their flagships with few exceptions: 95 percent of
+105 non-flagship siblings in 44 families have $w^{\mathrm{rel}}>1$; the exceptions are five small Cerebras-GPT models
+trained at a constant $M=20$ (0.92--0.98). Given the exponents and the observed token counts, this is close to mechanical.
+
+The normalization is itself testable, and after 2024 it fails. The 18 flagships released before 2024 have a median
+reference $\hat w$ of 1.14, and half of their bootstrap intervals contain 1. The 26 flagships released from 2024 onward
+have a median of 3.14, and 92 percent of their intervals lie above 1 (Qwen3 32B, for example, has 4.46 [3.22, 7.33]).
+Recent flagships are themselves over-trained, so flagship-normalized demands are lower bounds. Meta is the exception:
+under its own law, both Llama~2 70B and Llama~3.1 405B have $\hat w=0.98$.
+
+Families also permit an over-identification test in the spirit of \citet{raval2023testing}. If every family faced one
+iso-elastic demand for model size, $T_i=\tau_fN_i^{-\eta}$, the slope of $\ln\hat T_i$ on $\ln N_i$ would be common
+across families. The pooled slope is $\hat\eta=0.53$ (0.07), and homogeneity is rejected ($F=2.55$, $p=0.001$; 138
+models in 42 families; a classical $F$ test on models with $\hat T>0$). Much of this rejection is mechanical, because a
+family that trains all sizes on the same $D$ has $\hat T_i/D$ a nonlinear function of $N_i$ alone. In the 18 families
+whose token counts vary by more than 10 percent across sizes, the rejection is marginal ($p=0.047$ with absolute $\hat
+T$, 58 models; $p=0.12$ with flagship-normalized $\hat T$, 33 models in 11 families). Families that scale $D$ with $N$
+(e.g., Gemma~2, SmolLM2, Phi-3.5) imply planned demand rising with size: either their large models were expected to
+serve more tokens, or these developers set $D$ by per-size budget rules rather than by minimizing lifetime cost. The
+test cannot distinguish the two, and it does not reject the wedge itself.
+
+\subsection{Validation against Usage}\label{sec:wedge-validation}
+
+If over-training reflects anticipated demand, more over-trained models should be used more. Because $w$ is a function of
+$(N,D)$, the informative comparison holds compute fixed: at a given $C$, a higher $M$ means a smaller model, cheaper to
+serve but, under a common technology, with higher loss than the compute-optimal one. Table~\ref{tab:validation}
+regresses usage on $\ln M$, controlling for $\ln C$, release year, and log months since release, for 164 Sample B models
+from 26 developers. Downloads rise roughly one for one with tokens per parameter: the coefficient is 0.97 (0.18) for
+all-time and 1.13 (0.19) for 30-day downloads, and 0.72 (0.14) and 0.94 (0.14) with developer fixed effects. The number
+of OpenRouter providers serving a model rises by 0.08 (0.04) log points per log point of $M$, and LMArena votes by 0.29
+(0.16) among 46 matched models. Without controls, the correlations with likes (0.13, standard error 0.25) and votes
+($-0.17$, 0.40) are weak or negative: the size confound at work.
+
+\input{tables/table7_validation}
+
+This is weak evidence of demand. At fixed $C$, the coefficient on $\ln M$ equivalently says that smaller models of equal
+compute are downloaded more, which the larger number of users able to run small models also predicts. Developer or
+vintage quality correlated with $M$ is not ruled out; the fixed-effects estimate (0.72) is the conservative number.
+Downloads are not inference tokens, and OpenRouter lists only 21 of the 164 models in a current snapshot. We read
+Table~\ref{tab:validation} as a correlation consistent with anticipated demand, not as an estimate of $T$; per-model
+inference volumes, such as the OpenRouter panel of \citet{demirer2025emerging}, would permit a test of levels.
+
+\subsection{Rival Wedges}\label{sec:wedge-rivals}
+
+Proposition~\ref{prop:wedge} signs the rival explanations. A binding data constraint lowers $w$; a binding memory or
+latency constraint raises it with no inference demand at all; and factor-augmenting productivity multiplies the
+econometrician's wedge by $e^{-\chi}$, where $\chi=\beta\psi_D-\alpha\psi_N$ is the factor-bias index. Online Appendix Table~\ref{tab:app-rivals}
+gives details.
+
+Data scarcity and Kaplan-era beliefs produce $w<1$, so they cannot generate the modern pattern; under-training is a
+pre-2024 phenomenon (one of the 171 production-scale models released since 2024 has $\hat w<1$). Hardware tiers are a
+real but second-order rival. Of the open-weight production-scale models released 2023--2026, 26 percent have 6.5--9.5
+billion parameters, which fit on one 16--24 GB accelerator at 16-bit precision, against 9 percent under a log-normal fit.
+Given $\ln C$ and year, these models have $\ln\hat w$ higher by 0.11 (0.06), about a tenth of the median $\ln\hat w$ of
+1.16. Under the parameters of \citet{besiroglu2024chinchilla}, a memory cap at half the training-optimal size would by
+itself produce $w=1.78$ with $T=0$, so tiers cannot be dismissed, but the estimated effect is too small to explain the
+level.
+
+Non-homotheticity is the most serious rival: if the training-optimal ratio rises with compute, large models trained at
+high $M$ may be closer to optimal than the Chinchilla form implies. Farseer's own non-homothetic form
+\citep[Eq.~3]{li2025predictableb} implies $M^*(C)$ rising from 25 at $10^{20}$ to 82 at $10^{23}$ FLOP (195 at $10^{24}$,
+extrapolated). It can rationalize the token counts of large models but not of small ones. Within Farseer's parameter
+support (66 models), its wedges are higher than those of the Chinchilla form fitted to the same sweep (median 4.12 versus
+3.44); above that support (75 models), they are lower (1.54 versus 2.12), and Llama~3 70B would be under-trained (0.62).
+This last comparison extrapolates a nine-parameter form one to two orders of magnitude beyond its support.
+
+Distilled and synthetic-data-heavy models show no detectable difference in $\ln\hat w$ given $\ln C$ and year (0.02
+(0.23) and 0.06 (0.18)); the test has no power, and the sign of any bias is ambiguous because distillation could augment
+either input. Factor-biased recipes are bounded by the estimates of Section~\ref{sec:tech}: across 25 DataDecide recipes,
+factor bias moves the wedge at given $(N,D)$ by a factor of at most 1.25--1.29 (1.80 in the most extreme robustness
+variant; 1.02--1.04 across the corpora of Gadre et al.). Eighty-eight percent of Sample B have $\hat w$ above 1.29, and 79
+percent above 1.80; for 69 and 49 percent, the whole technology band lies above these factors. Recipe bias of the
+measured size cannot make the typical modern model training-optimal, although, combined with the widest band and the
+extreme factor, it could for about half of the sample.
+
+\subsection{An Illustrative Aggregate}\label{sec:wedge-aggregate}
+
+The compute-weighted mean of $w-1$,
+\begin{equation}\label{eq:sV-agg}
+\frac{\sum_i(w_i-1)C_i}{\sum_iC_i}=\frac{\sum_i2N_iT_i}{\sum_i6N_iD_i},
+\end{equation}
+is the planned lifetime inference compute of a set of models as a multiple of their training compute. For the 271
+open-weight production-scale models it is 2.0 [1.2, 3.7] under the reference technology (technology band [0.4, 7.2]).
+For 2025 releases it is 3.2 [2.1, 5.7] (band [1.05, 9.6]), up from 1.2 [0.6, 2.3] for 2024. For 2022 releases it is
+negative ($-0.40$), because BLOOM, OPT-175B, and GLM-130B were under-trained (0.03 with $\hat T$ truncated at zero).
+Three caveats make equation~\eqref{eq:sV-agg} an illustration of the object rather than a measurement: it is dominated
+by the largest models, whose wedges are the most extrapolated; it depends heavily on the technology, from 0.67 (Hoffmann
+et al.) to 3.26 (Gadre et al.); and we found no public per-model inference volumes against which to validate it.
+
+The robust findings of this section are therefore ordinal. The typical open-weight model is over-trained under every
+technology we consider, small models more than large ones and open developers more than closed ones, and the industry
+switched from under- to over-training in about three years. The cardinal findings, how many inference tokens a given
+developer expected, inherit the fragility of $M^*$ documented in Sections~\ref{sec:ident} and~\ref{sec:tech}; calibrating
+$M^*$ within families and experimenting at high $M$ are the natural ways to tighten them.

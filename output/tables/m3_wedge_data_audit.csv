@@ -1,0 +1,23 @@
+item,n
+Epoch language-model rows (all dates),2070
+excluded: derived model (fine-tune / continued pretraining / post-training of a base model),531
+excluded: N missing,361
+excluded: date outside 2019-01..2026-09,234
+excluded: D (tokens) not recoverable,224
+excluded: multimodal domain (D includes non-text tokens),131
+excluded: benchmark-scale research model (unique corpus < 5e9 tokens,100
+excluded: encoder (masked LM / embedding model),34
+excluded: manual,29
+excluded: MoE with unknown active parameters,27
+excluded: encoder-decoder or dialogue seq2seq,24
+excluded: post-trained / derived variant (name),16
+excluded: implausible,15
+excluded: multimodal / non-text model,2
+"Sample A kept (decoder-only pretrained, N and D recovered)",342
+"Sample A core (6ND >= 1e21, not speculative, not code)",287
+Sample A matched to Sample B,115
+Sample B (verified open-weight),188
+Sample B curated additions with card-verified D,47
+Sample B with exact HF parameter count,143
+Sample B with |log10(D/D_Epoch)| > 0.05 (documented),5
+Sample B dropped from ObsScaling (reasons in sampleB_dropped.csv),17

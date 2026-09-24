@@ -1,0 +1,57 @@
+estimator,spec,param,est,se,n_obs,n_clusters,n_families,lo,hi,rho,F,ar_lo,ar_hi,ar_type,reliability,output,sample
+OLS,"n,d",theta_N,0.46967012124185886,0.04718687997172145,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OLS,"n,d",theta_D,0.2566803609676869,0.04169353060362894,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OLS,"n,d",theta_C_ray,0.3631752411047729,0.020431178134325736,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OLS,"n,d",thetaN_minus_thetaD,0.21298976027417194,0.07912124943083608,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OLS,c only,theta_C,0.37122347974918657,0.023006797111533882,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Year FE,"n,d",theta_N,0.4875336818459617,0.044035112421541164,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Year FE,"n,d",theta_D,0.18648240455066983,0.07462015365982204,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Year FE,"n,d",theta_C_ray,0.3370080431983158,0.03196666857155486,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Year FE,"n,d",thetaN_minus_thetaD,0.30105127729529185,0.10453250842743567,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Year FE,c only,theta_C,0.37159986146346274,0.02559459717056661,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Developer FE,"n,d",theta_N,0.5062009911740375,0.04952529024451274,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Developer FE,"n,d",theta_D,0.20534910836638148,0.07247740013974821,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Developer FE,"n,d",theta_C_ray,0.35577504977020946,0.03686461374308225,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Developer FE,"n,d",thetaN_minus_thetaD,0.300851882807656,0.09987720873119257,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Developer FE,c only,theta_C,0.4032934495708586,0.04581026016868379,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Family FE,"n,d",theta_N,0.4896176258687972,0.0630590862274971,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Family FE,"n,d",theta_D,0.18937180674280693,0.1594733690651659,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Family FE,"n,d",theta_C_ray,0.3394947163058021,0.07752072988443572,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Family FE,"n,d",thetaN_minus_thetaD,0.30024581912599024,0.18649008913725273,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Family FE,c only,theta_C,0.44067291780883777,0.05709533260907174,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Lab x period FE,"n,d",theta_N,0.49244673058840255,0.05987934268102285,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Lab x period FE,"n,d",theta_D,0.25233286402866606,0.13877188757307657,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Lab x period FE,"n,d",theta_C_ray,0.3723897973085343,0.07199587809990395,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Lab x period FE,"n,d",thetaN_minus_thetaD,0.2401138665597365,0.15796429681262478,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Lab x period FE,c only,theta_C,0.4408825964257149,0.05195506756011548,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,"n,d",theta_N,0.48961762586879964,0.05333796641315568,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,"n,d",theta_D,0.18937180674280618,0.13488912878129572,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,"n,d",theta_C_ray,0.3394947163058029,0.06557021888924881,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,"n,d",thetaN_minus_thetaD,0.30024581912599346,0.15774098081411755,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,"n,d",between_minus_within_n,-0.055779742668265825,0.09235747745221828,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,"n,d",between_minus_within_d,0.08771630630442141,0.1389624884579234,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,c only,theta_C,0.4406729178088374,0.048177094433844665,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Mundlak,c only,between_minus_within_c,-0.09974619870617989,0.04592622060793871,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Reverse (c on y),c only,theta_C,0.4955113733627015,0.05154728384503103,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+"Reverse (c on y), family FE",c only,theta_C,0.5401330360668051,0.07054659270962052,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+Notable only,c only,theta_C,0.2806587551197544,0.059249392278361554,19,7.0,13.0,,,,,,,,,y_hellaswag,main
+OP-style selection control,"n,d",theta_N,0.5596077276599609,0.062013651662310376,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OP-style selection control,"n,d",theta_D,0.25363289542335093,0.03607853464613044,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OP-style selection control,"n,d",theta_C_ray,0.4066203115416559,0.032714259405340715,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OP-style selection control,"n,d",thetaN_minus_thetaD,0.30597483223661,0.07754879906003134,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+OP-style selection control,c only,theta_C,0.3759993644493007,0.03520860120717815,128,22.0,38.0,,,,,,,,,y_hellaswag,main
+FD across generations,,theta_N,-0.0010426734007901173,0.4860358272079019,30,10.0,,,,,,,,,,y_hellaswag,main
+FD across generations,,theta_D,0.0652739929632963,0.12439913255214977,30,10.0,,,,,,,,,,y_hellaswag,main
+FD across generations,,theta_C_ray,0.032115659781253095,0.27991951103787854,30,10.0,,,,,,,,,,y_hellaswag,main
+"ACF-style (AR(1) omega, gens)",,theta_N,0.5602686360847284,0.8234812813607685,30,10.0,,-0.870864020725563,0.7938048591598688,1.17,,,,,,y_hellaswag,main
+"ACF-style (AR(1) omega, gens)",,theta_D,0.7541779435935051,1.5546862026941883,30,10.0,,-0.36225183948010126,1.2541839053839254,1.17,,,,,,y_hellaswag,main
+"ACF-style (AR(1) omega, gens)",,theta_C_ray,0.6572232898391168,0.5534385054982289,30,10.0,,-0.1945553587785622,1.0127118116726155,1.17,,,,,,y_hellaswag,main
+IV: frontier FLOP/$,,theta_C,0.37449263194143967,0.09249736100276215,128,22.0,,,,,2.290369342083134,-1.0,2.5,unbounded,,y_hellaswag,main
+IV: frontier FLOP/$ + developer FE,,theta_C,0.2200741099492447,0.11969341832550122,128,22.0,,,,,1.7190063663022122,-1.0,2.5,unbounded,,y_hellaswag,main
+IV: frontier FLOP/$ + developer FE + trend,,theta_C,-11.497585631033871,234.4242464014861,128,22.0,,,,,0.001988101345789848,-1.0,2.5,unbounded,,y_hellaswag,main
+IV: own-hardware FLOP/$,,theta_C,0.2762527030476709,0.08304721825371784,24,8.0,,,,,10.671748502942513,-0.05499999999999994,0.42500000000000004,interval,,y_hellaswag,main
+IV: China x post-export-control + dev FE + year FE,,theta_C,0.9531804350173161,0.4854611257303589,128,22.0,,,,,2.3581838411856193,0.41999999999999993,2.5,unbounded,,y_hellaswag,main
+"OLS, EIV-corrected (empirical)",,theta_C,0.3731613773704642,0.02312689947527925,128,,,,,,,,,,0.9948068108362841,y_hellaswag,main
+"OLS, EIV-corrected (Epoch 'Confident')",,theta_C,0.39543458816875804,0.02450729503162982,128,,,,,,,,,,0.9387734175412117,y_hellaswag,main
+"Family FE, EIV-corrected (empirical)",,theta_C,0.4460777680858519,0.05779560646706776,128,,,,,,,,,,0.9878836143298361,y_hellaswag,main
+"Family FE, EIV-corrected (Epoch 'Confident')",,theta_C,0.5141138673855504,0.06661063358118059,128,,,,,,,,,,0.8571504208781885,y_hellaswag,main

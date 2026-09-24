@@ -1,0 +1,51 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Economic Implications under Alternative Technologies}
+\label{tab:ra3_econ}
+\begin{tabular}{lccccccc}
+\toprule
+\multicolumn{8}{l}{\textit{Panel A. Data demand and the path slope $a$}} \\
+ & & \multicolumn{2}{c}{Growth of $D^*$} & $D^*$ at 2026 & \multicolumn{2}{c}{Year 100T unique tokens reached} & Year 320T \\
+\cmidrule(lr){3-4}\cmidrule(lr){6-7}
+Technology & $a$ & per year & 5 years & frontier (T) & compute-optimal & observed $M$ & (observed $M$) \\
+\midrule
+Chinchilla refit, $\kappa=1$ & 0.51 & 2.20 & 52 & 48 & 2027.9 & 2027.4 & 2029.0 \\
+Chinchilla refit, $\kappa$ free & 0.50 & 2.24 & 56 & 57 & 2027.7 & 2027.4 & 2028.9 \\
+Chinchilla IsoFLOP minima (Approach 2) & 0.50 & 2.26 & 59 & 58 & 2027.6 & 2027.3 & 2028.8 \\
+Llama 3 (Meta's IsoFLOP law) & 0.46 & 2.39 & 78 & 90 & 2027.0 & 2027.1 & 2028.5 \\
+DeepSeek LLM (published law) & 0.52 & 2.16 & 47 & 40 & 2028.2 & 2027.5 & 2029.1 \\
+Farseer, $\kappa=1$ & 0.53 & 2.16 & 47 & 43 & 2028.1 & 2027.5 & 2029.1 \\
+Farseer, own form (local) & 0.36 & 2.84 & 183 & 419 & 2025.4 & 2026.6 & 2027.8 \\
+Gadre et al., RefinedWeb & 0.57 & 2.02 & 34 & 9 & 2030.6 & 2027.8 & 2029.6 \\
+OLMo ladder (AI2) & 0.37 & 2.78 & 165 & 519 & 2025.2 & 2026.7 & 2027.9 \\
+Marin, DCLM (Approach 2) & 0.42 & 2.55 & 107 & 120 & 2026.7 & 2026.9 & 2028.2 \\
+\midrule
+\multicolumn{8}{l}{\textit{Panel B. The data wall and the curvature $\sigma^*$ (repetition: $R^*_D=15.4$)}} \\
+ & & \multicolumn{2}{c}{Extra compute (\%)} & Hard wall & Shadow value & $\sigma_{CU}$ & $\gamma_{\rm eff}/\gamma$ \\
+\cmidrule(lr){3-4}
+Technology & $\sigma^*$ & $r=4$ & $r=16$ & $r_{\max}$ & $r=4$ & $r=4$ & $r=16$ \\
+\midrule
+Chinchilla refit, $\kappa=1$ & 0.74 & 7.2 & 58 & 117 & 0.43 & 0.49 & 0.82 \\
+Chinchilla refit, $\kappa$ free & 0.70 & 7.4 & 63 & 83 & 0.45 & 0.48 & 0.80 \\
+Equivalent member, $\sigma^*=0.70$ & 0.70 & 7.4 & 63 & 84 & 0.45 & 0.48 & 0.81 \\
+Equivalent member, $\sigma^*=0.60$ & 0.60 & 7.7 & 77 & 47 & 0.51 & 0.47 & 0.78 \\
+$\kappa=1$, Muennighoff full model (excess $N$ decays, $R^*_N=5.3$) & 0.74 & 43.4 & $\infty$ & 9 & 4.28 & 0.49 & -- \\
+$\kappa=1$, Muennighoff data-only fit ($R^*_D=2.9$) & 0.74 & 35.6 & 1244 & 28 & 1.50 & 0.54 & 0.56 \\
+\midrule
+\multicolumn{8}{l}{\textit{Panel C. Planned inference share of lifetime compute, $s=(w-1)/w$ (open-weight models; module ra2)}} \\
+ & \multicolumn{4}{c}{Clean production-scale universe} & \multicolumn{3}{c}{Clean verified sample} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-8}
+Release period & Models & $s$ & 95\% CI & $s$, $\kappa=1$ & Models & $s$ & Technology range \\
+\midrule
+2019--2022 & 8 & 0.04 & [0.03, 0.05] & 0.03 & -- & -- & -- \\
+2023 & 53 & 0.35 & [0.25, 0.46] & 0.33 & 24 & 0.28 & [0.01, 0.58] \\
+2024 & 56 & 0.54 & [0.41, 0.64] & 0.50 & 40 & 0.58 & [0.05, 0.74] \\
+2025 & 24 & 0.82 & [0.76, 0.86] & 0.77 & 13 & 0.83 & [0.24, 0.96] \\
+All 2019--2025 & 141 & 0.64 & [0.54, 0.72] & 0.59 & 77 & 0.66 & [0.10, 0.86] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Panel A: $a$ is the path slope ($N^*\propto C^{a}$, $D^*\propto C^{1-a}$); for Farseer's own (non-homothetic) form it is the local slope at $10^{22}$--$10^{23}$ FLOP. Growth of $D^*$ uses frontier compute growth of 5.06$\times$ per year (running top-10 training runs at release, 2018--2026, Epoch AI; wild-cluster-bootstrap 95\% CI [4.29, 5.93]). $D^*$ at 2026 is compute-optimal data at the fitted frontier compute in September 2026 ($9.4\times10^{26}$ FLOP), in each technology's own token units. Years: first date at which frontier runs reach the quality-adjusted stock of public text (100T tokens in 2024, 95\% CI [22T, 490T]) or the repetition-adjusted stock (320T [65T, 1,700T]) of Villalobos et al. (2024), growing 5\% per year; `observed $M$' scales each technology's $D^*$ by the median ratio $D/D^*(C)$ of the four disclosed dense (non-mixture-of-experts) runs above $10^{25}$ FLOP (2024--2026). Panel B: technologies combine the Chinchilla family with the repetition model of Muennighoff et al. (2023), $D'=U+UR^*_D(1-e^{-R/R^*_D})$, with their jointly fitted $R^*_D=15.4$ but without their decay of excess parameters (the most favourable case; the last two rows use their full model and their data-only fit); `equivalent members' share the $\kappa=1$ refit's expansion path and frontier and differ only in curvature. $r=D^*(C)/U$ is the ratio of compute-optimal to unique tokens. Extra compute: additional FLOP needed to reach the unconstrained frontier loss. $r_{\max}$: scarcity beyond which that loss is unattainable at any compute. Shadow value: $-\partial C/\partial U$ at fixed loss, in units of the processing cost of one token ($6N$); at $C=10^{26}$ one unit is about \$7 per million tokens at \$$1.0\times10^{-18}$ per FLOP (median amortized cost of 2024--2025 frontier runs, Epoch AI). $\sigma_{CU}$: elasticity of substitution between compute and unique tokens along the isoquant. $\gamma_{\rm eff}/\gamma$: elasticity of reducible loss with respect to compute behind the wall relative to the frontier elasticity. All Panel B objects depend on $r$ only (checked at $10^{25}$ and $10^{27}$ FLOP). Panel C: module ra2's inversion. $s=\sum_i(w_i^+-1)C_i/\sum_i w_i^+C_i$ with $w^+=\max(w,1)$ (compute-weighted; planned inference truncated at 0), under ra2's reference technology (Chinchilla refit, $\kappa$ free, $\sigma^*=0.70$). Universe: production-scale ($6ND\geq10^{21}$) open-weight models with confident $N$ and $D$, excluding mixture-of-experts, non-transformer and ra2-excluded models. 95\% CI: design-conditional wild bootstrap of the reference technology ($B=399$). $\kappa=1$: the Chinchilla refit with $\kappa=1$. Clean verified sample: ra2's 77-model inference-demand sample (2023--2025); technology range: minimum and maximum of the aggregate recomputed under each of ra2's 32 ex-ante technologies. Growth calibration: halving reducible loss requires $2^{1/\gamma}=49\times$ compute at $\gamma=0.178$ (2.4 years of frontier compute growth).
+\end{tablenotes}
+\end{table}

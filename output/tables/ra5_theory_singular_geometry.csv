@@ -1,0 +1,13 @@
+technology,direction,crit_slope,dsigma_slope,crit_value
+Hoffmann (alpha != beta),"opposite (1,-1)",3.9999997850981175,0.9999803667423021,
+Hoffmann (alpha != beta),"opposite, sigma* moves (2,-1)",3.99996014672136,0.9998691381292334,
+Hoffmann (alpha != beta),"same sign (1,1)",1.9999194227858406,0.999797190716383,
+Hoffmann (alpha != beta),"same sign (1,0.5)",1.9999597394789996,0.999842973248852,
+Hoffmann (alpha != beta),"P=0, r1 arbitrary",,,1.9091045273550032e-25
+Hoffmann (alpha != beta),restricted r1=r2 (path imposed),1.9999194227858406,,
+equal exponents (alpha = beta),"opposite (1,-1)",3.9999999546355647,,
+equal exponents (alpha = beta),"opposite, sigma* moves (2,-1)",3.999947586442641,0.9998882510290412,
+equal exponents (alpha = beta),"same sign (1,1)",1.9998958785946959,0.9997765475877496,
+equal exponents (alpha = beta),"same sign (1,0.5)",1.9999479743181223,0.9998323936174571,
+equal exponents (alpha = beta),"P=0, r1 arbitrary",,,2.3502532949249605e-25
+equal exponents (alpha = beta),restricted r1=r2 (path imposed),1.9998958785946959,,

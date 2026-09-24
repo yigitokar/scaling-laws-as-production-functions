@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Implied Lifetime Inference Compute of the Open-Weight Ecosystem}
+\label{tab:m3_aggregate}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+Release year & $n$ & $\sum 6ND$ & median $\hat w$ & $\sum 2NT/\sum 6ND$ & PI band & Truncated & PI band \\
+\midrule
+2019 & 1 & $4.6\times10^{21}$ & 2.74 & 1.74 [1.32, 2.45] & [0.85, 3.88] & 1.74 & [0.85, 3.88] \\
+2020 & 1 & $2.0\times10^{21}$ & 2.01 & 1.01 [0.76, 1.40] & [0.55, 2.56] & 1.01 & [0.55, 2.56] \\
+2021 & 10 & $1.1\times10^{23}$ & 1.93 & 0.63 [0.38, 1.05] & [0.20, 2.58] & 0.65 & [0.26, 2.58] \\
+2022 & 21 & $1.6\times10^{24}$ & 1.07 & -0.40 [-0.50, -0.23] & [-0.68, 0.99] & 0.03 & [0.01, 0.99] \\
+2023 & 81 & $1.4\times10^{25}$ & 2.00 & 0.53 [0.20, 1.15] & [-0.18, 3.54] & 0.54 & [0.15, 3.54] \\
+2024 & 95 & $1.2\times10^{26}$ & 3.66 & 1.16 [0.60, 2.27] & [-0.04, 5.75] & 1.16 & [0.27, 5.75] \\
+2025 & 58 & $9.2\times10^{25}$ & 5.01 & 3.22 [2.11, 5.67] & [1.05, 9.64] & 3.22 & [1.05, 9.64] \\
+2026 & 4 & $2.0\times10^{25}$ & 3.77 & 2.78 [1.76, 5.10] & [0.65, 9.39] & 2.78 & [0.65, 9.39] \\
+all & 271 & $2.5\times10^{26}$ & 2.86 & 2.00 [1.23, 3.69] & [0.44, 7.17] & 2.01 & [0.60, 7.17] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Open-weight production-scale models ($6ND\ge10^{21}$ FLOP; Samples A and B). The multiple $\sum_i 2N_iT_i/\sum_i 6N_iD_i=\sum_i(w_i-1)C_i/\sum_iC_i$ is the compute-weighted mean of $w-1$: planned lifetime inference compute as a multiple of training compute. Reference technology with 95\% bootstrap interval; PI band = range over the Chinchilla refit, Besiroglu et al., Hoffmann et al., Farseer (incl.\ embeddings), Gadre et al.\ RefinedWeb and Meta's law, including their bootstrap intervals. Truncated: $T_i$ set to zero when $w_i<1$ (under-training is not negative demand). The multiple is dominated by the largest models, whose wedges are the most extrapolated.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,7 @@
+source,key,firm,period,metric,inference_share,note,kind
+Patterson et al. (2022),patterson2022carbon,Google,2019-2021,"share of ML energy (one week each April; incl. research, development, testing)",0.6,"about 3/5 inference, 2/5 training in all three years; ML = 10-15% of Google energy",disclosure
+Wu et al. (2022),wu2022sustainable,Facebook/Meta,2019-2021,"AI power capacity, experimentation:training:inference = 10:20:70",0.7,0.78 of training+inference if experimentation is excluded,disclosure
+Wu et al. (2022),wu2022sustainable,Facebook/Meta,2019-2021,carbon footprint of the production language (translation) model LM,0.65,recommendation models split about evenly,disclosure
+Nvidia Q4 FY2024 earnings call (21 Feb 2024),nvidia2024q4call,Nvidia (customers),Feb 2023-Jan 2024,share of data-center revenue for AI inference (hardware flow),0.4,CFO: 'approximately 40% of data center revenue was for AI inference',disclosure
+"You (2025), Epoch AI, from press reports",you2025openai,OpenAI,2024,"inference / (inference + all R&D compute), cloud spend",0.2647058823529412,$1.8B inference vs ~$5B R&D compute; not a firm disclosure,press-reported
+"You (2025), Epoch AI, from press reports",you2025openai,OpenAI,2024,inference / (inference + final training runs of released models),0.7933010136624064,final runs ~$0.47B (GPT-4.5 $386M + others $83M),press-reported

@@ -1,0 +1,52 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Lab-Own Technologies from IsoFLOP Experiments}
+\label{tab:m1_labs}
+\begin{threeparttable}
+\begin{tabular}{lccccc}
+\toprule
+ & Llama 3 & Marin Comma & Marin DCLM & Marin Nemotron-CC & (Mis)Fitting FineWeb/C4 \\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A. Primal (Approach 3, Huber-LSE on IsoFLOP runs); cluster-bootstrap s.e.}} \\
+Runs (budgets) & 133 (10) & 85 (7) & 85 (7) & 88 (8) & 176 (26) \\
+$E$ & 0.594 & 2.701 & 2.588 & 2.520 & 2.692 \\
+ & (0.016) & (0.083) & (0.066) & (0.077) & (0.058) \\
+$\alpha$ & 0.284 & 0.666 & 0.686 & 0.639 & 0.610 \\
+ & (0.050) & (0.085) & (0.061) & (0.079) & (0.051) \\
+$\beta$ & 0.316 & 0.350 & 0.405 & 0.400 & 0.705 \\
+ & (0.024) & (0.038) & (0.034) & (0.040) & (0.040) \\
+$a$ & 0.527 & 0.345 & 0.371 & 0.385 & 0.536 \\
+ & (0.032) & (0.026) & (0.018) & (0.020) & (0.019) \\
+$\gamma$ & 0.149 & 0.229 & 0.255 & 0.246 & 0.327 \\
+ & (0.015) & (0.023) & (0.020) & (0.025) & (0.020) \\
+$\sigma^*$ & 0.769 & 0.663 & 0.647 & 0.658 & 0.603 \\
+ & (0.018) & (0.022) & (0.017) & (0.022) & (0.014) \\
+$M^*(10^{21})$ & 13.9 & 26.6 & 17.9 & 16.7 & 13.8 \\
+ & (2.7) & (5.3) & (2.7) & (2.7) & (3.1) \\
+$M^*(3.8\times10^{25})$ & 7.9 & 707.3 & 270.3 & 188.8 & 6.4 \\
+\multicolumn{6}{l}{\textit{Panel B. Approach 2 argmins + Approach 1 frontier; $\alpha,\beta$ via $\kappa=1$; stratified s.e.}} \\
+$a$ & 0.463 & 0.405 & 0.424 & 0.422 & 0.517 \\
+ & (0.006) & (0.032) & (0.030) & (0.027) & (0.041) \\
+$\gamma$ & 0.136 & 0.051 & 0.076 & 0.075 & 0.165 \\
+ & (0.003) & (0.011) & (0.023) & (0.020) & (0.078) \\
+$\alpha=\gamma/a$ & 0.295 & 0.126 & 0.179 & 0.177 & 0.320 \\
+ & (0.009) & (0.033) & (0.059) & (0.054) & (0.185) \\
+$\beta=\gamma/(1-a)$ & 0.254 & 0.086 & 0.131 & 0.129 & 0.343 \\
+ & (0.007) & (0.015) & (0.032) & (0.031) & (0.130) \\
+$M^*(3.8\times10^{25})$ & 40.9 & 115.9 & 56.7 & 61.8 & 10.2 \\
+\multicolumn{6}{l}{\textit{Panel C. Cross-equation tests: statistic (p-value)}} \\
+Wald, path ($\chi^2_2$), design & 16.9 ($<$0.001) & 2.2 (0.332) & 1.5 (0.466) & 1.3 (0.535) & 4.5 (0.108) \\
+Wald, path ($\chi^2_2$), analytic & 16.0 ($<$0.001) & 6.7 (0.035) & 7.0 (0.031) & 3.7 (0.156) & 5.1 (0.080) \\
+Path, design: bootstrap-calibrated $p$ (robust/SD) & 0.015/0.010 & 0.517/0.368 & 0.507/0.552 & 0.602/0.637 & 0.149/0.144 \\
+Slope, design: $t$ (OLS + primal s.e.) & $-$2.11 (0.035) & 0.17 (0.867) & 0.13 (0.895) & $-$0.13 (0.896) & 0.88 (0.378) \\
+System nested LR ($\chi^2_2$), Laplace & 7.5 (0.024) & 3.9 (0.141) & 2.6 (0.268) & 2.9 (0.230) & 4.4 (0.111) \\
+\quad small-sample ($F$-form) $p$ & 0.050 & 0.246 & 0.391 & 0.351 & 0.135 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} IsoFLOP compilations from \citet{czech2026problems}: Llama 3 digitized from \citet{grattafiori2024llama} Fig.~2 ($N=C/(6D)$; loss units not stated), Marin 2026-03 Llama-2-architecture ladders on three corpora (Paloma loss; the nominal budgets differ from $6ND$ by $-7\%$ to $+35\%$), and the \citet{li2025misfitting} FineWeb/C4 sweep (checkpoint-interpolated IsoFLOPs). Loss levels ($E$) are not comparable across columns; exponents are. Panel A s.e.: cluster bootstrap over budgets (200 draws; 7--26 clusters). Panel B s.e.: robust (IQR/1.349) within-budget stratified bootstrap (the classical OLS s.e. of the Llama 3 path slope from the scatter of its 10 argmins is 0.018; the stratified bootstrap understates it). Panel C: the Wald $p$-values use $\chi^2_2$ critical values and the robust covariance; the bootstrap-calibrated $p$-values and the slope $t$-statistic that adds the primal's own bootstrap s.e. to the OLS s.e. of the Approach-2 slope are more conservative. $M^*(3.8\times10^{25})$ extrapolates 3.5 (Llama 3) to 5 (Marin) orders of magnitude beyond the largest budget and is shown only to illustrate how far the primal and dual extrapolations diverge. Our Approach-2 fit reproduces Meta's published law: $D^*=0.2994\,C^{0.5368}$ vs.\ $0.299\,C^{0.537}$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

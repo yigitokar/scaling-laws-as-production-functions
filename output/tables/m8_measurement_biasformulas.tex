@@ -1,0 +1,45 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Bias Formulas for the Allocation Exponent: Measurement and Flexible Inputs}
+\label{tab:m8_biasformulas}
+\begin{tabular}{p{6.0cm}cccc}
+\toprule
+\multicolumn{5}{l}{\textit{Panel A. Measurement: $N$ counted without a component whose share falls with scale}}  \\
+\addlinespace
+ & $a$, full count & $a$, mismeasured & Bias & Reference  \\
+\cmidrule(lr){2-5}
+Embeddings omitted, Kaplan range; Besiroglu et al. (2024) & 0.513 & 0.792 & 0.280 & 0.78 (P\&S) \\
+Embeddings omitted, Kaplan range; Hoffmann et al. (2022), TeX precision & 0.456 & 0.757 & 0.300 & 0.74 (P\&S) \\
+Embeddings omitted, Kaplan range; Hoffmann et al. (2022), rounded & 0.452 & 0.752 & 0.301 & 0.74 (P\&S) \\
+Head omitted (Porian ladder), RW Kaplan-setup runs: observed & 0.700 & 0.837 & 0.137 &  \\
+\quad semi-synthetic (fitted technology, same design) & 0.567 & 0.776 & 0.208 &  \\
+Head omitted (Porian ladder), RW tuned runs: observed & 0.502 & 0.620 & 0.118 &  \\
+\quad semi-synthetic (fitted technology, same design) & 0.464 & 0.634 & 0.170 &  \\
+Head omitted (Porian ladder), OWT2 Kaplan-setup runs: observed & 0.696 & 0.862 & 0.166 &  \\
+\quad semi-synthetic (fitted technology, same design) & 0.603 & 0.818 & 0.214 &  \\
+Head omitted (Porian ladder), OWT2 tuned runs: observed & 0.501 & 0.631 & 0.129 &  \\
+\quad semi-synthetic (fitted technology, same design) & 0.500 & 0.659 & 0.158 &  \\
+Chinchilla extraction, total vs non-embedding $N$ (parametric fit) & 0.514 & 0.556 & 0.042 &  \\
+ & (0.020) & (0.023) & (0.006) &  \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel B. Flexible inputs: first-order argmin-shift formula, $\Delta a=-\partial_{\ln C}[\Delta(C)/f''(C)]$}}  \\
+\addlinespace
+ & Observed $\Delta a$ & \multicolumn{2}{c}{Predicted $\Delta a$} & Share explained (\%)  \\
+ & & $f''$ from technology & $f''$ local & technology / local  \\
+\cmidrule(lr){2-5}
+RW: step 2 vs.\ step 5 (tuned) & 0.209 & 0.174 & 0.109 & 83 / 52 \\
+RW: step 3 vs.\ step 5 (tuned) & 0.106 & 0.098 & 0.056 & 92 / 53 \\
+RW: step 4 vs.\ step 5 (tuned) & 0.075 & 0.068 & 0.035 & 91 / 47 \\
+OWT2: step 2 vs.\ step 5 (tuned) & 0.183 & 0.198 & 0.112 & 108 / 62 \\
+OWT2: step 3 vs.\ step 5 (tuned) & 0.085 & 0.094 & 0.051 & 110 / 60 \\
+OWT2: step 4 vs.\ step 5 (tuned) & 0.057 & 0.065 & 0.032 & 114 / 57 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Panel A, rows 1--3: researcher measures $N_m=N-X$ with $X=\omega N_m^{1/3}$ ($\omega=47{,}491$, Pearce and Song 2024) and $C_m=6N_mD$ and picks the IsoFLOP argmin in measured units; `measured $a$' is the log-log slope of $N_m^*$ on $C_m$ over $N_m\in[790, 1.58\mathrm{e}9]$, computed from the closed form $a_m=\beta/(\beta+\alpha\kappa-\eta)$, $\kappa=1-s(1-\theta)$, $\eta=d\ln\kappa/d\ln N_m$ (verified symbolically and against brute-force argmins). Rows 4--11: the omitted component is the unembedding (head) matrix on Porian's 16-architecture ladder ($X=V w$, fitted as $\omega N_m^{\theta}$); `observed' is the IsoFLOP estimate with the two counts (train loss); `semi-synthetic' replaces every loss by a Chinchilla technology fitted to the same runs (standard count) at exactly the same architectures and budgets and reruns the pipeline in both counts. Chinchilla extraction: Besiroglu et al.\ (2024) sample ($n=240$), Huber-LSE estimator, pairs bootstrap (200 draws) SEs in parentheses (the bias SE is from the paired bootstrap of the difference); non-embedding $N$ obtained by inverting the Pearce--Song map. Semi-synthetic rows refitted with $E$ held at 1.8 give biases of 0.19, 0.16, 0.21, 0.12 (same order as the rows); the continuous closed-form path over the same measured-compute range (without the discrete design) predicts 0.28, 0.20, 0.27, 0.22. Panel B: $\Delta(C)=\partial\delta/\partial\ln N|_C$ is the slope, along the IsoFLOP at the tuned optimum, of the excess loss $\delta=L_{\text{step }s}-L_{\text{tuned}}$ on matched $(N,C)$ cells; $f''$ is the curvature of the tuned IsoFLOP curve at its optimum, either from a Chinchilla fit to the tuned runs ($f''=\alpha^2u+\beta^2v$) or from a kernel-weighted local quadratic (bandwidth 1 in $\ln N$; bandwidth 0.5 gives predictions between the two columns). Predicted $\Delta a$ is the slope across budgets of the predicted log-argmin shift $-\Delta/f''$; observed $\Delta a$ is the difference of IsoFLOP exponents from Table~\ref{tab:m8_porian}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

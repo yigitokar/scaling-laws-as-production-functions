@@ -1,0 +1,43 @@
+\begin{table}[tp]
+\centering
+\caption{The Elasticity of Substitution without a Functional Form}
+\label{tab:modelfree-sigma}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\toprule
+ & & & \multicolumn{3}{c}{Model-free $\sigma^*$} & \multicolumn{2}{c}{Same runs, parametric} \\
+\cmidrule(lr){4-6}\cmidrule(l){7-8}
+Design & Runs & Budgets & Random effects & Drift/decade & $\tau$ & $\kappa=1$ & $\kappa$ free \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel A. IsoFLOP designs and Farseer's local expansion path}} \\
+Chinchilla & 137 & 9/9 & 0.673 (0.027) & $-$0.072 (0.026) & 0.056 & 0.692 (0.013) & 0.667 (0.023) \\
+Llama 3 & 133 & 8/10 & 0.660 (0.023) & $-$0.053 (0.010) & 0.058 & 0.769 (0.006) & 0.693 (0.020) \\
+Marin, Comma & 85 & 5/7 & 0.700 (0.027) & $-$0.015 (0.056) & 0.000 & 0.690 (0.015) & 0.678 (0.015) \\
+Marin, DCLM & 85 & 7/7 & 0.713 (0.027) & 0.019 (0.048) & 0.000 & 0.673 (0.013) & 0.663 (0.013) \\
+Marin, Nemotron-CC & 88 & 7/8 & 0.705 (0.023) & $-$0.007 (0.034) & 0.000 & 0.684 (0.014) & 0.677 (0.014) \\
+Porian, RefinedWeb & 121 & 12/12 & 0.518 (0.017) & 0.041 (0.009) & 0.041 & 0.599 (0.032) & 0.345 (0.141) \\
+Porian, OpenWebText2 & 116 & 12/12 & 0.505 (0.014) & 0.034 (0.012) & 0.018 & 0.609 (0.039) & 0.347 (0.160) \\
+Farseer (local path) & 404 & 8 $C$ & 0.703 (0.013) & $-$0.015 (0.008) & 0.033 & 0.772 (0.001) & 0.710 (0.001) \\
+\addlinespace
+\multicolumn{8}{@{}l}{\textit{Panel B. Heterogeneity across technologies (random effects, DerSimonian--Laird)}} \\
+ & $k$ & & Mean [HKSJ 95\% CI] & Range & $\tau$ & $I^2$ & $Q$ ($p$) \\
+\midrule
+Model-free, 8 designs & 8 & & 0.646 [0.562, 0.730] & 0.51--0.71 & 0.098 & 0.96 & 188.9 ($<$0.001) \\
+Model-free, excl.\ Porian & 6 & & 0.695 [0.673, 0.717] & 0.66--0.71 & 0.000 & 0.00 & 4.1 (0.541) \\
+Model-free, excl.\ Porian; Farseer $h_N$ at CV opt. & 6 & & 0.679 [0.656, 0.703] & & 0.007 & 0.09 & 5.5 (0.361) \\
+$\sigma^*_\kappa$, 7 sweeps (Table 4 s.e.) & 7 & & 0.622 [0.549, 0.695] & 0.51--0.71 & 0.068 & 0.93 & 82.1 ($<$0.001) \\
+$\sigma^*_\kappa$, 7 sweeps (wild s.e.) & 7 & & 0.620 [0.549, 0.692] & 0.51--0.71 & 0.068 & 0.94 & 104.4 ($<$0.001) \\
+$\sigma^*$, $\kappa=1$, 7 sweeps & 7 & & 0.777 [0.745, 0.809] & 0.73--0.82 & 0.030 & 0.83 & 36.3 ($<$0.001) \\
+$\sigma^*_\kappa$, IsoFLOP designs & 7 & & 0.672 [0.636, 0.707] & 0.35--0.69 & 0.019 & 0.47 & 11.4 (0.077) \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Model-free $\sigma^*$: at every compute-optimal point $1/\sigma^*-1=L_{nn}|_C/(2|dL^*/d\ln C|)$, the curvature of the IsoFLOP profile in $\ln N$ at its minimum over twice the slope of the loss--compute frontier; the ratio needs no $E$, no outer exponent, no functional form and no loss units. Per budget: quadratic in every design (a pooled $F$ test of the cubic term never rejects at 5\%) in $\ln N$ on runs within $\pm1$ of a window centre on the pooled Approach-2 path; frontier slope from a cubic in $\ln C$ of $\ln L^*$ (quadratic with fewer than six budgets). Budgets whose minimum is not bracketed by two runs on each side are dropped (valid/total in column 3). Random effects: DerSimonian--Laird mean of the budget estimates $S_b=2(1/\sigma^*_b-1)$ mapped to $\sigma^*$, standard error in parentheses; $\tau$: between-budget s.d.; drift: change in $\sigma^*_b$ per decade of compute (weighted least squares). Standard errors of the drift and of the parametric columns: design-conditional wild bootstrap (budgets: 999 draws re-estimating windows, polynomials and frontier; Rademacher weights on smoother residuals plus Webb weights on budget-level frontier residuals; parametric: Feng--He--Hu weights). Parametric columns refit the Chinchilla form and the $\kappa$ family by Huber loss on the same IsoFLOP runs in the same parameter convention. Farseer: random-effects mean of the local-quadratic $\sigma$ on the local expansion path ($w=1$) at 8 compute levels from $5.0\times10^{18}$ to $1.0\times10^{21}$ FLOP; wild cluster bootstrap by model size (999 draws). Noise-free finite-grid bias of the model-free estimator under each design's own fitted Chinchilla and $\kappa$ technologies: at most 0.006 (pooled), except 0.050 under the strongly curved $\kappa$ fit to Porian et al.'s profiles. Farseer's local-path $\sigma^*$ is a second-derivative object and is bandwidth-sensitive (mean over compute levels 0.664 at the leave-one-out optimum on an extended grid, 0.707 at the primary bandwidth and 0.727 at twice it); its standard error excludes smoothing bias. Porian et al.'s profiles are read off constant-learning-rate runs without cooldown. Panel B: HKSJ = Hartung--Knapp--Sidik--Jonkman interval ($t_{k-1}$); $Q$: Cochran's homogeneity statistic with $\chi^2_{k-1}$ $p$-value.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}; \citet{besiroglu2024chinchilla}; \citet{grattafiori2024llama}; \citet{czech2026llama3isoflop}; \citet{marin2026ladders}; \citet{porian2024resolving}; \citet{li2025predictableb}; authors' calculations.
+\end{tablenotes}
+\end{table}

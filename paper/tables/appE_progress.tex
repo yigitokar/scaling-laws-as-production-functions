@@ -1,0 +1,40 @@
+\begin{table}[tp]
+\centering
+\caption{Algorithmic Progress in the Data of Ho et al.\ (2024): Replication and Ridge}
+\label{tab:app-progress}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l cccc@{}}
+\toprule
+ & $\tau_C$ (months) & 95\% interval & MSE & Objective \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Panel A. Replication of Ho et al.'s preferred model (231 observations, 144 papers)}} \\
+Published (bootstrap median) & 8.4 & $[4.5,14.3]$ & -- & 0.0518129 \\
+Their code and protocol, median & 8.44 & $[4.4,14.1]$ & 0.0464 & 0.0518129 \\
+\quad point estimate, cluster interval & 8.68 & $[4.1,16.9]$ &  &  \\
+Same objective, run to convergence & 6.08 & $[3.0,22.7]$ & 0.0463 & 0.0507227 \\
+\quad share of 300 starts below published &  &  &  & 1.00 \\
+Unpenalized least squares (NLS) & 10.2 & $[4.1,27.6]$ & 0.0453 &  \\
+\quad profile-likelihood interval &  & $[4.1,40.5]$ &  &  \\
+Benchmark-specific $E_b$ estimated & 10.5 & $[2.9,26.3]$ & 0.0451 &  \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}l}{\textit{Panel B. The ridge: what the data identify}} \\
+Corr$(\alpha g_N,\beta g_D)$, their code / converged & \multicolumn{2}{c}{$-$0.73 / $-$0.82} &  &  \\
+Share $g_N/g_C$, 95\% profile interval & \multicolumn{2}{c}{$[-0.44,3.37]$} &  &  \\
+\quad range of $\tau_C$ over that interval & \multicolumn{2}{c}{5.3--39.6} &  &  \\
+Hicks neutrality $p$: converged / NLS & \multicolumn{2}{c}{0.29 / 0.94} &  &  \\
+Hicks neutrality imposed, converged & 11.6 & $[6.6,17.6]$ & 0.0465 &  \\
+Hicks neutrality imposed, NLS & 9.2 & $[6.3,14.3]$ & 0.0454 &  \\
+Effective data (converged) & 25.7 & $[3.9,\infty)$ & 0.0484 &  \\
+Exponents of \citet{besiroglu2024chinchilla} imposed & $g_C<0$ & $[72.5,\infty)$ & 0.1126 &  \\
+Year terms $\div$ exponents (Whitfill) & 76.5 & $[46.2,\infty)$ & -- &  \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+Ho et al.'s model: $\ln\text{ppl}=\exp(\alpha_{0b}-\alpha g_Nt-\alpha\ln N)+\exp(\beta_{0b}-\beta g_Dt-\beta\ln D)$, irreducible loss zero, $t$ in years; $\tau_C=12\ln2/(g_N+g_D)$ is the doubling time of effective compute in months. Their estimator minimizes MSE $+\,0.0025\sum|\theta|$ by SLSQP from zero with scipy's default tolerance, which stops after 18 iterations; `converged' runs the same objective and algorithm to convergence. The objective gap (0.0518 against 0.0507) is almost all penalty: MSE changes by 0.27 percent, and the penalty falls on constants whose values depend on an arbitrary normalization. Intervals: paper-cluster bootstrap (400 draws), percentiles of $g_N+g_D$ mapped to $\tau_C$ ($\infty$ when non-positive growth lies inside); the first two rows use Ho et al.'s iid bootstrap. Profile intervals invert an iid Gaussian likelihood ratio and are indicative, because papers are clustered. The interval for $g_N/g_C$ is located on a grid of step 0.025 near its boundaries (an earlier version's coarser grid gave $[-0.39,3.37]$, and its range of 5 to 38 months was computed over the grid points $[-0.25,3.25]$); the profile has a second local minimum near $-0.28$, and a missed global minimum could only widen the interval. Hicks neutrality: $\alpha g_N=\beta g_D$. Effective data: $D$ measured as effective data under repetition \citep{muennighoff2023scaling}.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations from the data and code of \citet{ho2024algorithmic}.
+\end{tablenotes}
+\end{table}

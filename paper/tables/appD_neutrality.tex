@@ -1,0 +1,52 @@
+\begin{table}[tp]
+\centering
+\caption{Is Better Data Hicks-Neutral? Nested Tests across Corpora and Recipes}
+\label{tab:app-neutrality}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Model for corpus or recipe $r$ & Parameters & Share explained (\%) & LR & df & $p$ (wild) \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel A. \citet{gadre2024language}: three web corpora (104 runs, 37 clusters)}} \\
+(0) One technology & 5 & 0.0 & 30.7 & 6 & $\leq$0.002 \\
+(iv) Asymptote shift $E_r$ only & 7 & 89.9 & 2.6 & 4 & 0.004 \\
+(i) Hicks-neutral, common $E$ & 7 & 72.7 & 8.6 & 4 & $\leq$0.002 \\
+(ii) Data-augmenting, common $E$ & 7 & 64.1 & 11.4 & 4 & $\leq$0.002 \\
+(iii) Parameter-augmenting, common $E$ & 7 & 75.0 & 7.8 & 4 & $\leq$0.002 \\
+(i$'$) Hicks-neutral + $E_r$ & 9 & 96.8 & 0.0 & 2 & 0.896 \\
+(ii$'$) Data-augmenting + $E_r$ & 9 & 95.4 & 0.5 & 2 & 0.130 \\
+(iii$'$) Parameter-augmenting + $E_r$ & 9 & 95.9 & 0.4 & 2 & 0.150 \\
+Common exponents ($A_r$, $B_r$, $E_r$ free) & 11 & 96.9 & 1.2 & 4 & 0.090 \\
+(v) Exponents vary & 15 & 100.0 & & & \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel B. DataDecide: 25 recipes (21,888 checkpoints, 44 clusters)}} \\
+(0) One technology & 5 & 0.0 & 58,185 & 72 & $\leq$0.050 \\
+(iv) Asymptote shift $E_r$ only & 29 & 98.1 & 4,465 & 48 & $\leq$0.010 \\
+(i) Hicks-neutral, common $E$ & 29 & 90.4 & 17,732 & 48 & $\leq$0.050 \\
+(ii) Data-augmenting, common $E$ & 29 & 92.6 & 14,600 & 48 & $\leq$0.050 \\
+(iii) Parameter-augmenting, common $E$ & 29 & 89.4 & 18,964 & 48 & $\leq$0.050 \\
+(i$'$) Hicks-neutral + $E_r$ & 53 & 99.7 & 145 & 24 & $\leq$0.010 \\
+(ii$'$) Data-augmenting + $E_r$ & 53 & 99.7 & 69 & 24 & $\leq$0.010 \\
+(iii$'$) Parameter-augmenting + $E_r$ & 53 & 99.5 & 738 & 24 & $\leq$0.010 \\
+Common exponents ($A_r$, $B_r$, $E_r$ free) & 77 & 99.8 & 705 & 48 & $\leq$0.010 \\
+(v) Exponents vary & 125 & 100.0 & & & \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}All models are evaluated on the same C4 validation set. Models nest in
+$L_r=E_r+A_rN^{-\alpha_r}+B_rD^{-\beta_r}$: (i) Hicks-neutral in reducible loss, $A_r=e^{-\omega_r}A$ and
+$B_r=e^{-\omega_r}B$; (ii) only $B_r$ varies; (iii) only $A_r$ varies; (iv) only $E_r$ varies; primes add
+recipe-specific $E_r$. Share explained $=(\mathrm{SSR}_0-\mathrm{SSR}_m)/(\mathrm{SSR}_0-\mathrm{SSR}_v)$, where model
+(0) is one common technology and (v) separate fits. LR $=n\ln(\mathrm{SSR}_m/\mathrm{SSR}_{CE})$ against the
+common-exponent model (for that row, against (v)), from Gaussian NLS on log loss. $p$-values from a wild cluster
+restricted bootstrap with Rademacher weights (clusters: size $\times$ token-multiplier cells for Gadre et al., 499
+draws; size $\times$ seed cells for DataDecide, 99 draws for the key tests and 19 for the common-$E$ models;
+$\leq$ marks the smallest attainable value). Wald tests with a cell-level pairs-bootstrap covariance confirm every
+DataDecide rejection and, for Gadre et al., the non-rejection of (i$'$) and the rejection of (iv); they disagree
+across estimators on (ii$'$). DataDecide uses intermediate checkpoints with $D/N\geq5$, evaluated before the
+learning-rate schedule has finished; the comparisons across recipes assume that this schedule effect is common to all
+recipes.\end{tablenotes}
+\begin{tablenotes}[Source]\citet{gadre2024language}; \citet{magnusson2025datadecide}; authors'
+estimates.\end{tablenotes}
+\end{table}

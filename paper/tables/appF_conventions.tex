@@ -1,0 +1,61 @@
+% Online Appendix Table F4: parameter-count conventions and mixture-of-experts bounds
+% (output/tables/ra2_wedge_conventions.csv; ra2_wedge_models.csv columns w_chin_q, wtotalN_chin_q). Writer appendix_D_F.
+\begin{table}[tp]
+\centering
+\caption{Parameter-Count Conventions and Mixture-of-Experts Models}
+\label{tab:app-conventions}
+\footnotesize
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+\multicolumn{7}{@{}l}{\textit{Panel A. Clean sample (77 models) under technologies in different parameter conventions}} \\[1pt]
+ & & Median & Median $w$, & Share & Median & Median $w$, \\
+Technology & Convention of $N$ & $w$ & head FLOPs & $w>1$ & $s$ & $N<1$B ($n=8$) \\
+\midrule
+Chinchilla, $\kappa$ free (reference) & Total & 3.99 &  & 0.97 & 0.75 & 15.10 \\
+Chinchilla, $\kappa=1$ & Total & 3.34 &  & 1.00 & 0.70 & 9.96 \\
+Farseer, $\kappa=1$ & Total & 2.64 &  & 0.88 & 0.62 & 10.67 \\
+Chinchilla, $\kappa=1$ (refit) & Non-embedding & 3.65 & 3.74 & 1.00 & 0.73 & 9.13 \\
+Farseer, $\kappa=1$ & Non-embedding & 2.74 & 2.86 & 1.00 & 0.63 & 6.85 \\
+Farseer, $\kappa$ free & Non-embedding & 3.91 & 4.15 & 1.00 & 0.74 & 14.26 \\
+MiniCPM (published law) & Non-embedding & 1.20 & 1.27 & 0.64 & 0.17 & 3.04 \\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrrr@{}}
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel B. Mixture-of-experts models (excluded from the clean sample), reference technology}} \\[1pt]
+ & $N$ (B), & $D$ & $M$, & \multicolumn{2}{c}{$w$} & \multicolumn{2}{c}{$s$} \\
+\cmidrule(lr){5-6}\cmidrule(l){7-8}
+Model (year) & active / total & (T) & active / total & Active $N$ & Total $N$ & Active $N$ & Total $N$ \\
+\midrule
+OLMoE 1B-7B (2024) & 1.3 / 7 & 5.1 & 3,946 / 741 & 9.18 & 4.51 & 0.89 & 0.78 \\
+DeepSeek-V2-Lite (2024) & 2.4 / 16 & 5.7 & 2,375 / 363 & 7.40 & 3.34 & 0.86 & 0.70 \\
+DeepSeekMoE 16B (2024) & 2.8 / 16 & 2.0 & 714 / 122 & 4.42 & 2.09 & 0.77 & 0.52 \\
+Phi-3.5-MoE (2024) & 6.6 / 42 & 4.9 & 742 / 117 & 4.52 & 2.06 & 0.78 & 0.51 \\
+DeepSeek-V2 (2024) & 21.0 / 236 & 8.1 & 386 / 34 & 3.43 & 1.23 & 0.71 & 0.19 \\
+DeepSeek-V3 (2024) & 37.0 / 685 & 14.8 & 400 / 22 & 3.50 & 1.01 & 0.71 & 0.01 \\
+Qwen3 30B-A3B (2025) & 3.3 / 31 & 36.0 & 10,909 / 1,179 & 14.30 & 5.56 & 0.93 & 0.82 \\
+Llama 4 Scout (2025) & 17.0 / 109 & 40.0 & 2,353 / 368 & 7.46 & 3.40 & 0.87 & 0.71 \\
+Qwen3 235B-A22B (2025) & 22.0 / 235 & 36.0 & 1,636 / 153 & 6.39 & 2.34 & 0.84 & 0.57 \\
+GLM-4.5 (2025) & 32.0 / 358 & 23.0 & 719 / 64 & 4.50 & 1.61 & 0.78 & 0.38 \\
+Llama 4 Maverick (2025) & 17.0 / 402 & 22.0 & 1,294 / 55 & 5.77 & 1.51 & 0.83 & 0.34 \\
+Kimi K2 (2025) & 32.0 / 1,026 & 15.5 & 484 / 15 & 3.79 & 0.87 & 0.74 & $-$0.15 \\
+\addlinespace
+Median (12 models) & & & & 5.14 & 2.07 & 0.80 & 0.52 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{tablenotes}
+Panel A: medians over the clean inference-demand sample, each technology evaluated at the model's own count in the
+technology's convention (non-embedding counts from each model's configuration file). With the output head counted in
+FLOPs, the lifetime-to-training ratio for a non-embedding technology is $w(1+N_{\rm head}/N_{\rm ne})$. Last column:
+the eight clean models below one billion parameters; comparing like with like, the non-embedding count lowers their
+median wedge by 8 percent under the Chinchilla form (9.13 against 9.96) and by 36 percent under the Farseer form (6.85
+against 10.67). Panel B: $w$ and $s=(w-1)/w$ under the reference technology (Chinchilla, $\kappa$ free), with $N$ equal
+to active or to total parameters. A dense technology evaluated at active parameters treats a mixture-of-experts model
+as parameter-augmenting and overstates its wedge; at total parameters it ignores the loss advantage of sparsity. The
+two columns bound the wedge under a dense technology; neither is an estimate from a mixture-of-experts scaling law.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Model cards, technical reports and Hugging Face configuration files; authors' calculations.
+\end{tablenotes}
+\end{table}

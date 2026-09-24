@@ -1,0 +1,63 @@
+% Online Appendix Table F5: lab-own technologies (output/tables/ra2_wedge_modelfree_sigma.csv, ra2_wedge_pi_anchors.csv,
+% ra2_wedge_labown.csv; ra1_modelfree_isoflop_summary.csv for the sigma* used). Writer appendix_D_F, 2026-09-24.
+\begin{table}[tp]
+\centering
+\caption{Lab-Own Technologies: IsoFLOP Curvature, Paths and Wedges}
+\label{tab:app-labown}
+\footnotesize
+\setlength{\tabcolsep}{1.6pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+\multicolumn{7}{@{}l}{\textit{Panel A. Model-free curvature and compute-optimal paths of the IsoFLOP designs}} \\[1pt]
+ & Budgets & Largest & $\sigma^*$ used & $\sigma^*$, global & Path & $M^*$ at largest \\
+Design & (valid) & budget & (s.e.) & quadratics [95\%] & slope $a$ & budget [95\%] \\
+\midrule
+Llama 3 (Meta) & 10 (8) & $10^{22}$ & 0.660 (0.023) & 0.653 [0.639, 0.666] & 0.463 & 22.3 [20.8, 23.7] \\
+Marin, Comma & 7 (5) & $3\times10^{20}$ & 0.700 (0.027) & 0.650 [0.611, 0.669] & 0.405 & 12.4 [10.7, 13.9] \\
+Marin, DCLM & 7 (7) & $3\times10^{20}$ & 0.713 (0.027) & 0.629 [0.586, 0.653] & 0.424 & 9.4 [8.0, 10.6] \\
+Marin, Nemotron-CC & 8 (7) & $3\times10^{20}$ & 0.705 (0.023) & 0.644 [0.613, 0.666] & 0.422 & 10.0 [8.7, 11.1] \\
+Chinchilla profiles & 9 (9) & $3\times10^{21}$ & 0.673 (0.027) & 0.610 [0.588, 0.644] & 0.492 & 22.7 [18.2, 29.4] \\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llccccc@{}}
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel B. Wedges of selected models under their developer's own technology}} \\[1pt]
+ & Lab law & Lab-own $w$ & Lab-own & Range over lab's & Reference & Reference \\
+Model & vintage & [95\%] & $s$ & alternatives & $w$ & $s$ \\
+\midrule
+Llama 3 8B & contemp. & 8.36 [5.67, 12.76] & 0.88 & 3.09--12.16 & 6.73 & 0.85 \\
+Llama 3 70B & contemp. & 2.51 [2.09, 3.02] & 0.60 & 1.63--3.96 & 2.67 & 0.63 \\
+Llama 3.1 405B & contemp. & 0.97 [0.88, 1.08] & $-$0.03 & 0.97--1.64 & 1.29 & 0.23 \\
+Llama 2 70B & ex post & 0.97 [0.91, 1.04] & $-$0.03 & 0.97--1.42 & 1.13 & 0.12 \\
+OLMo 2 1B & contemp. & 20.2 [14.5, 35.2] & 0.95 & 2.01--20.2 & 7.83 & 0.87 \\
+OLMo 2 7B & contemp. & 4.05 [3.22, 5.32] & 0.75 & 1.28--4.05 & 3.99 & 0.75 \\
+OLMo 2 32B & contemp. & 1.28 [0.96, 1.72] & 0.22 & 0.91--1.28 & 2.54 & 0.61 \\
+DeepSeek LLM 7B & contemp. & 3.42 [3.05, 3.87] & 0.71 & & 2.99 & 0.67 \\
+DeepSeek LLM 67B & contemp. & 1.34 [1.31, 1.38] & 0.26 & & 1.15 & 0.13 \\
+Marin 8B & ex post & 5.08 [3.10, 8.71] & 0.80 & 1.43--6.66 & 6.26 & 0.84 \\
+\addlinespace
+Median, 22 models & & & 0.61 & & & 0.65 \\
+Median, 11 contemp. & & & 0.61 & & & 0.67 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{tablenotes}
+Panel A: $\sigma^*$ used is the model-free random-effects estimate of Section~\ref{sec:tech} over budgets whose minimum
+is bracketed by two runs on each side (Online Appendix Table~\ref{tab:app-mf-sens}). Global quadratics: a second
+estimator that fits one quadratic to all runs of each budget, including unbracketed ones, and pools a ratio of sums;
+design-conditional wild bootstrap, 999 draws. Its simulation-based bias correction gives 0.662--0.678, and it is used
+only in sensitivity rows; for Chinchilla it uses the 123-point snapped subset of the IsoFLOP compilation of \citet{czech2026problems} (eight budgets) as a cross-check. Path slope and $M^*$: Approach-2 argmins regressed on $\ln C$ over all budgets; brackets:
+wild bootstrap. Meta's path reproduces the published law $D^*=0.299\,C^{0.537}$; fitted on its eight bracketed budgets
+it has slope 0.501 and $M^*(10^{24})=15$ instead of 31. Panel B: lab-own technologies are Meta's IsoFLOP path with the
+model-free curvature; AI2's OLMo ladder with $\kappa$ free; DeepSeek LLM's published allocation law in its own units
+with the reference curvature (no curvature published); and Marin's Nemotron-CC path with the model-free curvature.
+Vintage: whether the lab's law was published before the model was planned (contemporaneous) or afterward (ex post).
+Llama 3.1 405B lies on Meta's path by construction, because Meta sized it with this law. Alternatives: Meta's $\kappa=1$
+law, primal and path on eight budgets; AI2's $\kappa=1$ ladder; Marin's other corpora and $\kappa=1$ rows. Reference:
+Chinchilla with $\kappa$ free. Medians are over the 22 models with a lab-own technology (Meta 10, AI2 9, DeepSeek 2,
+Marin 1).
+\end{tablenotes}
+\begin{tablenotes}[Source]
+\citet{grattafiori2024llama}; \citet{czech2026llama3isoflop}; \citet{marin2026ladders}; \citet{bhagia2024establishing};
+\citet{bi2024deepseek}; authors' calculations.
+\end{tablenotes}
+\end{table}

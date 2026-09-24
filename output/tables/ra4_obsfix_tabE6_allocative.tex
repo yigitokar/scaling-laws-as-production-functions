@@ -1,0 +1,47 @@
+\begin{table}[tp]
+\centering
+\caption{Allocative Gains from Rebalancing, with and without Truncating the Wedge at One}
+\label{tab:app-allocative}
+\footnotesize
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{@{}l c cc cc cc@{}}
+\toprule
+ & $w<1$ (\%) & \multicolumn{2}{c}{Untruncated} & \multicolumn{2}{c}{Truncated} & Gap & Kaplan \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+ & era 1/2 & Gain & 95\% CI & Gain & 95\% CI & closed & CEG \\
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Chinchilla sweep}} \\
+\citet{besiroglu2024chinchilla} & 100 / 18 & 1.05 & $[0.57,1.75]$ & 1.68 & $[1.21,2.44]$ & 0.92 & 11.7 \\
+\citet{hoffmann2022training} & 100 / 45 & 1.91 & $[1.53,2.50]$ & 2.34 & $[1.87,3.03]$ & 0.88 & 32.4 \\
+\citet{hoffmann2022training}, rounded & 100 / 50 & 2.41 & $[1.86,3.24]$ & 2.77 & $[2.16,3.69]$ & 0.86 & 46.7 \\
+Chinchilla, $\kappa$ free & 100 / 26 & 1.19 & $[0.92,1.56]$ & 1.97 & $[1.58,2.53]$ & 0.92 & 20.3 \\
+\multicolumn{8}{@{}l}{\textit{Sweeps of Section III}} \\
+Farseer, total $N$ & 100 / 42 & 1.58 & $[1.27,2.04]$ & 2.06 & $[1.66,2.60]$ & 0.89 & 38.7 \\
+Farseer, non-embedding $N$ & 100 / 18 & 1.03 & $[0.86,1.25]$ & 1.54 & $[1.32,1.84]$ & 0.92 & 7.3 \\
+\citet{gadre2024language}, C4 & 100 / 12 & 0.60 & $[0.51,0.70]$ & 1.14 & $[1.06,1.26]$ & 0.94 & 3.5 \\
+OLMo ladder & 100 / 66 & 2.52 & $[1.99,3.20]$ & 2.63 & $[2.07,3.33]$ & 0.81 & 57.0 \\
+\citet{muennighoff2023scaling} & 100 / 38 & 1.74 & $[1.38,2.27]$ & 2.33 & $[1.87,2.97]$ & 0.90 & 18.1 \\
+\multicolumn{8}{@{}l}{\textit{IsoFLOP designs of Online Appendix D}} \\
+Llama 3 IsoFLOPs (Meta) & 100 / 12 & 0.74 & $[0.62,0.90]$ & 1.30 & $[1.16,1.50]$ & 0.93 & 5.1 \\
+Marin, Comma & 100 / 62 & 4.31 & $[2.95,6.60]$ & 4.95 & $[3.42,7.50]$ & 0.80 & 388.5 \\
+Marin, DCLM & 100 / 50 & 3.04 & $[2.09,4.45]$ & 4.00 & $[2.83,5.77]$ & 0.85 & 230.7 \\
+Marin, Nemotron-CC & 100 / 49 & 2.57 & $[1.87,3.68]$ & 3.52 & $[2.55,5.11]$ & 0.86 & 166.3 \\
+(Mis)Fitting, FineWeb/C4 & 100 / 12 & 0.55 & $[0.40,0.75]$ & 1.64 & $[1.31,2.12]$ & 0.93 & 15.0 \\
+\multicolumn{8}{@{}l}{\textit{Cross-lab regression}} \\
+\citet{ho2024algorithmic}, model 7 & 0 / 0 & 0.09 & $[0.07,0.12]$ & 1.00 & $[1.00,1.00]$ & -- & -- \\
+\addlinespace[3pt]
+\multicolumn{8}{@{}l}{\textit{Other samples, \citet{besiroglu2024chinchilla} technology}} \\
+$C\geq10^{23}$, cleaned (7, 79) & 100 / 19 & 1.09 & $[0.60,1.78]$ & 1.70 & $[1.23,2.43]$ & 0.94 &  \\
+Top five per year (10, 15) & 70 / 40 & 1.27 & $[0.91,1.72]$ & 1.31 & $[1.05,1.76]$ & 0.73 &  \\
+Epoch frontier models (7, 6) & 86 / 33 & 1.56 & $[1.07,2.19]$ & 1.54 & $[1.12,2.19]$ & 0.82 &  \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+Models in the Epoch database with $C\geq10^{23}$ FLOP: 7 released in 2020--21 (era 1) and 92 in 2022--24 (era 2); dense, at most four epochs, $D=C/6N$. Farrell cost efficiency against the training-only frontier, $CE=C_{\min}(L(N,D))/6ND$, depends only on the wedge $w=\varepsilon_N/\varepsilon_D$ within the Chinchilla family. Untruncated gain: ratio of era geometric means of $CE$ (as in the original Table 9). Truncated gain: the same with $CE(\min(w,1))$, which counts only the elimination of under-training: over-training ($w>1$) can reflect inference demand and is not treated as inefficiency, whereas $w<1$ cannot (Proposition 2). Column 1: share of models with $w<1$. Column 6: $\ln(\text{truncated gain})$ divided by the era-1 log compute lost to under-training. Column 7: compute-equivalent gain of abandoning the Kaplan rule ($N\propto C^{0.73}$ from GPT-3) at $5\times10^{26}$ FLOP, the counterfactual of \citet{gundlach2025origin}; the Kaplan allocations have $w<1$ under every technology, so truncation does not change it. Intervals: percentile bootstrap over models within era (999 draws); only the \citet{besiroglu2024chinchilla} row also draws the technology's parameters, so the other intervals hold the technology fixed, and with seven era-1 models all intervals are rough. A wedge below one is counted as allocative error; by Proposition~\ref{prop:A-wedge}(v) it can also reflect a binding data constraint or data-augmenting lab productivity. Technologies from other sweeps use each sweep's own $N$ and $D$ conventions and loss corpus, so their levels are indicative. Group labels give where each technology is estimated: the Chinchilla sweep and the sweeps of Section III, the IsoFLOP designs of Online Appendix D (never estimated in Section III), and Ho et al.'s cross-lab model, under which every model has $w>1$.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations from the Epoch AI models database \citep{epochai2026data}.
+\end{tablenotes}
+\end{table}

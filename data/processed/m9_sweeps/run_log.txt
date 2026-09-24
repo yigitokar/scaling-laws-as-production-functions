@@ -1,0 +1,145 @@
+15:52:59 [    0.0s] power: anchor C_c = 3.950e+15, N* = 5.737e+06, D* = 1.147e+08; R = 150, R_boot = 60, B = 199
+15:59:17 [  378.5s]   chin_s002_r5 chi=0.22: 150 reps + 60 boot reps in 378s
+16:04:51 [  712.6s]   chin_s002_r5 chi=0.0: 150 reps + 60 boot reps in 334s
+16:12:08 [ 1148.8s]   chin_s005_r5 chi=0.22: 150 reps + 60 boot reps in 436s
+16:18:25 [ 1526.4s]   chin_s005_r5 chi=0.0: 150 reps + 60 boot reps in 378s
+16:24:29 [ 1889.9s]   chin_s010_r5 chi=0.22: 150 reps + 60 boot reps in 363s
+16:30:49 [ 2270.5s]   chin_s010_r5 chi=0.0: 150 reps + 60 boot reps in 381s
+16:33:52 [ 2453.3s]   chin_s005_r0 chi=0.22: 150 reps + 0 boot reps in 183s
+16:37:13 [ 2654.3s]   chin_s005_r9 chi=0.22: 150 reps + 0 boot reps in 201s
+16:40:38 [ 2858.8s]   chin_s005_M60 chi=0.22: 150 reps + 0 boot reps in 205s
+16:44:07 [ 3068.2s]   kappa_s005_r5 chi=0.22: 150 reps + 0 boot reps in 209s
+16:55:08 [  349.5s]   coverage chi=0.22: 40 reps in 344s
+16:56:36 [  438.0s]   coverage chi=0.0: 40 reps in 89s
+17:02:43 [  315.1s]   coverage (cr2cv): 40 reps in 315s
+17:12:19 [    0.0s] === m9_sweeps run.py start (B = 999, QUICK = False, output root = /Users/yigitokar/scaling-laws-pf)
+17:12:19 [    0.1s] data: 111 endpoints; {'N_nonemb': 0, 'N_total': 0, 'flops_per_token': 0} formula mismatches
+17:13:08 [   49.1s] Q1 P/main: corpora ['edu'] (49s)
+17:13:21 [   62.0s] Q1 P/no25: corpora ['edu'] (13s)
+17:13:29 [   70.7s] Q1 P/floor4: corpora ['edu'] (9s)
+17:14:11 [  112.1s] Q1 T/main: corpora ['edu'] (41s)
+17:14:18 [  119.8s] Q1 T/no25: corpora ['edu'] (8s)
+17:14:27 [  128.1s] Q1 T/floor4: corpora ['edu'] (8s)
+17:14:27 [  128.1s] Q4: seed noise estimated for no corpus (no seed replicates yet)
+17:14:27 [  128.1s] Q2 edu/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:14:27 [  128.1s] Q2 edu/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:14:27 [  128.1s] Q2 edu/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:14:27 [  128.1s] Q2 edu/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:14:27 [  128.1s] Q2 edu/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:14:27 [  128.1s] Q2 edu/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:14:27 [  128.1s] Q2 web/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:14:27 [  128.1s] Q2 web/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:14:27 [  128.1s] Q2 web/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:14:27 [  128.1s] Q2 web/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:14:27 [  128.1s] Q2 web/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:14:27 [  128.1s] Q2 web/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:14:27 [  128.1s] Q2 wiki/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:14:27 [  128.1s] Q2 wiki/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:14:27 [  128.1s] Q2 wiki/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:14:27 [  128.1s] Q2 wiki/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:14:27 [  128.1s] Q2 wiki/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:14:27 [  128.1s] Q2 wiki/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:15:07 [  168.6s] Q3 edu/P/main: slope = -0.291 [-0.399, -0.094] (40s)
+17:15:17 [  178.8s] Q3 edu/P/no25: slope = -0.255 [-0.288, -0.190] (10s)
+17:15:26 [  187.5s] Q3 edu/P/floor4: slope = -0.118 [-0.146, -0.089] (9s)
+17:16:03 [  224.7s] Q3 edu/T/main: slope = -0.760 [-1.080, -0.207] (37s)
+17:16:12 [  233.7s] Q3 edu/T/no25: slope = -1.094 [-1.242, -0.903] (9s)
+17:16:12 [  233.7s] Q3 edu/T/floor4: skipped (insufficient data)
+17:16:12 [  233.8s] Q3 web/P/main: skipped (insufficient data)
+17:16:12 [  233.8s] Q3 web/P/no25: skipped (insufficient data)
+17:16:12 [  233.8s] Q3 web/P/floor4: skipped (insufficient data)
+17:16:12 [  233.8s] Q3 web/T/main: skipped (insufficient data)
+17:16:12 [  233.8s] Q3 web/T/no25: skipped (insufficient data)
+17:16:12 [  233.8s] Q3 web/T/floor4: skipped (insufficient data)
+17:16:25 [  246.3s] Q6 edu/P: done
+17:16:36 [  257.2s] Q6 edu/T: done
+17:16:36 [  257.2s] secondary inference: pending (no seed replicates yet)
+17:16:50 [  271.0s] === m9_sweeps done in 271s
+17:19:46 [    0.0s] === m9_sweeps run.py start (B = 999, QUICK = False, output root = /Users/yigitokar/scaling-laws-pf)
+17:19:46 [    0.0s] data: 113 endpoints; {'N_nonemb': 0, 'N_total': 0, 'flops_per_token': 0} formula mismatches
+17:20:29 [   43.2s] Q1 P/main: corpora ['edu'] (43s)
+17:20:41 [   54.7s] Q1 P/no25: corpora ['edu'] (12s)
+17:20:49 [   63.0s] Q1 P/floor4: corpora ['edu'] (8s)
+17:21:29 [  102.6s] Q1 T/main: corpora ['edu'] (40s)
+17:21:36 [  110.1s] Q1 T/no25: corpora ['edu'] (8s)
+17:21:44 [  118.1s] Q1 T/floor4: corpora ['edu'] (8s)
+17:21:45 [  118.7s] Q4: seed noise estimated for no corpus (no seed replicates yet)
+17:21:45 [  118.7s] Q2 edu/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:21:45 [  118.7s] Q2 edu/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:21:45 [  118.7s] Q2 edu/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:21:45 [  118.7s] Q2 edu/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:21:45 [  118.7s] Q2 edu/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:21:45 [  118.7s] Q2 edu/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:21:45 [  118.7s] Q2 web/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:21:45 [  118.7s] Q2 web/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:21:45 [  118.7s] Q2 web/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:21:45 [  118.7s] Q2 web/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:21:45 [  118.7s] Q2 web/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:21:45 [  118.7s] Q2 web/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:21:45 [  118.7s] Q2 wiki/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:21:45 [  118.7s] Q2 wiki/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:21:45 [  118.7s] Q2 wiki/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:21:45 [  118.7s] Q2 wiki/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:21:45 [  118.7s] Q2 wiki/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:21:45 [  118.7s] Q2 wiki/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:22:24 [  157.6s] Q3 edu/P/main: slope = -0.291 [-0.399, -0.094] (39s)
+17:22:34 [  167.6s] Q3 edu/P/no25: slope = -0.255 [-0.288, -0.190] (10s)
+17:22:42 [  176.0s] Q3 edu/P/floor4: slope = -0.118 [-0.146, -0.089] (8s)
+17:23:18 [  212.4s] Q3 edu/T/main: slope = -0.760 [-1.080, -0.207] (36s)
+17:23:27 [  221.2s] Q3 edu/T/no25: slope = -1.094 [-1.242, -0.903] (9s)
+17:23:27 [  221.2s] Q3 edu/T/floor4: skipped (insufficient data)
+17:23:27 [  221.2s] Q3 web/P/main: skipped (insufficient data)
+17:23:27 [  221.2s] Q3 web/P/no25: skipped (insufficient data)
+17:23:27 [  221.2s] Q3 web/P/floor4: skipped (insufficient data)
+17:23:27 [  221.2s] Q3 web/T/main: skipped (insufficient data)
+17:23:27 [  221.2s] Q3 web/T/no25: skipped (insufficient data)
+17:23:27 [  221.2s] Q3 web/T/floor4: skipped (insufficient data)
+17:23:39 [  233.4s] Q6 edu/P: done
+17:23:50 [  244.1s] Q6 edu/T: done
+17:23:50 [  244.1s] secondary inference: pending (no seed replicates yet)
+17:24:04 [  257.6s] === m9_sweeps done in 258s
+17:24:40 [    0.0s] === m9_sweeps run.py start (B = 999, QUICK = False, output root = /Users/yigitokar/scaling-laws-pf)
+17:24:40 [    0.0s] data: 114 endpoints; {'N_nonemb': 0, 'N_total': 0, 'flops_per_token': 0} formula mismatches
+17:25:24 [   43.9s] Q1 P/main: corpora ['edu'] (44s)
+17:25:36 [   55.9s] Q1 P/no25: corpora ['edu'] (12s)
+17:25:46 [   65.5s] Q1 P/floor4: corpora ['edu'] (10s)
+17:26:33 [  112.8s] Q1 T/main: corpora ['edu'] (47s)
+17:26:42 [  121.7s] Q1 T/no25: corpora ['edu'] (9s)
+17:26:51 [  130.9s] Q1 T/floor4: corpora ['edu'] (9s)
+17:26:52 [  131.6s] Q4: seed noise estimated for no corpus (no seed replicates yet)
+17:26:52 [  131.6s] Q2 edu/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:26:52 [  131.6s] Q2 edu/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:26:52 [  131.6s] Q2 edu/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:26:52 [  131.6s] Q2 edu/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:26:52 [  131.6s] Q2 edu/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:26:52 [  131.6s] Q2 edu/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on edu in BOTH corpora)
+17:26:52 [  131.6s] Q2 web/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:26:52 [  131.6s] Q2 web/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:26:52 [  131.6s] Q2 web/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:26:52 [  131.6s] Q2 web/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:26:52 [  131.6s] Q2 web/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:26:52 [  131.6s] Q2 web/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on web in BOTH corpora)
+17:26:52 [  131.6s] Q2 wiki/P/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:26:52 [  131.6s] Q2 wiki/P/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:26:52 [  131.6s] Q2 wiki/P/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:26:52 [  131.6s] Q2 wiki/T/main: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:26:52 [  131.6s] Q2 wiki/T/no25: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:26:52 [  131.6s] Q2 wiki/T/floor4: skipped (needs >= 4 widths and >= 16 main-grid endpoints evaluated on wiki in BOTH corpora)
+17:27:38 [  177.6s] Q3 edu/P/main: slope = -0.291 [-0.399, -0.094] (46s)
+17:27:49 [  189.0s] Q3 edu/P/no25: slope = -0.255 [-0.288, -0.190] (11s)
+17:27:59 [  198.2s] Q3 edu/P/floor4: slope = -0.118 [-0.146, -0.089] (9s)
+17:28:35 [  234.7s] Q3 edu/T/main: slope = -0.760 [-1.080, -0.207] (37s)
+17:28:44 [  243.5s] Q3 edu/T/no25: slope = -1.094 [-1.242, -0.903] (9s)
+17:28:44 [  243.5s] Q3 edu/T/floor4: skipped (insufficient data)
+17:28:44 [  243.5s] Q3 web/P/main: skipped (insufficient data)
+17:28:44 [  243.5s] Q3 web/P/no25: skipped (insufficient data)
+17:28:44 [  243.5s] Q3 web/P/floor4: skipped (insufficient data)
+17:28:44 [  243.5s] Q3 web/T/main: skipped (insufficient data)
+17:28:44 [  243.5s] Q3 web/T/no25: skipped (insufficient data)
+17:28:44 [  243.5s] Q3 web/T/floor4: skipped (insufficient data)
+17:28:56 [  255.7s] Q6 edu/P: done
+17:29:07 [  266.3s] Q6 edu/T: done
+17:29:07 [  266.3s] secondary inference: pending (no seed replicates yet)
+17:29:20 [  279.6s] === m9_sweeps done in 280s
+17:30:48 [   13.5s] outputs rebuilt from CSVs
+17:33:20 [   14.1s] outputs rebuilt from CSVs

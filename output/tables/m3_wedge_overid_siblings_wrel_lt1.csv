@@ -1,0 +1,6 @@
+family,model,wrel_chin
+Cerebras-GPT,Cerebras-GPT-111M,0.9217875187694566
+Cerebras-GPT,Cerebras-GPT-256M,0.9372146247071202
+Cerebras-GPT,Cerebras-GPT-590M,0.9528866307431088
+Cerebras-GPT,Cerebras-GPT-1.3B,0.9679561679623293
+Cerebras-GPT,Cerebras-GPT-2.7B,0.9821103210410325

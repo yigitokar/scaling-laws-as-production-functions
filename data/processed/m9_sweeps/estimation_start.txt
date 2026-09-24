@@ -1,0 +1,3 @@
+- 17:12 first execution of run.py on data/processed/sweep/results.jsonl (111 endpoint records).
+- 17:19 dry-run pass 2 (figure/table fixes, bandwidth sensitivity) on 113 records.
+- 17:24 dry-run pass 3 (final for this draft; cosmetic output fixes) on 114 records.

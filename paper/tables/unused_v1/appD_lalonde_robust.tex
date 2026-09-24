@@ -1,0 +1,59 @@
+\begin{table}[tp]
+\centering
+\caption{Design-Matched Benchmark: Other Outputs and a Cleaner Sample}
+\label{tab:app-lalonde-robust}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & $\theta_N$ & $\theta_D$ & \multicolumn{3}{c}{$\theta_C$ (regression on $\ln C$ only)} \\
+\cmidrule(l){4-6}
+Estimator & Bias & Bias & Observational & Experimental & Bias \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel A. ARC-Challenge log odds (57 models)}} \\
+OLS & $-$0.153 & $-$0.064 & 0.449 & 0.547 & $-$0.098 \\
+ & (0.243) & (0.184) & (0.050) & (0.116) & (0.127) \\
+Year FE & $-$0.125 & $-$0.124 & 0.419 & 0.544 & $-$0.124 \\
+ & (0.256) & (0.213) & (0.053) & (0.107) & (0.119) \\
+Developer FE & 0.097 & $-$0.119 & 0.569 & 0.582 & $-$0.012 \\
+ & (0.230) & (0.200) & (0.072) & (0.098) & (0.122) \\
+Family FE & 0.235 & $-$0.472 & 0.598 & 0.624 & $-$0.026 \\
+ & (0.232) & (0.242) & (0.191) & (0.086) & (0.209) \\
+Lab $\times$ period FE & 0.151 & $-$0.150 & 0.586 & 0.574 & 0.012 \\
+ & (0.257) & (0.275) & (0.129) & (0.081) & (0.153) \\
+OP-style control & $-$0.038 & $-$0.064 & 0.424 & 0.480 & $-$0.056 \\
+ & (0.253) & (0.186) & (0.059) & (0.102) & (0.117) \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel B. Winogrande log odds (57 models)}} \\
+OLS & $-$0.037 & $-$0.234 & 0.351 & 0.511 & $-$0.160 \\
+ & (0.192) & (0.161) & (0.044) & (0.092) & (0.102) \\
+Year FE & $-$0.001 & $-$0.265 & 0.339 & 0.499 & $-$0.161 \\
+ & (0.198) & (0.173) & (0.045) & (0.084) & (0.096) \\
+Developer FE & 0.105 & $-$0.297 & 0.399 & 0.498 & $-$0.099 \\
+ & (0.189) & (0.193) & (0.050) & (0.078) & (0.093) \\
+Family FE & 0.225 & $-$0.549 & 0.405 & 0.466 & $-$0.061 \\
+ & (0.171) & (0.164) & (0.120) & (0.072) & (0.140) \\
+Lab $\times$ period FE & 0.153 & $-$0.278 & 0.425 & 0.471 & $-$0.046 \\
+ & (0.199) & (0.240) & (0.072) & (0.066) & (0.097) \\
+OP-style control & 0.006 & $-$0.234 & 0.336 & 0.494 & $-$0.158 \\
+ & (0.202) & (0.161) & (0.055) & (0.081) & (0.097) \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel C. HellaSwag log odds, restricted sample (49 models)}} \\
+OLS & 0.138 & $-$0.013 & 0.382 & 0.337 & 0.045 \\
+ & (0.079) & (0.062) & (0.021) & (0.009) & (0.023) \\
+Year FE & 0.141 & $-$0.066 & 0.373 & 0.357 & 0.016 \\
+ & (0.085) & (0.089) & (0.027) & (0.008) & (0.028) \\
+Developer FE & 0.141 & $-$0.076 & 0.432 & 0.394 & 0.038 \\
+ & (0.085) & (0.145) & (0.026) & (0.010) & (0.028) \\
+Family FE & 0.228 & $-$0.344 & 0.462 & 0.426 & 0.036 \\
+ & (0.093) & (0.223) & (0.067) & (0.014) & (0.068) \\
+Lab $\times$ period FE & 0.156 & $-$0.090 & 0.466 & 0.418 & 0.047 \\
+ & (0.096) & (0.137) & (0.045) & (0.010) & (0.046) \\
+OP-style control & 0.134 & $-$0.027 & 0.391 & 0.365 & 0.026 \\
+ & (0.092) & (0.065) & (0.022) & (0.007) & (0.023) \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Same design-matched comparison as Table~\ref{tab:lalonde}. Panels A and B: 57 models from 19 developers; Panel C excludes Qwen1.5 (token counts imputed by size), distilled, synthetic-data, and code models (49 models, 16 developers). Each estimator is applied to the observed benchmark log odds of the models inside the convex hull of the experimental runs (``Observational'') and, on the same models, to counterfactual outputs from the experimental technology, a quadratic surface fitted to the OLMo ladder and the \citet{gadre2024language} testbed (``Experimental''). Bias $=$ Observational $-$ Experimental. Standard errors in parentheses: clustered by developer for the observational estimates, from 300 bootstrap refits of the surface for the benchmark; the bias standard error treats the two as independent. With 16 to 19 developer clusters these standard errors can overstate precision; in Panel C the wild-cluster bootstrap $p$-value of the OLS $\theta_C$ bias is 0.10 (normal $p$ 0.03). $\theta_N$ and $\theta_D$ are the elasticities of the success odds with respect to parameters and tokens; the OP-style row controls for a quadratic in the estimated probability of Epoch notability.\end{tablenotes}
+\begin{tablenotes}[Source]Open LLM Leaderboard evaluations via \citet{ruan2024observational} and \citet{maiapolo2024sloth}; OLMo ladder \citep{bhagia2024establishing}; \citet{gadre2024language}; authors' estimates.\end{tablenotes}
+\end{table}

@@ -1,0 +1,22 @@
+\begin{table}[tp]
+\centering
+\caption{Is Data Quality Factor-Neutral? The Between-Corpus Tilt (Q2)}
+\label{tab:m9-tilt}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcccccccc@{}}
+\toprule
+Val. set & Conv. & $\hat\chi$ & 95\% CI & WCR $p$ & $\alpha$ & $\beta$ & $M^*$ ratio & $\hat w$ factor & Wald $p$ \\
+\midrule
+\multicolumn{10}{l}{Pending: the FineWeb main grid had 16 of 44 endpoints at the time of this run.} \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Corpus-pair model with common exponents and corpus-specific $(E,A,B)$, Huber loss on $\ln L$ (bits per byte) of both corpora's main-grid models evaluated on the same validation set. $\hat\chi=\Delta\ln(A/B)$, FineWeb-Edu minus FineWeb ($>0$: data-augmenting for FineWeb-Edu). $M^*$ ratio $=e^{-2\hat\chi/(\alpha+\beta)}$ on the $w=1$ path; $\hat w$ factor $=e^{-\hat\chi}$ (Proposition 4); $M^*$ ratio: $M^*_{\rm edu}/M^*_{\rm web}$. Validation sets: FineWeb-Edu (Edu), FineWeb (Web), WikiText-103 (Wiki). Brackets: wild cluster bootstrap by width (Webb weights, 999 draws) on the fit's residuals, as pre-specified. Braces and WCR $p$: the pre-declared size-corrected companion (CR2 cluster residuals; restricted bootstrap with $\chi=0$ imposed through the Hicks-neutral fit), which has size 0.05 on this design, where the plan's interval rejects a true $\chi=0$ about 20 percent of the time. Wald test of equal $(\alpha,\beta)$ from separate fits with bootstrap covariance. Decision rule (pre-registered): factor-biased if the interval excludes zero on both corpora's validation sets with the same sign; neutral if it contains zero on both with half-width below 0.10; otherwise inconclusive (size-corrected rule: WCR $p<0.05$ in place of the interval).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

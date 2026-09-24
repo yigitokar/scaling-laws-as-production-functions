@@ -1,0 +1,821 @@
+
+
+% Bibstyle aea.bst version 2009.05.20
+
+\begin{thebibliography}{xx}
+
+\harvarditem[Abnar et~al.]{Samira Abnar, Harshay Shah, Dan Busbridge, Alaaeldin
+  Mohamed~Elnouby Ali, Josh Susskind \harvardand\ Vimal
+  Thilak}{2025}{abnar2025parameters}
+{\bf Abnar, Samira, Harshay Shah, Dan Busbridge, Alaaeldin Mohamed~Elnouby Ali,
+  Josh Susskind, and Vimal Thilak.} 2025. ``{Parameters vs FLOPs: Scaling Laws
+  for Optimal Sparsity for Mixture-of-Experts Language Models}.'' {\em arXiv
+  preprint arXiv:2501.12370}.
+
+\harvarditem[Ackerberg, Caves \harvardand\ Frazer]{Daniel~A. Ackerberg, Kevin
+  Caves \harvardand\ Garth Frazer}{2015}{ackerberg2015identification}
+{\bf Ackerberg, Daniel~A., Kevin Caves, and Garth Frazer.} 2015.
+  ``Identification Properties of Recent Production Function Estimators.'' {\em
+  Econometrica}, 83(6):~2411--2451.
+
+\harvarditem[Arellano \harvardand\ Bond]{Manuel Arellano \harvardand\ Stephen
+  Bond}{1991}{arellano1991some}
+{\bf Arellano, Manuel, and Stephen Bond.} 1991. ``Some Tests of Specification
+  for Panel Data: {Monte Carlo} Evidence and an Application to Employment
+  Equations.'' {\em The Review of Economic Studies}, 58(2):~277--297.
+
+\harvarditem[Aubakirova et~al.]{Malika Aubakirova, Alex Atallah, Chris Clark,
+  Justin Summerville \harvardand\ Anjney Midha}{2026}{aubakirova2026state}
+{\bf Aubakirova, Malika, Alex Atallah, Chris Clark, Justin Summerville, and
+  Anjney Midha.} 2026. ``State of {AI}: An Empirical 100 Trillion Token Study
+  with {OpenRouter}.'' {\em arXiv preprint arXiv:2601.10088}.
+
+\harvarditem[Backus, Conlon \harvardand\ Sinkinson]{Matthew Backus, Christopher
+  Conlon \harvardand\ Michael Sinkinson}{2021}{backus2021common}
+{\bf Backus, Matthew, Christopher Conlon, and Michael Sinkinson.} 2021.
+  ``Common Ownership and Competition in the Ready-to-Eat Cereal Industry.''
+  National Bureau of Economic Research NBER Working Paper 28350.
+
+\harvarditem[Bagnoli \harvardand\ Bergstrom]{Mark Bagnoli \harvardand\ Ted
+  Bergstrom}{2005}{bagnoli2005logconcave}
+{\bf Bagnoli, Mark, and Ted Bergstrom.} 2005. ``Log-Concave Probability and Its
+  Applications.'' {\em Economic Theory}, 26(2):~445--469.
+
+\harvarditem[Berry \harvardand\ Haile]{Steven~T. Berry \harvardand\ Philip~A.
+  Haile}{2014}{berry2014identification}
+{\bf Berry, Steven~T., and Philip~A. Haile.} 2014. ``Identification in
+  Differentiated Products Markets Using Market Level Data.'' {\em
+  Econometrica}, 82(5):~1749--1797.
+
+\harvarditem[Besiroglu et~al.]{Tamay Besiroglu, Ege Erdil, Matthew Barnett
+  \harvardand\ Josh You}{2024}{besiroglu2024chinchilla}
+{\bf Besiroglu, Tamay, Ege Erdil, Matthew Barnett, and Josh You.} 2024.
+  ``Chinchilla Scaling: A Replication Attempt.'' {\em arXiv preprint
+  arXiv:2404.10102}.
+
+\harvarditem[Bhagia et~al.]{Akshita Bhagia, Jiacheng Liu, Alexander Wettig,
+  David Heineman, Oyvind Tafjord, Ananya~Harsh Jha, Luca Soldaini, Noah~A.
+  Smith, Dirk Groeneveld, Pang~Wei Koh, Jesse Dodge \harvardand\ Hannaneh
+  Hajishirzi}{2025}{bhagia2024establishing}
+{\bf Bhagia, Akshita, Jiacheng Liu, Alexander Wettig, David Heineman, Oyvind
+  Tafjord, Ananya~Harsh Jha, Luca Soldaini, Noah~A. Smith, Dirk Groeneveld,
+  Pang~Wei Koh, Jesse Dodge, and Hannaneh Hajishirzi.} 2025. ``Establishing
+  Task Scaling Laws via Compute-Efficient Model Ladders.'' {\em Conference on
+  Language Modeling}.
+
+\harvarditem[Bian, Yan \harvardand\ Venkataraman]{Song Bian, Minghao Yan
+  \harvardand\ Shivaram Venkataraman}{2025}{bian2025scaling}
+{\bf Bian, Song, Minghao Yan, and Shivaram Venkataraman.} 2025. ``Scaling
+  Inference-Efficient Language Models.'' {\em Proceedings of the 42nd
+  International Conference on Machine Learning}, 267.
+
+\harvarditem[Biderman et~al.]{Stella Biderman, Hailey Schoelkopf, Quentin
+  Anthony, Herbie Bradley, Kyle O'Brien, Eric Hallahan, Mohammad~Aflah Khan,
+  Shivanshu Purohit, USVSN~Sai Prashanth, Edward Raff, Aviya Skowron, Lintang
+  Sutawika \harvardand\ Oskar van~der Wal}{2023}{biderman2023pythia}
+{\bf Biderman, Stella, Hailey Schoelkopf, Quentin Anthony, Herbie Bradley, Kyle
+  O'Brien, Eric Hallahan, Mohammad~Aflah Khan, Shivanshu Purohit, USVSN~Sai
+  Prashanth, Edward Raff, Aviya Skowron, Lintang Sutawika, and Oskar van~der
+  Wal.} 2023. ``Pythia: A Suite for Analyzing Large Language Models Across
+  Training and Scaling.'' {\em Proceedings of the International Conference on
+  Machine Learning}.
+
+\harvarditem[Bjorck et~al.]{Johan Bjorck, Alon Benhaim, Vishrav Chaudhary, Furu
+  Wei \harvardand\ Xia Song}{2025}{bjorck2024scaling}
+{\bf Bjorck, Johan, Alon Benhaim, Vishrav Chaudhary, Furu Wei, and Xia Song.}
+  2025. ``Scaling Optimal {LR} Across Token Horizons.'' {\em International
+  Conference on Learning Representations}.
+
+\harvarditem[Blackorby \harvardand\ Russell]{Charles Blackorby \harvardand\
+  R.~Robert Russell}{1989}{blackorby1989real}
+{\bf Blackorby, Charles, and R.~Robert Russell.} 1989. ``Will the Real
+  Elasticity of Substitution Please Stand Up? ({A} Comparison of the
+  {Allen/Uzawa} and {Morishima} Elasticities).'' {\em American Economic
+  Review}, 79(4):~882--888.
+
+\harvarditem[Blundell \harvardand\ Bond]{Richard Blundell \harvardand\ Stephen
+  Bond}{1998}{blundell1998initial}
+{\bf Blundell, Richard, and Stephen Bond.} 1998. ``Initial Conditions and
+  Moment Restrictions in Dynamic Panel Data Models.'' {\em Journal of
+  Econometrics}, 87(1):~115--143.
+
+\harvarditem[Bond \harvardand\ S{\"o}derbom]{Stephen Bond \harvardand\ M{\aa}ns
+  S{\"o}derbom}{2005}{bond2005adjustment}
+{\bf Bond, Stephen, and M{\aa}ns S{\"o}derbom.} 2005. ``Adjustment Costs and
+  the Identification of {Cobb Douglas} Production Functions.'' Institute for
+  Fiscal Studies IFS Working Paper 05/04.
+
+\harvarditem[Bond et~al.]{Steve Bond, Arshia Hashemi, Greg Kaplan \harvardand\
+  Piotr Zoch}{2021}{bond2020unpleasant}
+{\bf Bond, Steve, Arshia Hashemi, Greg Kaplan, and Piotr Zoch.} 2021. ``Some
+  Unpleasant Markup Arithmetic: Production Function Elasticities and Their
+  Estimation from Production Data.'' {\em Journal of Monetary Economics},
+  121:~1--14.
+
+\harvarditem[Box \harvardand\ Lucas]{G.~E.~P. Box \harvardand\ H.~L.
+  Lucas}{1959}{box1959design}
+{\bf Box, G. E.~P., and H.~L. Lucas.} 1959. ``Design of Experiments in
+  Non-Linear Situations.'' {\em Biometrika}, 46(1/2):~77--90.
+
+\harvarditem[Brandfonbrener et~al.]{David Brandfonbrener, Nikhil Anand, Nikhil
+  Vyas, Eran Malach \harvardand\ Sham Kakade}{2025}{brandfonbrener2024loss}
+{\bf Brandfonbrener, David, Nikhil Anand, Nikhil Vyas, Eran Malach, and Sham
+  Kakade.} 2025. ``Loss-to-Loss Prediction: Scaling Laws for All Datasets.''
+  {\em Transactions on Machine Learning Research}.
+
+\harvarditem[Brown et~al.]{Bradley Brown, Jordan Juravsky, Ryan Ehrlich, Ronald
+  Clark, Quoc~V. Le, Christopher R{\'e} \harvardand\ Azalia
+  Mirhoseini}{2024}{brown2024large}
+{\bf Brown, Bradley, Jordan Juravsky, Ryan Ehrlich, Ronald Clark, Quoc~V. Le,
+  Christopher R{\'e}, and Azalia Mirhoseini.} 2024. ``Large Language Monkeys:
+  Scaling Inference Compute with Repeated Sampling.'' {\em arXiv preprint
+  arXiv:2407.21787}.
+
+\harvarditem[Busbridge et~al.]{Dan Busbridge, Amitis Shidani, Floris Weers,
+  Jason Ramapuram, Etai Littwin \harvardand\ Russ
+  Webb}{2025}{busbridge2025distillation}
+{\bf Busbridge, Dan, Amitis Shidani, Floris Weers, Jason Ramapuram, Etai
+  Littwin, and Russ Webb.} 2025. ``{Distillation Scaling Laws}.'' {\em
+  International Conference on Machine Learning}.
+
+\harvarditem[Cameron \harvardand\ Miller]{A.~Colin Cameron \harvardand\
+  Douglas~L. Miller}{2015}{cameron2015practitioner}
+{\bf Cameron, A.~Colin, and Douglas~L. Miller.} 2015. ``A Practitioner's Guide
+  to Cluster-Robust Inference.'' {\em Journal of Human Resources},
+  50(2):~317--372.
+
+\harvarditem[Cameron, Gelbach \harvardand\ Miller]{A.~Colin Cameron, Jonah~B.
+  Gelbach \harvardand\ Douglas~L. Miller}{2008}{cameron2008bootstrap}
+{\bf Cameron, A.~Colin, Jonah~B. Gelbach, and Douglas~L. Miller.} 2008.
+  ``Bootstrap-Based Improvements for Inference with Clustered Errors.'' {\em
+  Review of Economics and Statistics}, 90(3):~414--427.
+
+\harvarditem[Carter, Schnepel \harvardand\ Steigerwald]{Andrew~V. Carter,
+  Kevin~T. Schnepel \harvardand\ Douglas~G.
+  Steigerwald}{2017}{carter2017asymptotic}
+{\bf Carter, Andrew~V., Kevin~T. Schnepel, and Douglas~G. Steigerwald.} 2017.
+  ``Asymptotic Behavior of a t-Test Robust to Cluster Heterogeneity.'' {\em
+  Review of Economics and Statistics}, 99(4):~698--709.
+
+\harvarditem[Caudill, Ford \harvardand\ Gropper]{Steven~B. Caudill, Jon~M. Ford
+  \harvardand\ Daniel~M. Gropper}{1995}{caudill1995frontier}
+{\bf Caudill, Steven~B., Jon~M. Ford, and Daniel~M. Gropper.} 1995. ``Frontier
+  Estimation and Firm-Specific Inefficiency Measures in the Presence of
+  Heteroscedasticity.'' {\em Journal of Business \& Economic Statistics},
+  13(1):~105--111.
+
+\harvarditem[Chen]{Jiahua Chen}{1995}{chen1995optimal}
+{\bf Chen, Jiahua.} 1995. ``Optimal Rate of Convergence for Finite Mixture
+  Models.'' {\em Annals of Statistics}, 23(1):~221--233.
+
+\harvarditem[Chetty et~al.]{Raj Chetty, John~N. Friedman, Tore Olsen
+  \harvardand\ Luigi Pistaferri}{2011}{chetty2011adjustment}
+{\bf Chetty, Raj, John~N. Friedman, Tore Olsen, and Luigi Pistaferri.} 2011.
+  ``Adjustment Costs, Firm Responses, and Micro vs. Macro Labor Supply
+  Elasticities: Evidence from {Danish} Tax Records.'' {\em Quarterly Journal of
+  Economics}, 126(2):~749--804.
+
+\harvarditem[Clark et~al.]{Aidan Clark, Diego de~las Casas, Aurelia Guy, Arthur
+  Mensch, Michela Paganini, Jordan Hoffmann, Bogdan Damoc, Blake Hechtman,
+  Trevor Cai, Sebastian Borgeaud, George van~den Driessche, Eliza Rutherford,
+  Tom Hennigan, Matthew Johnson, Katie Millican, Albin Cassirer, Chris Jones,
+  Elena Buchatskaya, David Budden, Laurent Sifre, Simon Osindero, Oriol
+  Vinyals, Jack Rae, Erich Elsen, Koray Kavukcuoglu \harvardand\ Karen
+  Simonyan}{2022}{clark2022unified}
+{\bf Clark, Aidan, Diego de~las Casas, Aurelia Guy, Arthur Mensch, Michela
+  Paganini, Jordan Hoffmann, Bogdan Damoc, Blake Hechtman, Trevor Cai,
+  Sebastian Borgeaud, George van~den Driessche, Eliza Rutherford, Tom Hennigan,
+  Matthew Johnson, Katie Millican, Albin Cassirer, Chris Jones, Elena
+  Buchatskaya, David Budden, Laurent Sifre, Simon Osindero, Oriol Vinyals, Jack
+  Rae, Erich Elsen, Koray Kavukcuoglu, and Karen Simonyan.} 2022. ``{Unified
+  Scaling Laws for Routed Language Models}.'' {\em Proceedings of the 39th
+  International Conference on Machine Learning}, 162:~4057--4086.
+
+\harvarditem[Collard-Wexler \harvardand\ De~Loecker]{Allan Collard-Wexler
+  \harvardand\ Jan De~Loecker}{2016}{collardwexler2016production}
+{\bf Collard-Wexler, Allan, and Jan De~Loecker.} 2016. ``Production Function
+  Estimation and Capital Measurement Error.'' National Bureau of Economic
+  Research NBER Working Paper 22437.
+
+\harvarditem[Cottier et~al.]{Ben Cottier, Robi Rahman, Loredana Fattorini,
+  Nestor Maslej, Tamay Besiroglu \harvardand\ David
+  Owen}{2024}{cottier2024rising}
+{\bf Cottier, Ben, Robi Rahman, Loredana Fattorini, Nestor Maslej, Tamay
+  Besiroglu, and David Owen.} 2024. ``The Rising Costs of Training Frontier
+  {AI} Models.'' {\em arXiv preprint arXiv:2405.21015}.
+
+\harvarditem[Czech]{Eric Czech}{2026}{czech2026llama3isoflop}
+{\bf Czech, Eric.} 2026. ``llama3\_isoflop\_extraction: Digitized {IsoFLOP}
+  Points from the {Llama 3} Technical Report.'' {\em GitHub repository,
+  \url{https://github.com/eric-czech/llama3_isoflop_extraction}}.
+
+\harvarditem[Czech et~al.]{Eric Czech, Zhiwei Xu, Yael Elmatad, Yixin Wang
+  \harvardand\ William Held}{2026}{czech2026problems}
+{\bf Czech, Eric, Zhiwei Xu, Yael Elmatad, Yixin Wang, and William Held.} 2026.
+  ``Problems with {Chinchilla} Approach 2: Systematic Biases in {IsoFLOP}
+  Parabola Fits.'' {\em arXiv preprint arXiv:2603.22339}.
+
+\harvarditem[{DeepSeek-AI} et~al.]{{DeepSeek-AI}, Xiao Bi, Deli Chen, Guanting
+  Chen et~al.}{2024}{bi2024deepseek}
+{\bf {DeepSeek-AI}, Xiao Bi, Deli Chen, Guanting Chen, et~al.} 2024. ``DeepSeek
+  LLM: Scaling Open-Source Language Models with Longtermism.'' {\em arXiv
+  preprint arXiv:2401.02954}.
+
+\harvarditem[Dehejia \harvardand\ Wahba]{Rajeev~H. Dehejia \harvardand\ Sadek
+  Wahba}{1999}{dehejia1999causal}
+{\bf Dehejia, Rajeev~H., and Sadek Wahba.} 1999. ``Causal Effects in
+  Nonexperimental Studies: Reevaluating the Evaluation of Training Programs.''
+  {\em Journal of the American Statistical Association}, 94(448):~1053--1062.
+
+\harvarditem[De~Loecker \harvardand\ Warzynski]{Jan De~Loecker \harvardand\
+  Frederic Warzynski}{2012}{deloecker2012markups}
+{\bf De~Loecker, Jan, and Frederic Warzynski.} 2012. ``Markups and Firm-Level
+  Export Status.'' {\em American Economic Review}, 102(6):~2437--2471.
+
+\harvarditem[Demirer]{Mert Demirer}{2020}{demirer2020production}
+{\bf Demirer, Mert.} 2020. ``Production Function Estimation with
+  Factor-Augmenting Technology: An Application to Markups.'' Massachusetts
+  Institute of Technology Job Market Paper.
+
+\harvarditem[Demirer et~al.]{Mert Demirer, Andrey Fradkin, Nadav Tadelis
+  \harvardand\ Sida Peng}{2025}{demirer2025emerging}
+{\bf Demirer, Mert, Andrey Fradkin, Nadav Tadelis, and Sida Peng.} 2025. ``The
+  Emerging Market for Intelligence: Pricing, Supply, and Demand for {LLMs}.''
+  National Bureau of Economic Research NBER Working Paper 34608.
+
+\harvarditem[Denain \harvardand\ Wu]{Jean-Stanislas Denain \harvardand\ Cheryl
+  Wu}{2026}{denain2026final}
+{\bf Denain, Jean-Stanislas, and Cheryl Wu.} 2026. ``Final Training Runs
+  Account for a Minority of {R\&D} Compute Spending.'' {\em Epoch AI Gradient
+  Updates, 23 March 2026,
+  \url{https://epoch.ai/gradient-updates/r-and-d-vs-training-compute}}.
+
+\harvarditem[De~Ridder, Grassi \harvardand\ Morzenti]{Maarten De~Ridder, Basile
+  Grassi \harvardand\ Giovanni Morzenti}{2026}{deridder2026hitchhiker}
+{\bf De~Ridder, Maarten, Basile Grassi, and Giovanni Morzenti.} 2026. ``The
+  Hitchhiker's Guide to Markup Estimation: Assessing Estimates from Financial
+  Data.'' {\em Econometrica}, 94(1):~137--168.
+
+\harvarditem[DerSimonian \harvardand\ Laird]{Rebecca DerSimonian \harvardand\
+  Nan Laird}{1986}{dersimonian1986meta}
+{\bf DerSimonian, Rebecca, and Nan Laird.} 1986. ``Meta-Analysis in Clinical
+  Trials.'' {\em Controlled Clinical Trials}, 7(3):~177--188.
+
+\harvarditem[de~Vries]{Harm de~Vries}{2023}{devries2023go}
+{\bf de~Vries, Harm.} 2023. ``Go Smol or Go Home.'' {\em Blog post, last
+  updated 3 July 2023}.
+
+\harvarditem[Diamond, McFadden \harvardand\ Rodriguez]{Peter~A. Diamond, Daniel
+  McFadden \harvardand\ Miguel Rodriguez}{1978}{diamond1978measurement}
+{\bf Diamond, Peter~A., Daniel McFadden, and Miguel Rodriguez.} 1978.
+  ``Measurement of the Elasticity of Factor Substitution and Bias of Technical
+  Change.'' In {\em Production Economics: A Dual Approach to Theory and
+  Applications}. Vol.~2, ed. Melvyn Fuss and Daniel McFadden, 125--147.
+  Amsterdam:North-Holland.
+
+\harvarditem[Doraszelski \harvardand\ Jaumandreu]{Ulrich Doraszelski
+  \harvardand\ Jordi Jaumandreu}{2021}{doraszelski2021reexamining}
+{\bf Doraszelski, Ulrich, and Jordi Jaumandreu.} 2021. ``Reexamining the {De
+  Loecker} \& {Warzynski} (2012) Method for Estimating Markups.'' Centre for
+  Economic Policy Research CEPR Discussion Paper DP16027.
+
+\harvarditem[Duarte et~al.]{Marco Duarte, Lorenzo Magnolfi, Mikkel S{\o}lvsten
+  \harvardand\ Christopher Sullivan}{2024}{duarte2024testing}
+{\bf Duarte, Marco, Lorenzo Magnolfi, Mikkel S{\o}lvsten, and Christopher
+  Sullivan.} 2024. ``Testing Firm Conduct.'' {\em Quantitative Economics},
+  15(3):~571--606.
+
+\harvarditem[Dub{\'e}, Fox \harvardand\ Su]{Jean-Pierre Dub{\'e}, Jeremy~T. Fox
+  \harvardand\ Che-Lin Su}{2012}{dube2012improving}
+{\bf Dub{\'e}, Jean-Pierre, Jeremy~T. Fox, and Che-Lin Su.} 2012. ``Improving
+  the Numerical Performance of Static and Dynamic Aggregate Discrete Choice
+  Random Coefficients Demand Estimation.'' {\em Econometrica},
+  80(5):~2231--2267.
+
+\harvarditem[Efron]{Bradley Efron}{1965}{efron1965increasing}
+{\bf Efron, Bradley.} 1965. ``Increasing Properties of {P}{\'o}lya Frequency
+  Functions.'' {\em Annals of Mathematical Statistics}, 36(1):~272--279.
+
+\harvarditem[{Epoch AI}]{{Epoch AI}}{2026}{epochai2026data}
+{\bf {Epoch AI}.} 2026. ``Data on {AI} Models.'' {\em
+  \url{https://epoch.ai/data/ai-models}}.
+
+\harvarditem[Erdil et~al.]{Ege Erdil, Andrei Potlogea, Tamay Besiroglu, Edu
+  Roldan, Anson Ho, Jaime Sevilla, Matthew Barnett, Matej Vrzla \harvardand\
+  Robert Sandler}{2025}{erdil2025gate}
+{\bf Erdil, Ege, Andrei Potlogea, Tamay Besiroglu, Edu Roldan, Anson Ho, Jaime
+  Sevilla, Matthew Barnett, Matej Vrzla, and Robert Sandler.} 2025. ``{GATE}:
+  An Integrated Assessment Model for {AI} Automation.'' {\em arXiv preprint
+  arXiv:2503.04941}.
+
+\harvarditem[Feng, He \harvardand\ Hu]{Xingdong Feng, Xuming He \harvardand\
+  Jianhua Hu}{2011}{feng2011wild}
+{\bf Feng, Xingdong, Xuming He, and Jianhua Hu.} 2011. ``Wild Bootstrap for
+  Quantile Regression.'' {\em Biometrika}, 98(4):~995--999.
+
+\harvarditem[Gadre et~al.]{Samir~Yitzhak Gadre, Georgios Smyrnis, Vaishaal
+  Shankar, Suchin Gururangan, Mitchell Wortsman, Rulin Shao, Jean Mercat, Alex
+  Fang, Jeffrey Li, Sedrick Keh, Rui Xin, Marianna Nezhurina, Igor Vasiljevic,
+  Jenia Jitsev, Luca Soldaini, Alexandros~G. Dimakis, Gabriel Ilharco, Pang~Wei
+  Koh, Shuran Song, Thomas Kollar, Yair Carmon, Achal Dave, Reinhard Heckel,
+  Niklas Muennighoff \harvardand\ Ludwig Schmidt}{2025}{gadre2024language}
+{\bf Gadre, Samir~Yitzhak, Georgios Smyrnis, Vaishaal Shankar, Suchin
+  Gururangan, Mitchell Wortsman, Rulin Shao, Jean Mercat, Alex Fang, Jeffrey
+  Li, Sedrick Keh, Rui Xin, Marianna Nezhurina, Igor Vasiljevic, Jenia Jitsev,
+  Luca Soldaini, Alexandros~G. Dimakis, Gabriel Ilharco, Pang~Wei Koh, Shuran
+  Song, Thomas Kollar, Yair Carmon, Achal Dave, Reinhard Heckel, Niklas
+  Muennighoff, and Ludwig Schmidt.} 2025. ``Language Models Scale Reliably with
+  Over-Training and on Downstream Tasks.'' {\em International Conference on
+  Learning Representations}.
+
+\harvarditem[Gandhi, Navarro \harvardand\ Rivers]{Amit Gandhi, Salvador Navarro
+  \harvardand\ David~A. Rivers}{2020}{gandhi2020identification}
+{\bf Gandhi, Amit, Salvador Navarro, and David~A. Rivers.} 2020. ``On the
+  Identification of Gross Output Production Functions.'' {\em Journal of
+  Political Economy}, 128(8):~2973--3016.
+
+\harvarditem[Goldberger]{Arthur~S. Goldberger}{1981}{goldberger1981linear}
+{\bf Goldberger, Arthur~S.} 1981. ``Linear Regression after Selection.'' {\em
+  Journal of Econometrics}, 15(3):~357--366.
+
+\harvarditem[Grattafiori et~al.]{Aaron Grattafiori, Abhimanyu Dubey, Abhinav
+  Jauhri et~al.}{2024}{grattafiori2024llama}
+{\bf Grattafiori, Aaron, Abhimanyu Dubey, Abhinav Jauhri, et~al.} 2024. ``{The
+  Llama 3 Herd of Models}.'' {\em arXiv preprint arXiv:2407.21783}.
+
+\harvarditem[Gundlach et~al.]{Hans Gundlach, Alex Fogelson, Jayson Lynch, Ana
+  Tri{\v{s}}ovi{\'c}, Jonathan Rosenfeld, Anmol Sandhu \harvardand\ Neil
+  Thompson}{2025}{gundlach2025origin}
+{\bf Gundlach, Hans, Alex Fogelson, Jayson Lynch, Ana Tri{\v{s}}ovi{\'c},
+  Jonathan Rosenfeld, Anmol Sandhu, and Neil Thompson.} 2025. ``On the Origin
+  of Algorithmic Progress in {AI}.'' {\em arXiv preprint arXiv:2511.21622}.
+
+\harvarditem[H{\"a}gele et~al.]{Alexander H{\"a}gele, Elie Bakouch, Atli
+  Kosson, Loubna Ben~Allal, Leandro Von~Werra \harvardand\ Martin
+  Jaggi}{2024}{hagele2024scaling}
+{\bf H{\"a}gele, Alexander, Elie Bakouch, Atli Kosson, Loubna Ben~Allal,
+  Leandro Von~Werra, and Martin Jaggi.} 2024. ``Scaling Laws and
+  Compute-Optimal Training Beyond Fixed Training Durations.'' {\em Advances in
+  Neural Information Processing Systems}, 37.
+
+\harvarditem[Hall]{Robert~E. Hall}{1988}{hall1988relation}
+{\bf Hall, Robert~E.} 1988. ``The Relation between Price and Marginal Cost in
+  {U.S.} Industry.'' {\em Journal of Political Economy}, 96(5):~921--947.
+
+\harvarditem[Hannun et~al.]{Awni Hannun, Jagrit Digani, Angelos Katharopoulos
+  \harvardand\ Ronan Collobert}{2023}{hannun2023mlx}
+{\bf Hannun, Awni, Jagrit Digani, Angelos Katharopoulos, and Ronan Collobert.}
+  2023. ``{MLX}: Efficient and Flexible Machine Learning on {Apple} Silicon.''
+  {\em GitHub repository, \url{https://github.com/ml-explore/mlx}}.
+
+\harvarditem[Hao \harvardand\ Merrill]{Sophie Hao \harvardand\ William
+  Merrill}{2026}{hao2026theory}
+{\bf Hao, Sophie, and William Merrill.} 2026. ``A Theory of Training
+  Profit-Optimal {LLMs}.'' {\em arXiv preprint arXiv:2605.16430}.
+
+\harvarditem[Hausman \harvardand\ Wise]{Jerry~A. Hausman \harvardand\ David~A.
+  Wise}{1977}{hausman1977social}
+{\bf Hausman, Jerry~A., and David~A. Wise.} 1977. ``Social Experimentation,
+  Truncated Distributions, and Efficient Estimation.'' {\em Econometrica},
+  45(4):~919--938.
+
+\harvarditem[Heckman]{James~J. Heckman}{1979}{heckman1979sample}
+{\bf Heckman, James~J.} 1979. ``Sample Selection Bias as a Specification
+  Error.'' {\em Econometrica}, 47(1):~153--161.
+
+\harvarditem[Ho et~al.]{Anson Ho, Tamay Besiroglu, Ege Erdil, David Owen, Robi
+  Rahman, Zifan~Carl Guo, David Atkinson, Neil Thompson \harvardand\ Jaime
+  Sevilla}{2024}{ho2024algorithmic}
+{\bf Ho, Anson, Tamay Besiroglu, Ege Erdil, David Owen, Robi Rahman, Zifan~Carl
+  Guo, David Atkinson, Neil Thompson, and Jaime Sevilla.} 2024. ``Algorithmic
+  Progress in Language Models.'' {\em Advances in Neural Information Processing
+  Systems}, 37:~58245--58283.
+
+\harvarditem[Hoffmann et~al.]{Jordan Hoffmann, Sebastian Borgeaud, Arthur
+  Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de~Las~Casas,
+  Lisa~Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland,
+  Katie Millican, George van~den Driessche, Bogdan Damoc, Aurelia Guy, Simon
+  Osindero, Karen Simonyan, Erich Elsen, Jack~W. Rae, Oriol Vinyals
+  \harvardand\ Laurent Sifre}{2022}{hoffmann2022training}
+{\bf Hoffmann, Jordan, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya,
+  Trevor Cai, Eliza Rutherford, Diego de~Las~Casas, Lisa~Anne Hendricks,
+  Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican,
+  George van~den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen
+  Simonyan, Erich Elsen, Jack~W. Rae, Oriol Vinyals, and Laurent Sifre.} 2022.
+  ``{Training Compute-Optimal Large Language Models}.'' {\em Advances in Neural
+  Information Processing Systems}, 35:~30016--30030.
+
+\harvarditem[Hotz, Imbens \harvardand\ Mortimer]{V.~Joseph Hotz, Guido~W.
+  Imbens \harvardand\ Julie~H. Mortimer}{2005}{hotz2005predicting}
+{\bf Hotz, V.~Joseph, Guido~W. Imbens, and Julie~H. Mortimer.} 2005.
+  ``Predicting the Efficacy of Future Training Programs Using Past Experiences
+  at Other Locations.'' {\em Journal of Econometrics}, 125(1--2):~241--270.
+
+\harvarditem[Hu et~al.]{Shengding Hu, Yuge Tu, Xu Han, Chaoqun He, Ganqu Cui,
+  Xiang Long, Zhi Zheng, Yewei Fang, Yuxiang Huang, Weilin Zhao, Xinrong Zhang,
+  Zheng~Leng Thai, Kaihuo Zhang, Chongyi Wang, Yuan Yao, Chenyang Zhao, Jie
+  Zhou, Jie Cai, Zhongwu Zhai, Ning Ding, Chao Jia, Guoyang Zeng, Dahai Li,
+  Zhiyuan Liu \harvardand\ Maosong Sun}{2024}{hu2024minicpm}
+{\bf Hu, Shengding, Yuge Tu, Xu Han, Chaoqun He, Ganqu Cui, Xiang Long, Zhi
+  Zheng, Yewei Fang, Yuxiang Huang, Weilin Zhao, Xinrong Zhang, Zheng~Leng
+  Thai, Kaihuo Zhang, Chongyi Wang, Yuan Yao, Chenyang Zhao, Jie Zhou, Jie Cai,
+  Zhongwu Zhai, Ning Ding, Chao Jia, Guoyang Zeng, Dahai Li, Zhiyuan Liu, and
+  Maosong Sun.} 2024. ``{MiniCPM}: Unveiling the Potential of Small Language
+  Models with Scalable Training Strategies.'' {\em Conference on Language
+  Modeling}.
+
+\harvarditem[Jones \harvardand\ Tonetti]{Charles~I. Jones \harvardand\
+  Christopher Tonetti}{2020}{jones2020nonrivalry}
+{\bf Jones, Charles~I., and Christopher Tonetti.} 2020. ``Nonrivalry and the
+  Economics of Data.'' {\em American Economic Review}, 110(9):~2819--2858.
+
+\harvarditem[Kaplan et~al.]{Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B.
+  Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu
+  \harvardand\ Dario Amodei}{2020}{kaplan2020scaling}
+{\bf Kaplan, Jared, Sam McCandlish, Tom Henighan, Tom~B. Brown, Benjamin Chess,
+  Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei.} 2020.
+  ``Scaling Laws for Neural Language Models.'' {\em arXiv preprint
+  arXiv:2001.08361}.
+
+\harvarditem[Kiefer \harvardand\ Wolfowitz]{J. Kiefer \harvardand\ J.
+  Wolfowitz}{1959}{kiefer1959optimum}
+{\bf Kiefer, J., and J. Wolfowitz.} 1959. ``Optimum Designs in Regression
+  Problems.'' {\em Annals of Mathematical Statistics}, 30(2):~271--294.
+
+\harvarditem[Klepper \harvardand\ Leamer]{Steven Klepper \harvardand\ Edward~E.
+  Leamer}{1984}{klepper1984consistent}
+{\bf Klepper, Steven, and Edward~E. Leamer.} 1984. ``Consistent Sets of
+  Estimates for Regressions with Errors in All Variables.'' {\em Econometrica},
+  52(1):~163--183.
+
+\harvarditem[Kleven]{Henrik~J. Kleven}{2016}{kleven2016bunching}
+{\bf Kleven, Henrik~J.} 2016. ``Bunching.'' {\em Annual Review of Economics},
+  8:~435--464.
+
+\harvarditem[Klump, McAdam \harvardand\ Willman]{Rainer Klump, Peter McAdam
+  \harvardand\ Alpo Willman}{2007}{klump2007factor}
+{\bf Klump, Rainer, Peter McAdam, and Alpo Willman.} 2007. ``Factor
+  Substitution and Factor-Augmenting Technical Progress in the {United States}:
+  A Normalized Supply-Side System Approach.'' {\em Review of Economics and
+  Statistics}, 89(1):~183--192.
+
+\harvarditem[Knittel \harvardand\ Metaxoglou]{Christopher~R. Knittel
+  \harvardand\ Konstantinos Metaxoglou}{2014}{knittel2014estimation}
+{\bf Knittel, Christopher~R., and Konstantinos Metaxoglou.} 2014. ``Estimation
+  of Random-Coefficient Demand Models: Two Empiricists' Perspective.'' {\em
+  Review of Economics and Statistics}, 96(1):~34--59.
+
+\harvarditem[K{\"o}nig et~al.]{Gunnar K{\"o}nig, Martin Pawelczyk, Ulrike von
+  Luxburg \harvardand\ Sebastian Bordt}{2026}{konig2026validity}
+{\bf K{\"o}nig, Gunnar, Martin Pawelczyk, Ulrike von Luxburg, and Sebastian
+  Bordt.} 2026. ``Validity Threats for Foundation Model Research.'' {\em arXiv
+  preprint arXiv:2606.05029}.
+
+\harvarditem[Krajewski et~al.]{Jakub Krajewski, Jan Ludziejewski, Kamil
+  Adamczewski, Maciej Pi{\'o}ro, Micha{\l} Krutul, Szymon Antoniak, Kamil
+  Ciebiera, Krystian Kr{\'o}l, Tomasz Odrzyg{\'o}{\'z}d{\'z}, Piotr Sankowski,
+  Marek Cygan \harvardand\ Sebastian Jaszczur}{2024}{krajewski2024scaling}
+{\bf Krajewski, Jakub, Jan Ludziejewski, Kamil Adamczewski, Maciej Pi{\'o}ro,
+  Micha{\l} Krutul, Szymon Antoniak, Kamil Ciebiera, Krystian Kr{\'o}l, Tomasz
+  Odrzyg{\'o}{\'z}d{\'z}, Piotr Sankowski, Marek Cygan, and Sebastian
+  Jaszczur.} 2024. ``{Scaling Laws for Fine-Grained Mixture of Experts}.'' {\em
+  Proceedings of the 41st International Conference on Machine Learning},
+  235:~33270--33288.
+
+\harvarditem[Kricheli et~al.]{Joshua~Shay Kricheli, Alexander~Lawrence Reid,
+  Soumajyoti Sarkar, Venkata Gandikota \harvardand\ Paulo
+  Shakarian}{2026}{kricheli2026tokens}
+{\bf Kricheli, Joshua~Shay, Alexander~Lawrence Reid, Soumajyoti Sarkar, Venkata
+  Gandikota, and Paulo Shakarian.} 2026. ``Tokens-per-Parameter Coverage Is
+  Critical for Robust {LLM} Scaling Law Extrapolation.'' {\em arXiv preprint
+  arXiv:2605.08541}.
+
+\harvarditem[LaLonde]{Robert~J. LaLonde}{1986}{lalonde1986evaluating}
+{\bf LaLonde, Robert~J.} 1986. ``Evaluating the Econometric Evaluations of
+  Training Programs with Experimental Data.'' {\em American Economic Review},
+  76(4):~604--620.
+
+\harvarditem[Levinsohn \harvardand\ Petrin]{James Levinsohn \harvardand\ Amil
+  Petrin}{2003}{levinsohn2003estimating}
+{\bf Levinsohn, James, and Amil Petrin.} 2003. ``Estimating Production
+  Functions Using Inputs to Control for Unobservables.'' {\em Review of
+  Economic Studies}, 70(2):~317--341.
+
+\harvarditem[Li et~al.]{Houyi Li, Wenzhen Zheng, Qiufeng Wang, Hanshan Zhang,
+  Zili Wang, Shijie Xuyang, Yuantao Fan, Zhenyu Ding, Haoying Wang, Ning Ding,
+  Shuigeng Zhou, Xiangyu Zhang \harvardand\ Daxin Jiang}{2025{\em
+  a}}{li2025predictablea}
+{\bf Li, Houyi, Wenzhen Zheng, Qiufeng Wang, Hanshan Zhang, Zili Wang, Shijie
+  Xuyang, Yuantao Fan, Zhenyu Ding, Haoying Wang, Ning Ding, Shuigeng Zhou,
+  Xiangyu Zhang, and Daxin Jiang.} 2025{\em a}. ``Predictable Scale: Part I,
+  Step Law -- Optimal Hyperparameter Scaling Law in Large Language Model
+  Pretraining.'' {\em arXiv preprint arXiv:2503.04715}.
+
+\harvarditem[Li et~al.]{Houyi Li, Wenzhen Zheng, Qiufeng Wang, Zhenyu Ding,
+  Haoying Wang, Zili Wang, Shijie Xuyang, Ning Ding, Shuigeng Zhou, Xiangyu
+  Zhang \harvardand\ Daxin Jiang}{2025{\em b}}{li2025predictableb}
+{\bf Li, Houyi, Wenzhen Zheng, Qiufeng Wang, Zhenyu Ding, Haoying Wang, Zili
+  Wang, Shijie Xuyang, Ning Ding, Shuigeng Zhou, Xiangyu Zhang, and Daxin
+  Jiang.} 2025{\em b}. ``Predictable Scale: Part {II}, {Farseer}: A Refined
+  Scaling Law in Large Language Models.'' {\em Advances in Neural Information
+  Processing Systems}, 38.
+
+\harvarditem[Li, Kudugunta \harvardand\ Zettlemoyer]{Margaret Li, Sneha
+  Kudugunta \harvardand\ Luke Zettlemoyer}{2025}{li2025misfitting}
+{\bf Li, Margaret, Sneha Kudugunta, and Luke Zettlemoyer.} 2025. ``(Mis)Fitting
+  Scaling Laws: A Survey of Scaling Law Fitting Techniques in Deep Learning.''
+  {\em International Conference on Learning Representations}.
+
+\harvarditem[Loshchilov \harvardand\ Hutter]{Ilya Loshchilov \harvardand\ Frank
+  Hutter}{2019}{loshchilov2019decoupled}
+{\bf Loshchilov, Ilya, and Frank Hutter.} 2019. ``Decoupled Weight Decay
+  Regularization.'' {\em International Conference on Learning Representations}.
+
+\harvarditem[MacKinnon \harvardand\ Webb]{James~G. MacKinnon \harvardand\
+  Matthew~D. Webb}{2018}{mackinnon2018wild}
+{\bf MacKinnon, James~G., and Matthew~D. Webb.} 2018. ``The Wild Bootstrap for
+  Few (Treated) Clusters.'' {\em The Econometrics Journal}, 21(2):~114--135.
+
+\harvarditem[MacKinnon, Nielsen \harvardand\ Webb]{James~G. MacKinnon,
+  Morten~{\O}rregaard Nielsen \harvardand\ Matthew~D.
+  Webb}{2023}{mackinnon2023cluster}
+{\bf MacKinnon, James~G., Morten~{\O}rregaard Nielsen, and Matthew~D. Webb.}
+  2023. ``Cluster-Robust Inference: A Guide to Empirical Practice.'' {\em
+  Journal of Econometrics}, 232(2):~272--299.
+
+\harvarditem[Magnusson et~al.]{Ian Magnusson, Nguyen Tai, Ben Bogin, David
+  Heineman, Jena~D. Hwang, Luca Soldaini, Akshita Bhagia, Jiacheng Liu, Dirk
+  Groeneveld, Oyvind Tafjord, Noah~A. Smith, Pang~Wei Koh \harvardand\ Jesse
+  Dodge}{2025}{magnusson2025datadecide}
+{\bf Magnusson, Ian, Nguyen Tai, Ben Bogin, David Heineman, Jena~D. Hwang, Luca
+  Soldaini, Akshita Bhagia, Jiacheng Liu, Dirk Groeneveld, Oyvind Tafjord,
+  Noah~A. Smith, Pang~Wei Koh, and Jesse Dodge.} 2025. ``{DataDecide: How to
+  Predict Best Pretraining Data with Small Experiments}.'' {\em Proceedings of
+  the 42nd International Conference on Machine Learning}, 267.
+
+\harvarditem[Maia~Polo et~al.]{Felipe Maia~Polo, Seamus Somerstep, Leshem
+  Choshen, Yuekai Sun \harvardand\ Mikhail Yurochkin}{2025}{maiapolo2024sloth}
+{\bf Maia~Polo, Felipe, Seamus Somerstep, Leshem Choshen, Yuekai Sun, and
+  Mikhail Yurochkin.} 2025. ``Sloth: Scaling Laws for {LLM} Skills to Predict
+  Multi-Benchmark Performance Across Families.'' {\em Advances in Neural
+  Information Processing Systems}, 38.
+
+\harvarditem[{Marin Community}]{{Marin Community}}{2026}{marin2026ladders}
+{\bf {Marin Community}.} 2026. ``Scaling Ladders.'' {\em Weights \& Biases
+  report,
+  \url{https://wandb.ai/marin-community/marin/reports/Scaling-Ladders--VmlldzoxNTc0MjM1NQ}}.
+
+\harvarditem[Marschak \harvardand\ Andrews]{Jacob Marschak \harvardand\
+  William~H. Andrews}{1944}{marschak1944random}
+{\bf Marschak, Jacob, and William~H. Andrews.} 1944. ``Random Simultaneous
+  Equations and the Theory of Production.'' {\em Econometrica},
+  12(3/4):~143--205.
+
+\harvarditem[Merity et~al.]{Stephen Merity, Caiming Xiong, James Bradbury
+  \harvardand\ Richard Socher}{2016}{merity2016pointer}
+{\bf Merity, Stephen, Caiming Xiong, James Bradbury, and Richard Socher.} 2016.
+  ``Pointer Sentinel Mixture Models.'' {\em arXiv preprint arXiv:1609.07843}.
+
+\harvarditem[Mertens, Fischl-Lanzoni \harvardand\ Thompson]{Matthias Mertens,
+  Natalia Fischl-Lanzoni \harvardand\ Neil Thompson}{2026}{mertens2026secret}
+{\bf Mertens, Matthias, Natalia Fischl-Lanzoni, and Neil Thompson.} 2026. ``Is
+  there ``Secret Sauce'' in Large Language Model Development?'' {\em arXiv
+  preprint arXiv:2602.07238}.
+
+\harvarditem[Milgrom \harvardand\ Roberts]{Paul Milgrom \harvardand\ John
+  Roberts}{1996}{milgrom1996lechatelier}
+{\bf Milgrom, Paul, and John Roberts.} 1996. ``The {LeChatelier} Principle.''
+  {\em American Economic Review}, 86(1):~173--179.
+
+\harvarditem[Muennighoff et~al.]{Niklas Muennighoff, Alexander~M. Rush, Boaz
+  Barak, Teven Le~Scao, Aleksandra Piktus, Nouamane Tazi, Sampo Pyysalo, Thomas
+  Wolf \harvardand\ Colin Raffel}{2023}{muennighoff2023scaling}
+{\bf Muennighoff, Niklas, Alexander~M. Rush, Boaz Barak, Teven Le~Scao,
+  Aleksandra Piktus, Nouamane Tazi, Sampo Pyysalo, Thomas Wolf, and Colin
+  Raffel.} 2023. ``Scaling Data-Constrained Language Models.'' {\em Advances in
+  Neural Information Processing Systems}, 36:~50358--50376.
+
+\harvarditem[Mundlak]{Yair Mundlak}{1961}{mundlak1961empirical}
+{\bf Mundlak, Yair.} 1961. ``Empirical Production Function Free of Management
+  Bias.'' {\em Journal of Farm Economics}, 43(1):~44--56.
+
+\harvarditem[Nagy et~al.]{B{\'e}la Nagy, J.~Doyne Farmer, Quan~M. Bui
+  \harvardand\ Jessika~E. Trancik}{2013}{nagy2013statistical}
+{\bf Nagy, B{\'e}la, J.~Doyne Farmer, Quan~M. Bui, and Jessika~E. Trancik.}
+  2013. ``Statistical Basis for Predicting Technological Progress.'' {\em PLoS
+  ONE}, 8(2):~e52669.
+
+\harvarditem[Nerlove]{Marc Nerlove}{1963}{nerlove1963returns}
+{\bf Nerlove, Marc.} 1963. ``Returns to Scale in Electricity Supply.'' In {\em
+  Measurement in Economics: Studies in Mathematical Economics and Econometrics
+  in Memory of Yehuda Grunfeld}. ed. Carl~F. Christ, 167--198. Stanford,
+  CA:Stanford University Press.
+
+\harvarditem[{NVIDIA Corporation}]{{NVIDIA
+  Corporation}}{2024}{nvidia2024q4call}
+{\bf {NVIDIA Corporation}.} 2024. ``{NVIDIA} Fourth Quarter and Fiscal 2024
+  Earnings Conference Call.'' {\em Conference call, 21 February 2024}.
+
+\harvarditem[Olken]{Benjamin~A. Olken}{2015}{olken2015promises}
+{\bf Olken, Benjamin~A.} 2015. ``Promises and Perils of Pre-Analysis Plans.''
+  {\em Journal of Economic Perspectives}, 29(3):~61--80.
+
+\harvarditem[Olley \harvardand\ Pakes]{G.~Steven Olley \harvardand\ Ariel
+  Pakes}{1996}{olley1996dynamics}
+{\bf Olley, G.~Steven, and Ariel Pakes.} 1996. ``The Dynamics of Productivity
+  in the Telecommunications Equipment Industry.'' {\em Econometrica},
+  64(6):~1263--1297.
+
+\harvarditem[Owen]{David Owen}{2024}{owen2024predictable}
+{\bf Owen, David.} 2024. ``How Predictable Is Language Model Benchmark
+  Performance?'' {\em arXiv preprint arXiv:2401.04757}.
+
+\harvarditem[Patterson et~al.]{David Patterson, Joseph Gonzalez, Urs
+  H{\"o}lzle, Quoc Le, Chen Liang, Lluis-Miquel Munguia, Daniel Rothchild,
+  David~R. So, Maud Texier \harvardand\ Jeff Dean}{2022}{patterson2022carbon}
+{\bf Patterson, David, Joseph Gonzalez, Urs H{\"o}lzle, Quoc Le, Chen Liang,
+  Lluis-Miquel Munguia, Daniel Rothchild, David~R. So, Maud Texier, and Jeff
+  Dean.} 2022. ``The Carbon Footprint of Machine Learning Training Will
+  Plateau, Then Shrink.'' {\em Computer}, 55(7):~18--28.
+
+\harvarditem[Pearce \harvardand\ Song]{Tim Pearce \harvardand\ Jinyeop
+  Song}{2024}{pearce2024reconciling}
+{\bf Pearce, Tim, and Jinyeop Song.} 2024. ``{Reconciling Kaplan and Chinchilla
+  Scaling Laws}.'' {\em Transactions on Machine Learning Research}.
+
+\harvarditem[Penedo et~al.]{Guilherme Penedo, Hynek Kydl{\'\i}{\v{c}}ek, Loubna
+  Ben~Allal, Anton Lozhkov, Margaret Mitchell, Colin Raffel, Leandro Von~Werra
+  \harvardand\ Thomas Wolf}{2024}{penedo2024fineweb}
+{\bf Penedo, Guilherme, Hynek Kydl{\'\i}{\v{c}}ek, Loubna Ben~Allal, Anton
+  Lozhkov, Margaret Mitchell, Colin Raffel, Leandro Von~Werra, and Thomas
+  Wolf.} 2024. ``The {FineWeb} Datasets: Decanting the Web for the Finest Text
+  Data at Scale.'' {\em Advances in Neural Information Processing Systems,
+  Datasets and Benchmarks Track}, 37.
+
+\harvarditem[Porian et~al.]{Tomer Porian, Mitchell Wortsman, Jenia Jitsev,
+  Ludwig Schmidt \harvardand\ Yair Carmon}{2024}{porian2024resolving}
+{\bf Porian, Tomer, Mitchell Wortsman, Jenia Jitsev, Ludwig Schmidt, and Yair
+  Carmon.} 2024. ``Resolving Discrepancies in Compute-Optimal Scaling of
+  Language Models.'' {\em Advances in Neural Information Processing Systems},
+  37.
+
+\harvarditem[Raval]{Devesh Raval}{2023}{raval2023testing}
+{\bf Raval, Devesh.} 2023. ``Testing the Production Approach to Markup
+  Estimation.'' {\em Review of Economic Studies}, 90(5):~2592--2611.
+
+\harvarditem[Roberts et~al.]{Nicholas Roberts, Sungjun Cho, Zhiqi Gao, Tzu-Heng
+  Huang, Albert Wu, Gabriel Orlanski, Avi Trost, Kelly Buchanan, Aws
+  Albarghouthi \harvardand\ Frederic Sala}{2026}{roberts2026test}
+{\bf Roberts, Nicholas, Sungjun Cho, Zhiqi Gao, Tzu-Heng Huang, Albert Wu,
+  Gabriel Orlanski, Avi Trost, Kelly Buchanan, Aws Albarghouthi, and Frederic
+  Sala.} 2026. ``Test-Time Scaling Makes Overtraining Compute-Optimal.'' {\em
+  arXiv preprint arXiv:2604.01411}.
+
+\harvarditem[Rotnitzky et~al.]{Andrea Rotnitzky, David~R. Cox, Matteo Bottai
+  \harvardand\ James Robins}{2000}{rotnitzky2000likelihood}
+{\bf Rotnitzky, Andrea, David~R. Cox, Matteo Bottai, and James Robins.} 2000.
+  ``Likelihood-Based Inference with Singular Information Matrix.'' {\em
+  Bernoulli}, 6(2):~243--284.
+
+\harvarditem[Ruan, Maddison \harvardand\ Hashimoto]{Yangjun Ruan, Chris~J.
+  Maddison \harvardand\ Tatsunori Hashimoto}{2024}{ruan2024observational}
+{\bf Ruan, Yangjun, Chris~J. Maddison, and Tatsunori Hashimoto.} 2024.
+  ``Observational Scaling Laws and the Predictability of Language Model
+  Performance.'' {\em Advances in Neural Information Processing Systems},
+  37:~15841--15892.
+
+\harvarditem[Sardana et~al.]{Nikhil Sardana, Jacob Portes, Sasha Doubov
+  \harvardand\ Jonathan Frankle}{2024}{sardana2024beyond}
+{\bf Sardana, Nikhil, Jacob Portes, Sasha Doubov, and Jonathan Frankle.} 2024.
+  ``{Beyond Chinchilla-Optimal: Accounting for Inference in Language Model
+  Scaling Laws}.'' {\em Proceedings of the 41st International Conference on
+  Machine Learning}, 235.
+
+\harvarditem[Sargan]{J.~D. Sargan}{1983}{sargan1983identification}
+{\bf Sargan, J.~D.} 1983. ``Identification and Lack of Identification.'' {\em
+  Econometrica}, 51(6):~1605--1633.
+
+\harvarditem[Sato]{Kazuo Sato}{1967}{sato1967twolevel}
+{\bf Sato, Kazuo.} 1967. ``A Two-Level Constant-Elasticity-of-Substitution
+  Production Function.'' {\em Review of Economic Studies}, 34(2):~201--218.
+
+\harvarditem[Sennrich, Haddow \harvardand\ Birch]{Rico Sennrich, Barry Haddow
+  \harvardand\ Alexandra Birch}{2016}{sennrich2016neural}
+{\bf Sennrich, Rico, Barry Haddow, and Alexandra Birch.} 2016. ``Neural Machine
+  Translation of Rare Words with Subword Units.'' {\em Proceedings of the 54th
+  Annual Meeting of the Association for Computational Linguistics}, 1715--1725.
+
+\harvarditem[Sevilla \harvardand\ Rold{\'a}n]{Jaime Sevilla \harvardand\ Edu
+  Rold{\'a}n}{2024}{sevilla2024training}
+{\bf Sevilla, Jaime, and Edu Rold{\'a}n.} 2024. ``Training Compute of Frontier
+  {AI} Models Grows by 4--5x per Year.'' {\em Epoch AI blog,
+  \url{https://epoch.ai/blog/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year}}.
+
+\harvarditem[Shephard]{Ronald~W. Shephard}{1953}{shephard1953cost}
+{\bf Shephard, Ronald~W.} 1953. {\em Cost and Production Functions.} Princeton,
+  NJ:Princeton University Press.
+
+\harvarditem[Snell et~al.]{Charlie Snell, Jaehoon Lee, Kelvin Xu \harvardand\
+  Aviral Kumar}{2025}{snell2024scaling}
+{\bf Snell, Charlie, Jaehoon Lee, Kelvin Xu, and Aviral Kumar.} 2025.
+  ``{Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling
+  Model Parameters}.'' {\em International Conference on Learning
+  Representations}.
+
+\harvarditem[Su et~al.]{Jianlin Su, Murtadha Ahmed, Yu Lu, Shengfeng Pan, Wen
+  Bo \harvardand\ Yunfeng Liu}{2024}{su2024roformer}
+{\bf Su, Jianlin, Murtadha Ahmed, Yu Lu, Shengfeng Pan, Wen Bo, and Yunfeng
+  Liu.} 2024. ``{RoFormer}: Enhanced Transformer with Rotary Position
+  Embedding.'' {\em Neurocomputing}, 568:~127063.
+
+\harvarditem[Sutton]{John Sutton}{1991}{sutton1991sunk}
+{\bf Sutton, John.} 1991. {\em Sunk Costs and Market Structure: Price
+  Competition, Advertising, and the Evolution of Concentration.} Cambridge,
+  MA:MIT Press.
+
+\harvarditem[Syverson]{Chad Syverson}{2004}{syverson2004product}
+{\bf Syverson, Chad.} 2004. ``Product Substitutability and Productivity
+  Dispersion.'' {\em Review of Economics and Statistics}, 86(2):~534--550.
+
+\harvarditem[Syverson]{Chad Syverson}{2011}{syverson2011determines}
+{\bf Syverson, Chad.} 2011. ``What Determines Productivity?'' {\em Journal of
+  Economic Literature}, 49(2):~326--365.
+
+\harvarditem[Tao et~al.]{Chaofan Tao, Qian Liu, Longxu Dou, Niklas Muennighoff,
+  Zhongwei Wan, Ping Luo, Min Lin \harvardand\ Ngai Wong}{2024}{tao2024scaling}
+{\bf Tao, Chaofan, Qian Liu, Longxu Dou, Niklas Muennighoff, Zhongwei Wan, Ping
+  Luo, Min Lin, and Ngai Wong.} 2024. ``{Scaling Laws with Vocabulary: Larger
+  Models Deserve Larger Vocabularies}.'' {\em Advances in Neural Information
+  Processing Systems}, 37.
+
+\harvarditem[{Team OLMo} et~al.]{{Team OLMo}, Pete Walsh, Luca Soldaini, Dirk
+  Groeneveld, Kyle Lo et~al.}{2024}{teamolmo2024olmo}
+{\bf {Team OLMo}, Pete Walsh, Luca Soldaini, Dirk Groeneveld, Kyle Lo, et~al.}
+  2024. ``2 OLMo 2 Furious.'' {\em arXiv preprint arXiv:2501.00656}.
+
+\harvarditem[Todd \harvardand\ Wolpin]{Petra~E. Todd \harvardand\ Kenneth~I.
+  Wolpin}{2006}{todd2006assessing}
+{\bf Todd, Petra~E., and Kenneth~I. Wolpin.} 2006. ``Assessing the Impact of a
+  School Subsidy Program in {Mexico}: Using a Social Experiment to Validate a
+  Dynamic Behavioral Model of Child Schooling and Fertility.'' {\em American
+  Economic Review}, 96(5):~1384--1417.
+
+\harvarditem[Uzawa]{Hirofumi Uzawa}{1964}{uzawa1964duality}
+{\bf Uzawa, Hirofumi.} 1964. ``Duality Principles in the Theory of Cost and
+  Production.'' {\em International Economic Review}, 5(2):~216--220.
+
+\harvarditem[Villalobos et~al.]{Pablo Villalobos, Anson Ho, Jaime Sevilla,
+  Tamay Besiroglu, Lennart Heim \harvardand\ Marius
+  Hobbhahn}{2024}{villalobos2022run}
+{\bf Villalobos, Pablo, Anson Ho, Jaime Sevilla, Tamay Besiroglu, Lennart Heim,
+  and Marius Hobbhahn.} 2024. ``Position: Will We Run out of Data? Limits of
+  {LLM} Scaling Based on Human-Generated Data.'' {\em Proceedings of the 41st
+  International Conference on Machine Learning}, 235:~49523--49544.
+
+\harvarditem[Webb]{Matthew~D. Webb}{2023}{webb2023reworking}
+{\bf Webb, Matthew~D.} 2023. ``Reworking Wild Bootstrap-Based Inference for
+  Clustered Errors.'' {\em Canadian Journal of Economics}, 56(3):~839--858.
+
+\harvarditem[Whitfill]{Parker Whitfill}{2025}{whitfill2025note}
+{\bf Whitfill, Parker.} 2025. ``Note on Selection Bias in Observational
+  Estimates of Algorithmic Progress.'' {\em arXiv preprint arXiv:2508.11033}.
+
+\harvarditem[Wu et~al.]{Carole-Jean Wu, Ramya Raghavendra, Udit Gupta, Bilge
+  Acun, Newsha Ardalani, Kiwan Maeng, Gloria Chang, Fiona Aga~Behram, James
+  Huang, Charles Bai, Michael Gschwind, Anurag Gupta, Myle Ott, Anastasia
+  Melnikov, Salvatore Candido, David Brooks, Geeta Chauhan, Benjamin Lee,
+  Hsien-Hsin~S. Lee, Bugra Akyildiz, Maximilian Balandat, Joe Spisak, Ravi
+  Jain, Mike Rabbat \harvardand\ Kim Hazelwood}{2022}{wu2022sustainable}
+{\bf Wu, Carole-Jean, Ramya Raghavendra, Udit Gupta, Bilge Acun, Newsha
+  Ardalani, Kiwan Maeng, Gloria Chang, Fiona Aga~Behram, James Huang, Charles
+  Bai, Michael Gschwind, Anurag Gupta, Myle Ott, Anastasia Melnikov, Salvatore
+  Candido, David Brooks, Geeta Chauhan, Benjamin Lee, Hsien-Hsin~S. Lee, Bugra
+  Akyildiz, Maximilian Balandat, Joe Spisak, Ravi Jain, Mike Rabbat, and Kim
+  Hazelwood.} 2022. ``Sustainable {AI}: Environmental Implications, Challenges
+  and Opportunities.'' {\em Proceedings of Machine Learning and Systems},
+  4:~795--813.
+
+\harvarditem[You]{Josh You}{2025}{you2025openai}
+{\bf You, Josh.} 2025. ``Most of {OpenAI}'s 2024 Compute Went to Experiments.''
+  {\em Epoch AI Data Insight, 10 October 2025,
+  \url{https://epoch.ai/data-insights/openai-compute-spend}}.
+
+\harvarditem[Zellers et~al.]{Rowan Zellers, Ari Holtzman, Yonatan Bisk, Ali
+  Farhadi \harvardand\ Yejin Choi}{2019}{zellers2019hellaswag}
+{\bf Zellers, Rowan, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi.}
+  2019. ``{HellaSwag}: Can a Machine Really Finish Your Sentence?'' {\em
+  Proceedings of the 57th Annual Meeting of the Association for Computational
+  Linguistics}, 4791--4800.
+
+\harvarditem[Zellner, Kmenta \harvardand\ Dr{\`e}ze]{Arnold Zellner, Jan Kmenta
+  \harvardand\ Jacques Dr{\`e}ze}{1966}{zellner1966specification}
+{\bf Zellner, Arnold, Jan Kmenta, and Jacques Dr{\`e}ze.} 1966. ``Specification
+  and Estimation of {Cobb-Douglas} Production Function Models.'' {\em
+  Econometrica}, 34(4):~784--795.
+
+\harvarditem[Zhang \harvardand\ Sennrich]{Biao Zhang \harvardand\ Rico
+  Sennrich}{2019}{zhang2019root}
+{\bf Zhang, Biao, and Rico Sennrich.} 2019. ``Root Mean Square Layer
+  Normalization.'' {\em Advances in Neural Information Processing Systems}, 32.
+
+\end{thebibliography}

@@ -1,0 +1,1729 @@
+model,org,date,reason
+Grok 4.7,xAI,2026-09-21,MoE with unknown active parameters
+Step 5 Preview,StepFun,2026-09-18,multimodal domain (D includes non-text tokens)
+Periodic Neon,Periodic Labs,2026-09-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+SWE-2,Cognition,2026-09-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek V4.1 Flash,DeepSeek,2026-09-09,multimodal domain (D includes non-text tokens)
+GPT-6 Astra,OpenAI,2026-09-03,N missing
+OpenEvidence Darwin,OpenEvidence,2026-09-03,N missing
+OpenEvidence Osler,OpenEvidence,2026-09-03,N missing
+OpenEvidence Sackett,OpenEvidence,2026-09-03,N missing
+OpenEvidence Snow,OpenEvidence,2026-09-03,N missing
+Gemini 3.8 Flash,Google DeepMind,2026-09-02,N missing
+Muse Spark 1.3,Meta AI,2026-09-02,N missing
+Claude Fable 5.1,Anthropic,2026-09-01,N missing
+Tencent Hy4 preview,Tencent,2026-08-28,D (tokens) not recoverable
+GLM-5.3-Flash,Z.ai (Zhipu AI),2026-08-20,multimodal domain (D includes non-text tokens)
+GEN-1.5,Generalist,2026-08-19,N missing
+GLM-5.3,Z.ai (Zhipu AI),2026-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen 3.8 27B,Alibaba,2026-08-14,multimodal domain (D includes non-text tokens)
+Gemini 3.7 Flash,Google DeepMind,2026-08-13,N missing
+Grok 4.6,xAI,2026-08-12,multimodal domain (D includes non-text tokens)
+GPT-5.6 Cyber,OpenAI,2026-08-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+Muse Glimmer,Meta AI,2026-08-10,multimodal domain (D includes non-text tokens)
+Qwen3.8-2.4T-A95B,Alibaba,2026-08-08,D (tokens) not recoverable
+Motif-3,Motif Technologies,2026-08-07,D (tokens) not recoverable
+Muse Spark 1.2,Meta AI,2026-08-05,N missing
+DeepSeek V4 Flash 0731,DeepSeek,2026-07-31,D (tokens) not recoverable
+K-EXAONE 2.0,LG AI Research,2026-07-31,derived model (fine-tune / continued pretraining / post-training of a base model)
+Inkling-Small,Thinking Machines,2026-07-30,multimodal domain (D includes non-text tokens)
+A.X K2,SK Telecom,2026-07-29,D (tokens) not recoverable
+Qwen3.7 Flash,Alibaba,2026-07-27,N missing
+Claude Opus 5,Anthropic,2026-07-24,N missing
+Gemini 3.6 Flash,Google DeepMind,2026-07-21,N missing
+Gemini 3.5 Flash-Lite,Google DeepMind,2026-07-21,N missing
+Gemini 3.5 Flash Cyber,Google DeepMind,2026-07-21,N missing
+Qwen 3.8 Max,Alibaba,2026-07-19,multimodal domain (D includes non-text tokens)
+Kimi K3,Moonshot,2026-07-16,multimodal domain (D includes non-text tokens)
+Inkling,Thinking Machines,2026-07-15,multimodal domain (D includes non-text tokens)
+GPT-5.6 Sol,OpenAI,2026-07-09,N missing
+GPT-5.6 Terra,OpenAI,2026-07-09,N missing
+GPT-5.6 Luna,OpenAI,2026-07-09,N missing
+Muse Spark 1.1,Meta AI,2026-07-09,N missing
+Grok 4.5,xAI,2026-07-08,MoE with unknown active parameters
+SWE-1.7,Cognition,2026-07-08,N missing
+Tencent Hy3,Tencent,2026-07-06,D (tokens) not recoverable
+Claude Sonnet 5,Anthropic,2026-06-30,N missing
+Solar Open2 250B,Upstage,2026-06-28,MoE with unknown active parameters
+Doubao Seed 2.1 Turbo,ByteDance,2026-06-23,N missing
+Doubao Seed 2.1 Pro,ByteDance,2026-06-23,N missing
+GLM-5.2,Z.ai (Zhipu AI),2026-06-16,D (tokens) not recoverable
+Kimi K2.7 Code,Moonshot,2026-06-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+DiffusionGemma 26B-A4B,DeepMind,2026-06-10,multimodal domain (D includes non-text tokens)
+Claude Mythos 5,Anthropic,2026-06-09,N missing
+Claude Fable 5,Anthropic,2026-06-09,N missing
+North Mini Code,Cohere,2026-06-09,D (tokens) not recoverable
+Nemotron 3 Ultra,Nvidia,2026-06-04,D (tokens) not recoverable
+Gemma 4 12B,Google DeepMind,2026-06-03,multimodal domain (D includes non-text tokens)
+Qwen3.7-Plus,Alibaba,2026-06-03,N missing
+MAI-Thinking-1,Microsoft,2026-06-02,post-trained / derived variant (name)
+MAI-Code-1-Flash,Microsoft,2026-06-02,N missing
+MiniMax-M3,MiniMax,2026-06-01,multimodal domain (D includes non-text tokens)
+Step 3.7 Flash,StepFun,2026-05-29,multimodal domain (D includes non-text tokens)
+Grok Build 0.1,xAI,2026-05-29,N missing
+Claude Opus 4.8,Anthropic,2026-05-28,N missing
+Command A+,"Cohere,Cohere Labs (formerly Cohere for AI)",2026-05-20,multimodal domain (D includes non-text tokens)
+Gemini 3.5 Flash,Google DeepMind,2026-05-19,N missing
+Qwen3.7-Max,Alibaba,2026-05-19,N missing
+Composer 2.5,Cursor,2026-05-18,D (tokens) not recoverable
+TML-Interaction-Small,Thinking Machines,2026-05-11,multimodal domain (D includes non-text tokens)
+ERNIE 5.1,Baidu,2026-05-09,encoder (masked LM / embedding model)
+GPT-5.5 Instant,OpenAI,2026-05-05,N missing
+Mistral Medium 3.5,Mistral AI,2026-04-29,multimodal domain (D includes non-text tokens)
+DeepSeek-V4-Pro,DeepSeek,2026-04-24,D (tokens) not recoverable
+DeepSeek-V4-Flash,DeepSeek,2026-04-24,D (tokens) not recoverable
+GPT-5.5 Pro,OpenAI,2026-04-23,N missing
+GPT-5.5,OpenAI,2026-04-23,N missing
+Tencent Hy3 preview,Tencent,2026-04-23,D (tokens) not recoverable
+Qwen3.6 27B,Alibaba,2026-04-22,multimodal domain (D includes non-text tokens)
+Ling-2.6-flash,Ant Group,2026-04-21,D (tokens) not recoverable
+Qwen 3.6-27B,,2026-04-21,D (tokens) not recoverable
+Kimi K2.6,Moonshot,2026-04-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Grok 4.3 Beta,xAI,2026-04-17,MoE with unknown active parameters
+Claude Opus 4.7,Anthropic,2026-04-16,N missing
+Gemini Robotics-ER 1.6,Google,2026-04-14,N missing
+GPT-5.4-Cyber,OpenAI,2026-04-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+EXAONE 4.5,LG AI Research,2026-04-09,multimodal domain (D includes non-text tokens)
+Muse Spark,Meta AI,2026-04-08,N missing
+GLM-5.1,Z.ai (Zhipu AI),2026-04-07,MoE with unknown active parameters
+SWE-1.6,Cognition,2026-04-07,N missing
+Claude Mythos Preview,Anthropic,2026-04-07,N missing
+MolmoAct 2,"Allen Institute for AI,University of Washington,National University of Singapore,University of Pennsylvania,Johns Hopkins University,Amazon,Cortex AI",2026-04-05,multimodal domain (D includes non-text tokens)
+Gemma 4 31B IT,Google DeepMind,2026-04-02,post-trained / derived variant (name)
+Gemma 4 26B A4B,Google DeepMind,2026-04-02,D (tokens) not recoverable
+Qwen 3.6 Plus,Alibaba,2026-04-01,N missing
+Qwen3.5-Omni-Plus,Alibaba,2026-03-29,N missing
+Qwen3.5-Omni-Flash,Alibaba,2026-03-29,N missing
+Composer 2,Cursor,2026-03-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiniMax-M2.7,MiniMax,2026-03-18,MoE with unknown active parameters
+MiMo-V2-Pro,Xiaomi Corp,2026-03-18,D (tokens) not recoverable
+MiMo-V2-Omni,Xiaomi Corp,2026-03-18,N missing
+GPT-5.4 Mini,OpenAI,2026-03-17,N missing
+GPT-5.4 Nano,OpenAI,2026-03-17,N missing
+Mistral Small 4,Mistral AI,2026-03-16,multimodal domain (D includes non-text tokens)
+Nemotron 3 Super,Nvidia,2026-03-11,D (tokens) not recoverable
+GPT-5.4,OpenAI,2026-03-05,N missing
+GPT-5.4 Pro,OpenAI,2026-03-05,N missing
+Gemini 3.1 Flash-Lite,Google,2026-03-03,N missing
+Gemini 3.0 Flash-lite,Google DeepMind,2026-03-03,N missing
+SWE 1.6,Cognition,2026-03-01,N missing
+Qwen3.5-122B-A10B,Alibaba,2026-02-24,D (tokens) not recoverable
+Qwen3.5-27B,Alibaba,2026-02-24,D (tokens) not recoverable
+Qwen3.5-9B,Alibaba,2026-02-24,D (tokens) not recoverable
+Qwen3.5-4B,Alibaba,2026-02-24,D (tokens) not recoverable
+Qwen3.5-2B,Alibaba,2026-02-24,D (tokens) not recoverable
+Qwen3.5-0.8B,Alibaba,2026-02-24,D (tokens) not recoverable
+Qwen3.5-35B-A3B,Alibaba,2026-02-24,D (tokens) not recoverable
+Gemini 3.1 Pro,Google DeepMind,2026-02-19,N missing
+Arcee Trinity Large,"Prime Intellect,Arcee AI",2026-02-19,D (tokens) not recoverable
+Claude Sonnet 4.6,Anthropic,2026-02-17,N missing
+Grok 4.20,xAI,2026-02-17,MoE with unknown active parameters
+Qwen3.5 397B-A17B,Alibaba,2026-02-15,multimodal domain (D includes non-text tokens)
+GLM-5,Z.ai (Zhipu AI),2026-02-12,MoE with unknown active parameters
+MiniMax-M2.5,MiniMax,2026-02-12,D (tokens) not recoverable
+GPT-5.3-Codex-Spark,OpenAI,2026-02-12,N missing
+Composer 1.5,Cursor,2026-02-09,N missing
+Claude Opus 4.6,Anthropic,2026-02-05,N missing
+GPT-5.3 Codex,OpenAI,2026-02-05,N missing
+Step 3.5 Flash,StepFun,2026-02-02,N missing
+Kimi K2.5,Moonshot,2026-02-02,MoE with unknown active parameters
+Qwen3-Coder-Next,Alibaba,2026-02-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+Solar Pro 3,Upstage,2026-01-27,MoE with unknown active parameters
+Qwen3-Max-Thinking,Alibaba,2026-01-25,N missing
+GLM 4.7 Flash,Z.ai (Zhipu AI),2026-01-19,MoE with unknown active parameters
+VAETKI,NC AI,2025-12-30,D (tokens) not recoverable
+A.X K1,SK Telecom,2025-12-30,D (tokens) not recoverable
+HyperCLOVA X SEED 32B Think,NAVER,2025-12-29,multimodal domain (D includes non-text tokens)
+MiniMax-M2.1,MiniMax,2025-12-23,D (tokens) not recoverable
+GLM-4.7,Z.ai (Zhipu AI),2025-12-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-5.2 Codex,OpenAI,2025-12-18,N missing
+Doubao Seed 1.8,ByteDance,2025-12-18,N missing
+MiMo-V2-Flash,Xiaomi Corp,2025-12-16,D (tokens) not recoverable
+Nemotron 3-Nano-30B-A3B,Nvidia,2025-12-15,D (tokens) not recoverable
+Nemotron-Cascade 14B,Nvidia,2025-12-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-5.2 Pro,OpenAI,2025-12-11,N missing
+Nomos 1,Nous Research,2025-12-11,D (tokens) not recoverable
+Devstral 2 (123B),Mistral AI,2025-12-09,D (tokens) not recoverable
+Devstral 2 (24B),Mistral AI,2025-12-09,D (tokens) not recoverable
+Devstral Small 2,Mistral AI,2025-12-09,multimodal domain (D includes non-text tokens)
+Nova 2,Amazon Web Services (AWS),2025-12-02,N missing
+Nova 2 Pro (Preview),Amazon,2025-12-02,N missing
+Ministral 3 14B,Mistral AI,2025-12-02,D (tokens) not recoverable
+Ministral 3 8B,Mistral AI,2025-12-02,D (tokens) not recoverable
+Ministral 3 3B,Mistral AI,2025-12-02,D (tokens) not recoverable
+Mistral Large 3,Mistral AI,2025-12-02,D (tokens) not recoverable
+Nova 2.0 Pro Preview,Amazon,2025-12-02,N missing
+DeepSeekMath-V2,DeepSeek,2025-11-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+INTELLECT-3,Prime Intellect,2025-11-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude Opus 4.5,Anthropic,2025-11-24,N missing
+Olmo 3 32B Instruct,"Allen Institute for AI,University of Washington,Carnegie Mellon University (CMU),Stanford University,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms),University of Montreal / Université de Montréal,Princeton University,Massachusetts Institute of Technology (MIT),University of Maryland",2025-11-20,post-trained / derived variant (name)
+Olmo 3 7B Think,"Allen Institute for AI,University of Washington,Carnegie Mellon University (CMU),Stanford University,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms),University of Montreal / Université de Montréal,Princeton University,Massachusetts Institute of Technology (MIT),University of Maryland",2025-11-20,D (tokens) not recoverable
+Olmo 3.1 32B Think,"Allen Institute for AI,University of Washington,Carnegie Mellon University (CMU),Stanford University,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms),University of Montreal / Université de Montréal,Princeton University,Massachusetts Institute of Technology (MIT),University of Maryland",2025-11-20,D (tokens) not recoverable
+Grok 4.1 Fast,xAI,2025-11-19,N missing
+GPT-5.1-Codex-Max,OpenAI,2025-11-19,N missing
+Cogito v2.1,Deep Cogito,2025-11-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 3 Pro,Google DeepMind,2025-11-18,N missing
+Gemini 3 Deep Think,Google DeepMind,2025-11-18,N missing
+Grok 4.1,xAI,2025-11-17,N missing
+P1-235B-A22B,Shanghai AI Lab,2025-11-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-5.1,OpenAI,2025-11-13,N missing
+GPT-5.1 Instant,OpenAI,2025-11-13,N missing
+GPT-5.1-Codex-mini,OpenAI,2025-11-12,N missing
+GPT-5.1-Codex,OpenAI,2025-11-12,N missing
+Kaiju Large,Character.ai,2025-11-07,D (tokens) not recoverable
+Kaiju Medium,Character.ai,2025-11-07,D (tokens) not recoverable
+Kaiju Small,Character.ai,2025-11-07,D (tokens) not recoverable
+Kimi K2 Thinking,Moonshot,2025-11-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+Emu3.5,Beijing Academy of Artificial Intelligence / BAAI,2025-10-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Composer,Cursor,2025-10-29,N missing
+SWE-1.5,Cognition,2025-10-29,D (tokens) not recoverable
+Tongyi DeepResearch,Alibaba,2025-10-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiniMax-M2,MiniMax,2025-10-27,MoE with unknown active parameters
+LoongRL 7B,"Microsoft Research Asia,Shanghai Jiao Tong University,Carnegie Mellon University (CMU)",2025-10-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+LoongRL 14B,"Microsoft Research Asia,Shanghai Jiao Tong University,Carnegie Mellon University (CMU)",2025-10-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Lapa LLM,"Ukrainian Catholic University,Igor Sikorsky Kyiv Polytechnic Institute,AGH University of Krakow,Lviv Polytechnic",2025-10-25,multimodal domain (D includes non-text tokens)
+Ring-mini-linear-2.0,Ant Group,2025-10-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ring-flash-linear-2.0,Ant Group,2025-10-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+Deepseek OCR,DeepSeek,2025-10-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+BAPO 32B,"Fudan University,Shanghai Qiji Zhifeng",2025-10-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude Haiku 4.5,Anthropic,2025-10-15,N missing
+Llama 4 Scout + ScaleRL,Meta AI,2025-10-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+C2S-Scale,"Google Research,Yale University,Google DeepMind,Brown University,University of Southern California",2025-10-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ring-1T,Ant Group,2025-10-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-5 Pro,OpenAI,2025-10-07,N missing
+Gemini 2.5 Computer Use,Google,2025-10-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+Tiny Recursive Model (TRM-Att),Samsung SAIT AI Lab,2025-10-06,multimodal domain (D includes non-text tokens)
+GLM-4.6,"Z.ai (Zhipu AI),Tsinghua University",2025-09-30,manual: continued training of GLM-4.5 (active parameters assumed by Epoch)
+Claude Sonnet 4.5,Anthropic,2025-09-29,N missing
+NVIDIA Isaac GR00T N1.6,Nvidia,2025-09-29,N missing
+DeepSeek-V3.2-Exp,DeepSeek,2025-09-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+MinerU2.5,"Shanghai AI Lab,Peking University,Shanghai Jiao Tong University",2025-09-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini Robotics 1.5 ,Google DeepMind,2025-09-25,N missing
+Gemini Robotics-ER 1.5,Google DeepMind,2025-09-25,N missing
+GigaEmbeddings,"Sber,Moscow Institute of Physics and Technology",2025-09-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-V3.1-Terminus,DeepSeek,2025-09-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen3-Omni-Flash,Alibaba,2025-09-22,multimodal domain (D includes non-text tokens)
+Qwen3-Omni-30B-A3B,Alibaba,2025-09-22,multimodal domain (D includes non-text tokens)
+Grok 4 Fast,xAI,2025-09-19,N missing
+Magistral Small 1.2,Mistral AI,2025-09-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Magistral Medium 1.2,Mistral AI,2025-09-18,N missing
+Granite-Docling,IBM,2025-09-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+AgentFounder-30B,Alibaba,2025-09-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-5-Codex,OpenAI,2025-09-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+K2 Think,"Mohamed bin Zayed University of Artificial Intelligence (MBZUAI),G42",2025-09-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen3-Max,Alibaba,2025-09-05,MoE with unknown active parameters
+EmbeddingGemma,Google DeepMind,2025-09-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Apertus 8B,"ETH Zurich,Ecole Polytechnique F´ed´erale de Lausanne (EPFL),Swiss National Supercomputing Centre (CSCS),Swisscom",2025-09-02,D (tokens) not recoverable
+gpt-realtime,OpenAI,2025-08-28,N missing
+Grok Code Fast 1,xAI,2025-08-28,N missing
+YandexGPT 5.1 Pro,Yandex,2025-08-25,N missing
+DeepSeek-V3.1,DeepSeek,2025-08-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Seed-OSS-36B-Base,ByteDance,2025-08-21,N missing
+Cohere Command A Reasoning,Cohere,2025-08-21,post-trained / derived variant (name)
+Gemma-SEA-LION-v4-27B-IT,AI Singapore,2025-08-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ovis2.5 9B,Alibaba,2025-08-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ovis2.5 2B,Alibaba,2025-08-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+GLM-4.5V,"Z.ai (Zhipu AI),Tsinghua University",2025-08-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+GLM-4.1V-Thinking,"Z.ai (Zhipu AI),Tsinghua University",2025-08-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mistral Medium 3.1,Mistral AI,2025-08-12,N missing
+GPT-5,OpenAI,2025-08-07,N missing
+GPT-5 mini,OpenAI,2025-08-07,N missing
+GPT-5 nano,OpenAI,2025-08-07,N missing
+Claude Opus 4.1,Anthropic,2025-08-05,N missing
+gpt-oss-120b,OpenAI,2025-08-05,MoE with unknown active parameters
+gpt-oss-20b,OpenAI,2025-08-05,MoE with unknown active parameters
+Hierarchical Reasoning Model (HPM),Sapient Intelligence,2025-08-04,multimodal domain (D includes non-text tokens)
+Seed Diffusion Preview,"ByteDance,Tsinghua University,SIA Lab Tsinghua AIR  ByteDance Seed",2025-08-04,N missing
+rStar-Math (Qwen2.5-Math-7B base),"Microsoft Research Asia,Peking University,Tsinghua University",2025-08-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+rStar-Math (Qwen2-Math-7B base),"Microsoft Research Asia,Peking University,Tsinghua University",2025-08-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+MindLink-72B,Kunlun Inc.,2025-08-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+MindLink-32B,Kunlun Inc.,2025-08-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 2.5 Deep Think,"Google,Google DeepMind",2025-08-01,N missing
+Command A Vision,Cohere,2025-07-31,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama Nemotron Super v1.5,Nvidia,2025-07-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen3-30B-A3B (Jul 2025),Alibaba,2025-07-29,manual: post-training update of Qwen3-30B-A3B
+GLM-4.5-Air,"Z.ai (Zhipu AI),Tsinghua University",2025-07-28,D (tokens) not recoverable
+Agentar-Fin-R1 32B,Ant Group,2025-07-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Agentar-Fin-R1 8B,Ant Group,2025-07-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen3-235B-A22B-Thinking (Jul 2025),Alibaba,2025-07-25,post-trained / derived variant (name)
+Qwen3-235B-A22B (Jul 2025),Alibaba,2025-07-25,manual: post-training update of Qwen3-235B-A22B
+Magistral Small 1.1,Mistral AI,2025-07-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Seed Prover,ByteDance,2025-07-23,N missing
+Aeneas,"Google DeepMind,University of Nottingham,University of Warwick,Athens University of Economics and Business,Google,University of Oxford",2025-07-23,N missing
+GR-3,ByteDance,2025-07-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+T-Pro 2.0,T-Bank,2025-07-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+ChatGPT agent,OpenAI,2025-07-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenReasoning-Nemotron-32B,Nvidia,2025-07-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Voxtral Mini,Mistral AI,2025-07-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini Embedding,Google DeepMind,2025-07-14,N missing
+Grok 4 Heavy,xAI,2025-07-10,N missing
+Grok 4,xAI,2025-07-09,multimodal domain (D includes non-text tokens)
+ERNIE-4.5-VL-28B-A3B,Baidu,2025-06-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+ERNIE-4.5-300B-A47B,Baidu,2025-06-29,D (tokens) not recoverable
+ERNIE-4.5-21B-A3B,Baidu,2025-06-29,D (tokens) not recoverable
+ERNIE-4.5-0.3B,Baidu,2025-06-29,MoE with unknown active parameters
+DiLoCoX (Qwen1.5-107B on WT-103),"China Mobile,Zero Gravity Labs (0g AI)",2025-06-26,D (tokens) not recoverable
+BlueOcean LLM 2.0 (萤石蓝海),"Hangzhou EZVIZ Software Co., Ltd. (Hikvision)",2025-06-26,N missing
+Kimi-VL,Moonshot,2025-06-23,multimodal domain (D includes non-text tokens)
+Mercury Coder Mini,Inception Labs,2025-06-17,N missing
+Mercury Coder Small,Inception Labs,2025-06-17,N missing
+Kimi Dev 72b,Moonshot,2025-06-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 2.5 Flash-Lite,Google DeepMind,2025-06-15,N missing
+Mistral Small 3.2,Mistral AI,2025-06-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiniMax-M1-80k,MiniMax,2025-06-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiniMax-M1-40k,MiniMax,2025-06-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+CollabLLM,"Stanford University,Microsoft,Georgia Institute of Technology",2025-06-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Seed-1.6-Thinking,ByteDance,2025-06-11,multimodal domain (D includes non-text tokens)
+Seed 1.6,ByteDance,2025-06-11,multimodal domain (D includes non-text tokens)
+Magistral Medium 1.1,Mistral AI,2025-06-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+Devstral Medium,"Mistral AI,All Hands AI",2025-06-10,N missing
+Magistral Small 1.0,Mistral AI,2025-06-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiniCPM-4-8B,OpenBMB (Open Lab for Big Model Base),2025-06-09,D (tokens) not recoverable
+Qwen3 Embedding,Alibaba,2025-06-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen3 Reranker,Alibaba,2025-06-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+ether0,FutureHouse,2025-06-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude Gov,Anthropic,2025-06-05,N missing
+Gemini 2.5 Pro (Jun 2025),Google DeepMind,2025-06-05,N missing
+MiMo-VL-7B-SFT,Xiaomi Corp,2025-06-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiMo‑VL‑7B‑RL,Xiaomi Corp,2025-06-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+Skywork-OR1-32B,Kunlun Inc.,2025-05-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Codestral Embed,Mistral AI,2025-05-28,N missing
+DeepSeek-R1 (May 2025),DeepSeek,2025-05-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+SignGemma,Google,2025-05-27,N missing
+DMind-1,,2025-05-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenOmni,"Chinese Academy of Sciences,Shenzhen Institute of Advanced Technology,University of Chinese Academy of Sciences,National University of Singapore,University of Science and Technology of China (USTC)",2025-05-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+o3 Operator,OpenAI,2025-05-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+DataRater test model (1B),Google DeepMind,2025-05-23,D (tokens) not recoverable
+Claude Opus 4,Anthropic,2025-05-22,N missing
+Claude Sonnet 4,Anthropic,2025-05-22,N missing
+Reason-ModernColBERT,LightOn,2025-05-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Falcon-Arabic,Technology Innovation Institute,2025-05-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Devstral Small,"Mistral AI,All Hands AI",2025-05-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+MedGemma 27B,Google,2025-05-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3n,Google,2025-05-20,multimodal domain (D includes non-text tokens)
+voyage-3.5,Voyage AI,2025-05-20,N missing
+Cosmos-Reason1 7B,Nvidia,2025-05-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Cosmos-Reason1 56B,Nvidia,2025-05-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+NVIDIA Isaac GR00T N1.5 3B,Nvidia,2025-05-18,multimodal domain (D includes non-text tokens)
+codex-1,OpenAI,2025-05-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+codex-mini,OpenAI,2025-05-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+COLLECTIVE-1,,2025-05-15,N missing
+II-Medical-8B,Intelligent Internet,2025-05-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+AlphaEvolve,DeepMind,2025-05-14,N missing
+NTele-R1-32B-V1,ZTE,2025-05-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Seed1.5-VL,ByteDance,2025-05-11,N missing
+Tianxi-32B,Lenovo,2025-05-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Tianxi-72B,Lenovo,2025-05-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mistral Medium 3,Mistral AI,2025-05-07,N missing
+Pangu Ultra MoE,Huawei,2025-05-07,D (tokens) not recoverable
+Apriel Nemotron 15B,"Nvidia,ServiceNow",2025-05-06,manual: upscaled/continued from Mistral NeMo (derived)
+Kevin-32B,"Cognition,Stanford University",2025-05-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 2.5 Pro (May 2025),Google DeepMind,2025-05-06,N missing
+Typhoon 2.1 Gemma 4B,Typhoon / SCB 10X,2025-05-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Typhoon 2.1 Gemma 12B,Typhoon / SCB 10X,2025-05-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Phi-4-Reasoning,Microsoft,2025-04-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Phi-4-Reasoning-plus,Microsoft,2025-04-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-Prover-V2-671B,DeepSeek,2025-04-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-Prover-V2-7B,DeepSeek,2025-04-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Amazon Nova Premier,Amazon,2025-04-30,N missing
+GTE-ModernColBERT-v1,LightOn,2025-04-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen3-0.6B,Alibaba,2025-04-29,"implausible: epochs = 1.0, D/N = 60000"
+Foundation-sec-8b,Cisco,2025-04-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+Palmyra X5,Writer,2025-04-28,N missing
+Pleias-RAG-350m,PleIAs,2025-04-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Pleias-RAG-1B,PleIAs,2025-04-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Eagle 2.5,"Nvidia,Nanjing University,Hong Kong Polytechnic University,Rutgers University",2025-04-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama-Primus-Nemotron-70B,Trend Micro,2025-04-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3 QAT 4B,Google DeepMind,2025-04-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3 QAT 1B,Google DeepMind,2025-04-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3 QAT 12B,Google DeepMind,2025-04-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3 QAT 27B,Google DeepMind,2025-04-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 2.5 Flash,Google DeepMind,2025-04-17,N missing
+o4-mini,OpenAI,2025-04-16,N missing
+Digest: Cyber AI Analyst,Darktrace,2025-04-16,N missing
+MAI-DS-R1,Microsoft,2025-04-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Cohere Embed 4,Cohere,2025-04-15,N missing
+GPT-4.1,OpenAI,2025-04-14,N missing
+GPT-4.1 mini,OpenAI,2025-04-14,N missing
+GPT-4.1 nano,OpenAI,2025-04-14,N missing
+Nemotron-H 47B,Nvidia,2025-04-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+GLM-Z1-Rumination-32B-0414,Tsinghua University,2025-04-14,post-trained / derived variant (name)
+360Zhinao3-7B-O1.5,360 Security Technology,2025-04-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+SenseNova V6,SenseTime,2025-04-12,multimodal domain (D includes non-text tokens)
+AMIE (Articulate Medical Intelligence Explorer),"Google DeepMind,Google Research",2025-04-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+QWQ-Plus,Alibaba,2025-04-08,N missing
+TxGemma 27B,"Google DeepMind,Google Research",2025-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+TxGemma 9B,"Google DeepMind,Google Research",2025-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+TxGemma 2B,"Google DeepMind,Google Research",2025-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+Cogito 1 series,,2025-04-08,N missing
+T5Gemma (Gemma 9B-9B),Google DeepMind,2025-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama 4 Scout,Meta AI,2025-04-05,multimodal domain (D includes non-text tokens)
+Llama 4 Maverick,Meta AI,2025-04-05,multimodal domain (D includes non-text tokens)
+Llama 4 Behemoth (preview),Meta AI,2025-04-05,multimodal domain (D includes non-text tokens)
+OpenThaiGPT 1.6 /  OTG-1.6 (72B),"Mahidol University,AI Entrepreneurs Association of Thailand",2025-04-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenThaiGPT R1 32b / OTG-R1 (32B),"Mahidol University,AI Entrepreneurs Association of Thailand",2025-04-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepHermes 3 - Mistral 24B,Nous Research,2025-03-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+QVQ-Max,Alibaba,2025-03-28,N missing
+Lingju Lingnao,Guangzhou Lingju Information Technology Co Ltd.,2025-03-28,N missing
+GPT-4o (Mar 2025),OpenAI,2025-03-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+GAIA-2,Wayve,2025-03-26,multimodal domain (D includes non-text tokens)
+Qwen2.5-Omni 7B,Alibaba,2025-03-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5-Omni 3B,Alibaba,2025-03-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 2.5 Pro (Mar 2025),Google DeepMind,2025-03-25,N missing
+DeepSeek-V3 (Mar 2025),DeepSeek,2025-03-24,manual: post-training update of DeepSeek-V3
+Gezhi (格致大模型),"Troy Information Technology Co., Ltd.",2025-03-19,N missing
+o1-pro,OpenAI,2025-03-19,N missing
+Llama Nemotron Nano 8B,Nvidia,2025-03-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama Nemotron Ultra 253B,Nvidia,2025-03-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama Nemotron Super 49B,Nvidia,2025-03-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+GR00T N1 2B,Nvidia,2025-03-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mistral Small 3.1,Mistral AI,2025-03-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+EXAONE Deep 32B,LG AI Research,2025-03-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+EXAONE Deep 7.8B,LG AI Research,2025-03-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+EXAONE Deep 2.4B,LG AI Research,2025-03-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+ERNIE-4.5-VL-424B-A47B (文心大模型4.5),Baidu,2025-03-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+ERNIE x1 (文心大模型X1),Baidu,2025-03-16,N missing
+EXAONE 3.5-R 2.4B,LG AI Research,2025-03-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+EXAONE 3.5-R 32B,LG AI Research,2025-03-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+EXAONE 3.5-R 7.8B,LG AI Research,2025-03-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Cohere Command A,Cohere,2025-03-13,D (tokens) not recoverable
+GigaChat 2 MAX,Sber,2025-03-13,N missing
+GigaChat 2 Lite,Sber,2025-03-13,N missing
+GigaChat 2 Pro,Sber,2025-03-13,N missing
+Gemma 3 27B,Google DeepMind,2025-03-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3 12B,Google DeepMind,2025-03-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3 4B,Google DeepMind,2025-03-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma 3 1B,Google DeepMind,2025-03-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Reka Flash 3,Reka AI,2025-03-10,multimodal domain (D includes non-text tokens)
+FoxBrain,Foxconn,2025-03-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+QwQ-32B,Alibaba,2025-03-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mistral OCR,Mistral AI,2025-03-06,N missing
+Jamba 1.6 Mini,AI21 Labs,2025-03-06,D (tokens) not recoverable
+Jamba 1.6 Large,AI21 Labs,2025-03-06,D (tokens) not recoverable
+Phi-4-Multimodal,Microsoft,2025-03-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Aya Vision 32B,Cohere,2025-03-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Spark-X1,iFlytek,2025-03-03,D (tokens) not recoverable
+GPT-4.5,OpenAI,2025-02-27,N missing
+Kimi 1.6,Moonshot,2025-02-27,N missing
+Mercury,Inception Labs,2025-02-27,N missing
+Granite 3.2 8B,IBM,2025-02-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Granite 3.2 2B,IBM,2025-02-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Granite Guardian 3.2,IBM,2025-02-26,N missing
+Euler (Euler大模型),,2025-02-26,D (tokens) not recoverable
+Bailing-Pro-20250225,Ant Group,2025-02-25,N missing
+Tianxi-7B,Lenovo,2025-02-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+BFS-Prover,ByteDance,2025-02-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+YandexGPT 5 Pro,Yandex,2025-02-25,N missing
+Claude 3.7 Sonnet,Anthropic,2025-02-24,N missing
+Grok-3 mini,xAI,2025-02-19,N missing
+PaliGemma 2 3B Mix 224,Google,2025-02-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+PaliGemma 2 3B Mix 448,Google,2025-02-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5-VL-72B,Alibaba,2025-02-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5-VL-7B,Alibaba,2025-02-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5-VL-3B,Alibaba,2025-02-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+R1 1776,Perplexity,2025-02-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+TasiChat (TasiChat大模型),"Chengdu Tasi Technology Co., Ltd.",2025-02-18,N missing
+Brain2Qwerty,"Meta AI,Universite de Technologie de Compiègne – CNRS,Basque Center on Cognition",2025-02-18,multimodal / non-text model
+Step-Omni,StepFun,2025-02-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Grok 3,xAI,2025-02-17,multimodal domain (D includes non-text tokens)
+Mistral Saba,Mistral AI,2025-02-17,D (tokens) not recoverable
+YAYI-Ultra,Yayi (Wenge),2025-02-15,N missing
+LLaDA,"Renmin University of China,Ant Group",2025-02-14,manual: masked diffusion language model (not autoregressive)
+Deephermes 3 Llama 3 8B Preview,Nous Research,2025-02-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Granite Vision 3.2 2B,IBM,2025-02-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Sonar Deep Research,Perplexity,2025-02-14,N missing
+OREAL 32B,"Shanghai AI Lab,Shanghai Jiao Tong University,Chinese University of Hong Kong (CUHK),InnoHK",2025-02-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+OREAL 7B,"Shanghai AI Lab,Shanghai Jiao Tong University,Chinese University of Hong Kong (CUHK),InnoHK",2025-02-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 2.0 Flash-Lite,Google DeepMind,2025-02-05,N missing
+Sonar Reasoning Pro,Perplexity,2025-02-01,N missing
+o3-mini,OpenAI,2025-01-31,N missing
+s1-32B,"Stanford University,University of Washington,Allen Institute for AI,Contextual AI",2025-01-31,derived model (fine-tune / continued pretraining / post-training of a base model)
+s1.1,"Stanford University,University of Washington,Allen Institute for AI,Contextual AI",2025-01-31,derived model (fine-tune / continued pretraining / post-training of a base model)
+Tulu 3 405B,"Allen Institute for AI,University of Washington",2025-01-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Sonar Reasoning,Perplexity,2025-01-29,N missing
+GPT-4o (Jan 2025),OpenAI,2025-01-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5-Max,Alibaba,2025-01-28,N missing
+Janus-Pro-7B,DeepSeek,2025-01-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Janus-Pro-1B,DeepSeek,2025-01-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Baichuan-Omni-1.5,Baichuan,2025-01-26,multimodal domain (D includes non-text tokens)
+Sonar Pro,Perplexity,2025-01-25,N missing
+Computer-Using Agent (CUA),OpenAI,2025-01-23,N missing
+Doubao-1.5-pro,ByteDance,2025-01-22,N missing
+Kimi k1.5,Moonshot,2025-01-22,N missing
+DeepSeek-R1-Distill-Llama-70B,DeepSeek,2025-01-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1-Distill-Qwen-14B,DeepSeek,2025-01-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1-Distill-Qwen-1.5B,DeepSeek,2025-01-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1-Distill-Llama-8B,DeepSeek,2025-01-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1-Distill-Qwen-32B,DeepSeek,2025-01-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1-Distill-Qwen-7B,DeepSeek,2025-01-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+gte-modernbert,Alibaba,2025-01-22,encoder (masked LM / embedding model)
+Hunyuan3D 2.0,Tencent,2025-01-21,N missing
+Sonar,Perplexity,2025-01-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1,DeepSeek,2025-01-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1-Zero,DeepSeek,2025-01-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Eagle 2,"Nvidia,Nanjing University,Tsinghua University,Hong Kong Polytechnic University,Johns Hopkins University,New York University (NYU)",2025-01-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Unichat-32B-c1,China Unicom,2025-01-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+InternLM3,Shanghai AI Lab,2025-01-15,D (tokens) not recoverable
+s1,"Stanford University,University of Washington,Allen Institute for AI,Contextual AI",2025-01-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiniMax-VL-01,MiniMax,2025-01-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenBioLLM-Llama3-70B,Saama,2025-01-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenBioLLM-Llama3-8B,Saama,2025-01-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+SenseNova Unified Large Model,SenseTime,2025-01-13,N missing
+voyage-3-large,Voyage AI,2025-01-07,N missing
+Tiangong 4.0,Kunlun Inc.,2025-01-06,N missing
+Eurus-2-7B-PRIME,"Tsinghua University,University of Illinois Urbana-Champaign (UIUC),Shanghai AI Lab,Peking University,Shanghai Jiao Tong University,CUHK Shenzhen Research Institute",2025-01-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+Zhaoyan (兆言大语言模型),Shanghai Jiao Tong University,2024-12-30,N missing
+Xiaomi Edge-side Text (小米端侧文本),Xiaomi Corp,2024-12-27,N missing
+QVQ,Alibaba,2024-12-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Jueqing LLM (觉卿大模型),Suzhou Jueqing Diyu Intelligent Technology,2024-12-25,N missing
+o3,OpenAI,2024-12-20,N missing
+Gemini 2.0 Flash Thinking,"Google DeepMind,Google",2024-12-19,N missing
+SEA-LION V3 Gemma2 9B,AI Singapore,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+SEA-LION V3 Llama3.1 8B,AI Singapore,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+SEA-LION V3 Llama3.1 70B,AI Singapore,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama 3.1 Typhoon 2 70B,Typhoon / SCB 10X,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama 3.1 Typhoon 2 8B,Typhoon / SCB 10X,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Typhoon 2 7B,Typhoon / SCB 10X,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLama 3.2 Typhoon 2 3B,Typhoon / SCB 10X,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLama 3..2 Typhoon 2 1B,Typhoon / SCB 10X,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Typhoon2-Vision,Typhoon / SCB 10X,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Typhoon2-Audio,Typhoon / SCB 10X,2024-12-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Granite 3.1 2B,IBM,2024-12-18,manual: long-context continuation of Granite 3.0
+Granite 3.1 8B,IBM,2024-12-18,manual: long-context continuation of Granite 3.0
+SEA-LION-v1-7B-IT,AI Singapore,2024-12-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Jinshi (金石大模型),"Wuxi Sixiang Digital Intelligence Technology Co., Ltd.",2024-12-15,N missing
+Apollo 3B,"Meta AI,Stanford University",2024-12-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+Apollo 1.5B,"Meta AI,Stanford University",2024-12-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+360zhinao2-o1,360 Security Technology,2024-12-13,N missing
+Apollo 7B,"Meta AI,Stanford University",2024-12-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+GigaChat Lite (GigaChat-20B-A3B),Sber,2024-12-13,post-trained / derived variant (name)
+Gemini 2.0 Flash,"Google DeepMind,Google",2024-12-11,N missing
+Gemini 2.0 Pro,Google DeepMind,2024-12-11,N missing
+Coconut,"Facebook,University of California San Diego",2024-12-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+T-Pro,T-Bank,2024-12-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+T-Lite,T-Bank,2024-12-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama 3.3 70B,Meta AI,2024-12-06,manual: post-training update of Llama 3.1 70B (same pretraining)
+InternVL2_5-26B,"Shanghai AI Lab,SenseTime,Tsinghua University,Nanjing University,Fudan University,Chinese University of Hong Kong (CUHK),Shanghai Jiao Tong University",2024-12-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+InternVL2_5-38B,"Shanghai AI Lab,SenseTime,Tsinghua University,Nanjing University,Fudan University,Chinese University of Hong Kong (CUHK),Shanghai Jiao Tong University",2024-12-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+InternVL2_5-78B,"Shanghai AI Lab,SenseTime,Tsinghua University,Nanjing University,Fudan University,Chinese University of Hong Kong (CUHK),Shanghai Jiao Tong University",2024-12-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+o1,OpenAI,2024-12-05,N missing
+NVILA 15B,"Nvidia,Massachusetts Institute of Technology (MIT),University of California (UC) Berkeley,University of California San Diego,University of Washington,Tsinghua University",2024-12-05,multimodal domain (D includes non-text tokens)
+NVILA 8B,"Nvidia,Massachusetts Institute of Technology (MIT),University of California (UC) Berkeley,University of California San Diego,University of Washington,Tsinghua University",2024-12-05,multimodal domain (D includes non-text tokens)
+voyage-code-3,Voyage AI,2024-12-04,N missing
+TokenFlow-XL,ByteDance,2024-12-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+Amazon Nova Pro,Amazon,2024-12-03,N missing
+Amazon Nova Lite,Amazon,2024-12-03,N missing
+Amazon Nova Micro,Amazon,2024-12-03,N missing
+Poolside Malibu,Poolside,2024-12-02,N missing
+360gpt2-pro,360 Security Technology,2024-11-29,N missing
+abab7,MiniMax,2024-11-29,N missing
+Mingzhi Guwen,"Shanghai Shuheng Information Technology Co., Ltd.",2024-11-29,N missing
+MiLi (米粒),CreditEase,2024-11-29,N missing
+HaiYue (浪潮通用软件有限公司),Inspur,2024-11-29,D (tokens) not recoverable
+DeepThought-8B,Ruliad,2024-11-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ovis1.6-Gemma2-27B,Alibaba,2024-11-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Fugatto 1,Nvidia,2024-11-25,multimodal domain (D includes non-text tokens)
+Tulu 3 (Tülu 3) 70B,"Allen Institute for AI,University of Washington",2024-11-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gauss2,Samsung,2024-11-21,N missing
+Tulu 3 8B,"Allen Institute for AI,University of Washington",2024-11-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-R1-Lite-Preview,DeepSeek,2024-11-20,N missing
+GPT-4o (Nov 2024),OpenAI,2024-11-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Pixtral Large,Mistral AI,2024-11-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+360Zhinao2-7B,360 Security Technology,2024-11-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+SK Telecom Telco,SK Telecom,2024-11-18,N missing
+k0-math,Moonshot,2024-11-16,N missing
+Gemini-Exp-1114,Google DeepMind,2024-11-15,N missing
+LLaVA-CoT,"Peking University,Tsinghua University,Peng Cheng Laboratory,Alibaba DAMO Academy,Lehigh University",2024-11-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+bailing-pro-1120,Ant Group,2024-11-15,N missing
+Qwen2.5-Turbo,Alibaba,2024-11-15,N missing
+Mistral Large 2.1,Mistral AI,2024-11-15,D (tokens) not recoverable
+Athene-V2,Nexusflow,2024-11-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemma2 9B CPT Sahabat-AI,"Indosat,Tech Mahindra,AI Singapore,GoTo",2024-11-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+TeleChat2-7B,China Telecom,2024-11-08,D (tokens) not recoverable
+TeleChat2-3B,China Telecom,2024-11-08,D (tokens) not recoverable
+Mistral Moderation,Mistral AI,2024-11-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama-3.1-Minitron-4B,Nvidia,2024-11-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+Minitron 8B,Nvidia,2024-11-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+Minitron 4B,Nvidia,2024-11-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+KwooLa,Harbin Institute of Technology,2024-11-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+SimPO,"Princeton University,University of Virginia",2024-11-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+aiXcoder-7B Base,Peking University,2024-10-30,D (tokens) not recoverable
+Doubao-pro,ByteDance,2024-10-28,MoE with unknown active parameters
+Aya Expanse 32B,Cohere Labs (formerly Cohere for AI),2024-10-24,manual: post-trained from Cohere Command models (D is post-training data)
+Aya Expanse 8B,Cohere Labs (formerly Cohere for AI),2024-10-24,manual: post-trained from Cohere Command models (D is post-training data)
+Bielik 7B,"SpeakLeash,Cyfronet AGH",2024-10-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+GigaChat MAX,Sber,2024-10-24,N missing
+YandexGPT 4 Pro,Yandex,2024-10-24,N missing
+YandexGPT 4 Lite,Yandex,2024-10-24,N missing
+NVLM-D 72B,Nvidia,2024-10-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+NVLM-H 72B,Nvidia,2024-10-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+NVLM-X 72B,Nvidia,2024-10-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude 3.5 Haiku,Anthropic,2024-10-22,N missing
+LongVU,"Meta AI,King Abdullah University of Science and Technology (KAUST),Korea University",2024-10-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Emu3,Beijing Academy of Artificial Intelligence / BAAI,2024-10-21,multimodal domain (D includes non-text tokens)
+Taiyi (旷视太乙),Megvii Inc,2024-10-21,N missing
+Zhiyun Culture LLM (智云文化大模型) ,"Xinhua Zhiyun Technology Co., Ltd.",2024-10-21,N missing
+TeleChat2-35B,China Telecom,2024-10-18,D (tokens) not recoverable
+Janus 1.3B,"DeepSeek,The University of Hong Kong,Peking University",2024-10-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+Yi-Lightning,01.AI,2024-10-16,N missing
+Ministral 3B,Mistral AI,2024-10-16,D (tokens) not recoverable
+Ministral 8B,Mistral AI,2024-10-16,D (tokens) not recoverable
+Marco-o1,Alibaba,2024-10-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Alibaba-NLP (mGTE),"Alibaba,Hong Kong Polytechnic University",2024-10-14,D (tokens) not recoverable
+Llama-3.1-Nemotron-70B-Instruct,"Nvidia,Meta AI",2024-10-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Baichuan-Omni,"Baichuan,Westlake University,Zhejiang University (ZJU)",2024-10-11,multimodal domain (D includes non-text tokens)
+Palmyra X 004,Writer,2024-10-09,D (tokens) not recoverable
+Aria,Rhymes AI,2024-10-08,multimodal domain (D includes non-text tokens)
+LFM 40B,Liquid,2024-09-30,D (tokens) not recoverable
+Takane,"Fujitsu,Cohere",2024-09-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Molmo 72B,"Allen Institute for AI,University of Washington",2024-09-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama 3.2 11B,Meta AI,2024-09-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama 3.2 90B,Meta AI,2024-09-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Spark 4.0,iFlytek,2024-09-23,N missing
+Qwen2.5 Instruct (7B),Alibaba,2024-09-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5 Instruct (72B),Alibaba,2024-09-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5-Math-7B-Base,Alibaba,2024-09-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Oryx 34B,"Tsinghua University,Tencent,Nanyang Technological University",2024-09-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Oryx 7B,"Tsinghua University,Tencent,Nanyang Technological University",2024-09-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5 Instruct (32B),Alibaba,2024-09-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2.5-Math-1.5B,Alibaba,2024-09-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2-VL-72B,Alibaba,2024-09-18,multimodal domain (D includes non-text tokens)
+Qwen2-VL-2B,Alibaba,2024-09-18,multimodal domain (D includes non-text tokens)
+Qwen2-VL-7B,Alibaba,2024-09-18,multimodal domain (D includes non-text tokens)
+Mistral Small v24.09,Mistral AI,2024-09-17,D (tokens) not recoverable
+Pixtral 12B,Mistral AI,2024-09-17,multimodal domain (D includes non-text tokens)
+Ovis1.6-Gemma2-9B,Alibaba,2024-09-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+o1-mini,OpenAI,2024-09-12,N missing
+o1-preview,OpenAI,2024-09-12,N missing
+DataGemma,Google,2024-09-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Solar Pro,Upstage,2024-09-11,D (tokens) not recoverable
+Galaxy (星汉Galaxy大模型),Dahan Software / Hanweb,2024-09-11,multimodal domain (D includes non-text tokens)
+Aristotle,Harmonic,2024-09-07,N missing
+DeepSeek-V2.5,DeepSeek,2024-09-06,manual: merge of DeepSeek-V2-Chat and Coder-V2 (derived)
+xLAM-8x22B,Salesforce,2024-09-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+MiniCPM3.0,Mianbi Intelligence,2024-09-06,D (tokens) not recoverable
+Hunyuan Turbo,Tencent,2024-09-05,N missing
+Harrison.rad.1,Harrison.ai,2024-09-05,N missing
+Moonshot-v1,Moonshot,2024-09-01,N missing
+NV-Embed-v2,Nvidia,2024-08-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+GLM-4-Plus,Z.ai (Zhipu AI),2024-08-29,N missing
+Hairuo,Inspur,2024-08-29,N missing
+Bielik-11B-v2,"SpeakLeash,Cyfronet AGH",2024-08-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+Pharia-1-LLM-7B,Aleph Alpha,2024-08-26,D (tokens) not recoverable
+DISTRO,Nous Research,2024-08-26,manual: distributed-training research run
+Xinyu,"Zhejiang University (ZJU),Institute for Advanced Algorithms Research,Northeastern University (China),China Telecom,State Key Laboratory of Media Convergence Production Technology and Systems",2024-08-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+Jamba 1.5-Large,AI21 Labs,2024-08-22,D (tokens) not recoverable
+Jamba 1.5 Mini,AI21 Labs,2024-08-22,D (tokens) not recoverable
+Kosmos-2.5,Microsoft,2024-08-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+LongVILA-7B,"Nvidia,Massachusetts Institute of Technology (MIT),University of California (UC) Berkeley,UT Austin",2024-08-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Hybrid-Phi-Mamba-1.5B,"Carnegie Mellon University (CMU),Mohamed bin Zayed University of Artificial Intelligence (MBZUAI),Cartesia",2024-08-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+xGen-MM (BLIP-3),"Salesforce Research,University of Washington",2024-08-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-Prover-V1.5,DeepSeek,2024-08-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+Hermes 3 405B,Nous Research,2024-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Hermes 3 70B,Nous Research,2024-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Hermes 3 8B,Nous Research,2024-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Zhiye LLM (浪潮知业大模型),Inspur,2024-08-14,N missing
+Grok-2,xAI,2024-08-13,N missing
+Grok-2 mini,xAI,2024-08-13,N missing
+Cosine Genie,Cosine,2024-08-12,N missing
+Qwen2-Math-1.5B,Alibaba,2024-08-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2-Math-72B,Alibaba,2024-08-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2-Math-7B,Alibaba,2024-08-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Tencent Search LLM (腾讯搜索大模型),Tencent,2024-08-09,N missing
+LTM-2-mini,Magic,2024-08-09,N missing
+MiniCPM-V 2.6,OpenBMB (Open Lab for Big Model Base),2024-08-06,multimodal domain (D includes non-text tokens)
+LLaVA-OV-7B,"ByteDance,Nanyang Technological University,Chinese University of Hong Kong (CUHK),Hong Kong University of Science and Technology (HKUST)",2024-08-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaVA-OV-72B,"ByteDance,Nanyang Technological University,Chinese University of Hong Kong (CUHK),Hong Kong University of Science and Technology (HKUST)",2024-08-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-4o (Aug 2024),OpenAI,2024-08-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+Jais-70B ,"G42,Inception G42",2024-08-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+InternLM2.5,Shanghai AI Lab,2024-08-01,D (tokens) not recoverable
+Llama SEA-LION V2 8B,AI Singapore,2024-07-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+AFM-server,Apple,2024-07-29,N missing
+SaulLM-large,Equall.ai,2024-07-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+AlphaGeometry 2,Google DeepMind,2024-07-25,N missing
+Mistral Large 2,Mistral AI,2024-07-24,D (tokens) not recoverable
+Palmyra Fin,Writer,2024-07-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Palmyra Med,Writer,2024-07-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+CarrotAI (CarrotAI大模型),"Jiangsu Huizhi Intelligent Digital Technology Co., Ltd.",2024-07-23,D (tokens) not recoverable
+Zhiwei (知微大模型),Beijing Weimeng Chuangke Network Technology,2024-07-20,N missing
+Athene-70B,Nexusflow,2024-07-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mistral NeMo,Mistral AI,2024-07-18,D (tokens) not recoverable
+GPT-4o mini,OpenAI,2024-07-18,N missing
+ChatLing (灵犀大模型),Beijing 58 Information Technology,2024-07-18,N missing
+Beiruan (北软大模型),"Beijing Beida Software Engineering Co., Ltd.",2024-07-18,N missing
+Xingchen Multimodal Model (中电信人工智能科技（北京）有限公司),China Telecom,2024-07-18,N missing
+Cygnet,Gray Swan,2024-07-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Codestral Mamba,Mistral AI,2024-07-16,D (tokens) not recoverable
+DeepL LLM,DeepL,2024-07-16,N missing
+Mathstral,Mistral AI,2024-07-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaVA-NeXT-32B-Qwen,LMMs-Lab,2024-07-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Nebula (星云大模型),ZTE,2024-07-16,D (tokens) not recoverable
+Qwen2-Audio,Alibaba,2024-07-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+InternVL2-Llama3-76B,Shanghai AI Lab,2024-07-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenDiLoCo 150M,Prime Intellect,2024-07-10,manual: distributed-training research run
+OpenDiLoCo 1.1B,Prime Intellect,2024-07-10,manual: distributed-training research run
+SenseChat 5.5,SenseTime,2024-07-06,multimodal domain (D includes non-text tokens)
+InternVL2 26B,Shanghai AI Lab,2024-07-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+InternVL2-40B,Shanghai AI Lab,2024-07-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+Smaug-34B,Abacus AI,2024-07-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Smaug-72B,Abacus AI,2024-07-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama-SEA-LION-v2-8B-IT,AI Singapore,2024-07-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+ChatBit,"Beijing Institute of Technology,Academy of Military Science,Minzu University of China",2024-06-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ernie 4.0 Turbo,Baidu,2024-06-28,N missing
+CriticGPT,OpenAI,2024-06-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Index-1.9B,"Shanghai Kuanyu Digital Technology Co., Ltd. (Bilibili)",2024-06-27,D (tokens) not recoverable
+Cambrian-1-34B,New York University (NYU),2024-06-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Cambrian-1-13B,New York University (NYU),2024-06-24,multimodal domain (D includes non-text tokens)
+Cambrian-1-8B,New York University (NYU),2024-06-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Code Droid,Factory,2024-06-22,N missing
+Claude 3.5 Sonnet,Anthropic,2024-06-20,N missing
+Hermes 2 Theta Llama-3 70B,"Nous Research,Arcee AI",2024-06-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+GLM-4V-9B,"Z.ai (Zhipu AI),Tsinghua University",2024-06-18,multimodal domain (D includes non-text tokens)
+DeepSeek-Coder-V2 236B,DeepSeek,2024-06-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ovis-7B,"Alibaba,Nanjing University",2024-06-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+JIUTIAN-139MoE,China Mobile,2024-06-15,MoE with unknown active parameters
+DigiRL,"University of California (UC) Berkeley,University of Illinois Urbana-Champaign (UIUC),Google DeepMind",2024-06-14,multimodal domain (D includes non-text tokens)
+OpenVLA,"Stanford University,University of California (UC) Berkeley,Toyota Research Institute,Google DeepMind,Massachusetts Institute of Technology (MIT),Physical Intelligence",2024-06-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+Megrez-3B-Omni,"Infinigence AI,Tsinghua University,Shanghai Jiao Tong University",2024-06-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen2-57B-A14B,Alibaba,2024-06-07,manual: MoE upcycled from a dense Qwen2 model (D for the MoE stage only)
+MiniCPM-2.4B,"Tsinghua University,ModelBest",2024-06-03,encoder-decoder or dialogue seq2seq
+MiniCPM-3-4B,"Tsinghua University,ModelBest",2024-06-03,D (tokens) not recoverable
+Ark LLM (方舟大模型),Zhuhai Wujiefangzhou Intelligent Technology,2024-05-31,N missing
+Codestral,Mistral AI,2024-05-29,D (tokens) not recoverable
+ChunkLlama2-13B,"Alibaba,The University of Hong Kong,Fudan University",2024-05-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Nanbeige2-16B-Chat,Nanbeige LLM Lab,2024-05-28,post-trained / derived variant (name)
+NV-Embed-v1,Nvidia,2024-05-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+LUXIA-21.4B-Alignment,SaltLux,2024-05-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Zamba2-7B,Zyphra,2024-05-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama-3-70B-Synthia-v3.5,,2024-05-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Xingchen Jianwei Security Model (星辰·见微安全大 模型),China Telecom,2024-05-25,N missing
+OMNI-EPIC,"Imperial College London,University of British Columbia (UBC)",2024-05-24,N missing
+360Zhinao-7B,360 Security Technology,2024-05-22,D (tokens) not recoverable
+ALLaM adapted13B,Saudi Data and Artificial Intelligence Authority,2024-05-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+ALLaM adapted 70B,Saudi Data and Artificial Intelligence Authority,2024-05-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+ALLaM 7B,Saudi Data and Artificial Intelligence Authority,2024-05-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+GLM-4 (0520),Z.ai (Zhipu AI),2024-05-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Chameleon-34B,Facebook AI Research,2024-05-16,multimodal domain (D includes non-text tokens)
+FragLlama: Next-fragment prediction for molecular design,Facebook AI Research,2024-05-16,multimodal domain (D includes non-text tokens)
+Doubao-lite,ByteDance,2024-05-15,N missing
+Doubao Role-Playing Model,ByteDance,2024-05-15,N missing
+Doubao Function Call Model,ByteDance,2024-05-15,N missing
+Doubao Vectorization Model,ByteDance,2024-05-15,N missing
+Doubao Real-Time translation model,ByteDance,2024-05-15,N missing
+VILA1.5-40B,"Nvidia,Massachusetts Institute of Technology (MIT)",2024-05-15,multimodal domain (D includes non-text tokens)
+VILA-7B,"Nvidia,Massachusetts Institute of Technology (MIT)",2024-05-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+LearnLM-Tutor,"Google Research,Google DeepMind,Google,Arizona State University,Lund University,University of Oxford",2024-05-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-4o,OpenAI,2024-05-13,N missing
+Digivio (迪智伟奥DIGIVIO),"Shanghai Digivio Information Technology Co., Ltd.",2024-05-13,N missing
+Yuanshi (元石大模型),"Beijing Yuanshi Technology Co., Ltd.",2024-05-13,N missing
+Xiaoyu Q&A,"Xiaoyu Intelligence Information Technology (Yunnan) Co., Ltd",2024-05-13,N missing
+Xinyuan (心元大模型),"Beijing Lituo Feiyuan Technology Co., Ltd.,Cylingo Group",2024-05-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+llama-3-airoboros-70b-3.3,,2024-05-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 1.5 Flash,Google DeepMind,2024-05-10,N missing
+Gemini 1.5 Flash 8B,Google DeepMind,2024-05-10,multimodal domain (D includes non-text tokens)
+Emu2,"Beijing Academy of Artificial Intelligence / BAAI,Tsinghua University,Peking University",2024-05-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+xLSTM 1.4B,Johannes Kepler University Linz,2024-05-07,D (tokens) not recoverable
+Amazon Titan Text Premier,Amazon,2024-05-07,N missing
+Microsoft MAI-1 (2024 unreleased),Microsoft,2024-05-06,MoE with unknown active parameters
+MetaMath 70B,"University of Cambridge,Southern University of Science and Technology (SUSTech),Hong Kong University of Science and Technology (HKUST),Huawei Noah's Ark Lab,Alan Turing Institute,Max Planck Institute for Intelligent Systems",2024-05-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+MetaMath 7B (LLaMa finetune),"University of Cambridge,Southern University of Science and Technology (SUSTech),Hong Kong University of Science and Technology (HKUST),Huawei Noah's Ark Lab,Alan Turing Institute,Max Planck Institute for Intelligent Systems",2024-05-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+MetaMath 7B (Mistral finetune),"University of Cambridge,Southern University of Science and Technology (SUSTech),Hong Kong University of Science and Technology (HKUST),Huawei Noah's Ark Lab,Alan Turing Institute,Max Planck Institute for Intelligent Systems",2024-05-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Idefics2,"Hugging Face,Sorbonne University",2024-05-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+VILA1.5-13B,"Nvidia,Massachusetts Institute of Technology (MIT)",2024-05-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Med-Gemini-M 1.5,"Google DeepMind,Google Research",2024-05-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Multi-Token Prediction 7B,Facebook AI Research,2024-04-30,D (tokens) not recoverable
+Multi-Token Prediction 13B,Facebook AI Research,2024-04-30,D (tokens) not recoverable
+Amazon Q Developer,Amazon,2024-04-30,N missing
+TAIDE-LX-7B,National Science and Technology Council,2024-04-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+TAIDE LX-13B,National Science and Technology Council,2024-04-29,D (tokens) not recoverable
+Llama 3-TAIDE-LX-8B-Chat-Alpha1,National Science and Technology Council,2024-04-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+InternVL1.5,"Shanghai AI Lab,SenseTime,Tsinghua University,Nanjing University,Fudan University,Chinese University of Hong Kong (CUHK)",2024-04-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Swallow,Tokyo Institute of Technology,2024-04-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Qwen1.5-110B,Alibaba,2024-04-25,D (tokens) not recoverable
+NEC cotomi,NEC Corporation,2024-04-24,N missing
+Yuanjing LLM (联通元景大模型),China Unicom,2024-04-24,N missing
+SenseChat 5.0,SenseTime,2024-04-23,post-trained / derived variant (name)
+FRED-T5-XL,Sber,2024-04-18,encoder-decoder or dialogue seq2seq
+LLaMA-3-Instruct-8B,Meta AI,2024-04-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Reka Edge,Reka AI,2024-04-18,multimodal domain (D includes non-text tokens)
+Mixtral 8x22B,Mistral AI,2024-04-17,D (tokens) not recoverable
+GRITLM 7B,"Contextual AI,The University of Hong Kong,Microsoft",2024-04-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+GRITLM 8x7B,"Contextual AI,The University of Hong Kong,Microsoft",2024-04-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+Tiangong 3.0 (MoE),Kunlun Inc.,2024-04-17,MoE with unknown active parameters
+abab6.5,MiniMax,2024-04-17,D (tokens) not recoverable
+LINGO-2,Wayve,2024-04-17,N missing
+Reka Core,Reka AI,2024-04-15,multimodal domain (D includes non-text tokens)
+Reka Flash,Reka AI,2024-04-15,multimodal domain (D includes non-text tokens)
+WizardLM-2 8x22B,Microsoft,2024-04-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+WizardLM-2 70B,Microsoft,2024-04-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+WizardLM-2 7B,Microsoft,2024-04-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+Bencao Zhiku,Chengdu University of Traditional Chinese Medicine,2024-04-12,D (tokens) not recoverable
+NOMI GPT,NIO,2024-04-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+tsuzumi 7B upgrade 2024,NTT Communication Science Laboratories,2024-04-11,multimodal domain (D includes non-text tokens)
+Zephyr 141B-A39B,"Hugging Face,Korea Advanced Institute of Science and Technology (KAIST),Argilla",2024-04-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+WeituAI 1.0,Weitu AI,2024-04-09,multimodal domain (D includes non-text tokens)
+GPT-4 Turbo (Apr 2024),OpenAI,2024-04-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Stable LM 2 12B,Stability AI,2024-04-08,manual: D ambiguous (2T tokens 'for two epochs': 2T or 4T)
+OpenThaiGPT v1.0.0 (13B),"Mahidol University,AI Entrepreneurs Association of Thailand",2024-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenThaiGPT v1.0.0 (7B),"Mahidol University,AI Entrepreneurs Association of Thailand",2024-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+SambaLingo-Thai-Chat (7B),"SambaNova Systems, Inc",2024-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+SambaLingo-Thai-Chat-70B,"SambaNova Systems, Inc",2024-04-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+Command R+,"Cohere,Cohere Labs (formerly Cohere for AI)",2024-04-04,D (tokens) not recoverable
+Sailor-7B-Chat,"Sea AI Lab,Singapore University of Technology & Design",2024-04-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mixture-of-Depths,"Google DeepMind,McGill University,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms)",2024-04-02,D (tokens) not recoverable
+POKE´LLMON,Georgia Institute of Technology,2024-04-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+XVERSE-MoE-A4.2B,"XVERSE Technology,Shenzhen Yuanxiang Technology",2024-04-02,D (tokens) not recoverable
+APUS-xDAN-4.0(MoE),"Qilin Hesheng Network Technology Co., Ltd. (APUS)",2024-04-02,multimodal domain (D includes non-text tokens)
+Youyuanjian (邮远见),"China Post Consumer Finance Co., Ltd.",2024-04-02,N missing
+TeleChat-7B,China Telecom,2024-04-01,post-trained / derived variant (name)
+TeleChat-3B,China Telecom,2024-04-01,post-trained / derived variant (name)
+TeleChat-12B,China Telecom,2024-04-01,post-trained / derived variant (name)
+TW3-JRGL-v2,"French Engineering School ECE,TW3 Partners",2024-04-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Le_Triomphant-ECE-TW3,"French Engineering School ECE,TW3 Partners",2024-04-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+ReALM,Apple,2024-03-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Grok-1.5,xAI,2024-03-28,N missing
+Grok-1.5V,xAI,2024-03-28,N missing
+YandexGPT 3,Yandex,2024-03-28,N missing
+Jamba,AI21 Labs,2024-03-28,D (tokens) not recoverable
+MultiVerse 70B,MTS,2024-03-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Xuanji Yuheng (璇玑玉衡),Zhuoshi Technology,2024-03-20,D (tokens) not recoverable
+MiniGPT4 + LRV-Instruction,"University of Maryland,Microsoft",2024-03-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+JetFire (GPT2-LARGE),Tsinghua University,2024-03-19,D (tokens) not recoverable
+Xinghai (星海),Hisense,2024-03-15,N missing
+MM1-30B,Apple,2024-03-14,multimodal domain (D includes non-text tokens)
+Quiet-STaR,Stanford University,2024-03-14,N missing
+Command R,"Cohere,Cohere Labs (formerly Cohere for AI)",2024-03-11,D (tokens) not recoverable
+DeepSeek-VL-7B,DeepSeek,2024-03-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+DeepSeek-VL-1.3B,DeepSeek,2024-03-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+Inflection-2.5,Inflection AI,2024-03-07,N missing
+GroundingGPT,"ByteDance,Fudan University",2024-03-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude 3 Haiku,Anthropic,2024-03-04,N missing
+Claude 3 Sonnet,Anthropic,2024-03-04,N missing
+Claude 3 Opus,Anthropic,2024-03-04,N missing
+Step-2,StepFun,2024-03-01,MoE with unknown active parameters
+Ovis2 16B,Alibaba,2024-03-01,multimodal domain (D includes non-text tokens)
+Ovis2 34B,Alibaba,2024-03-01,multimodal domain (D includes non-text tokens)
+BitNet b1.58,"University of Chinese Academy of Sciences,Microsoft Research",2024-02-27,manual: quantization research run
+Palmyra Vision,Writer,2024-02-27,N missing
+Mistral Large,Mistral AI,2024-02-26,N missing
+Gemma 1.1 7B Instruct,Google,2024-02-24,post-trained / derived variant (name)
+MegaScale (175B),"ByteDance,Peking University",2024-02-23,"manual: systems-paper benchmark run, not a model release"
+MegaScale (530B),"ByteDance,Peking University",2024-02-23,"manual: systems-paper benchmark run, not a model release"
+MegaScale (Production),"ByteDance,Peking University",2024-02-23,"manual: systems-paper benchmark run, not a model release"
+Me Llama 70B,"Yale School of Medicine,University of Florida,University of Texas Health Science Center",2024-02-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Me Llama 13B,"Yale School of Medicine,University of Florida,University of Texas Health Science Center",2024-02-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 1.5 Pro,Google DeepMind,2024-02-15,N missing
+Gemini 1.0 Pro Vision,Google DeepMind,2024-02-15,N missing
+KwaiYii 175B,Kuaishou Technology,2024-02-14,D (tokens) not recoverable
+Aya,"Cohere Labs (formerly Cohere for AI),Brown University,Cohere,Carnegie Mellon University (CMU),Massachusetts Institute of Technology (MIT)",2024-02-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+RecGPT / Xingchen LLM (淘宝（中国）软件有限公司),Alibaba,2024-02-07,multimodal domain (D includes non-text tokens)
+SenseChat-DataAnalysis V4,SenseTime,2024-02-06,N missing
+SenseChat-Medical V4,SenseTime,2024-02-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+SenseChat-Vision V4,SenseTime,2024-02-06,multimodal domain (D includes non-text tokens)
+SenseChat 4.0,SenseTime,2024-02-06,N missing
+Qwen Plus,Alibaba,2024-02-06,N missing
+Qwen-Turbo,Alibaba,2024-02-06,N missing
+CausalLM 34B β,CausalLM,2024-02-06,D (tokens) not recoverable
+Qwen1.5-32B,Alibaba,2024-02-05,D (tokens) not recoverable
+DeepSeekMath 7B,"DeepSeek,Tsinghua University,Peking University",2024-02-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Hanhai (瀚海),"Shuchi Information Technology ( Shanghai ) Co. , Ltd.",2024-01-31,N missing
+LLaVA-NeXT-34B (LLaVA-1.6),"University of Wisconsin Madison,ByteDance,Nanyang Technological University,University of California (UC) Berkeley",2024-01-30,multimodal domain (D includes non-text tokens)
+BGE-M3 Embedding,Beijing Academy of Artificial Intelligence / BAAI,2024-01-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Code Llama-70B,Meta AI,2024-01-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Baichuan3,Baichuan,2024-01-29,multimodal domain (D includes non-text tokens)
+Karakuri LM,KARAKURI Inc.,2024-01-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+Yan,Rock AI / Shanghai Stonehill Technology,2024-01-26,N missing
+Qwen-VL-Max,Alibaba,2024-01-25,multimodal domain (D includes non-text tokens)
+text-embedding-3-small,OpenAI,2024-01-25,N missing
+text-embedding-3-large,OpenAI,2024-01-25,N missing
+Fuyu-Heavy,Adept,2024-01-24,multimodal domain (D includes non-text tokens)
+Yi-VL-34B,01.AI,2024-01-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+voyage-code-2,Voyage AI,2024-01-23,N missing
+Orion Star (猎户星空大模型),"Beijing OrionStar Technology Co., Ltd.",2024-01-21,D (tokens) not recoverable
+GLM-4 (0116),Z.ai (Zhipu AI),2024-01-17,N missing
+GLM-4,Z.ai (Zhipu AI),2024-01-17,N missing
+Skiff LLM (一叶轻舟大语言模型),"Shiyin Intelligent Technology Co., Ltd.",2024-01-17,D (tokens) not recoverable
+InternViT-6B,"Shanghai AI Lab,Nanjing University,The University of Hong Kong,Tsinghua University,SenseTime,University of Science and Technology of China (USTC)",2024-01-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+Yiye Qingzhou-0.7B,EFFYIC (识因智能),2024-01-15,multimodal domain (D includes non-text tokens)
+Yiye Qingzhou-45B,EFFYIC (识因智能),2024-01-15,multimodal domain (D includes non-text tokens)
+InternVL,"Shanghai AI Lab,Nanjing University,The University of Hong Kong,Tsinghua University,SenseTime,University of Science and Technology of China (USTC)",2024-01-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+Magic LLM (魔法大模型),Shenzhen Honor Software Technology,2024-01-10,D (tokens) not recoverable
+Xingrui AI (星睿AI),Geely Automobile Research Institute (Ningbo) Company,2024-01-05,multimodal domain (D includes non-text tokens)
+babbage-002,OpenAI,2024-01-04,N missing
+Palmyra X 003,Writer,2024-01-01,D (tokens) not recoverable
+Kimi Explorer,Moonshot,2024-01-01,N missing
+Qarasu-14B,Lightblue,2023-12-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+CoRe,Tsinghua University,2023-12-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mengzi-Code-6.7B,Langboat,2023-12-28,D (tokens) not recoverable
+MengziGPT-General-13B,Langboat,2023-12-28,D (tokens) not recoverable
+Elyza,Elyza,2023-12-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Nous-Hermes-2-Yi-34B,Nous Research,2023-12-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Solar-10.7B (Solar Mini),Upstage,2023-12-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+GQA-8-XXL,Google Research,2023-12-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+YaYi 2.0,Yayi (Wenge),2023-12-22,D (tokens) not recoverable
+VideoPoet,"Google Research,Carnegie Mellon University (CMU),Google DeepMind",2023-12-21,multimodal domain (D includes non-text tokens)
+nekomata-14b,rinna,2023-12-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini Nano-2,Google DeepMind,2023-12-19,multimodal domain (D includes non-text tokens)
+Gemini Nano-1,Google DeepMind,2023-12-19,multimodal domain (D includes non-text tokens)
+Lyra-Fr 10B,LightOn,2023-12-15,D (tokens) not recoverable
+Konan LLM 41B,Konan Technology,2023-12-15,multimodal domain (D includes non-text tokens)
+CogAgent,"Tsinghua University,Z.ai (Zhipu AI)",2023-12-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+FunSearch,Google DeepMind,2023-12-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+GigaChat Pro,Sber,2023-12-13,post-trained / derived variant (name)
+MedLM,Google Cloud,2023-12-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+VILA-13B,"Nvidia,Massachusetts Institute of Technology (MIT)",2023-12-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mixtral 8x7B,Mistral AI,2023-12-11,D (tokens) not recoverable
+Mistral Medium,Mistral AI,2023-12-11,N missing
+SeamlessM4T,"Facebook,INRIA,University of California (UC) Berkeley",2023-12-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llama Guard,Meta AI,2023-12-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+StableLM - Zephyr 3B,Stability AI,2023-12-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gemini 1.0 Ultra,Google DeepMind,2023-12-06,N missing
+Gemini 1.0 Pro,Google DeepMind,2023-12-06,N missing
+OneLLM,"Chinese University of Hong Kong (CUHK),Shanghai AI Lab",2023-12-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+NexusRaven-V2,Nexusflow,2023-12-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Baize-v2-13B (白泽),"University of California San Diego,Sun Yat-sen University,Microsoft Research Asia",2023-12-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+tsuzumi 7B,NTT Communication Science Laboratories,2023-12-01,D (tokens) not recoverable
+NASA SMD,"NASA,IBM",2023-12-01,manual: encoder (RoBERTa-based INDUS)
+SeaLLM-7B-v2,Alibaba DAMO Academy,2023-12-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+SeaLLM-7B-v2.5,Alibaba DAMO Academy,2023-12-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+AzeroGPT,SoundAI,2023-12-01,multimodal domain (D includes non-text tokens)
+Cohere Command Light,Cohere,2023-11-30,D (tokens) not recoverable
+PPLX-70B-Online,Perplexity,2023-11-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+Amazon Titan Text Express,Amazon,2023-11-29,N missing
+Amazon Titan Text Lite,Amazon,2023-11-29,N missing
+Llama-3-Taiwan-70B,National Taiwan University,2023-11-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+StripedHyena-Hessian-7B,"Together,Nous Research",2023-11-27,D (tokens) not recoverable
+Meditron-70B,Ecole Polytechnique F´ed´erale de Lausanne (EPFL),2023-11-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+Starling-LM-7B-alpha,University of California (UC) Berkeley,2023-11-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Belle VL,KE Holdings Inc. (“Beike”),2023-11-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Infinity (无涯),Transwarp Technology,2023-11-24,N missing
+TAIWAN-LLM 13B,National Taiwan University,2023-11-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+TAIWAN-LLM 7B,National Taiwan University,2023-11-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+Inflection-2,Inflection AI,2023-11-22,N missing
+OmniFusion-7B (InternViT-6B-448px V1-2),"AIRI Artificial Intelligence Research Institute,Sber,Skolkovo Institute of Science and Technology",2023-11-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude 2.1,Anthropic,2023-11-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Orca 2-13B,Microsoft Research,2023-11-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Tulu V2 DPO 70B,"Allen Institute for AI,University of Washington",2023-11-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mistral 7B + OVM,Chinese University of Hong Kong (CUHK),2023-11-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+AndesGPT,Oppo Mobile Telecommunications,2023-11-16,N missing
+Mi:dm 7B,KT,2023-11-15,D (tokens) not recoverable
+Qwen-Audio-Chat,Alibaba,2023-11-14,multimodal domain (D includes non-text tokens)
+SPHINX (Llama 2 13B),"Shanghai AI Lab,Chinese University of Hong Kong (CUHK),ShanghaiTech University",2023-11-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+Volcano 13B,"Korea University,Korea Advanced Institute of Science and Technology (KAIST),LG",2023-11-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaVA + LVIS-INSTRUCT4V,"Fudan University,University of Maryland",2023-11-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+Intel Aurora 1T,"Intel,Argonne National Laboratory",2023-11-13,D (tokens) not recoverable
+Samsung Gauss Language,Samsung,2023-11-08,N missing
+Samsung Gauss Code,Samsung,2023-11-08,N missing
+RoFormer,Zhuiyi Technology,2023-11-08,encoder (masked LM / embedding model)
+OmniVec,TensorTour,2023-11-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+mPLUG-Owl2,Alibaba,2023-11-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+OtterHD-8B,Nanyang Technological University,2023-11-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-4 Turbo (Nov 2023),OpenAI,2023-11-06,N missing
+CogVLM-17B,"Tsinghua University,Z.ai (Zhipu AI),Beihang University",2023-11-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaVA 1.5,"University of Wisconsin Madison,Microsoft Research",2023-11-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Grok-1,xAI,2023-11-04,MoE with unknown active parameters
+Grok-0,xAI,2023-11-04,MoE with unknown active parameters
+Sequence Monkey (序列猴子),Mobvoi,2023-11-04,N missing
+ZhihaiTu AI (知海图),Beijing Zhizhe Tianxia Technology,2023-11-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+BLUUMI,"University of Turku,Hugging Face",2023-11-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Cohere Embed,Cohere,2023-11-02,N missing
+LingoWhale-8B,DeepLang AI,2023-11-01,MoE with unknown active parameters
+OpenChat 3.5-7B,Tsinghua University,2023-11-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+MuggleMath,"University of Science and Technology of China (USTC),Alibaba",2023-11-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+YaRN (Llama 2 13B),"Nous Research,EleutherAI,University of Geneva",2023-11-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+YaRN (Llama 2 70B),"Nous Research,EleutherAI,University of Geneva",2023-11-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Tongyi Qianwen 2.0,Alibaba,2023-10-31,N missing
+Spec-Drafter,"Peking University,Microsoft Research Asia",2023-10-30,manual: speculative-decoding draft model
+ChatGLM3-6B,Z.ai (Zhipu AI),2023-10-27,multimodal domain (D includes non-text tokens)
+CODEFUSION (Python),"Microsoft,Microsoft Research",2023-10-26,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+QMoE: compressed SwitchTransformer,"Institute of Science and Technology Austria (ISTA),Neural Magic",2023-10-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Xinghan Foundation Model,Dahua Technology,2023-10-25,N missing
+Zephyr 7B,Hugging Face,2023-10-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Spark 3.0,iFlytek,2023-10-24,N missing
+CausalLM 14B,CausalLM,2023-10-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+KwaiYiiMath,Kuaishou Technology,2023-10-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+ERNIE 4.0,Baidu,2023-10-17,N missing
+Fuyu-8B,Adept,2023-10-17,multimodal domain (D includes non-text tokens)
+PaLI-3,"Google DeepMind,Google Research,Google Cloud",2023-10-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llemma 34B,"Princeton University,University of Toronto,Vector Institute,University of Cambridge,Carnegie Mellon University (CMU),University of Washington,EleutherAI",2023-10-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Llemma 7B,"Princeton University,EleutherAI,University of Toronto,Vector Institute,University of Cambridge,Carnegie Mellon University (CMU),University of Washington",2023-10-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Table-GPT,Microsoft Research,2023-10-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+Ferret (13B),"Columbia University,Apple",2023-10-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mistral 7B,Mistral AI,2023-10-10,D (tokens) not recoverable
+FinGPT-13B,"University of California Los Angeles (UCLA),Columbia University,New York University (NYU)",2023-10-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaMA-7B (protein-oriented instruction-tuned),Zhejiang University (ZJU),2023-10-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+New Intelligent Q&A,,2023-10-02,N missing
+TinyLlama-1.1B (1T token checkpoint),Singapore University of Technology & Design,2023-10-01,manual: intermediate checkpoint of TinyLlama 3T
+GAIA-1,Wayve,2023-09-29,multimodal domain (D includes non-text tokens)
+Amazon Titan,Amazon,2023-09-28,multimodal domain (D includes non-text tokens)
+GPT-3.5 Turbo Instruct,OpenAI,2023-09-28,post-trained / derived variant (name)
+InternLM-XComposer,Shanghai AI Lab,2023-09-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-4V,OpenAI,2023-09-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+PengCheng Mind (鹏城脑海),Peng Cheng Laboratory,2023-09-21,D (tokens) not recoverable
+DreamLLM,"Xi’an Jiaotong University,Megvii Inc,Tsinghua University,Huazhong University of Science and Technology",2023-09-20,multimodal domain (D includes non-text tokens)
+OpenChat-13b,"Tsinghua University,Shanghai AI Lab,01.AI",2023-09-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+bge-reranker-large,"Beijing Academy of Artificial Intelligence / BAAI,Hugging Face",2023-09-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+MADLAD-400 10B,"Google DeepMind,Google Research",2023-09-09,encoder-decoder or dialogue seq2seq
+Hunyuan,Tencent,2023-09-07,multimodal domain (D includes non-text tokens)
+TigerBot-70B,Tigerobo,2023-09-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+360 Smart Brain,360 Security Technology,2023-09-04,N missing
+ABAB,MiniMax,2023-08-30,N missing
+MengziGPT-General-40B,Langboat,2023-08-27,D (tokens) not recoverable
+Mengzi-Fin-7B,Langboat,2023-08-27,D (tokens) not recoverable
+Mengzi-Fin-13B,Langboat,2023-08-27,D (tokens) not recoverable
+Mengzi-Lite,Langboat,2023-08-25,N missing
+Open-Assistant Llama2 70B SFT v10,,2023-08-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+MathGPT,TAL Education Group (Xueersi),2023-08-24,N missing
+HyperCLOVA X,NAVER,2023-08-24,N missing
+Qwen-VL,Alibaba,2023-08-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+airoboros-l2-70b-2.1,,2023-08-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+IDEFICS-80B,Hugging Face,2023-08-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+IDEFICS-9B,Hugging Face,2023-08-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Dou Bao,ByteDance,2023-08-18,N missing
+KwaiYii 13B,Kuaishou Technology,2023-08-16,D (tokens) not recoverable
+Konan LLM 13B,Konan Technology,2023-08-15,multimodal domain (D includes non-text tokens)
+A.X (Adot) 7B,SK Telecom,2023-08-15,multimodal domain (D includes non-text tokens)
+Platypus-70B,Boston University,2023-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Code Llama-34B,Meta AI,2023-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Code Llama-7B,Meta AI,2023-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Code Llama-13B,Meta AI,2023-08-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude Instant,Anthropic,2023-08-09,N missing
+YuLan-Chat-2 (13B),Renmin University of China,2023-08-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+JIANG,K.D. Feddersen (KDF),2023-08-01,N missing
+Vicuna-7B-v1.5,"Large Model Systems Organization,University of California (UC) Berkeley",2023-08-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Vicuna-13B-v1.5,"Large Model Systems Organization,University of California (UC) Berkeley",2023-08-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Zi Yue,NetEase,2023-07-28,N missing
+Zi Yue 2.0,NetEase,2023-07-28,N missing
+BELLE-Llama2-13B-chat-0.4M,KE Holdings Inc. (“Beike”),2023-07-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+WizardLM 13B v1.2,"Microsoft,Peking University",2023-07-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+YAYI-13B-Llama2,Yayi (Wenge),2023-07-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+YAYI-7B-Llama2,Yayi (Wenge),2023-07-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Stable Beluga 1,Stability AI,2023-07-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+Stable Beluga 2,Stability AI,2023-07-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+EXAONE 2.0,LG AI Research,2023-07-19,multimodal domain (D includes non-text tokens)
+Llama 2-34B,Meta AI,2023-07-18,manual: never released
+GPT3-2.7B (FlashAttention-2),"Stanford University,Princeton University",2023-07-18,D (tokens) not recoverable
+BaiLing,Ant Group,2023-07-15,N missing
+ChatRhino,JD.com,2023-07-13,D (tokens) not recoverable
+Med-PaLM,"Google Research,National Library of Medicine,DeepMind",2023-07-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude 2,Anthropic,2023-07-11,N missing
+Emu1 (BAAI),"Beijing Academy of Artificial Intelligence / BAAI,Tsinghua University,Peking University",2023-07-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+West Lake (“Xīhú / 西湖大模型”),West Lake Xinchen / Xinchen AI / 西湖心辰（杭州）科技有限公司,2023-07-09,N missing
+TeleChat,China Telecom,2023-07-07,N missing
+Pangu 3.0,Huawei,2023-07-07,multimodal domain (D includes non-text tokens)
+NEC LLM 13B,NEC Laboratories,2023-07-06,D (tokens) not recoverable
+Multilingual-E5-large,Microsoft,2023-06-30,encoder (masked LM / embedding model)
+ERNIE 3.5,Baidu,2023-06-27,N missing
+RWKV-4 World (7B),RWKV Foundation,2023-06-26,D (tokens) not recoverable
+Kosmos-2,Microsoft,2023-06-26,multimodal domain (D includes non-text tokens)
+Llama-2-Chinese 13B,FlagAlpha,2023-06-25,derived model (fine-tune / continued pretraining / post-training of a base model)
+Inflection-1,Inflection AI,2023-06-23,N missing
+Vicuna-33B-v1.3,"Large Model Systems Organization,University of California (UC) Berkeley",2023-06-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Vicuna-13B-v1.3,"Large Model Systems Organization,University of California (UC) Berkeley",2023-06-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+Vicuna-7B-v1.3,"Large Model Systems Organization,University of California (UC) Berkeley",2023-06-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+WizardCoder-15.5B,Microsoft,2023-06-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-4 (Jun 2023),OpenAI,2023-06-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-3.5 Turbo,OpenAI,2023-06-13,D (tokens) not recoverable
+BELLE-LLaMA-7B-0.6M-enc,KE Holdings Inc. (“Beike”),2023-06-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+BELLE-LLaMA-7B-2M-enc ,KE Holdings Inc. (“Beike”),2023-06-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+BELLE-LLaMA-13B-2M-enc,KE Holdings Inc. (“Beike”),2023-06-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Wu Dao Aquila-7B,Beijing Academy of Artificial Intelligence / BAAI,2023-06-10,D (tokens) not recoverable
+Wu Dao Aquila-33B,Beijing Academy of Artificial Intelligence / BAAI,2023-06-10,D (tokens) not recoverable
+PolySphere-1,AI inside,2023-06-08,D (tokens) not recoverable
+LTM-1,Magic,2023-06-06,N missing
+PaLI-X,Google Research,2023-05-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+DPO on Pythia-2.8B,"Stanford University,CZ Biohub Network",2023-05-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+30B-Lazarus,Caldera AI,2023-05-27,D (tokens) not recoverable
+HuatuoGPT,"Shenzhen Research Institue of Big Data,Chinese University of Hong Kong (CUHK)",2023-05-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Shanhai,Unisound,2023-05-24,N missing
+LLaMA-7B (LoRA finetuned),NAVER,2023-05-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaMA-65B (LoRA finetuned),NAVER,2023-05-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaMA-13B (LoRA finetuned),NAVER,2023-05-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+LLaMA-33B (LoRA finetuned),NAVER,2023-05-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+Goat-7B,National University of Singapore,2023-05-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+Guanaco-65B,University of Washington,2023-05-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+BiomedGPT (182M),"Lehigh University,University of Georgia,Samsung Research America,Harvard Medical School,University of Pennsylvania",2023-05-23,multimodal domain (D includes non-text tokens)
+CodeT5+,Salesforce,2023-05-20,encoder-decoder or dialogue seq2seq
+XuanYuan 2.0,Du Xiaoman,2023-05-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+ONE-PEACE,"Alibaba,Huazhong University of Science and Technology",2023-05-18,multimodal domain (D includes non-text tokens)
+LIMA,"Meta AI,Carnegie Mellon University (CMU),University of Southern California,Tel Aviv University",2023-05-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+CongRong (从容大模型),CloudWalk Technology,2023-05-18,N missing
+CoEdiT-xxl,"University of Minnesota,Grammarly",2023-05-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+Med-PaLM 2,"Google Research,DeepMind",2023-05-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+OpenCALM,CyberAgent,2023-05-15,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+A.X (Adot) 39B,SK Telecom,2023-05-15,multimodal domain (D includes non-text tokens)
+LMRec,"NAVER,Naver AI Lab",2023-05-13,manual: recommendation model
+InstructBLIP,"Salesforce Research,Hong Kong University of Science and Technology (HKUST),Nanyang Technological University",2023-05-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+PaLM-2 Bison,Google,2023-05-10,N missing
+PaLM-2 Unicorn,Google,2023-05-10,N missing
+PaLM-2 Gecko,Google,2023-05-10,N missing
+PaLM-2 Otter,Google,2023-05-10,N missing
+ImageBind,Meta AI,2023-05-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+Spark,iFlytek,2023-05-06,N missing
+MPT-7B,MosaicML,2023-05-05,D (tokens) not recoverable
+Otter,Nanyang Technological University,2023-05-05,multimodal domain (D includes non-text tokens)
+CodeGen2,Salesforce,2023-05-03,D (tokens) not recoverable
+Shishuo,4Paradigm,2023-04-27,N missing
+WizardLM-7B,"Microsoft,Peking University",2023-04-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+WizardLM 70B,"Microsoft,Peking University",2023-04-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+GigaChat,Sber,2023-04-24,N missing
+MiniGPT4 (Vicuna finetune),King Abdullah University of Science and Technology (KAUST),2023-04-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+MOSS-Moon-003,Fudan University,2023-04-19,derived model (fine-tune / continued pretraining / post-training of a base model)
+Claude 1.3,Anthropic,2023-04-18,N missing
+AiLMe-100B v3,"Qilin Hesheng Network Technology Co., Ltd. (APUS)",2023-04-18,multimodal domain (D includes non-text tokens)
+LLaVA,"University of Wisconsin Madison,Microsoft Research,Columbia University",2023-04-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+BELLE-LLaMA-EXT-7B,KE Holdings Inc. (“Beike”),2023-04-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+HuaTuo,Harbin Institute of Technology,2023-04-14,derived model (fine-tune / continued pretraining / post-training of a base model)
+Dolly 2.0-12b,Databricks,2023-04-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+SenseChat,SenseTime,2023-04-10,post-trained / derived variant (name)
+BELLE-7B-0.2M,KE Holdings Inc. (“Beike”),2023-04-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+BELLE-7B-1M,KE Holdings Inc. (“Beike”),2023-04-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+BELLE-7B-2M,KE Holdings Inc. (“Beike”),2023-04-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+Yiye Qingzhou,EFFYIC (识因智能),2023-04-01,multimodal domain (D includes non-text tokens)
+Vicuna-13B v0,"Large Model Systems Organization,University of California (UC) Berkeley",2023-03-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+Vicuna-7B v0,"Large Model Systems Organization,University of California (UC) Berkeley",2023-03-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+BELLE-7B-0.6M,KE Holdings Inc. (“Beike”),2023-03-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+minChatGPT,Stanford University,2023-03-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+Sparse Wide GPT-3 Small,Cerebras Systems,2023-03-21,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+PanGu-Σ,Huawei Noah's Ark Lab,2023-03-20,encoder-decoder or dialogue seq2seq
+GPT-4 (Mar 2023),OpenAI,2023-03-15,multimodal domain (D includes non-text tokens)
+RIO,West Lake Xinchen / Xinchen AI / 西湖心辰（杭州）科技有限公司,2023-03-15,D (tokens) not recoverable
+Claude,Anthropic,2023-03-14,N missing
+Alpaca,Stanford University,2023-03-13,derived model (fine-tune / continued pretraining / post-training of a base model)
+Pythia-Chat-Base-7B-v0.16,Together,2023-03-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+PaLM-E,"Google,TU Berlin",2023-03-06,derived model (fine-tune / continued pretraining / post-training of a base model)
+Flan UL2,Google Brain,2023-03-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Cohere Command,Cohere,2023-03-01,D (tokens) not recoverable
+Jurassic-2 Jumbo,AI21 Labs,2023-03-01,D (tokens) not recoverable
+MengziGPT-General-7B,Langboat,2023-03-01,D (tokens) not recoverable
+Kosmos-1,Microsoft,2023-03-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Hyena-3-slim,"Stanford University,University of Montreal / Université de Montréal,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms)",2023-02-21,D (tokens) not recoverable
+Hyena 1.3B,"Stanford University,University of Montreal / Université de Montréal,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms)",2023-02-21,D (tokens) not recoverable
+E-SPA,"University of Oxford,DeepMind",2023-02-20,D (tokens) not recoverable
+Anthropic LM 175B,Anthropic,2023-02-15,D (tokens) not recoverable
+ProteinDT,"University of California (UC) Berkeley,California Institute of Technology,University of Toronto,University of Wisconsin Madison,Texas A&M,Nvidia,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms)",2023-02-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+ToolFormer,Meta AI,2023-02-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+CD-GraB (WT103),Cornell University,2023-02-02,D (tokens) not recoverable
+CD-GraB (WT2),Cornell University,2023-02-02,N missing
+Flan T5-XXL + BLIP-2,Salesforce Research,2023-01-30,derived model (fine-tune / continued pretraining / post-training of a base model)
+BLIP-2 (Q-Former),Salesforce Research,2023-01-30,multimodal domain (D includes non-text tokens)
+GPT-2+Active-SGD (WT2),University of Montreal / Université de Montréal,2023-01-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+mini-GPT-2+Active-AdamW,HEC Montreal,2023-01-24,N missing
+Operator,OpenAI,2023-01-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+SantaCoder,"Hugging Face,ServiceNow,Massachusetts Institute of Technology (MIT),Wellesley College,Saama,EleutherAI,Huawei Noah's Ark Lab,Carnegie Mellon University (CMU)",2023-01-09,D (tokens) not recoverable
+SparseOPT-175B,"Institute of Science and Technology Austria (ISTA),Neural Magic",2023-01-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+SparseOPT-66B,Institute of Science and Technology Austria (ISTA),2023-01-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+SparseOPT-13B,Institute of Science and Technology Austria (ISTA),2023-01-02,D (tokens) not recoverable
+SparseOPT-30B,Institute of Science and Technology Austria (ISTA),2023-01-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+Hybrid H3-2.7B,"Stanford University,University at Buffalo",2022-12-28,"implausible: epochs = 509.02, D/N = 75410"
+Hybrid H3-125M,"Stanford University,University at Buffalo",2022-12-28,D (tokens) not recoverable
+Hybrid H3-355M,"Stanford University,University at Buffalo",2022-12-28,D (tokens) not recoverable
+OPT-IML (175B),Meta AI,2022-12-22,derived model (fine-tune / continued pretraining / post-training of a base model)
+text-embedding-ada-002,OpenAI,2022-12-15,N missing
+Transformer-XL + FWL,Google Research,2022-12-05,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Vega v2,"Wuhan University,JD Explore Academy,Shanghai AI Lab,Nanyang Technological University,Washington University in St Louis,Chongqing University of Posts and Telecommunications,University of Sydney",2022-12-04,manual: encoder (SuperGLUE model)
+Transformer + GFM,Nanjing University,2022-12-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-3.5 (davinci-003),OpenAI,2022-11-28,N missing
+Fusion in Encoder,Samsung,2022-11-18,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Galactica,Meta AI,2022-11-16,multimodal domain (D includes non-text tokens)
+Luminous Sparse,"Aleph Alpha,Graphcore",2022-11-16,D (tokens) not recoverable
+AltCLIP_M9,Beijing Academy of Artificial Intelligence / BAAI,2022-11-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Mogrifier RLSTM (WT2),DeepMind,2022-11-03,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Mogrifier RLSTM (PTB),DeepMind,2022-11-03,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+BLOOMZ-176B,Hugging Face,2022-11-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+mT0-13B,"Hugging Face,BigScience",2022-11-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Transformer-XL + PowerSGD + L-Greco,"Institute of Science and Technology Austria (ISTA),Neural Magic",2022-10-31,N missing
+retrieval-quality-kNN-LMs,University of Massachusetts Amherst,2022-10-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+ADP-FAIRSEQ + NGRAMRES,"Nara Institute of Science and Technology,Chinese University of Hong Kong (CUHK),Tsinghua University",2022-10-26,derived model (fine-tune / continued pretraining / post-training of a base model)
+XY-LENTXL,Microsoft,2022-10-26,manual: encoder (multilingual XLM-E)
+Verbatim Memory Transformer (182M),"Johns Hopkins University,New York University (NYU)",2022-10-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Verbatim Memory Transformer (108M),"Johns Hopkins University,New York University (NYU)",2022-10-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Tk-Instruct,"University of Washington,Arizona State University,Allen Institute for AI",2022-10-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+U-PaLM (540B),Google,2022-10-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+LMSI-Palm,"Google,University of Illinois Urbana-Champaign (UIUC)",2022-10-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Flan-PaLM 540B,Google,2022-10-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Flan-T5 11B,Google,2022-10-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-2 + Progressive LRD,"Huawei,Huawei Noah's Ark Lab",2022-10-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+Instruct-GPT + Mind's Eye,"Google,Dartmouth College",2022-10-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+TPM-LVD,University of California Los Angeles (UCLA),2022-10-10,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Decaying Fast Weights Transformer (WT-103),Jenni,2022-10-09,derived model (fine-tune / continued pretraining / post-training of a base model)
+VRNS-RNN-3-3-5,University of Notre Dame,2022-10-04,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+NMST+GPT-2,New York University (NYU),2022-10-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Sparrow,DeepMind,2022-09-28,derived model (fine-tune / continued pretraining / post-training of a base model)
+PaLI,Google,2022-09-14,multimodal domain (D includes non-text tokens)
+ACT-1,,2022-09-14,N missing
+BEIT-3,Microsoft,2022-08-22,multimodal domain (D includes non-text tokens)
+BlenderBot 3,"McGill University,Meta AI,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms)",2022-08-10,derived model (fine-tune / continued pretraining / post-training of a base model)
+SGPT BE 5.8B,Peking University,2022-08-05,derived model (fine-tune / continued pretraining / post-training of a base model)
+AlexaTM 20B,Amazon,2022-08-02,encoder-decoder or dialogue seq2seq
+GPT-NeoX-Japanese,Abeja,2022-07-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+YuYan 11B,"Hong Kong Baptist University,NetEase",2022-07-15,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Transformer-XL + RMT,"Moscow Institute of Physics and Technology,AIRI Artificial Intelligence Research Institute",2022-07-14,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Delphi,"Allen Institute for AI,University of Washington",2022-07-12,derived model (fine-tune / continued pretraining / post-training of a base model)
+NLLB,Meta AI,2022-07-06,encoder-decoder or dialogue seq2seq
+CodeT5-large,Salesforce,2022-07-05,encoder-decoder or dialogue seq2seq
+WebGPT,OpenAI,2022-07-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+Drahim PFM AI,Drahim,2022-06-30,N missing
+Minerva (540B),Google,2022-06-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+CodeWhisperer,Amazon,2022-06-24,N missing
+OPT-2.7B (finetuned on PTB),Meta AI,2022-06-21,D (tokens) not recoverable
+OPT-1.3B (finetuned on PTB),Meta AI,2022-06-21,D (tokens) not recoverable
+OPT-2.7B (finetuned on WT2),Meta AI,2022-06-21,D (tokens) not recoverable
+OPT-125M (finetuned),Meta AI,2022-06-21,D (tokens) not recoverable
+OPT-125M (finetuned on PTB),Meta AI,2022-06-21,D (tokens) not recoverable
+OPT-1.3B (finetuned),Meta AI,2022-06-21,D (tokens) not recoverable
+Unified-IO (XL),"Allen Institute for AI,University of Washington",2022-06-17,multimodal domain (D includes non-text tokens)
+MetaLM,Microsoft Research,2022-06-13,N missing
+EGRU (WT2),"Ruhr University Bochum,Technische Universität Dresden,University of London",2022-06-13,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+EGRU (PTB),"Ruhr University Bochum,Technische Universität Dresden,University of London",2022-06-13,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LIMoE-H/14,Google,2022-06-06,multimodal domain (D includes non-text tokens)
+DITTO,"Tsinghua University,Apple,Westlake University,Chinese University of Hong Kong (CUHK)",2022-06-06,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+B2T connection (16L),"LINE Corporation,Tohoku University",2022-06-01,N missing
+TRIMELMext (247M),Princeton University,2022-05-25,"implausible: epochs = 204.72, D/N = 17477"
+TRIMELMext (7M),Princeton University,2022-05-25,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+TRIMELMlong (150M),Princeton University,2022-05-25,"implausible: epochs = 139.81, D/N = 6711"
+LSTM+GraB,Cornell University,2022-05-22,N missing
+SimCSE,"Princeton University,Tsinghua University",2022-05-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Gato,DeepMind,2022-05-12,multimodal domain (D includes non-text tokens)
+UL2,"Google Research,Google Brain",2022-05-10,encoder-decoder or dialogue seq2seq
+DeBERTaV3large + KEAR,Microsoft,2022-05-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+Jurassic-X,AI21 Labs,2022-05-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+Flamingo,DeepMind,2022-04-29,derived model (fine-tune / continued pretraining / post-training of a base model)
+LaMemo,"Tsinghua University,NetEase,Oppo Mobile Telecommunications",2022-04-15,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Anthropic LM 52B,Anthropic,2022-04-12,D (tokens) not recoverable
+VLM-4,LightOn,2022-04-12,N missing
+Monarch-GPT-2-Medium,"Stanford University,University at Buffalo,University of Michigan",2022-04-01,"implausible: epochs = 110.0, D/N = 2669"
+Monarch-GPT-2-Small,"Stanford University,University at Buffalo,University of Michigan",2022-04-01,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+BaGuaLu,"Tsinghua University,Zhejiang Lab,Beijing Academy of Artificial Intelligence / BAAI,Alibaba",2022-03-28,multimodal domain (D includes non-text tokens)
+MemSizer (language modeling),"Meta AI,Chinese University of Hong Kong (CUHK)",2022-03-23,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+"Segatron-XL large, M=384 + HCP","Microsoft Research,University of Waterloo",2022-03-21,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Transformer Large + HCP,"University of Waterloo,Microsoft Research",2022-03-21,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+"Segatron -XL base, M=150 + HCP","Microsoft Research,University of Waterloo",2022-03-21,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+GPT-3.5 (davinci-002),OpenAI,2022-03-15,N missing
+DeepNet,Microsoft Research,2022-03-01,manual: translation encoder-decoder
+ST-MoE,"Google,Google Brain,Google Research",2022-02-17,encoder-decoder or dialogue seq2seq
+InstructGPT 175B,OpenAI,2022-01-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+InstructGPT 6B,OpenAI,2022-01-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+InstructGPT 1.3B,OpenAI,2022-01-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+InstructGPT 350M,OpenAI,2022-01-27,derived model (fine-tune / continued pretraining / post-training of a base model)
+SPALM + RelationLM,"DeepMind,University of Oxford",2022-01-24,D (tokens) not recoverable
+Transformer-XL + RelationLM,"DeepMind,University of Oxford",2022-01-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+OntoProtein,Zhejiang University (ZJU),2022-01-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+data2vec (language),Meta AI,2022-01-20,multimodal / non-text model
+Japanese-GPT-1B,rinna,2022-01-19,D (tokens) not recoverable
+ERNIE-ViLG,Baidu,2021-12-31,multimodal domain (D includes non-text tokens)
+ERNIE 3.0 Titan,"Baidu,Peng Cheng Laboratory",2021-12-23,encoder (masked LM / embedding model)
+MoE-1.1T,Meta AI,2021-12-20,MoE with unknown active parameters
+HSO,Toyota Technological Institute at Chicago,2021-12-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+Contriever,"Meta AI,University College London (UCL),PSL University,Université Grenoble Alpes",2021-12-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+LongT5,Google Research,2021-12-15,encoder-decoder or dialogue seq2seq
+EXAONE 1.0,LG,2021-12-14,multimodal domain (D includes non-text tokens)
+Engine-XL(NE),Boston University,2021-12-11,derived model (fine-tune / continued pretraining / post-training of a base model)
+Engine-Base (NE),Boston University,2021-12-11,multimodal domain (D includes non-text tokens)
+Engine-Medium(NE),Boston University,2021-12-11,multimodal domain (D includes non-text tokens)
+Gopher (7.1B),DeepMind,2021-12-08,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+T-NLRv5 XXL,Microsoft,2021-12-03,D (tokens) not recoverable
+GPT-2-Medium+Pixelfly,"Stanford University,SambaNova Systems, Inc,Peking University,Adobe,University at Buffalo",2021-11-30,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+GPT-2-Small+Pixelfly,"Stanford University,SambaNova Systems, Inc,Peking University,Adobe,University at Buffalo",2021-11-30,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Quantized ADMM,"Chinese University of Hong Kong (CUHK),Microsoft",2021-11-29,N missing
+Transformer LM + MinSen,Chinese University of Hong Kong (CUHK),2021-11-29,N missing
+NÜWA,"Microsoft Research,Peking University",2021-11-24,multimodal domain (D includes non-text tokens)
+DeBERTaV3large,Microsoft Research,2021-11-18,encoder (masked LM / embedding model)
+A.X (Adot) 18B,SK Telecom,2021-11-15,multimodal domain (D includes non-text tokens)
+KoGPT,Kakao,2021-11-12,D (tokens) not recoverable
+GPT-2 (AMPS),University of California (UC) Berkeley,2021-11-08,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT2+CoreLM+Fine-Tuning,Aristotle University of Thessaloniki,2021-11-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+CodeT5-base,"Salesforce,Nanyang Technological University",2021-11-01,encoder-decoder or dialogue seq2seq
+S4,Stanford University,2021-10-31,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Scatterbrain,"Stanford University,Adobe,University at Buffalo",2021-10-28,N missing
+Cloob,"Johannes Kepler University,HERE Technologies,Institute of Advanced Research in Artificial Intelligence",2021-10-21,N missing
+WD+LR+M,"University of Cambridge,Alan Turing Institute",2021-10-20,N missing
+base LM+GNN+kNN,"Shannon.AI,Nanjing University,Nanyang Technological University,Zhejiang University (ZJU)",2021-10-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+base LM+GNN (WT103),"Shannon.AI,Nanjing University,Nanyang Technological University,Zhejiang University (ZJU)",2021-10-17,derived model (fine-tune / continued pretraining / post-training of a base model)
+PAGnol-XL,"LightOn,Laboratoire de Physique de l'Ecole Normale (LPENS),INRIA",2021-10-16,D (tokens) not recoverable
+GPT-2 (fine-tuned with HYDRA),University of California San Diego,2021-10-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+MGK 4 heads (medium),"FPT Software AI Center,University of California Los Angeles (UCLA),VinUniversity,Deezer Research,Rice University,University of Texas at Austin",2021-10-16,"implausible: epochs = 120.0, D/N = 183"
+MGK 8 heads (small),"FPT Software AI Center,University of California Los Angeles (UCLA),VinUniversity,Deezer Research,Rice University,University of Texas at Austin",2021-10-16,D (tokens) not recoverable
+T0-XXL,"Hugging Face,Brown University",2021-10-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+KnGPT2,"Huawei Noah's Ark Lab,McGill University",2021-10-15,derived model (fine-tune / continued pretraining / post-training of a base model)
+TOME,"University of Southern California,Google",2021-10-12,"implausible: epochs = 157.2864, D/N = 3575"
+M6-10T,Alibaba,2021-10-08,multimodal domain (D includes non-text tokens)
+Turing ULRv5,Microsoft,2021-09-28,D (tokens) not recoverable
+PLATO-XL,Baidu,2021-09-20,encoder-decoder or dialogue seq2seq
+PermuteFormer,Peking University,2021-09-06,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+RNS-RNN,University of Notre Dame,2021-09-05,D (tokens) not recoverable
+FLAN 137B,Google Research,2021-09-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+$\infty$-former (SM),"Universidade de Lisboa (ULisboa),DeepMind",2021-09-01,derived model (fine-tune / continued pretraining / post-training of a base model)
+"ALiBi (L=3072, Lvalid = 3072)","University of Washington,Facebook AI Research,Allen Institute for AI",2021-08-27,D (tokens) not recoverable
+XLMR-XXL,Facebook AI Research,2021-08-17,encoder (masked LM / embedding model)
+Zidong Taichu,"Chinese Academy of Sciences,Wuhan AI Computing Center",2021-08-11,multimodal domain (D includes non-text tokens)
+FMMformer (2-kernel fast weight + Band20),"University of California Los Angeles (UCLA),University of Utah",2021-08-05,D (tokens) not recoverable
+FNetAR Medium,X-Mechanics,2021-07-22,D (tokens) not recoverable
+Codex,OpenAI,2021-07-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+ERNIE 3.0,Baidu,2021-07-05,encoder (masked LM / embedding model)
+DEQ-Transformer (Post-LN) + Jacobian Regularisation,"Carnegie Mellon University (CMU),Intel Labs",2021-06-28,"implausible: epochs = 23.0, D/N = 503"
+Adaptive Input Transformer + RD,"Microsoft Research Asia,Soochow University",2021-06-28,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+CPM-2,"Tsinghua University,Beijing Academy of Artificial Intelligence / BAAI",2021-06-24,encoder-decoder or dialogue seq2seq
+ALIGN,Google Research,2021-06-11,multimodal domain (D includes non-text tokens)
+Delta RNN (+ full context),"IDSIA,SUPSI,King Abdullah University of Science and Technology (KAUST)",2021-06-11,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+DeBERTa,Microsoft,2021-06-10,encoder (masked LM / embedding model)
+AFP+FPI (PTB),University of Sheffield,2021-06-04,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+AFP+FPI (WT2),University of Sheffield,2021-06-04,D (tokens) not recoverable
+GPT2-Large+LHOPT,OpenAI,2021-06-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+Wu Dao 2.0,Beijing Academy of Artificial Intelligence / BAAI,2021-05-31,multimodal domain (D includes non-text tokens)
+CODA,"The University of Hong Kong,Sun Yat-sen University,Shanghai AI Lab",2021-05-31,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+ByT5-XXL,"Google,Google Research",2021-05-28,encoder-decoder or dialogue seq2seq
+ConSERT,"Meituan University,Beijing University of Posts and Telecommunications",2021-05-25,encoder (masked LM / embedding model)
+Multitask Unified Model (MUM),Google,2021-05-18,derived model (fine-tune / continued pretraining / post-training of a base model)
+Fairseq + UID: variance,"Google AI,ETH Zurich,University of Cambridge",2021-05-15,N missing
+Transformer-XL + SIS,INRIA,2021-05-03,derived model (fine-tune / continued pretraining / post-training of a base model)
+SPALM + kNN,DeepMind,2021-04-26,N missing
+DiffQ Transformer (16L),Meta AI,2021-04-20,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+PLUG,Alibaba,2021-04-19,encoder-decoder or dialogue seq2seq
+Megatron-LM (1T),"Microsoft Research,Nvidia,Stanford University",2021-04-09,D (tokens) not recoverable
+Transformer-C,University of Massachusetts Amherst,2021-04-08,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+TransfoRNN(d=1024)(2-layer) (WT2),Lenovo Research,2021-04-04,D (tokens) not recoverable
+TransfoRNN(d=1024)(2-layer) (PTB),Lenovo Research,2021-04-04,D (tokens) not recoverable
+T2R + Random Init,"University of Washington,Microsoft,DeepMind,Allen Institute for AI",2021-03-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+T2R 75% + Pretrain (WT-103),"University of Washington,Microsoft,DeepMind",2021-03-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+T2R + Pretrain,"University of Washington,Microsoft,DeepMind",2021-03-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Unicorn,Allen Institute for AI,2021-03-24,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-Neo-2.7B (finetuned),EleutherAI,2021-03-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-Neo-2.7B (finetuned on PTB),EleutherAI,2021-03-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-Neo-125M,EleutherAI,2021-03-21,D (tokens) not recoverable
+GPT-Neo-1.3B,EleutherAI,2021-03-21,D (tokens) not recoverable
+GPT-Neo-125M (finetuned),EleutherAI,2021-03-21,derived model (fine-tune / continued pretraining / post-training of a base model)
+GPT-Neo-1.3B (finetuned),EleutherAI,2021-03-21,D (tokens) not recoverable
+GLM-10B-bidirectional,"Tsinghua University,Beijing Academy of Artificial Intelligence / BAAI,Massachusetts Institute of Technology (MIT)",2021-03-18,D (tokens) not recoverable
+GLM-10B-unidirectional,"Tsinghua University,Beijing Academy of Artificial Intelligence / BAAI,Massachusetts Institute of Technology (MIT)",2021-03-18,D (tokens) not recoverable
+AraELECTRA,American University of Beirut,2021-03-07,encoder (masked LM / embedding model)
+M6-T,Alibaba,2021-03-05,multimodal domain (D includes non-text tokens)
+Generative BST,Facebook AI Research,2021-03-05,encoder-decoder or dialogue seq2seq
+RFA-GATE-Gaussian-Stateful Big,"University of Washington,DeepMind,Allen Institute for AI,Hebrew University of Jerusalem,The University of Hong Kong",2021-03-03,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Wu Dao - Wen Hui,Beijing Academy of Artificial Intelligence / BAAI,2021-03-01,multimodal domain (D includes non-text tokens)
+Wu Dao - Wen Lan,Beijing Academy of Artificial Intelligence / BAAI,2021-03-01,multimodal domain (D includes non-text tokens)
+M6-10B,"Tsinghua University,Alibaba",2021-03-01,multimodal domain (D includes non-text tokens)
+M6-100B,"Tsinghua University,Alibaba",2021-03-01,multimodal domain (D includes non-text tokens)
+SRU++ Large,ASAPP,2021-02-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+SRU++ Base,ASAPP,2021-02-24,D (tokens) not recoverable
+SRU++ Large only 2 attention layers (k=5) (WT103),ASAPP,2021-02-24,D (tokens) not recoverable
+Linear Transformer (large),IDSIA,2021-02-22,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Linear Transformer (small),"IDSIA,SUPSI",2021-02-22,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Selfish-RNN (SNT-ASGD) Stacked LSTMs,"Eindhoven University of Technology,University of Twente",2021-01-22,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Selfish-RNN (ON-LSTM),Eindhoven University of Technology,2021-01-22,D (tokens) not recoverable
+Selfish-RNN (SNT-ASGD)RHNs,Eindhoven University of Technology,2021-01-22,D (tokens) not recoverable
+Selfish-RNN (AWD-LSTM-MoS),Eindhoven University of Technology,2021-01-22,D (tokens) not recoverable
+Switch,Google,2021-01-11,encoder-decoder or dialogue seq2seq
+Wu Dao - Wen Yuan,Beijing Academy of Artificial Intelligence / BAAI,2021-01-11,D (tokens) not recoverable
+CLIP (ViT L/14@336px),OpenAI,2021-01-05,multimodal domain (D includes non-text tokens)
+CLIP (ResNet-50),OpenAI,2021-01-05,multimodal domain (D includes non-text tokens)
+Transformer-XL + AutoDropout (WT2),"Google Brain,Carnegie Mellon University (CMU)",2021-01-05,D (tokens) not recoverable
+Transformer-XL + AutoDropout (PTB),Google Research,2021-01-05,D (tokens) not recoverable
+Subformer (122M),"National Institute of Advanced Industrial Science and Technology (AIST),University of Tokyo",2021-01-01,"implausible: epochs = 70.29, D/N = 58"
+Subformer (83M),"University of Tokyo,National Institute of Advanced Industrial Science and Technology (AIST)",2021-01-01,"implausible: epochs = 70.29, D/N = 85"
+Subformer (96M),"University of Tokyo,National Institute of Advanced Industrial Science and Technology (AIST)",2021-01-01,"implausible: epochs = 70.29, D/N = 73"
+Shortformer,"University of Washington,Facebook AI Research,Allen Institute for AI",2020-12-31,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+ERNIE-Doc (247M),Baidu,2020-12-31,encoder (masked LM / embedding model)
+"ERNIE-Doc Base (151M, WT103)",Baidu,2020-12-31,encoder (masked LM / embedding model)
+CT-MoS (WT2),"Google,National Tsing Hua University",2020-12-25,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+CT-MoS + DynamicEval (WT2),"National Tsing Hua University,Google",2020-12-25,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+CT-MoS (PTB),"National Tsing Hua University,Google",2020-12-25,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+CT-MoS + DynamicEval (PTB),"National Tsing Hua University,Google",2020-12-25,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+DensePhrases,"Korea University,Princeton University",2020-12-23,N missing
+RaSoR,"Korea University,Princeton University",2020-12-23,N missing
+KEPLER,"Tsinghua University,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms),HEC,CIFAR AI Research,Princeton University,University of Montreal / Université de Montréal",2020-11-23,derived model (fine-tune / continued pretraining / post-training of a base model)
+AWD-FWM (WT2),"IDSIA,Microsoft Research",2020-11-16,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+AWD-FWM (PTB),"IDSIA,Microsoft Research",2020-11-16,D (tokens) not recoverable
+CryptoGRU,Indiana University Bloomington,2020-10-22,N missing
+GBERT-Large,"deepset,Bayerische Staatsbibliothek Muenchen",2020-10-21,encoder (masked LM / embedding model)
+German ELECTRA Large,"deepset,Bayerische Staatsbibliothek Muenchen",2020-10-21,encoder (masked LM / embedding model)
+mT5-XXL,"Google,Google Research",2020-10-20,encoder-decoder or dialogue seq2seq
+TinyBert,"Huazhong University of Science and Technology,Huawei Noah's Ark Lab,Huawei",2020-10-16,encoder (masked LM / embedding model)
+Memformer (4 encoder + 16 decoder),"UC Davis,Westlake University,Facebook AI",2020-10-14,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LUKE,"University of Washington,National Institute of Informatics",2020-10-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+Frage-AWD-LSTM-MemoryAug-NeuralCache (WT2),"Johns Hopkins University,Xiaomi Corp",2020-09-29,D (tokens) not recoverable
+Frage-AWD-LSTM-MemoryAug-NeuralCache (PTB),"Johns Hopkins University,Xiaomi Corp",2020-09-29,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LSTM-MemoryAug (WT2),"Johns Hopkins University,Xiaomi Corp",2020-09-29,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LSTM-MemoryAug (PTB),"Johns Hopkins University,Xiaomi Corp",2020-09-29,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Integer Transformer,"Northeastern University (China),NiuTrans Research,Chinese Academy of Sciences",2020-09-17,D (tokens) not recoverable
+PAR Transformer Large,Nvidia,2020-09-09,N missing
+Transformer+Recurrent Windows of Context,"Toyota Technological Institute at Chicago,University of Chicago",2020-08-16,derived model (fine-tune / continued pretraining / post-training of a base model)
+ERNIE-GEN (large),Baidu,2020-08-06,encoder (masked LM / embedding model)
+DeLighT,"University of Washington,Allen Institute for AI,Facebook AI Research",2020-08-03,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+mBART-50,Facebook AI,2020-08-02,encoder-decoder or dialogue seq2seq
+Grown to Prune Two-layer stacked LSTM,"University of Chicago,Toyota Technological Institute at Chicago",2020-07-30,N missing
+TransformerXL-LayerFusion-CA,"University of Liverpool,University of Southern California",2020-07-29,N missing
+GPT2-LayerFusion-WS,"University of Liverpool,University of Southern California",2020-07-29,N missing
+Hopfield Networks (2020),"Johannes Kepler University Linz,Institute of Advanced Research in Artificial Intelligence,University of Oslo",2020-07-16,N missing
+1-layer-LSTM,Harvard University,2020-07-13,D (tokens) not recoverable
+Transformer-XL+AdamP,"Naver AI Lab,Naver Clova",2020-06-15,D (tokens) not recoverable
+Transformer-XL+WN+AdamP,"Naver AI Lab,Naver Clova",2020-06-15,D (tokens) not recoverable
+SqueezeBERT,University of California (UC) Berkeley,2020-06-10,encoder (masked LM / embedding model)
+6-Layer-Tensor-Transformer+AdaHessian,"NERSC, Lawrence Berkeley National Laboratory,University of California (UC) Berkeley",2020-06-01,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+3-Layer-Tensor-Transformer+AdaHessian,"University of California (UC) Berkeley,NERSC, Lawrence Berkeley National Laboratory",2020-06-01,N missing
+Retrieval-Augmented Generator,"Facebook,New York University (NYU),University College London (UCL)",2020-05-22,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+rTop-k(distributed setting),Stanford University,2020-05-21,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Specter,"Allen Institute for AI,University of Washington",2020-05-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+Decay RNN,Indian Institute of Technology Delhi,2020-05-17,D (tokens) not recoverable
+ONLSTM-SYD,"Westlake University,Institute for Advanced Study,McGill University,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms),CIFAR AI Research,University of Montreal / Université de Montréal",2020-05-12,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+NAS+ESS (156M),"Northeastern University (China),Chinese Academy of Sciences,NiuTrans Research,Kingsoft",2020-05-06,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+NAS+ESS (23M),"Northeastern University (China),NiuTrans Research,Kingsoft",2020-05-06,D (tokens) not recoverable
+UnifiedQA,"Allen Institute for AI,University of Washington",2020-05-02,derived model (fine-tune / continued pretraining / post-training of a base model)
+"Segatron XL large, M=384","University of Waterloo,Peking University,RSVP.ai",2020-04-30,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+"Segatron XL base, M=384","University of Waterloo,RSVP.ai,Peking University",2020-04-30,D (tokens) not recoverable
+MobileBERT,"Carnegie Mellon University (CMU),Google Brain",2020-04-06,encoder (masked LM / embedding model)
+DiffStk-MRNN,"Pennsylvania State University,Rochester Institute of Technology",2020-04-04,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+AraBERT,American University of Beirut,2020-03-30,encoder (masked LM / embedding model)
+AraBERT LArge v2,American University of Beirut,2020-03-30,encoder (masked LM / embedding model)
+ELECTRA,"Stanford University,Google,Google Brain",2020-03-23,encoder (masked LM / embedding model)
+Tensor-Transformer(1core)+PN (WT103),University of California (UC) Berkeley,2020-03-17,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Tensor-Transformer(1core)+PN (PTB),University of California (UC) Berkeley,2020-03-17,N missing
+Routing Transformer (WT-103),Google Research,2020-03-12,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Local Transformer (WT103),Google Research,2020-03-12,N missing
+TransformerXL + spectrum control,"University of California Los Angeles (UCLA),JD.com",2020-03-11,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LSTM-3-layer+Gadam,"University of Oxford,University of Bristol,University of Cambridge",2020-03-02,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+TCAN (WT2),"Nanjing University,Ant Group",2020-02-28,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+TCAN (PTB),Ant Group,2020-02-28,D (tokens) not recoverable
+Feedback Transformer,"LORIA,University of Lorraine,Facebook AI Research",2020-02-21,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Turing-NLG,Microsoft,2020-02-13,MoE with unknown active parameters
+ALBERT-xxlarge,"Toyota Technological Institute at Chicago,Google",2020-02-09,encoder (masked LM / embedding model)
+Perceiver IO (optical flow),DeepMind,2020-02-08,multimodal domain (D includes non-text tokens)
+TaLK Convolution,Carleton University,2020-02-08,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Theseus 6/768,"University of California San Diego,Beihang University,Microsoft",2020-02-07,derived model (fine-tune / continued pretraining / post-training of a base model)
+Meena,Google Brain,2020-01-28,encoder-decoder or dialogue seq2seq
+"MicroNet (Adaptive, Cache)","Massachusetts Institute of Technology (MIT),Harvard University",2020-01-01,D (tokens) not recoverable
+MMLSTM (WT-103),"Beijing University of Posts and Telecommunications,University of West London",2019-12-05,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+MMLSTM (WT-2),"Beijing University of Posts and Telecommunications,University of West London",2019-12-05,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+MMLSTM (PTB),"Beijing University of Posts and Telecommunications,University of West London",2019-12-05,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+bRSM + cache,"Numenta,Incubator 491",2019-12-02,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Transformer-XL DeFINE (141M),"University of Washington,Allen Institute for AI",2019-11-27,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Transformer-XL DeFINE (107M),University of Washington,2019-11-27,D (tokens) not recoverable
+Adaptive LSTM + DeFINE,University of Washington,2019-11-27,D (tokens) not recoverable
+AWD-LSTM + DeFINE,University of Washington,2019-11-27,D (tokens) not recoverable
+Long-range sequence Compressive Transformers,DeepMind,2019-11-13,N missing
+Sandwich Transformer,"Allen Institute for AI,Facebook AI Research",2019-11-10,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+CamemBERT,"Facebook,INRIA,Sorbonne University",2019-11-10,encoder (masked LM / embedding model)
+XLM-RoBERTa,Facebook AI,2019-11-05,encoder (masked LM / embedding model)
+Base LM + kNN LM + Continuous Cache,"Stanford University,Facebook AI Research",2019-11-01,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+BART-large,Facebook AI,2019-10-29,encoder-decoder or dialogue seq2seq
+Amended-DARTS,"Tsinghua University,Huawei,Tongji University",2019-10-25,D (tokens) not recoverable
+T5-3B,Google,2019-10-23,encoder-decoder or dialogue seq2seq
+T5-11B,Google,2019-10-23,encoder-decoder or dialogue seq2seq
+LSTM(large)+Sememe+cell,"Tsinghua University,Beijing University of Posts and Telecommunications,Huawei Noah's Ark Lab",2019-10-20,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LSTM(medium)+Sememe+cell (WT2),"Tsinghua University,Beijing University of Posts and Telecommunications,Huawei Noah's Ark Lab",2019-10-20,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+dense-IndRNN+dynamic eval,"Shandong University,University of Wollongong",2019-10-11,D (tokens) not recoverable
+M4-50B,Google,2019-10-11,MoE with unknown active parameters
+DistilBERT,Hugging Face,2019-10-02,encoder (masked LM / embedding model)
+ALBERT,"Toyota Technological Institute at Chicago,Google Research",2019-09-26,encoder (masked LM / embedding model)
+Adaptive Inputs + LayerDrop,"Facebook AI Research,LORIA",2019-09-25,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Transformer-XL+AdamGapAware(GA),Technion - Israel Institute of Technology,2019-09-24,D (tokens) not recoverable
+Alleviated TOI 10 (WT103),"Ecole Polytechnique F´ed´erale de Lausanne (EPFL),Swisscom,University of Freiburg",2019-09-18,N missing
+Alleviated TOI 10 (PTB),"Ecole Polytechnique F´ed´erale de Lausanne (EPFL),Swisscom,University of Freiburg",2019-09-18,N missing
+Alleviated TOI 10 (WT2),"Ecole Polytechnique F´ed´erale de Lausanne (EPFL),Swisscom,University of Freiburg",2019-09-18,N missing
+Megatron-BERT,Nvidia,2019-09-17,encoder (masked LM / embedding model)
+Xiaoice,Microsoft Research Asia,2019-09-14,N missing
+"Mogrifier (d2, MoS2, MC) + dynamic eval","DeepMind,University of Oxford",2019-09-04,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+"Mogrifier (d2, MC) + dynamic eval",DeepMind,2019-09-04,D (tokens) not recoverable
+"DEQ-Transformer (Medium, Adaptive Embedding)","Carnegie Mellon University (CMU),Intel Labs",2019-09-03,encoder (masked LM / embedding model)
+DEQ-TrellisNet (PTB),"Carnegie Mellon University (CMU),Intel Labs",2019-09-03,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+DEQ-TrellisNet (WT-103),"Carnegie Mellon University (CMU),Intel Labs",2019-09-03,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LSTM-Large+Behaviorial-Gating,University of Southern California,2019-08-31,D (tokens) not recoverable
+AWD-LSTM+Behaviorial-Gating,University of Southern California,2019-08-31,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+LSTM-Medium+Behaviorial-Gating (PTB),University of Southern California,2019-08-31,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+L_UL-seq,"New York University (NYU),Facebook AI Research,CIFAR AI Research",2019-08-12,D (tokens) not recoverable
+EN^2AS with performance reward,"Beijing Institute of Technology,University of Technology Sydney,Monash University",2019-07-22,D (tokens) not recoverable
+LSTM+Adam+Lookahead,University of Toronto,2019-07-19,D (tokens) not recoverable
+RNN + char4-MS-vec,"NTT Communication Science Laboratories,Tohoku University",2019-07-17,D (tokens) not recoverable
+RNN + char3-MS-vec,"NTT Communication Science Laboratories,Tohoku University",2019-07-16,D (tokens) not recoverable
+RNN Baseline,"Massachusetts Institute of Technology (MIT),Rey Juan Carlos University",2019-07-14,N missing
+R-Transformer,"Michigan State University,TAL Education Group (Xueersi)",2019-07-12,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+All-attention network + adaptive span,Facebook AI Research,2019-07-02,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+RoBERTa Large,"Facebook,University of Washington",2019-07-01,encoder (masked LM / embedding model)
+RoBERTa Base,"Facebook,University of Washington",2019-07-01,encoder (masked LM / embedding model)
+Tensorized Transformer (257M),"Tianjin University,Microsoft Research Asia,Beijing Institute of Technology",2019-06-24,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Tensorized Transformer (OBW),"Tianjin University,Microsoft Research Asia,Beijing Institute of Technology",2019-06-24,D (tokens) not recoverable
+Tensorized Transformer (PTB),"Tianjin University,Microsoft Research Asia,Beijing Institute of Technology",2019-06-24,D (tokens) not recoverable
+Tensorized Transformer (large PTB),"Tianjin University,Microsoft Research Asia,Beijing Institute of Technology",2019-06-24,N missing
+Tensorized Transformer (W103),"Tianjin University,Microsoft Research Asia,Beijing Institute of Technology",2019-06-24,D (tokens) not recoverable
+Stacked-LSTM+PruningNo,"University of Electronic Science and Technology of China,Chinese University of Hong Kong (CUHK),Peng Cheng Laboratory",2019-06-17,D (tokens) not recoverable
+Char-CNN-BiLSTM,Capital One,2019-06-13,N missing
+RNN + char2-MS-vec,"NTT Communication Science Laboratories,Tohoku University",2019-06-13,D (tokens) not recoverable
+AWD-LSTM + MoS + Partial Shuffled,University of Texas at Austin,2019-06-10,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+AdvSoft + 4 layer QRNN + dynamic evaluation (WT103),University of Texas at Austin,2019-06-10,N missing
+Adversarial + AWD-LSTM-MoS + partial shuffled,University of Texas at Austin,2019-06-10,N missing
+4 layer QRNN + dynamic evaluation,University of Texas at Austin,2019-06-10,N missing
+Transformer-XL Large + Phrase Induction,"Massachusetts Institute of Technology (MIT),University of Illinois Urbana-Champaign (UIUC)",2019-06-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+AWD-LSTM + Phrase Induction + finetuning (PTB),"Massachusetts Institute of Technology (MIT),University of Illinois Urbana-Champaign (UIUC)",2019-06-04,D (tokens) not recoverable
+XLNet,"Carnegie Mellon University (CMU),Google Brain",2019-06-01,encoder (masked LM / embedding model)
+XLM,Facebook,2019-06-01,D (tokens) not recoverable
+RSM,Cerenaut,2019-05-28,N missing
+AWD-LSTM-DRILL + dynamic evaluation† (WT2),IDIAP,2019-05-14,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+AWD-LSTM-DRILL + dynamic evaluation† (PTB),IDIAP,2019-05-14,D (tokens) not recoverable
+Neuro-Symbolic Concept Learner,"Massachusetts Institute of Technology (MIT),Tsinghua University,MIT-IBM Watson AI Lab,DeepMind",2019-04-26,N missing
+Sparse Transformer (Enwik8),OpenAI,2019-04-23,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+BERT-Large-CAS (PTB+WT2+WT103),Amazon,2019-04-20,encoder (masked LM / embedding model)
+BERT-Large-CAS (WT103),Amazon,2019-04-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+BERT-Large-CAS (WT2),Amazon,2019-04-20,derived model (fine-tune / continued pretraining / post-training of a base model)
+SpecAugment,Google Brain,2019-04-18,N missing
+LTM,Murdoch University,2019-04-18,N missing
+Transformer-XL + RMS dynamic eval,University of Edinburgh,2019-04-17,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+True-Regularization+Finetune,"Mobvoi,Williams College",2019-04-08,D (tokens) not recoverable
+True-Regularization+Finetune+Dynamic-Eval,"Mobvoi,Williams College",2019-04-08,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+WeNet (WT2),Amazon,2019-04-08,D (tokens) not recoverable
+WeNet (PTB),Amazon,2019-04-08,"implausible: epochs = 6000.0, D/N = 1112"
+WeNet (Penn Treebank),Amazon,2019-04-08,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Cross-lingual alignment,"Tel Aviv University,Massachusetts Institute of Technology (MIT)",2019-04-04,derived model (fine-tune / continued pretraining / post-training of a base model)
+FAIRSEQ Adaptive Inputs,"Facebook AI Research,Google Brain",2019-04-01,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+SciBERT,Allen Institute for AI,2019-03-26,encoder (masked LM / embedding model)
+DOC + Finetune∗ + Partial Shuffle (WT2),University of Washington,2019-03-11,D (tokens) not recoverable
+DOC + Finetune∗ + Partial Shuffle (PTB),University of Washington,2019-03-11,N missing
+NMT Transformer 437M,"Google,Bar-Ilan University",2019-02-28,D (tokens) not recoverable
+code2seq,"Technion - Israel Institute of Technology,Facebook AI Research",2019-02-21,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+GPT-2 (124M),OpenAI,2019-02-14,"implausible: epochs = 100.0, D/N = 8602"
+GPT-2 (774M),OpenAI,2019-02-14,"implausible: epochs = 100.0, D/N = 1378"
+GPT-2 (355M),OpenAI,2019-02-14,"implausible: epochs = 100.0, D/N = 3005"
+SDE,"Carnegie Mellon University (CMU),Google Brain,Monash University",2019-02-09,N missing
+Compress-LSTM (66M),"Samsung R&D Institute Russia,National Research University Higher School of Economics",2019-02-06,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Compress-LSTM (4.6M),"Samsung R&D Institute Russia,National Research University Higher School of Economics",2019-02-06,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+MT-DNN,Microsoft,2019-01-31,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+TSLM+MoS (WT2),"Tianjin University,Beijing Institute of Technology",2019-01-31,D (tokens) not recoverable
+TSLM+MoS (PTB),"Tianjin University,Beijing Institute of Technology",2019-01-31,N missing
+H-LSTM+wg+rcp+rcg+wp,"Princeton University,Alibaba",2019-01-30,D (tokens) not recoverable
+Transformer-XL (257M),"Carnegie Mellon University (CMU),Google Brain",2019-01-09,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Transformer-XL-ptb,"Carnegie Mellon University (CMU),Google Brain",2019-01-09,D (tokens) not recoverable
+Transformer ELMo,"Allen Institute for AI,University of Washington",2019-01-01,benchmark-scale research model (unique corpus < 5e9 tokens: WikiText/PTB/enwik8-type)
+Transformer + Average Attention Network,University of Electronic Science and Technology of China,2019-01-01,N missing
+GPipe (Transformer),Google,2018-11-16,date outside 2019-01..2026-09
+Multi-cell LSTM,University of Hyderabad,2018-11-15,date outside 2019-01..2026-09
+Fine-tuned-AWD-LSTM-DOC (fin),Samsung R&D Institute Russia,2018-11-12,date outside 2019-01..2026-09
+Discriminator-tuned LSTM,Samsung R&D Institute Russia,2018-11-12,date outside 2019-01..2026-09
+Mesh-TensorFlow Transformer 4.9B (language),Google Brain,2018-11-05,date outside 2019-01..2026-09
+Mesh-TensorFlow Transformer 2.9B (translation),Google Brain,2018-11-05,date outside 2019-01..2026-09
+MemoReader,"Samsung,Korea University",2018-10-31,date outside 2019-01..2026-09
+code2vec,"Technion - Israel Institute of Technology,Facebook AI Research",2018-10-30,date outside 2019-01..2026-09
+TrellisNet,"Carnegie Mellon University (CMU),Bosch Center for Artificial Intelligence,Intel Labs",2018-10-15,date outside 2019-01..2026-09
+TrellisNet-MoS (1.4x larger) PTB,"Carnegie Mellon University (CMU),Intel Labs,Bosch Center for Artificial Intelligence",2018-10-15,date outside 2019-01..2026-09
+BERT-Large,Google,2018-10-11,date outside 2019-01..2026-09
+Transformer (Adaptive Input Embeddings) WT103,Facebook AI Research,2018-09-28,date outside 2019-01..2026-09
+LSTM+NeuralCache,"KU Leuven,ESAT - PSI,Apple",2018-09-24,date outside 2019-01..2026-09
+"AWD-LSTM-MoS + dynamic evaluation (WT2, 2018)","Peking University,Microsoft Research Asia",2018-09-18,date outside 2019-01..2026-09
+"AWD-LSTM-MoS + dynamic evaluation (PTB, 2018)","Peking University,Microsoft Research Asia",2018-09-18,date outside 2019-01..2026-09
+Transformer + Simple Recurrent Unit,"ASAPP,Cornell University,Google,Princeton University",2018-09-17,date outside 2019-01..2026-09
+(ensemble): AWD-LSTM-DOC (fin) × 5 (WT2),"NTT Communication Science Laboratories,Tohoku University",2018-08-30,date outside 2019-01..2026-09
+(ensemble): AWD-LSTM-DOC (fin) × 5 (PTB),"NTT Communication Science Laboratories,Tohoku University",2018-08-30,date outside 2019-01..2026-09
+AWD-LSTM-DOC (fin) (37M),"NTT Communication Science Laboratories,Tohoku University",2018-08-30,date outside 2019-01..2026-09
+AWD-LSTM-DOC (fin) (23M),"NTT Communication Science Laboratories,Tohoku University",2018-08-30,date outside 2019-01..2026-09
+Big Transformer for Back-Translation,"Facebook AI Research,Google Brain",2018-08-28,date outside 2019-01..2026-09
+AWD-LSTM-MoS+PDR + dynamic evaluation (WT2),IBM,2018-08-14,date outside 2019-01..2026-09
+AWD-LSTM-MoS+PDR + dynamic evaluation (PTB),IBM,2018-08-14,date outside 2019-01..2026-09
+RGC+ASQ (WT2),"Tsinghua University,University of California Los Angeles (UCLA)",2018-08-13,date outside 2019-01..2026-09
+RGC+ASQ (PTB),"Tsinghua University,University of California Los Angeles (UCLA)",2018-08-13,date outside 2019-01..2026-09
+S + I-Attention (3),"National Research University Higher School of Economics,Samsung R&D Institute Russia",2018-06-26,date outside 2019-01..2026-09
+DARTS,"DeepMind,Carnegie Mellon University (CMU)",2018-06-24,date outside 2019-01..2026-09
+DARTS (second order) (PTB),"Carnegie Mellon University (CMU),DeepMind",2018-06-24,date outside 2019-01..2026-09
+Relational Memory Core,"DeepMind,University College London (UCL)",2018-06-05,date outside 2019-01..2026-09
+GPT-1,OpenAI,2018-06-01,date outside 2019-01..2026-09
+2-layer skip-LSTM + dropout tuning (WT2),DeepMind,2018-05-23,date outside 2019-01..2026-09
+RHN+HSG(depth=40),Ben-Gurion University,2018-05-23,date outside 2019-01..2026-09
+RHN(depth=40),Ben-Gurion University,2018-05-23,date outside 2019-01..2026-09
+2-layer skip-LSTM + dropout tuning (PTB),DeepMind,2018-05-23,date outside 2019-01..2026-09
+aLSTM(depth-2)+RecurrentPolicy (WT2),"University of Manchester,Alan Turing Institute",2018-05-22,date outside 2019-01..2026-09
+aLSTM(depth-2)+RecurrentPolicy (PTB),University of Manchester,2018-05-22,date outside 2019-01..2026-09
+Dropout-LSTM+Noise(Bernoulli) (WT2),"Columbia University,New York University (NYU),Princeton University",2018-05-03,date outside 2019-01..2026-09
+LSTM+Noise(Beta),"Columbia University,New York University (NYU),Princeton University",2018-05-03,date outside 2019-01..2026-09
+AWD-LSTM-MoS+Noisin+dynamic evaluation (PTB),"Columbia University,New York University (NYU),Princeton University",2018-05-03,date outside 2019-01..2026-09
+Dropout-LSTM+Noise(Laplace) - medium (WT2),"Columbia University,New York University (NYU),Princeton University",2018-05-03,date outside 2019-01..2026-09
+Dropout-LSTM+Noise(Bernoulli) - large(PTB),"Columbia University,New York University (NYU),Princeton University",2018-05-03,date outside 2019-01..2026-09
+TF-LM-discourse LSTM (WT2),ESAT - PSI,2018-05-01,date outside 2019-01..2026-09
+TF-LM-discourse LSTM (PTB),ESAT - PSI,2018-05-01,date outside 2019-01..2026-09
+RNNLM + Dynamic KL Regularization (WT2),Northwestern University,2018-04-27,date outside 2019-01..2026-09
+RNMT+,Google AI,2018-04-26,date outside 2019-01..2026-09
+"LSTM (Hebbian, Cache, MbPA)","DeepMind,University College London (UCL)",2018-03-27,date outside 2019-01..2026-09
+4 layer QRNN (h=2500),Salesforce Research,2018-03-22,date outside 2019-01..2026-09
+LSTM (2018),"Intel Labs,Carnegie Mellon University (CMU)",2018-03-04,date outside 2019-01..2026-09
+Chinese - English translation,Microsoft,2018-03-01,date outside 2019-01..2026-09
+Multipop Adaptive Continuous Stack (WT2),"DeepMind,University of Oxford",2018-02-15,date outside 2019-01..2026-09
+TCN (148M),"Carnegie Mellon University (CMU),Intel Labs",2018-02-15,date outside 2019-01..2026-09
+TCN (13M),"Carnegie Mellon University (CMU),Intel Labs",2018-02-15,date outside 2019-01..2026-09
+Multipop Adaptive Continuous Stack (PTB),"DeepMind,University of Oxford",2018-02-15,date outside 2019-01..2026-09
+ENAS,"Google Brain,Carnegie Mellon University (CMU),Stanford University",2018-02-09,date outside 2019-01..2026-09
+ELMo,"University of Washington,Allen Institute for AI",2018-02-01,date outside 2019-01..2026-09
+QRNN,Salesforce Research,2018-02-01,date outside 2019-01..2026-09
+T-DMCA,Google Brain,2018-01-30,date outside 2019-01..2026-09
+ULM-FiT,"University of San Francisco,Insight Centre NUI Galway,Fast.ai",2018-01-18,date outside 2019-01..2026-09
+RNNLM + Dynamic KL Regularization,Northwestern University,2018-01-01,date outside 2019-01..2026-09
+2-layer-LSTM+Deep-Gradient-Compression,"Tsinghua University,Stanford University,Nvidia",2017-12-05,date outside 2019-01..2026-09
+DL scaling LM,Baidu,2017-12-01,date outside 2019-01..2026-09
+"AWD-LSTM-MoS + dynamic evaluation (WT2, 2017)",Carnegie Mellon University (CMU),2017-11-10,date outside 2019-01..2026-09
+"AWD-LSTM-MoS + dynamic evaluation (PTB, 2017)",Carnegie Mellon University (CMU),2017-11-10,date outside 2019-01..2026-09
+Fraternal dropout + AWD-LSTM 3-layer (WT2),"Jagiellonian University,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms),University of Montreal / Université de Montréal",2017-10-31,date outside 2019-01..2026-09
+Fraternal dropout + AWD-LSTM 3-layer (PTB),"University of Montreal / Université de Montréal,Mila - Quebec AI (originally Montreal Institute for Learning Algorithms)",2017-10-31,date outside 2019-01..2026-09
+DCN+,Salesforce Research,2017-10-31,date outside 2019-01..2026-09
+S-Norm,"University of Washington,Allen Institute for AI",2017-10-29,date outside 2019-01..2026-09
+PhraseCond,"Carnegie Mellon University (CMU),University of Pittsburgh",2017-10-28,date outside 2019-01..2026-09
+AWD-LSTM+WT+Cache+IOG (WT2),NTT Communication Science Laboratories,2017-09-26,date outside 2019-01..2026-09
+AWD-LSTM+WT+Cache+IOG (PTB),NTT Communication Science Laboratories,2017-09-26,date outside 2019-01..2026-09
+LSTM + dynamic eval,University of Edinburgh,2017-09-21,date outside 2019-01..2026-09
+AWD-LSTM + dynamic eval (PTB),University of Edinburgh,2017-09-21,date outside 2019-01..2026-09
+AWD-LSTM + dynamic eval (WT2),University of Edinburgh,2017-09-21,date outside 2019-01..2026-09
+ISS,"Duke University,Microsoft",2017-09-15,date outside 2019-01..2026-09
+GL-LWGC-AWD-MoS-LSTM + dynamic evaluation (WT2),Ben-Gurion University of the Negev,2017-08-29,date outside 2019-01..2026-09
+GL-LWGC-AWD-MoS-LSTM + dynamic evaluation (PTB),Ben-Gurion University,2017-08-29,date outside 2019-01..2026-09
+NMM(LSTM+RNN),Saarland University,2017-08-23,date outside 2019-01..2026-09
+D-LSRC(200)+KN5,Saarland University,2017-08-22,date outside 2019-01..2026-09
+D-LSRC(100)+KN5 (PTB),Saarland University,2017-08-22,date outside 2019-01..2026-09
+GRU + p-tHSM (pretrain via Brown) (WT103),"Beihang University,University of Montreal / Université de Montréal,Chongqing University",2017-08-19,date outside 2019-01..2026-09
+GRU + p-tHSM (pretrain via Brown) (PTB),"Beihang University,University of Montreal / Université de Montréal,Chongqing University",2017-08-19,date outside 2019-01..2026-09
+GRU + p-tHSM (pretrain via Brown) (WT2),"Beihang University,University of Montreal / Université de Montréal,Chongqing University",2017-08-19,date outside 2019-01..2026-09
+EI-REHN-1000D,Korea Advanced Institute of Science and Technology (KAIST),2017-08-14,date outside 2019-01..2026-09
+EI-REHN-1200D (PTB),Korea Advanced Institute of Science and Technology (KAIST),2017-08-14,date outside 2019-01..2026-09
+AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer (WT2),Salesforce Research,2017-08-07,date outside 2019-01..2026-09
+AWD-LSTM - 3-layer LSTM (tied) + continuous cache pointer (PTB),Salesforce Research,2017-08-07,date outside 2019-01..2026-09
+GSM,"Peking University,Microsoft Research",2017-07-30,date outside 2019-01..2026-09
+ConvS2S (ensemble of 8 models),Meta AI,2017-07-25,date outside 2019-01..2026-09
+Densely Connected LSTM + Var. Dropout,Ghent University,2017-07-19,date outside 2019-01..2026-09
+4 layer Densely Connected LSTM 14M (PTB),Ghent University,2017-07-19,date outside 2019-01..2026-09
+AWD-LSTM,"DeepMind,University of Oxford",2017-07-18,date outside 2019-01..2026-09
+Transformer,"Google Research,Google Brain",2017-06-12,date outside 2019-01..2026-09
+Reading Twice for NLU,DeepMind,2017-06-08,date outside 2019-01..2026-09
+Mnemonic Reader,"Fudan University,Microsoft Research",2017-05-08,date outside 2019-01..2026-09
+Word-Independent-SRNN+KN5,Saarland University,2017-03-23,date outside 2019-01..2026-09
+SEST,Carnegie Mellon University (CMU),2017-03-02,date outside 2019-01..2026-09
+VDCNN (on Amazon Review Full dataset),"Facebook AI Research,University of Le Mans",2017-01-27,date outside 2019-01..2026-09
+MoE-Multi,"Jagiellonian University,Google Brain",2017-01-23,date outside 2019-01..2026-09
+GCNN-14,Facebook AI Research,2016-12-23,date outside 2019-01..2026-09
+"GCRN-M1, dropout",Ecole Polytechnique F´ed´erale de Lausanne (EPFL),2016-12-22,date outside 2019-01..2026-09
+Neural cache model (size=2000) (300M),Facebook AI Research,2016-12-13,date outside 2019-01..2026-09
+Neural cache model (size=2000),Facebook AI Research,2016-12-13,date outside 2019-01..2026-09
+LSTM (PTB),Facebook AI Research,2016-12-13,date outside 2019-01..2026-09
+LSTM (WT2),Facebook AI Research,2016-12-13,date outside 2019-01..2026-09
+LSTM (WT103),Facebook AI Research,2016-12-13,date outside 2019-01..2026-09
+NAS with base 8 and shared embeddings,Google Brain,2016-11-05,date outside 2019-01..2026-09
+BIDAF,"University of Washington,Allen Institute for AI",2016-11-05,date outside 2019-01..2026-09
+VD-LSTM+REAL Large,"Salesforce Research,Stanford University",2016-11-04,date outside 2019-01..2026-09
+VD-LSTM+REAL Medium,"Stanford University,Salesforce Research",2016-11-04,date outside 2019-01..2026-09
+VD-LSTM+REAL Small,"Stanford University,Salesforce Research",2016-11-04,date outside 2019-01..2026-09
+Differentiable neural computer,Google DeepMind,2016-10-12,date outside 2019-01..2026-09
+GNMT,Google,2016-09-26,date outside 2019-01..2026-09
+Pointer Sentinel-LSTM (medium),"MetaMind Inc,Salesforce",2016-09-26,date outside 2019-01..2026-09
+Zoneout + Variational LSTM (WT2),"MetaMind Inc,Salesforce",2016-09-26,date outside 2019-01..2026-09
+Byte-mLSTM+emb+WN+VD,"University of Edinburgh,Toyota Technological Institute at Chicago",2016-09-26,date outside 2019-01..2026-09
+Zoneout + Variational LSTM (PTB),MetaMind Inc,2016-09-26,date outside 2019-01..2026-09
+Pointer Sentinel-LSTM (WT2),MetaMind Inc,2016-09-26,date outside 2019-01..2026-09
+Knowledge distillation student model,Harvard University,2016-09-22,date outside 2019-01..2026-09
+Layer Normalization: The Attentive Reader,University of Toronto,2016-07-21,date outside 2019-01..2026-09
+Layer Normalization: Skip Thoughts,University of Toronto,2016-07-21,date outside 2019-01..2026-09
+Character-enriched word2vec,Facebook AI Research,2016-07-15,date outside 2019-01..2026-09
+VD-RHN,"ETH Zurich,IDSIA",2016-07-12,date outside 2019-01..2026-09
+Variational RHN + WT (PTB),"ETH Zurich,IDSIA",2016-07-12,date outside 2019-01..2026-09
+fastText,Facebook AI Research,2016-07-06,date outside 2019-01..2026-09
+DMN,Salesforce,2016-06-20,date outside 2019-01..2026-09
+Part-of-sentence tagging model,Carnegie Mellon University (CMU),2016-05-29,date outside 2019-01..2026-09
+Gated HORNN (3rd order),York University,2016-04-30,date outside 2019-01..2026-09
+Named Entity Recognition model,Carnegie Mellon University (CMU),2016-03-04,date outside 2019-01..2026-09
+BIG LSTM+CNN INPUTS,Google Brain,2016-02-11,date outside 2019-01..2026-09
+10 LSTMS + KN-5 (OPTIMAL WEIGHTS),Google Brain,2016-02-11,date outside 2019-01..2026-09
+"Variational (untied weights, MC) LSTM (Large)",University of Cambridge,2015-12-16,date outside 2019-01..2026-09
+The Attentive Reader,Google DeepMind,2015-11-19,date outside 2019-01..2026-09
+BPE,University of Edinburgh,2015-08-31,date outside 2019-01..2026-09
+LSTM-Char-Large,"Harvard University,New York University (NYU)",2015-08-26,date outside 2019-01..2026-09
+Search-Proven Best LSTM,Google,2015-07-06,date outside 2019-01..2026-09
+Skip-Thoughts,"University of Toronto,Massachusetts Institute of Technology (MIT),CIFAR AI Research",2015-06-22,date outside 2019-01..2026-09
+2nd order FOFE-FNNLM,"University of Science and Technology of China (USTC),York University",2015-05-06,date outside 2019-01..2026-09
+genCNN + dyn eval,"Chinese Academy of Sciences,Huawei Noah's Ark Lab,Dublin City University",2015-03-17,date outside 2019-01..2026-09
+Stack RNN,Facebook AI Research,2015-03-03,date outside 2019-01..2026-09
+Constituency-Tree LSTM,"MetaMind Inc,Stanford University",2015-02-28,date outside 2019-01..2026-09
+SCRN (Structurally Constrained Recurrent Network),Facebook AI Research,2014-12-24,date outside 2019-01..2026-09
+N-gram+Cache (PTB),Facebook AI Research,2014-12-24,date outside 2019-01..2026-09
+N-gram (PTB),Facebook AI Research,2014-12-24,date outside 2019-01..2026-09
+4-gram + 8 DENN,IBM,2014-12-22,date outside 2019-01..2026-09
+NTM,Google DeepMind,2014-12-10,date outside 2019-01..2026-09
+SNM-skip,Google,2014-12-03,date outside 2019-01..2026-09
+SC-NLM,University of Toronto,2014-11-10,date outside 2019-01..2026-09
+SPN-4+KN5,"Singapore University of Technology & Design,DSO National Laboratories",2014-09-14,date outside 2019-01..2026-09
+Seq2Seq LSTM,Google,2014-09-10,date outside 2019-01..2026-09
+Large regularized LSTM,"New York University (NYU),Google Brain",2014-09-08,date outside 2019-01..2026-09
+RNNsearch-50*,"Jacobs University Bremen,University of Montreal / Université de Montréal",2014-09-01,date outside 2019-01..2026-09
+GRUs,"University of Montreal / Université de Montréal,Jacobs University,University of Maine",2014-06-03,date outside 2019-01..2026-09
+AdaRNN,Beihang University,2014-06-01,date outside 2019-01..2026-09
+Paragraph Vector,Google,2014-05-14,date outside 2019-01..2026-09
+DBN for NLP,"Microsoft,University of Toronto",2014-02-11,date outside 2019-01..2026-09
+GloVe (6B),Stanford University,2014-01-01,date outside 2019-01..2026-09
+GloVe (32B),Stanford University,2014-01-01,date outside 2019-01..2026-09
+SPN-4,"Singapore University of Technology & Design,DSO National Laboratories",2014-01-01,date outside 2019-01..2026-09
+DOT(S)-RNN,"Aalto University,University of Montreal / Université de Montréal",2013-12-20,date outside 2019-01..2026-09
+Deep RNN (PTB),MetaMind Inc,2013-12-11,date outside 2019-01..2026-09
+RNN for 1B words,Google,2013-12-11,date outside 2019-01..2026-09
+TransE,"Universite de Technologie de Compiègne – CNRS,Google",2013-12-05,date outside 2019-01..2026-09
+TensorReasoner,Stanford University,2013-12-01,date outside 2019-01..2026-09
+Word2Vec (small),Google,2013-10-16,date outside 2019-01..2026-09
+Word2Vec (large),Google,2013-10-16,date outside 2019-01..2026-09
+RNTN,Stanford University,2013-10-01,date outside 2019-01..2026-09
+RCTM,University of Oxford,2013-10-01,date outside 2019-01..2026-09
+RNN+weight noise+dynamic eval,University of Toronto,2013-08-04,date outside 2019-01..2026-09
+SemVec,Microsoft Research,2013-06-09,date outside 2019-01..2026-09
+DistBelief NNLM,Google,2013-01-16,date outside 2019-01..2026-09
+RNN (SGD+CLR) (PTB),University of Montreal / Université de Montréal,2012-12-04,date outside 2019-01..2026-09
+RNN+LDA+KN5+cache,"Microsoft,Brno University of Technology",2012-12-01,date outside 2019-01..2026-09
+RNN+LDA,Microsoft Research,2012-12-01,date outside 2019-01..2026-09
+RNN+LSA+KN5+cache (model combination w/ linear extrapolation),Microsoft Research,2012-12-01,date outside 2019-01..2026-09
+RNN,Microsoft Research,2012-12-01,date outside 2019-01..2026-09
+LSTM LM,RWTH Aachen University,2012-09-09,date outside 2019-01..2026-09
+LSTM-300units,RWTH Aachen University,2012-09-01,date outside 2019-01..2026-09
+Context-dependent RNN,"Microsoft Research,Brno University of Technology",2012-07-27,date outside 2019-01..2026-09
+MV-RNN,Stanford University,2012-07-12,date outside 2019-01..2026-09
+Ngram corpus,Google,2012-07-08,date outside 2019-01..2026-09
+LBL,University College London (UCL),2012-06-27,date outside 2019-01..2026-09
+NLP from scratch,"NEC Laboratories,Princeton University",2011-11-08,date outside 2019-01..2026-09
+Adaptive Subgrad,"Technion - Israel Institute of Technology,Google,University of California (UC) Berkeley",2011-10-03,date outside 2019-01..2026-09
+Recursive sentiment autoencoder,Stanford University,2011-07-01,date outside 2019-01..2026-09
+Recursive Neural Network,Stanford University,2011-06-28,date outside 2019-01..2026-09
+Cross-Lingual POS Tagger,"Carnegie Mellon University (CMU),Google Research",2011-06-19,date outside 2019-01..2026-09
+Vector Space Model,Stanford University,2011-06-19,date outside 2019-01..2026-09
+RNN-SpeedUp,"Brno University of Technology,Johns Hopkins University",2011-05-22,date outside 2019-01..2026-09
+RNN LM,Johns Hopkins University,2010-09-26,date outside 2019-01..2026-09
+Word Representations,"University of Montreal / Université de Montréal,University of Illinois Urbana-Champaign (UIUC)",2010-06-01,date outside 2019-01..2026-09
+Polarity Classifier,"University of Edinburgh,University of Pittsburgh",2009-09-01,date outside 2019-01..2026-09
+RL mapping instructions (troubleshooting),Massachusetts Institute of Technology (MIT),2009-08-02,date outside 2019-01..2026-09
+RL mapping instructions (games),Massachusetts Institute of Technology (MIT),2009-08-01,date outside 2019-01..2026-09
+Conditional Maximum Entropy Model (Gigaworld),Google,2009-07-01,date outside 2019-01..2026-09
+Semantic Hashing,University of Toronto,2008-12-10,date outside 2019-01..2026-09
+HLBL,University of Toronto,2008-12-08,date outside 2019-01..2026-09
+ADAPTIVE NLPM,University of Toronto,2008-12-08,date outside 2019-01..2026-09
+Stacked Semisuperviser Autoencoders,"New York University (NYU),Microsoft",2008-07-15,date outside 2019-01..2026-09
+Deep Multitask NLP Network,NEC Laboratories,2008-07-05,date outside 2019-01..2026-09
+SB-LM,Google,2007-06-22,date outside 2019-01..2026-09
+KN-LM,Google,2007-06-22,date outside 2019-01..2026-09
+λ-WASP,UT Austin,2007-06-01,date outside 2019-01..2026-09
+Semantic Taxonomy Induction,Stanford University,2006-07-07,date outside 2019-01..2026-09
+Hiero,University of Maryland,2005-06-01,date outside 2019-01..2026-09
+Hierarchical LM,,2005-01-06,date outside 2019-01..2026-09
+Automated WSD via WordNet,University of Sussex,2004-07-01,date outside 2019-01..2026-09
+Max-Margin Markov Networks,Stanford University,2004-03-01,date outside 2019-01..2026-09
+Phrase-based translation,University of Southern California,2003-05-01,date outside 2019-01..2026-09
+NPLM (Brown),University of Montreal / Université de Montréal,2003-03-15,date outside 2019-01..2026-09
+NPLM (AP News),University of Montreal / Université de Montréal,2003-03-15,date outside 2019-01..2026-09
+LDA,Stanford University,2003-02-02,date outside 2019-01..2026-09
+Maximum Entropy Models for machine translation,"University of Southern California,RWTH Aachen University",2002-07-06,date outside 2019-01..2026-09
+Tagging via Viterbi Decoding,AT&T,2002-06-01,date outside 2019-01..2026-09
+Joint Probability Machine Translation,University of Southern California,2002-06-01,date outside 2019-01..2026-09
+Thumbs Up?,"Cornell University,IBM",2002-05-28,date outside 2019-01..2026-09
+Immediate trihead,Brown University,2001-07-06,date outside 2019-01..2026-09
+Neural LM,University of Montreal / Université de Montréal,2000-11-28,date outside 2019-01..2026-09
+FrameNet role labeling,University of Rochester,2000-09-01,date outside 2019-01..2026-09
+IBM Model 4,"University of Southern California,IBM,University of Pennsylvania",1999-07-02,date outside 2019-01..2026-09
+RECONTRA-uncategorized,,1999-06-02,date outside 2019-01..2026-09
+RECONTRA-categorized,,1999-06-02,date outside 2019-01..2026-09
+LSTM with forget gates,IDSIA,1999-01-02,date outside 2019-01..2026-09
+LSTM,Technical University of Munich,1997-11-15,date outside 2019-01..2026-09
+n-gram LM,"University of Cambridge,Carnegie Mellon University (CMU)",1997-07-01,date outside 2019-01..2026-09
+HMM Word Alignment,University of Erlangen - Nuremburg,1996-08-05,date outside 2019-01..2026-09
+Iterative Bootstrapping WSD,University of Pennsylvania,1995-06-26,date outside 2019-01..2026-09
+Predictive Coding NN,Technical University of Munich,1994-12-02,date outside 2019-01..2026-09
+Markov-driven POS tagger,EURECOM,1994-06-01,date outside 2019-01..2026-09
+IBM-5,IBM,1993-06-15,date outside 2019-01..2026-09
+SRN-Encoded Grammatical Structures,University of California San Diego,1991-09-01,date outside 2019-01..2026-09
+Latent semantic analysis,"University of Chicago,Bell Laboratories,University of Western Ontario",1988-04-05,date outside 2019-01..2026-09
+Learning past tenses,Stanford University,1986-01-03,date outside 2019-01..2026-09
+Learnability theory of language development,Massachusetts Institute of Technology (MIT),1984-07-01,date outside 2019-01..2026-09
+Pandemonium (morse),Massachusetts Institute of Technology (MIT),1959-02-01,date outside 2019-01..2026-09

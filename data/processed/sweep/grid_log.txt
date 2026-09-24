@@ -1,0 +1,88 @@
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 2 --lr 0.001 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 2 --lr 0.002 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 2 --lr 0.004 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 2 --lr 0.008 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 320 --L 5 --lr 0.001 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 320 --L 5 --lr 0.002 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 320 --L 5 --lr 0.004 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 320 --L 5 --lr 0.008 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 512 --L 8 --lr 0.001 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 512 --L 8 --lr 0.002 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 512 --L 8 --lr 0.004 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 512 --L 8 --lr 0.008 --D 50e6 --tag lrsweep --evals edu
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 2 --lr 0.005722 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 192 --L 3 --lr 0.003973 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 256 --L 4 --lr 0.003067 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 320 --L 5 --lr 0.002509 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 384 --L 6 --lr 0.00213 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 448 --L 7 --lr 0.001854 --D 25000000,50000000,100000000,200000000,400000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 512 --L 8 --lr 0.001644 --D 25000000,50000000,100000000,200000000,400000000 --tag main
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.001 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.002 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.004 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.008 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 320 --L 5 --lr 0.001 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 320 --L 5 --lr 0.002 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 320 --L 5 --lr 0.004 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 320 --L 5 --lr 0.008 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 512 --L 8 --lr 0.001 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 512 --L 8 --lr 0.002 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 512 --L 8 --lr 0.004 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 512 --L 8 --lr 0.008 --D 50e6 --tag lrcal --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 2 --lr 0.002861 --D 25e6,50e6,100e6,200e6,400e6,800e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 640 --L 10 --lr 0.001345 --D 25000000,50000000,100000000,200000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 640 --L 10 --lr 0.000672 --D 25e6,50e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 2 --lr 0.011444 --D 25e6,50e6,100e6,200e6,400e6,800e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 640 --L 10 --lr 0.00269 --D 25e6,50e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.005722 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.002861 --D 25e6,50e6,100e6,200e6,400e6,800e6 --tag lrcorner --evals edu,web,wiki
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.005722 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.002861 --D 25e6,50e6,100e6,200e6,400e6,800e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 192 --L 3 --lr 0.003973 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 640 --L 10 --lr 0.000672 --D 25e6,50e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 128 --L 2 --lr 0.011444 --D 25e6,50e6,100e6,200e6,400e6,800e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 256 --L 4 --lr 0.003067 --D 25000000,50000000,100000000,200000000,400000000,800000000 --tag main
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime web --d 640 --L 10 --lr 0.00269 --D 25e6,50e6 --tag lrcorner --evals edu,web,wiki
+EXIT 0
+RUN /Users/yigitokar/scaling-laws-pf/.venv/bin/python /Users/yigitokar/scaling-laws-pf/code/sweep/train_sweep.py --regime edu --d 128 --L 4 --lr 0.005722 --D 200e6,800e6,1600e6,3200e6 --tag hiM --evals edu,web,wiki --ext 1

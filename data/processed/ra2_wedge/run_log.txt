@@ -1,0 +1,13 @@
+[07:09:53] sample: clean inference-demand sample
+[07:09:54] modelfree: IsoFLOP curvature and paths (wild bootstrap B = 999)
+[07:10:10] techs: registry under the ex-ante rule
+[07:10:10] techs: kappa-free Chinchilla wild bootstrap
+[07:10:15] techs: Chinchilla non-embedding wild bootstrap
+[07:10:24] wedges: every model x technology
+[07:10:25] analysis: cleaning table and technology dispersion
+[07:10:26] analysis: family-level token budgets
+[07:10:26] analysis: conventions, in-support, partial identification
+[07:10:36] analysis: conduct tests (wild cluster bootstrap, Webb weights, B = 9999)
+[07:12:03] analysis: validation (HF model tree, OpenRouter audit, aggregates)
+[07:12:14] outputs: tables and figures
+[07:12:17] done in 143s

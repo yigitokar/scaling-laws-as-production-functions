@@ -1,0 +1,64 @@
+% Online Appendix Table D8: robustness of sigma*_kappa (output/tables/ra1_modelfree_kappa_robustness.csv/.tex). Writer appendix_D_F.
+\begin{table}[tp]
+\centering
+\caption{Robustness of the Elasticity of Substitution with the Outer Exponent Free}
+\label{tab:app-kappa-robust}
+\footnotesize
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrccccc@{}}
+\toprule
+ & & & & & $\sigma^*$, & \multicolumn{2}{c}{$\sigma^*_\kappa$ with $E$} \\
+\cmidrule(l){7-8}
+Technology & Variant & $n$ & $\sigma^*_\kappa$ (s.e.) & $\hat\kappa$ & $\kappa=1$ & at $\hat E_{\kappa=1}$ & over $E$ set \\
+\midrule
+Chinchilla & Baseline & 240 & 0.701 (0.012) & 0.77 & 0.737 & 0.703 & 0.697--0.703 \\
+ & Drop smallest 10\% of $N$ & 216 & 0.690 (0.014) & 0.75 & 0.729 & 0.690 &  \\
+ & Drop smallest 25\% of $N$ & 180 & 0.648 (0.017) & 0.69 & 0.702 & 0.654 &  \\
+ & All 245 runs & 245 & 0.664 (0.016) & 0.70 & 0.714 & 0.671 &  \\
+\addlinespace[1pt]
+Farseer & Baseline & 404 & 0.710 (0.004) & 0.47 & 0.772 & 0.696 & 0.709--0.711 \\
+ & Drop smallest size & 389 & 0.710 (0.004) & 0.47 & 0.773 & 0.694 &  \\
+ & Drop 2 smallest sizes & 374 & 0.709 (0.004) & 0.48 & 0.770 & 0.692 &  \\
+ & Drop 5 smallest sizes & 324 & 0.710 (0.005) & 0.46 & 0.774 & 0.687 &  \\
+ & $N$ with embeddings & 404 & 0.668 (0.004) & 0.52 & 0.724 & 0.648 &  \\
+ & Drop $M>1{,}000$ & 389 & 0.716 (0.004) & 0.48 & 0.785 & 0.705 &  \\
+ & Drop $M<2$ & 355 & 0.694 (0.002) & 0.43 & 0.797 & 0.690 &  \\
+\addlinespace[1pt]
+Gadre, C4 & Baseline & 34 & 0.607 (0.045) & 0.35 & 0.795 & 0.602 & 0.600--0.614 \\
+ & Drop smallest size & 26 & 0.528 (0.050) & 0.41 & 0.720 & 0.535 &  \\
+ & Drop 2 smallest sizes & 18 & 0.493 (0.093) & 0.30 & 0.729 & 0.542 &  \\
+\addlinespace[1pt]
+Gadre, RedPajama & Baseline & 35 & 0.623 (0.052) & 0.39 & 0.795 & 0.679 & 0.606--0.685 \\
+ & Drop smallest size & 27 & 0.574 (0.071) & 0.38 & 0.771 & 0.568 &  \\
+ & Drop 2 smallest sizes & 19 & 0.696 (0.097) & 0.57 & 0.783 & 0.658 &  \\
+\addlinespace[1pt]
+Gadre, RefinedWeb & Baseline & 35 & 0.594 (0.051) & 0.36 & 0.796 & 0.595 & 0.580--0.605 \\
+ & Drop smallest size & 27 & 0.545 (0.082) & 0.38 & 0.758 & 0.545 &  \\
+ & Drop 2 smallest sizes & 19 & 0.484 (0.080) & 0.26 & 0.764 & 0.480 &  \\
+\addlinespace[1pt]
+OLMo ladder & Baseline & 30 & 0.544 (0.019) & 0.22 & 0.825 & 0.541 & 0.541--0.545 \\
+ & Drop smallest size & 24 & 0.548 (0.027) & 0.24 & 0.810 & 0.526 &  \\
+ & Drop 2 smallest sizes & 18 & 0.518 (0.018) & 0.32 & 0.709 & 0.506 &  \\
+ & Task bits per byte & 30 & 0.512 (0.059) & 0.33 & 0.763 & 0.487 &  \\
+\addlinespace[1pt]
+Muennighoff & Baseline & 33 & 0.511 (0.047) & 0.42 & 0.735 & 0.558 & 0.503--0.555 \\
+ & Drop smallest size & 32 & 0.527 (0.051) & 0.50 & 0.701 & 0.527 &  \\
+ & Drop 2 smallest sizes & 31 & 0.536 (0.050) & 0.52 & 0.693 & 0.514 &  \\
+ & Drop $D/N<0.4$ & 31 & 0.566 (0.058) & 0.51 & 0.726 & 0.612 &  \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{tablenotes}
+$\sigma^*_\kappa=2/(2+a_1+b_1)$ from $L=E+(AN^{-a_1}+BD^{-b_1})^\kappa$ fitted by Huber loss on $\ln L$. Standard errors:
+design-conditional wild bootstrap (Feng--He--Hu weights on leverage-adjusted residuals; weights of
+\citet{webb2023reworking} by model size for Farseer and by (size, multiplier) cell for the OLMo ladder), 499 draws for
+baselines and 199 for variants. $\sigma^*$, $\kappa=1$: the Chinchilla form on the same sample. At $\hat E_{\kappa=1}$:
+$E$ fixed at the Chinchilla-form estimate and the rest refitted. Over $E$ set: range of $\sigma^*_\kappa$ over the values
+of $E$ whose profile Laplace quasi-LR is below the $\chi^2_1$ 95 percent critical value (descriptive; a 36-point grid in
+$E$ refined with 25 points around the set). Farseer's $N$ with embeddings counts both untied embedding matrices.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}; \citet{li2025predictableb}; \citet{gadre2024language}; \citet{bhagia2024establishing};
+\citet{muennighoff2023scaling}; authors' calculations.
+\end{tablenotes}
+\end{table}

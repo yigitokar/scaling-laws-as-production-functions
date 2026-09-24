@@ -1,0 +1,19 @@
+15:52:59 [    0.0s] power: anchor C_c = 3.950e+15, N* = 5.737e+06, D* = 1.147e+08; R = 150, R_boot = 60, B = 199
+15:59:17 [  378.5s]   chin_s002_r5 chi=0.22: 150 reps + 60 boot reps in 378s
+16:04:51 [  712.6s]   chin_s002_r5 chi=0.0: 150 reps + 60 boot reps in 334s
+16:12:08 [ 1148.8s]   chin_s005_r5 chi=0.22: 150 reps + 60 boot reps in 436s
+16:18:25 [ 1526.4s]   chin_s005_r5 chi=0.0: 150 reps + 60 boot reps in 378s
+16:24:29 [ 1889.9s]   chin_s010_r5 chi=0.22: 150 reps + 60 boot reps in 363s
+16:30:49 [ 2270.5s]   chin_s010_r5 chi=0.0: 150 reps + 60 boot reps in 381s
+16:33:52 [ 2453.3s]   chin_s005_r0 chi=0.22: 150 reps + 0 boot reps in 183s
+16:37:13 [ 2654.3s]   chin_s005_r9 chi=0.22: 150 reps + 0 boot reps in 201s
+16:40:38 [ 2858.8s]   chin_s005_M60 chi=0.22: 150 reps + 0 boot reps in 205s
+16:44:07 [ 3068.2s]   kappa_s005_r5 chi=0.22: 150 reps + 0 boot reps in 209s
+/Users/yigitokar/scaling-laws-pf/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:219: RuntimeWarning: Degrees of freedom <= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/yigitokar/scaling-laws-pf/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:211: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/Users/yigitokar/scaling-laws-pf/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:219: RuntimeWarning: Degrees of freedom <= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/yigitokar/scaling-laws-pf/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:211: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)

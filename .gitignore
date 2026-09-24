@@ -1,0 +1,11 @@
+.venv/
+data/raw/
+data/processed/sweep/*.bin
+tools/
+__pycache__/
+*.pyc
+.DS_Store
+*.aux
+*.log
+data/processed/sweep/ckpt/
+_public_export/

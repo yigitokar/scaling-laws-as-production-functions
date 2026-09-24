@@ -1,0 +1,55 @@
+\begin{table}[tp]
+\centering
+\caption{Robustness of the Elasticity with the Outer Exponent Free}
+\label{tab:kappa-robust}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcccccc@{}}
+\toprule
+Technology & Variant & $n$ & $\sigma^*_\kappa$ & $\hat\kappa$ & $\sigma^*$, $\kappa=1$ & $\sigma^*_\kappa$, $E=\hat E_{\kappa=1}$ & $\sigma^*_\kappa$ over $E$ set \\
+\midrule
+Chinchilla & baseline & 240 & 0.701 (0.012) & 0.77 & 0.737 & 0.703 & 0.697--0.703 \\
+ & drop runs with N below its 10th percentile & 216 & 0.690 (0.014) & 0.75 & 0.729 & 0.690 &  \\
+ & drop runs with N below its 25th percentile & 180 & 0.648 (0.017) & 0.69 & 0.702 & 0.654 &  \\
+ & all 245 runs (outliers kept) & 245 & 0.664 (0.016) & 0.70 & 0.714 & 0.671 &  \\
+\addlinespace
+Farseer & baseline & 404 & 0.710 (0.004) & 0.47 & 0.772 & 0.696 & 0.709--0.711 \\
+ & drop the 1 smallest model size & 389 & 0.710 (0.004) & 0.47 & 0.773 & 0.694 &  \\
+ & drop the 2 smallest model sizes & 374 & 0.709 (0.004) & 0.48 & 0.770 & 0.692 &  \\
+ & drop the 5 smallest model sizes & 324 & 0.710 (0.005) & 0.46 & 0.774 & 0.687 &  \\
+ & N incl. both embeddings & 404 & 0.668 (0.004) & 0.52 & 0.724 & 0.648 &  \\
+ & drop M $>$ 1,000 & 389 & 0.716 (0.004) & 0.48 & 0.785 & 0.705 &  \\
+ & drop M $<$ 2 & 355 & 0.694 (0.002) & 0.43 & 0.797 & 0.690 &  \\
+\addlinespace
+Gadre, C4 & baseline & 34 & 0.607 (0.045) & 0.35 & 0.795 & 0.602 & 0.600--0.614 \\
+ & drop the 1 smallest model size & 26 & 0.528 (0.050) & 0.41 & 0.720 & 0.535 &  \\
+ & drop the 2 smallest model sizes & 18 & 0.493 (0.093) & 0.30 & 0.729 & 0.542 &  \\
+\addlinespace
+Gadre, RedPajama & baseline & 35 & 0.623 (0.052) & 0.39 & 0.795 & 0.679 & 0.606--0.685 \\
+ & drop the 1 smallest model size & 27 & 0.574 (0.071) & 0.38 & 0.771 & 0.568 &  \\
+ & drop the 2 smallest model sizes & 19 & 0.696 (0.097) & 0.57 & 0.783 & 0.658 &  \\
+\addlinespace
+Gadre, RefinedWeb & baseline & 35 & 0.594 (0.051) & 0.36 & 0.796 & 0.595 & 0.580--0.605 \\
+ & drop the 1 smallest model size & 27 & 0.545 (0.082) & 0.38 & 0.758 & 0.545 &  \\
+ & drop the 2 smallest model sizes & 19 & 0.484 (0.080) & 0.26 & 0.764 & 0.480 &  \\
+\addlinespace
+OLMo ladder & baseline & 30 & 0.544 (0.019) & 0.22 & 0.825 & 0.541 & 0.541--0.545 \\
+ & drop the 1 smallest model size & 24 & 0.548 (0.027) & 0.24 & 0.810 & 0.526 &  \\
+ & drop the 2 smallest model sizes & 18 & 0.518 (0.018) & 0.32 & 0.709 & 0.506 &  \\
+ & output: task bits per byte & 30 & 0.512 (0.059) & 0.33 & 0.763 & 0.487 &  \\
+\addlinespace
+Muennighoff & baseline & 33 & 0.511 (0.047) & 0.42 & 0.735 & 0.558 & 0.503--0.555 \\
+ & drop the 1 smallest model size & 32 & 0.527 (0.051) & 0.50 & 0.701 & 0.527 &  \\
+ & drop the 2 smallest model sizes & 31 & 0.536 (0.050) & 0.52 & 0.693 & 0.514 &  \\
+ & drop D/N $<$ 0.4 & 31 & 0.566 (0.058) & 0.51 & 0.726 & 0.612 &  \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+$\sigma^*_\kappa=2/(2+a_1+b_1)$ from $L=E+(AN^{-a_1}+BD^{-b_1})^\kappa$ fitted by Huber loss on $\ln L$. Standard errors: design-conditional wild bootstrap (Feng--He--Hu weights on leverage-adjusted residuals; Webb weights by model size for Farseer and by (size, multiplier) cell for the OLMo ladder), 499 draws for baselines and 199 for variants. Column 7 fixes $E$ at the Chinchilla-form estimate and refits the rest. Column 8: range of $\sigma^*_\kappa$ over the values of $E$ whose profile Laplace quasi-LR is below the $\chi^2_1$ 95\% critical value (descriptive; a 36-point grid in $E$ refined with 25 points around the set).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}; \citet{li2025predictableb}; \citet{gadre2024language}; \citet{bhagia2024establishing}; \citet{muennighoff2023scaling}; authors' calculations.
+\end{tablenotes}
+\end{table}

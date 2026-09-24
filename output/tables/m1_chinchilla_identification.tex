@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Functional Dependence: What On-Path Data Identify}
+\label{tab:m1_ident}
+\begin{threeparttable}
+\begin{tabular}{lcccccccccc}
+\toprule
+Sample & $n$ & Transv. share & $s_3/\sqrt n$ & $s_4/\sqrt n$ & $s_5/\sqrt n$ & Cond. & $\alpha$ & $\beta$ & $a$ & $\gamma$ \\
+\midrule
+Full design & 240 & 0.330 & $2.04\times10^{-1}$ & $1.34\times10^{-2}$ & $1.19\times10^{-2}$ & 62 & 0.347 (0.015) & 0.367 (0.020) & 0.514 (0.020) & 0.178 (0.005) \\
+On-path band $|\Delta\ln N|\le$ 0.15 & 41 & 0.008 & $2.52\times10^{-2}$ & $9.90\times10^{-3}$ & $1.76\times10^{-3}$ & 413 & 0.414 (0.097) & 0.251 (0.090) & 0.377 (0.139) & 0.156 (0.018) \\
+On-path band $|\Delta\ln N|\le$ 0.1 & 26 & 0.003 & $1.85\times10^{-2}$ & $1.05\times10^{-2}$ & $1.01\times10^{-3}$ & 721 & 0.302 (0.152) & 0.344 (0.153) & 0.533 (0.201) & 0.161 (0.035) \\
+A2 argmins (9 pseudo-obs.) & 9 & 0.019 & $3.49\times10^{-2}$ & $6.46\times10^{-3}$ & $8.11\times10^{-4}$ & 915 & 0.209 (3.479) & 0.245 (0.168) & 0.539 (0.310) & 0.113 (0.130) \\
+Random subsamples, same $n$ (median of 4) & 41 & 0.340 & $1.67\times10^{-1}$ & $1.34\times10^{-2}$ & $1.01\times10^{-2}$ & 73 & (0.042) & (0.072) & (0.063) & (0.019) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} On-path samples: runs with $|\ln N-\ln N^*(C)|\le h$ around the reference expansion path (Huber-LSE, $n=240$), and the nine Approach-2 argmins used as pseudo-observations. ``Transverse share'': share of the variance of centred $(\ln N,\ln D)$ along $(\alpha,-\beta)$, the only direction in which $\ln R$ has curvature (the Hessian of $\ln R$ in $(\ln N,\ln D)$ is rank one with null direction $(\beta,\alpha)$, the expansion path). $s_3$--$s_5$: the three smallest singular values of the Jacobian of $\ln\hat L$ with respect to the KMW-normalized parameters $(\ln a',\ln b',\ln E,\alpha,\beta)$, evaluated at the full-sample estimate and divided by $\sqrt n$; cond.: their condition number. On an exactly optimal path the loss equation depends on $(N,D)$ only through $C$, so the Jacobian has rank 3 and two singular values vanish; in the on-path samples the two that collapse are $s_3$ and $s_5$ ($s_4$, the near-collinearity of $E$ with the level parameters, is small in every design). Estimates: Huber-LSE on the subsample (75 starting values), pairs-bootstrap s.e. (200 draws). The last row is a sample-size control: random subsamples of the full design with the band's $n$ (100 bootstrap draws each; s.e. only), which separates the loss of transverse variation from the loss of observations. Maximum Gaussian profile LR statistic over $\sigma^*\in[0.50,0.95]$ in $L=E+(AN^{-a_1}+BD^{-b_1})^\kappa$: full design ($n=240$): 424.5 (95\% set for $\sigma^*$: [0.67, 0.69] within the grid [0.50, 0.95]); on-path band $|\Delta\ln N|\le 0.15$ ($n=41$): 2.0 (95\% set for $\sigma^*$: [0.50, 0.95] within the grid [0.50, 0.95]); random full-design subsamples of the same size (n = 41): 79.0--101.4.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

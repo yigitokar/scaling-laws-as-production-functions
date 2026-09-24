@@ -1,0 +1,51 @@
+\begin{table}[tp]
+\centering
+\caption{Flexible-Input Demand Functions: Learning Rate and Batch Size}
+\label{tab:app-demand}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Specification & $\ln N$ & $\ln D$ & $\ln B$ & Observations \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Panel A. Learning-rate demand, $\ln\eta^*$}} \\
+Unconditional, grid argmin & $-$0.823 (0.127) & 0.288 (0.071) & & 17 \\
+Unconditional, smoothed argmin & $-$0.693 (0.050) & 0.210 (0.025) & & 17 \\
+Conditional on batch, smoothed & $-$0.534 (0.027) & 0.046 (0.015) & 0.320 (0.034) & 165 \\
+Conditional on batch, grid argmin & $-$0.612 (0.048) & 0.016 (0.029) & 0.295 (0.038) & 157 \\
+Batch fixed at 0.52M tokens & $-$0.495 (0.077) & 0.040 (0.047) & & 16 \\
+\addlinespace
+\multicolumn{5}{@{}l}{\textit{Panel B. Batch-size demand, $\ln B^*$ (tokens)}} \\
+Grid argmin & $-$0.355 (0.176) & 0.543 (0.075) & & 17 \\
+Smoothed argmin & $-$0.205 (0.041) & 0.598 (0.021) & & 17 \\
+Smoothed argmin, $D$ only & & 0.572 (0.037) & & 17 \\
+\addlinespace
+\multicolumn{5}{@{}l}{\textit{Panel C. Published rules}} \\
+Step Law, $\eta$ & $-$0.713 (0.030) & 0.307 (0.019) & & \\
+Step Law, $B$ & & 0.571 (0.019) & & \\
+\citet{bjorck2024scaling}, $\eta$, fixed batch & $-$0.23 & $-$0.32 & & \\
+\addlinespace
+\multicolumn{5}{@{}l}{\textit{Panel D. Decomposition of $d\ln\eta^*/d\ln D$}} \\
+ & Smoothed & Grid & & \\
+\cmidrule(lr){2-3}
+Conditional $+$ complementarity $\times$ batch & 0.238 & 0.176 & & \\
+Unconditional & 0.210 & 0.288 & & \\
+Share due to batch co-scaling & 0.91 (0.15) & 0.56 (0.24) & & \\
+Share of published gap closed & 0.26 (0.02) & 0.43 (0.13) & & \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Optimal learning rate $\eta^*$ and batch size $B^*$ in each of the 17 Step Law $(N,D)$ cells, regressed
+on $\ln N$ (non-embedding) and $\ln D$. ``Grid argmin'' uses the best run in the cell; ``smoothed'' uses the minimum of a
+quadratic in $(\ln\eta,\ln B)$ fitted to runs within 2 percent of the cell minimum, which lies above the best observed
+run in 16 of 17 cells. Standard errors in parentheses: a two-level bootstrap (cells, then each cell's optimum; 1,000
+draws) for the unconditional demands and cell-clustered standard errors for the conditional ones (cell $\times$ batch
+slices with an interior optimum); Panel C reports the standard deviations of Step Law's own bootstrap fits. Conditional
+demands hold the batch fixed, as in \citet{bjorck2024scaling}; unconditional demands let it adjust. Panel D: the published gap is between Step Law's $+0.307$ and
+Bj\"orck et al.'s $-0.32$, their joint fit for models of at least 760 million parameters; their per-size exponents are
+steeper for smaller models (down to $-0.70$ at 50 million), and against $-0.70$ the shares closed would be about 0.16
+(smoothed) and 0.27 (grid); the unconditional elasticity equals the conditional one plus the learning-rate--batch complementarity times the batch
+elasticity (the Le Chatelier decomposition of \citealt{milgrom1996lechatelier}); cell-cluster bootstrap standard errors
+in parentheses (1,000 draws).\end{tablenotes}
+\begin{tablenotes}[Source]\citet{li2025predictablea}; authors' estimates.\end{tablenotes}
+\end{table}

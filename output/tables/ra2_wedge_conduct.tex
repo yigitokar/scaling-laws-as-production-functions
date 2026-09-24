@@ -1,0 +1,48 @@
+\begin{table}[tp]
+\centering
+\caption{Conduct Tests and Validation of Levels}
+\label{tab:ra2-conduct}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
+\sbox{\ratabbox}{%
+\begin{tabular}{@{}llrrrrrl@{}}
+\toprule
+Test & Sample & $n$ & $G$ & Coef. & (s.e.) & $p$ (WCR) & Note \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel A. Conduct tests; outcome $\ln w$ (reference), controls year effects and $\ln C$}} \\[1pt]
+(a) Open weights & universe & 186 & 67 & 0.52 & (0.18) & 0.011 & {\scriptsize $G_0$=23 closed} \\
+\quad 2023 and later & universe & 150 & 60 & 0.71 & (0.17) & 0.001 & {\scriptsize $G_0$=15 closed} \\
+(b) Developer serves & clean & 77 & 18 & 0.45 & (0.26) & 0.390 & {\scriptsize $G_1$=7} \\
+\quad On-device target & clean & 77 & 18 & 0.22 & (0.23) & 0.410 & {\scriptsize $G_1$=2} \\
+\quad Local target & clean & 77 & 18 & 0.04 & (0.25) & 0.878 & {\scriptsize $G_1$=3} \\
+\quad Developer serves & clean + suites & 136 & 26 & 0.47 & (0.17) & 0.070 & {\scriptsize $G_1$=8} \\
+\quad On-device target & clean + suites & 136 & 26 & 0.57 & (0.24) & 0.209 & {\scriptsize $G_1$=2} \\
+(c) In a tier window & clean & 75 & 18 & $-$0.39 & (0.28) & 0.340 & {\scriptsize placebo $p$ 1.00} \\
+ & open universe & 133 & 52 & $-$0.16 & (0.21) & 0.523 & {\scriptsize placebo $p$ 0.59} \\
+\quad ln distance to cap & clean & 75 & 18 & 0.46 & (0.20) & 0.059 & {\scriptsize placebo $p$ 0.61} \\
+ & open universe & 133 & 52 & 0.62 & (0.16) & 0.005 & {\scriptsize placebo $p$ 0.37} \\
+(c) Excess mass & open 2023--26 & 220 & & 82.6 & (9.8) & & {\scriptsize share 0.51 vs 0.13} \\
+(c) Excess mass & clean & 77 & & 37.2 & (5.5) & & {\scriptsize share 0.58 vs 0.10} \\
+\addlinespace
+\multicolumn{8}{@{}l}{\textit{Panel B. Validation of levels}} \\[1pt]
+HF quantizations on $\ln M$ & clean & 74 & 16 & 0.61 & (0.11) & 0.018 & {\scriptsize } \\
+HF fine-tunes on $\ln M$ & clean & 74 & 16 & 0.87 & (0.18) & 0.029 & {\scriptsize } \\
+HF adapters on $\ln M$ & clean & 74 & 16 & 0.90 & (0.25) & 0.075 & {\scriptsize } \\
+HF all derivatives on $\ln M$ & clean & 74 & 16 & 0.80 & (0.17) & 0.031 & {\scriptsize } \\
+HF all on $\ln(T/D)$ & clean & 74 & 16 & 0.60 & (0.22) & 0.086 & {\scriptsize } \\
+\addlinespace
+\multicolumn{8}{@{}l}{\textit{Compute-weighted planned serving share $s_{agg}$, clean sample}} \\[1pt]
+Year & & $n$ & & Reference & [min, max] & & {\scriptsize leave out 405B} \\
+\quad 2023 & & 24 & & 0.28 & {\scriptsize[0.01, 0.60]} & & {\scriptsize 0.28} \\
+\quad 2024 & & 40 & & 0.58 & {\scriptsize[0.04, 0.81]} & & {\scriptsize 0.73} \\
+\quad 2025 & & 13 & & 0.83 & {\scriptsize[0.21, 0.96]} & & {\scriptsize 0.83} \\
+\multicolumn{4}{@{}l}{\quad Google 2019--21: inference share of ML energy} & 0.60 & & & \\
+\multicolumn{4}{@{}l}{\quad Facebook: inference share of AI power} & 0.70 & & & \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
+\begin{tablenotes}$G$: developer clusters. s.e.: cluster-robust (CRV1) standard error. $p$ (WCR): restricted wild cluster bootstrap-$t$ with Webb six-point weights, 9,999 draws (floor $10^{-4}$), clustered by developer. (a) Production-scale universe (6ND $\ge10^{21}$, 2019--2026; open-weight and closed models), confident $N$ and $D$ only (Epoch `Confident' or documented), no MoE, no non-transformer, clean-sample exclusions for verified models. (b) Serving: developer operated a commercial API or consumer product serving its own LLMs at release (coding with sources in \texttt{ra2\_wedge\_coding.csv}); on-device/local: stated target in the model card. Both entered jointly; clean + suites adds the research suites and replications. $G_1$ ($G_0$): developer clusters with (without) the attribute, e.g.\ closed models in (a); with $G_1\le3$ the wild cluster bootstrap is unreliable \citep{mackinnon2018wild} and the on-device and local rows are not informative. (c) Tier windows at quantized memory boundaries: 2.4--3.3B, 6.5--9.5B, 11.5--14.9B, 26--32.9B, 65--72.9B parameters; placebo = share of 999 shifted tier menus (edges multiplied by $e^{u}$, $u\sim U(-0.69,0.69)$) giving a coefficient at least as favorable to the tier story; because $\ln w$ is a deterministic function of $(N,C)$ under one technology, tier regressors correlate with $\ln w$ mechanically and only the placebo comparison is informative. Excess mass: polynomial (degree 5) counterfactual of the $\log_{10}N$ histogram (0.1 bins) excluding the windows; bootstrap s.e.\ (999). Panel B: HF = number of derivative repositories (quantizations, fine-tunes, adapters, merges) of the base and official post-trained releases, $\ln(1+\cdot)$. $s_{agg}=\sum(w_i^+-1)C_i/\sum w_i^+C_i$, $w^+=\max(w,1)$. Benchmarks: \citet{patterson2022carbon}, about three-fifths of Google's ML energy (one week of April 2019, 2020, 2021; research, development and production); \citet{wu2022sustainable}, power-capacity split 10:20:70 of experimentation, training and inference at Facebook. These are realized flows of whole fleets, not planned lifetime shares of a release cohort.\end{tablenotes}
+\begin{tablenotes}[Source]Module ra2\_wedge; \texttt{ra2\_wedge\_conduct.csv}, \texttt{ra2\_wedge\_bunching.csv}, \texttt{ra2\_wedge\_validation\_hf.csv}, \texttt{ra2\_wedge\_aggregate.csv}.\end{tablenotes}
+\end{table}

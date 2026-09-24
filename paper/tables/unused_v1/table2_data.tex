@@ -1,0 +1,59 @@
+% Table 2 (Section III): datasets. Sources of every number: see paper/notes/writer_data.md.
+\begin{table}[tp]
+\centering
+\caption{Data}
+\label{tab:data}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{29mm}rccc>{\raggedright\arraybackslash}p{16.5mm}>{\raggedright\arraybackslash}p{28mm}@{}}
+\toprule
+ & & & & $\mathrm{sd}(\ln M$ & & \\
+Dataset & Units & $N$ & $M=D/N$ & $|\,\ln C)$ & Output & Use (Section) \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A. Public designed sweeps (unit: training run)}}\\[1pt]
+Chinchilla (Epoch digitization) & 240 & 57M--16B & 0.46--341 & 1.35 & MassiveText & Estimators, duality (\ref{sec:tech}); reference $w$ (\ref{sec:wedge}) \\
+Farseer & 404 & 0.10--6.4B$^{a}$ & 0.31--2,570 & 1.97 & Bits/char & $\sigma$ with $\kappa$ free (\ref{sec:tech}); $w$ band (\ref{sec:wedge}) \\
+Gadre et al., 3 web corpora & 104 & 11M--6.9B & 5--640 & 1.44 & C4 & $\sigma$, data quality (\ref{sec:tech}); benchmark (\ref{sec:obs}) \\
+OLMo ladder & 30 & 0.19--3.2B$^{b}$ & 10--200 & 0.94 & C4 & $\sigma$ (\ref{sec:tech}); AI2 $w$ (\ref{sec:wedge}); benchmark (\ref{sec:obs}) \\
+Muennighoff et al., one epoch & 33 & 7M--8.7B & 0.04--303 & 1.97 & C4 & $\sigma$ (\ref{sec:tech}) \\
+DataDecide, 25 recipes & 1,100$^{c}$ & 4M--1.2B$^{b}$ & 5--110 & 0.73$^{c}$ & C4 & Recipe neutrality (\ref{sec:tech}) \\
+Llama 3 IsoFLOPs (digitized) & 133 & 59M--17B & 0.44--643 & -- & Unstated & Lab technology, duality (\ref{sec:tech}, \ref{sec:wedge}) \\
+Marin IsoFLOPs, 3 corpora & 258 & 0.16--12B & 0.10--2,751 & -- & Paloma & Duality (\ref{sec:tech}) \\
+Porian et al. & 975 & 5M--0.90B$^{d}$ & IsoFLOP$^{d}$ & -- & Train loss & Input measurement, tuning (\ref{sec:tech}) \\
+Step Law & 1,911$^{e}$ & 0.21--1.07B$^{a}$ & 19--466 & -- & Train loss & Flexible inputs (\ref{sec:tech}) \\[2pt]
+\multicolumn{7}{@{}l}{\textit{Panel B. Our controlled experiment (unit: training run)}}\\[1pt]
+FineWeb-Edu and FineWeb ``labs'' & $2\times44^{f}$ & 0.39--49M$^{a}$ & 0.51--2,031 & 1.96 & Both corpora & Technology, neutrality, extrapolation (\ref{sec:tech}) \\[2pt]
+\multicolumn{7}{@{}l}{\textit{Panel C. Observational data (unit: released model)}}\\[1pt]
+Sample B: open-weight base models & 173 & 70M--406B$^{g}$ & 2.1--60,398 & -- & -- & Revealed demand, validation (\ref{sec:wedge}) \\
+Production-scale universe & 335 & 0.14--600B$^{g}$ & 0.2--60,398 & -- & -- & Trends, rivals, aggregate (\ref{sec:wedge}) \\
+Benchmark panel & 128 & 70M--180B & 2.1--24,290 & 1.64 & Log odds & LaLonde test, TFP (\ref{sec:obs}) \\
+\citet{ho2024algorithmic} sample & 231 & 2M--280B & 0.001--204$^{h}$ & -- & Log ppl. & Algorithmic progress (\ref{sec:obs}) \\
+Epoch language models & 247 & 65M--540B & 0.3--24,000 & -- & -- & Allocative efficiency (\ref{sec:obs}) \\
+\bottomrule
+\end{tabular*}
+\vspace{3pt}
+\begin{tablenotes}
+$N$ is parameters (total, including embeddings, unless marked), $D$ is tokens processed, $M=D/N$ and $C=6ND$; ranges
+are over the estimation sample. The off-path spread $\mathrm{sd}(\ln M\,|\,\ln C)$ is the residual standard deviation
+of an OLS regression of $\ln M$ on $\ln C$; it is zero for a sample of compute-optimal runs. ``--'': not computed
+(IsoFLOP designs) or not applicable. Output: validation cross-entropy in nats per token on the named corpus unless
+stated; tokenizers differ across rows. ``Log odds'': of above-chance benchmark accuracy. ``Log ppl.'': log perplexity,
+mostly per word. Roman numerals refer to sections.
+$^{a}$Non-embedding parameters. In our experiment $N$ including the tied embedding is 1.4--54M, $M$ is 0.46--555 and
+the off-path spread is 1.74.
+$^{b}$Excludes the input embedding only.
+$^{c}$25 recipes $\times$ 14 sizes $\times$ 3 seeds (5 at 1B); 21,888 intermediate checkpoints enter estimation, and
+the spread is computed over them (0.71 over unique size-step design points).
+$^{d}$16 architectures; $N$ includes the output head (non-embedding $N$ is 0.33M--0.83B). Losses are read along each
+run's curve at 12 IsoFLOP budgets from $1.25\times10^{16}$ to $2.6\times10^{19}$ FLOP.
+$^{e}$17 $(N,D)$ cells, each with a grid of learning rates and batch sizes.
+$^{f}$44 $(N,D)$ endpoints per lab, each evaluated on the held-out sets of both corpora; plus 18 seed replicates
+(FineWeb-Edu).
+$^{g}$Active parameters for mixture-of-experts models.
+$^{h}$$D$ is dataset size (unique tokens), not tokens processed.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations from the sources cited in Section~\ref{sec:data}; Panel B: this paper. Online Appendix B gives
+details.
+\end{tablenotes}
+\end{table}

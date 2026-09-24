@@ -1,0 +1,28 @@
+\begin{table}[tp]
+\centering
+\caption{Sensitivity of the Revealed Serving Share to the Cost Side}
+\label{tab:ra2-costsens}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
+\sbox{\ratabbox}{%
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+ & & & \multicolumn{2}{c}{Share $s$} & \multicolumn{2}{c}{Median $T/D$} & \multicolumn{2}{c}{Llama 3 8B $T/D$} \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(l){8-9}
+Case & $\delta$ & $\eta$ & median & Llama 3 8B & $p=1$ & $p=10$ & $p=1$ & $p=10$ \\
+\midrule
+A & $-$0.1 & 0.90 & 0.77 & 0.87 & 10.3 & 1.0 & 19.4 & 1.9 \\
+A & 0.0 & 1.00 & 0.75 & 0.85 & 9.0 & 0.9 & 17.2 & 1.7 \\
+A & 0.1 & 1.10 & 0.72 & 0.84 & 7.9 & 0.8 & 15.3 & 1.5 \\
+B & 0.0 & 0.50 & 0.86 & 0.92 & 17.9 & 1.8 & 34.4 & 3.4 \\
+B & 0.0 & 0.75 & 0.80 & 0.88 & 11.9 & 1.2 & 22.9 & 2.3 \\
+B & 0.0 & 1.00 & 0.75 & 0.85 & 9.0 & 0.9 & 17.2 & 1.7 \\
+B & 0.0 & 1.25 & 0.70 & 0.82 & 7.2 & 0.7 & 13.7 & 1.4 \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
+\begin{tablenotes}Lifetime cost $6N^{1+\delta}D+2pN^{\eta}T$ in training-FLOP units at the model's own size: $\delta$ = elasticity of training cost per FLOP in $N$ (model FLOPs utilization falling or rising with size), $\eta$ = elasticity of serving cost per token in $N$, $p$ = price of a serving FLOP relative to a training FLOP. First-order condition: $w=(1+\delta)+\eta K_{inf}/K_{tr}$, so the serving/training expenditure ratio is $(w-1-\delta)/\eta$, $s=(w-1-\delta)/(w-1-\delta+\eta)$ and $T/D=3(w-1-\delta)/(p\eta)$. Case A: $\eta=1+\delta$ ($w=(1+\delta)(1+pT/3D)$). Case B: $\delta=0$. $s$ does not depend on $p$. Clean sample, reference technology; $p=3$ columns are in the CSV.\end{tablenotes}
+\begin{tablenotes}[Source]Module ra2\_wedge; \texttt{ra2\_wedge\_costsens.csv}.\end{tablenotes}
+\end{table}

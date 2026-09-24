@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Planned Inference Shares and External Disclosures}
+\label{tab:ra3_disclosures}
+\begin{tabular}{p{3.2cm}p{2.0cm}p{1.6cm}p{5.0cm}c}
+\toprule
+Source & Firm & Period & Measure & Inference share \\
+\midrule
+Patterson et al. (2022) & Google & 2019--2021 & share of ML energy (one week each April; incl. research, development, testing) & 0.60 \\
+Wu et al. (2022) & Facebook/Meta & 2019--2021 & AI power capacity, experimentation:training:inference = 10:20:70 & 0.70 \\
+Wu et al. (2022) & Facebook/Meta & 2019--2021 & carbon footprint of the production language (translation) model LM & 0.65 \\
+Nvidia Q4 FY2024 earnings call (21 Feb 2024) & Nvidia (customers) & Feb 2023--Jan 2024 & share of data-center revenue for AI inference (hardware flow) & 0.40 \\
+You (2025), Epoch AI, from press reports & OpenAI & 2024 & inference / (inference + all R\&D compute), cloud spend & 0.26 \\
+You (2025), Epoch AI, from press reports & OpenAI & 2024 & inference / (inference + final training runs of released models) & 0.79 \\
+This paper (module ra2), implied fleet share & open-weight & 2024 & planned $s$ mapped to a fleet flow ($L=1$, $p=1$, $\rho\in[1,10.4]$) & [0.05, 0.36] \\
+This paper (module ra2), implied fleet share & open-weight & 2025 & planned $s$ mapped to a fleet flow ($L=1$, $p=1$, $\rho\in[1,10.4]$) & [0.18, 0.69] \\
+This paper (module ra2), implied fleet share & open-weight & All 2019--2025 & planned $s$ mapped to a fleet flow ($L=1$, $p=1$, $\rho\in[1,10.4]$) & [0.08, 0.47] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Disclosures are fleet flows (energy, capacity or hardware purchases in a period); the paper's $s$ is the planned lifetime share of a model's own final training run. The mapping $s_{\rm fleet}=pm\phi/(pm\phi+\rho)$ uses the planned multiple $m=w-1$, the vintage factor $\phi=(1-e^{-gL})/(gL)$ at the estimated compute growth $g$ and serving life $L$, the R\&D multiple $\rho$ (training compute of all runs relative to final runs; Epoch AI reports final runs at 9.6--22.6\% of R\&D compute) and the relative cost $p$ of an inference FLOP. Planned $m$: module ra2's compute-weighted aggregate on its clean open-weight universe (reference technology). Slower vintage growth (2--3$\times$ per year) raises the implied fleet shares (inference_share_flow.csv). The OpenAI rows are Epoch AI estimates from press reports, not firm disclosures.
+\end{tablenotes}
+\end{table}

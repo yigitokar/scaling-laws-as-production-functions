@@ -1,0 +1,62 @@
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\caption{Monte Carlo: what alternative experimental designs identify (common compute budget)}
+\label{tab:mc_designs}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{6}{c}{Primal estimator (Huber-LSE on $\ln L$, $\kappa=1$): bias [RMSE]} \\
+\cmidrule(lr){2-7}
+Design & $\alpha$ & $\beta$ & $a$ & $\gamma$ & $\sigma^*$ & $\ln M^*(10^{24})$ \\
+\midrule
+\multicolumn{7}{l}{\textit{Panel A. Sampling distribution of the primal (Approach-3) estimator}} \\
+(i) On-path, $v=0.02$ & 0.389 & 0.694 & 0.050 & 0.058 & $-$0.166 & $-$1.08 \\
+ & [0.980] & [1.274] & [0.296] & [0.096] & [0.222] & [23.8] \\[2pt]
+(ii) IsoFLOP, $\pm16\times$ & $-$0.001 & 0.000 & 0.001 & 0.000 & 0.000 & $-$0.02 \\
+ & [0.008] & [0.009] & [0.007] & [0.003] & [0.004] & [0.16] \\[2pt]
+(ii$'$) IsoFLOP, $\pm4\times$ & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.00 \\
+ & [0.020] & [0.020] & [0.015] & [0.008] & [0.009] & [0.31] \\[2pt]
+(iii) Factorial grid & 0.001 & 0.000 & $-$0.001 & 0.000 & 0.000 & 0.02 \\
+ & [0.013] & [0.012] & [0.012] & [0.005] & [0.005] & [0.28] \\[2pt]
+(iv) Optimizing labs, $v=0$ & 0.452 & 1.143 & 0.140 & 0.093 & $-$0.240 & $-$11.8 \\
+ & [1.129] & [1.609] & [0.331] & [0.113] & [0.272] & [27.7] \\[2pt]
+(iv) Optimizing labs, $v=0.1$ & $-$0.001 & 0.028 & 0.014 & $-$0.032 & $-$0.006 & $-$0.25 \\
+ & [0.168] & [0.189] & [0.225] & [0.051] & [0.025] & [4.58] \\[2pt]
+(iv) Optimizing labs, $v=0.3$ & 0.003 & 0.005 & 0.000 & $-$0.005 & $-$0.002 & 0.00 \\
+ & [0.071] & [0.079] & [0.098] & [0.016] & [0.013] & [1.97] \\[2pt]
+(iv) Optimizing labs, $v=1$ & 0.004 & 0.001 & $-$0.002 & 0.000 & $-$0.001 & 0.04 \\
+ & [0.028] & [0.032] & [0.029] & [0.011] & [0.012] & [0.59] \\[2pt]
+(v) Kaplan-belief labs, $N\propto C^{0.73}$ & $-$0.010 & 0.166 & $-$0.028 & $-$0.028 & $-$0.023 & 0.34 \\
+ & [0.065] & [0.576] & [0.265] & [0.072] & [0.102] & [4.97] \\[2pt]
+\midrule
+\multicolumn{7}{l}{\textit{Panel B. Dual estimator ($a$ from optima, $\gamma$ from $L^*(C)$, $\alpha=\gamma/a$, $\beta=\gamma/(1-a)$): RMSE}} \\
+(i) On-path, $v=0.02$ & 0.020 & 0.021 & 0.001 & 0.010 & 0.011 & 0.01 \\
+(ii) IsoFLOP, $\pm16\times$ & 0.029 & 0.030 & 0.007 & 0.015 & 0.016 & 0.14 \\
+(ii$'$) IsoFLOP, $\pm4\times$ & 0.033 & 0.033 & 0.018 & 0.015 & 0.016 & 0.36 \\
+(iv) Optimizing labs, $v=0$ & 0.021 & 0.022 & 0.000 & 0.011 & 0.012 & 0.00 \\
+(iv) Optimizing labs, $v=0.1$ & 0.021 & 0.022 & 0.003 & 0.011 & 0.012 & 0.05 \\
+(iv) Optimizing labs, $v=0.3$ & 0.022 & 0.024 & 0.008 & 0.011 & 0.012 & 0.14 \\
+(iv) Optimizing labs, $v=1$ & 0.032 & 0.034 & 0.026 & 0.013 & 0.015 & 0.48 \\
+(v) Kaplan-belief labs, $N\propto C^{0.73}$ & 0.058 & 0.425 & 0.217 & 0.036 & 0.088 & 3.92 \\
+\midrule
+\multicolumn{7}{l}{\textit{Panel C. Identification diagnostics and inference for $\sigma^*$}} \\
+ & cond$(J'J)$ & corner & Wald & bootstrap & profile CI & flat \\
+ & normalized & share (\%) & cover (\%) & cover (\%) & width & share (\%) \\
+\midrule
+(i) On-path, $v=0.02$ & $1.5\times10^{7}$ & 72 & 100$^{\dagger}$ & 44$^{\S}$ & full & 91 \\
+(ii) IsoFLOP, $\pm16\times$ & $1.4\times10^{3}$ & 0 & 96 & 97 & 0.016 & 0 \\
+(ii$'$) IsoFLOP, $\pm4\times$ & $4.0\times10^{3}$ & 0 & 94 & -- & 0.047 & 0 \\
+(iii) Factorial grid & $1.4\times10^{3}$ & 0 & 95 & 97 & 0.019 & 0 \\
+(iv) Optimizing labs, $v=0$ & $\infty$ & 87 & 100$^{\dagger}$ & -- & full & 95 \\
+(iv) Optimizing labs, $v=0.1$ & $6.6\times10^{5}$ & 0 & 99$^{\dagger}$ & -- & 0.903 & 21 \\
+(iv) Optimizing labs, $v=0.3$ & $7.4\times10^{4}$ & 0 & 93 & 96$^{\S}$ & 0.551 & 0 \\
+(iv) Optimizing labs, $v=1$ & $6.0\times10^{3}$ & 0 & 95 & 95 & 0.104 & 0 \\
+(v) Kaplan-belief labs, $N\propto C^{0.73}$ & $9.7\times10^{5}$ & 0 & 92$^{\dagger}$ & -- & 0.895 & 21 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} 500 replications per design; every design has 90 runs and the same total training compute $\sum 6ND = 5.1\times10^{22}$ FLOP (10 runs at each of Chinchilla's nine IsoFLOP budgets, $6\times10^{18}$--$3\times10^{21}$). Truth: Besiroglu et al.\ (2024) parameters ($\alpha=0.348$, $\beta=0.366$, $a=0.513$, $\gamma=0.178$, $\sigma^*=0.737$, $\ln M^*(10^{24})=2.90$, i.e.\ $M^*=18.1$ tokens per parameter). Log-loss noise sd $=0.0075$ (residual sd of the Besiroglu fit on the Chinchilla extraction). $v$ is the sd of allocation errors in $\ln(D/N)$ at fixed compute. Panel A: bias with RMSE in brackets. The primal estimator is the Hoffmann/Besiroglu Huber($10^{-3}$) fit of $\ln L$, L-BFGS-B from nine starting values drawn at random from Hoffmann et al.'s grid region (none at the truth; v2) within the box $\alpha,\beta\in[10^{-3},5]$; `corner' = estimate on the box boundary or one power-law term $<2\%$ of reducible loss at every design point. Panel B: the dual estimator uses the noisy optima (on-path/optimizing designs) or IsoFLOP parabola minima (Approach 2), and identifies $\alpha,\beta$ only through $\kappa=1$ and optimality. Panel C: condition number of $J'J$ at the truth with $A,B$ normalized at the geometric means of $N,D$; Wald = LAD-sandwich/delta-method 95\% CI coverage for $\sigma^*$ ($^{\dagger}$: covariance numerically singular or corner in $>5\%$ of replications; coverage over computable replications); bootstrap = pairs-bootstrap percentile CI (149 draws, first 150 replications), each draw warm-started at the replication's estimate ($^{\S}$: in a separate check on 60 fresh replications with 49 draws that also restarts every draw from the estimator's nine random starting values, on-path ($v=0.02$): 33\% warm-start vs 78\% multi-start coverage (median widths 0.042 vs 0.426); $v=0.3$: 100\% warm-start vs 100\% multi-start coverage (median widths 0.053 vs 0.053)); profile CI = median width of the 95\% profile-likelihood CI for $\sigma^*$ in the $\kappa$-generalized model $L=E+(AN^{-a_1}+BD^{-b_1})^{\kappa}$ with $\kappa$ free, on the grid $[0.05,0.99]$ (first 150 replications), inverting LR$=n\ln(\mathrm{SSR}(\sigma^*)/\mathrm{SSR}_{\min})$ against the $\chi^2_1$ critical value, with $\mathrm{SSR}_{\min}$ the unrestricted ($\kappa$ and $\sigma^*$ free) minimum; `full' = the median CI is the entire grid; CI endpoints are linear interpolations of LR between grid points (spacing 0.004--0.005 next to the truth); flat = share of replications whose profile CI is the entire grid. Dual estimator: frontier fitted from a $2\times2\times2$ grid of starting values (none at the truth).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

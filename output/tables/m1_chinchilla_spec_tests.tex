@@ -1,0 +1,44 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Specification Tests: CES, Outer Exponent, and Rank-One Curvature}
+\label{tab:m1_spec}
+\begin{threeparttable}
+\begin{tabular}{lccccc}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A. CES: $H_0:\alpha=\beta$ (Huber-LSE)}} \\
+ & $\hat\alpha-\hat\beta$ & s.e. & $z$ (p) & Restricted $\rho$ ($\sigma$) & Restricted $M^*(10^{21})$ \\
+$n=240$, pairs bootstrap & $-$0.0199 & 0.0293 & $-$0.68 (0.498) & 0.357 (0.737) & 24.2 \\
+$n=240$, cluster bootstrap & $-$0.0199 & 0.0660 & $-$0.30 (0.764) & 0.357 (0.737) & 24.2 \\
+$n=245$, pairs bootstrap & $-$0.1037 & 0.0578 & $-$1.80 (0.073) & 0.381 (0.724) & 25.4 \\
+$n=245$, cluster bootstrap & $-$0.1037 & 0.1131 & $-$0.92 (0.359) & 0.381 (0.724) & 25.4 \\
+\multicolumn{6}{l}{\textit{Panel B. Outer exponent: $L=E+(AN^{-a_1}+BD^{-b_1})^\kappa$, $H_0:\kappa=1$}} \\
+ & $\hat\kappa$ (Huber) & s.e. [95\% CI] & $z$ (p) & $\sigma^*$ ($\kappa$ free) & Gaussian LR (p) \\
+$n=240$, pairs bootstrap & 0.774 & 0.060 [0.66, 0.89] & $-$3.79 ($<$0.001) & 0.700 (0.015) & 46.2 ($<$0.001) \\
+$n=240$, cluster bootstrap & 0.774 & 0.111 [0.53, 0.96] & $-$2.03 (0.042) & 0.700 (0.018) & 46.2 ($<$0.001) \\
+$n=245$, pairs bootstrap & 0.700 & 0.052 [0.62, 0.82] & $-$5.75 ($<$0.001) & 0.664 (0.018) & 6.9 (0.008) \\
+$n=245$, cluster bootstrap & 0.700 & 0.169 [0.56, 1.24] & $-$1.78 (0.075) & 0.664 (0.028) & 6.9 (0.008) \\
+\multicolumn{6}{l}{\textit{Panel C. Rank-one curvature: translog of $\ln(L-E)$, $E$ fixed at the Huber estimate}} \\
+ & $b_{ND}$ ($t$) & $\tau=b_{NN}b_{DD}-b_{ND}^2$ & s.e. & $z$ vs.\ $\tau_{\text{model}}$ (p) & $b_{ND}/\sqrt{b_{NN}b_{DD}}$ \\
+$n=240$, delta method, HC1 & $-$0.0431 ($-$18.7) & $-5.06\times10^{-4}$ & $2.70\times10^{-4}$ & $-$1.87 (0.062) & $-$1.172 \\
+$n=240$, delta method, cluster(budget) & $-$0.0431 ($-$12.9) & $-5.06\times10^{-4}$ & $2.98\times10^{-4}$ & $-$1.69 (0.092) & $-$1.172 \\
+$n=240$, bootstrap (pairs), E re-estimated & $-$0.0431 ($-$12.1) & $-5.06\times10^{-4}$ & $2.82\times10^{-4}$ & $-$1.78 (0.075) & $-$1.172 \\
+$n=240$, bootstrap (cluster), E re-estimated & $-$0.0431 ($-$7.1) & $-5.06\times10^{-4}$ & $4.56\times10^{-4}$ & $-$1.10 (0.271) & $-$1.172 \\
+$n=240$, sensitivity: E = Hoffmann 1.6934, cluster & $-$0.0333 ($-$14.2) & $2.45\times10^{-4}$ & $1.43\times10^{-4}$ & 1.71 (0.087) & $-$0.905 \\
+$n=240$, sensitivity: E = Gaussian-log 1.8646, cluster & $-$0.0485 ($-$11.9) & $-1.06\times10^{-3}$ & $4.28\times10^{-4}$ & $-$2.47 (0.014) & $-$1.348 \\
+$n=245$, delta method, HC1 & $-$0.0618 ($-$15.9) & $-1.70\times10^{-3}$ & $5.51\times10^{-4}$ & $-$3.10 (0.002) & $-$1.341 \\
+$n=245$, delta method, cluster(budget) & $-$0.0618 ($-$12.2) & $-1.70\times10^{-3}$ & $6.42\times10^{-4}$ & $-$2.66 (0.008) & $-$1.341 \\
+$n=245$, bootstrap (pairs), E re-estimated & $-$0.0618 ($-$7.8) & $-1.70\times10^{-3}$ & $9.97\times10^{-4}$ & $-$1.70 (0.089) & $-$1.341 \\
+$n=245$, bootstrap (cluster), E re-estimated & $-$0.0618 ($-$3.8) & $-1.70\times10^{-3}$ & $1.57\times10^{-3}$ & $-$1.06 (0.287) & $-$1.341 \\
+$n=245$, sensitivity: E = Hoffmann 1.6934, cluster & $-$0.0437 ($-$11.1) & $3.87\times10^{-4}$ & $2.09\times10^{-4}$ & 1.85 (0.065) & $-$0.912 \\
+$n=245$, sensitivity: E = Gaussian-log 1.9918, cluster & $-$0.0818 ($-$9.5) & $-5.26\times10^{-3}$ & $1.68\times10^{-3}$ & $-$3.12 (0.002) & $-$2.162 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Panel A: bootstrap Wald test of $\alpha=\beta$ (300 draws; pairs or cluster over the 9 IsoFLOP budgets) and the restricted (homothetic CES) fit, $\sigma=1/(1+\rho)$. Panel B: the Kaplan-type nesting; $\kappa=1$ is Chinchilla; $\sigma^*=2/(2+a_1+b_1)$ depends only on the inner exponents (isoquants). Bootstrap draws are warm-started; the Gaussian LR compares Gaussian NLS fits with and without the restriction. Panel C: OLS of $z=\ln(L-E)$ on centred $(n,d)=(\ln N,\ln D)$, $\tfrac12 n^2$, $\tfrac12 d^2$, $nd$. Chinchilla implies a rank-one Hessian of $\ln R$ at every point, hence $\tau=0$, $b_{ND}<0$ and $b_{ND}/\sqrt{b_{NN}b_{DD}}=-1$; $\tau_{\text{model}}$ is $\tau$ computed on the fitted values of the Huber estimate at the same design (approximation error of the translog). Bootstrap rows re-estimate $E$ in every draw. Sensitivity rows fix $E$ at alternative values (the test is sensitive to $E$).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

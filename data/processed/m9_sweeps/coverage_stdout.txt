@@ -1,0 +1,2 @@
+16:55:08 [  349.5s]   coverage chi=0.22: 40 reps in 344s
+16:56:36 [  438.0s]   coverage chi=0.0: 40 reps in 89s

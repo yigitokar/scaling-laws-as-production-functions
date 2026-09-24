@@ -1,0 +1,11 @@
+check,tech,value,value2,passed
+r_max: penalty at 0.98 r_max finite; cost at 1.02 r_max infinite,k1,216342.41978798478,inf,True
+wedge-data multiple at w = 3: numeric vs closed form,k1,4.653560644349132,4.653560644349374,True
+r_max: penalty at 0.98 r_max finite; cost at 1.02 r_max infinite,kq,21056.49474150074,inf,True
+wedge-data multiple at w = 3: numeric vs closed form,kq,3.6150234916125252,3.61502349161276,True
+r_max: penalty at 0.98 r_max finite; cost at 1.02 r_max infinite,e70,24777.61036701661,inf,True
+wedge-data multiple at w = 3: numeric vs closed form,e70,3.602810865527755,3.6028108655280078,True
+equivalent member: same frontier as kappa = 1 refit (max rel. dev.),e70,2.220446049250313e-16,0.0,True
+r_max: penalty at 0.98 r_max finite; cost at 1.02 r_max infinite,e60,650.0252419616875,inf,True
+wedge-data multiple at w = 3: numeric vs closed form,e60,2.279507056954668,2.2795070569547775,True
+equivalent member: same frontier as kappa = 1 refit (max rel. dev.),e60,2.220446049250313e-16,0.0,True

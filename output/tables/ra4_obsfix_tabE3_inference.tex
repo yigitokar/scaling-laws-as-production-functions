@@ -1,0 +1,37 @@
+\begin{table}[tp]
+\centering
+\caption{Reconciling the Inference of the Original Table 8 (Family Fixed Effects)}
+\label{tab:app-inference}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l ccc ccc@{}}
+\toprule
+ & \multicolumn{3}{c}{$\theta_N$ bias $=0.203$} & \multicolumn{3}{c}{$\theta_D$ bias $=-0.262$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & SE Obs. & SE bias & $p$ & SE Obs. & SE bias & $p$ \\
+\midrule
+CR1, all $k$ (Table 8), normal & 0.082 & 0.086 & 0.019 & 0.161 & 0.163 & 0.11 \\
+CR1, singletons dropped, normal & 0.071 & 0.077 & 0.008 & 0.140 & 0.142 & 0.065 \\
+CR1, nested $k$, $t(18)$ & 0.055 & 0.063 & 0.005 & 0.110 & 0.112 & 0.031 \\
+CV3 jackknife, $t(18)$ & 0.052 & 0.059 & 0.003 & 0.104 & 0.106 & 0.024 \\
+\addlinespace[2pt]
+WCR, benchmark fixed (Table 8) &  &  & 0.046 &  &  & 0.024 \\
+WCR, benchmark fixed, nested $k$ &  &  & 0.044 &  &  & 0.025 \\
+WCR, with benchmark draws &  &  & 0.048 &  &  & 0.028 \\
+WCU, with benchmark draws &  &  & $<$0.0001 &  &  & 0.010 \\
+WCR, family weights &  &  & 0.031 &  &  & 0.024 \\
+WCR, model weights &  &  & 0.010 &  &  & 0.030 \\
+WCR, CV3-studentized, with benchmark draws &  &  & 0.048 &  &  & 0.011 \\
+\addlinespace[2pt]
+Effective clusters $G^*$ (of 19) & \multicolumn{3}{c}{4.3} & \multicolumn{3}{c}{4.1} \\
+Bias, one developer left out & \multicolumn{3}{c}{$[0.157,0.224]$} & \multicolumn{3}{c}{$[-0.339,-0.193]$} \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+Family fixed-effects rows of the original Table 8 (HellaSwag, 57 models, benchmark including OLMo-2). The bias and the benchmark are as published; only inference changes. SE (bias) adds the design-conditional bootstrap standard error of the benchmark (0.029 for $\theta_N$, 0.020 for $\theta_D$). The CR1 small-sample factor $\frac{G}{G-1}\frac{n-1}{n-k}$ is 2.24 on the variance when $k=32$ counts the family dummies (15 of the 30 families are singletons), 1.64 with singletons dropped, and 1.04 when fixed effects nested within developer clusters are not counted \citep{cameron2015practitioner}. A bootstrap-$t$ is invariant to this constant; a normal reference is not, which is why the original table paired a $p$-value of 0.02 with a $t$-ratio of 1.6. WCR/WCU: restricted/unrestricted wild-cluster bootstrap-$t$, developer clusters, Webb weights, 9,999 draws \citep{cameron2008bootstrap,webb2023reworking}; subcluster: weights drawn by family or by model with developer-clustered standard errors \citep{mackinnon2018wild}; CV3-studentized: the bootstrap statistic uses the CV3 standard error of $\text{Obs.}-\text{Exp.}$ in the sample and in every draw. CV3: jackknife by developer \citep{mackinnon2023cluster}. $G^*$: \citet{carter2017asymptotic} with $\rho=0$. Identifying variation for $\theta_D$ (partial leverage) by developer: Cerebras 37\%, Microsoft 28\%, Meta 12\%, BigScience 7\%; 7 of 19 developers contribute nothing (they have only singleton families) and 2 more under 0.1\%; by family: Cerebras-GPT 37\%, Phi 28\%, OPT 9\%.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations; see Table~\ref{tab:app-matched}.
+\end{tablenotes}
+\end{table}

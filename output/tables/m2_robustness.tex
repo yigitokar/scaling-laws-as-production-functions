@@ -1,0 +1,41 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\caption{Robustness of the Technology Estimates}
+\label{tab:techrobust}
+\begin{threeparttable}
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{3}{c}{Huber-LSE} & \multicolumn{3}{c}{Gaussian NLS} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Specification & $\sigma^*$ & $a$ & $M^*(10^{21})$ & $\sigma^*$ & $a$ & $M^*(10^{21})$ \\
+\midrule
+Farseer: baseline & 0.772 (0.010) & 0.526 (0.022) & 24.8 & 0.769 (0.006) & 0.522 (0.013) & 22.2 \\
+Farseer: $N$ incl. embeddings & 0.724 (0.011) & 0.411 (0.017) & 19.8 & 0.721 (0.007) & 0.406 (0.010) & 18.2 \\
+Farseer: training loss (nats/token) & 0.785 (0.012) & 0.535 (0.026) & 18.1 & 0.786 (0.007) & 0.537 (0.016) & 16.4 \\
+Farseer: clusters = model size & 0.772 (0.009) & 0.526 (0.014) & 24.8 & 0.769 (0.005) & 0.522 (0.014) & 22.2 \\
+Gadre C4: baseline & 0.795 (0.020) & 0.509 (0.072) & 6.9 & 0.803 (0.020) & 0.472 (0.086) & 24.3 \\
+Gadre C4: in-distribution eval & 0.799 (0.019) & 0.487 (0.078) & 9.8 & 0.806 (0.017) & 0.464 (0.079) & 26.0 \\
+Gadre C4: non-embedding $N$ & 0.806 (0.016) & 0.534 (0.069) & 11.0 & 0.816 (0.018) & 0.517 (0.085) & 29.2 \\
+Gadre C4: CI-weighted NLS &  &  &  & 0.817 (0.027) & 0.478 (0.090) & 25.6 \\
+Gadre RedPajama: baseline & 0.795 (0.013) & 0.529 (0.045) & 5.8 & 0.809 (0.014) & 0.557 (0.066) & 8.1 \\
+Gadre RedPajama: in-distribution eval & 0.753 (0.018) & 0.559 (0.083) & 8.0 & 0.772 (0.018) & 0.517 (0.078) & 27.9 \\
+Gadre RedPajama: non-embedding $N$ & 0.808 (0.015) & 0.586 (0.042) & 4.8 & 0.821 (0.014) & 0.606 (0.070) & 8.9 \\
+Gadre RedPajama: CI-weighted NLS &  &  &  & 0.821 (0.022) & 0.566 (0.082) & 8.3 \\
+Gadre RefinedWeb: baseline & 0.796 (0.015) & 0.566 (0.055) & 3.4 & 0.806 (0.016) & 0.540 (0.069) & 10.4 \\
+Gadre RefinedWeb: in-distribution eval & 0.805 (0.018) & 0.564 (0.055) & 2.8 & 0.817 (0.015) & 0.585 (0.065) & 4.3 \\
+Gadre RefinedWeb: non-embedding $N$ & 0.806 (0.014) & 0.606 (0.059) & 3.8 & 0.818 (0.014) & 0.587 (0.075) & 11.7 \\
+Gadre RefinedWeb: CI-weighted NLS &  &  &  & 0.816 (0.020) & 0.544 (0.074) & 10.5 \\
+OLMo ladder: baseline & 0.825 (0.034) & 0.370 (0.177) & 48.3 & 0.833 (0.024) & 0.336 (0.126) & 59.7 \\
+OLMo ladder: task BPB output & 0.763 (0.030) & 0.353 (0.116) & 85.4 & 0.770 (0.033) & 0.359 (0.114) & 108 \\
+Muennighoff: single epoch & 0.735 (0.031) & 0.535 (0.126) & 59.6 & 0.723 (0.031) & 0.537 (0.128) & 86.8 \\
+Muennighoff: single epoch, $D/N\geq0.4$ & 0.726 (0.016) & 0.360 (0.086) & 139 & 0.711 (0.018) & 0.308 (0.083) & 222 \\
+Muennighoff: $\leq$4 epochs & 0.732 (0.014) & 0.522 (0.067) & 71.6 & 0.719 (0.014) & 0.512 (0.074) & 95.8 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Bootstrap standard errors in parentheses (400 draws for baselines, 200 for variants). $N$ incl. embeddings adds the two untied 65,536-row embedding matrices to Farseer's non-embedding count. Training loss: Farseer's smoothed single-epoch training loss (nats/token) instead of English BPC. In-distribution eval: Paloma subset of the training corpus instead of C4. CI-weighted: weights $1/\widehat{se}^2(\ln L)$ from the reported token-level 95\% intervals. Muennighoff $\leq$4 epochs treats up to 4 passes over unique data as fresh tokens; $D/N\geq0.4$ drops the two single-epoch runs trained on 100M tokens with 1.1B and 2.8B parameters (the exclusion rule Besiroglu et al. apply to the Chinchilla sample).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

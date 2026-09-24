@@ -1,0 +1,38 @@
+% Online Appendix Table D11: the compute cost of over-training (output/tables/ra1_modelfree_practitioner.csv,
+% ra1_modelfree_practitioner_devries.csv). Writer appendix_D_F, 2026-09-24.
+\begin{table}[tp]
+\centering
+\caption{The Compute Cost of Over-Training}
+\label{tab:app-overhead}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccc@{}}
+\toprule
+ & \multicolumn{4}{c}{Training compute $C/C_{\min}$ at $M=k\,M^*$} & \multicolumn{4}{c}{Implied wedge $w=k^{1/\sigma^*-1}$} & Share $s$ \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(l){10-10}
+$\sigma^*$ & $k=2$ & $k=10$ & $k=100$ & $k=1{,}000$ & $k=2$ & $k=10$ & $k=100$ & $k=1{,}000$ & $k=100$ \\
+\midrule
+0.60 & 1.08 & 2.24 & 14.3 & 129 & 1.59 & 4.64 & 21.5 & 100 & 0.95 \\
+0.70 & 1.05 & 1.73 & 7.23 & 49.8 & 1.35 & 2.68 & 7.20 & 19.3 & 0.86 \\
+0.74 & 1.04 & 1.57 & 5.42 & 31.3 & 1.28 & 2.25 & 5.04 & 11.3 & 0.80 \\
+0.80 & 1.03 & 1.39 & 3.52 & 14.5 & 1.19 & 1.78 & 3.16 & 5.62 & 0.68 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{tablenotes}
+Compute needed to reach the loss of the compute-optimal model when training at $k$ times the compute-optimal
+tokens-per-parameter ratio, relative to the minimum, in the Chinchilla family:
+$C/C_{\min}=((\alpha+\beta w)/(\alpha+\beta))^{1/\gamma}w^{-1/\alpha}$ with $\ln w=(1/\sigma^*-1)\ln k$. Entries are for
+the homothetic case $\alpha=\beta=\rho=1/\sigma^*-1$, where $C/C_{\min}=\cosh(\rho\ln k/2)^{2/\rho}$; every entry was
+checked by direct minimization. At the same $\sigma^*$, the $\alpha/\beta$ split of \citet{besiroglu2024chinchilla}
+changes the entries by at most 4.5 percent and that of \citet{hoffmann2022training} by at most 19 percent for $k\le100$
+($k$ relative to $M^*$ at the model's own compute). $s=(w-1)/w$ is the expenditure share of the value of compactness
+that rationalizes over-training by $k$ (Proposition~\ref{prop:wedge}); for a developer that serves its model it is the
+planned serving share of lifetime cost. With the parameters of \citet{devries2023go} ($\alpha=0.32$, $\beta=0.28$,
+$\sigma^*=0.77$), a model at 30 percent of the compute-optimal size needs 6.6 times the tokens and 99 percent more
+compute ($k=21.1$); the formula gives 99 percent.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Authors' calculations; \citet{devries2023go}.
+\end{tablenotes}
+\end{table}

@@ -1,0 +1,60 @@
+% Table 6 -- revealed inference demand, selected models (condensed from output/tables/m3_wedge_table5.tex and
+% m3_wedge_models.csv; reference technology = chin, band = band_lo/band_hi, own law = w_meta_a2 / w_olmo)
+\begin{table}[tp]
+\centering
+\caption{Revealed Inference Demand for Selected Models}
+\label{tab:wedge}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}lrrrcrrcc@{}}
+\toprule
+ & $N$ & $D$ & & $\hat w$ & & & Technology & Own \\
+Model & (B) & (T) & $M$ & [95\% CI] & $\hat T/D$ & CE & band & law \\
+\midrule
+\multicolumn{9}{@{}l}{\textit{Panel A. Meta}} \\
+Llama 2 70B$^{f}$ & 69.0 & 2.00 & 29 & 1.19 [0.93, 1.67] & 0.6 & 0.98 & [0.55, 3.77] & 0.98 \\
+Llama 3 8B & 8.03 & 15.0 & 1,868$^{e}$ & 5.27 [3.97, 8.12] & 12.8 & 0.18 & [2.48, 12.0] & 3.09 \\
+Llama 3 70B & 70.6 & 15.0 & 213 & 2.48 [1.81, 3.81] & 4.4 & 0.58 & [1.02, 7.55] & 1.63 \\
+Llama 3.1 405B$^{f}$ & 406 & 15.6 & 38 & 1.37 [0.99, 2.22] & 1.1 & 0.93 & [0.42, 5.73] & 0.98 \\
+\addlinespace
+\multicolumn{9}{@{}l}{\textit{Panel B. Other open-weight families}} \\
+Qwen2.5 0.5B & 0.494 & 18.0 & 36,435$^{e}$ & 14.8 [11.4, 22.7] & 41.5 & 0.02 & [6.20, 23.7] & \\
+Qwen2.5 72B$^{f}$ & 72.7 & 18.0 & 248 & 2.62 [1.91, 4.07] & 4.9 & 0.54 & [1.06, 8.01] & \\
+Qwen3 0.6B & 0.596 & 36.0 & 60,398$^{e}$ & 17.9 [13.5, 28.5] & 50.8 & 0.01 & [6.95, 29.4] & \\
+Qwen3 32B$^{f}$ & 32.8 & 36.0 & 1,099$^{c}$ & 4.46 [3.22, 7.33] & 10.4 & 0.24 & [1.98, 11.9] & \\
+Gemma 3 1B$^{\dagger}$ & 1.00 & 2.00 & 2,000$^{e}$ & 5.19 [4.24, 7.00] & 12.6 & 0.18 & [3.11, 8.98] & \\
+Gemma 3 27B$^{f\dagger}$ & 27.0 & 14.0 & 518$^{c}$ & 3.37 [2.52, 5.20] & 7.1 & 0.38 & [1.62, 8.98] & \\
+OLMo 2 1B & 1.48 & 4.05 & 2,727$^{e}$ & 5.86 [4.67, 8.30] & 14.6 & 0.15 & [1.01, 10.6] & 2.01 \\
+OLMo 2 32B$^{f}$ & 32.2 & 6.15 & 191 & 2.34 [1.78, 3.42] & 4.0 & 0.61 & [0.23, 6.42] & 0.91 \\
+SmolLM2 135M & 0.135 & 2.00 & 14,868$^{e}$ & 10.4 [8.71, 13.7] & 28.2 & 0.04 & [4.93, 14.7] & \\
+DeepSeek-V3$^{\ddagger}$ & 37.0 & 14.8 & 400$^{c}$ & 3.09 [2.29, 4.73] & 6.3 & 0.43 & [1.40, 8.54] & \\
+\addlinespace
+\multicolumn{9}{@{}l}{\textit{Panel C. Stated compute-optimal, Kaplan-era, and fixed-$D$ designs}} \\
+Chinchilla 70B & 70.0 & 1.40 & 20 & 1.04 [0.82, 1.42] & 0.1 & 1.00 & [0.49, 3.28] & \\
+GPT-3 175B & 175 & 0.300 & 1.7 & 0.43 [0.35, 0.57] & $-$1.7 & 0.61 & [0.19, 1.66] & \\
+Pythia 12B$^{f}$ & 11.8 & 0.300 & 25 & 1.09 [0.93, 1.36] & 0.3 & 0.99 & [0.75, 2.66] & \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\begin{tablenotes}
+$N$ is the parameter count in billions (active parameters for the mixture-of-experts model$^{\ddagger}$); $D$ is
+training tokens in trillions; $M=D/N$. $\hat w=\varepsilon_N/\varepsilon_D$ at the model's $(N,D)$ under the reference
+technology (Huber refit of the Chinchilla extraction; Section~\ref{sec:tech}), with a 95 percent pairs-bootstrap interval
+(400 draws). $\hat T/D=3(\hat w-1)$ is planned lifetime inference tokens per training token, and $\hat w-1$ is planned
+lifetime inference compute as a multiple of training compute; negative values are not inference demand. CE
+$=C_{\min}(L)/(6ND)$ is Farrell cost efficiency relative to the training-only frontier. Technology band: union of the
+95 percent intervals (or point estimates) for $\hat w$ under the Chinchilla refit, \citet{besiroglu2024chinchilla},
+\citet{hoffmann2022training} (Approach 3), Farseer with $N$ including and excluding embeddings, and \citet{gadre2024language}
+(RefinedWeb), plus the developer's own technologies for Meta and AI2 models; it is a sensitivity envelope, not a
+confidence set. Own law: $\hat w$ under Meta's Llama~3 IsoFLOP law (Approach 2 with $\kappa=1$) for Meta models and under
+AI2's OLMo ladder for OLMo~2. $^{f}$Flagship (largest model of its family). $^{\dagger}$Distilled from a larger model.
+$^{c}$/$^{e}$: $M$ above the largest ratio in the Chinchilla design (341) / also above that in the Farseer design with
+embeddings counted (1,227). Llama~3 and Llama~3.1 8B and 70B have identical $N$ and $D$.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Panels A and B: Sample B (Section~\ref{sec:data}; parameter counts from the released weights, token counts from
+developer documentation). Panel C: \citet{epochai2026data} for Chinchilla and GPT-3 (GPT-3 tokens from
+\citealt{brown2020language}); \citet{biderman2023pythia} for Pythia. Authors' calculations.
+\end{tablenotes}
+\end{table}

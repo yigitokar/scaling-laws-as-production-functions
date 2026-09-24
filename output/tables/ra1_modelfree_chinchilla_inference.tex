@@ -1,0 +1,45 @@
+\begin{table}[tp]
+\centering
+\caption{Inference on the Chinchilla Data: Clusters, Wild Bootstrap and Profiles}
+\label{tab:chin-inference}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccc@{}}
+\toprule
+Scheme & $\alpha$ & $\beta$ & $a$ & $\sigma^*$ & $M^*(5.76\times10^{23})$ & $w$(70B) & $\kappa$ & $p(\kappa=1)$ & $p(\alpha=\beta)$ \\
+\midrule
+\multicolumn{10}{@{}l}{\textit{Panel A. Estimates and standard errors by bootstrap scheme ($n=240$)}} \\
+Estimate & 0.347 & 0.367 & 0.514 & 0.737 & 17.9 & 1.04 & 0.774 & & \\
+Pairs (runs) & (0.015) & (0.021) & (0.020) & (0.006) & [7.4, 35.4] & [0.82, 1.43] & (0.057) & $<$0.001 & 0.488 \\
+9 budget clusters (all runs) & (0.025) & (0.050) & (0.049) & (0.011) & [3.7, 178.7] & [0.48, 1.89] & (0.116) & 0.052 & 0.772 \\
+Budgets + trunks (44) & (0.018) & (0.042) & (0.040) & (0.009) & [5.2, 105.8] & [0.58, 1.65] & (0.079) & 0.004 & 0.721 \\
+Budgets + singletons (117) & (0.018) & (0.041) & (0.039) & (0.009) & [5.9, 109.0] & [0.58, 1.56] & (0.076) & 0.003 & 0.712 \\
+Wild, Feng--He--Hu (runs) & (0.014) & (0.016) & (0.017) & (0.005) & [10.5, 37.4] & [0.80, 1.26] & (0.054) & $<$0.001 & 0.395 \\
+Wild cluster, Webb (44) & (0.020) & (0.029) & (0.021) & (0.011) & [9.2, 37.3] & [0.81, 1.32] & (0.062) & $<$0.001 & 0.503 \\
+\addlinespace
+\multicolumn{10}{@{}l}{\textit{Panel B. Likelihood-ratio tests}} \\
+ & \multicolumn{3}{c}{Laplace quasi-LR} & \multicolumn{3}{c}{Gaussian LR} & \multicolumn{2}{c}{Koenker--Bassett} & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-9}
+$H_0$ & Stat. & $p_{\chi^2}$ & $p_{\text{boot}}$ & Stat. & $p_{\chi^2}$ & $p_{\text{boot}}$ & Stat. & $p_{\chi^2}$ & \\
+$\kappa=1$ & 31.2 & $<$0.001 & 0.001 & 46.2 & $<$0.001 & 0.001 & 20.7 & $<$0.001 & \\
+$\alpha=\beta$ & 1.8 & 0.175 & 0.399 & 10.4 & 0.001 & 0.171 & 1.2 & 0.274 & \\
+\addlinespace
+\multicolumn{10}{@{}l}{\textit{Panel C. Profile over $\sigma^*$ with $\kappa$ free, grid (0.05, 0.99)}} \\
+Sample & Statistic & & $\hat\sigma^*$ & 95\% set & Grid edge hit & Max.\ LR & & & \\
+Full design ($n=240$) & Laplace QLR & & 0.701 & [0.69, 0.71] & none & 816.8 & & & \\
+Full design ($n=240$) & Koenker-Bassett LR & & 0.701 & [0.69, 0.72] & none & 1405.9 & & & \\
+Full design ($n=240$) & Gaussian LR & & 0.680 & [0.67, 0.69] & none & 717.6 & & & \\
+On-path band ($n=41$) & Laplace QLR & & 0.342 & [0.20, 0.99] & upper & 24.3 & & & \\
+On-path band ($n=41$) & Koenker-Bassett LR & & 0.342 & [0.15, 0.99] & upper & 16.5 & & & \\
+On-path band ($n=41$) & Gaussian LR & & 0.215 & [0.15, 0.77] & none & 16.4 & & & \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Epoch's digitization of the Chinchilla runs \citep{besiroglu2024chinchilla}: 245 runs, 137 on nine IsoFLOP profiles and 108 off-profile, training FLOP $1.4\times10^{18}$--$1.3\times10^{22}$; five highest-loss runs dropped ($n=240$: 132 on profiles, 108 off). Estimator: Huber loss ($\delta=10^{-3}$) on $\ln L$, least absolute deviations in practice (84\% of residuals in the linear region). Panel A: bootstrap standard errors in parentheses and 95\% percentile intervals in brackets, 999 draws per scheme. Pairs: resample runs; 9 budget clusters: every run assigned to the nearest IsoFLOP budget (the original scheme); budgets + trunks: IsoFLOP runs clustered by budget, off-profile runs by model size; budgets + singletons: off-profile runs as their own clusters; wild: design held fixed, $y^*=\hat y+v|\tilde r|$ around the $\kappa$-free fit with Feng--He--Hu weights $v=\pm1$ and leverage-adjusted residuals \citep{feng2011wild}; wild cluster: one Webb weight per cluster \citep{webb2023reworking}. $p$-values: Wald with the scheme's standard error. Panel B: statistics relative to the unrestricted fit; $p_{\text{boot}}$ from a restricted wild (Feng--He--Hu) bootstrap that generates the data under $H_0$ (999 draws; smallest attainable $p$ = 0.001); Koenker--Bassett: $4\hat f(0)(S_1^r-S_1^u)$ with $S_1$ the sum of absolute log residuals. Heteroskedasticity-robust Wald statistics for the Gaussian fit of $\alpha=\beta$: 3.54 (HC1, $p=0.060$) and 2.90 (HC3, $p=0.089$), against 10.64 under homoskedasticity. Wild schemes draw around the $\kappa$-free fit, whose Chinchilla-form pseudo-true values differ from the estimates ($w$(70B) 0.98, $M^*$ 21.3); basic intervals (in logs) are [10.2, 36.4] and [0.81, 1.27] (Feng--He--Hu). Panel C: profile of the $\kappa$-family objective over $\sigma^*=2/(2+a_1+b_1)$, statistics relative to the unconstrained optimum; sets use $\chi^2_1$ critical values. Restricted-bootstrap 95\% critical values of the Laplace quasi-LR at selected $\sigma^*$: full design, 0.69: 11.4; full design, 0.71: 9.0; full design, 0.74: 7.7; on-path band, 0.30: 6.5; on-path band, 0.74: 5.2 (299 draws each); with the largest endpoint critical value (11.4) the full-design set is [0.68, 0.72]. On-path band: runs with $|\ln N-\ln N^*(C)|\le0.15$ ($n=41$).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}; \citet{besiroglu2024chinchilla}; authors' calculations.
+\end{tablenotes}
+\end{table}

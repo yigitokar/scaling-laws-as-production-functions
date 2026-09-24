@@ -1,0 +1,55 @@
+% =====================================================================================================
+% Section VI: Conclusion. Writer: economics/conclusion writer (v2), 2026-09-24.
+% Numbers and sources: paper/notes/writer2_economics.md (conclusion part).
+% =====================================================================================================
+
+\section{Conclusion}\label{sec:concl}
+
+Optimization cuts both ways for measurement. Developers who choose model size and training data to minimize cost
+generate data that say little about the technology they optimize over---along the expansion path, information about
+curvature is fourth order in their allocation errors (Proposition~\ref{prop:ident})---and choices that say a good deal
+about what they optimize for. Designed training experiments break the circle. IsoFLOP designs identify the elasticity of
+substitution between parameters and data without a functional form (Proposition~\ref{prop:modelfree}), and the designs
+of three laboratories agree on about 0.7. Given the technology, over-training reveals the value developers place on
+compact models (Proposition~\ref{prop:wedge}). Under our reference technology, the median model in the clean sample of
+open-weight releases is built as if that value, which for developers that serve their models is planned serving
+expenditure, were three-quarters of lifetime cost; across open-weight releases, weighted by training compute, the share
+rose from 0.04 in 2019--2022 to 0.82 in 2025.
+\textcolor{red}{[TBD-m9: one sentence on what the controlled two-corpus experiment adds---$\sigma^*$ by corpus
+(model-free and $\kappa$ free), the neutrality verdict for FineWeb-Edu versus FineWeb, and the direction of the high-$M$
+extrapolation error.]}
+
+\emph{What economists should use.}---For substitution between parameters and data in frontier-scale language models,
+an elasticity of about 0.7: the model-free random-effects estimate across the large designs is 0.70, with a 95
+percent confidence interval of 0.67 to 0.72, and parametric estimates that free the outer exponent agree with it there.
+That the elasticity is below one is not a separate finding; it is what U-shaped IsoFLOP profiles imply
+(Lemma~\ref{lemma:sigma}). Values of 0.5 to 0.6 from small-scale sweeps are heterogeneous and are best read as
+design-specific. For mapping compute into loss, take the frontier elasticity $\gamma$ from the design whose compute range
+and data are closest to the application; for frontier-scale language models the large designs give 0.14 to 0.18. The
+allocation exponent and the compute-optimal ratio $M^*$ are not portable, and forecasts that depend on them, above all
+of data demand, should carry their range across designs. The expenditure share $s$ is best used as an ordinal and
+conditional measure. Its ranks and its trend are robust, and its sign is identified for 86 percent of the clean sample
+under weak assumptions (Proposition~\ref{prop:pi}); its level depends on $M^*(C)$ at frontier scale, which no public
+design observes, and it measures planned serving expenditure only for developers that serve their models.
+
+\emph{Implications for scaling studies.}---Studies that aim to measure the technology rather than to tune a recipe
+should place runs off the expansion path, estimate curvature from IsoFLOP profiles with the model-free estimator of
+Proposition~\ref{prop:modelfree}, and test rather than impose $\kappa=1$. They should also report design-conditional
+intervals and the uncertainty in $M^*(C)$, the object on which allocation decisions and economic forecasts depend most.
+
+\emph{Limitations.}---Four caveats bound these conclusions. First, units: losses and token counts come from different
+corpora, tokenizers, and counting conventions, so only unit-free objects compare across designs. Second, extrapolation:
+88 percent of the clean sample use more compute than any design, and a quarter lie beyond the tokens per parameter
+of the Farseer design. Where it can be checked, parametric extrapolation in tokens per parameter understates $w$, but nothing
+is observed at frontier compute. \textcolor{red}{[TBD-m9: what the high-$M$ extrapolation test adds.]} Third,
+disclosure: developers that do not report training tokens, including most closed developers, are absent, so the
+revealed-demand results describe open-weight releases. Fourth, the economic applications inherit outside inputs: the
+data-wall costs rest on repetition estimates from models of at most nine billion parameters, and loss is not
+capability.
+
+\emph{Extensions.}---The duality and identification arguments carry over to the isoquant between training and
+test-time compute \citep{snell2024scaling,brown2024large}, whose elasticity growth models calibrate only loosely
+\citep{erdil2025gate}, and to market structure, where a cost of quality that rises 50- to 160-fold per halving of
+reducible loss is an endogenous sunk cost in the sense of \citet{sutton1991sunk}. More
+broadly, designed training runs give production-function econometrics a rare setting in which what optimizing agents
+reveal, and what they conceal, can be checked against experimental variation.

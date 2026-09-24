@@ -1,0 +1,54 @@
+item,computed,ledger,tol,ok
+Hoffmann (rounded): a,0.45161290322580644,0.452,0.0006,True
+Hoffmann (rounded): gamma,0.1535483870967742,0.1535,0.0006,True
+Hoffmann (rounded): sigma*,0.7633587786259541,0.763,0.0006,True
+Hoffmann (rounded): M* at 1.00e+21,50.083586415566465,50.0,1.0,True
+Hoffmann (rounded): M* at 5.76e+23,92.64736675730495,93.0,1.0,True
+Hoffmann (rounded): M* at 3.80e+25,138.963353068495,139.0,1.0,True
+Hoffmann (TeX): a,0.4564973561929178,0.457,0.0006,True
+Hoffmann (TeX): gamma,0.15484390322063774,0.1548,0.0006,True
+Hoffmann (TeX): sigma*,0.7621660759879578,0.762,0.0006,True
+Hoffmann (TeX): M* at 1.00e+21,33.98314655881298,34.0,1.0,True
+Hoffmann (TeX): M* at 5.76e+23,59.07924553768629,59.0,1.0,True
+Hoffmann (TeX): M* at 3.80e+25,85.06070492183034,85.0,1.0,True
+Besiroglu: a,0.5126121076233184,0.513,0.0006,True
+Besiroglu: gamma,0.17828649103139016,0.1783,0.0006,True
+Besiroglu: sigma*,0.7370283018867925,0.737,0.0006,True
+Besiroglu: M* at 1.00e+21,21.589402331640063,21.6,0.6,True
+Besiroglu: M* at 5.76e+23,18.391244955314203,18.4,0.6,True
+Besiroglu: M* at 3.80e+25,16.5469964041231,16.5,0.6,True
+"Besiroglu w, Chinchilla 70B",1.0305637099988987,1.03,0.006,True
+"Besiroglu T/D, Chinchilla 70B",0.09169112999669604,0.09,0.02,True
+"Besiroglu C/C_min, Chinchilla 70B",1.000635084063041,1.0,0.011,True
+"Besiroglu w, Gopher 280B",0.3622060497142152,0.36,0.006,True
+"Besiroglu T/D, Gopher 280B",-1.9133818508573543,-1.91,0.02,True
+"Besiroglu C/C_min, Gopher 280B",2.0121320487961016,2.01,0.011,True
+"Besiroglu w, GPT-3 175B",0.42652906411600694,0.43,0.006,True
+"Besiroglu T/D, GPT-3 175B",-1.7204128076519793,-1.72,0.02,True
+"Besiroglu C/C_min, GPT-3 175B",1.644525208307378,1.64,0.011,True
+"Besiroglu w, Llama-2 7B",2.6153991738978517,2.62,0.006,True
+"Besiroglu T/D, Llama-2 7B",4.846197521693555,4.85,0.02,True
+"Besiroglu C/C_min, Llama-2 7B",1.8577920928921734,1.86,0.011,True
+"Besiroglu w, Llama-3 8B",5.217540071700789,5.22,0.006,True
+"Besiroglu T/D, Llama-3 8B",12.652620215102367,12.65,0.02,True
+"Besiroglu C/C_min, Llama-3 8B",5.512682788020667,5.51,0.011,True
+"Besiroglu w, Llama-3 70B",2.453778700680432,2.45,0.006,True
+"Besiroglu T/D, Llama-3 70B",4.361336102041296,4.36,0.02,True
+"Besiroglu C/C_min, Llama-3 70B",1.7205650942778843,1.72,0.011,True
+"Besiroglu w, Llama-3.1 405B",1.3518186355471187,1.35,0.006,True
+"Besiroglu T/D, Llama-3.1 405B",1.055455906641356,1.06,0.02,True
+"Besiroglu C/C_min, Llama-3.1 405B",1.0653174511430266,1.07,0.011,True
+"Homothetic T/D (rho=.3527, M*=20), Llama-3 8B",11.881116748048449,11.9,0.06,True
+"Homothetic T/D (rho=.3527, M*=20), Llama-3 70B",3.924513775890443,3.9,0.06,True
+"Homothetic T/D (rho=.3527, M*=20), Llama-3 405B",0.7801900478326784,0.8,0.06,True
+"Homothetic C/C_min (rho=.3527, M*=20), Llama-3 8B",5.214894848396874,5.2,0.06,True
+"Meta law M*(C), Llama-3 8B",31.256203930246052,31.3,0.06,True
+"Meta law T/D (rho=.35), Llama-3 8B",9.57314774257399,9.6,0.06,True
+"Meta law M*(C), Llama-3 70B",36.69820545107059,36.7,0.06,True
+"Meta law T/D (rho=.35), Llama-3 70B",2.5634372203672395,2.6,0.06,True
+"Meta law M*(C), Llama-3 405B",41.91019789800324,41.9,0.06,True
+"Meta law T/D (rho=.35), Llama-3 405B",-0.08731374096081024,-0.1,0.06,True
+"Sahal inflation 1/(1-s_A), s_A=0.05",1.0526315789473684,1.05,0.006,True
+"Sahal inflation 1/(1-s_A), s_A=0.4",1.6666666666666667,1.67,0.006,True
+41^gamma (Hoffmann TeX),1.7771731673616455,1.78,0.006,True
+41^gamma (Besiroglu),1.9388203729705487,1.94,0.006,True

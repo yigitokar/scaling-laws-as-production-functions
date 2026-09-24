@@ -1,0 +1,28 @@
+% Online Appendix Table F1: what the wedge identifies (output/tables/ra5_theory_wedge_cases.tex), relabelled. Writer appendix_D_F.
+\begin{table}[tp]
+\centering
+\caption{What the Wedge Identifies under Alternative Developer Objectives}
+\label{tab:app-wedge-cases}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth} >{\raggedright\arraybackslash}p{0.275\textwidth} >{\raggedright\arraybackslash}p{0.265\textwidth} >{\raggedright\arraybackslash}p{0.13\textwidth}@{}}
+\toprule
+Developer objective or cost structure & Wedge $w=\varepsilon_N/\varepsilon_D$ & $s=(w-1)/w$ measures & $\hat T$ vs.\ $\lambda pT$ \\
+\midrule
+Lifetime compute, developer serves ($\lambda=p=\phi=1$) & $1+T/(3D)$ & Serving share of lifetime compute & Equal \\
+(a) Serving cost borne at rate $\lambda$, price ratio $p$, cost elasticity $\phi$ & $1+\lambda\phi p\,T/(3D)$ & $\lambda\phi X_S/(X_T+\lambda\phi X_S)$ & $\times\phi$ \\
+(a$'$) Open release, adoption value $v(A)$, users bear serving & $1+v'A|\varepsilon_{A,P}|/X_T$ & Adoption value of compactness & Not $T$ \\
+(b) Binding memory or tier cap, multiplier $\nu$ & $(1+\nu)(1+m_N)$ & Upper bound on serving share & Overstates \\
+(c) Binding latency SLO, $\tau(N)\le\bar\tau$ & $(1+\nu_\tau)(1+m_N)$ & Upper bound on serving share & Overstates \\
+(d) Data cost $c_D$ per token & $(1+m_N)/(1+m_D)$ & $(X_S-X_D)/(X_T+X_S)$ & Understates \\
+(d$'$) Binding data cap, multiplier $\mu$ & $(1+m_N)/(1+m_D+\mu)$ & Below serving share; $w<1$ possible & Understates \\
+(e) Logit distillation, teacher $N_T$ & $\dfrac{1+T/(3D)}{1+N_T/(3N)}$ & $(X_S-X_{\rm teach})/(X_T+X_S)$ & Understates \\
+(f) Dollar cost $\propto N^{1+\delta}D$; serving $\propto N^{1+\delta_S}$ & $1+\delta+\lambda(1+\delta_S)pT/(3D)$ & Mixes $\delta$ with serving & $+3D\delta+\lambda\delta_SpT$ \\
+(g) Family token budget, sizes chosen & $\sum_i\pi_i(1+m_{N,i})=(1+m_D)\bar w_H$ & $1-1/\bar w_H=\sum_i\omega_is_i$ & Only $\sum_i\pi_i\hat T_i$ identified \\
+Lab's technology differs (factor bias, beliefs, output) & $\hat w=w\,w_L/w_{L'}$ & Contaminated & Over iff $w_L>w_{L'}$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}The developer chooses $(N,D)$ to maximize $V(L,N)$ minus training expenditure $X_T=c_T\,6ND$ (and data cost $c_DD$). $m_N\equiv-(\partial V/\partial\ln N)_L/X_T$ is the value of compactness at fixed quality per unit of training expenditure; $m_D\equiv c_DD/X_T$; $X_S$ is serving expenditure, $\lambda$ the share of it the developer internalizes, $p$ the price of a serving FLOP relative to a training FLOP, $\phi$ the size elasticity of serving cost; $\varepsilon_{A,P}$ is the elasticity of adoption with respect to users' serving cost; $\nu,\nu_\tau,\mu\ge0$ are normalized multipliers; $\delta$ ($\delta_S$) is the size elasticity of the price of a training (serving) FLOP; $\pi_i\propto\omega_i/w_i$ with $\omega_i$ the member's compute share, $\bar w_H$ the compute-weighted harmonic mean of member wedges; $w_L$ and $w_{L'}$ are the wedges $\varepsilon_N/\varepsilon_D$ at the same inputs under the econometrician's and the lab's technology or output. The last column compares $\hat T\equiv3D(\hat w-1)$ with $\lambda pT$, the internalized serving demand in training-FLOP units (rows other than (a) and (f) take $\phi=1$); ``Over iff $w_L>w_{L'}$'' means that $\hat T$ overstates, which under factor bias is $\chi<0$. Every row was verified by brute-force maximization of the objective (maximum relative error $2\times10^{-7}$; Online Appendix~\ref{app:proofs}, Propositions~\ref{prop:A-wedge} and~\ref{prop:A-family}).\end{tablenotes}
+\begin{tablenotes}[Source]Authors' derivations.\end{tablenotes}
+\end{table}

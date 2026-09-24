@@ -1,0 +1,50 @@
+\begin{table}[tp]
+\centering
+\caption{Chinchilla Data: Cost Function, Conditional Factor Demand, and Primal Estimates}
+\label{tab:app-duality}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textit{Panel A. Dual objects implied by each approach}} \\[1pt]
+ & IsoFLOP & Minima, & \multicolumn{2}{c}{Approach 3 (primal)} & \\
+\cmidrule(lr){4-5}
+ & minima & $E$ fixed & Analytic & Design & \\
+\midrule
+Path slope $a$ & 0.498 (0.020) & 0.498 & 0.514 (0.018) & 0.515 (0.020) & \\
+Path level $\ln N^*(\bar C)$ & 20.589 (0.027) & 20.589 & 20.528 (0.036) & 20.560 (0.045) & \\
+Frontier elasticity $\gamma$ & 0.168 (0.008) & 0.181 & 0.179 (0.005) & 0.177 (0.006) & \\
+Frontier level $L^*(\bar C)$ & 2.557 (0.002) & 2.554 & 2.562 (0.001) & 2.563 (0.002) & \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel B. Tests of the cross-equation restrictions}} \\[1pt]
+ & \multicolumn{2}{c}{Path $(a,\ln N^*)$} & \multicolumn{2}{c}{Frontier $(\gamma,L^*)$} & Classical \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Null technology & $\chi^2_2$ ($p$) & Calibrated $p$ & $\chi^2_2$ ($p$) & Calibrated $p$ & $F_{2,7}$: $p$ \\
+\midrule
+Our refit, analytic & 6.8 (0.033) & 0.053 / 0.357 & 16.7 ($<$0.001) & 0.007 / 0.489 & -- \\
+Our refit, design & 2.9 (0.238) & 0.233 / 0.698 & 20.7 ($<$0.001) & 0.007 / 0.414 & 0.653 \\
+Hoffmann, analytic & 53.5 ($<$0.001) & 0.010 / 0.055 & 7.7 (0.022) & 0.037 / 0.848 & -- \\
+Hoffmann, design & 15.6 ($<$0.001) & 0.060 / 0.209 & 14.4 ($<$0.001) & 0.017 / 0.696 & 0.040 \\
+Besiroglu, analytic & 13.5 (0.001) & 0.027 / 0.406 & 32.0 ($<$0.001) & 0.003 / 0.195 & -- \\
+Besiroglu, design & 4.3 (0.118) & 0.176 / 0.746 & 42.5 ($<$0.001) & 0.003 / 0.150 & 0.664 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}The 240-run Chinchilla sample. IsoFLOP minima: a parabola in $\ln N$ fitted to the 132
+IsoFLOP-profile runs of each of the nine budgets, with the argmins regressed on $\ln(C/6)$ (conditional factor demand,
+Hoffmann et al.'s Approach 2) and $L^*_b=E+K(C_b/6)^{-\gamma}$ fitted to the nine minima (the IsoFLOP-minima frontier,
+an inverse cost function), with $E$ free or fixed at the primal value. This frontier is not Hoffmann et al.'s
+Approach 1, which uses envelopes of training curves that the digitization does not contain and which also reports
+allocation exponents. Approach 3 is the Huber primal on all 240 runs. Hoffmann and Besiroglu denote the published
+parameters of \citet{hoffmann2022training} and \citet{besiroglu2024chinchilla}. ``Analytic'' uses the closed forms
+$a=\beta/(\alpha+\beta)$, $\gamma=\alpha\beta/(\alpha+\beta)$, $N^*=G(C/6)^a$ and $L^*=E+K(C/6)^{-\gamma}$; ``design''
+(design-consistent) applies the IsoFLOP-minima procedure to the primal's fitted values at the observed design, which
+removes the finite-grid bias of parabola fits \citep{czech2026problems}. $\bar C$ is the geometric mean of the budgets.
+Standard errors in parentheses: within-budget stratified pairs bootstrap (300 draws). Panel B: Wald statistics with an
+outlier-robust bootstrap covariance and $\chi^2_2$ $p$-values; calibrated $p$-values take critical values from the
+bootstrap distribution of the same statistic (stratified pairs / fixed-design wild bootstrap); the classical test
+regresses the nine argmin gaps on $[1,\ln C_b]$ and treats the null technology as known. For published parameters only
+the IsoFLOP-minima side is random. With all 245 runs, the design-consistent path test of our refit gives a calibrated
+$p$ of 0.054 (stratified) and a classical $p$ of 0.041.\end{tablenotes}
+\begin{tablenotes}[Source]Epoch AI digitization of \citet{hoffmann2022training}; authors' estimates.\end{tablenotes}
+\end{table}

@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\caption{Farseer: Chinchilla versus Richer Functional Forms}
+\label{tab:farseer}
+\begin{threeparttable}
+\begin{tabular}{lccccc}
+\toprule
+& & \multicolumn{2}{c}{In sample} & \multicolumn{2}{c}{Out of sample RMSE $\times 10^3$} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Model & $k$ & RMSE $\times 10^3$ & BIC & Hold out 4 largest $N$ & Hold out top 10\% of $C$ \\
+\midrule
+Chinchilla (Huber) & 5 & 8.74 & -2647.2 & 12.65 & 24.75 \\
+Chinchilla (NLS) & 5 & 8.50 & -2669.9 & 13.79 & 21.95 \\
+Kaplan-q (NLS) & 6 & 2.47 & -3663.0 & 3.57 & 5.23 \\
+Translog in ln(L-E), E free (NLS) & 7 & 2.05 & -3806.4 & 3.32 & 4.69 \\
+Farseer Eq. 3 (NLS) & 9 & 1.76 & -3916.0 & 2.63 & 2.58 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Farseer grid, 404 runs; output: English bits per character. RMSE of log loss. Farseer Eq. 3: $L=e^{a_3N^{\gamma_3}+b_3}+e^{a_2N^{\gamma_2}+b_2}D^{-e^{a_1N^{\gamma_1}+b_1}}$ (Li et al. 2025b), fitted here by NLS on log loss rather than the authors' differential piecewise procedure. Out-of-sample splits: (i) train on $N<3.8\times10^9$, test on the 4 largest model sizes; (ii) test on the top decile of $6ND$. Local nonparametric $\sigma$ (kernel-weighted local quadratic on $\ln L$, E-free): median 0.690 (10th--90th percentile 0.642--0.834) over 42 grid points; the Chinchilla-implied local $\sigma$ lies inside the pointwise 95\% band at 10\% of them. The pointwise bands come from a pairs bootstrap at a fixed bandwidth and ignore smoothing bias; the local estimates vary more across neighbouring model sizes than the bands suggest.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

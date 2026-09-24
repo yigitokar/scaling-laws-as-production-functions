@@ -1,0 +1,55 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Revealed-Preference Test at Chinchilla-70B and System Estimates}
+\label{tab:m1_revealed_system}
+\begin{threeparttable}
+\begin{tabular}{lccc}
+\toprule
+Technology / object & Estimate & S.e. [95\% CI] & $M^*$ at $C_{70B}$ \\
+\midrule
+\multicolumn{4}{l}{\textit{Panel A. Revealed-preference test at Chinchilla-70B ($N=70$B, $D=1.4$T): $w=\varepsilon_N/\varepsilon_D$}} \\
+Hoffmann A3, rounded (literature) & 0.621 &   & 92.8 \\
+Hoffmann A3, TeX precision (literature) & 0.713 &   & 59.2 \\
+Besiroglu et al. published (literature) & 1.031 &   & 18.4 \\
+Huber-LSE refit, n240 (this module) & 1.040 & (0.145) [0.83, 1.41] & 17.9 \\
+System (loss + argmin, laplace), n240 & 1.028 & (0.121) [0.84, 1.34] & 18.5 \\
+System (loss + argmin, gauss), n240 & 1.129 & (0.131) [0.89, 1.39] & 14.6 \\
+A2 path (parabola argmins), n240: $\ln N_{70B}-\ln N^*_{A2}(C_{70B})$ & 0.025 &  & 21.0 \\
+Huber-LSE refit, n245 (this module) & 1.542 & (0.516) [0.98, 3.14] & 6.8 \\
+System (loss + argmin, laplace), n245 & 1.450 & (0.683) [0.99, 2.89] & 8.0 \\
+System (loss + argmin, gauss), n245 & 2.488 & (0.653) [1.41, 3.84] & 3.2 \\
+A2 path (parabola argmins), n245: $\ln N_{70B}-\ln N^*_{A2}(C_{70B})$ & 0.110 &  & 24.9 \\
+\multicolumn{4}{l}{\textit{Panel B. System estimator: loss equation + IsoFLOP-argmin equation (cross-equation restricted)}} \\
+$n=240$, laplace loss equation &  &  &  \\
+\quad $\alpha$, $\beta$ & 0.348 (0.014) & 0.365 (0.016) &  \\
+\quad $a$, $\sigma^*$ & 0.512 (0.015) & 0.737 (0.005) &  \\
+\quad $M^*(10^{21})$, $M^*(5.76\times10^{23})$ & 21.6 (2.7) & 18.5 (6.0) &  \\
+\quad Nested LR test of the 2 restrictions ($\chi^2_2$) & 1.01 & p = 0.602 &  \\
+\quad Small-sample ($F$-form) calibration & 0.42 & p = 0.674 &  \\
+$n=240$, gauss loss equation &  &  &  \\
+\quad $\alpha$, $\beta$ & 0.362 (0.011) & 0.406 (0.023) &  \\
+\quad $a$, $\sigma^*$ & 0.528 (0.016) & 0.723 (0.007) &  \\
+\quad $M^*(10^{21})$, $M^*(5.76\times10^{23})$ & 20.9 (2.4) & 14.6 (5.2) &  \\
+\quad Nested LR test of the 2 restrictions ($\chi^2_2$) & 3.34 & p = 0.188 &  \\
+\quad Small-sample ($F$-form) calibration & 1.57 & p = 0.273 &  \\
+$n=245$, laplace loss equation &  &  &  \\
+\quad $\alpha$, $\beta$ & 0.358 (0.016) & 0.449 (0.058) &  \\
+\quad $a$, $\sigma^*$ & 0.557 (0.032) & 0.713 (0.015) &  \\
+\quad $M^*(10^{21})$, $M^*(5.76\times10^{23})$ & 16.5 (3.4) & 8.0 (5.1) &  \\
+\quad Nested LR test of the 2 restrictions ($\chi^2_2$) & 7.81 & p = 0.020 &  \\
+\quad Small-sample ($F$-form) calibration & 4.83 & p = 0.048 &  \\
+$n=245$, gauss loss equation &  &  &  \\
+\quad $\alpha$, $\beta$ & 0.399 (0.018) & 0.600 (0.056) &  \\
+\quad $a$, $\sigma^*$ & 0.601 (0.021) & 0.667 (0.015) &  \\
+\quad $M^*(10^{21})$, $M^*(5.76\times10^{23})$ & 11.7 (2.4) & 3.2 (2.1) &  \\
+\quad Nested LR test of the 2 restrictions ($\chi^2_2$) & 14.16 & p = $<$0.001 &  \\
+\quad Small-sample ($F$-form) calibration & 13.39 & p = 0.004 &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Panel A: $w$ at Chinchilla-70B under each technology; $w=1$ iff the chosen model is cost-minimizing (training-compute minimization, no inference demand). Published parameter sets have no usable standard errors. For the refits: bootstrap s.e. and percentile 95\% interval (within-budget stratified, 300 draws); for the $n=240$ Huber refit the pairs-bootstrap interval is [0.82, 1.42] and the 9-cluster interval [0.54, 2.01] (Table \ref{tab:m1_horse_race}). Last column: $M^*=D^*/N^*$ at Chinchilla's compute ($5.88\times10^{23}$ FLOP); Chinchilla-70B has $M=20$. The A2 rows report the log gap between 70B and the Approach-2 path extrapolated to Chinchilla's compute. Panel B: concentrated quasi-likelihood system in the spirit of \citet{leonledesma2010identifying}: loss equation (Laplace or Gaussian errors in $\ln L$) plus the per-budget parabola argmins, predicted design-consistently from the same $(E,A,B,\alpha,\beta)$. The nested LR test frees a level shift and a slope shift of the argmin equation relative to the primal's prediction (2 restrictions). With only 9 argmins the $\chi^2_2$ approximation is generous; the $F$-form calibration $F=(e^{LR/n_2}-1)(n_2-2)/2\sim F_{2,n_2-2}$ attributes the whole statistic to the argmin equation (an approximation).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

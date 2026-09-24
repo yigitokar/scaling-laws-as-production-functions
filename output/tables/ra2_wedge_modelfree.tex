@@ -1,0 +1,26 @@
+\begin{table}[tp]
+\centering
+\caption{Model-Free Curvature and Paths of the Lab IsoFLOP Designs}
+\label{tab:ra2-modelfree}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
+\sbox{\ratabbox}{%
+\begin{tabular}{@{}lrrcrrrrr@{}}
+\toprule
+ & & & \multicolumn{3}{c}{This module's estimator} & $\sigma^*$ & & \\
+\cmidrule(lr){4-6}
+Design & Budgets & $C_{max}$ & $1/\sigma^*-1$ [95\%] & MC factor & $\sigma^*$ corr. & (ra1, used) & $a$ & $M^*(C_{max})$ \\
+\midrule
+Llama 3 (Meta) & 10 & $1.0\times10^{22}$ & 0.532 [0.501, 0.565] & 0.895 & 0.678 & 0.660 & 0.463 & 22.3 \\
+Marin, Comma & 7 & $3.0\times10^{20}$ & 0.539 [0.496, 0.637] & 0.893 & 0.675 & 0.700 & 0.405 & 12.4 \\
+Marin, DCLM & 7 & $3.0\times10^{20}$ & 0.590 [0.531, 0.706] & 0.865 & 0.662 & 0.713 & 0.424 & 9.4 \\
+Marin, Nemotron-CC & 7 & $3.0\times10^{20}$ & 0.553 [0.501, 0.630] & 0.883 & 0.672 & 0.705 & 0.422 & 10.0 \\
+Chinchilla (digitized) & 8 & $3.0\times10^{21}$ & 0.640 [0.553, 0.700] & 0.752 & 0.675 & -- & 0.492 & 22.7 \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
+\begin{tablenotes}Model-free curvature $1/\sigma^*-1=L_{nn}/(2|dL^*/dc|)$: per-budget quadratic fits of loss on $\ln N$ give the argmin, the minimum and the curvature; a quadratic in $\ln C$ through the minima gives the frontier slope; pooled as a ratio of sums over budgets. Brackets: design-conditional wild bootstrap (Rademacher, 999 draws). MC factor: true/mean estimate in a parametric simulation on the design's own grid at the estimated technology with the design's residual noise (finite-grid parabola bias and the Jensen bias of the ratio); bias-corrected $1/\sigma^*-1$ = estimate $\times$ factor. $a$: Approach-2 path slope. Chinchilla row: cross-check only (digitization noise). $\sigma^*$ (ra1, used): module ra1's reviewed model-free estimate (random-effects mean over valid budgets, path-centred windows, log-cubic frontier), which the lab-own technologies use; this module's estimator and its bias correction are sensitivity rows.\end{tablenotes}
+\begin{tablenotes}[Source]Module ra2\_wedge; \texttt{ra2\_wedge\_modelfree\_sigma.csv}.\end{tablenotes}
+\end{table}

@@ -1,0 +1,26 @@
+test,outcome,spec,n,clusters,coef,se_crv1,t,p_wcr,B,p_floor,G_treated,G_untreated,block,sample,placebo_mean,placebo_sd,p_placebo_tierstory,n_placebo
+open-weight premium,lnw,year FE,186,67,0.6872234231766706,0.19895166245688392,3.454223074540044,0.0038,9999,0.0001,55.0,23.0,(a) open vs closed,,,,,
+open-weight premium,s,year FE,186,67,0.4085052543562551,0.18362190036009937,2.2247087823137592,0.053,9999,0.0001,55.0,23.0,(a) open vs closed,,,,,
+open-weight premium,lnw,year FE + ln C,186,67,0.5169924133429489,0.17995718162837315,2.8728634704369957,0.0115,9999,0.0001,55.0,23.0,(a) open vs closed,,,,,
+open-weight premium,s,year FE + ln C,186,67,0.29446990903415965,0.1578487790251846,1.8655190800505166,0.0974,9999,0.0001,55.0,23.0,(a) open vs closed,,,,,
+"open-weight premium, 2023+",lnw,year FE + ln C,150,60,0.7124076609888579,0.17071130710831697,4.173172082484451,0.0009,9999,0.0001,52.0,15.0,(a) open vs closed,,,,,
+serve (with ondevice),lnw,ln C + year FE,77,18,0.452561282621613,0.2567925464015389,1.7623614429756707,0.3903,9999,0.0001,7.0,12.0,(b) serving vs on-device,clean sample,,,,
+ondevice (with ondevice),lnw,ln C + year FE,77,18,0.22380263820342688,0.22824553940959508,0.9805345540698815,0.4098,9999,0.0001,2.0,17.0,(b) serving vs on-device,clean sample,,,,
+serve (with local),lnw,ln C + year FE,77,18,0.42005835304874417,0.26777116954680497,1.568721359210108,0.4873,9999,0.0001,7.0,12.0,(b) serving vs on-device,clean sample,,,,
+local (with local),lnw,ln C + year FE,77,18,0.044965040125283795,0.25458657107389426,0.17661984265553662,0.8777,9999,0.0001,3.0,16.0,(b) serving vs on-device,clean sample,,,,
+serve (with ondevice),s,ln C + year FE,77,18,0.0805601798983454,0.056907621102310735,1.415630777352495,0.431,9999,0.0001,7.0,12.0,(b) serving vs on-device,clean sample,,,,
+ondevice (with ondevice),s,ln C + year FE,77,18,-0.025747760471962283,0.05994782618544963,-0.42950282120841454,0.6822,9999,0.0001,2.0,17.0,(b) serving vs on-device,clean sample,,,,
+serve (with local),s,ln C + year FE,77,18,0.08333846657175577,0.0548835454458991,1.518459966364706,0.3884,9999,0.0001,7.0,12.0,(b) serving vs on-device,clean sample,,,,
+local (with local),s,ln C + year FE,77,18,-0.016655522905989692,0.04875525985855632,-0.34161489353782465,0.7238,9999,0.0001,3.0,16.0,(b) serving vs on-device,clean sample,,,,
+serve (with ondevice),lnw,ln C + year FE,136,26,0.4672824448512914,0.17077020833141854,2.7363229770407216,0.0705,9999,0.0001,8.0,19.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+ondevice (with ondevice),lnw,ln C + year FE,136,26,0.5650058926720471,0.2369899488142719,2.3840922178300485,0.2095,9999,0.0001,2.0,25.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+serve (with local),lnw,ln C + year FE,136,26,0.406713472869351,0.18823929645237436,2.160619384657825,0.2076,9999,0.0001,8.0,19.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+local (with local),lnw,ln C + year FE,136,26,0.34234070824910057,0.24720602035457845,1.3848396886049388,0.3132,9999,0.0001,3.0,24.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+serve (with ondevice),s,ln C + year FE,136,26,0.1352535982884822,0.04981087256593118,2.715342882408985,0.046,9999,0.0001,8.0,19.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+ondevice (with ondevice),s,ln C + year FE,136,26,0.09536293125741459,0.1205490033728236,0.7910719175544265,0.5784,9999,0.0001,2.0,25.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+serve (with local),s,ln C + year FE,136,26,0.1267201639043298,0.05315901546866715,2.383794409793403,0.0839,9999,0.0001,8.0,19.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+local (with local),s,ln C + year FE,136,26,0.07158125765623151,0.08645856253126498,0.8279256045963803,0.506,9999,0.0001,3.0,24.0,"(b) serving vs on-device, robustness","clean + research suites (a, c-g applied)",,,,
+dist_tier,lnw,ln C + year FE,75,18,0.46390170650026896,0.2002603449097067,2.3164930965710298,0.0586,9999,0.0001,,,(c) tiers,clean sample,0.45472232937772245,0.059905392112889456,0.6096096096096096,999.0
+in_tier,lnw,ln C + year FE,75,18,-0.3853727577451675,0.2777866080344253,-1.3872978271775052,0.3402,9999,0.0001,15.0,9.0,(c) tiers,clean sample,-0.04445089386966972,0.13758206985946272,0.996996996996997,999.0
+dist_tier,lnw,ln C + year FE,133,52,0.6243820117934615,0.16457888153369596,3.7938161079653785,0.0046,9999,0.0001,,,(c) tiers,open-weight universe (clean),0.6483293678904483,0.12296691381768951,0.36936936936936937,999.0
+in_tier,lnw,ln C + year FE,133,52,-0.16177500595675554,0.21148033397009247,-0.7649647743588004,0.5231,9999,0.0001,36.0,27.0,(c) tiers,open-weight universe (clean),-0.1340703596526503,0.198861659455107,0.5885885885885885,999.0

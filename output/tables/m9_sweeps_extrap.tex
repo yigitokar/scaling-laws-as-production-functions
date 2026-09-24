@@ -1,0 +1,40 @@
+\begin{table}[tp]
+\centering
+\caption{Extrapolating the Wedge beyond the Chinchilla Support (Q3)}
+\label{tab:m9-extrap}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllcccccc@{}}
+\toprule
+& & & & & \multicolumn{3}{c}{Mean $\ln(w_{\rm r}/w_{\rm loc})$, $M$ in} & \\
+\cmidrule(lr){6-8}
+Corpus & Conv. & Sample & Slope & 95\% CI & 100--316 & 316--1{,}000 & $>1{,}000$ & $n$ \\
+\midrule
+Edu & P & Main grid & $-$0.291 & [$-$0.399, $-$0.094] & $-$0.58 & $-$0.51 & $-$1.25 & 11 \\
+& & & & \{$-$0.442, $-$0.005\} & & & & \\
+Edu & P & Drop $D=25$M & $-$0.255 & [$-$0.288, $-$0.190] & $-$0.62 & $-$0.44 & $-$1.26 & 11 \\
+Edu & P & 4-layer floor & $-$0.118 & [$-$0.146, $-$0.089] & $-$0.47 & -- & -- & 3 \\
+Edu & T & Main grid & $-$0.760 & [$-$1.080, $-$0.207] & $-$0.33 & $-$1.51 & -- & 6 \\
+& & & & \{$-$1.173, 0.541\} & & & & \\
+Edu & T & Drop $D=25$M & $-$1.094 & [$-$1.242, $-$0.903] & $-$0.33 & $-$2.01 & -- & 6 \\
+Web & P & Main grid & pending & & & & & \\
+Web & T & Main grid & pending & & & & & \\
+\midrule
+\multicolumn{9}{l}{\emph{Comparators (main grid): slope of $\ln(w_{\rm a}/w_{\rm b})$ in $\ln M$}} \\
+\multicolumn{3}{l}{Edu, P: $\kappa$, $M\le100$ vs local} & $-$0.003 & [$-$0.125, 0.201] & & & & \\
+\multicolumn{3}{l}{Edu, P: full support vs local} & $-$0.201 & [$-$0.311, $-$0.002] & & & & \\
+\multicolumn{3}{l}{Edu, P: $M\le100$ vs full support} & $-$0.090 & [$-$0.099, $-$0.079] & & & & \\
+\multicolumn{3}{l}{Edu, T: $\kappa$, $M\le100$ vs local} & $-$0.470 & [$-$0.774, 0.062] & & & & \\
+\multicolumn{3}{l}{Edu, T: full support vs local} & $-$0.703 & [$-$1.037, $-$0.138] & & & & \\
+\multicolumn{3}{l}{Edu, T: $M\le100$ vs full support} & $-$0.058 & [$-$0.072, $-$0.040] & & & & \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Q3 of the plan. Edu: FineWeb-Edu; Web: FineWeb. The Chinchilla form (Huber) is fitted on main-grid endpoints with $M\le100$ and predicts the wedge $w=\varepsilon_N/\varepsilon_D$ at every endpoint with $M>100$, including the four-layer high-$M$ runs once available; $w_{\rm local}$ comes from the local quadratic on the full grid. Slope: OLS of $\ln(w_{\rm r}/w_{\rm local})$ on $\ln M$. A negative slope means the restricted fit increasingly understates the wedge (overstates the value of extra tokens) as $M$ grows. Brackets: wild cluster bootstrap by trunk around the local-quadratic surface (999 draws, as pre-specified); braces: the pre-declared companion (CR2 cluster residuals, bandwidth re-selected in each draw). Both exclude the smoothing bias of the local estimator. On this design the slope's null value (Chinchilla form true in non-embedding units) is about $-0.01$ to $-0.05$ in convention P and $-0.08$ to $-0.10$ in T without the high-$M$ runs ($+0.11$ with them); the plan's interval covers about 55 percent of the time (companion: 70--75 percent). Levels need not transfer to production scale; the sign is the object.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

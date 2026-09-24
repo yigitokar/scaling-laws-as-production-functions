@@ -1,0 +1,99 @@
+% What Optimizing Labs Reveal: Scaling Laws as Production Functions -- AER typography (AEA.cls), working-paper heads.
+% Version 2 (after referee round 1). Integration log: paper/notes/integration_log_v2.md.
+\documentclass[AER,finalmode]{AEA}
+\usepackage{natbib}
+\let\proof\relax\let\endproof\relax
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage[section]{placeins}% keep floats inside their section
+\usepackage[colorlinks=true,citecolor=blue!50!black,linkcolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={What Optimizing Labs Reveal: Scaling Laws as Production Functions},pdfauthor={Yigit Okar}}
+\graphicspath{{figures/}{../output/figures/}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\draftSpacing{1.5}
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\Var}{\operatorname{Var}}
+\providecommand{\Cov}{\operatorname{Cov}}
+
+% Working-paper running heads: AEA.cls prints the journal name, volume and issue in the heads of every page after the
+% first. This is not a published AER article, so the heads carry the authors, the short title and the date instead.
+\makeatletter
+\issueName{Working Paper}
+\def\ps@headings{%
+  \leftskip=0pt\rightskip=0pt
+  \let\@oddfoot\@empty
+  \let\@evenfoot\@empty
+  \def\@oddhead{{\small\textit{\MakeUppercase{Okar\hfil\@shortTitle\hfil\thepage}}}}%
+  \def\@evenhead{{\small\textit{\MakeUppercase{\thepage\hfil\@issueName\hfil\@pubMonth\ \@pubYear}}}}}
+\pagestyle{headings}
+\makeatother
+
+\begin{document}
+
+\title{What Optimizing Labs Reveal: Scaling Laws as Production Functions}
+\shortTitle{What Optimizing Labs Reveal}
+\author{Yigit Okar\thanks{Care AI (email: okar.yigit@gmail.com). This paper was produced in close collaboration
+with Claude, an AI system developed by Anthropic. Claude designed and carried out the analysis---the literature review,
+data construction, the theory and its verification, the estimation, the Monte Carlo study, and the controlled training
+experiment---and drafted the paper with the author, who takes responsibility for its content. The author gratefully
+acknowledges this contribution; under the AEA's authorship policy an AI system cannot be listed as an author. Data and
+code availability: all data used in the paper are publicly available. The replication package
+(github.com/yigitokar/scaling-laws-as-production-functions) reproduces the tables and figures from the raw downloads
+with fixed random seeds. For sources whose terms do not permit redistribution (Epoch AI's digitization of the
+Chinchilla runs, the Farseer and Step Law run files, and the digitized Llama~3 IsoFLOP points), it provides download
+scripts in place of the data.}}
+\date{September 2026}
+\pubMonth{September}
+\pubYear{2026}
+
+\begin{abstract}
+Language-model developers choose model size and training data to minimize training and serving costs. This
+optimization cuts both ways for measurement. It removes the variation that identifies the technology---information
+about curvature is fourth order in allocation errors---but makes choices informative about objectives. Designed
+experiments give, without functional-form restrictions, an elasticity of substitution between parameters and data of
+about 0.7. Inverting first-order conditions with this technology shows that open-weight models released since 2024 were
+trained as if compactness---for developers that serve them, lower serving cost---accounted for most of lifetime cost,
+up from near zero before 2023.
+\end{abstract}
+\JEL{C51, D24, L86, O33}
+\Keywords{production functions, identification, elasticity of substitution, scaling laws, large language models,
+revealed preference}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/framework}
+\input{sections/identification}
+\input{sections/technology}
+\input{sections/wedge}
+\input{sections/economics}
+\input{sections/conclusion}
+
+\bibliographystyle{aea}
+\bibliography{references}
+
+\clearpage
+\appendix
+% Appendix numbering: subsections print as A1, B2, ... (not A.A1); unique hyperref anchors for floats and equations.
+\makeatletter\renewcommand\p@subsection{}\makeatother
+\renewcommand{\theHtable}{\thetable}\renewcommand{\theHfigure}{\thefigure}\renewcommand{\theHequation}{\theequation}
+\begin{center}\textbf{ONLINE APPENDIX}\end{center}
+\input{sections/appendix_proofs}
+\input{sections/appendix_data}
+\input{sections/appendix_mc}
+\input{sections/appendix_additional}
+\input{sections/appendix_observational}
+\input{sections/appendix_wedge}
+
+\end{document}

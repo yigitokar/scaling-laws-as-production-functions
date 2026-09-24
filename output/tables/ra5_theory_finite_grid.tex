@@ -1,0 +1,24 @@
+\begin{table}[tp]
+\centering
+\caption{Finite-Grid Bias of the Model-Free $\sigma^*$ Estimator}
+\label{tab:ra5-finite-grid}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}ccccccc@{}}
+\toprule
+Half-width & $N$ span & Curvature & Actual/leading & $\hat\sigma^*$, & $\hat\sigma^*$, & Argmin \\
+($\ln N$) & (ratio) & bias (\%) & order bias & quadratic & quartic & bias ($\ln N$) \\
+\midrule
+0.05 & 1.1 & 0.00 & 1.000 & 0.7370 & 0.7370 & $-0.00001$ \\
+0.10 & 1.2 & 0.01 & 1.000 & 0.7370 & 0.7370 & $-0.00002$ \\
+0.20 & 1.5 & 0.04 & 1.000 & 0.7369 & 0.7370 & $-0.00009$ \\
+0.50 & 2.7 & 0.27 & 1.001 & 0.7365 & 0.7370 & $-0.00055$ \\
+1.10 & 9.0 & 1.32 & 1.005 & 0.7345 & 0.7370 & $-0.00267$ \\
+2.30 & 100.0 & 5.92 & 1.022 & 0.7257 & 0.7372 & $-0.01174$ \\
+3.40 & 900.0 & 13.25 & 1.050 & 0.7122 & 0.7377 & $-0.02562$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Nine equally spaced runs in $\ln N$, centered at the minimum of the \citet{besiroglu2024chinchilla} IsoFLOP profile at $10^{21}$ FLOP, noise-free. The model-free estimator is $1/\hat\sigma^*-1=\hat L_{nn}/(2|dL^*/dc|)$ with $\hat L_{nn}$ twice the quadratic (or quartic) coefficient and the exact frontier slope. True $\sigma^*=0.7370$. Leading-order bias of the quadratic coefficient: $(f^{(4)}/24)\,\kappa_4$ with $\kappa_4=(m_6-m_2m_4)/(m_4-m_2^2)$, $m_k$ the grid's $k$-th moment; argmin bias $-(f'''/6)(m_4/m_2)/f''$ (Online Appendix A, Remark after Proposition A10). Bias only: with seed and evaluation noise, quartic fits and narrow grids have higher variance.\end{tablenotes}
+\begin{tablenotes}[Source]Authors' calculations; \texttt{code/analysis/ra5\_theory}.\end{tablenotes}
+\end{table}

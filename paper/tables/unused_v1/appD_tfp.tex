@@ -1,0 +1,54 @@
+\begin{table}[tp]
+\centering
+\caption{Productivity Dispersion across Model Families in Compute-Equivalent Units}
+\label{tab:app-tfp}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & & \multicolumn{2}{c}{Family effects, 90/10} & \multicolumn{2}{c}{Within developer, 90/10} & Loss \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Sample & Models & Exp.\ $\theta$ & Exp.\ $\theta$, $\ln C$ & Own $\theta$ & Exp.\ $\theta$ & units \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A. HellaSwag log odds}} \\
+All models & 128/38 & 23.7 & 19.9 & 11.1 & 22.4 & 1.76 \\
+ & & [9.1, 197] & [7.6, 161] & [4.4, 18.8] & [6.3, 34.6] & \\
+No distilled, synthetic & 121/36 & 18.3 & 17.6 & 11.3 & 23.9 & 1.68 \\
+ & & [6.9, 209] & [7.4, 138] & [4.1, 18.3] & [6.6, 37.0] & \\
+Also no code & 107/32 & 7.0 & 9.1 & 8.4 & 16.4 & 1.41 \\
+ & & [4.7, 168] & [5.2, 11.6] & [4.1, 13.2] & [5.3, 28.6] & \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel B. Composite of HellaSwag, ARC-Challenge, and Winogrande}} \\
+All models & 128/38 & 21.5 & 12.5 & 11.8 & 17.9 & 1.73 \\
+ & & [8.3, 98.7] & [5.8, 68.6] & [5.1, 16.1] & [6.9, 21.3] & \\
+No distilled, synthetic & 121/36 & 12.0 & 11.2 & 11.3 & 17.8 & 1.56 \\
+ & & [4.9, 119] & [5.3, 50.7] & [4.6, 16.0] & [6.2, 22.9] & \\
+Also no code & 107/32 & 6.3 & 6.9 & 9.6 & 14.4 & 1.39 \\
+ & & [3.4, 81.8] & [3.5, 8.8] & [3.5, 13.8] & [3.6, 20.7] & \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel C. Frontier models: Epoch Capabilities Index on Epoch training compute}} \\
+All & 104/23 & & & 8.1 & & \\
+ & & & & [3.4, 19.2] & & \\
+``Confident'' compute & 66/17 & & & 3.5 & & \\
+ & & & & [2.6, 5.6] & & \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Models: models/families. Compute-equivalent 90/10 ratios $\exp[(\omega_{90}-\omega_{10})/\theta_C]$: the factor by which the
+10th-percentile family (or model) would have to scale training compute to match the 90th percentile. Family effects
+$\omega_f$ come from a regression of the output on $\ln N$, $\ln D$, and family fixed effects; the ``$\ln C$'' column
+instead nets inputs with the experimental compute elasticity ($\omega_f$ = family mean of $y-\theta_C\ln C$), so that
+netting and conversion use one technology. Within-developer residuals come from a regression of the output on $\ln C$
+with developer and release-year effects, the design of \citet{mertens2026secret}; developers with a single model are
+excluded. Own $\theta$: the regression's compute elasticity (0.43 for HellaSwag, 0.45 for the composite, 4.76 index
+points per log point for the ECI); experimental $\theta$: the design-matched benchmark of Table~\ref{tab:lalonde}
+(0.329 for HellaSwag, 0.388 for the composite). Brackets: 90 percent intervals from 300 developer-cluster bootstrap
+draws, holding the experimental $\theta$ fixed. Loss units raise the family ratio (experimental $\theta$) to the
+power $\gamma=0.178$, an output-cardinalization choice; with returns to scale near one, the 90/10 ratio of 1.92 for
+US manufacturing \citep{syverson2011determines} is also an input-equivalent ratio and compares with the
+compute-equivalent columns. Distilled: Gemma 2 2B and 9B; synthetic-data: Phi-1.5, Phi-2, SmolLM; code: CodeLlama,
+StarCoder, StarCoder2, DeepSeek-Coder.\end{tablenotes}
+\begin{tablenotes}[Source]Open LLM Leaderboard evaluations via \citet{ruan2024observational} and
+\citet{maiapolo2024sloth}; Epoch AI \citep{epochai2026data,epochai2026capabilities}; authors'
+estimates.\end{tablenotes}
+\end{table}

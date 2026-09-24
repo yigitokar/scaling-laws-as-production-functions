@@ -1,0 +1,2 @@
+source,model_size_fraction,data_multiplier,overhead_devries,k_equivalent,k_own_compute,overhead_our_formula,overhead_homothetic_same_sigma,sigma_star,ratio_uv_at_optimum,beta_over_alpha
+"de Vries (2023) parameters (E 1.69, A 406.4, B 410.7, alpha 0.32, beta 0.28)",0.3,6.632930284737783,0.9898790854213346,22.10976761579261,21.11846745935577,0.9898790854213237,1.0026164936986102,0.7692307692307694,0.8750000000000024,0.8750000000000001

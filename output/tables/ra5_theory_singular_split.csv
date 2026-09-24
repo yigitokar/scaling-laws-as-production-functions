@@ -1,0 +1,7 @@
+technology,direction,crit_slope,dsigma_slope,max_dsigma_rel_step
+Hoffmann (alpha != beta),"flat (Q,-P)",4.000038698722699,0.9999641992215824,0.20760813322255164
+Hoffmann (alpha != beta),"opposite (2,-1)",2.005817661165773,0.9999345612549367,0.37949742601650804
+Hoffmann (alpha != beta),"same sign (1,1)",1.9999194227857382,0.999797190716383,1.1764231621064538
+equal exponents (alpha = beta),"flat (Q,-P)",3.999998879970524,4.274806466890037e-14,0.0
+equal exponents (alpha = beta),"opposite (2,-1)",2.004265171562337,0.999944119816669,0.2732525310518076
+equal exponents (alpha = beta),"same sign (1,1)",1.9998958785969012,0.9997765475877496,1.092988750578849

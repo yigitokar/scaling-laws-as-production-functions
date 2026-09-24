@@ -1,0 +1,71 @@
+\begin{table}[tp]
+\centering
+\caption{Clean Inference-Demand Sample and Dispersion across Technologies}
+\label{tab:ra2-cleaning}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
+\sbox{\ratabbox}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+\multicolumn{8}{@{}l}{\textit{Panel A. Cleaning steps (reference technology)}} \\[1pt]
+ & & & Median & Share & All points & Band & Median \\
+Step & $n$ & Dropped & $w$ & $w>1$ & $>1$ & $>1$ & $s$ \\
+\midrule
+Verified sample (m3 Sample B) & 173 &  & 3.77 & 0.93 & 0.61 & 0.17 & 0.73 \\
+(a) One per pretraining run & 165 & 8 & 3.79 & 0.93 & 0.62 & 0.18 & 0.74 \\
+(b1) Research suites & 120 & 45 & 4.20 & 0.97 & 0.70 & 0.16 & 0.76 \\
+(b2) Replications, benchmarks & 112 & 8 & 4.46 & 0.98 & 0.72 & 0.17 & 0.78 \\
+(c) Mixture-of-experts & 100 & 12 & 4.30 & 0.98 & 0.69 & 0.18 & 0.77 \\
+(d) Distilled, pruned, derived & 90 & 10 & 4.03 & 0.98 & 0.66 & 0.17 & 0.75 \\
+(e) Multimodal pretraining & 90 & 0 & 4.03 & 0.98 & 0.66 & 0.17 & 0.75 \\
+(f) Instruction-tuned only & 83 & 7 & 3.99 & 0.98 & 0.64 & 0.18 & 0.75 \\
+(g) Non-transformer & 83 & 0 & 3.99 & 0.98 & 0.64 & 0.18 & 0.75 \\
+(h) $D$ undocumented = clean & 77 & 6 & 3.99 & 0.97 & 0.64 & 0.18 & 0.75 \\
+\addlinespace
+Robustness: no synthetic data & 68 & 9 & 3.80 & 0.97 & 0.60 & 0.15 & 0.74 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel B. Dispersion over the ex-ante technologies, clean sample (joint bootstrap 95\% intervals)}} \\[1pt]
+Technology & $\sigma^*$ & $M^*(10^{24})$ & \multicolumn{2}{c}{Median $w$} & \multicolumn{2}{c}{Share $w>1$} & Median $s$ \\
+\midrule
+Chinchilla, $\kappa$ free (ref.) & 0.701 & 21.6 & \multicolumn{2}{r}{3.99 {\scriptsize[3.21, 4.86]}} & \multicolumn{2}{r}{0.97 {\scriptsize[0.92, 1.00]}} & 0.75 {\scriptsize[0.69, 0.79]} \\
+Chinchilla, $\kappa=1$ & 0.737 & 17.6 & \multicolumn{2}{r}{3.34 {\scriptsize[2.64, 4.81]}} & \multicolumn{2}{r}{1.00 {\scriptsize[0.91, 1.00]}} & 0.70 {\scriptsize[0.62, 0.79]} \\
+Chinchilla, Besiroglu & 0.737 & 18.1 & \multicolumn{2}{r}{3.31} & \multicolumn{2}{r}{1.00} & 0.70 \\
+Chinchilla, Hoffmann A3 & 0.762 & 62.0 & \multicolumn{2}{r}{2.12} & \multicolumn{2}{r}{0.88} & 0.53 \\
+Chinchilla, non-emb.\ $N$ & 0.753 & 9.7 & \multicolumn{2}{r}{3.65 {\scriptsize[2.83, 4.71]}} & \multicolumn{2}{r}{1.00 {\scriptsize[0.97, 1.00]}} & 0.73 {\scriptsize[0.65, 0.79]} \\
+Farseer, non-emb.\ $N$ & 0.772 & 17.3 & \multicolumn{2}{r}{2.74 {\scriptsize[2.38, 3.20]}} & \multicolumn{2}{r}{1.00 {\scriptsize[0.91, 1.00]}} & 0.63 {\scriptsize[0.58, 0.69]} \\
+Farseer, total $N$ & 0.724 & 67.7 & \multicolumn{2}{r}{2.64 {\scriptsize[2.23, 3.10]}} & \multicolumn{2}{r}{0.88 {\scriptsize[0.86, 0.92]}} & 0.62 {\scriptsize[0.55, 0.68]} \\
+Farseer, $\kappa$ free & 0.710 & 18.3 & \multicolumn{2}{r}{3.91 {\scriptsize[3.77, 4.06]}} & \multicolumn{2}{r}{1.00 {\scriptsize[0.99, 1.00]}} & 0.74 {\scriptsize[0.73, 0.75]} \\
+Gadre RefinedWeb & 0.796 & 1.4 & \multicolumn{2}{r}{4.41 {\scriptsize[2.19, 7.67]}} & \multicolumn{2}{r}{1.00 {\scriptsize[0.95, 1.00]}} & 0.77 {\scriptsize[0.54, 0.87]} \\
+Gadre C4 & 0.795 & 6.0 & \multicolumn{2}{r}{3.18 {\scriptsize[1.12, 7.66]}} & \multicolumn{2}{r}{1.00 {\scriptsize[0.58, 1.00]}} & 0.69 {\scriptsize[0.11, 0.87]} \\
+Gadre RedPajama & 0.795 & 3.9 & \multicolumn{2}{r}{3.50 {\scriptsize[2.52, 6.94]}} & \multicolumn{2}{r}{1.00 {\scriptsize[1.00, 1.00]}} & 0.71 {\scriptsize[0.60, 0.86]} \\
+Gadre RefinedWeb, $\kappa$ free & 0.594 & 61.0 & \multicolumn{2}{r}{4.76 {\scriptsize[3.49, 15.39]}} & \multicolumn{2}{r}{0.88 {\scriptsize[0.84, 1.00]}} & 0.79 {\scriptsize[0.71, 0.94]} \\
+Gadre C4, $\kappa$ free & 0.607 & 78.5 & \multicolumn{2}{r}{3.95 {\scriptsize[2.06, 10.60]}} & \multicolumn{2}{r}{0.88 {\scriptsize[0.70, 1.00]}} & 0.75 {\scriptsize[0.51, 0.91]} \\
+Gadre RedPajama, $\kappa$ free & 0.623 & 32.3 & \multicolumn{2}{r}{5.64 {\scriptsize[3.48, 12.88]}} & \multicolumn{2}{r}{0.94 {\scriptsize[0.88, 1.00]}} & 0.82 {\scriptsize[0.71, 0.92]} \\
+OLMo ladder & 0.825 & 291 & \multicolumn{2}{r}{1.32 {\scriptsize[0.45, 2.66]}} & \multicolumn{2}{r}{0.77 {\scriptsize[0.18, 1.00]}} & 0.24 {\scriptsize[$-$1.22, 0.62]} \\
+OLMo ladder, $\kappa$ free & 0.544 & 142 & \multicolumn{2}{r}{4.68 {\scriptsize[3.80, 6.37]}} & \multicolumn{2}{r}{0.84 {\scriptsize[0.78, 0.86]}} & 0.79 {\scriptsize[0.74, 0.84]} \\
+Muennighoff & 0.735 & 36.7 & \multicolumn{2}{r}{2.55 {\scriptsize[0.54, 10.02]}} & \multicolumn{2}{r}{0.92 {\scriptsize[0.26, 1.00]}} & 0.61 {\scriptsize[$-$0.85, 0.90]} \\
+Muennighoff, $\kappa$ free & 0.511 & 100.0 & \multicolumn{2}{r}{6.87 {\scriptsize[1.15, 37.30]}} & \multicolumn{2}{r}{0.86 {\scriptsize[0.55, 0.97]}} & 0.85 {\scriptsize[0.13, 0.97]} \\
+Llama 3 law (A2) & 0.785 & 31.3 & \multicolumn{2}{r}{2.30 {\scriptsize[1.95, 2.65]}} & \multicolumn{2}{r}{0.92 {\scriptsize[0.90, 1.00]}} & 0.57 {\scriptsize[0.49, 0.62]} \\
+Llama 3, primal & 0.769 & 9.6 & \multicolumn{2}{r}{3.26 {\scriptsize[2.36, 4.04]}} & \multicolumn{2}{r}{1.00 {\scriptsize[0.91, 1.00]}} & 0.69 {\scriptsize[0.58, 0.75]} \\
+Llama 3, model-free & 0.660 & 31.3 & \multicolumn{2}{r}{4.79 {\scriptsize[3.60, 6.58]}} & \multicolumn{2}{r}{0.92 {\scriptsize[0.92, 0.96]}} & 0.79 {\scriptsize[0.72, 0.85]} \\
+Marin Nemotron, primal & 0.658 & 81.8 & \multicolumn{2}{r}{3.52 {\scriptsize[2.45, 6.84]}} & \multicolumn{2}{r}{0.87 {\scriptsize[0.82, 0.99]}} & 0.72 {\scriptsize[0.59, 0.85]} \\
+Marin DCLM, primal & 0.647 & 106 & \multicolumn{2}{r}{3.31 {\scriptsize[2.41, 6.40]}} & \multicolumn{2}{r}{0.86 {\scriptsize[0.78, 0.92]}} & 0.70 {\scriptsize[0.59, 0.84]} \\
+Marin Comma, primal & 0.663 & 228 & \multicolumn{2}{r}{2.13 {\scriptsize[1.48, 3.97]}} & \multicolumn{2}{r}{0.78 {\scriptsize[0.70, 0.88]}} & 0.53 {\scriptsize[0.32, 0.75]} \\
+Marin Nemotron, A2 & 0.867 & 35.1 & \multicolumn{2}{r}{1.63 {\scriptsize[1.36, 2.17]}} & \multicolumn{2}{r}{0.92 {\scriptsize[0.86, 1.00]}} & 0.39 {\scriptsize[0.27, 0.54]} \\
+Marin DCLM, A2 & 0.866 & 32.5 & \multicolumn{2}{r}{1.66 {\scriptsize[1.26, 2.40]}} & \multicolumn{2}{r}{0.92 {\scriptsize[0.78, 1.00]}} & 0.40 {\scriptsize[0.21, 0.58]} \\
+Marin Comma, A2 & 0.904 & 58.0 & \multicolumn{2}{r}{1.33 {\scriptsize[1.13, 1.57]}} & \multicolumn{2}{r}{0.88 {\scriptsize[0.72, 0.95]}} & 0.25 {\scriptsize[0.11, 0.36]} \\
+Marin Nemotron, model-free & 0.705 & 35.1 & \multicolumn{2}{r}{3.78 {\scriptsize[2.48, 5.79]}} & \multicolumn{2}{r}{0.92 {\scriptsize[0.88, 0.99]}} & 0.74 {\scriptsize[0.60, 0.83]} \\
+Marin DCLM, model-free & 0.713 & 32.5 & \multicolumn{2}{r}{3.71 {\scriptsize[2.37, 6.16]}} & \multicolumn{2}{r}{0.92 {\scriptsize[0.88, 1.00]}} & 0.73 {\scriptsize[0.58, 0.84]} \\
+Marin Comma, model-free & 0.700 & 58.0 & \multicolumn{2}{r}{3.21 {\scriptsize[2.40, 5.38]}} & \multicolumn{2}{r}{0.88 {\scriptsize[0.87, 0.95]}} & 0.69 {\scriptsize[0.58, 0.81]} \\
+DeepSeek LLM law & 0.701 & 13.9 & \multicolumn{2}{r}{4.57 {\scriptsize[3.96, 5.31]}} & \multicolumn{2}{r}{1.00 {\scriptsize[1.00, 1.00]}} & 0.78 {\scriptsize[0.75, 0.81]} \\
+MiniCPM law & 0.794 & 426 & \multicolumn{2}{r}{1.20} & \multicolumn{2}{r}{0.64} & 0.17 \\
+\midrule
+Range, 32 technologies & & 1.4--426 & \multicolumn{2}{r}{1.20--6.87} & \multicolumn{2}{r}{0.64--1.00} & 0.17--0.85 \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
+\begin{tablenotes}Panel A: sequential steps from the 173 verified open-weight base models (m3 Sample B); each row reports the sample remaining after the step; the clean sample is the last row. Reference technology: Chinchilla with $\kappa$ free. All points $>1$: every ex-ante technology's point estimate exceeds one; band $>1$: the union of 95 percent intervals over all ex-ante technologies lies above one. Panel B: medians and shares over the clean sample; brackets are 2.5/97.5 percentiles over the technology's bootstrap draws, recomputing the sample statistic in every draw (one technology draw shared by all models); no bracket = published point estimate. Ex-ante rule: every technology estimated from final-checkpoint losses of a designed sweep (primary Huber estimator; $\kappa=1$ and $\kappa$ free; each corpus and parameter convention), the Approach-2 paths and model-free curvature of the IsoFLOP designs, and published lab laws (Llama 3, DeepSeek LLM, MiniCPM). Excluded ex ante: DataDecide and (Mis)Fitting, whose points come from checkpoints before the learning-rate schedule ends. Model-free rows: own IsoFLOP path with module ra1's model-free $\sigma^*$. Robustness row (not part of the ex-ante definition): the clean sample without models trained mainly on teacher-generated synthetic data (phi-1.5, phi-2, SmolLM 1--3). Non-embedding and OLMo-convention technologies are evaluated at the model's own count from config.json (77 of 77 models).\end{tablenotes}
+\begin{tablenotes}[Source]Module ra2\_wedge; \texttt{ra2\_wedge\_cleaning.csv}, \texttt{ra2\_wedge\_technologies.csv}.\end{tablenotes}
+\end{table}

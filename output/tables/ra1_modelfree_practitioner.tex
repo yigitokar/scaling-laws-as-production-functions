@@ -1,0 +1,27 @@
+\begin{table}[tp]
+\centering
+\caption{The Compute Cost of Over-Training}
+\label{tab:overhead}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccccc@{}}
+\toprule
+ & \multicolumn{4}{c}{Training compute $C/C_{\min}$ at $M=k\,M^*$} & \multicolumn{4}{c}{Implied wedge $w=k^{1/\sigma^*-1}$} \\
+\cmidrule(lr){2-5}\cmidrule(l){6-9}
+$\sigma^*$ & $k=2$ & $k=10$ & $k=100$ & $k=1000$ & $k=2$ & $k=10$ & $k=100$ & $k=1000$ \\
+\midrule
+0.60 & 1.08 & 2.24 & 14.32 & 128.79 & 1.59 & 4.64 & 21.54 & 100.00 \\
+0.70 & 1.05 & 1.73 & 7.23 & 49.84 & 1.35 & 2.68 & 7.20 & 19.31 \\
+0.74 & 1.04 & 1.57 & 5.42 & 31.31 & 1.28 & 2.25 & 5.04 & 11.33 \\
+0.80 & 1.03 & 1.39 & 3.52 & 14.47 & 1.19 & 1.78 & 3.16 & 5.62 \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Compute needed to reach the loss of the compute-optimal model when training at $k$ times the compute-optimal tokens-per-parameter ratio, relative to the minimum: $C/C_{\min}=((\alpha+\beta w)/(\alpha+\beta))^{1/\gamma}w^{-1/\alpha}$ with $\ln w=(1/\sigma^*-1)\ln k$; homothetic case $\alpha=\beta=\rho=1/\sigma^*-1$, $C/C_{\min}=\cosh(\rho\ln k/2)^{2/\rho}$ (every entry checked by direct minimization). At the same $\sigma^*$, the $\alpha/\beta$ split of \citet{besiroglu2024chinchilla} changes the entries by at most 4.5\% and that of \citet{hoffmann2022training} by at most 19\% for $k\le100$ ($k$ relative to $M^*$ at the model's own compute). The wedge $w$ equals lifetime over training compute for a developer who minimizes lifetime compute (Proposition 2); $(w-1)/w$ is the planned inference share. With the parameters in \citet{devries2023go} ($\alpha=0.32$, $\beta=0.28$, $\sigma^*=0.77$) a model at 30\% of the compute-optimal size needs 99\% more compute, $k=21.1$; the formula gives 99\%.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations; \citet{devries2023go}.
+\end{tablenotes}
+\end{table}

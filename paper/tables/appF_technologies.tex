@@ -1,0 +1,78 @@
+% Online Appendix Table F3: all 32 ex-ante technologies on the clean sample (output/tables/ra2_wedge_cleaning.tex Panel B;
+% ra2_wedge_technologies.csv). Writer appendix_D_F, 2026-09-24.
+\begin{table}[tp]
+\centering
+\caption{The Revealed Wedge under Every Ex-Ante Technology}
+\label{tab:app-technologies}
+\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccr@{\,}lcr@{\,}l@{}}
+\toprule
+Technology & $\sigma^*$ & $M^*(10^{24})$ & \multicolumn{2}{c}{Median $w$} & Share $w>1$ & \multicolumn{2}{c}{Median $s$} \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Chinchilla data}} \\
+\quad $\kappa$ free (reference) & 0.701 & 21.6 & 3.99 & {\footnotesize [3.21, 4.86]} & 0.97 & 0.75 & {\footnotesize [0.69, 0.79]} \\
+\quad $\kappa=1$ & 0.737 & 17.6 & 3.34 & {\footnotesize [2.64, 4.81]} & 1.00 & 0.70 & {\footnotesize [0.62, 0.79]} \\
+\quad Besiroglu et al.\ parameters & 0.737 & 18.1 & 3.31 &  & 1.00 & 0.70 &  \\
+\quad Hoffmann et al., Approach 3 & 0.762 & 62.0 & 2.12 &  & 0.88 & 0.53 &  \\
+\quad Non-embedding $N$, $\kappa=1$ & 0.753 & 9.7 & 3.65 & {\footnotesize [2.83, 4.71]} & 1.00 & 0.73 & {\footnotesize [0.65, 0.79]} \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Farseer}} \\
+\quad Non-embedding $N$, $\kappa=1$ & 0.772 & 17.3 & 2.74 & {\footnotesize [2.38, 3.20]} & 1.00 & 0.63 & {\footnotesize [0.58, 0.69]} \\
+\quad Total $N$, $\kappa=1$ & 0.724 & 67.7 & 2.64 & {\footnotesize [2.23, 3.10]} & 0.88 & 0.62 & {\footnotesize [0.55, 0.68]} \\
+\quad Non-embedding $N$, $\kappa$ free & 0.710 & 18.3 & 3.91 & {\footnotesize [3.77, 4.06]} & 1.00 & 0.74 & {\footnotesize [0.73, 0.75]} \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Gadre et al.}} \\
+\quad RefinedWeb, $\kappa=1$ & 0.796 & 1.4 & 4.41 & {\footnotesize [2.19, 7.67]} & 1.00 & 0.77 & {\footnotesize [0.54, 0.87]} \\
+\quad C4, $\kappa=1$ & 0.795 & 6.0 & 3.18 & {\footnotesize [1.12, 7.66]} & 1.00 & 0.69 & {\footnotesize [0.11, 0.87]} \\
+\quad RedPajama, $\kappa=1$ & 0.795 & 3.9 & 3.50 & {\footnotesize [2.52, 6.94]} & 1.00 & 0.71 & {\footnotesize [0.60, 0.86]} \\
+\quad RefinedWeb, $\kappa$ free & 0.594 & 61.0 & 4.76 & {\footnotesize [3.49, 15.39]} & 0.88 & 0.79 & {\footnotesize [0.71, 0.94]} \\
+\quad C4, $\kappa$ free & 0.607 & 78.5 & 3.95 & {\footnotesize [2.06, 10.60]} & 0.88 & 0.75 & {\footnotesize [0.51, 0.91]} \\
+\quad RedPajama, $\kappa$ free & 0.623 & 32.3 & 5.64 & {\footnotesize [3.48, 12.88]} & 0.94 & 0.82 & {\footnotesize [0.71, 0.92]} \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{OLMo ladder}} \\
+\quad $\kappa=1$ & 0.825 & 291 & 1.32 & {\footnotesize [0.45, 2.66]} & 0.77 & 0.24 & {\footnotesize [$-$1.22, 0.62]} \\
+\quad $\kappa$ free & 0.544 & 142 & 4.68 & {\footnotesize [3.80, 6.37]} & 0.84 & 0.79 & {\footnotesize [0.74, 0.84]} \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Muennighoff et al.}} \\
+\quad $\kappa=1$ & 0.735 & 36.7 & 2.55 & {\footnotesize [0.54, 10.02]} & 0.92 & 0.61 & {\footnotesize [$-$0.85, 0.90]} \\
+\quad $\kappa$ free & 0.511 & 100.0 & 6.87 & {\footnotesize [1.15, 37.30]} & 0.86 & 0.85 & {\footnotesize [0.13, 0.97]} \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Meta (Llama 3 IsoFLOPs)}} \\
+\quad Meta's law (A2, $\kappa=1$) & 0.785 & 31.3 & 2.30 & {\footnotesize [1.95, 2.65]} & 0.92 & 0.57 & {\footnotesize [0.49, 0.62]} \\
+\quad Primal, $\kappa=1$ & 0.769 & 9.6 & 3.26 & {\footnotesize [2.36, 4.04]} & 1.00 & 0.69 & {\footnotesize [0.58, 0.75]} \\
+\quad A2 path, model-free $\sigma^*$ & 0.660 & 31.3 & 4.79 & {\footnotesize [3.60, 6.58]} & 0.92 & 0.79 & {\footnotesize [0.72, 0.85]} \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Marin ladders}} \\
+\quad Nemotron-CC, primal & 0.658 & 81.8 & 3.52 & {\footnotesize [2.45, 6.84]} & 0.87 & 0.72 & {\footnotesize [0.59, 0.85]} \\
+\quad DCLM, primal & 0.647 & 106 & 3.31 & {\footnotesize [2.41, 6.40]} & 0.86 & 0.70 & {\footnotesize [0.59, 0.84]} \\
+\quad Comma, primal & 0.663 & 228 & 2.13 & {\footnotesize [1.48, 3.97]} & 0.78 & 0.53 & {\footnotesize [0.32, 0.75]} \\
+\quad Nemotron-CC, A2, $\kappa=1$ & 0.867 & 35.1 & 1.63 & {\footnotesize [1.36, 2.17]} & 0.92 & 0.39 & {\footnotesize [0.27, 0.54]} \\
+\quad DCLM, A2, $\kappa=1$ & 0.866 & 32.5 & 1.66 & {\footnotesize [1.26, 2.40]} & 0.92 & 0.40 & {\footnotesize [0.21, 0.58]} \\
+\quad Comma, A2, $\kappa=1$ & 0.904 & 58.0 & 1.33 & {\footnotesize [1.13, 1.57]} & 0.88 & 0.25 & {\footnotesize [0.11, 0.36]} \\
+\quad Nemotron-CC, model-free $\sigma^*$ & 0.705 & 35.1 & 3.78 & {\footnotesize [2.48, 5.79]} & 0.92 & 0.74 & {\footnotesize [0.60, 0.83]} \\
+\quad DCLM, model-free $\sigma^*$ & 0.713 & 32.5 & 3.71 & {\footnotesize [2.37, 6.16]} & 0.92 & 0.73 & {\footnotesize [0.58, 0.84]} \\
+\quad Comma, model-free $\sigma^*$ & 0.700 & 58.0 & 3.21 & {\footnotesize [2.40, 5.38]} & 0.88 & 0.69 & {\footnotesize [0.58, 0.81]} \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Published laws}} \\
+\quad DeepSeek LLM, reference $\sigma^*$ & 0.701 & 13.9 & 4.57 & {\footnotesize [3.96, 5.31]} & 1.00 & 0.78 & {\footnotesize [0.75, 0.81]} \\
+\quad MiniCPM & 0.794 & 426 & 1.20 &  & 0.64 & 0.17 &  \\
+\midrule
+Range, 32 technologies & & 1.4--426 & \multicolumn{2}{l}{1.20--6.87} & 0.64--1.00 & \multicolumn{2}{l}{0.17--0.85} \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{tablenotes}
+Clean inference-demand sample (77 models). Brackets (median $w$ and $s$): 2.5 and 97.5 percentiles over the technology's bootstrap draws,
+recomputing the sample statistic in every draw (one technology draw shared by all models); no bracket: published point
+estimate; the share with $w>1$ under the reference has the interval [0.92, 1.00]. A2: IsoFLOP-argmin (Approach 2) path. $M^*(10^{24})$: compute-optimal tokens per parameter at $10^{24}$ FLOP in the technology's own convention, an
+extrapolation for every row. The ex-ante inclusion rule and the bootstrap draws are described in the text. Model-free
+rows combine the design's own IsoFLOP path with its model-free $\sigma^*$ (Online Appendix Table~\ref{tab:app-mf-sens}).
+Non-embedding and OLMo-convention technologies are evaluated at each model's own count.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}; \citet{besiroglu2024chinchilla}; \citet{li2025predictableb}; \citet{gadre2024language};
+\citet{bhagia2024establishing}; \citet{muennighoff2023scaling}; \citet{grattafiori2024llama}; \citet{marin2026ladders};
+\citet{bi2024deepseek}; \citet{hu2024minicpm}; authors' calculations.
+\end{tablenotes}
+\end{table}

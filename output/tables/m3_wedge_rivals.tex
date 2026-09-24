@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Rival Wedges and Stated-Intent Checks}
+\label{tab:m3_rivals}
+\begin{tabular}{@{}p{3.6cm}p{6.2cm}p{4.6cm}@{}}
+\toprule
+Rival explanation & Statistic & Estimate \\
+\midrule
+Data scarcity / Kaplan-era beliefs & share of production-scale models with $\hat w<1$ & 2019: 0.00; 2020: 0.20; 2021: 0.47; 2022: 0.41; 2023: 0.18; 2024: 0.00; 2025: 0.02 \\
+Memory/hardware tier (6.5--9.5B) & share of open models in tier; log-normal benchmark & 0.26 vs 0.09 \\
+ & $\Delta\ln\hat w$ in tier $|$ $\ln C$, year & 0.11 (0.06), $n=238$ \\
+Non-homotheticity (Farseer Eq.~3) & median $\hat w$: Chinchilla form vs Eq.~3, $N$ in Farseer range & 3.44 vs 4.12 ($n=66$) \\
+ & median $\hat w$: Chinchilla form vs Eq.~3, $N$ above Farseer range & 2.12 vs 1.54 ($n=75$) \\
+Distillation / synthetic data & $\Delta\ln\hat w$ distilled; synthetic $|$ $\ln C$, year & 0.02 (0.23); 0.06 (0.18), $n=173$ \\
+Factor-biased recipes (m2) & share of Sample B with $\hat w$ / band$_{lo}$ above 1.25 (DataDecide NLS (primary)) & 0.88 / 0.70 \\
+ & share of Sample B with $\hat w$ / band$_{lo}$ above 1.29 (DataDecide Huber (primary)) & 0.88 / 0.69 \\
+ & share of Sample B with $\hat w$ / band$_{lo}$ above 1.80 (DataDecide M$\ge$20 Huber (largest)) & 0.79 / 0.49 \\
+\midrule
+Stated intent: Chinchilla & training-compute-optimal by design \citep{hoffmann2022training} & $\hat w$ 1.04--1.04; Meta law 0.89--0.89 \\
+Stated intent: Cerebras-GPT (111M-13B) & 20 tokens per parameter, stated as compute-optimal \citep{dey2023cerebras} & $\hat w$ 0.92--1.00; Meta law 0.95--1.16 \\
+Stated intent: Pythia (70M-12B) & same 300B tokens for every size (research design) \citep{biderman2023pythia} & $\hat w$ 1.09--6.49; Meta law 1.02--4.61 \\
+Stated intent: LLaMA-1 7B/13B & target: best performance at given inference budgets \citep{touvron2023llama} & $\hat w$ 1.65--2.07; Meta law 1.35--1.63 \\
+Stated intent: Llama 3 8B/70B & smaller models trained far beyond compute-optimal for inference \citep{grattafiori2024llama} & $\hat w$ 2.48--5.27; Meta law 1.63--3.09 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Production-scale sample as in Table~\ref{tab:m3_trends} unless noted. Memory tier: open-weight models released 2023--2026 with 6.5--9.5B total parameters (one 16--24~GB accelerator in 16-bit precision); the log-normal benchmark is the share implied by a normal fit to $\log_{10}N$. Farseer Eq.~3 is the non-homothetic form of \citet{li2025predictableb} fitted to the Farseer sweep (non-embedding $N$); `in range' means $N_{nonemb}$ within the Farseer design ($\le6.4$B). Factor bias: the wedge ratio $\exp(\text{tilt range})$ across 25 DataDecide recipes (module m2) bounds how far a recipe's factor bias can move $\hat w$; shares are of Sample B models whose reference $\hat w$ (or lower PI bound) exceeds that ratio. Stated intent: allocation rules stated by the developers; $\hat w$ is the reference wedge, `Meta law' the Llama~3 Approach-2/1 technology.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

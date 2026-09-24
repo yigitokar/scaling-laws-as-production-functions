@@ -1,0 +1,44 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Selection on the Outcome: Dropping High-Loss Runs}
+\label{tab:m1_selection}
+\begin{threeparttable}
+\begin{tabular}{lccccccc}
+\toprule
+$k$ / rule & $n$ & Max $L$ & $\alpha$ & $\beta$ & $a$ & $M^*(10^{21})$ & $E$ \\
+\midrule
+\multicolumn{8}{l}{\textit{Panel A. Drop the $k$ highest-loss runs (truncation on the outcome); Huber-LSE}} \\
+0 & 245 & 5.01 & 0.349 (0.018) & 0.453 (0.054) & 0.565 (0.032) & 15.5 (3.7) & 1.891 \\
+1 & 244 & 4.67 & 0.345 (0.016) & 0.412 (0.041) & 0.544 (0.027) & 17.6 (3.6) & 1.855 \\
+2 & 243 & 3.79 & 0.346 (0.016) & 0.403 (0.035) & 0.538 (0.025) & 18.4 (3.5) & 1.848 \\
+3 & 242 & 3.77 & 0.347 (0.015) & 0.382 (0.028) & 0.524 (0.022) & 20.0 (3.3) & 1.832 \\
+4 & 241 & 3.45 & 0.347 (0.016) & 0.371 (0.024) & 0.516 (0.022) & 21.0 (3.5) & 1.821 \\
+5 & 240 & 3.41 & 0.347 (0.015) & 0.367 (0.021) & 0.514 (0.020) & 21.4 (3.5) & 1.817 \\
+6 & 239 & 3.41 & 0.347 (0.013) & 0.363 (0.018) & 0.511 (0.018) & 21.9 (3.2) & 1.813 \\
+8 & 237 & 3.33 & 0.346 (0.013) & 0.358 (0.019) & 0.509 (0.019) & 22.2 (3.5) & 1.807 \\
+10 & 235 & 3.29 & 0.346 (0.015) & 0.358 (0.018) & 0.509 (0.018) & 22.2 (3.5) & 1.807 \\
+15 & 230 & 3.18 & 0.347 (0.016) & 0.347 (0.020) & 0.500 (0.021) & 23.3 (4.0) & 1.795 \\
+\multicolumn{8}{l}{\textit{Panel B. Alternative exclusion rules; Huber-LSE}} \\
+none (n=245) & 245 &  & 0.349 (0.017) & 0.453 (0.060) & 0.565 (0.033) & 15.5 (3.6) & 1.891 \\
+drop 5 highest loss (Besiroglu) & 240 &  & 0.347 (0.016) & 0.367 (0.019) & 0.514 (0.018) & 21.4 (3.2) & 1.817 \\
+drop the 6 lowest-loss runs (L $\le$ 5th lowest; ties) & 239 &  & 0.359 (0.014) & 0.479 (0.057) & 0.572 (0.032) & 14.6 (3.6) & 1.925 \\
+drop 5 largest $|$residual$|$ (n=245 fit) & 240 &  & 0.350 (0.015) & 0.373 (0.024) & 0.516 (0.020) & 21.1 (3.4) & 1.828 \\
+drop D/N $<$ 0.4 (selection on X) & 241 &  & 0.347 (0.016) & 0.371 (0.024) & 0.516 (0.021) & 21.0 (3.5) & 1.821 \\
+drop D/N $<$ 1 & 234 &  & 0.343 (0.015) & 0.342 (0.019) & 0.500 (0.021) & 22.7 (3.9) & 1.784 \\
+drop D/N $<$ 2 & 224 &  & 0.331 (0.013) & 0.347 (0.023) & 0.512 (0.022) & 20.2 (3.4) & 1.772 \\
+drop the 1e19 IsoFLOP budget & 211 &  & 0.357 (0.014) & 0.313 (0.022) & 0.467 (0.024) & 27.4 (3.9) & 1.767 \\
+IsoFLOP-profile runs only & 137 &  & 0.383 (0.030) & 0.490 (0.055) & 0.561 (0.030) & 15.8 (3.3) & 1.945 \\
+IsoFLOP runs only, 5 highest loss dropped & 132 &  & 0.363 (0.026) & 0.402 (0.028) & 0.526 (0.022) & 18.8 (3.3) & 1.863 \\
+\multicolumn{8}{l}{\textit{Panel C. Gaussian likelihood and the Hausman--Wise truncated-regression correction}} \\
+Gaussian MLE, n=245 & 245 &  & 0.372 & 0.612 & 0.622 & 9.6 & 1.992 \\
+Gaussian MLE, n=240 (ignores truncation) & 240 &  & 0.360 & 0.406 & 0.530 & 20.8 & 1.865 \\
+Hausman-Wise truncated MLE, n=240 (L $<$ $\bar L$) & 240 &  & 0.361 & 0.406 & 0.530 & 20.8 & 1.865 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Huber-LSE ($\delta=10^{-3}$) estimates; pairs-bootstrap standard errors (200 draws) in parentheses. Panel A drops the $k$ runs with the highest loss from the 245 digitized runs ($k=5$ is the \citet{besiroglu2024chinchilla} sample); ``Max $L$'' is the largest retained loss. Panel B: selection on regressors ($D/N$, budget) is ignorable under correct specification, selection on the outcome is not \citep{hausman1977social}. Panel C: Gaussian NLS on log loss, and the truncated-normal MLE that conditions on $L<\bar L$ ($\bar L$ = 5th-highest loss, 3.447). Paired bootstrap of the $k=0\to5$ swing (400 draws of the 245 runs; the rule $L<\bar L$ applied inside each draw): $\Delta\beta=0.086$ (s.e. 0.052; 95\% interval [0.006, 0.217]), $\Delta a=0.051$ (s.e. 0.029).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

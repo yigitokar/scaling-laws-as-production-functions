@@ -1,0 +1,42 @@
+\begin{table}[tp]
+\centering
+\caption{Hyperparameters as Flexible Inputs: Inefficiency and the Estimated Technology}
+\label{tab:app-steplaw}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+ & \multicolumn{3}{c}{Inefficiency $\iota$ (percent)} & \multicolumn{2}{c}{$E$ held at 1.4} & \multicolumn{2}{c}{$E$ estimated} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}\cmidrule(l){7-8}
+Policy & Mean & $\partial\iota/\partial\ln N$ & $\partial\iota/\partial\ln D$ & $a$ & $\sigma^*$ & $a$ & $\sigma^*$ \\
+\midrule
+Frontier (best run) & 0.00 & 0.00 & 0.00 & 0.573 & 0.790 & 0.563 & 0.786 \\
+ & & & & (0.108) & (0.014) & (0.148) & (0.040) \\
+Step Law rule & 0.10 & $-$0.05 (0.04) & 0.01 (0.02) & 0.532 & 0.794 & 0.517 & 0.789 \\
+Best of 16 random & 0.21 & $-$0.04 [0.08] & $-$0.06 [0.06] & 0.558 & 0.791 & 0.551 & 0.788 \\
+Best of 4 random & 0.70 & $-$0.16 [0.25] & $-$0.20 [0.20] & 0.555 & 0.786 & 0.589 & 0.793 \\
+One random & 2.58 & $-$0.44 [1.19] & $-$0.70 [0.71] & 0.539 & 0.739 & 0.565 & 0.760 \\
+One fixed setting & 0.29 & $-$0.08 (0.08) & $-$0.03 (0.05) & 0.619 & 0.780 & 0.515 & 0.748 \\
+Porian et al., base & 0.41 & 0.32 (0.16) & $-$0.23 (0.11) & 0.621 & 0.785 & 0.564 & 0.769 \\
+Porian et al., $N$-rule & 0.77 & 0.72 (0.22) & $-$0.57 (0.14) & 0.649 & 0.785 & 0.453 & 0.722 \\
+DeepSeek $C$-rule & 0.75 & $-$0.16 (0.06) & $-$0.02 (0.03) & 0.543 & 0.793 & 0.488 & 0.774 \\
+Bj\"orck et al.\ rule & 0.91 & $-$0.57 (0.07) & 0.04 (0.04) & 0.576 & 0.782 & 0.548 & 0.773 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}The Step Law grid of \citet{li2025predictablea}: 1,911 runs in 17 $(N,D)$ cells with $N$ from 215
+million to 1.07 billion non-embedding parameters and $D$ from 4 to 100 billion tokens, up to 12 learning rates and 10
+batch sizes per cell; the output is the smoothed final training loss. Each policy selects one run per cell (the grid
+point nearest its target); random rows are medians over 200 Monte Carlo draws that keep the best of $k$ non-diverged
+configurations per cell (Monte Carlo standard deviations in brackets). Inefficiency gradients: OLS across the 17 cells,
+HC1 standard errors in parentheses. Technology: the Chinchilla form fitted by NLS on log loss, with residual-bootstrap
+standard errors for the frontier (200 draws). The profile likelihood in $E$ is flat (sum of squared residuals within
+17 percent for $E$ between 0.6 and 1.7, over which $a$ ranges from 0.76 to 0.45), so only differences across rows at
+fixed $E$ are informative. $N$ follows Step Law's non-embedding convention, which biases the level of $a$ upward; counting
+the output head moves the frontier $a$ to 0.465 ($E$ estimated) and 0.550 ($E=1.4$). The Huber estimator on the frontier
+gives $E=0.91$, $a=0.689$, and $\sigma^*=0.824$. $\iota=\ln L-\ln L^*$. ``One fixed setting'' uses the best single (learning rate, batch) pair for all cells. Rules: Step Law, the learning-rate and batch rules of
+\citet{li2025predictablea}; DeepSeek, the compute-based rules of \citet{bi2024deepseek}; Bj\"orck et al., the learning-rate rule
+in $(N,D)$ of \citet{bjorck2024scaling} at a fixed 0.5-million-token batch; Porian et al., the base setting and the
+$N$-based rule of \citet{porian2024resolving}.\end{tablenotes}
+\begin{tablenotes}[Source]\citet{li2025predictablea}; authors' estimates.\end{tablenotes}
+\end{table}

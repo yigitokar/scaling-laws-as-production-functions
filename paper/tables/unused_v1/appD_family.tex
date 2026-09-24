@@ -1,0 +1,51 @@
+\begin{table}[tp]
+\centering
+\caption{Within-Family Revealed Preference and Over-Identification}
+\label{tab:app-family}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & & \multicolumn{4}{c}{Flagship} & Siblings \\
+\cmidrule(lr){3-6}
+Family (flagship size) & Models & $M_f$ & $\hat w_f$ & Band & Meta law & $w^{rel}_i>1$ \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A. Families}} \\
+Llama 2 (70B) & 3 & 29 & 1.19 & [0.55, 3.77] & 0.98 & 1.00 \\
+Llama 3.1 (405B) & 3 & 38 & 1.37 & [0.42, 5.73] & 0.98 & 1.00 \\
+Qwen2.5 (72B) & 7 & 248 & 2.62 & [1.06, 8.01] & 1.69 & 1.00 \\
+Qwen3 (32B) & 6 & 1,099 & 4.46 & [1.98, 11.86] & 2.55 & 1.00 \\
+Gemma 2$^{\dagger}$ (27B) & 3 & 477 & 3.27 & [1.58, 8.74] & 2.08 & 1.00 \\
+Gemma 3$^{\dagger}$ (27B) & 5 & 518 & 3.37 & [1.62, 8.98] & 2.12 & 1.00 \\
+OLMo 2$^{\dagger}$ (32B) & 4 & 191 & 2.34 & [0.23, 6.42] & 1.64 & 1.00 \\
+SmolLM2$^{\dagger}$ (1.7B) & 3 & 6,428 & 8.05 & [4.01, 14.97] & 4.50 & 1.00 \\
+Phi-3 (14B) & 3 & 344 & 2.86 & [1.63, 6.98] & 1.97 & 1.00 \\
+Pythia (12B) & 8 & 25 & 1.09 & [0.75, 2.66] & 1.02 & 1.00 \\
+Cerebras-GPT$^{\dagger}$ (6.7B) & 6 & 20 & 0.99 & [0.78, 2.24] & 0.98 & 0.00 \\
+BLOOM (176B) & 5 & 2.1 & 0.46 & [0.20, 1.78] & 0.48 & 1.00 \\
+OPT (66B) & 8 & 4.5 & 0.60 & [0.31, 2.00] & 0.61 & 1.00 \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel B. Demand model $T_i=\kappa_fN_i^{-\eta}$ with family effects}} \\[2pt]
+ & Families & Models & $\hat\eta$ (s.e.) & $F$ & $p$ & \\
+\cmidrule(lr){2-6}
+Absolute $T_i$, all families & 42 & 138 & 0.53 (0.07) & 2.55 & 0.001 & \\
+Absolute $T_i$, size-varying $D$ & 18 & 58 & 0.36 (0.12) & 2.15 & 0.047 & \\
+Normalized $T_i$, all families & 23 & 80 & 0.58 (0.05) & 2.77 & 0.004 & \\
+Normalized $T_i$, size-varying $D$ & 11 & 33 & 0.48 (0.12) & 2.08 & 0.122 & \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Families of verified open-weight base models trained by one developer on one data release; the
+flagship is the largest model by total parameters. $\hat w_f$: flagship wedge under the reference technology (our
+Huber refit of the Chinchilla data); band: range of 95 percent bootstrap intervals and point estimates over six
+technologies (a sensitivity band, not an identified set); Meta law: $\hat w_f$ under Meta's Llama 3 IsoFLOP technology. Siblings: share of non-flagship models with $w^{rel}_i>1$. Siblings'
+wedges relative to the flagship, $w^{rel}_i=(N_i/N_f)^{-\alpha}(D_i/D_f)^{\beta}$, depend only on the exponents if
+the flagship is training-optimal and are lower bounds on $w_i$ when $w_f>1$. $^{\dagger}$: the largest and smallest token counts
+in the family differ by more than 10 percent. Panel B: family-clustered standard errors in
+parentheses; $F$ tests a common $\eta$ across families (classical, models with $T_i>0$ only); normalized demand divides
+by the flagship's. With a common $D$ within a
+family, $T_i/D$ is a mechanical function of $N_i$, so the rows with size-varying $D$ are the informative
+ones.\end{tablenotes}
+\begin{tablenotes}[Source]Model cards, technical reports, and Hugging Face configuration files; authors'
+calculations.\end{tablenotes}
+\end{table}

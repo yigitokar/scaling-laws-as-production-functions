@@ -1,0 +1,61 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\begin{threeparttable}
+\caption{Cross-lab production functions: observational estimators vs experimental benchmark (HellaSwag logit)}
+\label{tab:table6b_global_overlap}
+\begin{tabular}{lccccc}
+\toprule
+ & $\theta_N$ & $\theta_D$ & $\theta_C$ (ray) & $\theta_C$ (C only) & Obs./clusters \\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A. Experimental benchmarks (designed sweeps)}} \\
+OLMo ladder & 0.481 & 0.441 & 0.461 &  & 30 \\
+ & (0.028) & (0.029) & (0.016) &  &  \\
+OLMo ladder + OLMo-2 & 0.464 & 0.352 & 0.408 &  & 32 \\
+ & (0.045) & (0.044) & (0.027) &  &  \\
+Gadre et al. (N$\geq$0.1B) & 0.513 & 0.511 & 0.512 &  & 56 \\
+ & (0.047) & (0.027) & (0.022) &  &  \\
+DataDecide &  &  & 0.464 &  & 525 \\
+ &  &  & (0.008) &  &  \\
+\midrule
+\multicolumn{6}{l}{\textit{Panel B. Observational estimators (overlap sample)}} \\
+OLS & 0.574 & 0.239 & 0.407 & 0.399 & 90/21 \\
+ & (0.067) & (0.057) & (0.031) & (0.040) &  \\
+Year FE & 0.624 & 0.141 & 0.383 & 0.397 & 90/21 \\
+ & (0.041) & (0.087) & (0.039) & (0.043) &  \\
+Developer FE & 0.649 & 0.181 & 0.415 & 0.482 & 90/21 \\
+ & (0.041) & (0.126) & (0.055) & (0.060) &  \\
+Family FE & 0.642 & 0.179 & 0.410 & 0.539 & 90/21 \\
+ & (0.047) & (0.079) & (0.036) & (0.081) &  \\
+Mundlak & 0.642 & 0.179 & 0.410 & 0.539 & 90/21 \\
+ & (0.038) & (0.063) & (0.029) & (0.064) &  \\
+Lab $\times$ period FE & 0.656 & 0.217 & 0.437 & 0.528 & 90/21 \\
+ & (0.038) & (0.124) & (0.056) & (0.071) &  \\
+FD across generations & -1.830 & -0.009 & -0.919 &  & 16/10 \\
+ & (1.776) & (0.226) & (0.979) &  &  \\
+ACF-style (AR(1) omega, gens) & 0.623 & 0.542 & 0.583 &  & 16/10 \\
+ & [-14.63, 1.47] & [-1.36, 2.33] & [-7.50, 1.38] &  &  \\
+IV: frontier FLOP/\$ (F=0.0) &  &  &  & 9.739 & 90/21 \\
+ &  &  &  & (243.327) AR: unbounded &  \\
+IV: own-hardware FLOP/\$ (F=19.2) &  &  &  & 0.168 & 19/7 \\
+ &  &  &  & (0.174) AR [-0.38, 0.50] &  \\
+OLS, EIV-corrected (empirical) &  &  &  & 0.399 & 90 \\
+ &  &  &  & (0.040) &  \\
+Family FE, EIV-corrected (empirical) &  &  &  & 0.540 & 90 \\
+ &  &  &  & (0.081) &  \\
+Family FE, EIV-corrected (Epoch 'Confident') &  &  &  & 0.655 & 90 \\
+ &  &  &  & (0.098) &  \\
+OP-style selection control & 0.618 & 0.236 & 0.427 & 0.390 & 90/21 \\
+ & (0.078) & (0.058) & (0.041) & (0.048) &  \\
+Reverse (c on y) &  &  &  & 0.576 & 90/21 \\
+ &  &  &  & (0.084) &  \\
+Reverse (c on y), family FE &  &  &  & 0.642 & 90/21 \\
+ &  &  &  & (0.098) &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Output: HellaSwag logit, i.e.\ $\text{logit}((acc-\text{chance})/(1-\text{chance}))$. $\theta_N,\theta_D$: coefficients on $\ln N$ (total parameters) and $\ln D$ (training tokens); $\theta_C$ (ray) $=(\theta_N+\theta_D)/2$, the elasticity with respect to $\ln C$ along a proportional ($D\propto N$) expansion; $\theta_C$ (C only): slope on $\ln C=\ln 6ND$ in a compute-only regression. Panel A: designed sweeps (OLMo ladder: 5 sizes $\times$ 5 token multipliers; OLMo-2 7B/13B targets; Gadre et al.: 3 corpora, corpus fixed effects; DataDecide: 25 recipes on the $D=100N$ ray, recipe fixed effects, clustered by recipe). HC1 standard errors in parentheses. These are GLOBAL log-linear fits over each design and are not matched to the observational design (see the design-matched Table 6). Panel B: standard errors clustered by developer in parentheses; bootstrap 95\% intervals (clustered by product line) in brackets for the ACF-style estimator. FD and ACF-style use consecutive generations within (product line, size tier); Arellano--Bond requires three generations and has only 0 such cells, so it is not reported. IV: $\ln C$ instrumented with the log FLOP/s per dollar of the best data-centre accelerator released six months before the model, or of the model's own training hardware (Epoch); F is the cluster-robust first-stage F; AR = Anderson--Rubin 95\% set. EIV: classical-error correction with $\sigma_u=0.03$ (dispersion of independent Epoch compute estimates around $6ND$) or $\ln 3/1.645$ (Epoch `Confident' class). Reverse: $1/b$ from regressing $\ln C$ on the output (Nerlove).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

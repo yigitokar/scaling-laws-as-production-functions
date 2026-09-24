@@ -1,0 +1,89 @@
+% Table 2 (Section III): designs and the elasticity of substitution on the expansion path.
+% Sources (every cell): Panel A model-free and same-run parametric columns: output/tables/ra1_modelfree_isoflop_summary.csv
+% (sigma_re, se_sigma_re), ra1_modelfree_isoflop_param.csv (sigma_kappa, sigma_chin, FHH wild SEs); Farseer model-free:
+% ra1_modelfree_farseer_sigma_slope.csv (first-derivative estimate, 0.7078; 0.7008-0.7114 across bandwidths); Farseer and
+% Panel B parametric: m2_table3_technology.csv (Huber rows; sigma_star, sigma_star_q with pairs/cell bootstrap SEs).
+% Runs, N, M, off-path spread: recomputed from the ra1 loaders (ra1_common.isoflop_designs, sweep_panels); sweep spreads
+% equal m2's sd_offpath. Panel C: ra1_modelfree_heterogeneity.csv (rows "all technologies" of the named sets).
+% Writer notes: paper/notes/writer2_technology.md.
+\begin{table}[tp]
+\centering
+\caption{Designs and the Elasticity of Substitution on the Expansion Path}
+\label{tab:designs}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrcccccc@{}}
+\toprule
+ & & & & Off-path & \multicolumn{3}{c}{$\sigma^*$} \\
+\cmidrule(l){6-8}
+Design & Runs & $N$ & $M=D/N$ & spread & Model-free & $\kappa$ free & $\kappa=1$ \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel A. IsoFLOP designs and Farseer's factorial grid}}\\[1pt]
+Chinchilla, IsoFLOP runs & 137 & 57M--16B & 0.04--294 & 1.67 & 0.673 & 0.667 & 0.692 \\
+ & & & & & (0.027) & (0.023) & (0.013) \\
+Llama 3 & 133 & 59M--17B & 0.44--643 & 1.38 & 0.660 & 0.693 & 0.769 \\
+ & & & & & (0.023) & (0.020) & (0.006) \\
+Marin, Comma & 85 & 0.12--12.6B & 0.09--3,706 & 2.46 & 0.700 & 0.678 & 0.690 \\
+ & & & & & (0.027) & (0.015) & (0.015) \\
+Marin, DCLM & 85 & 0.12--12.6B & 0.09--3,706 & 2.46 & 0.713 & 0.663 & 0.673 \\
+ & & & & & (0.027) & (0.013) & (0.013) \\
+Marin, Nemotron-CC & 88 & 0.12--12.6B & 0.09--3,706 & 2.42 & 0.705 & 0.677 & 0.684 \\
+ & & & & & (0.023) & (0.014) & (0.014) \\
+Porian, RefinedWeb$^{a}$ & 121 & 5.2M--0.90B & 0.02--346 & 2.29 & 0.518 & 0.345 & 0.599 \\
+ & & & & & (0.017) & (0.141) & (0.032) \\
+Porian, OpenWebText2$^{a}$ & 116 & 5.2M--0.90B & 0.02--194 & 2.20 & 0.505 & 0.347 & 0.609 \\
+ & & & & & (0.014) & (0.160) & (0.039) \\
+Farseer & 404 & 0.10--6.4B & 0.31--2,570 & 1.97 & 0.708$^{b}$ & 0.710 & 0.772 \\
+ & & & & &  & (0.003) & (0.010) \\[3pt]
+\multicolumn{8}{@{}l}{\textit{Panel B. Other sweep--corpus technologies (parametric fits to all runs)}}\\[1pt]
+Chinchilla, all runs & 240 & 57M--16B & 0.46--341 & 1.35 & -- & 0.701 & 0.737 \\
+ & & & & &  & (0.014) & (0.006) \\
+Gadre, C4 & 34 & 11M--6.9B & 5--640 & 1.46 & -- & 0.607 & 0.795 \\
+ & & & & &  & (0.054) & (0.020) \\
+Gadre, RedPajama & 35 & 11M--6.9B & 5--640 & 1.47 & -- & 0.623 & 0.795 \\
+ & & & & &  & (0.059) & (0.013) \\
+Gadre, RefinedWeb & 35 & 11M--6.9B & 5--640 & 1.47 & -- & 0.594 & 0.796 \\
+ & & & & &  & (0.062) & (0.015) \\
+OLMo ladder & 30 & 0.19--3.2B & 10--200 & 0.94 & -- & 0.544 & 0.825 \\
+ & & & & &  & (0.021) & (0.034) \\
+Muennighoff & 33 & 7.1M--8.7B & 0.04--303 & 1.97 & -- & 0.511 & 0.735 \\
+ & & & & &  & (0.056) & (0.031) \\
+\bottomrule
+\end{tabular*}
+
+\vspace{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccc@{}}
+\multicolumn{6}{@{}l}{\textit{Panel C. Heterogeneity across designs (random effects)}}\\[1pt]
+\midrule
+Set & $k$ & Mean [95\% CI] & Between s.d. & $I^2$ & Cochran $Q$ ($p$) \\
+\midrule
+Model-free, Panel A excluding Porian & 6 & 0.695 [0.673, 0.717] & 0.000 & 0.00 & 4.1 (0.54) \\
+Model-free, all of Panel A & 8 & 0.646 [0.562, 0.730] & 0.098 & 0.96 & 188.9 ($<$0.001) \\
+$\kappa$ free, IsoFLOP designs of Panel A & 7 & 0.672 [0.636, 0.707] & 0.019 & 0.47 & 11.4 (0.08) \\
+$\kappa$ free, sweep--corpus technologies & 7 & 0.622 [0.549, 0.695] & 0.068 & 0.93 & 82.1 ($<$0.001) \\
+$\kappa=1$, sweep--corpus technologies & 7 & 0.777 [0.745, 0.809] & 0.030 & 0.83 & 36.3 ($<$0.001) \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+$N$: parameters in the convention that makes each IsoFLOP profile an exact isocost (Chinchilla: total; Llama~3,
+Marin: $C/(6D)$; Porian et al.: non-embedding plus output head); Farseer non-embedding; OLMo ladder without the
+input embedding; Gadre et al.\ total; Muennighoff et al.\ the authors' count. Output: validation loss on MassiveText
+(Chinchilla), in unstated units (Llama~3), on Paloma (Marin), on the training corpus (Porian et al.), in bits per
+character (Farseer), on C4 (others). Off-path spread: residual s.d.\ of $\ln M$ given $\ln C$. Model-free: equation
+\eqref{eq:ident-mf} per budget, random-effects mean over budgets, design-conditional wild-bootstrap standard errors.
+Parametric columns: Huber loss on $\ln L$; Panel A on the same runs (Feng--He--Hu wild standard errors), Farseer and
+Panel B pairs or cell bootstrap. Panel C: DerSimonian--Laird mean with Hartung--Knapp--Sidik--Jonkman interval;
+sweep--corpus = Farseer and Panel B.
+$^{a}$Losses read along constant-learning-rate runs without cooldown.
+$^{b}$First-derivative estimate on the local expansion path (0.701--0.711 across bandwidths); Panel C and
+Figure~\ref{fig:sigma} use the Hessian-based estimate, 0.703 (0.013).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}; \citet{besiroglu2024chinchilla}; \citet{grattafiori2024llama};
+\citet{czech2026llama3isoflop}; \citet{marin2026ladders}; \citet{porian2024resolving}; \citet{li2025predictableb};
+\citet{gadre2024language}; \citet{bhagia2024establishing}; \citet{muennighoff2023scaling}; authors' calculations
+(Online Appendix~\ref{app:additional}).
+\end{tablenotes}
+\end{table}

@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\small
+\begin{threeparttable}
+\caption{Technologies Used to Invert Model Choices}
+\label{tab:m3_technologies}
+\begin{tabular}{@{}lcccccccll@{}}
+\toprule
+Technology & $\alpha$ & $\beta$ & $a$ & $\sigma^*$ & $M^*(10^{21})$ & $M^*(10^{24})$ & Design $M$ & $N$ & $B$ \\
+\midrule
+Chinchilla refit (Besiroglu sample) & 0.347 & 0.367 & 0.514 & 0.737 & 21.4 & 17.6 & 0.5--341 & total & 400 \\
+Chinchilla, NLS in levels & 0.358 & 0.428 & 0.545 & 0.718 & 18.3 & 9.9 & 0.5--341 & total & 400 \\
+Chinchilla, all 245 points & 0.349 & 0.453 & 0.565 & 0.714 & 15.5 & 6.3 & 0.5--341 & total & 400 \\
+Besiroglu et al. (published) & 0.348 & 0.366 & 0.513 & 0.737 & 21.6 & 18.1 & 0.5--341 & total & 0 \\
+Hoffmann et al. A3 (TeX) & 0.339 & 0.285 & 0.456 & 0.762 & 34.0 & 62.0 & 0.5--341 & total & 0 \\
+Farseer (non-emb. N) & 0.281 & 0.312 & 0.526 & 0.772 & 24.8 & 17.3 & 0.3--2,570 & nonemb & 400 \\
+Farseer (N incl. emb.) & 0.448 & 0.313 & 0.411 & 0.724 & 19.8 & 67.7 & 0.3--1,227 & total & 200 \\
+Farseer, q-family (inner) & 0.392 & 0.425 & 0.521 & 0.710 & 24.3 & 18.3 & 0.3--2,570 & nonemb & 200 \\
+Gadre et al. RefinedWeb & 0.223 & 0.290 & 0.566 & 0.796 & 3.4 & 1.4 & 5.0--640 & total & 400 \\
+Gadre et al. C4 & 0.253 & 0.262 & 0.509 & 0.795 & 6.9 & 6.0 & 5.0--640 & total & 400 \\
+Gadre et al. RedPajama & 0.243 & 0.273 & 0.529 & 0.795 & 5.8 & 3.9 & 5.0--640 & total & 400 \\
+OLMo ladder (AI2) & 0.267 & 0.157 & 0.370 & 0.825 & 48.3 & 290.6 & 10.0--200 & olmo & 400 \\
+Meta Llama 3 law (A2/A1) & 0.295 & 0.254 & 0.463 & 0.785 & 18.8 & 31.3 & 0.4--643 & total & 200 \\
+Meta Llama 3 IsoFLOPs, primal (A3) & 0.284 & 0.316 & 0.527 & 0.769 & 13.9 & 9.6 & 0.4--643 & total & 200 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Point estimates of the technologies used to compute $w=\varepsilon_N/\varepsilon_D$. $a=\beta/(\alpha+\beta)$; $\sigma^*=2/(2+\alpha+\beta)$; $M^*(C)=D^*/N^*$ is the training-only compute-optimal tokens per parameter at $C$ FLOP. Design $M$ is the range of $D/N$ in the sweep that identifies the technology. $N$: parameter-count convention (total, non-embedding, or OLMo's count excluding the input embedding). $B$: bootstrap draws used for the bands (0: literature point estimate). Chinchilla refit and Meta rows from module m1; Farseer, Gadre et al. and OLMo ladder rows from module m2 (Huber-LSE, $\delta=10^{-3}$). The Meta Approach-2/1 row imposes the Chinchilla outer exponent ($\alpha=\gamma/a$, $\beta=\gamma/(1-a)$) and reproduces Meta's published law $D^*=0.299\,C^{0.537}$. The q-family row reports the inner exponents ($q=0.47$); the wedge depends only on the inner aggregator.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

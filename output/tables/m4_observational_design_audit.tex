@@ -1,0 +1,32 @@
+\begin{table}[!htbp]
+\centering
+\small
+\begin{threeparttable}
+\caption{Identifying variation in the observational panel}
+\label{tab:m4_design_audit}
+\begin{tabular}{lcc}
+\toprule
+ & All dense & Overlap \\
+\midrule
+Models & 128 & 90 \\
+Families & 38 & 34 \\
+Developers & 22 & 21 \\
+Singleton families & 4 & 10 \\
+SD $\ln N$ & 1.67 & 1.31 \\
+SD $\ln D$ & 1.49 & 1.41 \\
+Corr$(\ln N,\ln D)$ & 0.46 & 0.45 \\
+Within-family SD $\ln N$ & 1.29 & 1.04 \\
+Within-family SD $\ln D$ & 0.42 & 0.44 \\
+Within-family corr & 0.35 & 0.36 \\
+Families with $D$ variation & 18 & 12 \\
+... models in them & 66 & 37 \\
+SD $\ln(D/N)\mid\ln C$ & 1.64 & 1.42 \\
+Median $D/N$ & 213 & 297 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} Observational panel: ObsScaling base models plus Sloth additions, dense transformers with known $N$ and $D$ and all three core benchmarks. Within-family moments after removing family means. `Families with $D$ variation': within-family SD of $\ln D$ above 0.05; $\theta_D$ under family fixed effects is identified only from these families (Cerebras-GPT has $D=20N$ exactly, so it identifies only $\theta_N+\theta_D$). Compute equals $6ND$ by construction in every row.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

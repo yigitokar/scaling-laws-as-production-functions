@@ -1,0 +1,16 @@
+[02:04:40] build_choices: Epoch universe
+[02:04:40]   Epoch candidates kept 342, excluded 1728
+[02:04:40] build_choices: Sample B (verified open-weight)
+[02:04:41]   Sample B: 188 models (73 families); dropped 17; card-verified D: 47 of 47 checked
+[02:04:41] wedge: technologies
+[02:04:41] wedge: model x technology table
+[02:04:41] wedge: Farseer Eq. 3 (non-homothetic) fit
+[02:04:42] analysis: assemble
+[02:04:42] analysis: within-family revealed preference
+[02:04:43] analysis: trends
+[02:04:43] analysis: usage validation
+[02:04:43] analysis: rival wedges
+[02:04:43] analysis: aggregate
+[02:04:43] outputs: tables
+[02:04:43] outputs: figures
+[02:04:46] done in 6s

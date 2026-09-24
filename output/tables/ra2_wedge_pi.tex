@@ -1,0 +1,32 @@
+\begin{table}[tp]
+\centering
+\caption{Partial Identification of the Compute-Optimal Ratio at Frontier Scale}
+\label{tab:ra2-pi}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
+\sbox{\ratabbox}{%
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textit{Panel A. Bounds on $M^*(C)$ at frontier compute (total-$N$ anchors)}} \\[1pt]
+Assumption set & $e$ range & $M^*(10^{23})$ & $M^*(10^{24})$ & $M^*(10^{25})$ & Anchors \\
+\midrule
+PI-1: IsoFLOP anchors & [$-$0.16, 0.19] & [3.2, 57.3] & [2.3, 88.8] & [1.6, 138] & 5 \\
+PI-2: PI-1 + nondecreasing & [0.00, 0.19] & [8.0, 57.3] & [8.0, 88.8] & [8.0, 138] & 5 \\
+PI-3: Meta's own anchor & [$-$0.16, 0.19] & [14.5, 36.8] & [10.1, 57.0] & [7.1, 88.3] & 1 \\
+PI-4: all technologies & [$-$0.16, 0.31] & [0.4, 1609] & [0.3, 3293] & [0.2, 6739] & 30 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel B. Sign identification on the clean sample ($n=77$)}} \\[1pt]
+Assumption set & $e$ range & $w>1$ identified & ambiguous & median $s$ lower & median $s$ upper \\
+\midrule
+PI-1 & [$-$0.16, 0.19] & 0.86 & 0.14 & 0.59 & 0.93 \\
+PI-2 & [0.00, 0.19] & 0.86 & 0.14 & 0.59 & 0.89 \\
+PI-3 & [$-$0.16, 0.19] & 0.77 & 0.23 & 0.55 & 0.94 \\
+PI-4 & [$-$0.16, 0.31] & 0.23 & 0.77 & $-$1.43 & 0.98 \\
+\bottomrule
+\end{tabular}%
+}
+\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
+\begin{tablenotes}$M^*(C)$ is never observed beyond $10^{22}$ FLOP: the largest IsoFLOP budgets are $3\times10^{21}$ (Chinchilla), $10^{22}$ (Llama 3) and $3\times10^{20}$ (Marin, DeepSeek LLM). Anchors: each design's Approach-2 path evaluated at its largest budget, with the 95 percent wild-bootstrap interval (DeepSeek: published law). Extrapolation: $\ln M^*(C)=\ln M^*(C_0)+e\ln(C/C_0)$ with the elasticity $e=1-2a$ anywhere in the range of path slopes: PI-1 over IsoFLOP paths and published laws (DeepSeek LLM's three data sets, MiniCPM); PI-2 adds $M^*$ nondecreasing in $C$; PI-3 uses only the model's own lab's anchor where it exists (Meta, Marin, DeepSeek, AI2) and PI-1 otherwise; PI-4 uses every ex-ante technology's in-support $M^*$ and all path slopes. Llama 3's 402B/16.55T at $3.8\times10^{25}$ FLOP is an extrapolation of Meta's law, not an observation, and is not used. Sign identification does not depend on curvature; bounds on $s$ use $1/\sigma^*-1$ in the range of the $\kappa$-free and model-free estimates (0.40--0.52). Panel A reports total-$N$ anchors only; Panel B evaluates each anchor in its own parameter convention.\end{tablenotes}
+\begin{tablenotes}[Source]Module ra2\_wedge; \texttt{ra2\_wedge\_pi\_*.csv}.\end{tablenotes}
+\end{table}

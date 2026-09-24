@@ -1,0 +1,43 @@
+\begin{table}[tp]
+\centering
+\caption{Noise and Learning-Rate Checks (Q4--Q5)}
+\label{tab:m9-noise-lr}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+& FineWeb-Edu & FineWeb \\
+\midrule
+\multicolumn{3}{l}{\emph{Panel A. Noise (Q4): s.d. of $\ln L$}} \\
+Seed s.d., pooled (own validation set) & pending & pending \\
+Within-trunk correlation of seed deviations & pending & pending \\
+Residual s.d., Chinchilla, P & 0.0102 & pending \\
+Residual s.d., $\kappa$ family, P & 0.0059 & pending \\
+Residual s.d., Chinchilla, T & 0.0103 & pending \\
+Residual s.d., $\kappa$ family, T & 0.0072 & pending \\
+\multicolumn{3}{l}{\emph{Panel B. Learning rate (Q5)}} \\
+Optimal peak LR ($\times10^{-3}$) at $D=50$M, width 128 & 5.78 & 9.67 \\
+Optimal peak LR ($\times10^{-3}$) at $D=50$M, width 320 & 2.47 & 2.50 \\
+Optimal peak LR ($\times10^{-3}$) at $D=50$M, width 512 & 1.64 & 1.60 \\
+Excess $\ln L$ of the rule at $D=50$M, width 128 & 0.0012 & 0.0025 \\
+Excess $\ln L$ of the rule at $D=50$M, width 320 & 0.0016 & -- \\
+Excess $\ln L$ of the rule at $D=50$M, width 512 & 0.0153 & -- \\
+Excess $\ln L$ of the rule, corner (128, 800M) & 0.0002 & 0.0004 \\
+Excess $\ln L$ of the rule, corner (128, 400M) & 0.0003 & 0.0000 \\
+Excess $\ln L$ of the rule, corner (128, 25M) & 0.0009 & 0.0019 \\
+Excess $\ln L$ of the rule, corner (640, 25M) & 0.0132 & pending \\
+Excess $\ln L$ of the rule, corner (640, 50M) & 0.0065 & pending \\
+$d\ln \mathrm{LR}^*/d\ln D$ at width 128 & $-$0.119 (0.049) & $-$0.227 (0.117) \\
+Implied bias $a_{\rm obs}-a$, P & $-$0.0112 & pending \\
+Implied bias $a_{\rm obs}-a$, T & $-$0.0140 & pending \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Panel A: seed replicates (seeds 1--2 at widths 128/256/384, $D\in\{50,100,200\}$M; seed 1 at width 128, $D\in\{200,400,800\}$M) together with the seed-0 run of the same cell. Residual s.d.: Huber fits on the main grid (own validation set). Panel B: optimal LR from a quadratic in $\ln$ LR through the four calibration LRs (FineWeb-Edu: \texttt{lrsweep}; FineWeb: \texttt{lrcal}), the rule used for both corpora being $3.07\times10^{-3}(d/256)^{-0.90}$. Corners: LR $\times\{0.5,1,2\}$; excess = $\ln L$ at the rule minus the minimum of the quadratic (or the best tested LR). Bias bound: Online Appendix equation (app-flexbias), $a_{\rm obs}-a=-(\iota_n-\iota_d)E/[(\alpha+\beta)R^*]$, with the gradient from the two corners at similar compute, (640, 25M) and (128, 800M).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Authors' calculations.
+\end{tablenotes}
+\end{table}

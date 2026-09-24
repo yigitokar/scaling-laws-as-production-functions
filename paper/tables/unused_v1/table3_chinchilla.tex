@@ -1,0 +1,82 @@
+% Table 3 -- Chinchilla data: estimator horse race, specification and duality tests, functional dependence.
+% Condensed from output/tables/m1_chinchilla_horse_race.tex, m1_chinchilla_spec_tests.tex,
+% m1_chinchilla_revealed_system.tex, m1_chinchilla_duality.tex, m1_chinchilla_identification.tex and the CSVs
+% m1_chinchilla_{horse_race,estimator_diffs,system,spec_ces,spec_kappa,selection_rules,duality_classicalF,
+% duality_bootcal,revealed_pref_70b,design_variance,fdep,fdep_sizecontrol}.csv; rank-one row from
+% m2_spec_tests.csv (tau_q, p_rank_one_q). LAD column of the source table moved to the notes.
+\begin{table}[tp]
+\centering
+\caption{The Chinchilla Data: Estimators and Specification Tests}
+\label{tab:chinchilla}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Huber & Gaussian & NLS, levels & System \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Panel A. Estimates} ($n=240$)} \\
+$\alpha$ & 0.347 & 0.360 & 0.358 & 0.348 \\
+ & (0.016) [0.024] & (0.013) [0.025] & (0.013) [0.026] & (0.014) \\
+$\beta$ & 0.367 & 0.406 & 0.428 & 0.365 \\
+ & (0.021) [0.046] & (0.025) [0.054] & (0.026) [0.055] & (0.016) \\
+$a$ & 0.514 & 0.530 & 0.545 & 0.512 \\
+ & (0.020) [0.044] & (0.017) [0.042] & (0.017) [0.042] & (0.015) \\
+$\gamma$ & 0.178 & 0.191 & 0.195 & 0.178 \\
+ & (0.006) [0.010] & (0.007) [0.014] & (0.007) [0.014] & (0.005) \\
+$\sigma^*$ & 0.737 & 0.723 & 0.718 & 0.737 \\
+ & (0.006) [0.010] & (0.008) [0.015] & (0.008) [0.015] & (0.005) \\
+$M^*(5.76\times10^{23})$ & 17.9 & 14.3 & 10.4 & 18.5 \\
+ & (6.9) [17.2] & (4.9) [12.1] & (3.8) [9.2] & (6.0) \\
+$\hat\beta-\hat\beta_{(1)}$, paired & & 0.039 & 0.060 & \\
+ & & (0.018) & (0.020) & \\
+\addlinespace
+\multicolumn{5}{@{}l}{\textit{Panel B. Specification tests} (Huber, $n=240$)} \\
+ & \multicolumn{2}{c}{Estimate} & \multicolumn{2}{c}{$p$-value} \\
+CES, $H_0$: $\alpha=\beta$ & \multicolumn{2}{c}{$\hat\alpha-\hat\beta=-0.020$ (0.029) [0.066]} & \multicolumn{2}{c}{0.50 [0.76]} \\
+Outer exponent, $H_0$: $\kappa=1$ & \multicolumn{2}{c}{$\hat\kappa=0.774$ (0.060) [0.111]} & \multicolumn{2}{c}{$<$0.001 [0.042]} \\
+\quad $\sigma^*$ with $\kappa$ free & \multicolumn{2}{c}{0.700 (0.015) [0.018]} & & \\
+Rank-one curvature & \multicolumn{2}{c}{$\hat\tau=-0.009$} & \multicolumn{2}{c}{0.69} \\
+System restrictions & \multicolumn{2}{c}{LR $=1.01$} & \multicolumn{2}{c}{0.60} \\
+\addlinespace
+\multicolumn{5}{@{}l}{\textit{Panel C. Duality and revealed preference, by technology}} \\
+ & Refit (1) & Besiroglu & Hoffmann A3 & \\
+Path test, classical $F_{2,7}$ ($p$) & 0.65 & 0.66 & 0.040 & \\
+Path test, bootstrap-calibrated ($p$) & 0.23 & 0.18 & 0.060 & \\
+Path level gap, $\Delta\ln N^*(\bar C)$ & 0.026 (0.046) & 0.028 (0.046) & 0.122 (0.046) & \\
+$w$ at Chinchilla-70B & 1.04 [0.82, 1.42] & 1.03 & 0.62--0.71 & \\
+\addlinespace
+\multicolumn{5}{@{}l}{\textit{Panel D. Functional dependence} (outer exponent $\kappa$ free)} \\
+ & Full design & On-path band & Random, same $n$ & \\
+ & ($n=240$) & ($n=41$) & ($n=41$) & \\
+Transverse variance share & 0.33 & 0.008 & 0.34 & \\
+Condition number & 62 & 413 & 69--95 & \\
+Max.\ profile LR for $\sigma^*$ & 424 & 2.0 & 79--101 & \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+$L=E+AN^{-\alpha}+BD^{-\beta}$ on Epoch's digitization of the Chinchilla runs, five highest-loss runs dropped;
+$a$, $\gamma$ and $\sigma^*$ as in Proposition~\ref{prop:duality} and equation~\eqref{eq:sigmaw}; $M^*(C)=D^*/N^*$ at
+$C$ FLOP; $w=\varepsilon_N/\varepsilon_D$ at $N=70$B, $D=1.4$T. Estimators: (1) Huber loss ($\delta=10^{-3}$) on
+$\ln L$; (2) Gaussian nonlinear least squares on $\ln L$; (3) nonlinear least squares on $L$; (4) system of the loss
+equation (Laplace errors) and the nine IsoFLOP argmins, predicted design-consistently under the cross-equation
+restrictions. Least absolute deviations on $\ln L$ gives $\alpha=0.348$, $\beta=0.366$, $\sigma^*=0.737$ and $w=1.03$.
+Panel A: bootstrap standard errors (400 draws) resampling runs in parentheses and the nine IsoFLOP budgets in
+brackets; for $M^*$, interquartile range/1.349; column 4, within-budget stratified bootstrap (300 draws).
+Panel B: $\kappa$ from $L=E+[AN^{-a_1}+BD^{-b_1}]^{\kappa}$, $\sigma^*=2/(2+a_1+b_1)$;
+rank one: $\hat\tau=\det H/\lVert H\rVert_F^2$ for a translog of $\ln(L-\hat E)$, $\hat E$ from the $\kappa$ family,
+residual-bootstrap null; system: nested LR of a level and slope shift of the argmin equation, $\chi^2_2$. Panel C:
+design-consistent tests of the expansion-path restrictions (the Approach-2 procedure applied to each technology's
+fitted values at the observed design); bootstrap-calibrated $p$ from the stratified bootstrap distribution of the Wald
+statistic (wild bootstrap: 0.70, 0.75, 0.21); level gap: argmins minus null at the geometric-mean budget; $w$ interval:
+pairs bootstrap (budget bootstrap: [0.54, 2.01]); the estimators in columns 2--4 give $w=1.14$, 1.30 and 1.03; Hoffmann A3 at rounded and full published precision; further tests in Online Appendix
+Table~\ref{tab:app-duality}. Panel D: on-path band
+$|\ln N-\ln N^*(C)|\le0.15$; random: four subsamples of the full design of the band's size; condition number of the
+Jacobian in normalized parameters; profile LR over $\sigma^*\in[0.50,0.95]$.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}; \citet{besiroglu2024chinchilla}; authors' calculations.
+\end{tablenotes}
+\end{table}

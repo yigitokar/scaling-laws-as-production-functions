@@ -1,0 +1,391 @@
+% =====================================================================================================
+% Online Appendix F: The Revealed Value of Compactness: Robustness (v2).
+% Writer appendix_D_F, 2026-09-24. Sources: output/memos/ra2_wedge.md (+ review), ra1_modelfree.md (Farseer),
+% ra5_theory.md (wedge cases, partial identification), ra3_econ.md (aggregates); output/tables/ra2_wedge_*.csv,
+% ra1_modelfree_farseer_*.csv, ra5_theory_pi_*.csv, ra3_econ_inference_share*.csv. Tables: paper/tables/appF_*.tex.
+% Numbers and sources: paper/notes/writer2_appendix_D_F.md.
+% =====================================================================================================
+
+\section{The Revealed Value of Compactness: Robustness}\label{app:wedge}
+\setlength{\emergencystretch}{2em}% allow looser lines in the online appendix
+
+This appendix supports Section~\ref{sec:wedge}. Appendix~\ref{app:wedge-cases} states what the wedge identifies under
+alternative objectives of the developer. Appendices~\ref{app:wedge-sample} through~\ref{app:wedge-labown} document the
+clean inference-demand sample, the 32 technologies, parameter-count conventions and the developers' own technologies.
+Appendix~\ref{app:wedge-pi} treats extrapolation beyond the designs, and Appendices~\ref{app:wedge-conduct}
+through~\ref{app:wedge-trends} report the conduct tests, family token budgets, the cost side, validation and trends.
+Unless stated otherwise, wedges are evaluated under the reference technology, the Chinchilla form with the outer
+exponent free ($\sigma^*_\kappa=0.701$), on the 77 models of the clean inference-demand sample, and intervals for sample
+statistics come from the joint distribution across bootstrap draws of the technology: each draw recomputes the median
+and the shares for the whole sample.
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{What the Wedge Identifies}\label{app:wedge-cases}
+
+Table~\ref{tab:app-wedge-cases} lists what the wedge $w=\varepsilon_N/\varepsilon_D$ and the share $s=(w-1)/w$ measure
+under the objectives and cost structures of Proposition~\ref{prop:A-wedge}. The rows fall into three groups. In the
+first, a developer bears some or all of the cost of serving its model, and $w-1=\lambda\phi X_S/X_T$ is internalized
+serving expenditure relative to training expenditure. This ratio needs no conversion of FLOPs into dollars; a count of
+serving tokens needs the price ratio $p$ as well. In the second group, a binding memory or tier cap or a latency
+objective multiplies the wedge by one plus the constraint's normalized multiplier. The wedge then bounds the value of
+compactness from above without identifying it, and any wedge can be rationalized with no serving demand at all. In the
+third group, data costs, data caps and logit distillation add to the cost of tokens, so the wedge understates the value
+of compactness; a binding data cap can push it below one. Serving demand alone cannot produce $w<1$ as long as serving
+cost rises with size at given quality.
+
+The last row is the factor-bias critique of markup estimation. If the first-order conditions of the developer involve a
+technology or an output different from the one the econometrician uses, the estimated wedge is the true one times the
+ratio of the two technologies' wedges at the same inputs. The developer's own technology (Appendix~\ref{app:wedge-labown})
+and the spread across 32 technologies (Appendix~\ref{app:wedge-tech}) are the two ways the paper addresses it. The cases
+also make different predictions about conduct (Remark~\ref{rem:A-conduct}), which Appendix~\ref{app:wedge-conduct} tests.
+
+\input{tables/appF_wedge_cases}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{The Clean Inference-Demand Sample}\label{app:wedge-sample}
+
+The clean sample was defined before any wedge was computed. It starts from the 173 general-purpose open-weight base
+models of the verified sample, whose parameter and token counts are documented by their developers (Online
+Appendix~\ref{app:data}). Nine steps, applied in order, drop models whose $(N,D)$ is not the choice that
+Proposition~\ref{prop:wedge} describes; a model is dropped at the first step that applies. The replication package lists
+every flag with its reason and source.
+\begin{itemize}
+\item[(a)] \emph{One observation per pretraining run} (8 models; the first release is kept): Llama~3.1 8B and 70B, which
+continue the pretraining of the Llama~3 runs; Qwen1.5-72B, with the same $N$ and $D$ as Qwen-72B; OpenLLaMA v2 3B and
+7B; Yi-1.5 6B and 34B, which the model card describes as continued pretraining of Yi on 500 billion tokens; and
+H2O-Danube2-1.8B, initialized from H2O-Danube-1.8B.
+\item[(b1)] \emph{Research suites whose $D$ is fixed by design} (45): Pythia, OPT, BLOOM, RWKV-4-Pile, XGLM,
+Cerebras-GPT and GPT-Neo, GPT-J and GPT-NeoX; the natural-language stage of CodeGen; and Falcon-RW-1B, a data ablation.
+\item[(b2)] \emph{Replications and data benchmarks} (8): OpenLLaMA, RedPajama-INCITE, LLM360 Amber and K2, and DCLM-7B.
+\item[(c)] \emph{Mixture-of-experts models} (12), reported with bounds in Appendix~\ref{app:wedge-conv}.
+\item[(d)] \emph{Distilled, pruned or derived initialization} (10): Gemma~2 2B and 9B and every Gemma~3 size, which
+their technical reports describe as trained with knowledge distillation; Llama~3.2 1B and 3B, pruned from Llama~3.1 8B
+and distilled from larger models' logits; and Yi-1.5-9B, continued from a depth-upscaled Yi-6B. A keyword search of all
+179 saved model cards and of these reports found no other case.
+\item[(e)] \emph{Multimodal pretraining}: Gemma~3 4B--27B and Llama~4, all already removed at (c) or (d).
+\item[(f)] \emph{No base checkpoint} (7): Phi-3 mini, small and medium, Phi-3.5-mini, Phi-4-mini, phi-4, and Qwen3-32B.
+\item[(g)] \emph{Non-transformer or hybrid architectures}: RWKV, already removed at (b1).
+\item[(h)] \emph{Token counts without a primary source} (6): Qwen1.5 0.5B to 32B, whose counts appear only in the
+ObsScaling file \citep{ruan2024observational}.
+\end{itemize}
+
+The result is 77 models from 36 families and 18 developers, released 2023--2025. Table~\ref{tab:app-cleaning}, panel~A,
+follows the headline through the steps. The median wedge stays between 3.77 and 4.46: dropping the research suites and
+replications, whose wedges are lower, raises it, and dropping mixture-of-experts, distilled and instruction-only models
+lowers it again. The sign is less robust than the point estimates suggest: every one
+of the 32 technologies puts the point estimate above one for 64 percent of clean models, but the union of their 95 percent
+intervals lies above one for only 18 percent.
+
+Panel~B splits the clean sample. Families that train every size on one token budget, whose member wedges are not revealed
+preferences (Appendix~\ref{app:wedge-family}), have a median wedge of 3.90, against 4.01 for families with size-specific
+budgets; without them the median share is 0.75. Dropping the nine models trained mainly on teacher-generated synthetic
+data (phi-1.5, phi-2 and SmolLM 1--3) gives a median share of 0.74. Models of developers that served their own language
+models at release have a median share of 0.80 and a median wedge of 4.95, against 0.74 and 3.80 for the others; the 12
+models with a stated on-device or local target, from three developers, have 0.86. The last rows compare models inside and
+outside the ranges of $M$ that designs observe. Inside Chinchilla's range ($M\le341$) the median share is 0.56 and no model
+has all technologies' intervals above one; only 2 of the 77 models lie inside Chinchilla's design in both $M$ and compute.
+
+\input{tables/appF_cleaning}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Technologies}\label{app:wedge-tech}
+
+\emph{The ex-ante rule.}---The set of technologies was fixed before any wedge was computed. It contains (i) every
+technology estimated in Section~\ref{sec:tech} and Online Appendix~\ref{app:additional} from final-checkpoint losses of
+a designed sweep with the primary estimator (Huber loss on log loss), with each corpus and parameter-count convention as
+its own row, under $\kappa=1$ and, where estimated, with $\kappa$ free; (ii) for each IsoFLOP design, the Approach-2 path
+with its $\kappa=1$ curvature, the primal fit, and the path combined with the design's model-free curvature; and (iii)
+the literature's estimates on the Chinchilla data and the allocation laws published by Meta, DeepSeek
+\citep{bi2024deepseek} and MiniCPM \citep{hu2024minicpm}. Excluded ex ante are DataDecide and the checkpoint-interpolated
+IsoFLOPs of \citet{li2025misfitting}, whose losses come before the learning-rate schedule ends, an artifact that varies
+with $D/N$, and estimator or sample variants of a design already in the set, which are reported below as sensitivity
+checks. Table~\ref{tab:app-technologies} lists the 32 technologies.
+
+When a path and a curvature come from different sources, the inner exponents are $\alpha=S(1-a)$ and $\beta=Sa$ with
+$S=2(1/\sigma^*-1)$; the wedge depends on the technology only through $S$, the path slope $a$ and the path level
+(Corollary~\ref{cor:suff}). DeepSeek's law is stated in non-embedding FLOPs per token, which we compute for other
+developers' models from their configuration files; MiniCPM's in non-embedding parameters. MiniCPM's compute-optimal ratio
+of 192 tokens per parameter at $10^{21}$ FLOP lies outside its own design, whose ratios run from 10 to 60, so it is itself
+an extrapolation. The reference technology and the model-free rows are bootstrapped design-conditionally (wild bootstrap
+with the weights of \citealt{feng2011wild}); the other rows reuse the pairs or stratified draws of their source
+estimates, and published laws enter as points.
+
+\emph{What drives the dispersion.}---The median share ranges from 0.17 (MiniCPM) to 0.85 (Muennighoff et al.'s runs
+with $\kappa$ free). Technologies that let the data choose the curvature give 0.69 to 0.79. The low medians come from
+three sources: $\kappa=1$ curvatures far above the model-free estimates, as in Marin's Approach-2 laws ($\sigma^*$ of 0.87
+to 0.90, from designs spanning two decades of compute on which the frontier's $E$ and $\gamma$ are not separately
+identified); the OLMo ladder with $\kappa=1$, whose $M^*(10^{24})$ of 291 puts a quarter of the sample below one; and
+MiniCPM's zero point. The high medians come from the $\kappa$-free fits of the small sweeps, whose curvatures (0.51 to
+0.62) are heterogeneous.
+
+Curvature governs levels, not signs. Holding the reference zero point fixed, lowering $\sigma^*$ from 0.80 to 0.60 raises
+the median wedge from 2.25 to 8.64 and the median share from 0.55 to 0.88, and Llama~3 8B's wedge from 3.0 to 19.5. The
+share of models with $w>1$, 0.974, does not move. At $\sigma^*=0.70$ the median wedge is 4.00, almost exactly the
+reference value.
+
+\emph{Estimator variants.}---On the Chinchilla data, least squares in levels gives a median wedge of 4.58, keeping the
+five outliers gives 5.50, and the Chinchilla form with $\kappa=1$ gives 3.34 (Table~\ref{tab:app-technologies}). The
+bootstrap matters for intervals, not for points. For the reference, pairs resampling, which changes the design, gives
+a 95 percent interval for the median wedge of [3.25, 6.04], against [3.21, 4.86] from the design-conditional wild
+bootstrap; for the $\kappa=1$ refit, a cluster bootstrap over the nine budgets gives [1.83, 6.48]. A separate
+implementation of the $\kappa$-free fit differs from ours in the fourth decimal; over all 173 verified models it gives a
+median wedge of 3.78, against 3.77.
+
+\input{tables/appF_technologies}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Parameter Conventions and Mixture-of-Experts Models}\label{app:wedge-conv}
+
+Each technology is evaluated at the model's own parameter count in the technology's convention: the total count for
+the Chinchilla, Gadre et al.\ and laboratory technologies, the non-embedding count, from each model's configuration file,
+for Farseer, MiniCPM and the non-embedding Chinchilla refit, and OLMo's count, which excludes only the input embedding,
+for the OLMo ladder. A non-embedding technology ignores the output head, which costs $2N_{\rm head}$ FLOPs per token in
+training and serving alike ($N_{\rm head}$ is vocabulary size times width). Counting it in FLOPs turns the ratio of
+lifetime to training cost into $w(1+N_{\rm head}/N_{\rm ne})$.
+
+Table~\ref{tab:app-conventions}, panel~A, shows that the sample median moves little across conventions, because
+embeddings are at most 28 percent of parameters in the clean sample. For the eight clean models below one billion
+parameters, the convention matters under one sweep but not the other. Comparing like with like, the non-embedding count
+lowers their median wedge by 8 percent under the Chinchilla form (9.13 against 9.96) and by 36 percent under the Farseer
+form (6.85 against 10.67). The Farseer gap exceeds the effect of tokenizer differences on $D$: under the reference,
+$\partial\ln w/\partial\ln D=0.43$, so a 20 percent difference in tokens per byte moves the wedge by about 8 percent. We
+do not normalize $D$ by bytes.
+
+Mixture-of-experts models are excluded from the clean sample. Panel~B bounds their wedges under the reference. A dense
+technology evaluated at active parameters treats a mixture of experts as parameter-augmenting and overstates its wedge;
+evaluated at total parameters, it ignores the loss advantage of sparsity \citep{clark2022unified,krajewski2024scaling,
+abnar2025parameters}. The median of the 12 models is 5.14 at active and 2.07 at total parameters. The bounds are widest
+for the largest models: DeepSeek-V3 has a wedge of 3.50 or 1.01, and Kimi K2 3.79 or 0.87. Neither bound is an estimate
+from a mixture-of-experts scaling law.
+
+\input{tables/appF_conventions}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{The Developers' Own Technologies}\label{app:wedge-labown}
+
+Where a developer has published scaling evidence, its own technology is primary for its models. For Meta this is its
+IsoFLOP path, fitted to all ten budgets of Meta's figure, which reproduces the published law $D^*=0.299\,C^{0.537}$
+\citep{grattafiori2024llama}, combined with the model-free curvature of Meta's own IsoFLOP profiles, 0.660 (standard
+error 0.023). For AI2 it is the OLMo ladder with $\kappa$ free \citep{bhagia2024establishing}; for DeepSeek, its
+published law with the reference curvature, since DeepSeek published no curvature; and for Marin, the Nemotron-CC ladder
+path with its model-free curvature (Marin 8B's model card lists Nemotron-CC and DCLM among its data). These technologies
+cover 22 models: Meta 10, AI2 9, DeepSeek 2 and Marin 1. For 11 of them the developer's law was published before the
+model was planned. For the other 11 (Llama~1 and~2, OLMo~1 and~1.7, Marin 8B) it came later, so it describes the
+developer's technology but not the law it planned with.
+
+Table~\ref{tab:app-labown}, panel~A, reports two model-free estimators of the designs' curvature. The primary one
+(Section~\ref{sec:tech}) fits local quadratics near the path on budgets whose minimum is bracketed by two runs on each
+side; the second fits one quadratic to all runs of every budget, including unbracketed ones, and pools a ratio of sums.
+They agree on Llama~3 (0.660 and 0.653) and differ by 0.05 to 0.08 on Marin; after the second estimator's
+simulation-based bias correction (to 0.66--0.68 on every design), the Marin gap is 0.03 to 0.05, within the range of the
+primary estimator's own specifications (0.64 to 0.72). We use the primary estimator, whose Monte Carlo bias is
+negligible (Table~\ref{tab:app-mf-sens}).
+
+On the 22 models, the median share is 0.61 under the developers' technologies and 0.65 under the reference (0.61 and 0.67
+on the 11 contemporaneous ones). Panel~B shows selected models; four points qualify them.
+\begin{itemize}
+\item[] \emph{Meta.} Two of Meta's ten budgets ($3\times10^{21}$ and $10^{22}$ FLOP, six runs each) do not bracket their
+minimum. On the eight that do, the path slope is 0.501 rather than 0.463 and $M^*(10^{24})$ is 15 rather than 31; Llama~3
+8B's wedge becomes 12.2 and the 405B's 1.64. We keep the ten-budget path because the developer's technology is meant to
+be the law Meta planned with, which sized the 405B model; its wedge of 0.97 is on Meta's path by construction. With the
+second curvature estimator after its simulation-based correction ($\sigma^*=0.678$), Llama~3 8B's wedge is 7.07.
+\item[] \emph{AI2.} The $\kappa$-free ladder has a steep curvature ($1/\sigma^*-1=0.84$), which makes the wedges of small
+models extreme: 20.2 for OLMo~2 1B, against 2.0 under the ladder with $\kappa=1$. OLMo~2 32B's interval, [0.96, 1.72],
+contains one.
+\item[] \emph{DeepSeek.} The published law gives 3.42 for the 7B and 1.34 for the 67B model; the intervals reflect only
+the reference curvature.
+\item[] \emph{Marin.} The curvature estimator matters: Marin 8B's wedge is 5.08 with the primary estimate and 6.66 with
+the corrected second one, and 1.43 to 6.66 across Marin's own alternatives.
+\end{itemize}
+
+\input{tables/appF_labown}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Extrapolation and Partial Identification}\label{app:wedge-pi}
+
+\emph{Extrapolation in $M$.}---Farseer's near-factorial grid reaches $M=2{,}570$ in non-embedding parameters, which
+allows a direct check of parametric wedges at high ratios. Table~\ref{tab:app-farseer-w} compares the local wedge of
+Proposition~\ref{prop:modelfree}(i), from a kernel-weighted local quadratic of the loss surface, with the wedges of
+parametric forms fitted to the same runs. Every form understates the wedge at high $M$, and the gap grows with $M$. At
+$M\ge1{,}024$, where the local wedge is 7.5, the $\kappa$-free form's wedge is 0.70 times the local one and the Chinchilla
+form's 0.44 times; the Chinchilla form fitted only to runs with $M\le100$ gives 0.26 times. The sign of the gap survives
+every bandwidth, but its size does not: for the $\kappa$-free form, $\ln(w_{\rm param}/w_{\rm local})$ runs from $-0.25$ at
+the narrower cross-validated bandwidth to $-0.67$ at twice the primary one (panel~B). The source of the gap is curvature
+of the wedge itself. In a regression of the local $\ln w$ on $u=\ln(M/M^*(C))$ and $u^2$, the quadratic term is 0.020
+(standard error 0.001) and positive at every bandwidth, so $\ln w$ is convex in $u$, whereas every member of the $\kappa$
+family makes it linear.
+
+Applying Farseer's gaps by bin of $M$ to the 57 clean models inside Farseer's range of $M$ raises their median wedge
+under the $\kappa$-free Farseer technology from 3.10 to 3.56, and their median share from 0.68 to 0.72; at the narrower
+bandwidth, to 3.49 and 0.71. Under the Chinchilla form fitted to Farseer the median wedge rises from 2.29 to 3.73. The
+correction is negative for the 56 percent of these models with $M\ge256$ and slightly positive, about $+0.05$ in logs,
+at $M$ of 16 to 64. This transfers one recipe's gaps to other developers' models and to larger $N$ and $C$, so it signs
+the error rather than correcting levels. For the 20 clean models beyond Farseer's range of $M$ there is no model-free
+evidence, and revealed preference recovers the technology a developer believed, which may be the parametric one
+(Remark~\ref{rem:A-pi-param}).
+
+\input{tables/appF_farseer_w}
+
+\emph{Extrapolation in compute.}---No design observes $M^*(C)$ above $10^{22}$ FLOP; the largest IsoFLOP budgets are
+$3\times10^{21}$ (Chinchilla), $10^{22}$ (Llama~3) and $3\times10^{20}$ FLOP (Marin; DeepSeek LLM). The 402 billion
+parameters and 16.55 trillion tokens that Meta reports at $3.8\times10^{25}$ FLOP extrapolate its law and are not used
+as an observation. We anchor $M^*$ at each design's largest budget, with a 95 percent wild-bootstrap interval: 22.7
+[18.2, 29.4] at $3\times10^{21}$ FLOP for Chinchilla's profiles, 22.3 [20.8, 23.7] at $10^{22}$ for Llama~3, 12.4, 9.4
+and 10.0 at $3\times10^{20}$ for Marin's three corpora, and DeepSeek's published law. Proposition~\ref{prop:pi} then gives
+an identified set for $M^*(C)$ once the elasticity of $M^*$ with respect to compute, $e=1-2a$, is bounded.
+Table~\ref{tab:app-pi} reports four sets of assumptions. PI-1 lets $e$ lie anywhere in the range spanned by the IsoFLOP
+paths and the published laws, including DeepSeek's three data sets and MiniCPM, $[-0.16,0.19]$. PI-2 adds that $M^*$ does
+not fall with compute. PI-3 uses a developer's own anchor where one exists. PI-4 admits every ex-ante technology's
+in-support $M^*$ as an anchor, with the widest range of slopes, $[-0.16,0.31]$.
+
+By Proposition~\ref{prop:pi}(iii), the sign of $w-1$ is the sign of $\ln M-\ln M^*(C)$ for any technology with
+single-peaked IsoFLOP profiles, so over-training is identified whenever $M$ exceeds the upper bound of the set. That is
+the case for 86 percent of clean models under PI-1 and PI-2, 77 percent under PI-3 and 23 percent under PI-4. No model's
+wedge is identified as below one under any set. The 11 models whose sign is not identified under PI-1 all have $M\le96$:
+Llama~2 70B, LLaMA 30B and 65B, Llama~3.1 405B, Qwen-72B, Qwen2-72B, Yi-34B, Falcon 40B and 180B, MPT-30B and DeepSeek
+LLM 67B. Under PI-3, AI2's models join them, because the OLMo ladder's own anchor is imprecise. Magnitudes need a
+curvature; with $1/\sigma^*-1$ between 0.40 and 0.52, the range of the $\kappa$-free and model-free estimates, the medians
+of the models' lower and upper bounds on $s$ are 0.59 and 0.93 under PI-1.
+
+Panel~C repeats the logic on the 173 verified models in their own units, with anchors fitted by least squares to the
+IsoFLOP minima and wild bootstrap-$t$ intervals (Online Appendix~\ref{app:proofs}, Remark~\ref{rem:A-pi-illus}). It
+illustrates the bounds rather than estimating them, because units are not harmonized. With a cross-sweep range of slopes,
+over-training is identified for 77 to 81 percent of the models beyond each anchor's largest budget; with normal inputs
+alone ($|e|\le1$), for about a third. The two anchors' point extrapolations disagree for Llama~3.1 405B, which is
+over-trained against the Chinchilla anchor and under-trained against Meta's, and its sign is not identified under any
+set-valued assumption. The two Chinchilla anchors differ, 22.7 in Panel~A and 20.5 [11.4, 36.8] in Panel~C, because
+Panel~A uses the eight-budget compilation of \citet{czech2026problems} and a percentile interval, and Panel~C all nine
+budgets of the digitization and a bootstrap-$t$ interval with HC2-rescaled residuals.
+
+\input{tables/appF_pi}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Conduct}\label{app:wedge-conduct}
+
+Table~\ref{tab:app-conduct} reports the three conduct tests of Section~\ref{sec:wedge-conduct}. All cluster by parent
+developer and use a restricted wild cluster bootstrap-$t$ with the six-point weights of \citet{webb2023reworking}
+\citep{cameron2008bootstrap}. Because $\ln\hat w$ is a function of $(N,C)$ under one technology, every test concerns the
+choice of size at given compute.
+
+\emph{Open and closed models.}---The test uses the production-scale universe of Online Appendix~\ref{app:data}
+($6ND\ge10^{21}$ FLOP, 2019--2026), restricted to models with confident parameter and token counts and without
+mixture-of-experts or non-transformer architectures, with the clean-sample exclusions applied to verified models: 186
+models from 67 developers, 23 of which released at least one closed model. At given compute and year, open-weight models
+have log wedges 0.52 higher ($p=0.011$), and 0.71 higher among releases since 2023 ($p=0.001$). On the share the premium is
+0.29 ($p=0.097$). Closed developers have disclosed few allocations since 2023: six in 2024 and two in 2025.
+
+\emph{Serving footprint and deployment target.}---A developer counts as serving if, at the model's release, it operated a
+commercial interface or consumer product that served its own language models. Meta is coded as serving from 27 September
+2023, the launch of Meta AI, so Llama~1 and~2 are not; Alibaba, Google, Microsoft, IBM, MosaicML, DeepSeek (from 2024),
+01.AI (from 2024), Moonshot, Zhipu and Together are coded as serving; TII, Hugging Face, H2O.ai, AI2, Stability AI, Swiss
+AI, Marin, M-A-P, TinyLlama and EleutherAI are not. Two dates are judgment calls: phi-1.5, released under a research
+license in September 2023, is coded as served, and 01.AI's interface is dated to 2024. A model has an on-device target if
+its card names on-device, mobile or phone use, and a local target if it names laptops or desktops. In the clean sample,
+33 models come from 7 serving developers; 9 models have an on-device and 3 a local target, but only two and three
+developers carry these attributes. With three or fewer treated clusters the wild cluster bootstrap is unreliable
+\citep{mackinnon2018wild}, so only the serving test is informative, and with 18 clusters it has little power: 0.45
+(standard error 0.26; $p=0.39$). Adding the research suites and replications raises the sample to 136 models and 26
+developers and gives 0.47 ($p=0.070$), and 0.14 on the share ($p=0.046$). That sample adds suites whose developers do not
+serve, however, so the contrast is partly between suites and products.
+
+\emph{Tiers.}---Windows around quantized memory boundaries (2.4--3.3, 6.5--9.5, 11.5--14.9, 26--32.9 and 65--72.9
+billion parameters) hold 51 percent of the 220 open-weight production-scale models released in 2023--2026, against 13
+percent under a smooth polynomial counterfactual \citep{chetty2011adjustment,kleven2016bunching}; the excess mass is 83
+models (standard error 9.8), 45 of them at 6.5--9.5 billion. Position relative to the tiers does not predict the wedge
+beyond what the mechanical relation between $N$ and $\ln w$ implies. Models inside a window have lower wedges given
+compute ($-0.39$, standard error 0.28), and 99.7 percent of 999 randomly shifted tier menus give a larger coefficient, so
+the real windows are, if anything, less over-trained than placebo windows. The log distance to the next cap has a
+coefficient of 0.46, against a placebo mean of 0.45.
+Tier menus shape the choice of $N$; the tier model's prediction for the wedge is not visible at given compute.
+
+\input{tables/appF_conduct}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Family Token Budgets}\label{app:wedge-family}
+
+A family has a common token budget if its members' budgets lie within 10 percent of each other; Llama~3 and~3.1 count
+as one herd. Eleven families of the clean sample, with 32 models, qualify; among all 173 verified models, 23 families
+with 83 models do.
+
+If sizes are chosen at the margin and $D$ is shared, the family's first-order condition in $D$ identifies one number, a
+weighted average of the members' values of compactness (Proposition~\ref{prop:A-family}). Without data costs,
+$\sum_i\pi_im_{N,i}=\bar w_H-1$, where $\bar w_H=[\sum_i\omega_i/w_i]^{-1}$ is the harmonic mean of the member wedges
+weighted by training compute and $\pi_i\propto\omega_i/w_i$. Member wedges then differ only through the technology,
+$\ln w_i-\ln w_j=-\alpha(\ln N_i-\ln N_j)$, and are not revealed preferences. If sizes come from a menu, the condition in
+$D$ says nothing about the members' values of compactness. In three family problems solved by brute force, the condition
+holds to within $2.2\times10^{-8}$.
+
+Table~\ref{tab:app-family-budgets} reports the family shares $1-1/\bar w_H$. They run from 0.18 for DeepSeek LLM to 0.89
+for Qwen3. Because the flagship carries most of a family's compute, the family share lies far below its members' typical
+shares: the Llama~3 herd's members have wedges from 1.30 to 6.73, but the herd's weighted condition gives 1.42, a share
+of 0.29. The family number equals the compute-weighted mean of the members' lifetime-to-training ratios when those ratios
+are uncorrelated with $1/w_i$, and it is a lower bound when smaller members, which are more over-trained, are also
+planned for more serving.
+
+\input{tables/appF_family}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{The Cost Side}\label{app:wedge-cost}
+
+FLOPs are not costs. Table~\ref{tab:app-costsens} lets the price of a training FLOP vary with model size (elasticity
+$\delta$, for example because utilization changes with size) and serving cost per token scale as $N^\phi$, with a price
+$p$ of a serving FLOP relative to a training FLOP (Proposition~\ref{prop:A-wedge}(iii)(f)). The first-order condition is
+$w=1+\delta+\phi X_S/X_T$, so the share $s=(w-1-\delta)/(w-1-\delta+\phi)$ does not depend on $p$. It moves little: the
+median is 0.72 to 0.77 for $\delta$ between $-0.1$ and $0.1$ with $\phi=1+\delta$, and 0.70 to 0.86 for $\phi$ between 0.5
+and 1.25 with $\delta=0$. Token counts do depend on $p$: at the median, planned serving tokens are 9.0 times training
+tokens at $p=1$ and 0.9 times at $p=10$, and for Llama~3 8B 17.2 and 1.7 times.
+
+\input{tables/appF_costsens}
+
+% -----------------------------------------------------------------------------------------------------
+\subsection{Validation and Trends}\label{app:wedge-trends}
+
+\emph{Token volumes.}---OpenRouter's documented interface reports no usage for any model, and its terms of service
+(updated 31 August 2026) prohibit scripts that scrape its activity pages, so per-model token volumes cannot be collected.
+The developer-level totals of \citet{aubakirova2026state} for November 2024 to November 2025 give an order of magnitude.
+One year of OpenRouter traffic equals 4.6 percent of the lifetime tokens that DeepSeek's verified releases imply at $p=1$,
+0.7 percent for Moonshot, 0.5 percent for Zhipu, 0.2 percent for Meta, 0.08 percent for Google and 0.04 percent for
+Alibaba. The platform carries a small part of a model's lifetime use, and a test of levels is not possible with public
+data.
+
+\emph{Derivative repositories.}---From the Hugging Face model tree we count the quantizations, fine-tunes, adapters and
+merges derived from each model's base repository, its official post-trained releases and same-run re-releases (74 clean
+models from 16 developers; MosaicML's and Cerebras's repositories require authentication). At given compute and release
+year, models with higher $M$ have more derivatives: elasticities of 0.61 for quantizations, 0.87 for fine-tunes, 0.90 for
+adapters and 0.80 for all derivatives (Table~\ref{tab:app-conduct}, panel~B). The elasticity with respect to the planned
+$T/D$ is 0.60 ($p=0.086$), below one. Smaller models of equal compute are adapted more, as planned demand predicts but also
+as accessibility predicts, so the counts do not validate levels.
+
+\emph{Trends.}---Figure~\ref{fig:app-trends} plots the median share by release year in the universe of the open--closed
+test. Among open-weight models it rises from 0.51 in 2023 to 0.81 in 2024 and 0.85 in 2025. Closed models with disclosed
+allocations had negative median shares in 2021--2023 and 0.64 in 2024, from six models; there are too few after 2024 to
+plot. The compute-weighted aggregates are in Table~\ref{tab:econ}, panel~C. On the clean sample the aggregate share
+rises from 2023 to 2025 under every one of the 32 technologies. Under the developers' own technologies where available it
+is 0.27, 0.56 and 0.82 in 2023, 2024 and 2025, against 0.28, 0.58 and 0.83 under the reference. Llama~3.1 405B accounts
+for 55 percent of the clean sample's 2024 compute; without it the 2024 share is 0.73.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.72\textwidth]{ra2_wedge_trends}
+\caption{Revealed Expenditure Shares by Release Year: Open and Closed Models}\label{fig:app-trends}
+\begin{figurenotes}
+Median of $s=(w-1)/w$ under the reference technology by release year, for open-weight and closed models of the
+production-scale universe ($6ND\ge10^{21}$ FLOP) with confident parameter and token counts, excluding mixture-of-experts
+and non-transformer models and applying the clean-sample exclusions to verified models (186 models). Shaded: interquartile
+range of open-weight models. Numbers: models per cell; cells with fewer than five models are omitted; medians below $-1$
+are drawn at $-1$ (open triangles). For developers that serve their models, $s$ is the planned serving share of lifetime
+cost; for others, the internalized value of compactness.
+\end{figurenotes}
+\begin{figurenotes}[Source]
+Epoch AI \citep{epochai2026data}; model cards; authors' calculations.
+\end{figurenotes}
+\end{figure}
+
+\emph{What is not done.}---Four checks remain open. A test of the production approach on a second margin, in the spirit
+of \citet{raval2023testing}, such as the sparsity of mixture-of-experts models, the number of key-value heads or the
+vocabulary, which trade quality against serving cost at different training costs, has not been run. Token counts are not
+normalized by bytes. Durability, the obsolescence of models that shortens the horizon over which serving demand is
+planned, is part of $T$ but is not modeled. And token counts reported as corpus sizes, such as the 18 trillion tokens
+stated for every Qwen2.5 size, have not been audited against the tokens each model processed.
+
+\clearpage

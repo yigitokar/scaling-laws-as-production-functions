@@ -16,7 +16,7 @@ from over-training.
 
 **Versions.** The paper cites release `v4` of this repository, tagged at submission. The first public snapshot
 (commit `59c5707`, pushed at 18:10 +03 on 24 September 2026) holds paper version 2, the pre-analysis plan and
-Amendment 1. The version-3 snapshot, with Amendment 2, was pushed at [[X1: time]].
+Amendment 1. The version-3 snapshot, with Amendment 2, was pushed at 19:04:53 +03 on 25 September 2026 (commit `511cdbb`).
 
 ## Pre-analysis plan of the controlled experiment
 The record below matches Online Appendix B4 of the paper, which gives the details and the table of deviations.
@@ -35,8 +35,8 @@ The record below matches Online Appendix B4 of the paper, which gives the detail
   differences between corpora had been computed, and after preliminary FineWeb-Edu estimates (listed in Appendix B4).
   It also replaced total parameters by FLOP-effective parameters for comparisons with the public designs; because the
   two counts differ by only 3 to 7 percent in this design, FineWeb-Edu's arms of Q1 and Q3 are exploratory.
-- **Amendment 2** (`paper/notes/m9_preanalysis_amendment2.md`), committed at [[X1: time]] and pushed to this repository
-  at [[X1: time]], before any FineWeb technology estimate, restates the outcome map against the current version of the
+- **Amendment 2** (`paper/notes/m9_preanalysis_amendment2.md`), committed at 19:03:45 +03 on 25 September 2026 (private commit `be47c0b`) and pushed to this repository
+  at 19:04:53 +03 (commit `511cdbb`), before any FineWeb technology estimate, restates the outcome map against the current version of the
   paper, defines when an estimate lies inside or outside the band of Amendment 1, fixes the calibration factors, sets
   the conditions for a robust factor-biased verdict and declares the retraining of the FineWeb-Edu main-grid widths 384
   and 512 with every evaluation set (queue E, launched at 11:34:53 on 25 September 2026, commit `5599198`).

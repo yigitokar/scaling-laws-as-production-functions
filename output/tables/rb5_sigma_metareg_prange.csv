@@ -1,0 +1,8 @@
+set,n_pvalues,p_min,p_max,cr2_min,cr2_max,wild_min,wild_max,slope_min,slope_max,specs
+"Marin one cluster (4 clusters): RE, balanced, S-scale and design-FE rows",18,0.0486,0.489606,0.0644982,0.489606,0.0486,0.3761,-0.0337151,0.136885,balanced; fe_unweighted; fe_weighted; unweighted; weighted; weighted_S
+Marin one cluster (4 clusters): all rows incl. study-RE and study-FE,27,0.0486,0.489606,0.0644982,0.489606,0.0486,0.384259,-0.0337151,0.136885,balanced; fe_unweighted; fe_weighted; fe_weighted_study; unweighted; unweighted_studyRE; weighted; weighted_S; weighted_studyRE
+"Six design clusters: RE, balanced, S-scale and design-FE rows",18,0.0317,0.488576,0.0496913,0.488576,0.0317,0.366298,-0.0337151,0.136885,balanced; fe_unweighted; fe_weighted; unweighted; weighted; weighted_S
+Six design clusters: without FE rows (rb1's published range),12,0.0317,0.12559,0.0496913,0.12559,0.0317,0.0629,-0.0337151,0.136885,balanced; unweighted; weighted; weighted_S
+"Four to six clusters: RE, balanced, S-scale and design-FE rows",36,0.0317,0.489606,0.0496913,0.489606,0.0317,0.3761,-0.0337151,0.136885,balanced; fe_unweighted; fe_weighted; unweighted; weighted; weighted_S
+Four to six clusters: all rows,45,0.0317,0.489606,0.0496913,0.489606,0.0317,0.384259,-0.0337151,0.136885,balanced; fe_unweighted; fe_weighted; fe_weighted_study; unweighted; unweighted_studyRE; weighted; weighted_S; weighted_studyRE
+"IsoFLOP designs only, five design clusters (R3's round-2 sample)",18,0.0127122,0.232253,0.0127122,0.0967496,0.0151749,0.232253,-0.0503645,0.199122,balanced; fe_unweighted; fe_weighted; unweighted; weighted; weighted_S

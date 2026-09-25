@@ -1,0 +1,33 @@
+design,variant,frontier,k_budgets,drift_ols,se_ols,sigma_mean,sigma_top,C_top,mean_k_side
+Chinchilla,primary,logcubic,9,-0.0519707,0.0252484,0.674779,0.578771,3e+21,
+Chinchilla,power,power,9,-0.0525175,0.0255456,0.674087,0.574949,3e+21,
+Chinchilla,symmetric,logcubic,8,-0.0348576,0.0264386,0.65983,0.602851,3e+21,4.625
+Chinchilla,symmetric+power,power,8,-0.0356132,0.0269364,0.658432,0.595576,3e+21,4.625
+Llama 3,primary,logcubic,8,-0.0493326,0.0216099,0.665407,0.609459,1e+21,
+Llama 3,power,power,8,-0.0463698,0.0198011,0.668992,0.625502,1e+21,
+Llama 3,symmetric,logcubic,8,-0.0805181,0.0446325,0.665099,0.610277,1e+21,4
+Llama 3,symmetric+power,power,8,-0.0774,0.0437881,0.668633,0.625769,1e+21,4
+"Marin, Comma",primary,logquad,5,-0.00422247,0.0243742,0.715743,0.685774,3e+20,
+"Marin, Comma",power,power,5,-0.00502816,0.0241631,0.715668,0.685047,3e+20,
+"Marin, Comma",symmetric,logquad,5,-0.0198019,0.0835912,0.63621,0.732691,3e+20,2.4
+"Marin, Comma",symmetric+power,power,5,-0.0187171,0.083404,0.63612,0.733163,3e+20,2.4
+"Marin, DCLM",primary,logcubic,7,0.00931937,0.0165539,0.722317,0.736857,3e+20,
+"Marin, DCLM",power,power,7,0.00783635,0.0165186,0.720917,0.730722,3e+20,
+"Marin, DCLM",symmetric,logcubic,7,0.0678323,0.0355055,0.704106,0.693231,3e+20,2.42857
+"Marin, DCLM",symmetric+power,power,7,0.0672715,0.0360097,0.703255,0.689298,3e+20,2.42857
+"Marin, Nemotron-CC",primary,logcubic,7,-0.0130712,0.0146627,0.714384,0.732649,3e+20,
+"Marin, Nemotron-CC",power,power,7,-0.0127648,0.014811,0.714617,0.733768,3e+20,
+"Marin, Nemotron-CC",symmetric,logquad,5,0.00728067,0.0060198,0.669551,0.684396,1.8e+20,2.2
+"Marin, Nemotron-CC",symmetric+power,power,5,0.00794852,0.00593168,0.669584,0.684852,1.8e+20,2.2
+"five IsoFLOP designs, design FE (OLS)",primary,,36,-0.0293372,0.0105507,,,,
+"five IsoFLOP designs, design FE (OLS)",symmetric,,33,-0.0221116,0.0200207,,,,
+"five IsoFLOP designs, design FE (OLS)",power,,36,-0.0291492,0.0103833,,,,
+"five IsoFLOP designs, design FE (OLS)",symmetric+power,,33,-0.0214654,0.0199,,,,
+"Chinchilla + Llama 3, design FE (OLS)",primary,,17,-0.0509049,0.0164605,,,,
+"Chinchilla + Llama 3, design FE (OLS)",symmetric,,16,-0.0540047,0.0247371,,,,
+"Chinchilla + Llama 3, design FE (OLS)",power,,17,-0.050034,0.0162175,,,,
+"Chinchilla + Llama 3, design FE (OLS)",symmetric+power,,16,-0.0531359,0.0244592,,,,
+"Marin x3, design FE (OLS)",primary,,19,-0.00262557,0.00995949,,,,
+"Marin x3, design FE (OLS)",symmetric,,17,0.0207395,0.0297064,,,,
+"Marin x3, design FE (OLS)",power,,19,-0.00328331,0.00990168,,,,
+"Marin x3, design FE (OLS)",symmetric+power,,17,0.0210865,0.0296786,,,,

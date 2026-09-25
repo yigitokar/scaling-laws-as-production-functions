@@ -1,0 +1,14 @@
+set,definition,e_lo,e_hi
+S1,"one path per study; joint (level, slope) simultaneous 95% bands; union",,
+S2(a),"PI-1 as published: bootstrap-t levels (HC2), slopes at point-estimate hull, Comma excluded",-0.15599999999999992,0.16218667065168946
+S2(a)+Comma,PI-1 with Marin Comma admitted (version 3 disclosure),-0.15599999999999992,0.29398141890058493
+S2(b),"t-interval levels (k-2 df), Comma admitted with its own slope; slopes at point-estimate hull",-0.15599999999999992,0.29398141890058493
+S2(b'),as S2(b) with slopes at the hull of their t-intervals,-0.15599999999999992,0.4589853843801334
+S2(c),"PI-1 levels, slopes at the hull of the designs' 95% slope intervals",-0.1745112143187324,0.3527929876297756
+S2(d),"normal inputs only: S1 levels' pointwise intervals, |e| <= 1",-1.0,1.0
+S2(d) PI-1 anchors,normal inputs only with PI-1's levels (version 3),-1.0,1.0
+S2(e),S1 bands plus every in-set technology's in-support M* as an anchor,-0.13112994847953474,0.31099144862852035
+S2(e) PI-4 as published,PI-1 plus every technology (version 3's PI-4),-0.15599999999999992,0.31099144862852035
+S2(f)-total,all anchors in total parameters (Marin converted; Llama 3 conversion bound),,
+S2(f)-NF,anchors and models in FLOP-effective parameters,,
+S2(f)-Chinchilla N_F,"Chinchilla's anchor in N_F, models in total parameters",,

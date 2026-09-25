@@ -1,0 +1,33 @@
+pi_set,curvature,n,share_w_gt1_identified,median_s_lo,median_s_hi,median_w_lo,median_w_hi
+"PI-1 IsoFLOP anchors, e from A2/published paths","ra2: k in [0.40, 0.52] (in-design sigma* 0.66-0.71)",77,0.857143,0.588907,0.932938,2.43254,14.9115
+"PI-1 IsoFLOP anchors, e from A2/published paths","k in [0.40, k(0.60)]: adds the top-budget value",77,0.857143,0.588907,0.969475,2.43254,32.7603
+"PI-1 IsoFLOP anchors, e from A2/published paths","drift-agnostic: k in [0.40, k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.857143,0.588907,0.997669,2.43254,428.967
+"PI-1 IsoFLOP anchors, e from A2/published paths","drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.857143,0.7786,0.997669,4.5167,428.967
+"PI-1 IsoFLOP anchors, e from A2/published paths","drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.857143,0.737442,0.997669,3.80869,428.967
+"PI-1 IsoFLOP anchors, e from A2/published paths","drift-agnostic: k in [0.40, k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.857143,0.588907,0.992013,2.43254,125.209
+"PI-1 IsoFLOP anchors, e from A2/published paths","drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.857143,0.7786,0.992013,4.5167,125.209
+"PI-1 IsoFLOP anchors, e from A2/published paths","drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.857143,0.737442,0.992013,3.80869,125.209
+PI-2 PI-1 + M* nondecreasing in C,"ra2: k in [0.40, 0.52] (in-design sigma* 0.66-0.71)",77,0.857143,0.588907,0.887293,2.43254,8.87253
+PI-2 PI-1 + M* nondecreasing in C,"k in [0.40, k(0.60)]: adds the top-budget value",77,0.857143,0.588907,0.940324,2.43254,16.757
+PI-2 PI-1 + M* nondecreasing in C,"drift-agnostic: k in [0.40, k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.857143,0.588907,0.992481,2.43254,132.993
+PI-2 PI-1 + M* nondecreasing in C,"drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.857143,0.7786,0.992481,4.5167,132.993
+PI-2 PI-1 + M* nondecreasing in C,"drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.857143,0.737442,0.992481,3.80869,132.993
+PI-2 PI-1 + M* nondecreasing in C,"drift-agnostic: k in [0.40, k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.857143,0.588907,0.98036,2.43254,50.9155
+PI-2 PI-1 + M* nondecreasing in C,"drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.857143,0.7786,0.98036,4.5167,50.9155
+PI-2 PI-1 + M* nondecreasing in C,"drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.857143,0.737442,0.98036,3.80869,50.9155
+PI-3 PI-1 with own-lab anchor,"ra2: k in [0.40, 0.52] (in-design sigma* 0.66-0.71)",77,0.766234,0.545208,0.940662,2.19881,16.8525
+PI-3 PI-1 with own-lab anchor,"k in [0.40, k(0.60)]: adds the top-budget value",77,0.766234,0.545208,0.973937,2.19881,38.3682
+PI-3 PI-1 with own-lab anchor,"drift-agnostic: k in [0.40, k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.766234,0.545208,0.997943,2.19881,486.05
+PI-3 PI-1 with own-lab anchor,"drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.766234,0.737219,0.997943,3.80544,486.05
+PI-3 PI-1 with own-lab anchor,"drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.766234,0.694349,0.997943,3.2717,486.05
+PI-3 PI-1 with own-lab anchor,"drift-agnostic: k in [0.40, k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.766234,0.545208,0.993485,2.19881,153.488
+PI-3 PI-1 with own-lab anchor,"drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.766234,0.737219,0.993485,3.80544,153.488
+PI-3 PI-1 with own-lab anchor,"drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.766234,0.694349,0.993485,3.2717,153.488
+"PI-4 all ex-ante technologies as anchors, e from all paths","ra2: k in [0.40, 0.52] (in-design sigma* 0.66-0.71)",77,0.233766,-1.43127,0.97733,0.411308,44.1118
+"PI-4 all ex-ante technologies as anchors, e from all paths","k in [0.40, k(0.60)]: adds the top-budget value",77,0.233766,-2.14934,0.992477,0.317527,132.919
+"PI-4 all ex-ante technologies as anchors, e from all paths","drift-agnostic: k in [0.40, k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.233766,-6.23372,0.999789,0.138241,4736.66
+"PI-4 all ex-ante technologies as anchors, e from all paths","drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.233766,-6.23372,0.999789,0.138241,4736.66
+"PI-4 all ex-ante technologies as anchors, e from all paths","drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], drift of Chinchilla and Llama 3 (design FE, inverse variance)",77,0.233766,-6.23372,0.999789,0.138241,4736.66
+"PI-4 all ex-ante technologies as anchors, e from all paths","drift-agnostic: k in [0.40, k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.233766,-4.03416,0.998958,0.198643,959.279
+"PI-4 all ex-ante technologies as anchors, e from all paths","drift maintained: k in [k(sigma_top), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.233766,-4.03416,0.998958,0.198643,959.279
+"PI-4 all ex-ante technologies as anchors, e from all paths","drift maintained, sigma_top at its 95% upper limit: k in [k(sigma_top_hi), k(sigma_lin(C_i))], pooled drift (primary three-level meta-regression)",77,0.233766,-4.03416,0.998958,0.198643,959.279

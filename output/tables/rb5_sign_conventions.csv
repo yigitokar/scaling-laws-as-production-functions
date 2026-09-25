@@ -1,0 +1,26 @@
+embeddings,accounting,N_total,N_F,ratio_NF_over_Ntotal,ln_ratio,item,group,C,lnr
+tied,6 N_total D,3212574720.0,3212574720.0,1.0,0.0,Llama 3 anchor: N_F/N_total by FLOP accounting,,,
+tied,non-embedding only (Kaplan),3212574720.0,2818572288.0,0.8773561811505508,-0.13084223319928215,Llama 3 anchor: N_F/N_total by FLOP accounting,,,
+tied,"non-embedding + head + attention at 8,192 tokens",3212574720.0,3917217792.0,1.2193390452876376,0.19830894577918004,Llama 3 anchor: N_F/N_total by FLOP accounting,,,
+untied,6 N_total D,3606577152.0,3606577152.0,1.0,0.0,Llama 3 anchor: N_F/N_total by FLOP accounting,,,
+untied,non-embedding only (Kaplan),3606577152.0,2818572288.0,0.7815089402529437,-0.2465286893230287,Llama 3 anchor: N_F/N_total by FLOP accounting,,,
+untied,"non-embedding + head + attention at 8,192 tokens",3606577152.0,3917217792.0,1.0861317051897077,0.08262248965543353,Llama 3 anchor: N_F/N_total by FLOP accounting,,,
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,DCLM,3.4217674904274355e+18,-0.13154493897257094
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,DCLM,9.77483253809933e+18,-0.08258639673622008
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,DCLM,1.914304153341447e+19,-0.061567525295583986
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,DCLM,3.093916924877536e+19,-0.030825612727174455
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,DCLM,8.910966633554936e+19,0.009941853123491237
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,DCLM,1.7472246519839818e+20,0.02975804901013891
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,DCLM,2.862469734266274e+20,0.04692749302573427
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Nemotron-CC,3.435767665070306e+18,-0.1356280953185551
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Nemotron-CC,9.820452571903504e+18,-0.08724263072007524
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Nemotron-CC,1.9241483460898206e+19,-0.06669678732639693
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Nemotron-CC,3.1049204480850715e+19,-0.03437580580459839
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Nemotron-CC,8.892452080780358e+19,0.012021741233303759
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Nemotron-CC,1.7451886596084072e+20,0.03092400070289389
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Nemotron-CC,2.86660842475517e+20,0.04548269122901586
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Comma,3.460660636743966e+18,-0.14284721765079442
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Comma,9.911107291024245e+18,-0.09643149947867635
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Comma,1.9208461992052187e+19,-0.06497915279789784
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Comma,1.7871782461880356e+20,0.007148687650989929
+,,,,,,Marin minima: ln(N_F/N_cfg) at the minimum,Comma,2.9111818852031486e+20,0.030053143821796906

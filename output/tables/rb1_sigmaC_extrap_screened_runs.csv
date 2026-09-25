@@ -1,0 +1,2 @@
+source,dataset,model,experiment,D,N_cfg,budget,L,C_b,N,x,c,b,M,u,cc,f,flag_nonmonotone,design
+marin_202603,dclm,llama_2,marin_202603__dclm__llama_2,2.58295e+11,1.56508e+08,1.8e+20,3.76914,1.8e+20,1.16146e+08,18.5704,46.6395,5,2223.88,7.70701,46.6395,1.32685,True,"Marin, DCLM"

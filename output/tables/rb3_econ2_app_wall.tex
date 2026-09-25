@@ -1,0 +1,62 @@
+% Online Appendix table -- the data wall at observed allocations. Module rb3_econ2;
+% sources rb3_econ2_wall_observed_grid.csv, _wall_understatement.csv, _wall_today.csv.
+\begin{table}[tp]
+\centering
+\caption{The Data Wall at Observed Allocations}
+\label{tab:app-econ-wall}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+\multicolumn{7}{@{}l}{\textit{Panel A. Extra lifetime cost (\%) by wedge and compute-optimal scarcity $r=D^*(C)/U$}} \\[2pt]
+Wedge $w$ ($D/D^*$ at $\sigma^*=0.70$) & $r=0.5$ & $r=1$ & $r=2$ & $r=4$ & $r=8$ & $r=16$ \\
+\midrule
+\multicolumn{7}{@{}l}{\quad\textit{Data decay only, $R^*_D=15.4$}} \\
+$w=1$ (1.00) & 0.0 & 0.0 & 1.6 & 7.4 & 22.2 & 63.4 \\
+$w=2$ (2.25) & $<$0.1 & 1.1 & 4.4 & 11.9 & 29.6 & 76.4 \\
+$w=5.38$ (7.16) & 1.1 & 3.1 & 7.3 & 16.1 & 34.4 & 74.8 \\
+\multicolumn{7}{@{}l}{\quad\textit{Data-only fit, $R^*_D=2.9$}} \\
+$w=1$ (1.00) & 0.0 & 0.0 & 7.0 & 39.8 & 192.1 & 5,076.1 \\
+$w=2$ (2.25) & 0.1 & 4.9 & 21.1 & 67.5 & 246.5 & 2,733.9 \\
+$w=5.38$ (7.16) & 4.8 & 13.8 & 33.1 & 75.8 & 186.9 & 636.0 \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel B. The measured wedge: $\hat w/(1+m_N)$ / $\hat w/w$}} \\[2pt]
+Repetition model & $D/U=1.5$ & 2 & 4 & 8 & 16 & 32 \\
+\midrule
+Hard cap (token cap) & 0.58/0.81 & 0.38/0.69 & 0.14/0.47 & 0.04/0.30 & 0.01/0.18 & 0.00/0.08 \\
+Data-only fit, $R^*_D=2.9$ & 0.90/0.96 & 0.83/0.93 & 0.67/0.85 & 0.49/0.74 & 0.31/0.60 & 0.17/0.45 \\
+Data decay only, $R^*_D=15.4$ & 0.98/0.99 & 0.96/0.98 & 0.92/0.96 & 0.85/0.93 & 0.74/0.87 & 0.57/0.78 \\
+Full model & 0.98/0.99 & 0.96/0.98 & 0.92/0.96 & 0.85/0.93 & 0.74/0.87 & 0.57/0.78 \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel C. The frontier in September 2026 at observed data use}} \\[2pt]
+ & \multicolumn{2}{c}{100T stock} & \multicolumn{4}{c}{22T stock (lower 95\% bound)} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-7}
+Technology & $D^*/U$ & $D/U$ & $D^*/U$ & $D/U$ & \multicolumn{2}{c}{Extra cost (\%)$^b$} \\
+\midrule
+Chinchilla, $\kappa$ free (reference) & 0.50 & 0.62 & 2.26 & 2.82 & \multicolumn{2}{c}{3.1 / 7.4} \\
+Chinchilla, $\kappa=1$ & 0.42 & 0.60 & 1.90 & 2.71 & \multicolumn{2}{c}{2.8 / 6.6} \\
+Llama 3 (Meta's law) & 0.79 & 0.72 & 3.59 & 3.29 & \multicolumn{2}{c}{4.2 / 11.6} \\
+DeepSeek LLM & 0.35 & 0.57 & 1.57 & 2.61 & \multicolumn{2}{c}{2.6 / 5.8} \\
+Farseer, $\kappa=1$ & 0.38 & 0.57 & 1.73 & 2.59 & \multicolumn{2}{c}{2.5 / 5.6} \\
+Farseer, own form & 3.67 & 1.09 & 16.68 & 4.94 & \multicolumn{2}{c}{8.6 / 31.6} \\
+Gadre et al., RefinedWeb & 0.08 & 0.49 & 0.37 & 2.24 & \multicolumn{2}{c}{1.8 / 3.3} \\
+OLMo ladder & 4.54 & 1.03 & 20.65 & 4.70 & \multicolumn{2}{c}{7.9 / 28.1} \\
+Marin, DCLM & 1.05 & 0.84 & 4.79 & 3.83 & \multicolumn{2}{c}{5.6 / 17.1} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel D. Compute-optimal allocation: hard wall, shadow value, substitution}} \\[2pt]
+ & & & \multicolumn{2}{c}{Shadow value} & $\sigma_{CU}$ & $\gamma_{\rm eff}/\gamma$ \\
+\cmidrule(lr){4-5}
+Technology & $\sigma^*$ & $r_{\max}$ & $r=4$ & $r=16$ & $r=4$ & $r=16$ \\
+\midrule
+Chinchilla, $\kappa$ free (reference) & 0.70 & 83 & 0.45 & 8.61 & 0.48 & 0.80 \\
+Equivalent, $\sigma^*=0.60$ & 0.60 & 47 & 0.51 & 13.81 & 0.47 & 0.77 \\
+Equivalent, $\sigma^*=0.74$ & 0.74 & 119 & 0.43 & 6.95 & 0.49 & 0.82 \\
+Reference, full model ($R^*_N=5.3$) & 0.70 & 9 & 3.76 & -- & 0.49 & -- \\
+Reference, data-only fit ($R^*_D=2.9$) & 0.70 & 20 & 1.83 & 117.85 & 0.53 & 0.50 \\
+\bottomrule
+\end{tabular*}
+\vspace{2pt}
+\begin{tablenotes}[Notes]
+Reference technology ($\kappa$ free, $\sigma^*=0.70$) with the repetition model of \citet{muennighoff2023scaling}. A developer with wedge $w$ minimizes $6ND+\Xi N$, where $\Xi N$ is the value of compactness, at the loss of its uncapped choice, which has $\varepsilon_N/\varepsilon_D=w$ and processes $D=D^*(C)w^{\sigma^*/[2(1-\sigma^*)]}$ tokens. Panel A: extra lifetime cost when the unique stock is $U=D^*(C)/r$, $C$ the model's training compute; at $w=1$ it is the extra compute of Table~\ref{tab:econ}. The objects depend on $(w,r)$ only (checked at $10^{25}$ and $10^{27}$ FLOP). Panel B: the wedge computed from the capped choice, treating tokens processed as fresh, relative to $1+m_N=1+\Xi/(6D)$ at that choice and to the no-wall wedge $w=5.38$ ($D/U$: no-wall tokens over the stock); $1+m_N>w$ because the capped developer processes fewer tokens; $\hat w/w$ is the shortfall of the measured trend from its no-wall path. Token-cap case of Proposition~\ref{prop:wedge}: $\hat w=(1+m_N)/(1+\mu)$; under soft repetition $\mu=1/\eta-1$, $\eta=d\ln D'/d\ln D$ (checked). In the full model excess parameters also decay, a size penalty that raises the measured wedge once $N$ exceeds the compute-optimal size for $U$; for over-trained models it equals data decay only. Panel C: frontier compute of September 2026, stock grown 5 percent a year from 2024; $D/U$ at the observed data multiple of the disclosed dense frontier runs; $^b$extra lifetime cost at 22T, data decay only / full model (at 100T it is below 0.1 percent for every technology). Panel D: $r_{\max}$, hard wall; shadow value in units of $6N$; $\sigma_{CU}$, elasticity of substitution between compute and unique tokens; $\gamma_{\rm eff}/\gamma$, relative return to compute behind the wall.
+\end{tablenotes}
+\end{table}

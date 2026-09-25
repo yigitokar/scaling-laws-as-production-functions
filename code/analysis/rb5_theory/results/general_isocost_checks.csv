@@ -1,0 +1,17 @@
+check,claim,passed,metric
+sym.identity,1/sigma - 1/sigma_C = -y_nn|_C / [r(1+r) g_d dy*/dc] for generic F and C at a tangency,True,simplified difference = 0
+sym.multiplicative,C = 6ND: sigma_C = 1 and the identity is eq. (ident-mf),True,1/sigma_C = 1
+sym.linear,linear cost: 1/sigma_C = 0 and 1/sigma* = |y_nn| s_D / (s_N dy*/dc),True,1/sigma_C = 0
+num.R3.CES sigma=0.67|multiplicative,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=0.5000000 rhs=0.4999999 rel.err=1.7e-07 inv.dev=4.6e-07 y_nn=-0.5000
+num.R3.CES sigma=0.40|multiplicative,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=1.5000000 rhs=1.4999978 rel.err=1.5e-06 inv.dev=1.5e-06 y_nn=-1.5000
+num.R3.CES sigma=0.83|multiplicative,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=0.2000000 rhs=0.2000000 rel.err=2.2e-08 inv.dev=1.6e-07 y_nn=-0.2000
+num.R3.CES sigma=0.67|linear,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=1.5000000 rhs=1.5000037 rel.err=2.4e-06 inv.dev=8.3e-07 y_nn=-0.9995
+num.R3.CES sigma=0.40|linear,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=2.5000000 rhs=2.5000031 rel.err=1.2e-06 inv.dev=1.3e-06 y_nn=-1.4851
+num.R3.CES sigma=1.43|linear,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=0.7000000 rhs=0.7000026 rel.err=3.7e-06 inv.dev=4.8e-07 y_nn=-0.6476
+num.R3.CES sigma=0.83|linear,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=1.2000000 rhs=1.2000034 rel.err=2.8e-06 inv.dev=6.9e-07 y_nn=-0.8591
+num.extra.reference (kappa f|multiplicative,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=0.4274429 rhs=0.4274428 rel.err=1.2e-07 inv.dev=1.4e-07 y_nn=-0.1414
+num.extra.reference (kappa f|linear,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=1.4278012 rhs=1.4278107 rel.err=6.6e-06 inv.dev=5.8e-07 y_nn=-0.5962
+num.extra.reference (kappa f|multiplicative,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=0.4275897 rhs=0.4275897 rel.err=1.3e-07 inv.dev=1.5e-07 y_nn=-0.1556
+num.extra.CES sigma=1.43|CES cost theta,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=1.7000000 rhs=1.7000226 rel.err=1.3e-05 inv.dev=1.2e-06 y_nn=-1.4110
+num.extra.non-separable|6ND + data cos,1/sigma* - 1/sigma_C = |y_nn| / [r(1+r) g_d dy*/dc]; invariant to output transformation; SOC iff 1/sigma* > 1/sigma_C,True,lhs=0.2360110 rhs=0.2360109 rel.err=2.0e-07 inv.dev=1.6e-07 y_nn=-0.2141
+num.SOC.CES1.43|multiplicative,"sigma* > sigma_C: the tangency is a minimum of output on the isocost (y_nn > 0), and the identity still holds",True,lhs=-0.3000000 rhs=-0.3000000 y_nn=0.3000

@@ -1,0 +1,6 @@
+study,design,sigma_all,se_all,k_all,sigma_le3e20,se_le3e20,k_le3e20,Cmax_le3e20,tau_le3e20
+Hoffmann,Chinchilla,0.659649,0.0227991,9,0.698379,0.0227903,6,3e+20,0
+Meta,Llama 3,0.659508,0.0226928,8,0.685957,0.0254979,6,3e+20,0.0541977
+Marin,"Marin, Comma",0.699969,0.0265002,5,0.699969,0.0265002,5,3e+20,0
+Marin,"Marin, DCLM",0.712588,0.0271711,7,0.712588,0.0271711,7,3e+20,0
+Marin,"Marin, Nemotron-CC",0.704925,0.0232614,7,0.704925,0.0232614,7,3e+20,0

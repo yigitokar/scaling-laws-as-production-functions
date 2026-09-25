@@ -1,0 +1,30 @@
+\begin{table}[tp]
+\centering
+\caption{Transmission Bias in the Returns to Compute: Closed Form and Simulation}
+\label{tab:transmission}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+ & & \multicolumn{3}{c}{On the path ($T=0$), $n=10^6$} & $T>0$ & \multicolumn{2}{c}{$n=240$} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-6}\cmidrule(l){7-8}
+Compute rule & & Formula & Simulated & Reverse & Simulated & Mean & Coverage (\%) \\
+\midrule
+Exogenous &  & 0.1783 & 0.1781 & 0.542 & 0.1784 & 0.179 & 95 \\
+Funding, $\lambda=$ & 0.5 & 0.2091 & 0.2095 & 0.512 & 0.2099 & 0.209 & 53 \\
+Funding, $\lambda=$ & 1 & 0.2371 & 0.2370 & 0.481 & 0.2370 & 0.237 & 4 \\
+Funding, $\lambda=$ & 2 & 0.2783 & 0.2782 & 0.429 & 0.2784 & 0.278 & 0 \\
+Funding, $\lambda=$ & 4 & 0.3033 & 0.3034 & 0.359 & 0.3032 & 0.303 & 0 \\
+Predetermined, $\lambda=$ & 1 & 0.2253 & 0.2254 & 0.487 & 0.2257 & 0.225 & 16 \\
+Predetermined, $\lambda=$ & 2 & 0.2583 & 0.2582 & 0.435 & 0.2586 & 0.258 & 0 \\
+Predetermined, $\lambda=$ & 4 & 0.2783 & 0.2783 & 0.359 & 0.2789 & 0.278 & 0 \\
+Target, sd$(\bar y)=$ & 0 & 0.0000 & 0.0000 & -- & 0.0000 & 0.000 & 0 \\
+Target, sd$(\bar y)=$ & 0.05 & 0.0069 & 0.0068 & 0.358 & 0.0068 & 0.007 & 0 \\
+Target, sd$(\bar y)=$ & 0.1 & 0.0246 & 0.0246 & 0.223 & 0.0246 & 0.025 & 0 \\
+Target, sd$(\bar y)=$ & 0.25 & 0.0891 & 0.0892 & 0.186 & 0.0886 & 0.089 & 0 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tablenotes}Slope of $y=-\ln(L-E)$ on $c=\ln C$ across labs. Formula: $\gamma+\pi_1\mathrm{Var}(\omega)/(\pi_1^2\mathrm{Var}(\omega)+\mathrm{Var}(\eta))$ (Proposition~\ref{prop:transmission}(i)) with $\gamma=0.1783$, sd$(\omega)=0.25$, sd$(\eta)=1$, persistence 0.8. Funding: $c=\lambda\omega+\eta$; predetermined: $c=\lambda\omega_{-1}+\eta$; target: labs buy the compute that reaches a target $\bar y$ with the stated dispersion (a common target gives slope 0). Simulated: OLS on $10^6$ draws, seed noise 0.05 (simulation standard errors at most 0.0003). Reverse: $\mathrm{Var}(y)/\mathrm{Cov}(c,y)$; ``--'' where $\mathrm{Cov}(c,y)=0$ and it is undefined. $T>0$: lifetime-optimal allocations with log-normal inference demand; under target rules an extra term of $-0.002$ to $-0.001$ appears because high-$T$ labs buy more compute. $n=240$: mean OLS slope and coverage of the nominal 95 percent OLS interval over 2,000 samples of 240 lab-generations; coverage rates are specific to sd$(\eta)=1$ and rise with more exogenous dispersion in compute.\end{tablenotes}
+\begin{tablenotes}[Source]Author's simulations; replication code \texttt{code/analysis/m6\_montecarlo}.\end{tablenotes}
+\end{table}

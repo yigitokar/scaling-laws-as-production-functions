@@ -1,3 +1,5 @@
+% Online Appendix Table C1 (v3: allocation-error scale written varsigma; start-set table dropped). Writer appendices.
+% Round 3 (WP3, P14(n)): factorial grid not on the nine budgets; start region stated as within Hoffmann et al.'s grid.
 \begin{table}[tp]
 \centering
 \caption{Monte Carlo Design A: What Alternative Designs Identify at Equal Compute}
@@ -11,7 +13,7 @@
 Design & $a$ & $\gamma$ & $\sigma^*$ & $\ln M^*(10^{24})$ & $\sigma^*$ & $\ln M^*(10^{24})$ \\
 \midrule
 \multicolumn{7}{@{}l}{\textit{Panel A. Bias [root-mean-squared error]}} \\[1pt]
-(i) On path, $v=0.02$ & 0.050 & 0.058 & $-$0.166 & $-$1.08 & 0.000 & 0.00 \\
+(i) On path, $\varsigma=0.02$ & 0.050 & 0.058 & $-$0.166 & $-$1.08 & 0.000 & 0.00 \\
  & [0.296] & [0.096] & [0.222] & [23.8] & [0.011] & [0.01] \\[1pt]
 (ii) IsoFLOP, $\pm16\times$ & 0.001 & 0.000 & 0.000 & $-$0.02 & 0.000 & 0.02 \\
  & [0.007] & [0.003] & [0.004] & [0.16] & [0.016] & [0.14] \\[1pt]
@@ -19,13 +21,13 @@ Design & $a$ & $\gamma$ & $\sigma^*$ & $\ln M^*(10^{24})$ & $\sigma^*$ & $\ln M^
  & [0.015] & [0.008] & [0.009] & [0.31] & [0.016] & [0.36] \\[1pt]
 (iii) Factorial grid & $-$0.001 & 0.000 & 0.000 & 0.02 & -- & -- \\
  & [0.012] & [0.005] & [0.005] & [0.28] & -- & -- \\[1pt]
-(iv) Optimizing, $v=0$ & 0.140 & 0.093 & $-$0.240 & $-$11.8 & 0.000 & 0.00 \\
+(iv) Optimizing, $\varsigma=0$ & 0.140 & 0.093 & $-$0.240 & $-$11.8 & 0.000 & 0.00 \\
  & [0.331] & [0.113] & [0.272] & [27.7] & [0.012] & [0.00] \\[1pt]
-(iv) Optimizing, $v=0.1$ & 0.014 & $-$0.032 & $-$0.006 & $-$0.25 & 0.000 & 0.00 \\
+(iv) Optimizing, $\varsigma=0.1$ & 0.014 & $-$0.032 & $-$0.006 & $-$0.25 & 0.000 & 0.00 \\
  & [0.225] & [0.051] & [0.025] & [4.58] & [0.012] & [0.05] \\[1pt]
-(iv) Optimizing, $v=0.3$ & 0.000 & $-$0.005 & $-$0.002 & 0.00 & 0.000 & $-$0.01 \\
+(iv) Optimizing, $\varsigma=0.3$ & 0.000 & $-$0.005 & $-$0.002 & 0.00 & 0.000 & $-$0.01 \\
  & [0.098] & [0.016] & [0.013] & [1.97] & [0.012] & [0.14] \\[1pt]
-(iv) Optimizing, $v=1$ & $-$0.002 & 0.000 & $-$0.001 & 0.04 & $-$0.001 & $-$0.04 \\
+(iv) Optimizing, $\varsigma=1$ & $-$0.002 & 0.000 & $-$0.001 & 0.04 & $-$0.001 & $-$0.04 \\
  & [0.029] & [0.011] & [0.012] & [0.59] & [0.015] & [0.48] \\[1pt]
 (v) Kaplan beliefs & $-$0.028 & $-$0.028 & $-$0.023 & 0.34 & $-$0.088 & $-$3.92 \\
  & [0.265] & [0.072] & [0.102] & [4.97] & [0.088] & [3.92] \\[1pt]
@@ -35,18 +37,18 @@ Design & $a$ & $\gamma$ & $\sigma^*$ & $\ln M^*(10^{24})$ & $\sigma^*$ & $\ln M^
 \cmidrule(l){5-7}
  & fits (\%) & coverage (\%) & coverage (\%) & Median bounds & Flat (\%) & Flat$'$ (\%) \\
 \cmidrule(l){2-7}
-(i) On path, $v=0.02$ & 72 & 100$^{\dagger}$ & 44$^{\S}$ & [0.05, 0.99] & 91 & 94 \\
+(i) On path, $\varsigma=0.02$ & 72 & 100$^{\dagger}$ & 44$^{\S}$ & [0.05, 0.99] & 91 & 94 \\
 (ii) IsoFLOP, $\pm16\times$ & 0 & 96 & 97 & [0.729, 0.745] & 0 & 0 \\
 (ii$'$) IsoFLOP, $\pm4\times$ & 0 & 94 & -- & [0.714, 0.760] & 0 & 0 \\
 (iii) Factorial grid & 0 & 95 & 97 & [0.727, 0.746] & 0 & 0 \\
-(iv) Optimizing, $v=0$ & 87 & 100$^{\dagger}$ & -- & [0.05, 0.99] & 95 & 97 \\
-(iv) Optimizing, $v=0.1$ & 0 & 99$^{\dagger}$ & -- & [0.08, 0.99] & 21 & 93 \\
-(iv) Optimizing, $v=0.3$ & 0 & 93 & 96$^{\S}$ & [0.42, 0.99] & 0 & 65 \\
-(iv) Optimizing, $v=1$ & 0 & 95 & 95 & [0.69, 0.79] & 0 & 0 \\
+(iv) Optimizing, $\varsigma=0$ & 87 & 100$^{\dagger}$ & -- & [0.05, 0.99] & 95 & 97 \\
+(iv) Optimizing, $\varsigma=0.1$ & 0 & 99$^{\dagger}$ & -- & [0.08, 0.99] & 21 & 93 \\
+(iv) Optimizing, $\varsigma=0.3$ & 0 & 93 & 96$^{\S}$ & [0.42, 0.99] & 0 & 65 \\
+(iv) Optimizing, $\varsigma=1$ & 0 & 95 & 95 & [0.69, 0.79] & 0 & 0 \\
 (v) Kaplan beliefs & 0 & 92$^{\dagger}$ & -- & [0.08, 0.99] & 21 & 84 \\
 \bottomrule
 \end{tabular}
 \par\smallskip
-\begin{tablenotes}Designs, truth ($a=0.513$, $\gamma=0.178$, $\sigma^*=0.737$, $\ln M^*(10^{24})=2.90$) and noise as described in the text: 90 runs on nine budgets with equal total compute, 500 replications per design; (v) labs follow Kaplan's rule $N\propto C^{0.73}$ with errors $v=0.1$. Primal: Huber ($\delta=10^{-3}$) fit of $\ln L$ from nine starting values drawn at random over the region of \citet{hoffmann2022training}'s initialization grid, none at the truth, inside a parameter box (Table~\ref{tab:app-mc-starts} compares start sets). Dual: $a$ from the (noisy) optima or IsoFLOP minima, $\gamma$ from the frontier (eight starting values on a grid), $\alpha=\gamma/a$, $\beta=\gamma/(1-a)$; not computed for the factorial grid. Panel B: corner = estimate on the box boundary or one power-law term below 2 percent of reducible loss at every design point; Wald = LAD-sandwich delta-method 95 percent interval ($^{\dagger}$: covariance singular or corner in more than 5 percent of replications, 79 percent on the path; coverage among computable ones); bootstrap = pairs-bootstrap percentile interval (149 draws, first 150 replications), each draw warm-started at the replication's estimate ($^{\S}$: in a separate check with 60 replications and 49 draws, restarting every draw also from the nine starting values moves on-path coverage from 33 to 78 percent and the median width from 0.04 to 0.43; at $v=0.3$ both give 100 percent); 95 percent profile set = likelihood-ratio confidence set for $\sigma^*$ in $L=E+(AN^{-a_1}+BD^{-b_1})^{\kappa}$ on a 29-point grid over $[0.05,0.99]$, with the likelihood ratio measured against the unrestricted optimum (first 150 replications): medians of the lower and upper bounds, share of replications whose set is the whole grid (flat) and share whose set contains all of $[0.50,0.95]$, the range searched in the first version (flat$'$). Monte Carlo standard errors of coverage rates near 95 percent are 1.0, 1.8 and 2.8 percentage points with 500, 150 and 60 replications.\end{tablenotes}
-\begin{tablenotes}[Source]Authors' simulations; replication code \texttt{code/analysis/m6\_montecarlo}.\end{tablenotes}
+\begin{tablenotes}Designs, truth ($a=0.513$, $\gamma=0.178$, $\sigma^*=0.737$, $\ln M^*(10^{24})=2.90$) and noise as described in the text: 90 runs with equal total compute, on Chinchilla's nine budgets except in the factorial grid, 500 replications per design; (v) labs follow Kaplan's rule $N\propto C^{0.73}$ with errors $\varsigma=0.1$. Primal: Huber ($\delta=10^{-3}$) fit of $\ln L$ from nine starting values drawn at random within the region of \citet{hoffmann2022training}'s initialization grid, none at the truth, inside a parameter box. Dual: $a$ from the (noisy) optima or IsoFLOP minima, $\gamma$ from the frontier (eight starting values on a grid), $\alpha=\gamma/a$, $\beta=\gamma/(1-a)$; not computed for the factorial grid. Panel B: corner = estimate on the box boundary or one power-law term below 2 percent of reducible loss at every design point; Wald = LAD-sandwich delta-method 95 percent interval ($^{\dagger}$: covariance singular or corner in more than 5 percent of replications, 79 percent on the path; coverage among computable ones); bootstrap = pairs-bootstrap percentile interval (149 draws, first 150 replications), each draw warm-started at the replication's estimate ($^{\S}$: in a separate check with 60 replications and 49 draws, restarting every draw also from the nine starting values moves on-path coverage from 33 to 78 percent and the median width from 0.04 to 0.43; at $\varsigma=0.3$ both give 100 percent); 95 percent profile set = likelihood-ratio confidence set for $\sigma^*$ in $L=E+(AN^{-a_1}+BD^{-b_1})^{\kappa}$ on a 29-point grid over $[0.05,0.99]$, with the likelihood ratio measured against the unrestricted optimum (first 150 replications): medians of the lower and upper bounds, share of replications whose set is the whole grid (flat) and share whose set contains all of $[0.50,0.95]$, the range searched in the first version (flat$'$). Monte Carlo standard errors of coverage rates near 95 percent are 1.0, 1.8 and 2.8 percentage points with 500, 150 and 60 replications.\end{tablenotes}
+\begin{tablenotes}[Source]Author's simulations; replication code \texttt{code/analysis/m6\_montecarlo}.\end{tablenotes}
 \end{table}

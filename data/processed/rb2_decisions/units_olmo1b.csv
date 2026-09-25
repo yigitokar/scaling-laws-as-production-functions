@@ -1,0 +1,78 @@
+uid,unit,unit_type,unit_kind,budget_unit,reading,id_class,bound,point_if_choice,own_cap,syn_protocol,syn_fixlist,R_CO,R_INF,R_DEV,deployment_rationale,codes_file
+B:meta-llama/Llama-2-7b-hf,Llama-2,family,common-budget,Llama-2,choice,point,point (family share),True,0,0,0,0,0,0,0,readings_final.csv
+B:meta-llama/Llama-2-13b-hf,Llama-2,family,common-budget,Llama-2,choice,point,point (family share),True,0,0,0,0,0,0,0,readings_final.csv
+B:meta-llama/Llama-2-70b-hf,Llama-2,family,common-budget,Llama-2,choice,point,point (family share),True,0,0,0,0,0,0,0,readings_final.csv
+B:huggyllama/llama-7b,Llama#1,family,common-budget,Llama#1,choice,point,point (family share),True,0,0,0,0,1,1,1,readings_final.csv
+B:huggyllama/llama-13b,Llama#1,family,common-budget,Llama#1,choice,point,point (family share),True,0,0,0,0,1,1,1,readings_final.csv
+B:huggyllama/llama-30b,Llama#2,family,common-budget,Llama#2,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,0,0,0,1,0,1,readings_final.csv
+B:huggyllama/llama-65b,Llama#2,family,common-budget,Llama#2,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,0,0,0,1,0,1,readings_final.csv
+B:meta-llama/Meta-Llama-3-70B,Llama-3 herd,family,common-budget,Llama-3 herd,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,0,0,1,1,0,1,readings_final.csv
+B:meta-llama/Meta-Llama-3-8B,Llama-3 herd,family,common-budget,Llama-3 herd,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,0,0,1,1,0,1,readings_final.csv
+B:meta-llama/Llama-3.1-405B,Llama-3 herd,family,common-budget,Llama-3 herd,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,0,0,1,1,0,1,readings_final.csv
+B:Qwen/Qwen-72B,Qwen#2,family,common-budget,Qwen#2,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,0,0,0,0,0,0,readings_final.csv
+B:Qwen/Qwen-14B,Qwen#2,family,common-budget,Qwen#2,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,0,0,0,0,0,0,readings_final.csv
+B:Qwen/Qwen-7B,B:Qwen/Qwen-7B,model,size-specific member,B:Qwen/Qwen-7B,,point,point (member),True,0,0,0,0,0,0,0,readings_final.csv
+B:Qwen/Qwen2-72B,Qwen2#1,family,common-budget,Qwen2#1,menu,point,point (family share),True,0,1,0,0,0,1,1,readings_final.csv
+B:Qwen/Qwen2-7B,Qwen2#1,family,common-budget,Qwen2#1,menu,point,point (family share),True,0,1,0,0,0,1,1,readings_final.csv
+B:Qwen/Qwen2-1.5B,Qwen2#1,family,common-budget,Qwen2#1,menu,point,point (family share),True,0,1,0,0,0,1,1,readings_final.csv
+B:Qwen/Qwen2-0.5B,B:Qwen/Qwen2-0.5B,model,size-specific member,B:Qwen/Qwen2-0.5B,,point,point (member),True,0,1,0,0,0,1,1,readings_final.csv
+B:01-ai/Yi-6B,Yi,family,common-budget,Yi,menu,point,point (family share),True,0,0,0,0,1,1,1,readings_final.csv
+B:01-ai/Yi-34B,Yi,family,common-budget,Yi,menu,point,point (family share),True,0,0,0,0,1,1,1,readings_final.csv
+B:google/gemma-7b,B:google/gemma-7b,model,size-specific member,B:google/gemma-7b,,point,point (member),True,0,0,0,0,1,1,1,readings_final.csv
+B:google/gemma-2b,B:google/gemma-2b,model,size-specific member,B:google/gemma-2b,,point,point (member),True,0,0,0,0,0,1,1,readings_final.csv
+B:google/gemma-2-27b,B:google/gemma-2-27b,model,singleton,B:google/gemma-2-27b,,point,point (member),True,0,0,0,0,1,1,1,readings_final.csv
+B:tiiuae/falcon-180B,B:tiiuae/falcon-180B,model,size-specific member,B:tiiuae/falcon-180B,,lower bound,lower bound,False,1,0,0,1,0,0,0,readings_final.csv
+B:tiiuae/falcon-40b,B:tiiuae/falcon-40b,model,size-specific member,B:tiiuae/falcon-40b,,lower bound,lower bound,False,1,0,0,1,0,0,0,readings_final.csv
+B:tiiuae/falcon-7b,B:tiiuae/falcon-7b,model,size-specific member,B:tiiuae/falcon-7b,,point,point (member),True,0,0,0,0,1,1,1,readings_final.csv
+B:microsoft/phi-2,B:microsoft/phi-2,model,singleton,B:microsoft/phi-2,,lower bound,lower bound,False,1,1,1,0,0,0,0,readings_final.csv
+B:microsoft/phi-1_5,B:microsoft/phi-1_5,model,singleton,B:microsoft/phi-1_5,,lower bound,lower bound,False,1,1,1,0,0,0,0,readings_final.csv
+B:mosaicml/mpt-30b,MPT,family,common-budget,MPT,menu,point,point (family share),True,0,0,0,0,1,1,1,readings_final.csv
+B:mosaicml/mpt-7b,MPT,family,common-budget,MPT,menu,point,point (family share),True,0,0,0,0,1,1,1,readings_final.csv
+B:deepseek-ai/deepseek-llm-67b-base,DeepSeek-LLM,family,common-budget,DeepSeek-LLM,cap+menu,lower bound,lower bound,False,0,0,0,0,0,0,0,readings_final.csv
+B:deepseek-ai/deepseek-llm-7b-base,DeepSeek-LLM,family,common-budget,DeepSeek-LLM,cap+menu,lower bound,lower bound,False,0,0,0,0,0,0,0,readings_final.csv
+B:stabilityai/stablelm-base-alpha-3b,StableLM-alpha,family,common-budget,StableLM-alpha,choice,point,point (family share),True,0,0,0,0,0,0,0,readings_final.csv
+B:stabilityai/stablelm-base-alpha-7b-v2,B:stabilityai/stablelm-base-alpha-7b-v2,model,singleton,B:stabilityai/stablelm-base-alpha-7b-v2,,point,point (member),True,0,0,0,0,0,0,0,readings_final.csv
+B:stabilityai/stablelm-2-1_6b,B:stabilityai/stablelm-2-1_6b,model,singleton,B:stabilityai/stablelm-2-1_6b,,point,point (member),True,0,0,0,0,1,1,1,readings_final.csv
+B:stabilityai/stablelm-base-alpha-7b,StableLM-alpha,family,common-budget,StableLM-alpha,choice,point,point (family share),True,0,0,0,0,0,0,0,readings_final.csv
+B:HuggingFaceTB/SmolLM-135M,SmolLM#1,family,common-budget,SmolLM#1,cap or choice,lower bound,lower bound,False,0,1,1,0,1,1,1,readings_final.csv
+B:HuggingFaceTB/SmolLM-360M,SmolLM#1,family,common-budget,SmolLM#1,cap or choice,lower bound,lower bound,False,0,1,1,0,1,1,1,readings_final.csv
+B:HuggingFaceTB/SmolLM-1.7B,B:HuggingFaceTB/SmolLM-1.7B,model,size-specific member,B:HuggingFaceTB/SmolLM-1.7B,,lower bound,lower bound,False,1,1,1,0,1,1,1,readings_final.csv
+B:cerebras/btlm-3b-8k-base,B:cerebras/btlm-3b-8k-base,model,singleton,B:cerebras/btlm-3b-8k-base,,point,point (member),True,0,0,0,0,1,1,1,readings_final.csv
+B:h2oai/h2o-danube-1.8b-base,B:h2oai/h2o-danube-1.8b-base,model,singleton,B:h2oai/h2o-danube-1.8b-base,,point,point (member),True,0,0,0,0,0,0,0,readings_final.csv
+B:h2oai/h2o-danube3-500m-base,B:h2oai/h2o-danube3-500m-base,model,size-specific member,B:h2oai/h2o-danube3-500m-base,,point,point (member),True,0,1,0,0,1,1,1,readings_final.csv
+B:h2oai/h2o-danube3-4b-base,B:h2oai/h2o-danube3-4b-base,model,size-specific member,B:h2oai/h2o-danube3-4b-base,,point,point (member),True,0,1,0,0,1,1,1,readings_final.csv
+B:allenai/OLMo-1B-hf,B:allenai/OLMo-1B-hf,model,size-specific member,B:allenai/OLMo-1B-hf,,lower bound,lower bound,False,1,0,0,0,0,0,0,readings_final.csv
+B:allenai/OLMo-7B-hf,B:allenai/OLMo-7B-hf,model,size-specific member,B:allenai/OLMo-7B-hf,,lower bound,lower bound,False,1,0,0,0,0,0,0,readings_final.csv
+B:allenai/OLMo-7B-0424-hf,B:allenai/OLMo-7B-0424-hf,model,singleton,B:allenai/OLMo-7B-0424-hf,,point,point (member),True,0,0,0,0,0,0,0,readings_final.csv
+B:TinyLlama/TinyLlama_v1.1,B:TinyLlama/TinyLlama_v1.1,model,singleton,B:TinyLlama/TinyLlama_v1.1,,lower bound,lower bound,False,1,0,0,0,1,1,1,readings_final.csv
+B:Qwen/Qwen2.5-0.5B,Qwen2.5,family,common-budget,Qwen2.5,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,1,1,1,readings_final.csv
+B:Qwen/Qwen2.5-1.5B,Qwen2.5,family,common-budget,Qwen2.5,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,1,1,1,readings_final.csv
+B:Qwen/Qwen2.5-3B,Qwen2.5,family,common-budget,Qwen2.5,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,1,1,1,readings_final.csv
+B:Qwen/Qwen2.5-7B,Qwen2.5,family,common-budget,Qwen2.5,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,1,1,1,readings_final.csv
+B:Qwen/Qwen2.5-14B,Qwen2.5,family,common-budget,Qwen2.5,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,1,1,1,readings_final.csv
+B:Qwen/Qwen2.5-32B,Qwen2.5,family,common-budget,Qwen2.5,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,1,1,1,readings_final.csv
+B:Qwen/Qwen2.5-72B,Qwen2.5,family,common-budget,Qwen2.5,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,1,1,1,readings_final.csv
+B:Qwen/Qwen3-0.6B-Base,Qwen3,family,common-budget,Qwen3,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,0,1,1,readings_final.csv
+B:Qwen/Qwen3-1.7B-Base,Qwen3,family,common-budget,Qwen3,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,0,1,1,readings_final.csv
+B:Qwen/Qwen3-4B-Base,Qwen3,family,common-budget,Qwen3,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,0,1,1,readings_final.csv
+B:Qwen/Qwen3-8B-Base,Qwen3,family,common-budget,Qwen3,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,0,1,1,readings_final.csv
+B:Qwen/Qwen3-14B-Base,Qwen3,family,common-budget,Qwen3,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,1,0,0,1,1,readings_final.csv
+B:allenai/OLMo-2-0425-1B,B:allenai/OLMo-2-0425-1B,model,common-budget,OLMo-2#1,choice,point,point (member),True,0,1,1,0,0,0,0,readings_final.csv
+B:allenai/OLMo-2-1124-7B,OLMo-2#1,family,common-budget,OLMo-2#1,choice,point,point (family share),True,0,1,1,0,0,0,0,readings_final.csv
+B:allenai/OLMo-2-1124-13B,B:allenai/OLMo-2-1124-13B,model,size-specific member,B:allenai/OLMo-2-1124-13B,,lower bound,lower bound,False,1,1,1,0,0,0,0,readings_final.csv
+B:allenai/OLMo-2-0325-32B,B:allenai/OLMo-2-0325-32B,model,size-specific member,B:allenai/OLMo-2-0325-32B,,lower bound,lower bound,False,1,1,1,0,0,0,0,readings_final.csv
+B:allenai/Olmo-3-1025-7B,Olmo-3,family,common-budget,Olmo-3,choice,point,point (family share),True,0,1,0,0,0,1,1,readings_final.csv
+B:allenai/Olmo-3-1125-32B,Olmo-3,family,common-budget,Olmo-3,choice,point,point (family share),True,0,1,0,0,0,1,1,readings_final.csv
+B:HuggingFaceTB/SmolLM2-135M,B:HuggingFaceTB/SmolLM2-135M,model,size-specific member,B:HuggingFaceTB/SmolLM2-135M,,point,point (member),True,0,1,1,0,1,1,1,readings_final.csv
+B:HuggingFaceTB/SmolLM2-360M,B:HuggingFaceTB/SmolLM2-360M,model,size-specific member,B:HuggingFaceTB/SmolLM2-360M,,point,point (member),True,0,1,1,0,1,1,1,readings_final.csv
+B:HuggingFaceTB/SmolLM2-1.7B,B:HuggingFaceTB/SmolLM2-1.7B,model,size-specific member,B:HuggingFaceTB/SmolLM2-1.7B,,lower bound,lower bound,False,1,1,1,0,1,1,1,readings_final.csv
+B:HuggingFaceTB/SmolLM3-3B-Base,B:HuggingFaceTB/SmolLM3-3B-Base,model,singleton,B:HuggingFaceTB/SmolLM3-3B-Base,,point,point (member),True,0,1,1,0,1,0,1,readings_final.csv
+B:tiiuae/Falcon3-7B-Base,B:tiiuae/Falcon3-7B-Base,model,singleton,B:tiiuae/Falcon3-7B-Base,,point,point (member),True,0,0,0,0,0,0,0,readings_final.csv
+B:tiiuae/falcon-11B,B:tiiuae/falcon-11B,model,singleton,B:tiiuae/falcon-11B,,point,point (member),True,0,0,0,0,1,1,1,readings_final.csv
+B:ibm-granite/granite-3.0-2b-base,Granite-3.0,family,common-budget,Granite-3.0,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,0,0,1,1,1,readings_final.csv
+B:ibm-granite/granite-3.0-8b-base,Granite-3.0,family,common-budget,Granite-3.0,cap or choice,lower bound (point if choice),lower bound (point if choice),True,0,1,0,0,1,1,1,readings_final.csv
+B:swiss-ai/Apertus-8B-2509,Apertus,family,common-budget,Apertus,choice,point,point (family share),True,0,1,0,0,0,0,0,readings_final.csv
+B:swiss-ai/Apertus-70B-2509,Apertus,family,common-budget,Apertus,choice,point,point (family share),True,0,1,0,0,0,0,0,readings_final.csv
+B:marin-community/marin-8b-base,B:marin-community/marin-8b-base,model,singleton,B:marin-community/marin-8b-base,,point,point (member),True,0,1,0,0,0,0,0,readings_final.csv
+B:m-a-p/neo_7b,B:m-a-p/neo_7b,model,singleton,B:m-a-p/neo_7b,,point,point (member),True,0,0,0,0,0,0,0,readings_final.csv
+B:stabilityai/stablelm-3b-4e1t,B:stabilityai/stablelm-3b-4e1t,model,singleton,B:stabilityai/stablelm-3b-4e1t,,lower bound,lower bound,False,1,0,0,0,0,0,0,readings_final.csv

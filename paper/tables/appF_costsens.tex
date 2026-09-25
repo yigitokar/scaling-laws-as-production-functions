@@ -1,7 +1,9 @@
 % Online Appendix table relabelled from output/tables/ra2_wedge_costsens.tex (writer appendix_D_F, 2026-09-24).
+% [round 3, WP4b, fix list W24(h)] price ratio p -> \varrho (notation decision, fix list section 0.8). The token audit
+% leaves every entry unchanged: each column is monotone in w and the median model (w = 3.99) is the same.
 \begin{table}[tp]
 \centering
-\caption{Sensitivity of the Revealed Serving Share to the Cost Side}
+\caption{Sensitivity of the Revealed Share to the Cost Side}
 \label{tab:app-costsens}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -11,7 +13,7 @@
 \toprule
  & & & \multicolumn{2}{c}{Share $s$} & \multicolumn{2}{c}{Median $T/D$} & \multicolumn{2}{c}{Llama 3 8B $T/D$} \\
 \cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(l){8-9}
-Case & $\delta$ & $\phi$ & median & Llama 3 8B & $p=1$ & $p=10$ & $p=1$ & $p=10$ \\
+Case & $\delta$ & $\phi$ & median & Llama 3 8B & $\varrho=1$ & $\varrho=10$ & $\varrho=1$ & $\varrho=10$ \\
 \midrule
 A & $-$0.1 & 0.90 & 0.77 & 0.87 & 10.3 & 1.0 & 19.4 & 1.9 \\
 A & 0.0 & 1.00 & 0.75 & 0.85 & 9.0 & 0.9 & 17.2 & 1.7 \\
@@ -24,6 +26,6 @@ B & 0.0 & 1.25 & 0.70 & 0.82 & 7.2 & 0.7 & 13.7 & 1.4 \\
 \end{tabular}%
 }
 \ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
-\begin{tablenotes}Lifetime cost $6N^{1+\delta}D+2pN^{\phi}T$ in training-FLOP units at the model's own size: $\delta$ is the elasticity of the training cost of a FLOP with respect to $N$ (model FLOPs utilization falling or rising with size), $\phi$ the elasticity of serving cost per token with respect to $N$, and $p$ the price of a serving FLOP relative to a training FLOP. The first-order condition is $w=1+\delta+\phi X_S/X_T$, with $X_S$ and $X_T$ serving and training expenditure, so $X_S/X_T=(w-1-\delta)/\phi$, $s=(w-1-\delta)/(w-1-\delta+\phi)$ and $T/D=3(w-1-\delta)/(p\phi)$. Case A: $\phi=1+\delta$, so that $w=(1+\delta)(1+pT/3D)$. Case B: $\delta=0$. The share $s$ does not depend on $p$. Clean inference-demand sample, reference technology.\end{tablenotes}
-\begin{tablenotes}[Source]Authors' calculations.\end{tablenotes}
+\begin{tablenotes}Lifetime cost $6N^{1+\delta}D+2\varrho N^{\phi}T$ in training-FLOP units at the model's own size: $\delta$ is the elasticity of the training cost of a FLOP with respect to $N$ (model FLOPs utilization falling or rising with size), $\phi$ the elasticity of serving cost per token with respect to $N$, and $\varrho$ the price of a serving FLOP relative to a training FLOP. The first-order condition is $w=1+\delta+\phi X_S/X_T$, with $X_S$ and $X_T$ serving and training expenditure, so $X_S/X_T=(w-1-\delta)/\phi$, $s=(w-1-\delta)/(w-1-\delta+\phi)$ and $T/D=3(w-1-\delta)/(\varrho\phi)$. Case A: $\phi=1+\delta$, so that $w=(1+\delta)(1+\varrho T/3D)$. Case B: $\delta=0$. The share $s$ does not depend on $\varrho$. Clean sample, reference technology; $T/D$ is the serving reading of the wedge (Proposition~\ref{prop:A-wedge}(iii)(a)), which requires that the developer bears the serving cost.\end{tablenotes}
+\begin{tablenotes}[Source]Author's calculations.\end{tablenotes}
 \end{table}

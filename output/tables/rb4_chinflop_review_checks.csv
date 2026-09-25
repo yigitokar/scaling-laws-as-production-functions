@@ -1,0 +1,95 @@
+check,statistic,value,target,ok,note
+R1 ra1 budgets,max |diff| sigma,0,0,True,
+R1 ra1 budgets,max |diff| se_sigma,8.32667e-17,0,True,
+R1 ra1 budgets,max |diff| lo_sigma,0,0,True,
+R1 ra1 budgets,max |diff| hi_sigma,1.11022e-16,0,True,
+R1 ra1 budgets,max |diff| Mstar,0,0,True,
+R1 ra1 budgets,max |diff| curv,5.55112e-17,0,True,
+R1 ra1 budgets,max |diff| slope,8.32667e-17,0,True,
+R1 ra1 summary,sigma_re,0.673458,0.673458,True,
+R1 ra1 summary,se_sigma_re,0.027258,0.027258,True,
+R1 ra1 summary,sigma_fe,0.684317,0.684317,True,
+R1 ra1 summary,se_sigma_fe,0.0180558,0.0180558,True,
+R1 ra1 summary,drift_sigma_per_decade,-0.072403,-0.072403,True,
+R1 ra1 summary,se_drift_sigma,0.0256715,0.0256715,True,
+R1 ra1 summary,Q,15.6152,15.6152,True,
+R1 ra1 parametric,sigma_chin,0.691913,0.691913,True,
+R1 ra1 parametric,se_sigma_chin,0.0133937,0.0133937,True,
+R1 ra1 parametric,sigma_kappa,0.666932,0.666932,True,
+R1 ra1 parametric,se_sigma_kappa,0.0225945,0.0225945,True,
+R1 ra1 parametric,kappa,0.810935,0.810935,True,
+R1 m2 reference technology,kappa = 1 sigma* (240 runs),0.736789,0.736789,True,
+R1 m2 reference technology,kappa-free sigma* (240 runs),0.700553,0.700553,True,
+R1 m2 reference technology,"M*(1e23), kappa = 1",18.8149,18.8149,True,
+R2 rb1 study level,rows matched (16 of 16),16,16,True,
+R2 rb1 study level,max relative |diff| mean_re,6.336e-07,0,True,rb1 CSV written with %.6g
+R2 rb1 study level,max relative |diff| lo_hksj,7.77806e-07,0,True,rb1 CSV written with %.6g
+R2 rb1 study level,max relative |diff| hi_hksj,7.20946e-07,0,True,rb1 CSV written with %.6g
+R2 rb1 study level,max relative |diff| tau,2.69198e-06,0,True,rb1 CSV written with %.6g
+R2 rb1 study level,max relative |diff| Q,3.28603e-06,0,True,rb1 CSV written with %.6g
+R2 rb1 meta-regression,rows matched (42 of 42),42,42,True,
+R2 rb1 meta-regression,max relative |diff| slope,2.99273e-06,0,True,rb1 CSV written with %.6g
+R2 rb1 meta-regression,max relative |diff| se_cr2_design,4.0062e-06,0,True,rb1 CSV written with %.6g
+R2 rb1 meta-regression,max relative |diff| p_cr2_design,3.95153e-06,0,True,rb1 CSV written with %.6g
+R2 rb1 meta-regression,max relative |diff| p_wcr_design,0,0,True,rb1 CSV written with %.6g
+R2 rb1 downstream (pid),max relative |diff| vs rb1_sigmaC_pi_sigmaC.csv,4.30305e-06,0,True,rb1 CSV written with %.6g
+R2 rb1 downstream (pid),max relative |diff| vs rb1_sigmaC_wedge_scenarios.csv,3.36011e-06,0,True,rb1 CSV written with %.6g
+R2b rb1 primary study level = run 'new',rows matched (25 of 27 'new' rows),25,25,True,rb1 drops the eta rows for Chinchilla and Meta (Chinchilla observed)
+R2b rb1 primary study level = run 'new',max relative |diff| mean_re,7.00737e-07,0,True,
+R2b rb1 primary study level = run 'new',max relative |diff| lo_hksj,7.94762e-07,0,True,
+R2b rb1 primary study level = run 'new',max relative |diff| hi_hksj,6.65849e-07,0,True,
+R2b rb1 primary study level = run 'new',max relative |diff| se_hksj,3.81118e-06,0,True,
+R2b rb1 primary study level = run 'new',max relative |diff| tau,3.93866e-06,0,True,
+R2b rb1 primary study level = run 'new',max relative |diff| Q,3.30597e-06,0,True,
+R2b rb1 primary study level = run 'new',max relative |diff| p_Q,4.33052e-06,0,True,
+R2b rb1 primary meta-regression = run 'new',rows matched (42 of 42),42,42,True,
+R2b rb1 primary meta-regression = run 'new',max relative |diff| slope,4.43221e-06,0,True,
+R2b rb1 primary meta-regression = run 'new',max relative |diff| se_cr2_design,4.0062e-06,0,True,
+R2b rb1 primary meta-regression = run 'new',max relative |diff| p_cr2_design,2.39841e-06,0,True,
+R2b rb1 primary meta-regression = run 'new',max relative |diff| p_wcr_design,0,0,True,
+R3 override integrity,non-Chinchilla budget rows unchanged,1,1,True,
+R3 override integrity,non-Chinchilla summary rows unchanged,1,1,True,
+R3 override integrity,Chinchilla budgets in override,9,9,True,
+R4 Table A4,T4: ratios exact to 2 dp (of 6),6,6,True,max |err| 0.005
+R4 Table A4,A: ratios exact to 2 dp (of 6),0,,,max |err| 0.552
+R4 Table A4,X: ratios exact to 2 dp (of 6),0,,,max |err| 0.274
+R4 Table A9,max |T_arch/N_reported - 1|,0.00802327,,True,
+R4 totals,Gopher: C under T4 (Hoffmann quote 6.3e23; Rae et al. 5.76e23),4.73577e+23,,,neither 6.3e23 nor 5.76e23 is reproduced by any Appendix F count (A: 4.75e+23)
+R5 eta approximation,max |S_T4/S_T - (1+eta)^-2| over budgets,0.0345195,,,"ratios 0.995, 1.032, 1.110, 1.041, 1.049, 1.079, 1.059, 1.032, 1.046; predicted 1.005, 1.042, 1.075, 1.059, 1.055, 1.062, 1.042, 1.038, 1.050"
+R6 correction,"NF_A|corr: plain mean sigma*_b, kappa surface vs first-order slope",0.00684961,,,kappa 0.6534; slope 0.6466
+R6 correction,"NF_X|corr: plain mean sigma*_b, kappa surface vs first-order slope",0.00282261,,,kappa 0.6614; slope 0.6586
+R6 correction,"T|corr: plain mean sigma*_b, kappa surface vs first-order slope",-0.00620512,,,kappa 0.6622; slope 0.6684
+R6 correction,"P|corr: plain mean sigma*_b, kappa surface vs first-order slope",0.00993926,,,kappa 0.6706; slope 0.6607
+R6 correction,"NF_T4|6ND: plain mean sigma*_b, kappa surface vs first-order slope",-0.00972513,,,kappa 0.6725; slope 0.6822
+R6 correction,"NF_A|6ND: plain mean sigma*_b, kappa surface vs first-order slope",0.0140171,,,kappa 0.6739; slope 0.6598
+"R7 coordinates, 132 runs",T4: within-budget slope (CR1 s.e.),-0.00144116,,,"se 0.0076, p 0.8541, offset -0.0064"
+"R7 coordinates, 132 runs",A: within-budget slope (CR1 s.e.),-0.0654341,,,"se 0.0148, p 0.0022, offset +0.0457"
+"R7 coordinates, 132 runs",X: within-budget slope (CR1 s.e.),-0.0361293,,,"se 0.0107, p 0.0096, offset +0.0208"
+"R7 coordinates, 132 runs",6T: within-budget slope (CR1 s.e.),0.0206306,,,"se 0.0053, p 0.0046, offset -0.0233"
+R7 coordinates by budget,T4: budgets with positive within-budget slope (of 9),3,,,
+R7 coordinates by budget,6T: budgets with positive within-budget slope (of 9),8,,,
+R8 P without W_R,plain mean sigma*_b,0.691146,,,"budgets 0.707, 0.732, 0.804, 0.692, 0.777, 0.721, 0.574, 0.627, 0.587; P (with W_R) plain mean 0.6909"
+R9 fixed windows,"T4: DL mean over budgets (sigma scale), current windows held fixed",0.668155,,,
+R9 fixed windows,"ra1: DL mean over budgets (sigma scale), current windows held fixed",0.678039,,,
+R9 fixed windows,"NF_T4: plain mean sigma*_b, own windows",0.659702,,,
+R9 fixed windows,"T_ra1: plain mean sigma*_b, own windows",0.674779,,,
+R9 fixed windows,"T4: plain mean sigma*_b, current windows",0.664861,,,
+R9 fixed windows,"ra1: plain mean sigma*_b, current windows",0.674779,,,
+R10 executed count with relative-position attention,mechanical: plain mean sigma*_b,0.649349,,,F/(6T) over profile models 1.09-1.60; count X plain mean 0.6541
+R10 executed count with relative-position attention,own isocosts (kappa surface): plain mean sigma*_b,0.663774,,,count X own isocosts plain mean 0.6614
+R1 ra1 grid,"T, 137 runs: max |diff| sigma_re vs ra1 (12 of 12 specs)",0,0,True,ra1_modelfree_isoflop_sens.csv
+R11 count-free N_F = C_b/(6 D_dig),"RE sigma* (137 runs, ra1's estimator and seed)",0.676048,,,RE 0.6760 (0.0207); FE 0.6816; drift -0.0528; Q 11.3 (boot p 0.124); N_F (T4) primary 0.6596
+R11 count-free N_F = C_b/(6 D_dig),"errors-in-x simulation: mean plain-mean sigma*_b, T4 x + N(0, s_u)",0.66685,,,"s_u 0.0375 ln (within-budget s.d. of the T4 coordinate residual); 200 draws, s.d. 0.0074; plain means: T4 0.6597, count-free 0.6700; share of draws >= count-free 0.315"
+R12 T4-consistent profile membership,"RE sigma*, N_F (147 runs)",0.668447,,,"RE 0.6684 (0.0270); FE 0.6985; drift -0.0707; Q 23.9 (boot p 0.002); offset -0.0037 dex; 14 runs enter, 4 leave; 137-run value 0.6596"
+R12 T4-consistent profile membership,"RE sigma*, T (147 runs)",0.677969,,,"RE 0.6780 (0.0278); FE 0.7086; drift -0.0666; Q 24.2 (boot p 0.002); offset -0.0037 dex; 14 runs enter, 4 leave; 137-run value 0.6735"
+R13 five highest-loss runs dropped,"RE sigma*, N_F (132 runs)",0.681247,,,RE 0.6812 (0.0198); FE 0.6836; drift -0.0440; Q 11.0 (boot p 0.182); 137-run value 0.6596
+R13 five highest-loss runs dropped,"RE sigma*, T (132 runs)",0.673639,,,RE 0.6736 (0.0252); FE 0.6819; drift -0.0575; Q 16.7 (boot p 0.028); 137-run value 0.6735
+R14 rb1 symwin,T: max |diff| drift vs rb1 (32 rows),4.96152e-08,0,True,rb1_sigmaC_driftmc_symwin.csv (%.6g)
+"R14 rb1 symwin, Chinchilla + Llama 3 (design FE, OLS)","T: drift, primary windows",-0.0509049,,,symmetric -0.0540 (0.0247); power -0.0500 (0.0162); symmetric+power -0.0531 (0.0245)
+"R14 rb1 symwin, Chinchilla + Llama 3 (design FE, OLS)","N_F (T4): drift, primary windows",-0.0499614,,,symmetric -0.0644 (0.0234); power -0.0492 (0.0145); symmetric+power -0.0636 (0.0231)
+Grid (ra1's 12 specifications; k >= 8 budgets),"T, 137 runs: min RE sigma*",0.664909,,,max 0.7135; 11 specifications; without h = 0.6: 0.6649-0.7135
+Grid (ra1's 12 specifications; k >= 8 budgets),"N_F (T4), 137 runs: min RE sigma*",0.656458,,,max 0.7022; 11 specifications; without h = 0.6: 0.6565-0.7022
+Grid (ra1's 12 specifications; k >= 8 budgets),"N_F minus T, 137 runs: median",-0.0119051,,,range -0.0180 to -0.0085; negative in 11 of 11 (specifications with >= 8 budgets in both)
+Grid (ra1's 12 specifications; k >= 8 budgets),"T, 132 runs: min RE sigma*",0.670618,,,max 0.7140; 11 specifications; without h = 0.6: 0.6706-0.7140
+Grid (ra1's 12 specifications; k >= 8 budgets),"N_F (T4), 132 runs: min RE sigma*",0.595806,,,max 0.6981; 12 specifications; without h = 0.6: 0.6566-0.6981
+Grid (ra1's 12 specifications; k >= 8 budgets),"N_F minus T, 132 runs: median",-0.00913402,,,range -0.0238 to +0.0037; negative in 8 of 11 (specifications with >= 8 budgets in both)

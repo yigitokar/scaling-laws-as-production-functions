@@ -1,0 +1,9 @@
+[14:15:47] 1. coding frame (from rb2's clean sample) and coder A's verified codes
+[14:15:47] 2. rb2_decisions outputs; data/processed/rb5_units/units_primary.csv
+[14:15:49] 3. W1-W2: unit counts, classes, headline and point-identified medians
+[14:15:49] 4. W14: randomization inference for the serving coefficient (B = 9999)
+[14:17:41] 5. W19: developer-cluster bootstrap (B = 9999), within-developer, MoE, synthetic, rationale
+[14:22:58] 6. W18: post-training scenarios
+[14:22:58] 7. W24: token audit, Table E3/E4 on audited counts, repetition robustness
+[14:22:58] 8. exhibits: trend table, rationale table
+[14:22:58] done in 431s; 190 paper numbers

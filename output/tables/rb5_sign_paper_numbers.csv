@@ -1,0 +1,218 @@
+key,slot,description,value,value_raw,source
+S1_Mstar_10^24,"W11(a), W12, W23(m)","identified set for M*(10^24) (three studies, models' convention)","[5.7, 248]",5.6812; 248.215,output/tables/rb5_sign_mstar_sets.csv
+S1_Mstar_10^25,"W11(a), W12, W23(m)","identified set for M*(10^25) (three studies, models' convention)","[4.5, 468]",4.53282; 468.367,output/tables/rb5_sign_mstar_sets.csv
+S1_share_models,"W11(b), H6, H11(g), W22(c), H1, W3",S1: share of models with w > 1 identified (tau = 1),78,0.7792207792207793,output/tables/rb5_sign_shares.csv
+S1_share_cw_models,"W11(b), H6, H11(g), W22(c)",S1: compute-weighted share of models identified (tau = 1),24,0.23726581020279672,output/tables/rb5_sign_shares.csv
+S1_share_decisions (49),"W11(b), H6, H11(g), W22(c), H1, W3",S1: share of decisions (49) with w > 1 identified (tau = 1),69,0.6938775510204082,output/tables/rb5_sign_shares.csv
+S1_share_cw_decisions (49),"W11(b), H6, H11(g), W22(c)",S1: compute-weighted share of decisions (49) identified (tau = 1),14,0.1386968460757243,output/tables/rb5_sign_shares.csv
+S1_share_decisions (56),"W11(b), H6, H11(g), W22(c), H1, W3",S1: share of decisions (56) with w > 1 identified (tau = 1),71,0.7142857142857143,output/tables/rb5_sign_shares.csv
+S1_share_cw_decisions (56),"W11(b), H6, H11(g), W22(c)",S1: compute-weighted share of decisions (56) identified (tau = 1),15,0.1458490404048809,output/tables/rb5_sign_shares.csv
+S1_share_models below 15B,"W11(b), H6, H11(g), W22(c), H1, W3",S1: share of models below 15B with w > 1 identified (tau = 1),98,0.9830508474576272,output/tables/rb5_sign_shares.csv
+S1_share_cw_models below 15B,"W11(b), H6, H11(g), W22(c)",S1: compute-weighted share of models below 15B identified (tau = 1),>99,0.995400355729795,output/tables/rb5_sign_shares.csv
+S1_most_models,H1,S1 share of models above one half ('most models'),True,True,output/tables/rb5_sign_shares.csv
+S1_most_decisions,W3,S1 share of decisions (49) above one half ('most allocation decisions'),True,True,output/tables/rb5_sign_shares.csv
+S1_most_compute,"H1, W3",S1 compute-weighted share of models above one half,False,False,output/tables/rb5_sign_shares.csv
+S1_share_models_tau1.3,"W11(c), H6",S1: share of models identified at tau = 1.3,74,0.7402597402597403,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_tau1.3,W11(c),S1: compute-weighted share of models at tau = 1.3,23,0.2325444538231017,output/tables/rb5_sign_shares.csv
+S1_share_decisions_tau1.3,"W22(c), W23(m)",S1: share of decisions (49) at tau = 1.3,67,0.673469387755102,output/tables/rb5_sign_shares.csv
+S1_share_cw_decisions_tau1.3,W22(c),S1: compute-weighted share of decisions (49) at tau = 1.3,14,0.1381159723047163,output/tables/rb5_sign_shares.csv
+S1_share_models_tau1.84,"W11(c), H6",S1: share of models identified at tau = 1.84,66,0.6623376623376623,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_tau1.84,W11(c),S1: compute-weighted share of models at tau = 1.84,17,0.17097332093407522,output/tables/rb5_sign_shares.csv
+S1_share_decisions_tau1.84,"W22(c), W23(m)",S1: share of decisions (49) at tau = 1.84,61,0.6122448979591837,output/tables/rb5_sign_shares.csv
+S1_share_cw_decisions_tau1.84,W22(c),S1: compute-weighted share of decisions (49) at tau = 1.84,11,0.11462204597154485,output/tables/rb5_sign_shares.csv
+S1_share_models_tau3.4,"W11(c), H6",S1: share of models identified at tau = 3.4,53,0.5324675324675324,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_tau3.4,W11(c),S1: compute-weighted share of models at tau = 3.4,16,0.15746732980646963,output/tables/rb5_sign_shares.csv
+S1_share_decisions_tau3.4,"W22(c), W23(m)",S1: share of decisions (49) at tau = 3.4,47,0.46938775510204084,output/tables/rb5_sign_shares.csv
+S1_share_cw_decisions_tau3.4,W22(c),S1: compute-weighted share of decisions (49) at tau = 3.4,10,0.10303337000107163,output/tables/rb5_sign_shares.csv
+S1_share_models_tau4.4,"W11(c), H6",S1: share of models identified at tau = 4.4,47,0.4675324675324675,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_tau4.4,W11(c),S1: compute-weighted share of models at tau = 4.4,13,0.13227484196290618,output/tables/rb5_sign_shares.csv
+S1_share_decisions_tau4.4,"W22(c), W23(m)",S1: share of decisions (49) at tau = 4.4,41,0.40816326530612246,output/tables/rb5_sign_shares.csv
+S1_share_cw_decisions_tau4.4,W22(c),S1: compute-weighted share of decisions (49) at tau = 4.4,10,0.09538322723299875,output/tables/rb5_sign_shares.csv
+S1_share_models_tau10,"W11(c), H6",S1: share of models identified at tau = 10,32,0.3246753246753247,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_tau10,W11(c),S1: compute-weighted share of models at tau = 10,6,0.057691550983924526,output/tables/rb5_sign_shares.csv
+S1_share_decisions_tau10,"W22(c), W23(m)",S1: share of decisions (49) at tau = 10,27,0.2653061224489796,output/tables/rb5_sign_shares.csv
+S1_share_cw_decisions_tau10,W22(c),S1: compute-weighted share of decisions (49) at tau = 10,1,0.00724041160069786,output/tables/rb5_sign_shares.csv
+S1_share_small_tau10,W11(c),S1: share of models below 15B identified at tau = 10,42,0.423728813559322,output/tables/rb5_sign_shares.csv
+S1_share_models_2023,"W19(b), W23(m)",S1: share of 2023 models identified (tau = 1),63,0.625,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_2023,"W19(b), W23(m)",S1: compute-weighted share of 2023 models identified (tau = 1),12,0.11920581733460503,output/tables/rb5_sign_shares.csv
+S1_share_models_2024,"W19(b), W23(m)",S1: share of 2024 models identified (tau = 1),88,0.875,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_2024,"W19(b), W23(m)",S1: compute-weighted share of 2024 models identified (tau = 1),19,0.19210574132196373,output/tables/rb5_sign_shares.csv
+S1_share_models_2025,"W19(b), W23(m)",S1: share of 2025 models identified (tau = 1),77,0.7692307692307693,output/tables/rb5_sign_shares.csv
+S1_share_cw_models_2025,"W19(b), W23(m)",S1: compute-weighted share of 2025 models identified (tau = 1),49,0.48646881457147517,output/tables/rb5_sign_shares.csv
+S1_lower_end_range,W11(b),"lower end of the set at the models' compute (min; max over models, models' convention)",4.0 to 11.4,3.975; 11.44,data/processed/rb5_sign/model_bounds_S1.csv
+S1_min_M,W11(b),smallest M in the clean sample,19.5,19.49615636151623,clean_models.csv
+S1_n_unidentified,W11(b),number of models whose sign is not identified (tau = 1),17,17,output/tables/rb5_sign_unidentified.csv
+S1_max_M_unidentified,"W11(b), W23(m)",largest M among them (text: 'all have M below X'),247.6,247.57172148810363,output/tables/rb5_sign_unidentified.csv
+S1_named_unidentified,W11(b),"Llama 2 70B, Llama 3.1 405B, Qwen2 72B, Falcon 180B, DeepSeek LLM 67B all unidentified",True,True,data/processed/rb5_sign/model_bounds_S1.csv
+S1_n_models_unidentified_below_15B,W11(c),unidentified models below 15B (tau = 1),1,1,output/tables/rb5_sign_unidentified.csv
+S2(a)_models_tau1,"W11(b)-(c), H6, W23(m)",S2(a): share of models identified at tau = 1,87,0.8701298701298701,output/tables/rb5_sign_shares.csv
+S2(a)_models_cw_tau1,W23(m),S2(a): compute-weighted share of models at tau = 1,48,0.48465869666740674,output/tables/rb5_sign_shares.csv
+S2(a)_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(a): share of decisions identified at tau = 1,82,0.8163265306122449,output/tables/rb5_sign_shares.csv
+S2(a)_decisions_cw_tau1,W23(m),S2(a): compute-weighted share of decisions at tau = 1,40,0.3997397997565773,output/tables/rb5_sign_shares.csv
+S2(a)_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(a): share of models identified at tau = 3.4,69,0.6883116883116883,output/tables/rb5_sign_shares.csv
+S2(a)_models_cw_tau3.4,W23(m),S2(a): compute-weighted share of models at tau = 3.4,23,0.23118604486418648,output/tables/rb5_sign_shares.csv
+S2(a)_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(a): share of decisions identified at tau = 3.4,63,0.6326530612244898,output/tables/rb5_sign_shares.csv
+S2(a)_decisions_cw_tau3.4,W23(m),S2(a): compute-weighted share of decisions at tau = 3.4,14,0.13762439151920586,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_models_tau1,"W11(b)-(c), H6, W23(m)",S2(a)+Comma: share of models identified at tau = 1,8,0.07792207792207792,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_models_cw_tau1,W23(m),S2(a)+Comma: compute-weighted share of models at tau = 1,<1,0.0024024003451793546,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(a)+Comma: share of decisions identified at tau = 1,6,0.061224489795918366,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_decisions_cw_tau1,W23(m),S2(a)+Comma: compute-weighted share of decisions at tau = 1,<1,0.00048234434155915054,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(a)+Comma: share of models identified at tau = 3.4,0,0.0,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_models_cw_tau3.4,W23(m),S2(a)+Comma: compute-weighted share of models at tau = 3.4,0,0.0,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(a)+Comma: share of decisions identified at tau = 3.4,0,0.0,output/tables/rb5_sign_shares.csv
+S2(a)+Comma_decisions_cw_tau3.4,W23(m),S2(a)+Comma: compute-weighted share of decisions at tau = 3.4,0,0.0,output/tables/rb5_sign_shares.csv
+S2(b)_models_tau1,"W11(b)-(c), H6, W23(m)",S2(b): share of models identified at tau = 1,68,0.6753246753246753,output/tables/rb5_sign_shares.csv
+S2(b)_models_cw_tau1,W23(m),S2(b): compute-weighted share of models at tau = 1,17,0.1716563759521036,output/tables/rb5_sign_shares.csv
+S2(b)_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(b): share of decisions identified at tau = 1,63,0.6326530612244898,output/tables/rb5_sign_shares.csv
+S2(b)_decisions_cw_tau1,W23(m),S2(b): compute-weighted share of decisions at tau = 1,12,0.11530510098957326,output/tables/rb5_sign_shares.csv
+S2(b)_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(b): share of models identified at tau = 3.4,43,0.42857142857142855,output/tables/rb5_sign_shares.csv
+S2(b)_models_cw_tau3.4,W23(m),S2(b): compute-weighted share of models at tau = 3.4,13,0.12588911079679957,output/tables/rb5_sign_shares.csv
+S2(b)_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(b): share of decisions identified at tau = 3.4,39,0.3877551020408163,output/tables/rb5_sign_shares.csv
+S2(b)_decisions_cw_tau3.4,W23(m),S2(b): compute-weighted share of decisions at tau = 3.4,10,0.09513768865246938,output/tables/rb5_sign_shares.csv
+S2(b')_models_tau1,"W11(b)-(c), H6, W23(m)",S2(b'): share of models identified at tau = 1,44,0.44155844155844154,output/tables/rb5_sign_shares.csv
+S2(b')_models_cw_tau1,W23(m),S2(b'): compute-weighted share of models at tau = 1,9,0.09260293903961228,output/tables/rb5_sign_shares.csv
+S2(b')_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(b'): share of decisions identified at tau = 1,41,0.40816326530612246,output/tables/rb5_sign_shares.csv
+S2(b')_decisions_cw_tau1,W23(m),S2(b'): compute-weighted share of decisions at tau = 1,3,0.028848070965907458,output/tables/rb5_sign_shares.csv
+S2(b')_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(b'): share of models identified at tau = 3.4,26,0.2597402597402597,output/tables/rb5_sign_shares.csv
+S2(b')_models_cw_tau3.4,W23(m),S2(b'): compute-weighted share of models at tau = 3.4,3,0.027757997103197766,output/tables/rb5_sign_shares.csv
+S2(b')_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(b'): share of decisions identified at tau = 3.4,20,0.20408163265306123,output/tables/rb5_sign_shares.csv
+S2(b')_decisions_cw_tau3.4,W23(m),S2(b'): compute-weighted share of decisions at tau = 3.4,<1,0.004560674893068762,output/tables/rb5_sign_shares.csv
+S2(c)_models_tau1,"W11(b)-(c), H6, W23(m)",S2(c): share of models identified at tau = 1,71,0.7142857142857143,output/tables/rb5_sign_shares.csv
+S2(c)_models_cw_tau1,W23(m),S2(c): compute-weighted share of models at tau = 1,17,0.1730013620003787,output/tables/rb5_sign_shares.csv
+S2(c)_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(c): share of decisions identified at tau = 1,65,0.6530612244897959,output/tables/rb5_sign_shares.csv
+S2(c)_decisions_cw_tau1,W23(m),S2(c): compute-weighted share of decisions at tau = 1,12,0.11578325886444348,output/tables/rb5_sign_shares.csv
+S2(c)_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(c): share of models identified at tau = 3.4,47,0.4675324675324675,output/tables/rb5_sign_shares.csv
+S2(c)_models_cw_tau3.4,W23(m),S2(c): compute-weighted share of models at tau = 3.4,13,0.13227484196290618,output/tables/rb5_sign_shares.csv
+S2(c)_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(c): share of decisions identified at tau = 3.4,41,0.40816326530612246,output/tables/rb5_sign_shares.csv
+S2(c)_decisions_cw_tau3.4,W23(m),S2(c): compute-weighted share of decisions at tau = 3.4,10,0.09538322723299875,output/tables/rb5_sign_shares.csv
+S2(d)_models_tau1,"W11(b)-(c), H6, W23(m)",S2(d): share of models identified at tau = 1,13,0.12987012987012986,output/tables/rb5_sign_shares.csv
+S2(d)_models_cw_tau1,W23(m),S2(d): compute-weighted share of models at tau = 1,<1,0.0029072722807903665,output/tables/rb5_sign_shares.csv
+S2(d)_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(d): share of decisions identified at tau = 1,14,0.14285714285714285,output/tables/rb5_sign_shares.csv
+S2(d)_decisions_cw_tau1,W23(m),S2(d): compute-weighted share of decisions at tau = 1,<1,0.000992308627753697,output/tables/rb5_sign_shares.csv
+S2(d)_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(d): share of models identified at tau = 3.4,10,0.1038961038961039,output/tables/rb5_sign_shares.csv
+S2(d)_models_cw_tau3.4,W23(m),S2(d): compute-weighted share of models at tau = 3.4,<1,0.0025457182975937615,output/tables/rb5_sign_shares.csv
+S2(d)_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(d): share of decisions identified at tau = 3.4,10,0.10204081632653061,output/tables/rb5_sign_shares.csv
+S2(d)_decisions_cw_tau3.4,W23(m),S2(d): compute-weighted share of decisions at tau = 3.4,<1,0.0006307546445570918,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_models_tau1,"W11(b)-(c), H6, W23(m)",S2(d) PI-1 anchors: share of models identified at tau = 1,14,0.14285714285714285,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_models_cw_tau1,W23(m),S2(d) PI-1 anchors: compute-weighted share of models at tau = 1,<1,0.003286721294373417,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(d) PI-1 anchors: share of decisions identified at tau = 1,14,0.14285714285714285,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_decisions_cw_tau1,W23(m),S2(d) PI-1 anchors: compute-weighted share of decisions at tau = 1,<1,0.000992308627753697,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(d) PI-1 anchors: share of models identified at tau = 3.4,10,0.1038961038961039,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_models_cw_tau3.4,W23(m),S2(d) PI-1 anchors: compute-weighted share of models at tau = 3.4,<1,0.0025457182975937615,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(d) PI-1 anchors: share of decisions identified at tau = 3.4,10,0.10204081632653061,output/tables/rb5_sign_shares.csv
+S2(d) PI-1 anchors_decisions_cw_tau3.4,W23(m),S2(d) PI-1 anchors: compute-weighted share of decisions at tau = 3.4,<1,0.0006307546445570918,output/tables/rb5_sign_shares.csv
+S2(e)_models_tau1,"W11(b)-(c), H6, W23(m)",S2(e): share of models identified at tau = 1,23,0.23376623376623376,output/tables/rb5_sign_shares.csv
+S2(e)_models_cw_tau1,W23(m),S2(e): compute-weighted share of models at tau = 1,3,0.027536777559981653,output/tables/rb5_sign_shares.csv
+S2(e)_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(e): share of decisions identified at tau = 1,16,0.16326530612244897,output/tables/rb5_sign_shares.csv
+S2(e)_decisions_cw_tau1,W23(m),S2(e): compute-weighted share of decisions at tau = 1,<1,0.004334362999269114,output/tables/rb5_sign_shares.csv
+S2(e)_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(e): share of models identified at tau = 3.4,10,0.1038961038961039,output/tables/rb5_sign_shares.csv
+S2(e)_models_cw_tau3.4,W23(m),S2(e): compute-weighted share of models at tau = 3.4,1,0.008188306331453423,output/tables/rb5_sign_shares.csv
+S2(e)_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(e): share of decisions identified at tau = 3.4,8,0.08163265306122448,output/tables/rb5_sign_shares.csv
+S2(e)_decisions_cw_tau3.4,W23(m),S2(e): compute-weighted share of decisions at tau = 3.4,<1,0.0006119647889965151,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_models_tau1,"W11(b)-(c), H6, W23(m)",S2(e) PI-4 as published: share of models identified at tau = 1,23,0.23376623376623376,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_models_cw_tau1,W23(m),S2(e) PI-4 as published: compute-weighted share of models at tau = 1,3,0.027536777559981653,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(e) PI-4 as published: share of decisions identified at tau = 1,16,0.16326530612244897,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_decisions_cw_tau1,W23(m),S2(e) PI-4 as published: compute-weighted share of decisions at tau = 1,<1,0.004334362999269114,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(e) PI-4 as published: share of models identified at tau = 3.4,10,0.1038961038961039,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_models_cw_tau3.4,W23(m),S2(e) PI-4 as published: compute-weighted share of models at tau = 3.4,1,0.008188306331453423,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(e) PI-4 as published: share of decisions identified at tau = 3.4,8,0.08163265306122448,output/tables/rb5_sign_shares.csv
+S2(e) PI-4 as published_decisions_cw_tau3.4,W23(m),S2(e) PI-4 as published: compute-weighted share of decisions at tau = 3.4,<1,0.0006119647889965151,output/tables/rb5_sign_shares.csv
+S2(f)-total_models_tau1,"W11(b)-(c), H6, W23(m)",S2(f)-total: share of models identified at tau = 1,71,0.7142857142857143,output/tables/rb5_sign_shares.csv
+S2(f)-total_models_cw_tau1,W23(m),S2(f)-total: compute-weighted share of models at tau = 1,17,0.1730013620003787,output/tables/rb5_sign_shares.csv
+S2(f)-total_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(f)-total: share of decisions identified at tau = 1,65,0.6530612244897959,output/tables/rb5_sign_shares.csv
+S2(f)-total_decisions_cw_tau1,W23(m),S2(f)-total: compute-weighted share of decisions at tau = 1,12,0.11578325886444348,output/tables/rb5_sign_shares.csv
+S2(f)-total_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(f)-total: share of models identified at tau = 3.4,45,0.45454545454545453,output/tables/rb5_sign_shares.csv
+S2(f)-total_models_cw_tau3.4,W23(m),S2(f)-total: compute-weighted share of models at tau = 3.4,13,0.1294982111632126,output/tables/rb5_sign_shares.csv
+S2(f)-total_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(f)-total: share of decisions identified at tau = 3.4,41,0.40816326530612246,output/tables/rb5_sign_shares.csv
+S2(f)-total_decisions_cw_tau3.4,W23(m),S2(f)-total: compute-weighted share of decisions at tau = 3.4,10,0.09538322723299875,output/tables/rb5_sign_shares.csv
+S2(f)-NF_models_tau1,"W11(b)-(c), H6, W23(m)",S2(f)-NF: share of models identified at tau = 1,75,0.7532467532467533,output/tables/rb5_sign_shares.csv
+S2(f)-NF_models_cw_tau1,W23(m),S2(f)-NF: compute-weighted share of models at tau = 1,24,0.23522611786388534,output/tables/rb5_sign_shares.csv
+S2(f)-NF_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(f)-NF: share of decisions identified at tau = 1,67,0.673469387755102,output/tables/rb5_sign_shares.csv
+S2(f)-NF_decisions_cw_tau1,W23(m),S2(f)-NF: compute-weighted share of decisions at tau = 1,14,0.1381159723047163,output/tables/rb5_sign_shares.csv
+S2(f)-NF_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(f)-NF: share of models identified at tau = 3.4,48,0.4805194805194805,output/tables/rb5_sign_shares.csv
+S2(f)-NF_models_cw_tau3.4,W23(m),S2(f)-NF: compute-weighted share of models at tau = 3.4,15,0.14904936935564614,output/tables/rb5_sign_shares.csv
+S2(f)-NF_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(f)-NF: share of decisions identified at tau = 3.4,41,0.40816326530612246,output/tables/rb5_sign_shares.csv
+S2(f)-NF_decisions_cw_tau3.4,W23(m),S2(f)-NF: compute-weighted share of decisions at tau = 3.4,10,0.09538322723299875,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_models_tau1,"W11(b)-(c), H6, W23(m)",S2(f)-Chinchilla N_F: share of models identified at tau = 1,78,0.7792207792207793,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_models_cw_tau1,W23(m),S2(f)-Chinchilla N_F: compute-weighted share of models at tau = 1,24,0.23726581020279672,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_decisions_tau1,"W11(b)-(c), H6, W23(m)",S2(f)-Chinchilla N_F: share of decisions identified at tau = 1,69,0.6938775510204082,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_decisions_cw_tau1,W23(m),S2(f)-Chinchilla N_F: compute-weighted share of decisions at tau = 1,14,0.1386968460757243,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_models_tau3.4,"W11(b)-(c), H6, W23(m)",S2(f)-Chinchilla N_F: share of models identified at tau = 3.4,53,0.5324675324675324,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_models_cw_tau3.4,W23(m),S2(f)-Chinchilla N_F: compute-weighted share of models at tau = 3.4,16,0.15746732980646963,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_decisions_tau3.4,"W11(b)-(c), H6, W23(m)",S2(f)-Chinchilla N_F: share of decisions identified at tau = 3.4,47,0.46938775510204084,output/tables/rb5_sign_shares.csv
+S2(f)-Chinchilla N_F_decisions_cw_tau3.4,W23(m),S2(f)-Chinchilla N_F: compute-weighted share of decisions at tau = 3.4,10,0.10303337000107163,output/tables/rb5_sign_shares.csv
+S1_breakdown_all models,"W11(c), H6, W23(m)",S1: tau at which the share (all models) falls below one half,3.7,3.6619437334517704,output/tables/rb5_sign_breakdown.csv
+S1_breakdown_models below 15B,"W11(c), H6, W23(m)",S1: tau at which the share (models below 15B) falls below one half,7.5,7.535602276111763,output/tables/rb5_sign_breakdown.csv
+S1_breakdown_training compute (models),"W11(c), H6, W23(m)",S1: tau at which the share (training compute (models)) falls below one half,1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S1_breakdown_decisions (49),"W11(c), H6, W23(m)",S1: tau at which the share (decisions (49)) falls below one half,2.7,2.725431076696434,output/tables/rb5_sign_breakdown.csv
+"S1_breakdown_training compute (decisions, 49)","W11(c), H6, W23(m)","S1: tau at which the share (training compute (decisions, 49)) falls below one half",1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S1_breakdown_decisions (56),"W11(c), H6, W23(m)",S1: tau at which the share (decisions (56)) falls below one half,2.9,2.8632713304406527,output/tables/rb5_sign_breakdown.csv
+"S1_breakdown_training compute (decisions, 56)","W11(c), H6, W23(m)","S1: tau at which the share (training compute (decisions, 56)) falls below one half",1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S2(c)_breakdown_all models,"W11(c), H6, W23(m)",S2(c): tau at which the share (all models) falls below one half,2.7,2.70407080219265,output/tables/rb5_sign_breakdown.csv
+S2(c)_breakdown_models below 15B,"W11(c), H6, W23(m)",S2(c): tau at which the share (models below 15B) falls below one half,5.8,5.782923517378035,output/tables/rb5_sign_breakdown.csv
+S2(c)_breakdown_training compute (models),"W11(c), H6, W23(m)",S2(c): tau at which the share (training compute (models)) falls below one half,1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S2(c)_breakdown_decisions (49),"W11(c), H6, W23(m)",S2(c): tau at which the share (decisions (49)) falls below one half,2.3,2.2504528988166643,output/tables/rb5_sign_breakdown.csv
+"S2(c)_breakdown_training compute (decisions, 49)","W11(c), H6, W23(m)","S2(c): tau at which the share (training compute (decisions, 49)) falls below one half",1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S2(c)_breakdown_decisions (56),"W11(c), H6, W23(m)",S2(c): tau at which the share (decisions (56)) falls below one half,2.6,2.5887959229494113,output/tables/rb5_sign_breakdown.csv
+"S2(c)_breakdown_training compute (decisions, 56)","W11(c), H6, W23(m)","S2(c): tau at which the share (training compute (decisions, 56)) falls below one half",1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S2(a)_breakdown_all models,"W11(c), H6, W23(m)",S2(a): tau at which the share (all models) falls below one half,8.3,8.31827087623377,output/tables/rb5_sign_breakdown.csv
+S2(a)_breakdown_models below 15B,"W11(c), H6, W23(m)",S2(a): tau at which the share (models below 15B) falls below one half,19.4,19.393784180276317,output/tables/rb5_sign_breakdown.csv
+S2(a)_breakdown_training compute (models),"W11(c), H6, W23(m)",S2(a): tau at which the share (training compute (models)) falls below one half,1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S2(a)_breakdown_decisions (49),"W11(c), H6, W23(m)",S2(a): tau at which the share (decisions (49)) falls below one half,5.9,5.939058588112043,output/tables/rb5_sign_breakdown.csv
+"S2(a)_breakdown_training compute (decisions, 49)","W11(c), H6, W23(m)","S2(a): tau at which the share (training compute (decisions, 49)) falls below one half",1.0,1.0,output/tables/rb5_sign_breakdown.csv
+S2(a)_breakdown_decisions (56),"W11(c), H6, W23(m)",S2(a): tau at which the share (decisions (56)) falls below one half,6.6,6.556469563693401,output/tables/rb5_sign_breakdown.csv
+"S2(a)_breakdown_training compute (decisions, 56)","W11(c), H6, W23(m)","S2(a): tau at which the share (training compute (decisions, 56)) falls below one half",1.0,1.0,output/tables/rb5_sign_breakdown.csv
+"S4_lower_k in [0.40, 0.52]_tau1","W12, H5","median lower bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1",0.41,0.40500223661634666,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, 0.52]_tau1",W12,"median upper bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1",0.90,0.8992290449310503,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, 0.52]_tau1.84","W12, H5","median lower bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1.84",0.24,0.24064918674211327,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, 0.52]_tau1.84",W12,"median upper bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1.84",0.93,0.9266111458908683,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, 0.52]_tau3.4","W12, H5","median lower bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 3.4",0.03,0.0292511158215739,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, 0.52]_tau3.4",W12,"median upper bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 3.4",0.95,0.9466706441743787,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, 0.684]_tau1","W12, H5","median lower bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1",0.41,0.40500223661634666,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, 0.684]_tau1",W12,"median upper bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1",0.95,0.9511608938089978,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, 0.684]_tau1.84","W12, H5","median lower bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1.84",0.24,0.24064918674211327,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, 0.684]_tau1.84",W12,"median upper bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1.84",0.97,0.9678189766565802,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, 0.684]_tau3.4","W12, H5","median lower bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 3.4",0.03,0.0292511158215739,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, 0.684]_tau3.4",W12,"median upper bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 3.4",0.98,0.978856787723783,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, k(sigma_lin(C_i))]_tau1","W12, H5","median lower bound on s, k in [0.40, k(sigma_lin(C_i))]: sigma* at the lower end of its identified set (Chinchilla-Llama 3 drift), tau = 1",0.41,0.40500223661634666,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, k(sigma_lin(C_i))]_tau1",W12,"median upper bound on s, k in [0.40, k(sigma_lin(C_i))]: sigma* at the lower end of its identified set (Chinchilla-Llama 3 drift), tau = 1",0.99,0.9938560806295217,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, k(sigma_lin(C_i))]_tau1.84","W12, H5","median lower bound on s, k in [0.40, k(sigma_lin(C_i))]: sigma* at the lower end of its identified set (Chinchilla-Llama 3 drift), tau = 1.84",0.24,0.24064918674211327,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, k(sigma_lin(C_i))]_tau1.84",W12,"median upper bound on s, k in [0.40, k(sigma_lin(C_i))]: sigma* at the lower end of its identified set (Chinchilla-Llama 3 drift), tau = 1.84",1.00,0.9969617350789506,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, k(sigma_lin(C_i))]_tau3.4","W12, H5","median lower bound on s, k in [0.40, k(sigma_lin(C_i))]: sigma* at the lower end of its identified set (Chinchilla-Llama 3 drift), tau = 3.4",0.03,0.0292511158215739,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, k(sigma_lin(C_i))]_tau3.4",W12,"median upper bound on s, k in [0.40, k(sigma_lin(C_i))]: sigma* at the lower end of its identified set (Chinchilla-Llama 3 drift), tau = 3.4",1.00,0.9985030927147251,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [k(0.70), k(sigma_lin(C_i))]_tau1","W12, H5","median lower bound on s, k in [k(0.70), k(sigma_lin(C_i))]: R1's drift-agnostic set [sigma_lin(C), 0.70], tau = 1",0.43,0.4266639030762634,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [k(0.70), k(sigma_lin(C_i))]_tau1",W12,"median upper bound on s, k in [k(0.70), k(sigma_lin(C_i))]: R1's drift-agnostic set [sigma_lin(C), 0.70], tau = 1",0.99,0.9938560806295217,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [k(0.70), k(sigma_lin(C_i))]_tau1.84","W12, H5","median lower bound on s, k in [k(0.70), k(sigma_lin(C_i))]: R1's drift-agnostic set [sigma_lin(C), 0.70], tau = 1.84",0.26,0.25543496408486305,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [k(0.70), k(sigma_lin(C_i))]_tau1.84",W12,"median upper bound on s, k in [k(0.70), k(sigma_lin(C_i))]: R1's drift-agnostic set [sigma_lin(C), 0.70], tau = 1.84",1.00,0.9969617350789506,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [k(0.70), k(sigma_lin(C_i))]_tau3.4","W12, H5","median lower bound on s, k in [k(0.70), k(sigma_lin(C_i))]: R1's drift-agnostic set [sigma_lin(C), 0.70], tau = 3.4",0.03,0.03130743969189657,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [k(0.70), k(sigma_lin(C_i))]_tau3.4",W12,"median upper bound on s, k in [k(0.70), k(sigma_lin(C_i))]: R1's drift-agnostic set [sigma_lin(C), 0.70], tau = 3.4",1.00,0.9985030927147251,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, k(sigma_lin(C_i))], pooled drift_tau1","W12, H5","median lower bound on s, k in [0.40, k(sigma_lin(C_i))], pooled drift (three-level meta-regression), tau = 1",0.41,0.40500223661634666,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, k(sigma_lin(C_i))], pooled drift_tau1",W12,"median upper bound on s, k in [0.40, k(sigma_lin(C_i))], pooled drift (three-level meta-regression), tau = 1",0.98,0.9841176352808428,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, k(sigma_lin(C_i))], pooled drift_tau1.84","W12, H5","median lower bound on s, k in [0.40, k(sigma_lin(C_i))], pooled drift (three-level meta-regression), tau = 1.84",0.24,0.24064918674211327,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, k(sigma_lin(C_i))], pooled drift_tau1.84",W12,"median upper bound on s, k in [0.40, k(sigma_lin(C_i))], pooled drift (three-level meta-regression), tau = 1.84",0.99,0.99099697756979,output/tables/rb5_sign_magnitude.csv
+"S4_lower_k in [0.40, k(sigma_lin(C_i))], pooled drift_tau3.4","W12, H5","median lower bound on s, k in [0.40, k(sigma_lin(C_i))], pooled drift (three-level meta-regression), tau = 3.4",0.03,0.0292511158215739,output/tables/rb5_sign_magnitude.csv
+"S4_upper_k in [0.40, k(sigma_lin(C_i))], pooled drift_tau3.4",W12,"median upper bound on s, k in [0.40, k(sigma_lin(C_i))], pooled drift (three-level meta-regression), tau = 3.4",0.99,0.9946396151652872,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_lower_k in [0.40, 0.52]_tau1","H5, W12","median over the 49 decisions of the lower bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1",0.33,0.33038385156291117,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_upper_k in [0.40, 0.52]_tau1","H5, W12","median over the 49 decisions of the upper bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1",0.88,0.8833459217115391,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_lower_k in [0.40, 0.52]_tau1.84","H5, W12","median over the 49 decisions of the lower bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1.84",0.15,0.14541936427674515,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_upper_k in [0.40, 0.52]_tau1.84","H5, W12","median over the 49 decisions of the upper bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 1.84",0.92,0.9150438821693277,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_lower_k in [0.40, 0.52]_tau3.4","H5, W12","median over the 49 decisions of the lower bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 3.4",-0.12,-0.12187050704290753,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_upper_k in [0.40, 0.52]_tau3.4","H5, W12","median over the 49 decisions of the upper bound on s, k in [0.40, 0.52] (in-design sigma* 0.66-0.71; version 3), tau = 3.4",0.94,0.9382650799995037,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_lower_k in [0.40, 0.684]_tau1","H5, W12","median over the 49 decisions of the lower bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1",0.33,0.33038385156291117,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_upper_k in [0.40, 0.684]_tau1","H5, W12","median over the 49 decisions of the upper bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1",0.94,0.9407900727896364,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_lower_k in [0.40, 0.684]_tau1.84","H5, W12","median over the 49 decisions of the lower bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1.84",0.15,0.14541936427674515,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_upper_k in [0.40, 0.684]_tau1.84","H5, W12","median over the 49 decisions of the upper bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 1.84",0.96,0.9609854438722316,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_lower_k in [0.40, 0.684]_tau3.4","H5, W12","median over the 49 decisions of the lower bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 3.4",-0.16,-0.16333735786021178,output/tables/rb5_sign_magnitude.csv
+"S4_dec49_upper_k in [0.40, 0.684]_tau3.4","H5, W12","median over the 49 decisions of the upper bound on s, k in [0.40, 0.684] (to the top-budget value sigma* = 0.594), tau = 3.4",0.97,0.9743670972402294,output/tables/rb5_sign_magnitude.csv
+"S4_fixed_zero_reference (kappa-free Chinchilla, sigma* = 0.701)","W12, H5","median decision share (49 units), reference zero points fixed: reference (kappa-free Chinchilla, sigma* = 0.701)",0.73,0.7345318547777187,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_constant sigma* = 0.7,"W12, H5","median decision share (49 units), reference zero points fixed: constant sigma* = 0.7",0.74,0.7354597973558612,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_constant sigma* = 0.65,"W12, H5","median decision share (49 units), reference zero points fixed: constant sigma* = 0.65",0.81,0.8118896783770948,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_constant sigma* = 0.622,"W12, H5","median decision share (49 units), reference zero points fixed: constant sigma* = 0.622",0.85,0.8482636995816494,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_constant sigma* = 0.62,"W12, H5","median decision share (49 units), reference zero points fixed: constant sigma* = 0.62",0.85,0.8506858358588216,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_constant sigma* = 0.6,"W12, H5","median decision share (49 units), reference zero points fixed: constant sigma* = 0.6",0.87,0.8736271652944344,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_constant sigma* = 0.594,"W12, H5","median decision share (49 units), reference zero points fixed: constant sigma* = 0.594",0.88,0.8802896992369305,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_constant sigma* = 0.55,"W12, H5","median decision share (49 units), reference zero points fixed: constant sigma* = 0.55",0.92,0.92102600280616,output/tables/rb5_sign_fixed_zero_point.csv
+S4_fixed_zero_sigma*(C_i) at the lower end of its identified set (Chinchilla-Llama 3 drift),"W12, H5","median decision share (49 units), reference zero points fixed: sigma*(C_i) at the lower end of its identified set (Chinchilla-Llama 3 drift)",0.96,0.9570703872769184,output/tables/rb5_sign_fixed_zero_point.csv
+P13_SmolLM2_factor,P13 [[S8: factor]],SmolLM2 1.7B: M over the upper end of the set at its compute,47,47.104821090456106,data/processed/rb5_sign/model_bounds_S1.csv
+P13_405B_inside,P13,Llama 3.1 405B lies inside the set (dlo < 0 < dhi),True,True,data/processed/rb5_sign/model_bounds_S1.csv
+P13_405B_set,P13,Llama 3.1 405B: set for M* at its compute (models' convention) and its M,"[4.0, 677], M = 38.4",3.975; 677.4; M = 38.44,data/processed/rb5_sign/model_bounds_S1.csv

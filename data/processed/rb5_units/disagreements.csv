@@ -1,0 +1,10 @@
+unit,variable,coder_A,coder_B
+Granite-3.0,reading,cap or choice,choice
+Llama-3 herd,reading,cap or choice,choice
+Granite-3.0,D_margin,cap or choice,choice
+Llama-3 herd,D_margin,cap or choice,choice
+DeepSeek-LLM,own_cap,0,1
+SmolLM#1,own_cap,0,1
+DeepSeek-LLM,R_CO,1,0
+B:stabilityai/stablelm-2-1_6b,R_INF,0,1
+DeepSeek-LLM,R_NONE,0,1

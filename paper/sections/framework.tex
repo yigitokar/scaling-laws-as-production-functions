@@ -1,36 +1,36 @@
 % =====================================================================================================
-% Section I. The Training Problem (v2, after referee round 1)
-% Writer: framework section writer (v2), 2026-09-24. Binding sources: paper/notes/paper_plan_v2.md (I.A-D),
-% paper/notes/revision_plan.md, paper/notes/theory_main_text_v2.md (statements, labels), appendix_proofs.tex
-% (Lemmas A1-A5, Props. A1, A8-A9, Cor. A3), referee reports R1-R4. v1 text: sections/v1/framework.tex.
-% Numbers: output/tables/m7_theory_ledger_checks.csv (Besiroglu parameters; the 8B/15T configuration; Gopher),
-% output/tables/ra2_wedge_family_split.csv and ra2_wedge_models.csv (clean-sample family counts; Llama 3 8B under
-% Meta's technology). Number ledger and open issues: paper/notes/writer2_framework.md.
+% Section I. The Training Problem (v3, after referee round 2)
+% Writer: framework section writer (v3), 2026-09-24. Binding sources: paper/notes/revision_plan_v3.md (four main-text
+% formal results: Lemma 1, Prop. 1 = generalized wedge incl. family budgets and the binding token cap; duality as text;
+% notation q_T, q_D; "value of compactness", serving as one interpretation), paper/notes/theory_main_text_v2.md,
+% appendix_proofs.tex (Lemmas A1-A5, Props. A8-A9, Cor. A3), round-2 reports R1-R4, memos rb1_sigmaC and rb2_decisions
+% (+ reviews). v2 text: sections/v2/framework.tex.
+% Numbers: reference technology = data/processed/ra2_wedge/headline.json (chin_q_point); SmolLM2 and Gopher wedges,
+% sigma range, gamma: output/tables/fig1_geometry_numbers.csv (code/paper/make_fig1_geometry.py), which reproduces
+% output/tables/ra2_wedge_models.csv (w_chin_q) to 1e-12. Figure 1 = output/figures/fig1_geometry.pdf.
+% Number ledger, referee map and open issues: paper/notes/writer3_framework.md.
+% Round 3 (WP3, fix list P1-P3, P10, P15): the value of compactness is the virtual value v_N (decision D-1); notation
+% upsilon and varrho; Section I word count held at 2,300 by the offsetting cuts listed in paper/notes/round3_WP3_log.md.
 % =====================================================================================================
 
 \section{The Training Problem}\label{sec:framework}
 
-This section writes a scaling law as a production technology with a known, multiplicative cost and states the three
-results used throughout: duality, the requirement that interior compute optima have an elasticity of substitution below
-one, and the inversion of a developer's first-order conditions. Proofs are in Online Appendix~\ref{app:proofs}.
+This section writes a scaling law as a production technology with a known, multiplicative cost.
 
 \subsection{Technology and Cost}\label{sec:framework:tech}
 
 A developer trains a language model with $N$ parameters on $D$ tokens (tokens processed, counting repetitions) and
 measures its cross-entropy loss $L$, in nats per token, on a held-out corpus. Following \citet{hoffmann2022training},
-with productivity terms added, we write
+with productivity terms and an outer exponent added, we write
 \begin{equation}\label{eq:tech}
-L=E+e^{-\omega}\Big[A\big(e^{\psi_N}N\big)^{-\alpha}+B\big(e^{\psi_D}D\big)^{-\beta}\Big]^{\kappa}e^{\epsilon},
+L=E+e^{-\omega}\Big[A\big(e^{\psi_N}N\big)^{-\alpha}+B\big(e^{\psi_D}D\big)^{-\beta}\Big]^{\kappa}e^{\upsilon},
 \qquad A,B,\alpha,\beta,\kappa>0 .
 \end{equation}
-Here $E$ is the irreducible loss, and the bracket collects the losses from finite parameters and finite data.
+Here $E$ is the irreducible loss, and the bracket collects the losses from finite parameters and data.
 Productivity is Hicks-neutral ($\omega$) or factor-augmenting ($\psi_N$ and $\psi_D$; a cleaner corpus raises $\psi_D$),
-and $\epsilon$ is seed and evaluation noise. The developer knows its productivity up to the error of its own small-scale
-experiments; Proposition~\ref{prop:wedge} shows what a gap between belief and technology does. The Chinchilla law has
-$\kappa=1$ and no productivity terms. The outer exponent $\kappa$ scales both output elasticities and leaves the
-isoquants unchanged, so it separates returns to scale from substitution; $\kappa=1$ is testable (Section~\ref{sec:tech}).
-Where the noise enters matters only for estimation, and the information rates of Section~\ref{sec:ident} are the same
-with noise on $\ln L$.
+and $\upsilon$ is seed and evaluation noise. The outer
+exponent scales both output elasticities and leaves the isoquants unchanged, so it separates returns to scale from
+substitution; $\kappa=1$ is testable (Section~\ref{sec:tech}).
 
 Lower-case letters denote logs, $n\equiv\ln N$, $d\equiv\ln D$ and $c\equiv\ln C$, and $y\equiv-\ln(L-E)$ is the log
 output index. With $u\equiv A(e^{\psi_N}N)^{-\alpha}$ and $v\equiv B(e^{\psi_D}D)^{-\beta}$, the output elasticities are
@@ -38,23 +38,24 @@ output index. With $u\equiv A(e^{\psi_N}N)^{-\alpha}$ and $v\equiv B(e^{\psi_D}D
 \varepsilon_N\equiv\frac{\partial y}{\partial n}=\frac{\kappa\alpha u}{u+v},\qquad
 \varepsilon_D\equiv\frac{\partial y}{\partial d}=\frac{\kappa\beta v}{u+v},
 \end{equation}
-and neither depends on $\omega$, $\epsilon$ or $E$. When $\alpha=\beta$, reducible loss is a power of a constant-returns
-CES aggregate of $N$ and $D$. When $\alpha\neq\beta$ the technology is not homothetic, but it is quasi-homothetic with
-respect to the non-uniform scaling $(N,D)\mapsto(t^{\beta}N,t^{\alpha}D)$, which multiplies reducible loss by
-$t^{-\kappa\alpha\beta}$ for every $t>0$ (Online Appendix~\ref{app:proofs}, Lemma~\ref{lem:geometry}). Every isoquant is
-therefore a rescaled copy of every other, the compute-optimal mix drifts with compute as a power law, and all curvature
-lies across the expansion path. This is why data on the path carry no information about curvature
-(Section~\ref{sec:ident}).
+and neither depends on $\omega$, $\upsilon$ or $E$. The family \eqref{eq:tech} is quasi-homothetic: the scaling
+$(N,D)\mapsto(t^{\beta}N,t^{\alpha}D)$ multiplies reducible loss by $t^{-\kappa\alpha\beta}$ for every $t>0$ (Online
+Appendix Lemma~\ref{lem:geometry}). Isoquants are therefore rescaled copies of one another, the compute-optimal mix
+drifts with compute as a power law, and all curvature lies across the expansion path (Section~\ref{sec:ident}). This
+restriction of the family, not a property of scaling laws, makes the curvature at the optimum the same at every compute,
+whereas Section~\ref{sec:tech} finds $\sigma^*$ lower at the largest budgets of the two designs that reach them;
+Lemma~\ref{lemma:sigma}, Proposition~\ref{prop:wedge} and the model-free results of Section~\ref{sec:ident} do not use
+it.
 
 Training a dense transformer takes about six floating-point operations (FLOPs) per parameter per token, so training
-compute is $C\approx6ND$ \citep{kaplan2020scaling}. This is a FLOP-accounting approximation, not an identity: it omits
-attention and embedding FLOPs, and FLOPs are not dollars. Proposition~\ref{prop:wedge} carries size-dependent FLOP
-prices and data costs. In FLOP units the cost is multiplicative: both log-cost weights, $\partial c/\partial n$ and
-$\partial c/\partial d$, equal one, and the implicit price of a parameter, $6D$, rises with the quantity of the other
-input. Minimizing compute for a given loss therefore equates the output elasticities, $\varepsilon_N=\varepsilon_D$,
-without the price data that the first-order-condition approaches of \citet{deloecker2012markups} and
-\citet{gandhi2020identification} require: FLOP accounting supplies the cost shares. Isocosts are straight lines in logs,
-$n+d=c-\ln6$.
+compute is $C\approx6ND$ \citep{kaplan2020scaling}. The approximation omits attention and embedding FLOPs,
+and FLOPs are not dollars, so Proposition~\ref{prop:wedge} allows FLOP prices that vary with size and a cost of data.
+
+In FLOP units the cost is multiplicative: both log-cost weights, $\partial c/\partial n$ and $\partial c/\partial d$,
+equal one, isocosts are straight lines in logs, $n+d=c-\ln6$, and the implicit price of a parameter, $6D$, rises with the
+quantity of the other input. Minimizing compute for a given loss therefore equates the output elasticities,
+$\varepsilon_N=\varepsilon_D$, without the expenditure-share data that the first-order-condition approaches of
+\citet{deloecker2012markups} and \citet{gandhi2020identification} require: FLOP accounting supplies the cost shares.
 
 In this language, iso-loss curves are isoquants, an IsoFLOP profile traces loss along an isocost, the compute-optimal
 allocation $\big(N^*(C),D^*(C)\big)$ is a conditional factor demand, and the loss--compute frontier $L^*(C)$ is the
@@ -62,51 +63,42 @@ inverse of a cost function (Figure~\ref{fig:geometry}, panel~a). We write $M\equ
 $M^*(C)$ for its compute-optimal value. Isoquants, the elasticity of substitution, the compute-optimal allocation and the
 wedge defined below are ordinal: they are unchanged by any strictly increasing transformation of the same output (loss,
 bits per byte, or accuracy on a benchmark that is monotone in loss) and do not depend on $E$, $\omega$ or $\kappa$
-(Online Appendix~\ref{app:proofs}, Lemma~\ref{lem:sigma}). The frontier elasticity and returns to scale are cardinal,
-defined in units of reducible loss. Input units matter too: $M^*$ depends on the tokenizer and on whether embedding
-parameters are counted, so it is comparable across studies only after harmonization (Section~\ref{sec:tech}).
-
-Online Appendix Table~\ref{tab:app-dictionary} gives a full dictionary between scaling-law practice and production
-economics. Three analogies break down. There are no market prices for parameters and tokens: FLOP accounting supplies
-the log-cost weights, and differences in the price of a FLOP appear as wedges. Returns to scale measured in loss depend
-on the cardinalization of output, so ``diminishing returns to compute'' has no unit-free content. And the inputs of a
-training sweep are assigned by an experimenter, not chosen: an IsoFLOP sweep is designed variation in the input mix, not
-a shock to relative prices, so the endogeneity problems of IO arise for released models, not for experiments.
+(Online Appendix Lemma~\ref{lem:sigma}). A capability that pretraining loss does not order, such as quality after
+quantization \citep{kumar2024scaling}, is a different output with its own technology (Proposition~\ref{prop:wedge}(iii)). The frontier
+elasticity is cardinal, and $M^*$ depends on the tokenizer and the parameter count. Online Appendix
+Table~\ref{tab:app-dictionary} gives a full dictionary between scaling-law practice and production economics.
 
 \subsection{Duality}\label{sec:framework:duality}
 
-\begin{proposition}[Duality]\label{prop:duality}
-Let $\kappa=1$ in \eqref{eq:tech}, set productivity and noise to zero except in part (iii), and let
-$a\equiv\beta/(\alpha+\beta)$, $\gamma\equiv\alpha\beta/(\alpha+\beta)$ and $G\equiv(\alpha A/\beta B)^{1/(\alpha+\beta)}$.
-\begin{enumerate}
-\item[(i)] The allocation that minimizes $6ND$ subject to $L\le\bar L$, or maximizes $y$ at given $C$, satisfies
-$\varepsilon_N=\varepsilon_D$. The conditional factor demands are $N^*(C)=G\,(C/6)^{a}$ and $D^*(C)=G^{-1}(C/6)^{1-a}$,
-so $M^*(C)=G^{-2}(C/6)^{1-2a}$.
-\item[(ii)] The loss--compute frontier and the cost function are $L^*(C)=E+K(C/6)^{-\gamma}$ and
-$C^*(L)=6\,[K/(L-E)]^{1/\gamma}$, with $K\equiv\frac{\alpha+\beta}{\beta}AG^{-\alpha}$. Along the expansion path,
-$\varepsilon_N=\varepsilon_D=\gamma$.
-\item[(iii)] At given compute, Hicks-neutral productivity $\omega$ leaves the allocation unchanged, and factor-augmenting
-productivity moves it only through the bias index $\chi\equiv\beta\psi_D-\alpha\psi_N$: $\ln M^*(C)$ falls by
-$2\chi/(\alpha+\beta)$.
-\end{enumerate}
-\end{proposition}
+Let $a\equiv\beta/(\alpha+\beta)$, $\gamma\equiv\kappa\alpha\beta/(\alpha+\beta)$ and
+$G\equiv(\alpha A/\beta B)^{1/(\alpha+\beta)}$, and set productivity and noise to zero. The allocation that minimizes
+$6ND$ subject to $L\le\bar L$, or maximizes $y$ at given compute, satisfies $\varepsilon_N=\varepsilon_D$. The conditional
+factor demands are
+\begin{equation}\label{eq:demands}
+N^*(C)=G\Big(\frac C6\Big)^{a},\qquad D^*(C)=G^{-1}\Big(\frac C6\Big)^{1-a},\qquad M^*(C)=G^{-2}\Big(\frac C6\Big)^{1-2a},
+\end{equation}
+and the loss--compute frontier and the cost function are
+\begin{equation}\label{eq:frontier}
+L^*(C)=E+K\Big(\frac C6\Big)^{-\gamma},\qquad C^*(L)=6\Big(\frac{K}{L-E}\Big)^{1/\gamma},
+\qquad K\equiv\Big(\frac{\alpha+\beta}{\beta}\,AG^{-\alpha}\Big)^{\kappa}.
+\end{equation}
+Along the expansion path $\varepsilon_N=\varepsilon_D=\gamma$. At given compute, Hicks-neutral productivity leaves the
+allocation unchanged, and factor-augmenting productivity moves it only through the bias index
+$\chi\equiv\beta\psi_D-\alpha\psi_N$: $\ln M^*(C)$ falls by $2\chi/(\alpha+\beta)$ (Online Appendix
+Lemma~\ref{lem:alloc}).
 
-\noindent The proof is in Online Appendix~\ref{app:proofs} (Lemma~\ref{lem:alloc}). The proposition is Shephard--Uzawa
-duality for the scaling law \citep{shephard1953cost,uzawa1964duality}: the technology, the conditional factor demands and
-the cost function carry the same information, linked by $a$ and $\gamma$. With $\kappa\neq1$, part (i) is unchanged and
-$\gamma$ is multiplied by $\kappa$. By part (ii), the elasticity of compute with respect to output, measured as $1/(L-E)$, is
-$1/\gamma$ along the frontier; its inverse, $\gamma$, is the returns-to-scale measure that \citet{nerlove1963returns} estimated
-from a cost function for electricity supply and found to vary with scale. Under
-the parameters of \citet{besiroglu2024chinchilla}, $\gamma=0.178$: a one percent reduction in reducible loss requires
-about 5.6 percent more compute.
-
-Scaling studies estimate each of these objects. A fit of \eqref{eq:tech} to all runs (Approach~3 of
-\citealp{hoffmann2022training}) is a primal estimator. A regression of the loss-minimizing $\ln N$ of each IsoFLOP profile
-on $\ln C$ (their Approach~2) estimates the factor demand, and a frontier fitted through the same minima, which we call
-the IsoFLOP-minima frontier, estimates the cost function; their Approach~1 reports the minimizing $N$ and $D$ as well as
-the minimal loss, so it estimates both. Gaps among these estimates test duality \citep{klump2007factor}; Online
-Appendix~\ref{app:additional} reports such tests. The minima of IsoFLOP profiles are outcomes of inputs that an
-experimenter assigned, not choices.
+This is Shephard--Uzawa duality for the scaling law \citep{shephard1953cost,uzawa1964duality}: the technology, the
+factor demands and the cost function carry the same information, linked by $a$ and $\gamma$. The outer exponent moves
+the frontier but not the path. The frontier elasticity $\gamma$ is the returns-to-scale measure of
+\citet{nerlove1963returns}; under the reference technology of Section~\ref{sec:wedge}, the $\kappa$-free fit to Chinchilla's 240 runs in
+total parameters (Table~\ref{tab:designs}, panel~B), $\gamma=0.165$; because compute is quadratic in the scale of the
+inputs, the technological scale elasticity on the path is $2\gamma$. A fit of \eqref{eq:tech} to all runs (Approach~3 of \citealp{hoffmann2022training}) is a
+primal estimator; a regression of the loss-minimizing $\ln N$ of each IsoFLOP profile on $\ln C$ (their Approach~2)
+estimates the factor demand, and a frontier through the same minima the cost function
+(Online Appendix~\ref{app:additional} tests duality by comparing the two;
+\citealp{klump2007factor} instead estimate a production function jointly with its first-order conditions). The minima are outcomes of inputs
+that an experimenter assigned, not choices, so the endogeneity problems of IO arise for released models, not for
+experiments.
 
 \subsection{Substitution}\label{sec:framework:sigma}
 
@@ -116,11 +108,9 @@ of the family \eqref{eq:tech},
 \begin{equation}\label{eq:sigmaw}
 \sigma(w)=\frac{1+w}{1+\alpha+w(1+\beta)},\qquad \sigma^*\equiv\sigma(1)=\frac{2}{2+\alpha+\beta},
 \end{equation}
-which follows from the formula of \citet{hao2026theory} (Online Appendix~\ref{app:proofs}, Lemma~\ref{lem:sigma}). The
-local elasticity lies between $1/(1+\alpha)$ and $1/(1+\beta)$ and equals $\sigma^*$ on the compute-optimal path, where
-$w=1$. With two inputs, the Hicks, Allen--Uzawa and Morishima elasticities coincide \citep{blackorby1989real}. Under the
-\citet{besiroglu2024chinchilla} parameters ($\alpha=0.348$, $\beta=0.366$), $\sigma^*=0.737$, and $\sigma$ varies only
-between 0.732 and 0.742 over all input mixes.
+which follows from the formula of \citet{hao2026theory} (Online Appendix Lemma~\ref{lem:sigma}). The local elasticity
+lies between $1/(1+\alpha)$ and $1/(1+\beta)$ and equals $\sigma^*$ on the compute-optimal path, where $w=1$. Under the
+reference technology, $\sigma^*=0.701$, and $\sigma$ varies only between 0.699 and 0.702 over all input mixes.
 
 \begin{lemma}[Interior compute optima require $0<\sigma<1$]\label{lemma:sigma}
 Let $y=F(n,d)$ be any twice continuously differentiable technology with $F_n,F_d>0$, and let $C=6ND$. At an allocation
@@ -129,132 +119,134 @@ with $\varepsilon_N=\varepsilon_D$:
 \item[(i)] the second-order condition for minimizing compute at given output holds strictly if and only if $0<\sigma<1$
 there;
 \item[(ii)] if $\sigma>1$ or $\sigma<0$ there, the allocation minimizes rather than maximizes output along its isocost;
-if $\sigma>1$ everywhere, compute-optimal training is a corner solution.
+if $\sigma>1$ everywhere, compute-optimal training is a corner solution at a bound on $N$ or $D$.
 \end{enumerate}
-Every member of the family \eqref{eq:tech} has $\sigma<1$ at every input mix, so the first-order condition in
-Proposition~\ref{prop:duality} is sufficient.
+Every member of the family \eqref{eq:tech} has $\sigma<1$ at every input mix, so the first-order condition
+$\varepsilon_N=\varepsilon_D$ is sufficient.
 \end{lemma}
 
 \noindent The proof is in Online Appendix~\ref{app:proofs} (Lemma~\ref{lem:soc} and Corollary~\ref{cor:complements}).
-With a linear cost $q_NN+q_DD$, isocosts are straight lines in levels, and any convex isoquant ($\sigma>0$) gives an
-interior tangency. With $C=6ND$ they are straight lines in logs, so the isoquant must be convex in logs, which requires
-$\sigma<1$. Because the implicit price of each input rises with the quantity of the other, shifting toward one input
-raises its own price, and that pays only if the inputs are complements in this sense.
+With a linear cost $q_NN+q_DD$, isocosts are straight lines in levels, and any convex isoquant ($\sigma>0$) makes a
+tangency a cost minimum. With $C=6ND$ they are straight lines in logs, and shifting toward one input lowers its own implicit price and
+raises the other's, so cost alone favors a corner; an interior optimum requires the isoquant to be more curved than the
+isocost, which is complementarity in this sense ($\sigma<1$).
 
-The lemma's observable implication is that IsoFLOP profiles, loss against $\ln N$ at fixed compute, are U-shaped with an
-interior minimum, as the designs of Section~\ref{sec:tech} show wherever their grids bracket the minimum. That
-$\sigma^*<1$ is implied by this fact and imposed by every functional form we fit; it is not a finding. Its level is:
-Proposition~\ref{prop:modelfree} turns the curvature of the U into $\sigma^*$ without a functional form. And $\sigma>0$
-is what makes over-training a sensible response to a value of compactness. In the Leontief limit of \citet{hao2026theory} the optimum sits at the kink whatever that value, whereas
-for $0<\sigma<1$ parameters can be traded for tokens at a cost governed by $\sigma^*$ (Figure~\ref{fig:geometry},
-panel~b).
+The lemma's observable implication is that IsoFLOP profiles are U-shaped with an
+interior minimum, as every design of Section~\ref{sec:tech} shows wherever its grid brackets the minimum. That
+$\sigma^*<1$ is therefore not a finding; its level is. That $\sigma>0$ makes over-training a sensible response to a
+value of compactness: in the Leontief limit of \citet{hao2026theory} the optimum sits at the kink whatever that value, whereas for $0<\sigma<1$ parameters can be traded for tokens at a cost governed by
+$\sigma^*$ (Figure~\ref{fig:geometry}, panel~b).
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=\textwidth]{m7_theory_geometry}
+\includegraphics[width=\textwidth]{fig1_geometry}
 \caption{The Geometry of the Training Problem}\label{fig:geometry}
 \begin{figurenotes}
-Panel (a): the $(\log_{10}N,\log_{10}D)$ plane under the \citet{besiroglu2024chinchilla} parameters. Solid gray curves
-are isoquants at the frontier losses for $C=10^{20},\dots,10^{24}$ FLOP; dotted lines are isocosts $6ND=C$; the blue line
-is the compute-optimal expansion path. The orange dot is a run with $N=8\times10^{9}$ (total) parameters and
-$D=1.5\times10^{13}$ tokens, nominally Llama~3~8B, joined to the path at equal compute; its wedge is $w=5.2$. Panel (b):
-three members of the $\kappa$ family with $\sigma^*=0.60$, $0.74$ and $0.85$, constructed to share the expansion path and
-the loss--compute frontier (Online Appendix~\ref{app:proofs}, Proposition~\ref{prop:fd}(iv)). The vertical axis is
-reducible loss in excess of the frontier at $C=10^{22}$ FLOP, as a function of the deviation of tokens per parameter from
-the compute-optimal ratio. The technologies coincide on the path and differ off it.
+Panel (a): the $(\log_{10}N,\log_{10}D)$ plane under the reference technology of Section~\ref{sec:wedge} (the $\kappa$-free fit
+to Chinchilla's 240 runs, in total parameters; $\sigma^*=0.701$). Solid gray curves are isoquants at the frontier losses for
+$C=10^{20},\dots,10^{24}$ FLOP; dotted lines are isocosts $6ND=C$; the blue line is the compute-optimal expansion path.
+Filled orange dots are the three SmolLM2 base models (135M, 360M and 1.7B parameters, trained on 2, 4 and 11 trillion
+tokens) at their total parameter counts, and hollow circles the same models at their non-embedding counts; for the
+1.7B model the two markers nearly coincide, and the orange line starts at the total count. It joins SmolLM2 1.7B to
+the path at equal compute; its wedge under the reference is $w=11.3$. Panel (b): three members
+of the $\kappa$ family with $\sigma^*=0.60$, $0.74$ and $0.85$, constructed to share the expansion path and the
+loss--compute frontier of the \citet{besiroglu2024chinchilla} parameters (Online Appendix Proposition~\ref{prop:fd}). The
+vertical axis is reducible loss in excess of the frontier at $C=10^{22}$ FLOP, as a function of the deviation of tokens
+per parameter from the compute-optimal ratio. The technologies coincide on the path and differ off it.
 \end{figurenotes}
 \end{figure}
 
 \subsection{What Over-Training Reveals}\label{sec:framework:wedge}
 
-Most language models released since 2023 lie far from the expansion path, with $M$ well above $M^*(C)$
-(Section~\ref{sec:wedge}). A developer that minimized training cost would have $w=1$; the next result says what a wedge
-above one reveals about the developer's objective.
+Most open-weight language models released since 2023 lie far from the expansion path, with $M$ well above $M^*(C)$
+(Section~\ref{sec:wedge}), whereas a developer that minimized training cost would have $w=1$.
 
 \begin{proposition}[What over-training reveals]\label{prop:wedge}
-A developer chooses $(N,D)$ to maximize $V\big(L(N,D),N\big)-X_T-c_DD$. Here $V$ is any objective that falls with loss
-and may depend on size directly; $X_T\equiv c_T(N)\,6ND$ is training expenditure at the (shadow) price $c_T(N)$ of a
-training FLOP, whose size elasticity is $\delta$; and $c_D\ge0$ is a cost per token. Let
-$m_N\equiv-(\partial V/\partial\ln N)_L/X_T$ be the value of compactness at fixed quality per unit of training
-expenditure, and $m_D\equiv c_DD/X_T$.
+A developer chooses $(N,D)$ to maximize $V\big(L(N,D),N\big)-X_T-q_DD$. Here $V$ is any differentiable objective that
+falls with loss and may depend on size directly; $X_T\equiv q_T(N)\,6ND$ is training expenditure at the (shadow) price
+$q_T(N)$ of a training FLOP, whose size elasticity is $\delta$; and $q_D\ge0$ is a cost per token. Let
+$m_N\equiv-(\partial V/\partial\ln N)_L/X_T$ be the objective's own value of compactness: making the model one percent
+smaller at the same loss is worth $m_N$ percent of training expenditure. Let $m_D\equiv q_DD/X_T$. Let $\nu_N$ be the
+shadow value, per unit of training expenditure, of any binding constraint on size (a memory tier, a latency objective or
+a size menu; $\nu_N\ge0$ for a cap, $\nu_N=0$ if none binds), and let $v_N\equiv m_N+\nu_N$ be the value of compactness:
+the value at which a developer free of it would make the same choice, a virtual price in the sense of
+\citet{neary1980theory}.
 \begin{enumerate}
-\item[(i)] At an interior optimum with no binding constraint,
+\item[(i)] (The wedge.) At an interior optimum with no binding cap on tokens,
 \begin{equation}\label{eq:gw}
-w=\frac{\varepsilon_N}{\varepsilon_D}=\frac{1+\delta+m_N}{1+m_D}.
+w=\frac{\varepsilon_N}{\varepsilon_D}=\frac{1+\delta+v_N}{1+m_D}.
 \end{equation}
-With $\delta=m_D=0$, $w-1=m_N$, and the expenditure share $s\equiv(w-1)/w$ equals $m_N/(1+m_N)$. The wedge is computed
-from $(N,D)$ and the technology alone; it does not depend on $\omega$, $\epsilon$, $E$ or $\kappa$.
-\item[(ii)] (Serving.) Let $\delta=m_D=0$, and let the developer bear a share $\lambda$ of the expenditure $X_S$ on serving
-$T$ tokens over the model's life, at $2N$ FLOPs per token and $p$ times the price of a training FLOP, with $T$ independent
-of size at given loss. Then $w=1+\lambda pT/(3D)$, $w-1=\lambda X_S/X_T$, and $s=\lambda X_S/(X_T+\lambda X_S)$ is the
-internalized serving share of lifetime expenditure.
-\item[(iii)] (Constraints and misspecification.) A binding memory, tier or latency cap multiplies the right side of
-\eqref{eq:gw} by $1+\nu$ with $\nu\ge0$; a binding cap on tokens adds $\mu\ge0$ to its denominator; and logit distillation
-from a teacher with $N_T$ parameters is a data cost with $m_D=N_T/(3N)$. If the developer's first-order conditions involve
-a technology $L'$ other than the econometrician's $L$ (its own productivity, a law it believes, or the output it values),
-the measured wedge is $\hat w=w\,w_L/w_{L'}$, which equals $we^{-\chi}$ under factor-augmenting productivity.
-\item[(iv)] (Family token budgets.) If a family trains models of sizes $N_1,\dots,N_K$ on one token budget $D$, member
-wedges differ only through the technology: $\ln w_i-\ln w_j=-\alpha(\ln N_i-\ln N_j)$. If the sizes are chosen at the
-margin and there is no data cost, the family's first-order conditions identify one number,
-$\sum_i\pi_im_{N,i}=\bar w_H-1$, where $\bar w_H$ is the compute-weighted harmonic mean of the member wedges and the weight
-$\pi_i$ is proportional to member $i$'s share of the family's training compute divided by $w_i$. If the sizes come from a
-menu, the wedges carry no information about the $m_{N,i}$.
+With $\delta=m_D=0$, $w-1=v_N$, and the compactness share $s\equiv(w-1)/w$ equals $v_N/(1+v_N)$.
+\item[(ii)] (Serving.) Let $\delta=m_D=\nu_N=0$ and $V=R(L)-\lambda X_S$, so that serving is the only effect of size on $V$ at
+given loss, where $X_S$ is the expenditure on serving $T$ tokens over the model's life at $2N$ FLOPs per token and a
+constant $\varrho$ times the price of a training FLOP, with $T$ independent of size at given loss. Then
+$w=1+\lambda\varrho T/(3D)$, $w-1=\lambda X_S/X_T$, and $s=\lambda X_S/(X_T+\lambda X_S)$ is the internalized serving
+share of lifetime expenditure.
+\item[(iii)] (Constraints and misspecification.) A binding cap on tokens adds $\mu\ge0$ to the denominator of
+\eqref{eq:gw}, so with $\delta=m_D=0$, $w-1$ bounds $v_N$ from below; a binding cap on size enters $v_N$, so, if
+$\mu=0$, $w-1$ bounds the objective's own $m_N$ from above. Logit distillation from a teacher with $N_T$ parameters is, if it leaves the
+student's technology unchanged, a data cost with $m_D=N_T/(3N)$; if it also raises the productivity of tokens
+($\chi>0$), it lowers the measured wedge further. If the developer's first-order conditions involve a technology $L'$
+other than the econometrician's $L$ (its own productivity, a law it believes, or the output it values), the measured
+wedge is $\hat w=w_{L'}\,w_L/w_{L'}$, where $w_{L'}$ is the wedge that the developer's technology assigns to its choice
+and $w_L$ the one that the econometrician's assigns; it equals $w_{L'}e^{-\chi}$ under factor-augmenting productivity.
+\item[(iv)] (Family token budgets.) Let a family train models of sizes $N_1,\dots,N_I$ on one token budget $D$, with
+$\delta=m_D=0$. Member wedges then differ only through the technology; in family \eqref{eq:tech},
+$\ln w_i-\ln w_j=-\alpha(\ln N_i-\ln N_j)$. Let $\bar w_H$ be the compute-weighted harmonic mean of the member wedges,
+and let the weight $\pi_i$ be proportional to member $i$'s share of the family's training compute divided by $w_i$.
+\begin{enumerate}
+\item[(a)] If $D$ is chosen for the family, the family's first-order conditions identify one number,
+$\sum_i\pi_iv_{N,i}=\bar w_H-1$, whether the sizes are chosen at the margin or set by binding size constraints.
+\item[(b)] If a cap on tokens binds for the family, $\bar w_H-1\le\sum_i\pi_iv_{N,i}$.
+\end{enumerate}
 \end{enumerate}
 \end{proposition}
 
-\noindent The proof is in Online Appendix~\ref{app:proofs} (Propositions~\ref{prop:A-wedge} and~\ref{prop:A-family}),
-which also treats demand that responds to size and minimum-size and time-to-train constraints. The developer adds
-parameters until their marginal value in loss equals their marginal cost: training expenditure plus whatever it loses
-when the model is larger at the same quality, such as the cost of serving it, adoption among users who cannot run it,
-latency or a memory tier. Tokens cost only training and data. The ratio of the two first-order conditions therefore puts
-the value of compactness in the numerator, and an econometrician who sees only training cost observes a wedge: the
-developer acts as if parameters were $w$ times as expensive, relative to tokens, as training accounting says.
+\noindent The proof is in Online Appendix~\ref{app:proofs} (Propositions~\ref{prop:A-wedge} and~\ref{prop:A-family});
+part (iv)(b) is Proposition~\ref{prop:A-family}(vi). The developer adds parameters
+until their marginal value in loss equals their marginal cost: training expenditure plus whatever it loses when the model
+is larger at the same quality (serving cost, adoption, latency, a memory tier). Tokens cost only training and data. An econometrician who sees only training cost therefore observes a
+wedge: the developer acts as if parameters were $w$ times as expensive, relative to tokens, as training accounting says.
 
-What $w-1$ measures depends on the developer's objective; Online Appendix Table~\ref{tab:app-wedge-cases} tabulates
-eleven cases. Three models of conduct matter most. For a developer that serves its own model
-($\lambda=1$), $s$ is planned serving expenditure as a share of lifetime expenditure, with no conversion of FLOPs into
-dollars; a count of tokens, $T=3D(w-1)/(\lambda p)$, needs the price ratio $p$, which is likely above one because
-decoding is often bound by memory bandwidth. Compute proportional to $N$ that is planned at training time, such as
-reinforcement-learning rollouts, and test-time scaling \citep{roberts2026test} enter $X_S$ in the same way. For an
-open-weight developer whose users bear the serving cost, $w-1$ is the value of compactness through adoption. Under a
-binding tier, memory or latency cap \citep{bian2025scaling}, $w-1$ only bounds $m_N$ from above. Section~\ref{sec:wedge}
-tests the three readings as a problem of conduct \citep{berry2014identification,backus2021common,duarte2024testing}. We
-therefore call $s$ the share of the value of compactness, and planned serving expenditure only for developers that serve
-their models.
+\textit{The value of compactness.} What $v_N$ measures depends on the developer's objective (Online Appendix
+Table~\ref{tab:app-wedge-cases}). For a developer that serves this model, bears the cost ($\lambda=1$) and faces no
+binding size constraint, $s$ is planned serving expenditure as a share of lifetime expenditure; a count of tokens,
+$T=3D(w-1)/(\lambda\varrho)$, also needs the price ratio $\varrho$, likely above one because decoding is often bound by
+memory bandwidth \citep{erdil2025inference}. For an open-weight developer whose users bear
+the serving cost, $m_N$ is the value of compactness through adoption; under a binding tier, memory or latency cap
+\citep{bian2025scaling}, the value of compactness includes the cap's shadow value. Section~\ref{sec:wedge} tests these
+readings as a problem of conduct \citep{berry2014identification,backus2021common,duarte2024testing}, and the evidence is
+more consistent with adoption and memory tiers than with the internalization of serving cost. We therefore call $v_N$
+the value of compactness and $s$ the compactness share throughout, and read $s$ as planned serving expenditure only
+where the developer served the size and neither a common token budget nor a tier window intervenes
+(Section~\ref{sec:wedge-conduct}).
 
-The other sources of a wedge have known signs (Online Appendix~\ref{app:proofs}, Proposition~\ref{prop:A-wedge}(iv)).
-Caps, a price of a FLOP that rises with size, and parameter-augmenting productivity ($\chi<0$) raise the measured wedge.
-Data costs, caps on tokens, distillation \citep{busbridge2025distillation}, minimum-size floors and data-augmenting
-productivity ($\chi>0$) lower it. Serving demand cannot produce a wedge below one as long as serving cost rises with size.
-Under the \citet{besiroglu2024chinchilla} parameters, Gopher has $w=0.36$, which reveals a binding data constraint, better data, or optimization against another technology, plausibly the law of
-\citet{kaplan2020scaling}. Heterogeneity in these wedges is what moves released models off the expansion path, so it is
-also the variation that could identify the technology from observational data, the counterpart of the relative-price
-variation of \citet{bond2005adjustment} (Section~\ref{sec:ident}).
+\textit{Other sources of a wedge.} Their signs are known (Online Appendix Proposition~\ref{prop:A-wedge}(iv)). A price
+of a FLOP that rises with size ($\delta>0$) and parameter-augmenting productivity ($\chi<0$) raise the measured wedge.
+So does post-training compute that scales with $N$ and is planned when $N$ is chosen: counting its expenditure $X_P$ as a
+cost alongside $X_T$, with $x_P\equiv X_P/X_T$, $w=1+x_P+m_N$, where $m_N$ excludes post-training, and
+Section~\ref{sec:wedge} bounds $x_P$ with disclosed budgets. Data costs, caps on tokens, distillation
+\citep{busbridge2025distillation} and data-augmenting productivity ($\chi>0$) lower the wedge. Serving demand cannot
+produce a wedge below one as long as serving cost rises with size. Gopher's $w=0.28$ under the reference technology
+\citep{rae2021scaling} is thus consistent with a binding data constraint or a data cost, better data, a size target (a
+minimum-size floor), or optimization against another technology, plausibly the law of \citet{kaplan2020scaling}.
 
-The construction parallels the production approach to markups \citep{deloecker2012markups}. The wedge is the ratio
-statistic of \citet{raval2023testing} with FLOP-accounting weights; a ratio different from one, which Raval reads as
-misspecification, is here the object of interest. The two classic critiques are the last case of part (iii):
-factor-augmenting heterogeneity \citep{demirer2020production,raval2023testing} and a mismatch between the measured
-output and the output the developer values \citep{bond2020unpleasant}. As in \citet{deridder2026hitchhiker}, levels are
-more fragile than ranks.
+\textit{Family budgets.} On one token budget, member wedges are fixed by the technology and are not revealed
+preferences. A binding cap, as when every size trains on the whole curated corpus, makes the family share $1-1/\bar w_H$ a lower bound,
+and a member's own wedge one only if that member would have trained on more tokens at its own size, which a cap on the
+family's budget does not imply.
 
-Part (iv) matters because many families train every size on one token budget (Section~\ref{sec:wedge}). Within such a
-family a small sibling's large wedge is fixed by the technology, so member-level wedges are not revealed preferences; the
-family reveals a weighted average that puts less weight on its more over-trained members or, if sizes come from a menu
-of tiers, nothing about compactness. A common budget under member-by-member choice would be a knife-edge, so its
-prevalence suggests that $D$ is chosen at the family level.
-
-In the $\kappa$ family the wedge has a closed form. For a model with compute $C$ and tokens per parameter $M$,
+\textit{A closed form.} In the $\kappa$ family the wedge of a model with compute $C$ and tokens per parameter $M$ is
 \begin{equation}\label{eq:wM}
 \ln w=\Big(\frac1{\sigma^*}-1\Big)\ln\frac{M}{M^*(C)},
 \end{equation}
-where $M^*(C)$ is the compute-optimal ratio at the model's own compute (Online Appendix~\ref{app:proofs},
-Lemma~\ref{lem:geometry} and Corollary~\ref{cor:suff}). The log wedge is the distance from the expansion path at equal
-compute, scaled by curvature (Figure~\ref{fig:geometry}, panel~a). The technology supplies the zero point $M^*(C)$ and
-the scale $1/\sigma^*-1$; at given compute, it ranks models by $M$. A model with 8 billion parameters trained on 15
-trillion tokens (nominally Llama~3~8B, $M\approx1{,}875$) has $w\approx5.2$ under the \citet{besiroglu2024chinchilla}
-parameters: its developer behaves as if making it one percent smaller at the same loss were worth 4.2 percent of the
-training bill, and $s\approx0.81$. (Section~\ref{sec:wedge} estimates $w\approx8.4$ under Meta's own technology.) Such
-estimates are only as good as
-$M^*(C)$, which on-path data identify only by assuming optimality and which no public design observes at frontier scale
-(Sections~\ref{sec:ident} and~\ref{sec:wedge}).
+where $M^*(C)$ is the compute-optimal ratio at the model's own compute (Online Appendix Lemma~\ref{lem:geometry} and
+Corollary~\ref{cor:suff}). The log wedge is the distance from the expansion path at equal compute, scaled by curvature
+(Figure~\ref{fig:geometry}, panel~a); the technology supplies the zero point $M^*(C)$ and the scale $1/\sigma^*-1$.
+SmolLM2 1.7B \citep{benallal2025smollm2}, trained on 11 trillion tokens, has
+$M\approx6{,}400$, about 290 times the reference technology's compute-optimal ratio at its compute. With the reference
+scale, $1/\sigma^*-1=0.427$, its wedge is $w\approx11.3$: its developer behaves as if making it one percent smaller at
+the same loss were worth about 10 percent of the training bill, and $s\approx0.91$. Such numbers are only as good as
+the technology's two inputs, neither of which any public design observes at SmolLM2's compute. The sign needs only the
+zero point: for any technology with single-peaked IsoFLOP profiles, $w>1$ if and only if $M>M^*(C)$, whatever the
+scale, so bounds on $M^*(C)$ identify the sign (Proposition~\ref{prop:pi}).

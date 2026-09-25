@@ -1,0 +1,124 @@
+{
+ "codes_file": "readings_final.csv",
+ "B": 9999,
+ "runtime_s": 431.20987200737,
+ "synthetic_flagged_units": {
+  "protocol": [
+   "Apertus",
+   "B:HuggingFaceTB/SmolLM-1.7B",
+   "B:HuggingFaceTB/SmolLM2-1.7B",
+   "B:HuggingFaceTB/SmolLM2-135M",
+   "B:HuggingFaceTB/SmolLM2-360M",
+   "B:HuggingFaceTB/SmolLM3-3B-Base",
+   "B:Qwen/Qwen2-0.5B",
+   "B:allenai/OLMo-2-0325-32B",
+   "B:allenai/OLMo-2-1124-13B",
+   "B:h2oai/h2o-danube3-4b-base",
+   "B:h2oai/h2o-danube3-500m-base",
+   "B:marin-community/marin-8b-base",
+   "B:microsoft/phi-1_5",
+   "B:microsoft/phi-2",
+   "Granite-3.0",
+   "OLMo-2#1",
+   "Olmo-3",
+   "Qwen2#1",
+   "Qwen2.5",
+   "Qwen3",
+   "SmolLM#1"
+  ],
+  "fixlist": [
+   "B:HuggingFaceTB/SmolLM-1.7B",
+   "B:HuggingFaceTB/SmolLM2-1.7B",
+   "B:HuggingFaceTB/SmolLM2-135M",
+   "B:HuggingFaceTB/SmolLM2-360M",
+   "B:HuggingFaceTB/SmolLM3-3B-Base",
+   "B:allenai/OLMo-2-0325-32B",
+   "B:allenai/OLMo-2-1124-13B",
+   "B:microsoft/phi-1_5",
+   "B:microsoft/phi-2",
+   "OLMo-2#1",
+   "Qwen2.5",
+   "Qwen3",
+   "SmolLM#1"
+  ]
+ },
+ "agreement": [
+  {
+   "variable": "reading",
+   "scope": "common-budget",
+   "n": 17,
+   "agreement": 0.8823529411764706,
+   "kappa": 0.8265306122448979
+  },
+  {
+   "variable": "D_margin",
+   "scope": "common-budget",
+   "n": 17,
+   "agreement": 0.8823529411764706,
+   "kappa": 0.7792207792207791
+  },
+  {
+   "variable": "own_cap",
+   "scope": "all",
+   "n": 49,
+   "agreement": 0.9591836734693877,
+   "kappa": 0.8955223880597014
+  },
+  {
+   "variable": "R_CO",
+   "scope": "all",
+   "n": 49,
+   "agreement": 0.9795918367346939,
+   "kappa": 0.8463949843260187
+  },
+  {
+   "variable": "R_INF",
+   "scope": "all",
+   "n": 49,
+   "agreement": 0.9795918367346939,
+   "kappa": 0.9585798816568046
+  },
+  {
+   "variable": "R_DEV",
+   "scope": "all",
+   "n": 49,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  {
+   "variable": "synthetic",
+   "scope": "all",
+   "n": 49,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  {
+   "variable": "N_margin",
+   "scope": "common-budget",
+   "n": 17,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  {
+   "variable": "own_cap",
+   "scope": "size-specific member or singleton",
+   "n": 32,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  {
+   "variable": "R_NONE",
+   "scope": "all",
+   "n": 49,
+   "agreement": 0.9795918367346939,
+   "kappa": 0.9574283231972197
+  },
+  {
+   "variable": "deployment_rationale",
+   "scope": "all",
+   "n": 49,
+   "agreement": 1.0,
+   "kappa": 1.0
+  }
+ ]
+}

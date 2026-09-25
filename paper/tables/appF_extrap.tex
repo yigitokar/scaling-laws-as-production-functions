@@ -1,0 +1,58 @@
+% Trimmed copy of output/tables/rb1_sigmaC_extrap.tex (module rb1_sigmaC, reviewed): Farseer, Marin pooled and Llama 3;
+% writer appendices (v3), 2026-09-24.
+% [round 3, WP2, T15(a), 2026-09-25] Percentile intervals (R4 minor 14) from output/tables/rb5_sigma_extrap_delta_pct.csv
+% (columns lo_pct, hi_pct; the point estimates are rb1's and ra1's published Delta); convex-part rows and the Marin
+% leave-corner-out rows from rb5_sigma_extrap_decomposition.csv (variants primary, corner_largestM, corner_M1000); b2
+% percentile intervals from rb5_sigma_extrap_lin.csv. Module rb5_sigma, independently reviewed
+% (output/memos/rb5_sigma_review.md, section 8). Dagger: the percentile interval excludes the estimate (column
+% pct_contains_estimate = False).
+\begin{table}[tp]
+\centering
+\caption{Parametric Extrapolation against the Model-Free Wedge in Three Recipes}
+\label{tab:app-extrap}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.25\textwidth}ccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{$M=D/N$} \\
+\cmidrule(l){2-6}
+ & $<$16 & 16--64 & 64--256 & 256--1,024 & $\ge$1,024 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Farseer: non-embedding $N$, 404 runs; $b_2=$ +0.020 [0.019, 0.022]}} \\[1pt]
+Local $\ln w$ & $-$0.69 & 0.06 & 0.68 & 1.37 & 2.01 \\
+$\kappa$ free, all runs & $-$0.02 & +0.05 & +0.00 & $-$0.14 & $-$0.36 \\
+ & [$-$0.03, $-$0.01] & [0.05, 0.06] & [0.00, 0.01] & [$-$0.15, $-$0.13] & [$-$0.47, $-$0.32] \\
+$\kappa=1$, $M\le100$ & +0.08 & $-$0.23 & $-$0.55 & $-$0.95 & $-$1.36 \\
+ & [0.07, 0.09] & [$-$0.24, $-$0.22] & [$-$0.55, $-$0.52] & [$-$0.96, $-$0.92] & [$-$1.47, $-$1.31] \\
+Convex part of local $\ln w$ & +0.09 & +0.00 & +0.02 & +0.17 & +0.37 \\
+ & [0.08, 0.10] & [$-$0.00, 0.00] & [0.00, 0.02] & [0.15, 0.18] & [0.34, 0.46] \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Llama 3: 133 runs; $b_2=$ $-$0.029 [$-$0.035, $-$0.009]}} \\[1pt]
+Local $\ln w$ (points) & $-$0.80 (70) & 0.29 (38) & 0.97 (16) & 1.70 (2) & -- \\
+$\kappa$ free, all runs & +0.27 & +0.04 & $-$0.08 & $-$0.38 & -- \\
+ & [0.18, 0.31] & [0.01, 0.06] & [$-$0.14, $-$0.04] & [$-$0.52, $-$0.18] &  \\
+$\kappa=1$, $M\le100$ & +0.37 & $-$0.16 & $-$0.46 & $-$0.90 & -- \\
+ & [0.26, 0.40] & [$-$0.22, $-$0.14] & [$-$0.52, $-$0.45] & [$-$1.03, $-$0.74] &  \\
+Convex part of local $\ln w$ & $-$0.05 & $-$0.04 & $-$0.13 & $-$0.01 & -- \\
+ & [$-$0.07, $-$0.02] & [$-$0.05, $-$0.02] & [$-$0.16, $-$0.06] & [$-$0.13, 0.15] &  \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Marin, three corpora pooled (equal weights); $b_2=$ +0.027 to +0.032 by corpus}} \\[1pt]
+$\kappa$ free, all runs & $-$0.09$^{\dagger}$ & +0.07 & $-$0.09 & $-$0.43 & $-$1.03 \\
+ & [$-$0.09, $-$0.04] & [0.05, 0.08] & [$-$0.09, $-$0.04] & [$-$0.48, $-$0.36] & [$-$1.28, $-$0.95] \\
+$\kappa=1$, $M\le100$ & $-$0.07$^{\dagger}$ & $-$0.21 & $-$0.53 & $-$1.03 & $-$1.73 \\
+ & [$-$0.07, $-$0.03] & [$-$0.22, $-$0.17] & [$-$0.54, $-$0.44] & [$-$1.08, $-$0.91] & [$-$1.95, $-$1.63] \\
+Convex part of local $\ln w$ & +0.14 & $-$0.06 & +0.09 & +0.43 & +1.02 \\
+ & [0.10, 0.14] & [$-$0.08, $-$0.04] & [0.01, 0.09] & [0.32, 0.45] & [0.94, 1.21] \\
+\quad Largest-$M$ runs left out & +0.09 & $-$0.03 & +0.09 & +0.38 & -- \\
+\quad Runs with $M>1{,}000$ out & +0.13 & $-$0.05 & +0.10 & +0.46 & -- \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Entries: $\Delta=\ln(w_{\rm param}/w_{\rm local})$ averaged over the evaluation points in each bin of $M=D/N$, with 95\% percentile bootstrap intervals below; negative values mean that the parametric form understates the wedge. Local wedge: $w=(f_c-f_x)/(f_c+f_x)$ for $f=\ln L$, $x=\ln M$ and $c=\ln C$, from a Gaussian-kernel local quadratic in $(x,c)$ with leave-one-out cross-validated bandwidths (one for Marin's three corpora); it needs no functional form and no loss units. Evaluation points: 14 log-spaced $M$ on every budget line inside its observed range, kernel effective sample size at least 8 (number of points in parentheses). Comparators: the $\kappa$ family with $\kappa$ free fitted to all runs and the Chinchilla form ($\kappa=1$) fitted to the runs with $M\le100$, by Huber loss on $\ln L$ in the same FLOP-implied convention. Intervals: wild cluster bootstrap by budget (Webb weights, 999 draws), every fit recomputed in each draw; they exclude smoothing bias. $^{\dagger}$The percentile interval excludes the estimate at full precision, because the bootstrap population's statistic differs from the estimate by more than the draws' spread (bias-corrected basic intervals in the replication files). $b_2$: coefficient on $u^2$ in $\ln w_{\rm local}=b_1u+b_2u^2$, $u=\ln(M/M^*_{\rm local}(C))$, $M^*_{\rm local}(C)$ the root of $\ln w_{\rm local}=0$ on each budget line; $b_2>0$ means $\ln w$ is convex. Convex part: $\ln w_{\rm local}-b_1u$, the gap between the local wedge and its linear extrapolation from the local slope at the path; a form's $\Delta$ is minus the convex part plus a rotation, $\ln w_{\rm param}-b_1u$. Leave-corner-out rows (points only): without each budget's largest-$M$ run the local wedge is evaluated up to $M\approx320$ (the primary row's convex part on those points is 0.28), and without runs with $M>1{,}000$ up to $M\approx595$. Marin: 85, 84 and 88 runs on Comma, DCLM and Nemotron-CC (per-corpus rows in the replication files); a run whose loss exceeds that of the same configuration on fewer tokens is dropped (DCLM, 157M, $1.8\times10^{20}$ FLOP). The local wedge is evaluated up to $M\approx1{,}110$ on Marin (runs reach 3,706) and $M\approx290$ on Llama~3 (runs reach 643). The $M\ge1{,}024$ bin rests on 1--2 corner points per corpus and is fragile; Llama~3's 256--1,024 bin is two points at its lower end. Farseer (module ra1, a near-factorial grid): local quadratic in $(\ln N,\ln D)$ evaluated at its 25 sizes $\times$ 24 log-spaced $M$ up to 2,570 inside each size's observed range of $D$, kernel effective sample size at least 15; wild cluster bootstrap by model size.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{li2025predictableb}; \citet{marin2026ladders}; \citet{grattafiori2024llama}; \citet{czech2026llama3isoflop}; author's calculations.
+\end{tablenotes}
+\end{table}

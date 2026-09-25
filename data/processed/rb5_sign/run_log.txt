@@ -1,0 +1,11 @@
+[2026-09-25 14:53:39] rb5_sign: models data/processed/rb2_decisions/clean_models.csv; units data/processed/rb5_units/units_primary.csv; units (robustness) data/processed/rb2_decisions/units_primary.csv; B = 9999
+[2026-09-25 14:53:39] 77 models; 49 primary units; 56 robustness units
+[2026-09-25 14:53:39] S1: one path per study, simultaneous wild bootstrap-t bands (pooled residual variance)
+[2026-09-25 14:53:40] S2: PI-1 as published, t-intervals, widened slopes, normal inputs, every technology, conventions
+[2026-09-25 14:53:55] largest share identified as w < 1 in any set (comparison-only sets excluded): 0.0; in the comparison-only sets: 0.16666666666666666
+[2026-09-25 14:53:55] S3: breakdown frontier
+[2026-09-25 14:53:56] S4: magnitude bounds under the new set
+[2026-09-25 14:53:57] S5: table and paper numbers
+[2026-09-25 14:53:57] review: independent refits, loop recomputation, Monte Carlo coverage, reproductions, em-dash scan
+[2026-09-25 14:54:03] review: 27 of 27 checks passed
+[2026-09-25 14:54:03] done in 24s

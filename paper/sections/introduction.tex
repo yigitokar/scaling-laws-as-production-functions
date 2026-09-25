@@ -1,132 +1,129 @@
 % =====================================================================================================
-% Introduction (no heading, AER style). Version 2. Writer: section writer "introduction", 2026-09-24.
-% Numbers verified against output/tables/*.csv; sources, referee comments and open issues are listed in
-% paper/notes/writer2_introduction.md. Abstract, \thanks, JEL and keywords for main.tex are in that file.
+% Introduction (no heading, AER style). Version 3. Writer: section writer "introduction" (round 3), 2026-09-24.
+% v2 text saved in paper/sections/v2/introduction.tex. Numbers verified against output/tables/*.csv (rb1_sigmaC,
+% rb2_decisions, rb3_econ2, ra2_wedge); sources, referee comments and open issues are listed in
+% paper/notes/writer3_introduction.md, which also holds the abstract, JEL codes and keywords for main.tex.
+% [rb4 integration, 2026-09-24] sigma* numbers after Chinchilla's FLOP rebuild: paper/notes/integration_log_rb4.md.
+% [round 3, WP8, 2026-09-25] Items H3-H10 of paper/notes/round3_fixlist.md: virtual value of compactness, sigma* by
+% compute, 49 budget-level decisions, the rebuilt sign result (rb5_sign), the trend with a developer bootstrap,
+% "recipe-dependent" extrapolation (decision D-5), the general-isocost qualifier. Every number and its source file:
+% paper/notes/round3_WP8_log.md. The red TBD-m9 block follows Amendment 2, item 10, and is filled by the sentences of
+% Amendment 2, item 4 ("Placeholder sentences of the introduction and the conclusion").
 % =====================================================================================================
 
-Training a frontier language model has become one of the largest single investments in the technology sector. The
-compute used to train frontier models has grown about fivefold a year since 2018 (Section~\ref{sec:econ}), in line
-with \citet{sevilla2024training}, and the amortized cost of the largest training runs about 2.4-fold a year since 2016
-\citep{cottier2024rising}. Developers plan these runs with neural scaling laws, empirical relations between a model's
-loss $L$ on held-out text, its number of parameters $N$ and the number of tokens $D$ it is trained on
-\citep{kaplan2020scaling, hoffmann2022training}. Training costs about $6ND$ floating-point operations (FLOP), and a
-deployed model costs about $2N$ FLOP for every token it processes. A scaling law is therefore a production function
-with a known cost side, and the choice of $N$ and $D$ is a cost-minimization problem whose answer depends on expected
-use: a developer that expects heavy use trains a smaller model on more data \citep{sardana2024beyond}. Two objects
-govern this choice: how easily parameters and data substitute, and how much developers value a compact model. Both
-enter forecasts of data demand, of the energy and capital that serving will absorb, and of the returns to compute in
-models of AI and growth.
+Training a frontier language model has become one of the largest single investments in the technology sector: frontier
+training compute has grown four- to fivefold a year since 2018 \citep{sevilla2024training}, and its amortized cost
+about 2.4-fold a year since 2016 \citep{cottier2024rising}. Labs, our term for both the laboratories that run training
+experiments and the developers that release models, plan this work with neural scaling laws, which relate a model's
+loss $L$ on held-out text to its parameters $N$ and training tokens $D$ \citep{kaplan2020scaling,
+hoffmann2022training}. Training costs about $6ND$ floating-point operations (FLOP) and serving about $2N$ FLOP per
+token, so a scaling law is a production function with a known cost side, and the choice of $N$ and $D$ depends on what
+else a lab values: one that expects heavy use of a model \citep{sardana2024beyond}, or wants it to run on a laptop
+\citep{benallal2025smollm2}, trains a smaller model on more data. Two objects govern this choice, how easily
+parameters and data substitute and how much labs value a compact model; both enter forecasts of data demand and of the
+returns to compute in models of growth. Labs' optimization cuts both ways for measuring them.
 
-This paper asks what developers' data reveal about these two objects. The data are released models, whose sizes and
-token counts developers chose, and the experiments run to choose them. Our organizing idea is that optimization cuts
-both ways for measurement. A developer that minimizes cost places its models on the expansion path, where they carry
-almost no information about the curvature of the technology. The same optimization makes its choices informative about
-its objectives: the further a model lies from the path that minimizes training cost, the more the developer must value
-something that training cost leaves out. Designed experiments break the circle: they supply the technology, which then
-turns choices into revealed objectives.
+A lab that minimizes cost places its models on the expansion path, where they carry almost no information about the
+curvature of the technology. The same optimization makes its choices informative about its objectives: the further a
+model lies from the path that minimizes training cost, the more the lab must value something that training cost leaves
+out. Designed experiments break the circle: they supply the technology that turns choices into revealed objectives.
 
-\textit{Theory.}---Because training compute is multiplicative in parameters and data, isocost lines are straight lines
-in logs, and cost minimization equates the output elasticities of the two inputs, $\varepsilon_N$ and $\varepsilon_D$.
-An interior optimum therefore requires the elasticity of substitution between parameters and data, $\sigma$, to lie
-between zero and one (Lemma~\ref{lemma:sigma}). In logs a Cobb--Douglas isoquant is itself a straight line, so cost
-has an interior minimum on an isoquant only where the isoquant is more curved than that. The U-shaped IsoFLOP profiles
-that practitioners fit, loss against model size at fixed compute, are the empirical content of this restriction. The
-ratio $w \equiv \varepsilon_N/\varepsilon_D$ measures what else the developer values. A developer stops adding
-parameters when their marginal product equals their full marginal cost, which includes whatever it loses when a model
-of given quality is larger; tokens cost only training. Under any objective that rewards lower loss, and ignoring data
-costs and size-dependent FLOP prices, $w-1$ is therefore the marginal value of compactness at given quality divided by
-training expenditure (Proposition~\ref{prop:wedge}). We report it as a share of lifetime cost, $s \equiv (w-1)/w$. For
-a developer that serves its own models, $s$ is the planned serving share of lifetime cost. For a developer whose users
-bear the serving cost, it is the value the developer places on compactness, through adoption, memory tiers or latency.
+\textit{Theory.} Because training compute is multiplicative in parameters and data, isocost lines are straight in
+logs, and cost minimization equates the output elasticities of the two inputs, $\varepsilon_N$ and $\varepsilon_D$. An
+interior optimum then requires an elasticity of substitution $\sigma$ between zero and one (Lemma~\ref{lemma:sigma});
+U-shaped IsoFLOP profiles, loss against model size at fixed compute, are its empirical content. The ratio
+$w\equiv\varepsilon_N/\varepsilon_D$ measures what else a lab values. A lab stops adding parameters when their
+marginal product equals their full marginal cost, which includes whatever it loses when a model of given quality is
+larger; tokens cost only training. Under any objective that rewards lower loss, and absent data costs, caps on tokens
+and size-dependent FLOP prices, $w-1$ is therefore the value of compactness at given quality per unit of training
+cost, including the shadow value of any binding limit on size (Proposition~\ref{prop:wedge}); we report it as the
+compactness share $s\equiv(w-1)/w$. Compactness can pay through serving cost, adoption, memory tiers or latency; the
+wedge measures their sum.
 
-The same geometry limits what optimizing developers' data can reveal. On the expansion path, where parameters and data
-are functions of compute alone, the data identify the path and the loss--compute frontier but the curvature of the
-technology only through functional form (Proposition~\ref{prop:ident}). Off the path, the information about the
-compute-optimal ratio of tokens to parameters, $M^*$, is second order in developers' allocation errors, and the
-information about curvature is fourth order: curvature affects loss only through the loss from misallocation, which is
-itself second order. The better developers optimize, the less their data reveal. This binds in compute-optimal ladders
-run by a single laboratory; released models lie far off the path, and their heterogeneous values of compactness supply
-variation that is chosen rather than designed. Designed experiments restore identification without a functional form.
-With $\sigma^*$ the elasticity of substitution on the expansion path, $1/\sigma^*-1$ equals the curvature of the
-IsoFLOP profile in log model size at its minimum, divided by twice the slope of the loss--compute frontier in log
-compute (Proposition~\ref{prop:modelfree}). Along an IsoFLOP line, loss changes only through the input mix, and the
-frontier slope converts that curvature into a proportion of the marginal product, so neither the irreducible loss nor
-the functional form enters.
+On the expansion path, labs' data identify the path and the loss--compute frontier, but the curvature of the
+technology only through functional form (Proposition~\ref{prop:ident}). Off the path, information about the
+compute-optimal ratio of tokens to parameters, $M^*$, is second order in labs' allocation errors, and information
+about curvature is fourth order: curvature affects loss only through the loss from misallocation, which is itself
+second order. Designed experiments restore identification without a functional form: with $\sigma^*$ the elasticity on
+the expansion path, $1/\sigma^*-1$ equals the curvature of the IsoFLOP profile in log model size at its minimum,
+divided by twice the slope of the loss--compute frontier (Proposition~\ref{prop:modelfree}). Beyond the largest
+designed budget, the sign of $w-1$ needs even less: for any technology whose IsoFLOP profiles have a single peak and
+no other critical point, a model with $M\equiv D/N$ trained with compute $C$ is over-trained exactly when $M>M^*(C)$,
+so bounds on $M^*(C)$ identify the sign (Proposition~\ref{prop:pi}).
 
-\textit{The technology.}---We apply this estimator to the IsoFLOP experiments of three laboratories, Chinchilla
+\textit{The technology.} We apply the estimator to the annealed IsoFLOP experiments of three laboratories, Chinchilla
 \citep{hoffmann2022training}, Llama~3 \citep{grattafiori2024llama} and Marin's ladders on three corpora
-\citep{marin2026ladders}, and to the near-factorial Farseer sweep \citep{li2025predictableb}. It gives a common
-$\sigma^*$ of about 0.70, with a 95 percent confidence interval of $[0.67, 0.72]$ and no detectable heterogeneity
-across designs. Parametric fits that free the outer curvature of the loss function come close to this value, while the
-standard Chinchilla form overstates $\sigma^*$ on Llama~3's profiles. The level of the technology does not travel: the
-compute-optimal ratio $M^*$ differs by more than an order of magnitude across designs, and the allocation exponent,
-which governs how compute-optimal model size grows with compute, also differs across designs and published laws. Our
-own pre-registered experiment trains the same architectures on two corpora of different quality with a shared
-tokenizer. \textcolor{red}{[TBD-m9: one-sentence headline---model-free and flexible-form $\sigma^*$ by corpus; whether
-the quality filter is Hicks-neutral or factor-biased on both validation sets and on WikiText; the sign of the
-Chinchilla form's extrapolation error in $w$ at high tokens per parameter.]}
+\citep{marin2026ladders}, and to the near-factorial Farseer sweep \citep{li2025predictableb}. Where the designs
+overlap, $10^{19}$ to $3\times10^{20}$ FLOP, $\sigma^*$ is about 0.7 with no common drift; one estimate per study
+gives 0.69, with a 95 percent confidence interval of $[0.64, 0.73]$, and FLOP and parameter conventions, estimators
+and bandwidths move this mean between 0.66 and 0.70. At $6\times10^{20}$--$3\times10^{21}$ FLOP, in the two IsoFLOP
+designs that reach those budgets, $\sigma^*$ is about 0.59 (Farseer's local path gives 0.66 at $10^{21}$), and beyond
+the designs it is only partially identified. On Llama~3 and Farseer, parametric fits come close to these values only
+when the outer curvature of the loss function is free. The level of the technology does not travel: at $10^{21}$ FLOP,
+$M^*$ differs more than tenfold across the sweeps and published laws we use. Our own experiment, with a pre-analysis
+plan committed before estimation, trains small transformers at $2\times10^{14}$ to $10^{17}$ FLOP on two corpora that
+differ in quality. \textcolor{red}{[TBD-m9: one sentence per Amendments~1 and~2: model-free $\sigma^*$ by corpus, $[x,
+y]$; neutrality of the filter; extrapolation slope against its null.]}
 
-\textit{What over-training reveals.}---We invert developers' first-order conditions on a clean inference-demand sample
-of 77 open-weight base models released in 2023--2025, which excludes research suites, mixture-of-experts models, and
-distilled or pruned models. The inversion needs two features of the technology, the zero point $M^*(C)$ at the model's
-own compute $C$ and the curvature $1/\sigma^*-1$, because in the fitted families $\ln w = (1/\sigma^*-1)\ln[M/M^*(C)]$
-with $M \equiv D/N$. Under our reference technology, the Chinchilla data fitted with the outer curvature free, the
-median model is trained as if compactness were worth three-quarters of lifetime cost ($s = 0.75$), and almost every
-model is over-trained relative to the training-optimal path. For developers that publish their own scaling laws, the
-median under their own technology is 0.61, slightly below the reference for the same models. The trend is more robust
-than the level. Among production-scale open-weight releases, the compute-weighted share under the reference rose from
-0.04 in 2019--2022 to 0.82 in 2025, and it rises under every technology we consider.
+\textit{What over-training reveals.} We invert labs' first-order conditions on a clean sample of 77 dense open-weight
+base models released in 2023--2025 by developers that disclose training tokens. Family members trained on one token
+budget reveal one number, so the models form 49 allocation decisions. In the families we fit, $\ln
+w=(1/\sigma^*-1)\ln[M/M^*(C)]$, so the inversion needs the curvature and the zero point $M^*(C)$ at each model's
+compute. Under our reference technology, the Chinchilla data fitted with the outer curvature free, the median decision
+was made as if a model one percent smaller at the same loss were worth 2.8 percent of its training cost ($s=0.73$),
+with a 95 percent interval for $s$ of $[0.51, 0.81]$ under a cluster bootstrap. The level cuts both ways: a zero-point
+allowance as large as the shift across DataDecide's recipes lowers the models' median lower bound on $s$ to 0.03, a
+curvature that keeps falling with compute raises the median decision's $s$ to 0.87 at $\sigma^*=0.60$ (zero points
+fixed), and the 20 decisions under a possible cap on tokens are lower bounds; the 29 point estimates have a median of
+0.74. The evidence is more consistent with adoption and memory tiers than with serving cost: models built for devices
+are the most over-trained and open-weight models more so than closed ones at given compute, while too few developers
+serve their own sizes for a serving test to have power.
 
-These objects matter for economic questions (Section~\ref{sec:econ}). The allocation exponent governs forecasts of
-data demand: across its estimates, compute-optimal data demand grows by a factor of 2.0 to 2.8 a year at the current
-growth rate of compute. The curvature $\sigma^*$, by contrast, barely affects the cost of a binding cap on unique
-training data; how quickly repeated data lose value matters far more \citep{muennighoff2023scaling,
-villalobos2022run}.
+\textit{The sign and the trend.} The sign of over-training is more robust than its size. With $M^*$ extrapolated along
+the IsoFLOP designs' own paths from their largest bracketed budgets, with the sampling error of level and slope, $w>1$
+is identified for 78 percent of models and 69 percent of decisions. The share is 53 percent if labs' $M^*$ may differ
+by a factor of 3.4, the shift across data recipes in DataDecide \citep{magnusson2025datadecide}, 13 percent if only
+normal inputs bound the path and 23 percent if any technology in our set may anchor it, and it stays above one half up
+to a factor of about 3.7. Identified models carry only 24 percent of training compute, because flagships lie close to
+the path. Inside the designs, parametric forms understate the wedge at high $M$ in all three recipes that allow the
+check, but the local log wedge is convex in two and concave in one, so the direction of extrapolation error in $M$
+beyond the designs is recipe-dependent. From 2023 to 2025 revealed over-training rose steeply: under the reference the
+compute-weighted share over decisions rose from 0.24 to 0.81 and the median from 0.49 to 0.74, under every technology
+in our set and without any single developer, though a bootstrap over developers establishes the rise over the two
+years but not the step from 2024 to 2025. The trend largely restates the rise in tokens per parameter, and measures a
+rising value of compactness only if developers optimized against technologies like ours.
 
-\textit{What is robust.}---The model-free $\sigma^*$ is stable across the annealed designs of three laboratories. It
-is lower, about 0.51, on the small-scale ladder of \citet{porian2024resolving}, whose runs were not annealed, and
-parametric estimates from small sweeps without IsoFLOP profiles are heterogeneous. The sign of over-training is also
-robust. For any technology with U-shaped IsoFLOP profiles, a model is over-trained exactly when its $M$ exceeds
-$M^*(C)$, so the sign needs only bounds on $M^*$ beyond the largest designed budget (Proposition~\ref{prop:pi}). With
-$M^*$ anchored at the largest IsoFLOP budgets and its drift bounded by published expansion paths, $w > 1$ is
-identified for 86 percent of the clean sample and $w < 1$ for none. The level of $s$ is not robust. It depends on
-$M^*$ at frontier scale, which no public design observes, and the median share ranges from 0.17 to 0.85 across the
-technologies we specify ex ante. Inside Farseer's design, where extrapolation in tokens per parameter can be checked,
-parametric forms understate $w$ at high $M$; beyond the designs in compute, nothing is observed. Open-weight models
-are more over-trained than closed ones at given compute, and with few developers in the sample, serving one's own
-models does not significantly predict over-training, so for developers that do not serve their models we read $s$ only
-as a value of compactness. We treat $s$ as ordinal and conditional on a technology.
+\textit{Why these objects matter.} Which objects matter is itself a finding (Section~\ref{sec:econ}). The allocation
+exponent, among the least portable objects, drives forecasts of data demand: across its estimates, compute-optimal
+data demand grows 2.0- to 2.9-fold a year at current compute growth. For the median open-weight decision, the rise in
+over-training since 2023 has multiplied tokens per model at given compute by about 2.1 a year (95 percent interval
+0.95 to 4.4). The curvature $\sigma^*$ scales the revealed value of compactness but barely moves the cost of a binding
+cap on unique data when repeated data lose value slowly; as such caps bind, measured wedges will understate the value
+of compactness, so a flattening of the trend would not show that labs value it less. Levels hinge on $M^*$ at frontier
+compute, which no public design observes; IsoFLOP profiles published at frontier budgets would turn our signs into
+levels.
 
-\textit{Related literature.}---\citet{hao2026theory} model a profit-maximizing developer that pays for training and
-serving, and derive the elasticity of substitution implied by the Chinchilla form. They solve the developer's problem
-under a Leontief approximation, which rules out over-training. Proposition~\ref{prop:wedge} inverts the first-order
-conditions of such a problem when $\sigma > 0$ and extends it to developers that do not bear serving costs.
-\citet{sardana2024beyond}, \citet{bian2025scaling} and \citet{roberts2026test} solve the forward problem: optimal size
-and data given inference demand, latency constraints or repeated sampling at test time. We solve the inverse problem;
-their mechanisms are sources of the value of compactness it recovers. \citet{kricheli2026tokens} show that designs
-with a fixed ratio of tokens to parameters leave scaling-law parameters ill-conditioned when the two exponents are
-close. Proposition~\ref{prop:ident} shows that on a compute-optimal path the same degeneracy arises whatever the
-exponents, because equal decay rates of the two loss terms are what compute optimality means, and it gives the rate at
-which allocation errors restore information. \citet{mertens2026secret} estimate developer-specific compute efficiency
-from cross-developer regressions, and \citet{whitfill2025note} shows that observational estimates of algorithmic
-progress are subject to selection bias. Online Appendix~\ref{app:obs} takes our framework to such observational data.
+The methods travel beyond language models. The identification result gives rates to the observation of
+\citet{marschak1944random} and \citet{bond2005adjustment} that optimizing firms facing common prices do not reveal
+their technology. The model-free estimator, with a correction for the curvature of the isocost itself, applies
+wherever experimenters vary two inputs at known cost (Online Appendix Corollary~\ref{cor:A-general}), as in factorial
+fertilizer trials, chip-design sweeps and dose-combination trials. The sign result identifies the direction of a
+first-order-condition wedge from the location of the cost-minimizing input ratio alone, which bears on measuring
+markups and input distortions \citep{deloecker2012markups, raval2023testing} wherever designed experiments locate that
+ratio, as in engineering or agronomic trials; production data alone do not.
 
-In industrial organization, the observation that optimizing firms facing common prices generate data that do not
-identify the technology goes back to \citet{marschak1944random}. \citet{bond2005adjustment} show that identification
-then requires variation in relative prices, adjustment costs or optimization errors, and
-\citet{ackerberg2015identification} and \citet{gandhi2020identification} study the consequences for proxy and
-first-order-condition estimators. Language-model training is the cleanest case, because FLOP accounting gives every
-developer the same log-cost weights. We add the rates at which information returns with allocation errors, the
-design-theoretic orders of \citet{box1959design} generated here by economic wedges, and a designed-experiment
-estimator that needs no functional form. Our inversion follows the production approach of
-\citet{deloecker2012markups}, but $w$ is not a markup: it prices model size beyond its cost in training. Its
-elasticities come from experiments rather than from estimation on the same choices, which avoids the circularity
-stressed by \citet{doraszelski2021reexamining} at the cost of external validity. The critiques of
-\citet{bond2020unpleasant} and \citet{raval2023testing}, on the output concept and factor-biased technology, carry
-over, and Section~\ref{sec:wedge} takes them up.
-
-Section~\ref{sec:framework} sets out the training problem, Section~\ref{sec:ident} what optimizing developers' data
-identify, Section~\ref{sec:tech} the technology, Section~\ref{sec:wedge} what over-training reveals, and
-Section~\ref{sec:econ} the economic implications; Section~\ref{sec:concl} concludes. Online
-Appendices~\ref{app:proofs}--\ref{app:wedge} contain proofs, data construction, Monte Carlo designs and robustness
-results.
+\textit{Related literature.} \citet{villalobos2023trading}, \citet{erdil2024optimally}, \citet{sardana2024beyond},
+\citet{bian2025scaling} and \citet{roberts2026test} solve the forward problem: optimal size and data given inference
+demand, latency or repeated sampling at test time. We solve the inverse problem; their mechanisms, the cost of serving
+\citep{erdil2025inference} and who bears it determine what the recovered value of compactness contains.
+\citet{hao2026theory} model a developer that pays for training and serving under a Leontief approximation, which rules
+out over-training; Proposition~\ref{prop:wedge} inverts such problems when $\sigma>0$, also for labs that do not bear
+serving costs. \citet{kricheli2026tokens} show that fixed-ratio designs leave scaling-law parameters ill-conditioned
+when the two exponents are close; on a compute-optimal path the degeneracy arises whatever the exponents
+(Proposition~\ref{prop:ident}), and economic wedges supply the design spread that a curvature parameter needs
+\citep[][see also \citealp{ackerberg2015identification, gandhi2020identification}]{kiefer1959optimum,box1959design}.
+The inversion follows the production approach of \citet{deloecker2012markups}, but $w$ is not a markup, and its
+elasticities come from experiments, which avoids the circularity stressed by \citet{doraszelski2021reexamining} at the
+cost of external validity; the critiques of \citet{bond2020unpleasant} and \citet{raval2023testing} carry over
+(Section~\ref{sec:wedge}). A companion paper \citep{okar2026observational} takes the framework to observational data
+and algorithmic progress \citep{mertens2026secret, whitfill2025note}.

@@ -1,8 +1,10 @@
-# Memo — module m9_sweeps: our controlled two-corpus experiment — DRAFT (dry run; FineWeb pending)
+# Memo, module m9_sweeps: our controlled two-corpus experiment (DRAFT: dry run; FineWeb pending)
 
 Module owner: m9_sweeps (Claude). Date: 2026-09-24. Entry point: `code/analysis/m9_sweeps/run.py`.
 
 **Binding plan.** `paper/notes/m9_preanalysis_plan.md` (commit bd5c0ad, 2026-09-24 03:12:31 +03, the only commit touching the file). Deviations are listed in Section 6.
+
+**Update of 25 September 2026 (round 3).** Amendment 2 (`paper/notes/m9_preanalysis_amendment2.md`), written before any FineWeb technology estimate or tilt, now also binds: it defines when a σ\* lies inside or outside [0.60, 0.76], declares FineWeb-Edu's Q1 and Q3 arms exploratory, restates the outcome map, sets the conditions for a robust "factor-biased" verdict and fixes the calibration factors from a second design-only study (`code/analysis/m9_sweeps/m9_power_v2.py`, `m9_coverage_v2.py`; outputs `output/tables/m9_sweeps_power_v2*.csv`), which replace the factors of §0.3 item 4 and D8. [review] Amendment 2 also replaces D8's restricted tilt test (§0.3 item 2) by the CR2 interval widened by 1.25, because study v2 gives that test size 0.092 and power 0.65 per validation set (Amendment 2, item 6; `m9_sweeps_power_v2_tilt.csv`). Section 6 now gives the time of every deviation. "Companion" in this draft means the CR2 scheme.
 
 **Status.**
 - This is a DRAFT written during a dry run.
@@ -16,7 +18,7 @@ Module owner: m9_sweeps (Claude). Date: 2026-09-24. Entry point: `code/analysis/
 
 ---
 
-## 0. Power calculation (plan §4) — computed before any estimation on the sweep results
+## 0. Power calculation (plan §4), computed before any estimation on the sweep results
 
 **Code and outputs.**
 - Code: `code/analysis/m9_sweeps/m9_power.py` (`m9_coverage.py` for §0.3).
@@ -113,18 +115,18 @@ This check (`m9_coverage.py`) was run before any estimation. It uses 40 replicat
 - for the tilt test, the restricted wild cluster bootstrap ("WCR"), which imposes χ = 0 through the Hicks-neutral corpus-pair fit.
 
 **Setup.** 40 replications at s = 0.005, with 199 draws each (99 for "cr2cv"). The Monte Carlo error on a coverage rate is about ±0.07. Coverage is measured against the noise-free value of each estimator on the design, which strips out smoothing bias. Output: `output/tables/m9_sweeps_power_coverage.csv`. Schemes:
-- **wcu**: the plan's scheme — Webb wild cluster bootstrap on the raw residuals.
+- **wcu**: the plan's scheme, the Webb wild cluster bootstrap on the raw residuals.
 - **cr2**: the same draws on CR2 leverage-adjusted cluster residuals.
 - **cr2cv**: cr2 with the leave-one-out CV bandwidth re-selected in every draw (model-free statistics only).
 
 | Statistic (FineWeb-Edu, P) | MC s.d. | Coverage, wcu | Coverage, cr2 | Coverage, cr2cv | MC s.d. / boot s.e., best scheme |
 |---|---|---|---|---|---|
-| σ*_κ | 0.006 | 0.83 | **0.88** | — | 1.12 |
+| σ*_κ | 0.006 | 0.83 | **0.88** | n.a. | 1.12 |
 | Model-free σ*, FLOP path | 0.021 | 0.40 | 0.58 | **0.65** | 1.73 |
 | Model-free σ*, w = 1 path | 0.013 | 0.45 | 0.65 | **0.70** | 1.57 |
 | Q3 slope | 0.074 | 0.55 | **0.75** | 0.68 | 1.39–1.75 |
-| Tilt χ̂ (χ = 0.22) | 0.021 | 0.68 | **0.78** | — | 1.41 |
-| Tilt χ̂ (χ = 0) | 0.015 | 0.80 | **0.93** | — | 0.95 |
+| Tilt χ̂ (χ = 0.22) | 0.021 | 0.68 | **0.78** | n.a. | 1.41 |
+| Tilt χ̂ (χ = 0) | 0.015 | 0.80 | **0.93** | n.a. | 0.95 |
 
 **Tilt tests of χ = 0 at 5 percent.**
 
@@ -159,7 +161,7 @@ The numbers below come from the 17:24 pass. They are byte-identical to the 17:12
 
 ---
 
-## 1. Headline findings — PRELIMINARY, FineWeb-Edu only (FineWeb, high-M runs and seeds pending)
+## 1. Headline findings: PRELIMINARY, FineWeb-Edu only (FineWeb, high-M runs and seeds pending)
 
 > Everything in this section is a dry-run estimate on one corpus. It must not be quoted in the paper until the final run. The between-corpus questions (Q2, and the σ* equality test in Q1) have not been estimated.
 >
@@ -170,9 +172,9 @@ The numbers below come from the 17:24 pass. They are byte-identical to the 17:12
 | Estimator (FineWeb-Edu, main grid) | Convention P | Convention T |
 |---|---|---|
 | Model-free σ*, FLOP-optimal path (P) / w = 1 path (T) | **0.666** [0.659, 0.673] {0.652, 0.683} | **0.607** [0.602, 0.614] {0.596, 0.626} |
-| Model-free σ*, w = 1 path (P6) | 0.665 [0.660, 0.671] {0.651, 0.676} | — |
+| Model-free σ*, w = 1 path (P6) | 0.665 [0.660, 0.671] {0.651, 0.676} | n.a. |
 | σ*_κ (κ family, Huber) | **0.662** [0.635, 0.686] {0.634, 0.687} | **0.605** [0.588, 0.622] {0.578, 0.625} |
-| σ*_κ on the FLOP-optimal path | 0.668 [0.641, 0.693] | — |
+| σ*_κ on the FLOP-optimal path | 0.668 [0.641, 0.693] | n.a. |
 | σ*, Chinchilla form (κ = 1) | 0.720 [0.691, 0.746] {0.683, 0.757} | 0.654 [0.628, 0.681] {0.618, 0.687} |
 | κ̂ | 0.36 [0.19, 0.50] | 0.46 [0.28, 0.63] |
 | Gaussian NLS: κ family / κ = 1 | 0.669 / 0.717 | 0.602 / 0.647 |
@@ -355,22 +357,43 @@ For the TBD-m9 placeholders, and only if the final run confirms them:
 - **Q3 levels** are negative in every sample and convention except the T intercept at M = 100.
 - **Secondary inference.** The seed-covariance bootstrap is not yet run (no seeds).
 
-## 6. Deviations from the pre-analysis plan, with reasons
+## 6. Deviations from the pre-analysis plan, with times and reasons
 
-| # | Deviation | Reason | Effect |
-|---|---|---|---|
-| D1 | High-M runs trimmed: FineWeb-Edu (128,4),(256,4); FineWeb (128,4) only; the 3.2B continuation of (128,2) dropped | GPU time (recorded after the plan) | Less reach and replication for Q3, especially for FineWeb |
-| D2 | A machine reboot at 15:34 interrupted both queues. Interrupted trunks were re-run from scratch | Hardware | Some trunks' early and late endpoints come from two runs of the same seed. Assumed identical up to kernel nondeterminism; unverified until the duplicate cells in §7.1 finish |
-| D3 | Bits per byte use the bytes/token of the **scored** validation tokens, not `meta.json`'s full-file value | The plan's definition ("bytes/token of the evaluation set") read literally. `meta.json` differs by −0.8 percent for FineWeb | Levels on FineWeb validation only; exponents, σ*, tilts and wedges unaffected. Both versions are stored (`bpb_*_meta`) |
-| D4 | Under P the compute-optimal path is w = η(N) (actual FLOPs), so the plan's identity is applied in its generalized form. A "P6" variant (w = 1 path, non-embedding N) and parametric σ on the FLOP path are added | The plan's formula holds only for C = 6ND; under P, C = fpt(N)·D with η = 0.52–0.93 | Clarification, not a change of object. P6 is reported alongside |
-| D5 | Model-free details not fixed by the plan: LOO-CV bandwidth over {0.4…1.5}×sd; 12 compute levels; at least 3 widths per isocost; averaging over levels | Needed to implement §2(i) | Bandwidth sensitivity is reported (§5) |
-| D6 | Intervals are basic bootstrap intervals; Q2 tilt equality uses joint draws with one weight per width shared by both corpora | Interval type and cross-corpus handling unspecified | None |
-| D7 | Q2 on WikiText. Main-grid runs were never evaluated on WikiText, so a corpus-pair model on WikiText is not identified. WikiText enters through matched-cell sign checks (lrcorner, seedcorner, hiM, FineWeb seeds) | Design: evaluation on WikiText was added only for the new runs | The quality vs distribution-match classification on WikiText rests on few cells |
-| D8 | **Size-corrected companion inference**, pre-declared before estimation (§0.3): CR2 cluster residuals; bandwidth re-selected in each draw; restricted wild bootstrap test of χ = 0; calibration factors for the model-free and Q3 intervals. The plan's intervals are still reported | The design Monte Carlo shows the plan's intervals cover 40–83 percent at nominal 95, and the tilt test rejects a true null about 20 percent of the time | Conclusions are called robust only under plan + companion (+ seeds) |
-| D9 | Power DGP choices: Besiroglu exponents; anchor M* = 20 and 3.8 nats; ρ = 0.5; 199 draws in the power bootstrap (999 in estimation) | The plan fixes noise levels but not the DGP | Sensitivity cells reported (§0.1) |
-| D10 | Q6 compute levels are doubling bins of compute. The on-path point is the one nearest the κ-family path (1 per bin; 2 per bin as sensitivity) | The plan does not define "each compute level" on a factorial grid | — |
-| D11 | Q5 argmins: quadratic in ln LR clipped to the tested range ± 0.35 (the rule in `fit_lr.py`); corner excess measured against the lower of the quadratic minimum and the best tested LR | Implementation of "interpolated argmins" | Grid-based excesses are also reported |
-| D12 | Clusters are architectures (d, L). hiM (256,4) shares width 256's cluster; hiM duplicates of main cells are excluded from fits | Trunk sharing (§7.1) | — |
+**Update of 25 September 2026 (round-3 fix list, item X4).** Every deviation now carries a time. The source of each time
+is given in brackets: [commit] is the git commit time of the first commit that contains the change (used where this memo
+gave no time); [log] is a timestamp written by the queue scripts into `data/processed/sweep/overnight.log`,
+`extras.log` or `queue_e.log`; [file] is a file modification time; [system] is the machine's reboot record (`last
+reboot`); [account] is our own account, not independently verifiable. All times are +03 (UTC+3) on 24 September 2026
+unless marked 25 Sep. D13 to D16 are new. "The D8 companion" is now called the CR2 scheme (Amendment 2, item 10).
+
+| # | Deviation | Time [source] | Reason | Effect |
+|---|---|---|---|---|
+| D1 | High-M runs trimmed: FineWeb-Edu (128,4),(256,4); FineWeb (128,4) only; the 3.2B continuation of (128,2) dropped | 07:48 [commit `acc8286`] | GPU time (recorded after the plan) | Less reach and replication for Q3, especially for FineWeb; the high-M tuning checks exist for FineWeb-Edu only and stop at 1.6B tokens |
+| D2 | A machine reboot interrupted both queues; interrupted trunks were rerun from scratch (same seed and data order) | reboot 15:32 [system] (earlier versions of this memo said 15:34); queues restarted 15:37 [log] | Hardware | Some trunks' early and late endpoints come from two runs of the same seed. Assumed identical up to kernel nondeterminism; checked on the duplicate cells (§7.1) |
+| D3 | Bits per byte use the bytes/token of the **scored** validation tokens, not `meta.json`'s full-file value | 17:44 [commit `a5f47f8`] | The plan's definition ("bytes/token of the evaluation set") read literally. `meta.json` differs by −0.8 percent for FineWeb | Levels on FineWeb validation only; exponents, σ*, tilts and wedges unaffected. Both versions are stored (`bpb_*_meta`) |
+| D4 | Under P the compute-optimal path is w = η(N) (actual FLOPs), so the plan's identity is applied in its generalized form. A "P6" variant (w = 1 path, non-embedding N) and parametric σ on the FLOP path are added | 17:44 [commit `a5f47f8`] | The plan's formula holds only for C = 6ND; under P, C = fpt(N)·D with η = 0.52–0.93 | Clarification, not a change of object. P6 is reported alongside |
+| D5 | Model-free details not fixed by the plan: LOO-CV bandwidth over {0.4…1.5}×sd; 12 compute levels; at least 3 widths per isocost; averaging over levels | 17:44 [commit `a5f47f8`] | Needed to implement §2(i) | Bandwidth sensitivity is reported (§5) |
+| D6 | Intervals are basic bootstrap intervals; Q2 tilt equality uses joint draws with one weight per width shared by both corpora | 17:44 [commit `a5f47f8`] | Interval type and cross-corpus handling unspecified | None |
+| D7 | Q2 on WikiText. Main-grid runs were never evaluated on WikiText during training, so a corpus-pair model on WikiText is not identified. WikiText enters through matched-cell sign checks (lrcorner, seedcorner, hiM, FineWeb seeds) | 17:44 [commit `a5f47f8`] | Design: evaluation on WikiText was added only for the new runs | The quality vs distribution-match classification on the neutral sets rests on matched cells (see D13, D16) |
+| D8 | **Size-corrected inference, the CR2 scheme**, pre-declared before estimation (§0.3): CR2 cluster residuals; bandwidth re-selected in each draw; restricted wild bootstrap test of χ = 0; calibration factors for the model-free and Q3 intervals. The plan's intervals are still reported | written at about 17:05 [account]; coverage outputs that fix its factors 16:55–17:02 [file]; first committed 17:44 [commit `a5f47f8`] | The design Monte Carlo shows the plan's intervals cover 40–83 percent at nominal 95, and the tilt test rejects a true null about 20 percent of the time | Conclusions are called robust only under plan + CR2 scheme + seed covariance. Calibration factors replaced by Amendment 2, item 6 (design-only study v2); [review] its restricted tilt test replaced by the CR2 interval widened by 1.25 (same item) |
+| D9 | Power DGP choices: Besiroglu exponents; anchor M* = 20 and 3.8 nats; ρ = 0.5; 199 draws in the power bootstrap (999 in estimation) | 17:44 [commit `a5f47f8`]; power outputs 16:44 [file] | The plan fixes noise levels but not the DGP | Sensitivity cells reported (§0.1); v2 adds κ-family truths and ρ cells |
+| D10 | Q6 compute levels are doubling bins of compute. The on-path point is the one nearest the κ-family path (1 per bin; 2 per bin as sensitivity) | 17:44 [commit `a5f47f8`] | The plan does not define "each compute level" on a factorial grid | None |
+| D11 | Q5 argmins: quadratic in ln LR clipped to the tested range ± 0.35 (the rule in `fit_lr.py`); corner excess measured against the lower of the quadratic minimum and the best tested LR | 17:44 [commit `a5f47f8`] | Implementation of "interpolated argmins" | Grid-based excesses are also reported |
+| D12 | Clusters are architectures (d, L). hiM (256,4) shares width 256's cluster; hiM duplicates of main cells (and the seed-corner 200M endpoint, which duplicates the first seed replicate's cell) are excluded from fits and used as nondeterminism checks | 17:44 [commit `a5f47f8`] | Trunk sharing (§7.1) | None on the estimates; the duplicates validate reruns (D2, D14) |
+| D13 | **Neutral-set losses computed after training** from saved endpoint weights (`code/sweep/eval_ckpt.py`, queue D; output `results_posthoc.jsonl`, flags `posthoc_<set>`), for runs whose job lists were generated before the trainer update of 17:44: the FineWeb main grid (list of 15:37; saved weights at widths 320–640) and the FineWeb-Edu high-M runs (list of 17:33; saved weights for (256,4) only); also the FineWeb-Edu seed replicates (evaluated on edu and web only by design). Same evaluation code; each row re-evaluates the recorded sets (the first check, width 448 at 25M, reproduced them exactly) | identified and `eval_ckpt.py` committed 23:07 [commit `4088638`]; merged into the pipeline 25 Sep 00:49 [commit `642f9f9`] | The evaluation sets are fixed when a queue's job list is generated | Neutral sets exist for FineWeb widths 320–640 (post hoc) but never for the original FineWeb-Edu main grid or FineWeb widths 128–256; the between-corpus tilt on neutral sets is not identified on the main grid; FineWeb-Edu (128,4) has WikiText only |
+| D14 | **Second machine reboot**; interrupted trunks rerun from scratch (same seed and data order): FineWeb main width 640 at 200M and FineWeb (128,4) high-M at 1.6B and 3.2B. The restarted queues generated new job lists, so the rerun FineWeb width-640 endpoint at 200M is evaluated on all five sets during training (the other main-grid FineWeb endpoints only on edu and web), and the (128,4) rerun logs a trunk evaluation at 1.6B. Queue C (FineWeb-Edu hiMlr, hiMwd) was started concurrently instead of after queue B | reboot 25 Sep 03:17 [system]; queues restarted 25 Sep 10:07 [log]; restart committed 25 Sep 10:11 [commit `00ac237`] | Hardware (apparently operating-system updates) | As D2; the checks on duplicate cells cover both reboots (M9-4). Scheduling only for queue C |
+| D15 | **Comparison convention changed** by Amendment 1 from the plan's total count (T) to FLOP-effective parameters N_F = C/(6D) for comparisons with the public designs | written about 17:40 [account; header corrected in `b2e9bf8`]; committed 17:44 [commit `a5f47f8`] | Referee request (round 2) | Made after the FineWeb-Edu dry-run estimates in T (0.607) and P (0.666) existed; N_F is 1.03–1.07 times T here, so Amendment 2 declares FineWeb-Edu's Q1 and Q3 arms exploratory |
+| D16 | **Added runs (Amendment 2, X3(a))**: FineWeb-Edu main-grid widths 384 and 512 retrained (tag `mainre`, same seed and data order) with all five evaluation sets, trunk evaluations and saved weights | launched 25 Sep 11:34:53 [log `queue_e.log`]; committed 25 Sep 11:35 [commit `5599198`] | Matched neutral-set cells at the rule LR beyond width 128; FineWeb-Edu arm of the trunk-versus-endpoint comparison; nondeterminism checks | Exploratory only; the original endpoints stay in every registered fit (Amendment 2, item 9) |
+
+**Changes to the outcome-to-headline map after Amendment 1** (each on public-design evidence alone; no estimate from this
+experiment enters any of them):
+
+| # | Change | Time [source] |
+|---|---|---|
+| A1 | σ* compute window of the headline narrowed from 10^19–10^21 FLOP (Amendment 1) to "up to 3×10^20" (v3), then "at 10^19–3×10^20" (round 3) | 22:27 [commit `248d69f`] |
+| A2 | Chinchilla's σ* moved from total parameters (0.673; study-level mean 0.693) to FLOP-effective parameters (0.660; 0.687) | 25 Sep 00:21 [commit `d2777f6`] |
+| A3 | Q3 recipe count: "three recipes" (Marin and Llama 3 added to Farseer) instead of Amendment 1's one or two; then "recipe-dependent" beyond the designs (round 3) | 22:27 [commit `248d69f`]; round-3 revision 25 Sep |
+| A4 | Amendment 2 (`paper/notes/m9_preanalysis_amendment2.md`): definitions of inside/outside, map restated, Q2 robustness conditions, calibration factors from the design-only study v2, secondary and exploratory analyses, X3(a) declared | written 25 Sep from 11:45 [account]; commit and push times as recorded by git and GitHub (Online Appendix B4) |
 
 ## 7. Open issues and things in the design or data that look wrong
 
@@ -391,7 +414,7 @@ For the TBD-m9 placeholders, and only if the final run confirms them:
    - It (a) drives the Q3 slope through the (128, 800M) endpoint, (b) contaminates between-corpus contrasts at width 128 (matched-cell jumps of 4–6 percent on WikiText), and (c) is poorly fitted by any smooth form.
    - The four-layer-floor robustness sample exists for this reason. The (128,4) hiM runs will show whether the high-M corner behaves once depth ≥ 4.
 4. **No WikiText on the main grid** (D7). The neutral-set check for Q2 can only be a sign check on off-rule-LR and seed cells. FineWeb-Edu seed runs (`seeds edu`) are also not evaluated on WikiText (`run_grid.py`: evals="edu,web"). Adding WikiText to them is cheap if the queue has not reached them.
-5. **The plan's inference is anti-conservative on this design** (§0.2–0.3). This is the largest methodological risk for the paper's claims. The pre-declared companion fixes the size of the tilt test, but not the coverage of the model-free and Q3 intervals (best 0.65–0.75).
+5. **The plan's inference is anti-conservative on this design** (§0.2–0.3). This is the largest methodological risk for the paper's claims. The pre-declared companion fixes the size of the tilt test, but not the coverage of the model-free and Q3 intervals (best 0.65–0.75). [review] With 500 replications (study v2) the restricted test has size 0.092 and power 0.65 per validation set, so Amendment 2 replaces it; the calibrated intervals of Amendment 2 cover 0.84 to 0.96 across the v2 cells (0.81 to 0.95 for the difference between corpora; both designs pooled), below nominal, because the basic interval's half-width is about 1.8 bootstrap s.e. and the s.e. varies across replications (`round3_WP1_review.md`).
 6. **Q3's null is not zero.** The design's null value is −0.01 to −0.05 in P and +0.11 or −0.08 to −0.10 in T (with and without the high-M runs), and it depends on noise. In T the Chinchilla form is misspecified by construction when it holds in non-embedding units. The paper should use P for the sign (as the plan says) and compare with the design null.
 7. **The high-M cells have no learning-rate check.** The hiM runs use width 128's rule LR (calibrated on the two-layer model) for the four-layer model. The Q3 extrapolation leans on exactly these cells.
 8. **Seed replicates vary both initialization and data order** (seed = data_seed), so Q4 measures their combined noise, which is the relevant object. The within-trunk correlation needs seeds at several budgets per trunk. The design has 3 per trunk, so ρ̂ will be noisy; it is clipped to [0, 0.99].

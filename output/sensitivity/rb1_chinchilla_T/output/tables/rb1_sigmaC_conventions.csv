@@ -1,0 +1,17 @@
+study,design,convention,sigma,se
+Hoffmann et al. (2022),Chinchilla,total N (runs at nominal budget),0.673458,0.027258
+Hoffmann et al. (2022),Chinchilla,FLOP-accounting eta = -0.1,0.625543,0.027258
+Hoffmann et al. (2022),Chinchilla,FLOP-accounting eta = +0.1,0.713917,0.027258
+Grattafiori et al. (2024),Llama 3,FLOP-implied N_F = C/(6D),0.659508,0.0226928
+Grattafiori et al. (2024),Llama 3,FLOP-accounting eta = -0.1,0.61073,0.0226928
+Grattafiori et al. (2024),Llama 3,FLOP-accounting eta = +0.1,0.700928,0.0226928
+Marin (2026),Comma,FLOP-implied N_F = C/(6D),0.699969,0.0265002
+Marin (2026),DCLM,FLOP-implied N_F = C/(6D),0.712588,0.0271711
+Marin (2026),Nemotron-CC,FLOP-implied N_F = C/(6D),0.704925,0.0232614
+Marin (2026),Comma,configuration N (eta = 0.087),0.65834,0.0221035
+Marin (2026),DCLM,configuration N (eta = 0.087),0.641925,0.0195888
+Marin (2026),Nemotron-CC,configuration N (eta = 0.087),0.654545,0.0203664
+Li et al. (2025),Farseer,"non-embedding N, first-derivative path",0.707807,0.00483939
+Li et al. (2025),Farseer,"incl. embeddings (total N), first-derivative path",0.670049,0.00483939
+Li et al. (2025),Farseer,"non-embedding N, Hessian-based path mean, primary bandwidth",0.706612,0.00483939
+Li et al. (2025),Farseer,"non-embedding N, Hessian-based path mean, extended-grid CV bandwidth",0.663833,0.00483939

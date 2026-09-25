@@ -1,0 +1,5 @@
+design,E,window,C_lo,C_hi,gamma_local
+Chinchilla,1.7571362423910764,lower budgets,6e+18,1e+20,0.1691082710066648
+Chinchilla,1.7571362423910764,upper budgets,1e+20,3e+21,0.17341014682487235
+Chinchilla,1.7571362423910764,all,6e+18,3e+21,0.17105615272967475
+Chinchilla,1.7571362423910764,drift per decade (successive pairs),6e+18,3e+21,-0.0007491334250373895

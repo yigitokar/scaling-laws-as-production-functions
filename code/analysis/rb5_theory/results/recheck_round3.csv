@@ -1,0 +1,62 @@
+part,check,ok,detail
+A,Hoffmann: interior,True,w=1.666267 (1+delta+m_N)/(1+m_D)=1.666267
+A,Hoffmann: size cap (envelope shadow value),True,w=2.467577 pred=2.467577 relerr=1.0e-10 nu_N=1.0812 mu=0.0000; w-1=1.4676 = v_N >= m_N=0.3864
+A,Hoffmann: virtual price (Neary-Roberts) reproduces the capped choice,True,"capped (n,d)=(18.970121,25.180677); unconstrained with m_N'=v_N: (18.970121,25.180677)"
+A,Hoffmann: size floor (envelope shadow value),True,w=1.190089 pred=1.190089 relerr=1.4e-09 nu_N=-0.8727 mu=0.0000; w-1=0.1901 < m_N=1.0628
+A,Hoffmann: token cap (envelope shadow value),True,w=1.198473 pred=1.198473 relerr=1.2e-10 nu_N=0.0000 mu=1.0716; w-1=0.1985 <= v_N=1.4828
+A,"Hoffmann: both caps bind -> w-1 <= v_N always, but w-1 vs m_N either way",True,"w-1=0.043, m_N=4.923, v_N=17.400, mu=16.633; w-1=1.618, m_N=0.814, v_N=14.171, mu=4.795"
+A,reference kappa free: interior,True,w=1.846285 (1+delta+m_N)/(1+m_D)=1.846285
+A,reference kappa free: size cap (envelope shadow value),True,w=3.036406 pred=3.036406 relerr=1.5e-10 nu_N=1.5051 mu=0.0000; w-1=2.0364 = v_N >= m_N=0.5313
+A,reference kappa free: virtual price (Neary-Roberts) reproduces the capped choice,True,"capped (n,d)=(19.124326,24.862310); unconstrained with m_N'=v_N: (19.124326,24.862310)"
+A,reference kappa free: size floor (envelope shadow value),True,w=1.201602 pred=1.201602 relerr=1.6e-09 nu_N=-1.0688 mu=0.0000; w-1=0.2016 < m_N=1.2704
+A,reference kappa free: token cap (envelope shadow value),True,w=1.183487 pred=1.183487 relerr=6.6e-11 nu_N=0.0000 mu=1.4364; w-1=0.1835 <= v_N=1.8834
+A,"reference kappa free: both caps bind -> w-1 <= v_N always, but w-1 vs m_N either way",True,"w-1=-0.114, m_N=6.253, v_N=17.906, mu=20.329; w-1=2.201, m_N=1.034, v_N=16.149, mu=4.357"
+A,"Hoffmann, delta=0.1, qD>0: interior",True,w=1.155644 (1+delta+m_N)/(1+m_D)=1.155644
+A,"Hoffmann, delta=0.1, qD>0: size cap (envelope shadow value)",True,w=1.640546 pred=1.640546 relerr=9.3e-11 nu_N=1.4365 mu=0.0000
+A,"Hoffmann, delta=0.1, qD>0: size floor (envelope shadow value)",True,w=0.838759 pred=0.838759 relerr=9.4e-10 nu_N=-0.7574 mu=0.0000
+A,"Hoffmann, delta=0.1, qD>0: token cap (envelope shadow value)",True,w=0.815821 pred=0.815821 relerr=1.1e-10 nu_N=0.0000 mu=1.3122
+A,latency objective: nu_N = ell xi_Z / X_T,True,w=2.205713 1+m_N+ell xi_Z/X_T=2.205713
+A,"menu binds as a cap: w-1 = v_N, nu_N of the stated sign",True,chosen n=18.770 (unconstrained 19.670); nu_N=1.4298; w-1=1.7605 m_N=0.3307
+A,"menu binds as a floor: w-1 = v_N, nu_N of the stated sign",True,chosen n=20.170 (unconstrained 19.670); nu_N=-0.7245; w-1=0.2588 m_N=0.9832
+B,"A-family(iii) m_D=0: sum pi(1+v_N) = (1+m_D) w_H, envelope multipliers",True,lhs=1.128961 rhs=1.128961; xi_1=6.845e-02 xi_3=-1.152e-01; sum pi v_N=0.1290 vs w_H-1=0.1290 (sum pi m_N=0.3671)
+B,A-family(iii) m_D=0: 1-1/w_H = sum h_i s_i,True,0.114230
+B,A-family(iv) m_D=0: every size capped -> sum pi(1+m_N) <= (1+m_D) w_H,True,1.3196 <= 1.6609
+B,"A-family(vi) m_D=0, D capped at 50%: identity and member bound iff rho_i >= 1+m_D",True,"lhs=1.84015 rhs=1.84015 mu=1.091; rho=[8.035, 2.651, 1.738] 1+m_D=1.000"
+B,"A-family(vi) m_D=0, D capped at 80%: identity and member bound iff rho_i >= 1+m_D",True,"lhs=1.39230 rhs=1.39230 mu=0.313; rho=[4.393, 1.64, 1.102] 1+m_D=1.000"
+B,"A-family(iii) m_D>0: sum pi(1+v_N) = (1+m_D) w_H, envelope multipliers",True,lhs=1.173199 rhs=1.173199; xi_1=6.578e-02 xi_3=-1.243e-01; sum pi v_N=0.1732 vs w_H-1=-0.0573 (sum pi m_N=0.4744)
+B,A-family(iii) m_D>0: 1-1/w_H = sum h_i s_i,True,-0.060760
+B,A-family(iv) m_D>0: every size capped -> sum pi(1+m_N) <= (1+m_D) w_H,True,1.4556 <= 1.9430
+B,"A-family(vi) m_D>0, D capped at 50%: identity and member bound iff rho_i >= 1+m_D",True,"lhs=2.08405 rhs=2.08405 mu=1.543; rho=[11.599, 3.801, 2.247] 1+m_D=1.223"
+B,"A-family(vi) gloss m_D>0, cap 50%: proportional data-cost share gives exactly 1+m_D",True,"1+m_D=1.2230; whole cost: [10.1178, 2.1953, 1.2827]"
+B,"A-family(vi) m_D>0, D capped at 80%: identity and member bound iff rho_i >= 1+m_D",True,"lhs=1.45279 rhs=1.45279 mu=0.398; rho=[6.341, 2.293, 1.331] 1+m_D=1.242"
+B,"A-family(vi) gloss m_D>0, cap 80%: proportional data-cost share gives exactly 1+m_D",True,"1+m_D=1.2419; whole cost: [10.1178, 2.319, 1.3062]"
+C,Cor. A-general: Hoffmann | 6ND,True,"sigma*=0.7622 sigma_C=1.0000 r=1.000 g_d=1.000; lhs=0.31205 rhs(y)=0.31205 rhs(L, weighted)=0.31205; unweighted L_nn/|dL*/dc|=0.62410 (differs by r(1+r)g_d=2.000)"
+C,Cor. A-general: Hoffmann | N^1.3 D^0.9,True,"sigma*=0.7650 sigma_C=1.0000 r=1.444 g_d=0.900; lhs=0.30711 rhs(y)=0.30711 rhs(L, weighted)=0.30711; unweighted L_nn/|dL*/dc|=0.97594 (differs by r(1+r)g_d=3.178)"
+C,Cor. A-general: Hoffmann | linear,True,"sigma*=0.7597 sigma_C=inf r=0.726 g_d=0.579; lhs=1.31636 rhs(y)=1.31636 rhs(L, weighted)=1.31636; unweighted L_nn/|dL*/dc|=0.95593 (differs by r(1+r)g_d=0.726)"
+C,Cor. A-general: reference (kappa free) | 6ND + data cost,True,"sigma*=0.7017 sigma_C=3.7628 r=0.153 g_d=1.000; lhs=1.15942 rhs(y)=1.15942 rhs(L, weighted)=1.15942; unweighted L_nn/|dL*/dc|=0.20490 (differs by r(1+r)g_d=0.177)"
+C,Cor. A-general: CES sigma=0.5 (as a loss) | CES cost sigma_C=2,True,"sigma*=0.4998 sigma_C=2.0000 r=2.371 g_d=0.297; lhs=1.50089 rhs(y)=1.50001 rhs(L, weighted)=1.50001; unweighted L_nn/|dL*/dc|=3.55692 (differs by r(1+r)g_d=2.371)"
+C,Cor. A-general: non-separable | 6 N^1.1 D,True,"sigma*=0.8334 sigma_C=1.0000 r=1.100 g_d=1.000; lhs=0.19986 rhs(y)=0.19986 rhs(L, weighted)=0.19986; unweighted L_nn/|dL*/dc|=0.46168 (differs by r(1+r)g_d=2.310)"
+C,Cor. A-general: reference (kappa free) | linear,True,"sigma*=0.7007 sigma_C=933681.3645 r=0.785 g_d=0.560; lhs=1.42707 rhs(y)=1.42708 rhs(L, weighted)=1.42708; unweighted L_nn/|dL*/dc|=1.12032 (differs by r(1+r)g_d=0.785)"
+D,"Prop. 2(ii) Hoffmann (alpha != beta): profiled over the split -> quartic; fixed split -> quadratic except along (V0,-U0)",True,"log-log slopes: split free (2,-1) 4.000; split fixed (2,-1) 2.027; split fixed (V0,-U0) 4.000; |d sigma*| along (2,-1) 1.000"
+D,"Prop. 2(ii) equal exponents: profiled over the split -> quartic; fixed split -> quadratic except along (V0,-U0)",True,"log-log slopes: split free (2,-1) 4.000; split fixed (2,-1) 2.020; split fixed (V0,-U0) 4.000; |d sigma*| along (2,-1) 1.000"
+E,A6(vii): constant tilt translates every IsoFLOP argmin by t = -2chi/S,True,"t=-0.61: shifts [-0.6100002, -0.6100002, -0.6099999]; t=0.45: shifts [0.45, 0.4499999, 0.4500002]"
+E,A6(vii) sharpness: upper end of X*_tau(1e25) is x*_dev of an admissible developer technology,True,target 6.664734 got 6.664734; one sign change of L_x: True; F_n=2.09e-02 F_d=2.09e-02; below c_J within ln tau of the anchored technology: 1.1e-07
+E,"A6(viii): widened union covers x*_dev(c) on [c_J, cbar] simultaneously w.p. >= 1 - max p_j",True,R=3000: band of path j* covers 0.9850; widened union covers 1.0000
+E,"A6(vii) caveat: a band from a linear fit needs a linear path (curved path, slope within [-0.16,0.31])",True,non-coverage 1.000 with the path's slope rising to 0.354
+F,"Cor. A2: Hoffmann exponents at w=13.5, exact C/C_min vs cosh form",True,"exact 101.19, cosh 77.95 (round-2/WP3 text had 102.0 and 78.5, the values at w=13.536; corrected to 101.2 and 78.0)"
+F,"Cor. A2: alpha = beta, cosh form exact",True,92.855468 vs 92.855468
+G,"A2(iii): efficient-information slopes in varsigma (S: 4, ln G: 2, ln M*(1e21): 2)",True,"slopes S 3.996, ln G 1.998, ln M*(1e21) 1.996; I(ln M*)/[I(ln G)/4] = 191.0 at varsigma 0.1"
+H,"Section I: sigma*=0.701, 1/sigma*-1=0.427, M about 6,400, about 290 times, w about 11.3, s about 0.91, about 10 percent",True,sigma*=0.7006 k=0.42744 M=6428 M/M*=293.4 w=11.342 (=exp(k ln M/M*) 11.342) s=0.912 w-1=10.34
+H,"Section II: SmolLM2 1.7B about 47 times the upper end; M about 6,400, 1.1e23 FLOP",True,"exp(dlo)=47.10 (M=6428, Mstar_hi=136.5, C=1.130e+23)"
+H,"Section II: Llama 3.1 405B inside the set, 38 tokens per parameter, 3.8e25 FLOP",True,dlo=-2.869 dhi=2.269 M=38.44 C=3.799e+25
+H,Remark A-pi-param: M*(1e24) set about 3.8 log points,True,"[5.68, 248.2] width 3.777; 32-technology range ln(426/1.4)=5.72"
+H,Section II: tilt 0.26 -> tau approx 1.8 (1.84) under the reference exponents; 3.4 under DataDecide's,True,exp(2*0.26/S_ref)=1.8372; exp(2*0.2561/0.4154)=3.432
+H,"Remark 1/A3: n^-0.24, n^-0.27..-0.28, restricted n^-0.50, q25 n^-1/2, about 40 percent coinciding, R=100, five noise levels 1e-3..1e-7",True,"q75 [0.241, 0.243] q90 [0.273, 0.282] restricted [0.496, 0.497] q25 [0.502, 0.501]; coinciding 0.37-0.47 (mean 0.41)"
+I,A-family: sum pi(1+v) - (1+m_D+mu) w_H = w_H * (FOC residual) identically,True,simplified: 0
+I,A-family: 1 - 1/w_H = sum h_i s_i identically,True,0
+I,A-family: sum pi_i w_i = w_H identically,True,
+I,"Prop. 1(ii): w = 1 + lambda varrho T/(3D), s = lambda X_S/(X_T + lambda X_S)",True,
+I,Prop. 1(iii): m_D = N_T/(3N),True,
+I,"Prop. 1(iii): w_L/w_L' = e^{-chi}, chi = beta psi_D - alpha psi_N",True,
+I,Remark 1: 2/{2+gamma/[a(1-a)]} = 2/(2+alpha+beta),True,
+I,Cor. A-general(ii): linear cost has 1/sigma_C = 0 and r(1+r)g_d = s_N/s_D,True,1/sigma_C = 0

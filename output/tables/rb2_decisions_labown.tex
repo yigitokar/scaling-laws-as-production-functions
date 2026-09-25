@@ -1,0 +1,22 @@
+\begin{table}[tp]
+\centering
+\caption{Lab-Own Technologies under One Rule}
+\label{tab:app-labown}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Models & $n$ & Reference & One rule & Lab curvature & Meta 10-budget law & OLMo $\kappa=1$ path & v2 rule \\
+\midrule
+all lab-own models & 22 & 0.65 & 0.52 & 0.67 & 0.49 & 0.45 & 0.61 \\
+without AI2 & 13 & 0.56 & 0.64 & 0.69 & 0.54 & 0.64 & 0.59 \\
+Meta & 10 & 0.49 & 0.58 & 0.62 & 0.47 & 0.58 & 0.51 \\
+AI2 & 9 & 0.70 & 0.44 & 0.66 & 0.44 & 0.32 & 0.66 \\
+\bottomrule
+\end{tabular}}
+\medskip
+\begin{tablenotes}
+Median $s$. One rule (R2 Major 6): the lab's own expansion path plus the common model-free $\sigma^*$. Meta: path of the 8 IsoFLOP budgets whose minimum is bracketed; AI2: OLMo ladder path ($\kappa$ free); DeepSeek: published law; Marin: Nemotron-CC ladder path. Lab curvature: Meta 0.660, Marin 0.705, AI2 0.544 ($\kappa$-free ladder). Meta 10-budget law: the path that reproduces Meta's published planning law (it uses two unbracketed budgets). v2 rule: the version-2 assignments (Meta and Marin paths with model-free curvature; AI2 $\kappa$-free ladder with its own curvature; DeepSeek with the reference curvature).
+\end{tablenotes}
+\end{table}

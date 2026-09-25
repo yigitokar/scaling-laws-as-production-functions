@@ -1,0 +1,11 @@
+[12:05:06] 1. base: ra2 objects by import; token-count audit
+[12:05:07] 2. evidence: family readings and model-level serving (quotes verified against saved sources)
+[12:05:07] 3. lab-own technologies under one rule
+[12:05:08] 4. decision units (budget level, primary; rb5 readings), headline and W2 statistics (joint bootstrap)
+[12:05:20] 5. conduct tests: model-level serving code, decision level, tiers, on-device, open-weight premium
+[12:06:54] 6. sign identification: wild bootstrap-t anchors, tilt allowance, weights, years, decision units
+[12:07:09] 7. trend from 2023 on the clean sample; 32 technologies; leave-one-developer-out; pre-2023 robustness
+[12:07:11] 8. second-output test: OLMo ladder, C4 loss vs task bits per byte (joint cell bootstrap, B = 399)
+[12:15:23] 9. post-training compute bound
+[12:15:23] 10. exhibits
+[12:15:24] done in 618s

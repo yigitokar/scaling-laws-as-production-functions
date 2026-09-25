@@ -1,0 +1,43 @@
+spec,k,n_designs,slope,se_model,se_cr2_design,df_cr2_design,lo_cr2_design,hi_cr2_design,p_cr2_design,tau_design,tau_within,se_cr2_study,df_cr2_study,p_cr2_study,p_wcr_design,sample,spec_key
+"3-level RE, inverse-variance (primary)",44,6,-0.0327797,0.0101862,0.0140092,3.14957,-0.0761892,0.0106297,0.0970852,0.0147732,0.0331893,0.0144001,2.78156,0.114217,0.0387,all six designs (excl. Porian),weighted
+"Design RE, unweighted (LMM)",44,6,-0.0295944,0.00837407,0.0110895,4.45976,-0.0591714,-1.74018e-05,0.0499124,0.0154329,0.0429149,0.013678,2.70715,0.128848,0.0457,all six designs (excl. Porian),unweighted
+Design-balanced weights (CE-RVE),44,6,-0.0337151,0.0312755,0.0110841,3.27937,-0.0673491,-8.11067e-05,0.0496913,0.0147732,0.0331893,0.0114215,2.8274,0.0644982,0.0316,all six designs (excl. Porian),balanced
+"Design FE, inverse-variance",44,6,-0.0210466,0.00920539,0.0236887,1.58059,-0.153828,0.111735,0.488576,,,0.023703,1.56701,0.489606,0.3628,all six designs (excl. Porian),fe_weighted
+"Design FE, unweighted (OLS)",44,6,-0.0263221,0.00856963,0.0108047,4.47395,-0.0551081,0.00246379,0.0648102,,,0.0141826,2.71951,0.169886,0.0727,all six designs (excl. Porian),fe_unweighted
+3-level RE on S = 2(1/sigma*-1) (slope in S units),44,6,0.136885,0.0445117,0.0660664,3.15251,-0.0677288,0.341499,0.12559,0.0594012,0.144348,0.0685224,2.69604,0.149887,0.0629,all six designs (excl. Porian),weighted_S
+"3-level RE, hinge at 3e20 (slope above the knot)",44,6,-0.152452,0.0379615,0.0290015,2.16034,-0.268767,-0.0361374,0.0290642,0.0131104,0.0312566,0.0291913,2.15157,0.0297167,0.0518,all six designs (excl. Porian),weighted_hinge
+"3-level RE, inverse-variance (primary)",17,2,-0.0537266,0.0138497,0.00139757,1.00339,-0.0713431,-0.03611,0.0163635,0,0.0298745,,,,0.064,Chinchilla + Llama 3 (the two designs reaching 1e21),weighted
+"Design RE, unweighted (LMM)",17,2,-0.0497696,0.0141959,0.000543495,1.00569,-0.0565837,-0.0429554,0.00678298,0,0.0480968,,,,0.063,Chinchilla + Llama 3 (the two designs reaching 1e21),unweighted
+"Design FE, inverse-variance",17,2,-0.057584,0.0126068,7.69134e-05,1,-0.0585612,-0.0566067,0.000850316,,,,,,0.0745,Chinchilla + Llama 3 (the two designs reaching 1e21),fe_weighted
+"3-level RE, inverse-variance (primary)",19,3,0.000778277,0.0221076,0.00834811,1.80615,-0.0391002,0.0406567,0.935017,0,0,,,,0.887,Marin only (three corpora),weighted
+"Design RE, unweighted (LMM)",19,3,-0.00255162,0.00943192,0.00677492,1.9983,-0.0317256,0.0266223,0.742681,0,0.0285792,,,,0.6345,Marin only (three corpora),unweighted
+"Design FE, inverse-variance",19,3,-0.000939141,0.0232713,0.00947608,1.71381,-0.0489842,0.0471059,0.9314,,,,,,0.904,Marin only (three corpora),fe_weighted
+"3-level RE, inverse-variance (primary)",36,5,-0.0475297,0.0107996,0.00750967,2.27433,-0.0763792,-0.0186801,0.0173547,0,0.0257455,0.00913966,1.81028,0.043024,0.023,IsoFLOP designs only (excl. Farseer path),weighted
+"Design RE, unweighted (LMM)",36,5,-0.0330448,0.00958599,0.01243,3.46986,-0.0697384,0.00364881,0.0655421,0.0154839,0.0445798,0.0170749,1.86003,0.202079,0.107,IsoFLOP designs only (excl. Farseer path),unweighted
+"Design FE, inverse-variance",36,5,-0.0503645,0.0091446,0.0103642,1.49742,-0.112873,0.0121441,0.0683149,,,0.0116773,1.38974,0.0909525,0.226,IsoFLOP designs only (excl. Farseer path),fe_weighted
+"3-level RE, inverse-variance (primary)",37,6,-0.00765212,0.0143287,0.0119209,3.67571,-0.0419339,0.0266296,0.55876,0,0.0290824,0.0120129,2.51335,0.57734,0.8265,Budgets <= 3e20 (common window),weighted
+"Design RE, unweighted (LMM)",37,6,-0.00448557,0.00884738,0.0058326,4.73586,-0.0197338,0.0107626,0.478438,0,0.0343781,0.00469844,1.86967,0.446438,0.451,Budgets <= 3e20 (common window),unweighted
+"Design FE, inverse-variance",37,6,-0.0034048,0.0122955,0.0330216,1.96136,-0.148201,0.141392,0.927448,,,0.0330046,1.85099,0.927911,0.829,Budgets <= 3e20 (common window),fe_weighted
+"3-level RE, inverse-variance (primary)",35,5,-0.0262165,0.011516,0.0178918,2.12277,-0.0990856,0.0466527,0.273599,0.0155996,0.0339812,0.0182641,1.83967,0.297662,0.1395,leave out Chinchilla,weighted
+"Design RE, unweighted (LMM)",35,5,-0.0195656,0.00864854,0.0117382,3.79818,-0.0528506,0.0137193,0.174654,0.0151606,0.0375769,0.0143971,1.82048,0.318084,0.149,leave out Chinchilla,unweighted
+"Design FE, inverse-variance",35,5,-0.0182138,0.0102413,0.0249113,1.25473,-0.216865,0.180438,0.576779,,,0.024922,1.24298,0.577753,0.741,leave out Chinchilla,fe_weighted
+"3-level RE, inverse-variance (primary)",36,5,-0.0214234,0.0112788,0.0166748,2.19605,-0.0873677,0.0445209,0.317675,0.0116671,0.0282986,0.01697,1.79308,0.346298,0.149,leave out Llama 3,weighted
+"Design RE, unweighted (LMM)",36,5,-0.0245201,0.00897331,0.01475,3.45866,-0.0681287,0.0190884,0.182819,0.0149109,0.0416703,0.0172226,1.85907,0.299214,0.127,leave out Llama 3,unweighted
+"Design FE, inverse-variance",36,5,-0.00492033,0.0095889,0.0133434,1.27302,-0.108662,0.0988213,0.764237,,,0.0133325,1.21747,0.765962,0.7285,leave out Llama 3,fe_weighted
+"3-level RE, inverse-variance (primary)",39,5,-0.0336748,0.0107163,0.0141598,2.79724,-0.0806432,0.0132936,0.104051,0.0160031,0.0342059,0.0143666,2.65034,0.112335,0.0515,"leave out Marin, Comma",weighted
+"Design RE, unweighted (LMM)",39,5,-0.0321094,0.00900184,0.0114119,3.62853,-0.065115,0.000896301,0.0538469,0.0166614,0.0431885,0.0126301,2.87921,0.0880134,0.0605,"leave out Marin, Comma",unweighted
+"Design FE, inverse-variance",39,5,-0.0211096,0.00975032,0.0240831,1.53014,-0.162078,0.119859,0.496502,,,0.0240943,1.52325,0.497097,0.376,"leave out Marin, Comma",fe_weighted
+"3-level RE, inverse-variance (primary)",37,5,-0.0347702,0.0106982,0.0142114,2.80265,-0.0818535,0.0123131,0.0979643,0.0156152,0.0342717,0.0143107,2.65428,0.104508,0.03,"leave out Marin, DCLM",weighted
+"Design RE, unweighted (LMM)",37,5,-0.0344764,0.00910645,0.0102997,3.61376,-0.0643196,-0.00463325,0.0334061,0.013412,0.0437677,0.0111781,2.87873,0.0569752,0.0205,"leave out Marin, DCLM",unweighted
+"Design FE, inverse-variance",37,5,-0.0217633,0.0100788,0.0247128,1.49067,-0.171762,0.128236,0.497328,,,0.0247139,1.48695,0.497586,0.3235,"leave out Marin, DCLM",fe_weighted
+"3-level RE, inverse-variance (primary)",37,5,-0.0341489,0.0108778,0.0145676,2.71134,-0.0834309,0.015133,0.110106,0.0157458,0.0347376,0.0147095,2.59671,0.116492,0.054,"leave out Marin, Nemotron-CC",weighted
+"Design RE, unweighted (LMM)",37,5,-0.0314006,0.00949627,0.011859,3.61141,-0.065772,0.00297079,0.0634991,0.0160752,0.04552,0.0133732,2.88178,0.10406,0.077,"leave out Marin, Nemotron-CC",unweighted
+"Design FE, inverse-variance",37,5,-0.021401,0.0101286,0.024883,1.44811,-0.178863,0.136061,0.50849,,,0.0248852,1.44569,0.508681,0.3685,"leave out Marin, Nemotron-CC",fe_weighted
+"3-level RE, inverse-variance (primary)",36,5,-0.0475297,0.0107996,0.00750967,2.27433,-0.0763792,-0.0186801,0.0173547,0,0.0257455,0.00913966,1.81028,0.043024,0.019,leave out Farseer (local path),weighted
+"Design RE, unweighted (LMM)",36,5,-0.0330448,0.00958599,0.01243,3.46986,-0.0697384,0.00364881,0.0655421,0.0154839,0.0445798,0.0170749,1.86003,0.202079,0.113,leave out Farseer (local path),unweighted
+"Design FE, inverse-variance",36,5,-0.0503645,0.0091446,0.0103642,1.49742,-0.112873,0.0121441,0.0683149,,,0.0116773,1.38974,0.0909525,0.246,leave out Farseer (local path),fe_weighted
+"3-level RE, inverse-variance (primary)",38,6,-0.0302048,0.012743,0.0181682,3.21377,-0.0859082,0.0254987,0.188915,0.0111481,0.0356381,0.0182158,2.84031,0.200946,0.286,leave out each design's largest budget,weighted
+"Design RE, unweighted (LMM)",38,6,-0.0282665,0.0101642,0.0113609,4.40955,-0.0586871,0.00215398,0.0618597,0.00751145,0.0437587,0.012193,2.71637,0.112379,0.139,leave out each design's largest budget,unweighted
+"Design FE, inverse-variance",38,6,-0.0104738,0.0109572,0.0377438,1.53169,-0.2311,0.210153,0.814221,,,0.0377416,1.52475,0.814337,0.619,leave out each design's largest budget,fe_weighted
+"3-level RE, inverse-variance (primary)",24,2,0.040289,0.00608833,0.00101111,1.00513,0.0275955,0.0529825,0.0156902,0,0,,,,,"Porian et al. (unannealed), reported separately",weighted
+"Design FE, inverse-variance",24,2,0.0398208,0.00611865,0.00116973,1,0.0249579,0.0546837,0.0186953,,,,,,,"Porian et al. (unannealed), reported separately",fe_weighted

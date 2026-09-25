@@ -1,4 +1,4 @@
-"""sl.py — shared estimation library for "Scaling Laws as Production Functions".
+"""sl.py: shared estimation library for "Scaling Laws as Production Functions".
 
 Technology (Hoffmann et al. 2022, Eq. 2):   L(N, D) = E + A N^-alpha + B D^-beta
 Parameter vector used internally (log-sum-exp parameterization of Hoffmann et al. App. D.2):

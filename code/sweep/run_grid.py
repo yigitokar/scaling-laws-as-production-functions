@@ -42,6 +42,12 @@ def jobs(kind, regime="edu"):
             if regime == "web":  # runs launched after 2026-09-24 17:45 also get the neutral sets
                 j["evals"] = "edu,web,wiki,c4,pg19"
             yield j
+    elif kind == "edure":  # FineWeb-Edu main-grid widths 384 and 512 retrained with every evaluation set, same seed and
+        # data order as the original grid (Amendment 2, item X3(a); approved by the author 2026-09-25 at about 11:33, launched 11:34:53)
+        for d, L in [(384, 6), (512, 8)]:
+            Ds = [D for D in D_GRID if D <= D_MAX[d]]
+            yield dict(regime="edu", d=d, L=L, lr=round(lr_rule(d), 6), D=",".join(f"{D:.0f}" for D in Ds), tag="mainre",
+                       evals="edu,web,wiki,c4,pg19")
     elif kind == "hiMlr":  # LR x {0.5, 2} at the high-M 4-layer shape (referee R2 round 2, Major 3c)
         for mult in [0.5, 2.0]:
             yield dict(regime=regime, d=128, L=4, lr=round(mult * lr_rule(128), 6), D="200e6,800e6,1600e6",

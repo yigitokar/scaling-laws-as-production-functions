@@ -1,0 +1,35 @@
+\begin{table}[tp]
+\centering
+\caption{Post-Training Compute and the Measured Wedge}
+\label{tab:app-posttrain}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+$x_P$ & Median $s$, & Median $s$, & Share & \multicolumn{2}{c}{Compute-weighted $s$} \\
+& models & decisions & $m_N>0$ & 2024 & 2025 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel A. Disclosed budgets: $x_P$ = post-training / pre-training compute}} \\[1pt]
+\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.72\textwidth}}{DeepSeek-V3 (all post-training) (GPU hours, H800)} & 0.0019 \\
+\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.72\textwidth}}{Tulu 3 SFT on Llama 3.1 8B (final run) (FLOPs at 40\% MFU / 6ND)} & 0.0004 \\
+\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.72\textwidth}}{Tulu 3 SFT on Llama 3.1 70B (final run) (FLOPs at 40\% MFU / 6ND)} & 0.0007 \\
+\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.72\textwidth}}{Olmo 3 Think 32B, RL (initial release) (GPU days; 224 GPUs)} & 0.0259 \\
+\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.72\textwidth}}{Olmo 3.1 Think 32B, RL incl. 21-day continuation (GPU days)} & 0.1346 \\
+\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.72\textwidth}}{Olmo 3 Think 32B, all post-training, upper bound (GPU days; 9 days x 1,024 GPUs)} & 0.2130 \\
+\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.72\textwidth}}{Olmo 3.1 Think 32B, all post-training incl. 21-day continuation, upper bound (GPU days; 9 days x 1,024 GPUs + 21 days x 224 GPUs)} & 0.3217 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel B. Value of compactness net of post-training, $s=(w-1-x_P)/(w-x_P)$, reference}} \\[1pt]
+0.000 & 0.75 & 0.73 & 0.97 & 0.58 & 0.83 \\
+0.002 & 0.75 & 0.73 & 0.97 & 0.58 & 0.83 \\
+0.026 & 0.75 & 0.73 & 0.97 & 0.57 & 0.82 \\
+0.135 & 0.74 & 0.72 & 0.95 & 0.53 & 0.81 \\
+0.210 & 0.74 & 0.72 & 0.94 & 0.50 & 0.79 \\
+0.320 & 0.73 & 0.71 & 0.91 & 0.46 & 0.77 \\
+0.135 (2025), 0.002 (before) & 0.75 & -- & 0.97 & 0.58 & 0.81 \\
+\bottomrule
+\end{tabular}
+\medskip
+\begin{tablenotes}
+Post-training compute scales with $N$ at given post-training tokens and rollouts and does not scale with $D$, so it enters the first-order condition for $N$ only: $w=1+x_P+m_N$ (like $\delta>0$ in Proposition~A8). DeepSeek-V3: GPU hours from its report. T\"ulu 3: final SFT runs on Llama 3.1, FLOPs at 40 percent utilization over $6ND$. Olmo 3 Think 32B: GPU-days of RL (224 GPUs: 8 learner and 20 inference nodes) over pre-training GPU-days; the upper bound assigns the whole 1,024-GPU cluster to the 9 days of post-training. Panel B: $m_N=w-1-x_P$; compute-weighted $s=\sum m_N^+C/\sum(1+x_P+m_N^+)C$ over the clean sample of that year.
+\end{tablenotes}
+\end{table}

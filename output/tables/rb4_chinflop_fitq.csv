@@ -1,0 +1,13 @@
+accounting,windows,n_runs,dof,rss,resid_sd
+ra1,reference T windows,104,77,0.0103566,0.0115975
+ra1,own windows,104,77,0.0103566,0.0115975
+6T,reference T windows,104,77,0.0103567,0.0115975
+6T,own windows,104,77,0.0103567,0.0115975
+T4,reference T windows,104,77,0.0103721,0.0116061
+T4,own windows,105,78,0.0107265,0.0117269
+A,reference T windows,104,77,0.0103394,0.0115878
+A,own windows,110,83,0.0111877,0.01161
+X,reference T windows,104,77,0.0103496,0.0115935
+X,own windows,108,81,0.0109316,0.0116171
+6P,reference T windows,104,77,0.0103684,0.0116041
+6P,own windows,104,77,0.0103684,0.0116041

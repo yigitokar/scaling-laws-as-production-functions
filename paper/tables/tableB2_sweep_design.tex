@@ -1,4 +1,6 @@
 % Online Appendix Table B2: design of our controlled experiment (code/sweep/run_grid.py, gpt_mlx.py, lr_fit.json).
+% [round 3, WP1, X10, 2026-09-25] seed-corner wording (run_grid.py 'seedcorner': seed 1, data seed 1, D 200-800M,
+% continuing the first 'seeds' replicate); retrained FineWeb-Edu widths 384 and 512 (run_grid.py 'edure', queue E).
 \begin{table}[tp]
 \centering
 \caption{Design of the Controlled Experiment}
@@ -36,7 +38,8 @@ attention and the output projection, relative to $6N_{\mathrm{ne}}$; relative to
 1.03--1.07 at every shape. High-$M$ runs: budgets $\{200,800,1{,}600,3{,}200\}$ million on a longer data stream (the
 width-256 shape on FineWeb-Edu only). Further runs, all on both corpora unless stated: learning-rate calibration for
 FineWeb (widths 128, 320 and 512 at four peak rates, 50 million tokens); peak rates of 0.5 and 2 times the rule at
-width 128 over the full budget ladder and at width 640 at 25 and 50 million tokens; a second seed at width 128 with
-200--800 million tokens; and two further seeds at widths 128, 256 and 384 with 50--200 million tokens.
+width 128 over the full budget ladder and at width 640 at 25 and 50 million tokens; two further seeds at widths 128,
+256 and 384 with 50--200 million tokens, and at width 128 the first replicate seed continued to 200--800 million tokens;
+and the FineWeb-Edu main-grid widths 384 and 512 retrained with the same seed and data order and every evaluation set.
 \end{tablenotes}
 \end{table}

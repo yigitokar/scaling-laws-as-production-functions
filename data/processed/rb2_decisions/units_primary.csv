@@ -1,0 +1,78 @@
+uid,unit,unit_type,reading,bound
+B:meta-llama/Llama-2-7b-hf,Llama-2,family,choice,point (family share)
+B:meta-llama/Llama-2-13b-hf,Llama-2,family,choice,point (family share)
+B:meta-llama/Llama-2-70b-hf,Llama-2,family,choice,point (family share)
+B:huggyllama/llama-7b,B:huggyllama/llama-7b,model,,point (member)
+B:huggyllama/llama-13b,B:huggyllama/llama-13b,model,,point (member)
+B:huggyllama/llama-30b,B:huggyllama/llama-30b,model,,point (member)
+B:huggyllama/llama-65b,B:huggyllama/llama-65b,model,,point (member)
+B:meta-llama/Meta-Llama-3-70B,Llama-3 herd,family,cap,lower bound
+B:meta-llama/Meta-Llama-3-8B,Llama-3 herd,family,cap,lower bound
+B:meta-llama/Llama-3.1-405B,Llama-3 herd,family,cap,lower bound
+B:Qwen/Qwen-72B,B:Qwen/Qwen-72B,model,,point (member)
+B:Qwen/Qwen-14B,B:Qwen/Qwen-14B,model,,point (member)
+B:Qwen/Qwen-7B,B:Qwen/Qwen-7B,model,,point (member)
+B:Qwen/Qwen2-72B,B:Qwen/Qwen2-72B,model,,point (member)
+B:Qwen/Qwen2-7B,B:Qwen/Qwen2-7B,model,,point (member)
+B:Qwen/Qwen2-1.5B,B:Qwen/Qwen2-1.5B,model,,point (member)
+B:Qwen/Qwen2-0.5B,B:Qwen/Qwen2-0.5B,model,,point (member)
+B:01-ai/Yi-6B,Yi,family,cap+menu,none
+B:01-ai/Yi-34B,Yi,family,cap+menu,none
+B:google/gemma-7b,B:google/gemma-7b,model,,point (member)
+B:google/gemma-2b,B:google/gemma-2b,model,,point (member)
+B:google/gemma-2-27b,B:google/gemma-2-27b,model,,point (member)
+B:tiiuae/falcon-180B,B:tiiuae/falcon-180B,model,,point (member)
+B:tiiuae/falcon-40b,B:tiiuae/falcon-40b,model,,point (member)
+B:tiiuae/falcon-7b,B:tiiuae/falcon-7b,model,,point (member)
+B:microsoft/phi-2,B:microsoft/phi-2,model,,point (member)
+B:microsoft/phi-1_5,B:microsoft/phi-1_5,model,,point (member)
+B:mosaicml/mpt-30b,MPT,family,menu,upper bound
+B:mosaicml/mpt-7b,MPT,family,menu,upper bound
+B:deepseek-ai/deepseek-llm-67b-base,DeepSeek-LLM,family,cap+menu,none
+B:deepseek-ai/deepseek-llm-7b-base,DeepSeek-LLM,family,cap+menu,none
+B:stabilityai/stablelm-base-alpha-3b,StableLM-alpha,family,choice,point (family share)
+B:stabilityai/stablelm-base-alpha-7b-v2,B:stabilityai/stablelm-base-alpha-7b-v2,model,,point (member)
+B:stabilityai/stablelm-2-1_6b,B:stabilityai/stablelm-2-1_6b,model,,point (member)
+B:stabilityai/stablelm-base-alpha-7b,StableLM-alpha,family,choice,point (family share)
+B:HuggingFaceTB/SmolLM-135M,B:HuggingFaceTB/SmolLM-135M,model,,point (member)
+B:HuggingFaceTB/SmolLM-360M,B:HuggingFaceTB/SmolLM-360M,model,,point (member)
+B:HuggingFaceTB/SmolLM-1.7B,B:HuggingFaceTB/SmolLM-1.7B,model,,point (member)
+B:cerebras/btlm-3b-8k-base,B:cerebras/btlm-3b-8k-base,model,,point (member)
+B:h2oai/h2o-danube-1.8b-base,B:h2oai/h2o-danube-1.8b-base,model,,point (member)
+B:h2oai/h2o-danube3-500m-base,B:h2oai/h2o-danube3-500m-base,model,,point (member)
+B:h2oai/h2o-danube3-4b-base,B:h2oai/h2o-danube3-4b-base,model,,point (member)
+B:allenai/OLMo-1B-hf,B:allenai/OLMo-1B-hf,model,,point (member)
+B:allenai/OLMo-7B-hf,B:allenai/OLMo-7B-hf,model,,point (member)
+B:allenai/OLMo-7B-0424-hf,B:allenai/OLMo-7B-0424-hf,model,,point (member)
+B:TinyLlama/TinyLlama_v1.1,B:TinyLlama/TinyLlama_v1.1,model,,point (member)
+B:Qwen/Qwen2.5-0.5B,Qwen2.5,family,cap,lower bound
+B:Qwen/Qwen2.5-1.5B,Qwen2.5,family,cap,lower bound
+B:Qwen/Qwen2.5-3B,Qwen2.5,family,cap,lower bound
+B:Qwen/Qwen2.5-7B,Qwen2.5,family,cap,lower bound
+B:Qwen/Qwen2.5-14B,Qwen2.5,family,cap,lower bound
+B:Qwen/Qwen2.5-32B,Qwen2.5,family,cap,lower bound
+B:Qwen/Qwen2.5-72B,Qwen2.5,family,cap,lower bound
+B:Qwen/Qwen3-0.6B-Base,Qwen3,family,cap,lower bound
+B:Qwen/Qwen3-1.7B-Base,Qwen3,family,cap,lower bound
+B:Qwen/Qwen3-4B-Base,Qwen3,family,cap,lower bound
+B:Qwen/Qwen3-8B-Base,Qwen3,family,cap,lower bound
+B:Qwen/Qwen3-14B-Base,Qwen3,family,cap,lower bound
+B:allenai/OLMo-2-0425-1B,B:allenai/OLMo-2-0425-1B,model,,point (member)
+B:allenai/OLMo-2-1124-7B,B:allenai/OLMo-2-1124-7B,model,,point (member)
+B:allenai/OLMo-2-1124-13B,B:allenai/OLMo-2-1124-13B,model,,point (member)
+B:allenai/OLMo-2-0325-32B,B:allenai/OLMo-2-0325-32B,model,,point (member)
+B:allenai/Olmo-3-1025-7B,Olmo-3,family,choice,point (family share)
+B:allenai/Olmo-3-1125-32B,Olmo-3,family,choice,point (family share)
+B:HuggingFaceTB/SmolLM2-135M,B:HuggingFaceTB/SmolLM2-135M,model,,point (member)
+B:HuggingFaceTB/SmolLM2-360M,B:HuggingFaceTB/SmolLM2-360M,model,,point (member)
+B:HuggingFaceTB/SmolLM2-1.7B,B:HuggingFaceTB/SmolLM2-1.7B,model,,point (member)
+B:HuggingFaceTB/SmolLM3-3B-Base,B:HuggingFaceTB/SmolLM3-3B-Base,model,,point (member)
+B:tiiuae/Falcon3-7B-Base,B:tiiuae/Falcon3-7B-Base,model,,point (member)
+B:tiiuae/falcon-11B,B:tiiuae/falcon-11B,model,,point (member)
+B:ibm-granite/granite-3.0-2b-base,Granite-3.0,family,choice,point (family share)
+B:ibm-granite/granite-3.0-8b-base,Granite-3.0,family,choice,point (family share)
+B:swiss-ai/Apertus-8B-2509,Apertus,family,choice,point (family share)
+B:swiss-ai/Apertus-70B-2509,Apertus,family,choice,point (family share)
+B:marin-community/marin-8b-base,B:marin-community/marin-8b-base,model,,point (member)
+B:m-a-p/neo_7b,B:m-a-p/neo_7b,model,,point (member)
+B:stabilityai/stablelm-3b-4e1t,B:stabilityai/stablelm-3b-4e1t,model,,point (member)

@@ -1,0 +1,31 @@
+% Online Appendix table -- frontier compute growth by database vintage.
+% Module rb3_econ2; sources rb3_econ2_compute_vintage.csv, _compute_vintage_decomposition.csv.
+\begin{table}[tp]
+\centering
+\caption{Frontier Compute Growth by Database Vintage}
+\label{tab:app-econ-growth}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrccc@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textit{Growth of the running top-10 training runs, January 2018 to May 2024 (times per year)}} \\[2pt]
+Sample & Runs & Developers & Growth & 95\% CI & $p$ ($4.2\times$) \\
+\midrule
+Epoch AI, published estimate & -- & -- & 4.2 & [3.6, 4.9]$^a$ & -- \\
+Database of 31 May 2024 & 58 & 22 & 4.13 & [3.75, 4.55] & 0.732 \\
+\quad notable models only & 52 & 18 & 4.16 & [3.73, 4.63] & 0.855 \\
+\quad + compute revisions to Sep. 2026 & 66 & 23 & 4.76 & [3.69, 6.13] & 0.278 \\
+\qquad notable models only & 65 & 19 & 4.66 & [3.45, 6.38] & 0.561 \\
+\quad + entries added after May 2024 & 63 & 25 & 4.46 & [3.77, 5.29] & 0.578 \\
+\qquad notable models only & 58 & 21 & 4.45 & [3.73, 5.33] & 0.646 \\
+Database of 23 Sep. 2026 & 78 & 26 & 5.23 & [4.02, 6.80] & 0.038 \\
+\quad notable models only & 67 & 23 & 4.95 & [4.07, 6.01] & 0.080 \\
+\quad January 2018 to September 2026 (Section~\ref{sec:econ}) & 92 & 27 & 5.06 & [4.27, 6.02] & 0.041 \\
+\multicolumn{6}{@{}l}{Decomposition of $\ln(5.23/4.13)$: compute revisions 0.64, entries added 0.36 (Shapley)} \\
+\bottomrule
+\end{tabular*}
+\vspace{2pt}
+\begin{tablenotes}[Notes]
+OLS of $\log_{10}C$ on release date for models in the running top 10 of training compute at release (all domains); 95 percent wild cluster bootstrap-$t$ intervals by developer (Webb weights, $B=9{,}999$); $p$: restricted wild cluster bootstrap test of 4.2-fold growth. The database of 31 May 2024 is Epoch AI's public file as captured by the Internet Archive three days after the published estimate \citep{epochai2024dataarchive}; the database of 23 September 2026 is \citet{epochai2026data}. Compute revisions: models present in both vintages, with the 2026 estimate (145 revised by more than 5 percent, 54 given an estimate, 21 whose estimate was withdrawn); additions: 978 entries released before June 2024 but added later. $^a$\citet{sevilla2024training}: 90 percent interval of a piecewise model with an estimated break near 2018.
+\end{tablenotes}
+\end{table}

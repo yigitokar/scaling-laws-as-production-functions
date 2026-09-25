@@ -1,0 +1,15 @@
+check,rb3,rb2,passed
+units: same unit labels as rb2 decision_units.csv,49.0,49.0,True
+units: w_ref equals rb2 (max rel. dev.),0.0,0.0,True
+units: C_total equals rb2 (max rel. dev.),0.0,0.0,True
+units: year equals rb2 (rows differing),0.0,0.0,True
+units: dev equals rb2 (rows differing),0.0,0.0,True
+units: date equals rb2 (rows differing),0.0,0.0,True
+units: n_members equals rb2 (rows differing),0.0,0.0,True
+s_agg_units 2023,0.24168170584229384,0.2416817058422938,True
+s_agg_models 2023,0.27073534599212346,0.2707353459921234,True
+s_agg_units 2024,0.5384500202871144,0.5384500202871144,True
+s_agg_models 2024,0.5847245285923777,0.5847245285923777,True
+s_agg_units 2025,0.814274844512894,0.814274844512894,True
+s_agg_models 2025,0.8291467257178425,0.8291467257178425,True
+"32 technologies: reference row equals Models, OLS (M-based)",1.1102230246251565e-15,0.0,True

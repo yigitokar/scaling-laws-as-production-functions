@@ -57,7 +57,7 @@ SEED = 20260924
 QUICK = bool(os.environ.get("M9_QUICK"))
 V, SEQ = 8192, 256          # vocabulary, context (train_sweep.py defaults)
 CORPORA = ("edu", "web")
-VALSETS = ("edu", "web", "wiki")
+VALSETS = ("edu", "web", "wiki", "c4", "pg19")   # c4, pg19: neutral sets added 2026-09-24 17:44 (Amendment 1)
 CONVS = ("P", "T")
 
 
@@ -164,7 +164,9 @@ def bytes_per_token_table(val_tokens=1_048_576):
     train_sweep.evaluate (targets of the first min(4096, n) windows of 257 tokens)."""
     cache = os.path.join(PROC, "bytes_per_token.json")
     if os.path.exists(cache):
-        return json.load(open(cache))
+        got = json.load(open(cache))
+        if all(r in got for r in VALSETS):
+            return got
     blen = token_bytes()
     meta = json.load(open(os.path.join(SWEEP, "meta.json")))
     out = {}
@@ -192,6 +194,7 @@ def load_results():
     key = ["regime", "tag", "d", "L", "lr", "seed", "D_target"]
     df["n_records"] = df.groupby(key)["tokens"].transform("size")
     df = df.drop_duplicates(key, keep="first").reset_index(drop=True)
+    df = merge_posthoc(df)
     for r in VALSETS:
         col = f"loss_{r}"
         if col not in df:
@@ -212,6 +215,38 @@ def load_results():
     import run_grid as rg
     df["lr_rule"] = [round(rg.lr_rule(d), 6) for d in df["d"]]
     df["lr_mult"] = df["lr"] / df["lr_rule"]
+    return df
+
+
+def merge_posthoc(df):
+    """Fill validation sets that were not evaluated during training from results_posthoc.jsonl (deviation D13):
+    code/sweep/eval_ckpt.py re-evaluates the saved endpoint weights with train_sweep's own evaluation code; its
+    re-check of the sets recorded during training is exact. Only missing losses are filled; posthoc_<set> flags them."""
+    path = os.path.join(SWEEP, "results_posthoc.jsonl")
+    if "M9_RESULTS" in os.environ or not os.path.exists(path):
+        return df
+    ph = pd.DataFrame([json.loads(l) for l in open(path) if l.strip()])
+    if ph.empty:
+        return df
+    key = ["regime", "tag", "d", "L", "lr", "seed", "data_seed", "D_target"]
+    if "data_seed" not in df:
+        df["data_seed"] = 0
+    df["data_seed"] = df["data_seed"].fillna(0).astype(int)
+    ph = ph.drop_duplicates(key, keep="first")
+    ph["lr"] = ph["lr"].round(6)
+    idx = {tuple(r[k] if k != "lr" else round(r[k], 6) for k in key): i for i, r in df.iterrows()}
+    for r in VALSETS:
+        col = f"loss_{r}"
+        if col not in df:
+            df[col] = np.nan
+        df[f"posthoc_{r}"] = False
+        if col not in ph:
+            continue
+        for _, q in ph.iterrows():
+            i = idx.get(tuple(q[k] for k in key))
+            if i is not None and not np.isfinite(df.at[i, col]) and np.isfinite(q[col]):
+                df.at[i, col] = q[col]
+                df.at[i, f"posthoc_{r}"] = True
     return df
 
 

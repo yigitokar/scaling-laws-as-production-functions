@@ -1,0 +1,4 @@
+convention,n,N_min,N_max,M_min,M_max,spread,M_min_excl5,spread_excl5
+T (digitized N; Table 1),137,5.73342e+07,1.61833e+10,0.0360683,294.068,1.66958,0.456392,1.49469
+"N_F (T4), D from the digitization",137,5.73143e+07,1.57764e+10,0.0362783,294.171,1.64978,0.444458,1.47891
+"N_F (T4), D = C_b/F_T4 (runs on the nominal budget)",137,5.73143e+07,1.57764e+10,0.0365119,304.421,1.6482,0.491226,1.47799

@@ -1,0 +1,95 @@
+% Online Appendix Table D (rb4 integration, 2026-09-24): copy of output/tables/rb4_chinflop.tex (module rb4_chinflop,
+% reviewed: output/memos/rb4_chinflop.md, rb4_chinflop_review.md) with paper-facing labels and notes. Now that Chinchilla
+% is in N_F in the paper, 'Current' is relabelled 'T' (the earlier primary) and the rebuilt column is the primary.
+% Added to the notes: window/membership sensitivities (rb4_chinflop_review_checks.csv R11-R13) and ra1's grid in N_F
+% (rb4_chinflop_specgrid.csv). The parameter formula in the notes now shows the head count h (rb4's table omits it;
+% rb4_arch.params uses kv_size x n_heads).
+% [round 3, WP2, T13(f), (j), 2026-09-25] Table D3: range of variant means 0.663-0.702 and Chinchilla's windows, samples
+% and memberships 0.674-0.702 (Q 4.4-14.8) from rb5_sigma_study_ranges.csv; joint-bootstrap s.e. 0.014 and the
+% joint-variance interval [0.561, 0.627] (N_F) from rb5_sigma_joint_linear.csv, rb5_sigma_headline.csv (the T column keeps
+% independent-budget intervals, so the N_F rows show both). Note f: rb4_chinflop_specgrid.csv (137 runs; h = 0.6 keeps
+% seven budgets: N_F 0.581, T 0.603).
+\begin{table}[tp]
+\centering
+\caption{Chinchilla's FLOP Accounting Rebuilt: The Model-Free Elasticity by Parameter Count}
+\label{tab:app-chinflop}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccc@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textit{Panel A. Which FLOP count set Hoffmann et al.'s budgets?}}\\[1pt]
+ & Table A4 & $F/(6T)$, & $\eta$, mean & \multicolumn{2}{c}{Figure 4 coordinates} \\
+\cmidrule(l){5-6}
+FLOP count & ratios & profile models & of budgets & slope in $\log N$ & offset \\
+\midrule
+T4: App.~F, no vocabulary & 6 of 6 & 0.98--1.15 & $-$0.023 & $-$0.002 (0.007) & $-$0.006 \\
+A: App.~F as printed & 0 of 6 & 1.00--1.65 & $-$0.083 & $-$0.065 (0.012) & +0.045 \\
+X: executed & 0 of 6 & 0.99--1.34 & $-$0.055 & $-$0.036 (0.009) & +0.020 \\
+$6T$ & -- & 1 & 0 & +0.020 (0.004) & $-$0.023 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel B. Chinchilla's model-free $\sigma^*$ (137 profile runs, nine budgets)}}\\[1pt]
+ & \multicolumn{2}{c}{Pooled} & Drift per & $\sigma^*_b$ at & Change vs. \\
+\cmidrule(l){2-3}
+Parameter count & Random & Fixed & decade & $10^{21}$ FLOP & $T$, digitized \\
+\midrule
+$T$, digitized (earlier primary) & 0.673 & 0.684 & $-$0.072 & 0.617 & -- \\
+ & (0.027) & (0.018) & (0.026) & & \\
+\textbf{$N_F$, count T4} & 0.660 & 0.666 & $-$0.061 & 0.609 & $-$0.014 \\
+ & (0.023) & (0.018) & (0.025) & & \\
+$N_F$, count A & 0.648 & 0.651 & $-$0.047 & 0.591 & $-$0.025 \\
+$N_F$, count X & 0.658 & 0.662 & $-$0.054 & 0.600 & $-$0.015 \\
+$P=T-Vd$ & 0.690 & 0.703 & $-$0.082 & 0.627 & +0.016 \\
+$T$, architecture & 0.674 & 0.684 & $-$0.072 & 0.617 & +0.000 \\
+$N_F$, A, own isocosts$^{a}$ & 0.663 & 0.667 & $-$0.053 & 0.596 & $-$0.011 \\
+$N_F$, X, own isocosts$^{a}$ & 0.666 & 0.670 & $-$0.057 & 0.603 & $-$0.008 \\
+$P$, own isocosts$^{a}$ & 0.669 & 0.678 & $-$0.070 & 0.615 & $-$0.004 \\
+$T$, own isocosts$^{a}$ & 0.660 & 0.664 & $-$0.059 & 0.608 & $-$0.014 \\
+$N_F$, T4, $6T$ tokens$^{b}$ & 0.671 & 0.680 & $-$0.071 & 0.619 & $-$0.002 \\
+Memo: $T$, digitized, $\eta=-0.1$ & 0.626 & & & & $-$0.048 \\
+Memo: $T$, digitized, $\eta=+0.1$ & 0.714 & & & & +0.040 \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Hoffmann et al.'s (2022) 50 architectures (their Table A9) with vocabulary $V=32{,}000$ and context 2,048. $T$: total parameters, $L(4d\,d_{kv}h+2df)+L\,d\,d_{kv}h+Vd$, with $h$ heads of size $d_{kv}$, width $d$, feed-forward size $f$ and $L$ layers (attention, MLP, one relative-position projection per layer, one vocabulary matrix), which reproduces every count of Table A9 to 0.8 percent; $P=T-Vd$; $N_F=C/(6D)=F/6$, with $F$ the training FLOPs per token (forward and backward). Count A is Appendix F as printed; T4 drops its embedding and final-logit terms; X drops only the embedding term. Table A4 ratios: printed ratios reproduced to two decimals. $\eta$: slope of $\ln(F/6T)$ on $\ln T$ over each budget's window runs, averaged over the nine budgets (by budget in the replication files). Figure 4 coordinates: within-budget regression of $\log_{10}$ of the digitized FLOP coordinate, net of the nominal budget and of $-\log_{10}(F/6T)$, on $\log_{10}N$ (budget fixed effects; standard errors clustered by budget); flat if the figure plots $6ND$ at token counts set by count $F$. Panel B: runs on the nominal budgets unless marked; for count T4 these are exact isocosts. The estimator and bootstrap of Section~\ref{sec:tech:modelfree}, unchanged (quadratic in $\ln N$ within one log point of the path, log-cubic frontier, 999 draws). With the windows of the total-parameter estimate held fixed, count T4 changes the budget estimates by $-$0.018 to +0.001. Same-run parametric $\sigma^*$ in $N_F$: $\kappa$ free 0.656 (0.028), $\kappa=1$ 0.690 (0.015). $^{a}$Losses moved from the observed (T4) isocost to the count's own isocost with the $\kappa$-free surface fitted to the same runs. $^{b}$The reading in which tokens were set by $D=C_b/(6T)$, rejected by the coordinate test (row $6T$).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}, Appendix F and Tables A4 and A9; Epoch AI's digitization \citep{besiroglu2024chinchilla}; author's calculations.
+\end{tablenotes}
+\end{table}
+
+\begin{table}[tp]
+\centering
+\caption{Chinchilla's FLOP Accounting Rebuilt: Propagation to the Study-Level Summary and the Drift}
+\label{tab:app-chinflop-prop}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+ & Chinchilla in $T$ & Chinchilla in $N_F$, T4 (primary) \\
+\midrule
+Study-level mean, 95\% CI$^{a}$ & 0.693 [0.653, 0.733] & 0.687 [0.640, 0.734] \\
+\quad $\hat\varphi$; $Q$ ($p$)$^{f}$ & 0.017; 5.7 (0.128) & 0.023; 8.3 (0.041) \\
+\quad FLOP accounting, $\eta=\pm0.1$$^{b}$ & 0.665--0.708 [0.578, 0.751] & 0.673--0.700 [0.598, 0.748] \\
+\quad Chinchilla's other counts$^{c}$ & -- & 0.682--0.697 \\
+\quad Chinchilla's windows, samples$^{f}$ & -- & 0.674--0.702 \\
+\quad Range of variant means$^{d}$ & 0.663--0.708 & 0.663--0.702 \\
+Slope per decade of compute$^{e}$ & $-$0.032 [$-$0.075, 0.010] & $-$0.033 [$-$0.076, 0.011] \\
+\quad Wild cluster $p$; CR2 $p$ & 0.042; 0.096 & 0.039; 0.097 \\
+\quad Chinchilla and Llama~3 (fixed effects)$^{g}$ & $-$0.058 (0.013) & $-$0.058 (0.013; 0.014) \\
+\quad Budgets $\le3\times10^{20}$ FLOP & $-$0.007 & $-$0.008 \\
+$\sigma^*$ at $10^{21}$ FLOP, pooled line & 0.650 [0.565, 0.736] & 0.647 [0.560, 0.735] \\
+$\sigma^*$, budgets $\ge6\times10^{20}$ FLOP$^{g}$ & 0.596 [0.567, 0.624] & 0.594 [0.565, 0.622] \\
+\bottomrule
+\end{tabular*}
+
+
+\begin{tablenotes}
+The study-level summary and the drift of Tables~\ref{tab:designs} and~\ref{tab:app-sigmaC}, with Chinchilla in total parameters (left) and in $N_F$ with count T4 of Table~\ref{tab:app-chinflop} (right; the primary). $^{a}$One estimate per study (Hoffmann, Meta, Marin, Farseer); DerSimonian--Laird mean, modified Hartung--Knapp--Sidik--Jonkman interval. $^{b}$$\sigma^*_{\rm eff}=2/[2+S/(1+\eta)^2]$ for Chinchilla and Meta (left) and for Meta only (right); means, and the widest interval. $^{c}$Chinchilla in counts A and X and conventions $P$ and $T$, on nominal budgets or exact isocosts, and T4 under $6T$ budgets; other studies unchanged. $^{d}$All study-level variants of Table~\ref{tab:app-sigma-study} (FLOP-accounting rows as in the row above), and, right, the rows of note $c$ and the variants of note $f$. $^{e}$Three-level random-effects meta-regression of 44 budget-level estimates on $\log_{10}C$; cluster-robust (CR2) interval by design; restricted wild cluster bootstrap-$t$ (9,999 draws). $^{f}$With Chinchilla at 0.668 (profile membership drawn on the T4-corrected coordinates; 147 runs), 0.676 ($N_F$ read off the digitized coordinates) or 0.681 (without the five high-loss runs, which move the window centers), the mean is 0.691--0.694 and $Q$ is 5.8--6.3 ($p$ between 0.10 and 0.12). Across the window, order, smoother and centering specifications of Online Appendix~\ref{app:add-modelfree}, $N_F$ (T4) gives 0.656--0.702 against 0.665--0.714 in $T$ in the eleven specifications that keep all nine budgets (0.58 against 0.60 with the narrowest window, which keeps seven), lower in every specification; propagated to the study-level mean, these specifications on the 137 and 132 runs and the three variants above give 0.674--0.702 and $Q$ of 4.4--14.8. $^{g}$Model-based s.e.\ and independent-budget intervals in both columns, for comparability; in $N_F$ the joint design-conditional bootstrap gives 0.014 (scaled for excess dispersion) and [0.561, 0.627] (Table~\ref{tab:app-sigmaC}).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{hoffmann2022training}, Appendix F and Tables A4 and A9; Epoch AI's digitization \citep{besiroglu2024chinchilla}; author's calculations.
+\end{tablenotes}
+\end{table}

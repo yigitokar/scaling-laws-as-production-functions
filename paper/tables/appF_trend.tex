@@ -1,0 +1,131 @@
+% Online Appendix trend tables (round 3, WP4b, fix list W19, W24(e), W24(h)):
+% (1) tab:app-trend: copy of output/tables/rb2_decisions_trend.tex (49 budget-level decision units; rb2_decisions re-run,
+%     reviewed); note edited for the cross-reference only.
+% (2) tab:app-trend-boot: verbatim copy of output/tables/rb5_units_trend.tex (rb5_units, reviewed; developer-cluster
+%     bootstrap, MoE, synthetic, within-developer; the note's synthetic-flag reference was corrected in the generator,
+%     code/analysis/rb5_units/run.py, and in the output file, text only).
+% (3) tab:app-rationale: verbatim copy of output/tables/rb5_units_rationale.tex (resolved codes, readings_final.csv; the
+%     protocol cross-reference was added in the generator and in the output file, text only).
+% [integration, 2026-09-25] tab:app-trend-boot note: Panel D uses B=4,999 (rb5_units within_dev); the FE slope is
+% identified by the nine developers with decisions at more than one date; pointer to the wider wild-bootstrap intervals of
+% tab:app-econ-trend. The generator (code/analysis/rb5_units/run.py) still writes the old note.
+\begin{table}[tp]
+\centering
+\caption{The Trend from 2023 under One Set of Rules}
+\label{tab:app-trend}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrccc@{}}
+\toprule
+& $n$ & Ref. & Lab-own & 32 technologies & Leave one & Rise under \\
+& & & & (range) & developer out & 2023--25 \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A. Median $s$}} \\[1pt]
+Models, 2023 & 24 & 0.55 & 0.56 & [$-$0.19, 0.66] & [0.52, 0.57] & 31/32 \\
+\quad 2024 & 40 & 0.82 & 0.82 & [0.30, 0.93] & [0.81, 0.84] & {\scriptsize LODO 17/18} \\
+\quad 2025 & 13 & 0.87 & 0.85 & [0.31, 0.95] & [0.81, 0.89] &  \\
+Decision units, 2023 & 16 & 0.49 & 0.51 & [$-$0.27, 0.64] & [0.46, 0.53] & 1/32 \\
+\quad 2024 & 27 & 0.77 & 0.77 & [0.21, 0.89] & [0.76, 0.82] & {\scriptsize LODO 2/18} \\
+\quad 2025 & 6 & 0.74 & 0.73 & [0.08, 0.80] & [0.65, 0.86] &  \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel B. Compute-weighted $s$}} \\[1pt]
+Models, 2023 & 24 & 0.27 & 0.30 & [0.01, 0.58] & [0.23, 0.40] & 32/32 \\
+\quad 2024 & 40 & 0.58 & 0.61 & [0.05, 0.74] & [0.48, 0.75] & {\scriptsize LODO 18/18} \\
+\quad 2025 & 13 & 0.83 & 0.82 & [0.24, 0.96] & [0.70, 0.87] &  \\
+Decision units, 2023 & 16 & 0.24 & 0.27 & [0.00, 0.57] & [0.21, 0.36] & 32/32 \\
+\quad 2024 & 27 & 0.54 & 0.56 & [0.02, 0.70] & [0.44, 0.72] & {\scriptsize LODO 18/18} \\
+\quad 2025 & 6 & 0.81 & 0.81 & [0.23, 0.92] & [0.68, 0.86] &  \\
+\addlinespace
+\multicolumn{7}{@{}l}{Median $M$ (models): 2023 146; 2024 1,217; 2025 2,438} \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel C. Before 2023 (robustness): 2019--2022 open-weight production-scale universe}} \\[1pt]
+& $n$ & Median $s$ & Weighted $s$ & & & \\
+\multicolumn{7}{@{}l}{All eight models} \\
+\quad reference & 8 & 0.22 & 0.04 & & & \\
+\quad Kaplan belief & 8 & 0.52 & 0.19 & & & \\
+\quad Kaplan belief, $\sigma^*=0.535$ & 8 & 0.77 & 0.43 & & & \\
+\multicolumn{7}{@{}l}{OPT-175B and BLOOM-1.7B dropped (suites)} \\
+\quad reference & 6 & 0.22 & 0.06 & & & \\
+\quad Kaplan belief & 6 & 0.52 & 0.29 & & & \\
+\quad Kaplan belief, $\sigma^*=0.535$ & 6 & 0.77 & 0.57 & & & \\
+\multicolumn{7}{@{}l}{Contrast: clean sample 2023--2025} \\
+\quad Kaplan belief & 77 & 0.91 & 0.93 & & & \\
+\bottomrule
+\end{tabular}
+\medskip
+\begin{tablenotes}
+Clean sample, dense open-weight base models. Ref.: reference technology; Lab-own: lab's own path with the common $\sigma^*$ where available; 32 technologies: range over the technologies; leave one developer out: range when each developer is dropped in turn; Rise: number of the 32 technologies under which the statistic rises from 2023 to 2024 and from 2024 to 2025 (LODO: number of leave-one-developer-out samples, reference technology, in which it does). Compute-weighted $s=\sum(w^+-1)C/\sum w^+C$, $w^+=\max(w,1)$. Decision units are dated by their first release. At given compute every technology ranks models by $M$, so the rise largely restates the rise in median $M$. Panel C: Kaplan belief, the developer planned with the \citet{kaplan2020scaling} allocation $N\propto C^{0.73}$ anchored at GPT-3 (a believed technology, Online Appendix Proposition~\ref{prop:A-wedge}(ii)), with the reference curvature or with the curvature of Kaplan's joint law ($\sigma^*=0.535$); OPT-175B, a GPT-3 replication, lies on that path by construction.
+\end{tablenotes}
+\end{table}
+
+\begin{table}[tp]
+\centering
+\caption{The Trend from 2023: Sampling Uncertainty and Composition}
+\label{tab:app-trend-boot}
+\footnotesize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}lrlrlrl@{}}
+\toprule
+& \multicolumn{2}{c}{2023} & \multicolumn{2}{c}{2024} & \multicolumn{2}{c}{2025} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+& Point & {\scriptsize[95\%]} & Point & {\scriptsize[95\%]} & Point & {\scriptsize[95\%]} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A. By release year}} \\[1pt]
+Weighted $s$, decision units & 0.24 & {\scriptsize[0.09, 0.51]} & 0.54 & {\scriptsize[0.34, 0.79]} & 0.81 & {\scriptsize[0.65, 0.89]} \\
+Median $s$, decision units & 0.49 & {\scriptsize[0.24, 0.59]} & 0.77 & {\scriptsize[0.73, 0.85]} & 0.74 & {\scriptsize[0.63, 0.89]} \\
+Weighted $s$, models & 0.27 & {\scriptsize[0.10, 0.53]} & 0.58 & {\scriptsize[0.40, 0.80]} & 0.83 & {\scriptsize[0.67, 0.90]} \\
+Median $s$, models & 0.55 & {\scriptsize[0.41, 0.62]} & 0.82 & {\scriptsize[0.75, 0.85]} & 0.87 & {\scriptsize[0.74, 0.92]} \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel B. Changes}} \\[1pt]
+& \multicolumn{2}{c}{2023 to 2024} & \multicolumn{2}{c}{2024 to 2025} & \multicolumn{2}{c}{2023 to 2025} \\
+Weighted $s$, decision units & 0.30 & {\scriptsize[0.02, 0.65]} & 0.28 & {\scriptsize[$-$0.12, 0.44]} & 0.57 & {\scriptsize[0.19, 0.72]} \\
+Median $s$, decision units & 0.29 & {\scriptsize[0.19, 0.57]} & $-$0.03 & {\scriptsize[$-$0.19, 0.13]} & 0.26 & {\scriptsize[0.07, 0.59]} \\
+Weighted $s$, models & 0.31 & {\scriptsize[0.04, 0.65]} & 0.24 & {\scriptsize[$-$0.10, 0.39]} & 0.56 & {\scriptsize[0.18, 0.71]} \\
+Median $s$, models & 0.27 & {\scriptsize[0.18, 0.39]} & 0.05 & {\scriptsize[$-$0.05, 0.10]} & 0.31 & {\scriptsize[0.19, 0.44]} \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel C. Compute-weighted $s$ over decision units: checks}} \\[1pt]
+& \multicolumn{2}{c}{2024} & \multicolumn{2}{c}{2025} & & \\
+Dense decision units (Panel A) & 0.54 & & 0.81 & & & \\
+MoE models added, active $N$ & 0.56 & & 0.82 & & & \\
+MoE models added, total $N$ & 0.52 & & 0.73 & & & \\
+Without synthetic-data units (protocol) & 0.39 & & -- & & & \\
+Without synthetic-data units (family list) & 0.43 & & 0.67 & & & \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel D. Annual growth of the decision-unit wedge}} \\[1pt]
+Pooled OLS & 1.86 & {\scriptsize[1.25, 2.80]} & & & & \\
+Pooled OLS, ln C & 2.14 & {\scriptsize[1.68, 3.04]} & & & & \\
+Developer FE & 1.59 & {\scriptsize[0.91, 2.61]} & & & & \\
+Developer FE, ln C & 2.70 & {\scriptsize[1.24, 4.54]} & & & & \\
+\bottomrule
+\end{tabular}
+\medskip
+\begin{tablenotes}
+Weighted: compute-weighted. Clean sample, 49 budget-level decision units (16, 27 and 6 in 2023, 2024 and 2025; 24, 40 and 13 models), reference technology. Compute-weighted $s=\sum(w^+-1)C/\sum w^+C$, $w^+=\max(w,1)$. Intervals: percentile intervals from a bootstrap that resamples the 18 developers with replacement ($B=9{,}999$; 4,999 in Panel D). Intervals in Panels A, B and D use this bootstrap. Panel C: the mixture-of-experts (MoE) models excluded from the clean sample enter as decision units of their own, with the reference wedge at active or at total parameters and weight $6N_{active}D$; synthetic-data flags coded under the reading protocol (Online Appendix~\ref{app:wedge-family}); the family list drops SmolLM 1--3, phi-1.5, phi-2, Qwen2.5, Qwen3 and OLMo~2. Panel D: OLS of $\ln\hat W$ on the release date over decision units, pooled or with developer fixed effects, which identify the trend from the nine developers with decisions at more than one date; the wild cluster bootstrap-$t$ of Online Appendix Table~\ref{tab:app-econ-trend} gives wider intervals ([0.96, 3.54] pooled, [0.47, 5.59] with fixed effects). --: under the protocol's rule every 2025 decision is flagged.
+\end{tablenotes}
+\end{table}
+
+\begin{table}[tp]
+\centering
+\caption{Stated Sizing Rationales by Release Year}
+\label{tab:app-rationale}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrrrrrrr@{}}
+\toprule
+& & \multicolumn{6}{c}{Share of decision units stating} & \multicolumn{3}{c}{Deployment rationale} & \multicolumn{2}{c}{None} \\
+\cmidrule(lr){3-8}\cmidrule(lr){9-11}\cmidrule(l){12-13}
+Year & $n$ & C-opt. & C-opt., & Inference & Device or & Deploy- & None & $n$ & Median & Weighted & Median & Weighted \\
+& & & weighted & cost & memory & ment & & & $s$ & $s$ & $s$ & $s$ \\
+\midrule
+2023 & 16 & 0.12 & 0.45 & 0.38 & 0.31 & 0.38 & 0.50 & 6 & 0.48 & 0.35 & 0.55 & 0.37 \\
+2024 & 27 & 0.04 & 0.65 & 0.56 & 0.63 & 0.67 & 0.33 & 18 & 0.83 & 0.53 & 0.75 & 0.72 \\
+2025 & 6 & 0.00 & 0.00 & 0.17 & 0.33 & 0.50 & 0.50 & 3 & 0.89 & 0.88 & 0.65 & 0.67 \\
+2023--2025 & 49 & 0.06 & 0.52 & 0.45 & 0.49 & 0.55 & 0.41 & 27 & 0.77 & 0.63 & 0.69 & 0.65 \\
+\bottomrule
+\end{tabular}}
+\medskip
+\begin{tablenotes}
+Stated sizing rationale of each of the 49 decision units, coded from the developers' saved reports, release posts and model cards under the written protocol (Online Appendix~\ref{app:wedge-family}): C-opt., the size or token budget was set to be compute-optimal or by a scaling-law allocation; inference cost, the model was sized or trained longer to lower inference or serving cost, or its size is said to make inference cheaper or faster; device or memory, the size targets a device, GPU or memory limit, or on-device, local or edge use; deployment, either of the two; none, no rationale stated. A unit can state several. Weighted: by training compute. Median and weighted $s$ under the reference technology, among units with a deployment rationale and among units that state none of the three. Codes resolved from two coders, the second blind to the wedges (agreement in the replication package).
+\end{tablenotes}
+\end{table}

@@ -1,0 +1,7 @@
+accounting,N_in_6ND,exact_2dp,n,max_abs_err,rmse
+T4,architecture T,6,6,0.00473605,0.00377405
+T4,rounded label N,4,6,0.0453395,0.0188982
+A,architecture T,0,6,0.551944,0.256434
+A,rounded label N,0,6,0.567721,0.265653
+X,architecture T,0,6,0.274167,0.128222
+X,rounded label N,0,6,0.287173,0.136839

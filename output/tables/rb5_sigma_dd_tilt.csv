@@ -1,0 +1,7 @@
+sample,estimator,mode,global_optimum,n,R,alpha,beta,sigma_star,tilt_range,tau_own,tau_ref,objective,objective_minus_global,alpha_plus_beta,spearman_tilt_vs_allcheckpoints,tilt_range_lo,tilt_range_hi,alpha_plus_beta_lo,alpha_plus_beta_hi,tau_own_lo,tau_own_hi,tau_ref_lo,tau_ref_hi,B,share_draws_beta_gt_alpha
+"final checkpoints, complete schedules; mode alpha > beta",nls,alpha > beta,False,950,25,0.858787,0.0941138,0.6773,0.698079,4.32826,5.11998,0.00992621,9.84744e-05,0.952901,0.749231,,,,,,,,,,
+"final checkpoints, complete schedules; mode beta > alpha",nls,beta > alpha,True,950,25,0.146433,1.05542,0.624639,0.781194,3.66925,6.21894,0.00982774,0,1.20185,-0.752308,0.476154,1.32479,0.757609,1.8375,1.94547,11.5633,3.04643,22.2781,199,0.59799
+"all checkpoints with D/N >= 5 (m2, published)",nls,,,21888,25,0.265573,0.14714,0.828942,0.221973,2.93198,1.68086,,,0.412713,,0.132922,0.322517,,,,,,,100,
+"final checkpoints, complete schedules; mode alpha > beta",huber,alpha > beta,False,950,25,0.936385,0.0953304,0.659692,0.564829,2.98898,3.74872,0.00269628,0.000103949,1.03172,0.759231,,,,,,,,,,
+"final checkpoints, complete schedules; mode beta > alpha",huber,beta > alpha,True,950,25,0.155019,1.22765,0.59125,0.496047,2.04935,3.19152,0.00259233,0,1.38266,-0.824615,0.257447,1.6695,0.93963,2.60311,1.53597,6.76916,1.82631,49.7347,199,0.773869
+"all checkpoints with D/N >= 5 (m2, published)",huber,,,21888,25,0.284435,0.13092,0.828036,0.256116,3.43233,1.82063,,,0.415355,,0.176505,0.471472,,,,,,,100,

@@ -14,7 +14,7 @@ import m9_stages as st
 import aer_style as S  # noqa: E402
 
 COL = {"edu": S.BLUE, "web": S.ORANGE}
-NAME = {"edu": "FineWeb-Edu", "web": "FineWeb", "wiki": "WikiText-103"}
+NAME = {"edu": "FineWeb-Edu", "web": "FineWeb", "wiki": "WikiText-103", "c4": "C4", "pg19": "PG-19"}
 CONV_LAB = {"P": "non-embedding $N$, actual FLOPs", "T": "total $N$, $C=6ND$"}
 PENDING = "pending"
 SAMPLE_TEX = {"main": "Main grid", "no25": "Drop $D=25$M", "floor4": "Four-layer floor"}
@@ -202,7 +202,7 @@ def t_tilt(ctx):
     q2, dec = ctx["q2"], ctx["dec"]
     lines = ["Val. set & Conv. & $\\hat\\chi$ & 95\\% CI & WCR $p$ & $\\alpha$ & $\\beta$ & "
              "$M^*$ ratio & $\\hat w$ factor & Wald $p$ \\\\", "\\midrule"]
-    VN = {"edu": "Edu", "web": "Web", "wiki": "Wiki"}
+    VN = {"edu": "Edu", "web": "Web", "wiki": "Wiki", "c4": "C4", "pg19": "PG-19"}
     if q2 is None or q2.empty:
         lines.append("\\multicolumn{10}{l}{Pending: the FineWeb main grid had " +
                      str(int(((ctx['df'].regime == 'web') & (ctx['df'].tag == 'main')).sum())) +

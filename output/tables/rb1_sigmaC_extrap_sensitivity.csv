@@ -1,0 +1,365 @@
+design,variant,spec,M_bin,delta
+"Marin, Comma",h x 0.75,kappa_full,"256-1,024",-0.453819
+"Marin, Comma",h x 0.75,kappa_full,">=1,024",
+"Marin, Comma",h x 0.75,kappa_full,M>=256,-0.453819
+"Marin, Comma",h x 0.75,chin_M100,"256-1,024",-1.09551
+"Marin, Comma",h x 0.75,chin_M100,">=1,024",
+"Marin, Comma",h x 0.75,chin_M100,M>=256,-1.09551
+"Marin, Comma",h x 0.75,chin_full,"256-1,024",-0.57263
+"Marin, Comma",h x 0.75,chin_full,">=1,024",
+"Marin, Comma",h x 0.75,chin_full,M>=256,-0.57263
+"Marin, Comma",h x 0.75,kappa_M100,"256-1,024",-0.736786
+"Marin, Comma",h x 0.75,kappa_M100,">=1,024",
+"Marin, Comma",h x 0.75,kappa_M100,M>=256,-0.736786
+"Marin, Comma",h x 0.75,convexity b2,,0.0340328
+"Marin, Comma",h x 0.75,"convexity b2, M < 1,024",,0.0340328
+"Marin, Comma",h x 1.5,kappa_full,"256-1,024",-0.409797
+"Marin, Comma",h x 1.5,kappa_full,">=1,024",-2.25012
+"Marin, Comma",h x 1.5,kappa_full,M>=256,-1.14593
+"Marin, Comma",h x 1.5,chin_M100,"256-1,024",-1.06909
+"Marin, Comma",h x 1.5,chin_M100,">=1,024",-3.06309
+"Marin, Comma",h x 1.5,chin_M100,M>=256,-1.86669
+"Marin, Comma",h x 1.5,chin_full,"256-1,024",-0.531701
+"Marin, Comma",h x 1.5,chin_full,">=1,024",-2.4002
+"Marin, Comma",h x 1.5,chin_full,M>=256,-1.2791
+"Marin, Comma",h x 1.5,kappa_M100,"256-1,024",-0.699464
+"Marin, Comma",h x 1.5,kappa_M100,">=1,024",-2.61155
+"Marin, Comma",h x 1.5,kappa_M100,M>=256,-1.4643
+"Marin, Comma",h x 1.5,convexity b2,,0.0442257
+"Marin, Comma",h x 1.5,"convexity b2, M < 1,024",,0.0166594
+"Marin, Comma",h_x x 0.75,kappa_full,"256-1,024",-0.449619
+"Marin, Comma",h_x x 0.75,kappa_full,">=1,024",
+"Marin, Comma",h_x x 0.75,kappa_full,M>=256,-0.449619
+"Marin, Comma",h_x x 0.75,chin_M100,"256-1,024",-1.09131
+"Marin, Comma",h_x x 0.75,chin_M100,">=1,024",
+"Marin, Comma",h_x x 0.75,chin_M100,M>=256,-1.09131
+"Marin, Comma",h_x x 0.75,chin_full,"256-1,024",-0.56843
+"Marin, Comma",h_x x 0.75,chin_full,">=1,024",
+"Marin, Comma",h_x x 0.75,chin_full,M>=256,-0.56843
+"Marin, Comma",h_x x 0.75,kappa_M100,"256-1,024",-0.732586
+"Marin, Comma",h_x x 0.75,kappa_M100,">=1,024",
+"Marin, Comma",h_x x 0.75,kappa_M100,M>=256,-0.732586
+"Marin, Comma",h_x x 0.75,convexity b2,,0.0334044
+"Marin, Comma",h_x x 0.75,"convexity b2, M < 1,024",,0.0334044
+"Marin, Comma",h_c x 1.5,kappa_full,"256-1,024",-0.442552
+"Marin, Comma",h_c x 1.5,kappa_full,">=1,024",-0.946469
+"Marin, Comma",h_c x 1.5,kappa_full,M>=256,-0.568531
+"Marin, Comma",h_c x 1.5,chin_M100,"256-1,024",-1.10184
+"Marin, Comma",h_c x 1.5,chin_M100,">=1,024",-1.71807
+"Marin, Comma",h_c x 1.5,chin_M100,M>=256,-1.2559
+"Marin, Comma",h_c x 1.5,chin_full,"256-1,024",-0.564456
+"Marin, Comma",h_c x 1.5,chin_full,">=1,024",-1.08917
+"Marin, Comma",h_c x 1.5,chin_full,M>=256,-0.695635
+"Marin, Comma",h_c x 1.5,kappa_M100,"256-1,024",-0.732219
+"Marin, Comma",h_c x 1.5,kappa_M100,">=1,024",-1.29096
+"Marin, Comma",h_c x 1.5,kappa_M100,M>=256,-0.871904
+"Marin, Comma",h_c x 1.5,convexity b2,,0.0320954
+"Marin, Comma",h_c x 1.5,"convexity b2, M < 1,024",,0.0277394
+"Marin, Comma",n_eff >= 10,kappa_full,"256-1,024",-0.413397
+"Marin, Comma",n_eff >= 10,kappa_full,">=1,024",
+"Marin, Comma",n_eff >= 10,kappa_full,M>=256,-0.413397
+"Marin, Comma",n_eff >= 10,chin_M100,"256-1,024",-1.05508
+"Marin, Comma",n_eff >= 10,chin_M100,">=1,024",
+"Marin, Comma",n_eff >= 10,chin_M100,M>=256,-1.05508
+"Marin, Comma",n_eff >= 10,chin_full,"256-1,024",-0.532208
+"Marin, Comma",n_eff >= 10,chin_full,">=1,024",
+"Marin, Comma",n_eff >= 10,chin_full,M>=256,-0.532208
+"Marin, Comma",n_eff >= 10,kappa_M100,"256-1,024",-0.696364
+"Marin, Comma",n_eff >= 10,kappa_M100,">=1,024",
+"Marin, Comma",n_eff >= 10,kappa_M100,M>=256,-0.696364
+"Marin, Comma",n_eff >= 10,convexity b2,,0.0270911
+"Marin, Comma",n_eff >= 10,"convexity b2, M < 1,024",,0.0270911
+"Marin, Comma",n_eff >= 6,kappa_full,"256-1,024",-0.433752
+"Marin, Comma",n_eff >= 6,kappa_full,">=1,024",-1.01884
+"Marin, Comma",n_eff >= 6,kappa_full,M>=256,-0.667788
+"Marin, Comma",n_eff >= 6,chin_M100,"256-1,024",-1.09304
+"Marin, Comma",n_eff >= 6,chin_M100,">=1,024",-1.83181
+"Marin, Comma",n_eff >= 6,chin_M100,M>=256,-1.38855
+"Marin, Comma",n_eff >= 6,chin_full,"256-1,024",-0.555657
+"Marin, Comma",n_eff >= 6,chin_full,">=1,024",-1.16892
+"Marin, Comma",n_eff >= 6,chin_full,M>=256,-0.800962
+"Marin, Comma",n_eff >= 6,kappa_M100,"256-1,024",-0.723419
+"Marin, Comma",n_eff >= 6,kappa_M100,">=1,024",-1.38027
+"Marin, Comma",n_eff >= 6,kappa_M100,M>=256,-0.986158
+"Marin, Comma",n_eff >= 6,convexity b2,,0.0358152
+"Marin, Comma",n_eff >= 6,"convexity b2, M < 1,024",,0.0282266
+"Marin, DCLM",h x 0.75,kappa_full,"256-1,024",-0.526381
+"Marin, DCLM",h x 0.75,kappa_full,">=1,024",
+"Marin, DCLM",h x 0.75,kappa_full,M>=256,-0.526381
+"Marin, DCLM",h x 0.75,chin_M100,"256-1,024",-0.996635
+"Marin, DCLM",h x 0.75,chin_M100,">=1,024",
+"Marin, DCLM",h x 0.75,chin_M100,M>=256,-0.996635
+"Marin, DCLM",h x 0.75,chin_full,"256-1,024",-0.640556
+"Marin, DCLM",h x 0.75,chin_full,">=1,024",
+"Marin, DCLM",h x 0.75,chin_full,M>=256,-0.640556
+"Marin, DCLM",h x 0.75,kappa_M100,"256-1,024",-0.766225
+"Marin, DCLM",h x 0.75,kappa_M100,">=1,024",
+"Marin, DCLM",h x 0.75,kappa_M100,M>=256,-0.766225
+"Marin, DCLM",h x 0.75,convexity b2,,0.0273512
+"Marin, DCLM",h x 0.75,"convexity b2, M < 1,024",,0.0273512
+"Marin, DCLM",h x 1.5,kappa_full,"256-1,024",-0.472659
+"Marin, DCLM",h x 1.5,kappa_full,">=1,024",-1.85424
+"Marin, DCLM",h x 1.5,kappa_full,M>=256,-0.779677
+"Marin, DCLM",h x 1.5,chin_M100,"256-1,024",-0.966759
+"Marin, DCLM",h x 1.5,chin_M100,">=1,024",-2.46148
+"Marin, DCLM",h x 1.5,chin_M100,M>=256,-1.29892
+"Marin, DCLM",h x 1.5,chin_full,"256-1,024",-0.586127
+"Marin, DCLM",h x 1.5,chin_full,">=1,024",-1.99543
+"Marin, DCLM",h x 1.5,chin_full,M>=256,-0.899305
+"Marin, DCLM",h x 1.5,kappa_M100,"256-1,024",-0.720126
+"Marin, DCLM",h x 1.5,kappa_M100,">=1,024",-2.16543
+"Marin, DCLM",h x 1.5,kappa_M100,M>=256,-1.0413
+"Marin, DCLM",h x 1.5,convexity b2,,0.0280304
+"Marin, DCLM",h x 1.5,"convexity b2, M < 1,024",,0.0169405
+"Marin, DCLM",h_x x 0.75,kappa_full,"256-1,024",-0.50601
+"Marin, DCLM",h_x x 0.75,kappa_full,">=1,024",
+"Marin, DCLM",h_x x 0.75,kappa_full,M>=256,-0.50601
+"Marin, DCLM",h_x x 0.75,chin_M100,"256-1,024",-0.988658
+"Marin, DCLM",h_x x 0.75,chin_M100,">=1,024",
+"Marin, DCLM",h_x x 0.75,chin_M100,M>=256,-0.988658
+"Marin, DCLM",h_x x 0.75,chin_full,"256-1,024",-0.618374
+"Marin, DCLM",h_x x 0.75,chin_full,">=1,024",
+"Marin, DCLM",h_x x 0.75,chin_full,M>=256,-0.618374
+"Marin, DCLM",h_x x 0.75,kappa_M100,"256-1,024",-0.748536
+"Marin, DCLM",h_x x 0.75,kappa_M100,">=1,024",
+"Marin, DCLM",h_x x 0.75,kappa_M100,M>=256,-0.748536
+"Marin, DCLM",h_x x 0.75,convexity b2,,0.0274076
+"Marin, DCLM",h_x x 0.75,"convexity b2, M < 1,024",,0.0274076
+"Marin, DCLM",h_c x 1.5,kappa_full,"256-1,024",-0.483969
+"Marin, DCLM",h_c x 1.5,kappa_full,">=1,024",-1.14879
+"Marin, DCLM",h_c x 1.5,kappa_full,M>=256,-0.567072
+"Marin, DCLM",h_c x 1.5,chin_M100,"256-1,024",-0.97807
+"Marin, DCLM",h_c x 1.5,chin_M100,">=1,024",-1.72983
+"Marin, DCLM",h_c x 1.5,chin_M100,M>=256,-1.07204
+"Marin, DCLM",h_c x 1.5,chin_full,"256-1,024",-0.597438
+"Marin, DCLM",h_c x 1.5,chin_full,">=1,024",-1.29176
+"Marin, DCLM",h_c x 1.5,chin_full,M>=256,-0.684227
+"Marin, DCLM",h_c x 1.5,kappa_M100,"256-1,024",-0.731436
+"Marin, DCLM",h_c x 1.5,kappa_M100,">=1,024",-1.45249
+"Marin, DCLM",h_c x 1.5,kappa_M100,M>=256,-0.821568
+"Marin, DCLM",h_c x 1.5,convexity b2,,0.0273069
+"Marin, DCLM",h_c x 1.5,"convexity b2, M < 1,024",,0.0246436
+"Marin, DCLM",n_eff >= 10,kappa_full,"256-1,024",-0.455038
+"Marin, DCLM",n_eff >= 10,kappa_full,">=1,024",
+"Marin, DCLM",n_eff >= 10,kappa_full,M>=256,-0.455038
+"Marin, DCLM",n_eff >= 10,chin_M100,"256-1,024",-0.937686
+"Marin, DCLM",n_eff >= 10,chin_M100,">=1,024",
+"Marin, DCLM",n_eff >= 10,chin_M100,M>=256,-0.937686
+"Marin, DCLM",n_eff >= 10,chin_full,"256-1,024",-0.567402
+"Marin, DCLM",n_eff >= 10,chin_full,">=1,024",
+"Marin, DCLM",n_eff >= 10,chin_full,M>=256,-0.567402
+"Marin, DCLM",n_eff >= 10,kappa_M100,"256-1,024",-0.697564
+"Marin, DCLM",n_eff >= 10,kappa_M100,">=1,024",
+"Marin, DCLM",n_eff >= 10,kappa_M100,M>=256,-0.697564
+"Marin, DCLM",n_eff >= 10,convexity b2,,0.0245924
+"Marin, DCLM",n_eff >= 10,"convexity b2, M < 1,024",,0.0245924
+"Marin, DCLM",n_eff >= 6,kappa_full,"256-1,024",-0.454461
+"Marin, DCLM",n_eff >= 6,kappa_full,">=1,024",-0.927822
+"Marin, DCLM",n_eff >= 6,kappa_full,M>=256,-0.559652
+"Marin, DCLM",n_eff >= 6,chin_M100,"256-1,024",-0.948561
+"Marin, DCLM",n_eff >= 6,chin_M100,">=1,024",-1.53506
+"Marin, DCLM",n_eff >= 6,chin_M100,M>=256,-1.07889
+"Marin, DCLM",n_eff >= 6,chin_full,"256-1,024",-0.567929
+"Marin, DCLM",n_eff >= 6,chin_full,">=1,024",-1.06901
+"Marin, DCLM",n_eff >= 6,chin_full,M>=256,-0.67928
+"Marin, DCLM",n_eff >= 6,kappa_M100,"256-1,024",-0.701928
+"Marin, DCLM",n_eff >= 6,kappa_M100,">=1,024",-1.23901
+"Marin, DCLM",n_eff >= 6,kappa_M100,M>=256,-0.821279
+"Marin, DCLM",n_eff >= 6,convexity b2,,0.0273961
+"Marin, DCLM",n_eff >= 6,"convexity b2, M < 1,024",,0.02463
+"Marin, DCLM",own-corpus CV bandwidth,kappa_full,"256-1,024",-0.501666
+"Marin, DCLM",own-corpus CV bandwidth,kappa_full,">=1,024",-1.14766
+"Marin, DCLM",own-corpus CV bandwidth,kappa_full,M>=256,-0.582416
+"Marin, DCLM",own-corpus CV bandwidth,chin_M100,"256-1,024",-0.995767
+"Marin, DCLM",own-corpus CV bandwidth,chin_M100,">=1,024",-1.7287
+"Marin, DCLM",own-corpus CV bandwidth,chin_M100,M>=256,-1.08738
+"Marin, DCLM",own-corpus CV bandwidth,chin_full,"256-1,024",-0.615135
+"Marin, DCLM",own-corpus CV bandwidth,chin_full,">=1,024",-1.29063
+"Marin, DCLM",own-corpus CV bandwidth,chin_full,M>=256,-0.699571
+"Marin, DCLM",own-corpus CV bandwidth,kappa_M100,"256-1,024",-0.749133
+"Marin, DCLM",own-corpus CV bandwidth,kappa_M100,">=1,024",-1.45137
+"Marin, DCLM",own-corpus CV bandwidth,kappa_M100,M>=256,-0.836912
+"Marin, DCLM",own-corpus CV bandwidth,convexity b2,,0.0273114
+"Marin, DCLM",own-corpus CV bandwidth,"convexity b2, M < 1,024",,0.0247063
+"Marin, DCLM",all runs (no monotonicity screen),kappa_full,"256-1,024",-0.840152
+"Marin, DCLM",all runs (no monotonicity screen),kappa_full,">=1,024",-1.75849
+"Marin, DCLM",all runs (no monotonicity screen),kappa_full,M>=256,-0.971343
+"Marin, DCLM",all runs (no monotonicity screen),chin_M100,"256-1,024",-1.3882
+"Marin, DCLM",all runs (no monotonicity screen),chin_M100,">=1,024",-2.40006
+"Marin, DCLM",all runs (no monotonicity screen),chin_M100,M>=256,-1.53275
+"Marin, DCLM",all runs (no monotonicity screen),chin_full,"256-1,024",-0.946165
+"Marin, DCLM",all runs (no monotonicity screen),chin_full,">=1,024",-1.88243
+"Marin, DCLM",all runs (no monotonicity screen),chin_full,M>=256,-1.07992
+"Marin, DCLM",all runs (no monotonicity screen),kappa_M100,"256-1,024",-1.14086
+"Marin, DCLM",all runs (no monotonicity screen),kappa_M100,">=1,024",-2.11351
+"Marin, DCLM",all runs (no monotonicity screen),kappa_M100,M>=256,-1.27981
+"Marin, DCLM",all runs (no monotonicity screen),convexity b2,,0.0387403
+"Marin, DCLM",all runs (no monotonicity screen),"convexity b2, M < 1,024",,0.0344334
+"Marin, Nemotron-CC",h x 0.75,kappa_full,"256-1,024",-0.386585
+"Marin, Nemotron-CC",h x 0.75,kappa_full,">=1,024",
+"Marin, Nemotron-CC",h x 0.75,kappa_full,M>=256,-0.386585
+"Marin, Nemotron-CC",h x 0.75,chin_M100,"256-1,024",-1.01842
+"Marin, Nemotron-CC",h x 0.75,chin_M100,">=1,024",
+"Marin, Nemotron-CC",h x 0.75,chin_M100,M>=256,-1.01842
+"Marin, Nemotron-CC",h x 0.75,chin_full,"256-1,024",-0.465007
+"Marin, Nemotron-CC",h x 0.75,chin_full,">=1,024",
+"Marin, Nemotron-CC",h x 0.75,chin_full,M>=256,-0.465007
+"Marin, Nemotron-CC",h x 0.75,kappa_M100,"256-1,024",-0.598899
+"Marin, Nemotron-CC",h x 0.75,kappa_M100,">=1,024",
+"Marin, Nemotron-CC",h x 0.75,kappa_M100,M>=256,-0.598899
+"Marin, Nemotron-CC",h x 0.75,convexity b2,,0.0256988
+"Marin, Nemotron-CC",h x 0.75,"convexity b2, M < 1,024",,0.0256988
+"Marin, Nemotron-CC",h x 1.5,kappa_full,"256-1,024",-0.4399
+"Marin, Nemotron-CC",h x 1.5,kappa_full,">=1,024",-1.60479
+"Marin, Nemotron-CC",h x 1.5,kappa_full,M>=256,-0.828197
+"Marin, Nemotron-CC",h x 1.5,chin_M100,"256-1,024",-1.08671
+"Marin, Nemotron-CC",h x 1.5,chin_M100,">=1,024",-2.38005
+"Marin, Nemotron-CC",h x 1.5,chin_M100,M>=256,-1.51782
+"Marin, Nemotron-CC",h x 1.5,chin_full,"256-1,024",-0.518635
+"Marin, Nemotron-CC",h x 1.5,chin_full,">=1,024",-1.69738
+"Marin, Nemotron-CC",h x 1.5,chin_full,M>=256,-0.91155
+"Marin, Nemotron-CC",h x 1.5,kappa_M100,"256-1,024",-0.657375
+"Marin, Nemotron-CC",h x 1.5,kappa_M100,">=1,024",-1.8703
+"Marin, Nemotron-CC",h x 1.5,kappa_M100,M>=256,-1.06168
+"Marin, Nemotron-CC",h x 1.5,convexity b2,,0.0297419
+"Marin, Nemotron-CC",h x 1.5,"convexity b2, M < 1,024",,0.0164792
+"Marin, Nemotron-CC",h_x x 0.75,kappa_full,"256-1,024",-0.381731
+"Marin, Nemotron-CC",h_x x 0.75,kappa_full,">=1,024",
+"Marin, Nemotron-CC",h_x x 0.75,kappa_full,M>=256,-0.381731
+"Marin, Nemotron-CC",h_x x 0.75,chin_M100,"256-1,024",-1.01357
+"Marin, Nemotron-CC",h_x x 0.75,chin_M100,">=1,024",
+"Marin, Nemotron-CC",h_x x 0.75,chin_M100,M>=256,-1.01357
+"Marin, Nemotron-CC",h_x x 0.75,chin_full,"256-1,024",-0.460153
+"Marin, Nemotron-CC",h_x x 0.75,chin_full,">=1,024",
+"Marin, Nemotron-CC",h_x x 0.75,chin_full,M>=256,-0.460153
+"Marin, Nemotron-CC",h_x x 0.75,kappa_M100,"256-1,024",-0.594045
+"Marin, Nemotron-CC",h_x x 0.75,kappa_M100,">=1,024",
+"Marin, Nemotron-CC",h_x x 0.75,kappa_M100,M>=256,-0.594045
+"Marin, Nemotron-CC",h_x x 0.75,convexity b2,,0.0248327
+"Marin, Nemotron-CC",h_x x 0.75,"convexity b2, M < 1,024",,0.0248327
+"Marin, Nemotron-CC",h_c x 1.5,kappa_full,"256-1,024",-0.404431
+"Marin, Nemotron-CC",h_c x 1.5,kappa_full,">=1,024",-1.01721
+"Marin, Nemotron-CC",h_c x 1.5,kappa_full,M>=256,-0.557626
+"Marin, Nemotron-CC",h_c x 1.5,chin_M100,"256-1,024",-1.05124
+"Marin, Nemotron-CC",h_c x 1.5,chin_M100,">=1,024",-1.77316
+"Marin, Nemotron-CC",h_c x 1.5,chin_M100,M>=256,-1.23172
+"Marin, Nemotron-CC",h_c x 1.5,chin_full,"256-1,024",-0.483165
+"Marin, Nemotron-CC",h_c x 1.5,chin_full,">=1,024",-1.10997
+"Marin, Nemotron-CC",h_c x 1.5,chin_full,M>=256,-0.639867
+"Marin, Nemotron-CC",h_c x 1.5,kappa_M100,"256-1,024",-0.621906
+"Marin, Nemotron-CC",h_c x 1.5,kappa_M100,">=1,024",-1.27625
+"Marin, Nemotron-CC",h_c x 1.5,kappa_M100,M>=256,-0.785492
+"Marin, Nemotron-CC",h_c x 1.5,convexity b2,,0.0270796
+"Marin, Nemotron-CC",h_c x 1.5,"convexity b2, M < 1,024",,0.0223645
+"Marin, Nemotron-CC",n_eff >= 10,kappa_full,"256-1,024",-0.364632
+"Marin, Nemotron-CC",n_eff >= 10,kappa_full,">=1,024",
+"Marin, Nemotron-CC",n_eff >= 10,kappa_full,M>=256,-0.364632
+"Marin, Nemotron-CC",n_eff >= 10,chin_M100,"256-1,024",-0.99647
+"Marin, Nemotron-CC",n_eff >= 10,chin_M100,">=1,024",
+"Marin, Nemotron-CC",n_eff >= 10,chin_M100,M>=256,-0.99647
+"Marin, Nemotron-CC",n_eff >= 10,chin_full,"256-1,024",-0.443054
+"Marin, Nemotron-CC",n_eff >= 10,chin_full,">=1,024",
+"Marin, Nemotron-CC",n_eff >= 10,chin_full,M>=256,-0.443054
+"Marin, Nemotron-CC",n_eff >= 10,kappa_M100,"256-1,024",-0.576946
+"Marin, Nemotron-CC",n_eff >= 10,kappa_M100,">=1,024",
+"Marin, Nemotron-CC",n_eff >= 10,kappa_M100,M>=256,-0.576946
+"Marin, Nemotron-CC",n_eff >= 10,convexity b2,,0.0221891
+"Marin, Nemotron-CC",n_eff >= 10,"convexity b2, M < 1,024",,0.0221891
+"Marin, Nemotron-CC",n_eff >= 6,kappa_full,"256-1,024",-0.392675
+"Marin, Nemotron-CC",n_eff >= 6,kappa_full,">=1,024",-1.40383
+"Marin, Nemotron-CC",n_eff >= 6,kappa_full,M>=256,-0.797138
+"Marin, Nemotron-CC",n_eff >= 6,chin_M100,"256-1,024",-1.03948
+"Marin, Nemotron-CC",n_eff >= 6,chin_M100,">=1,024",-2.1963
+"Marin, Nemotron-CC",n_eff >= 6,chin_M100,M>=256,-1.50221
+"Marin, Nemotron-CC",n_eff >= 6,chin_full,"256-1,024",-0.471409
+"Marin, Nemotron-CC",n_eff >= 6,chin_full,">=1,024",-1.49852
+"Marin, Nemotron-CC",n_eff >= 6,chin_full,M>=256,-0.882252
+"Marin, Nemotron-CC",n_eff >= 6,kappa_M100,"256-1,024",-0.610149
+"Marin, Nemotron-CC",n_eff >= 6,kappa_M100,">=1,024",-1.67585
+"Marin, Nemotron-CC",n_eff >= 6,kappa_M100,M>=256,-1.03643
+"Marin, Nemotron-CC",n_eff >= 6,convexity b2,,0.0355722
+"Marin, Nemotron-CC",n_eff >= 6,"convexity b2, M < 1,024",,0.0229828
+Llama 3,h x 0.75,kappa_full,"256-1,024",-0.493427
+Llama 3,h x 0.75,kappa_full,">=1,024",
+Llama 3,h x 0.75,kappa_full,M>=256,-0.493427
+Llama 3,h x 0.75,chin_M100,"256-1,024",-1.01062
+Llama 3,h x 0.75,chin_M100,">=1,024",
+Llama 3,h x 0.75,chin_M100,M>=256,-1.01062
+Llama 3,h x 0.75,chin_full,"256-1,024",-0.96307
+Llama 3,h x 0.75,chin_full,">=1,024",
+Llama 3,h x 0.75,chin_full,M>=256,-0.96307
+Llama 3,h x 0.75,kappa_M100,"256-1,024",-0.384441
+Llama 3,h x 0.75,kappa_M100,">=1,024",
+Llama 3,h x 0.75,kappa_M100,M>=256,-0.384441
+Llama 3,h x 0.75,convexity b2,,-0.0516006
+Llama 3,h x 0.75,"convexity b2, M < 1,024",,-0.0516006
+Llama 3,h x 1.5,kappa_full,"256-1,024",-0.854918
+Llama 3,h x 1.5,kappa_full,">=1,024",
+Llama 3,h x 1.5,kappa_full,M>=256,-0.854918
+Llama 3,h x 1.5,chin_M100,"256-1,024",-1.45544
+Llama 3,h x 1.5,chin_M100,">=1,024",
+Llama 3,h x 1.5,chin_M100,M>=256,-1.45544
+Llama 3,h x 1.5,chin_full,"256-1,024",-1.34456
+Llama 3,h x 1.5,chin_full,">=1,024",
+Llama 3,h x 1.5,chin_full,M>=256,-1.34456
+Llama 3,h x 1.5,kappa_M100,"256-1,024",-0.827216
+Llama 3,h x 1.5,kappa_M100,">=1,024",
+Llama 3,h x 1.5,kappa_M100,M>=256,-0.827216
+Llama 3,h x 1.5,convexity b2,,0.0100582
+Llama 3,h x 1.5,"convexity b2, M < 1,024",,0.0100582
+Llama 3,h_x x 0.75,kappa_full,"256-1,024",-0.356027
+Llama 3,h_x x 0.75,kappa_full,">=1,024",
+Llama 3,h_x x 0.75,kappa_full,M>=256,-0.356027
+Llama 3,h_x x 0.75,chin_M100,"256-1,024",-0.873218
+Llama 3,h_x x 0.75,chin_M100,">=1,024",
+Llama 3,h_x x 0.75,chin_M100,M>=256,-0.873218
+Llama 3,h_x x 0.75,chin_full,"256-1,024",-0.82567
+Llama 3,h_x x 0.75,chin_full,">=1,024",
+Llama 3,h_x x 0.75,chin_full,M>=256,-0.82567
+Llama 3,h_x x 0.75,kappa_M100,"256-1,024",-0.247041
+Llama 3,h_x x 0.75,kappa_M100,">=1,024",
+Llama 3,h_x x 0.75,kappa_M100,M>=256,-0.247041
+Llama 3,h_x x 0.75,convexity b2,,-0.0397858
+Llama 3,h_x x 0.75,"convexity b2, M < 1,024",,-0.0397858
+Llama 3,h_c x 1.5,kappa_full,"256-1,024",-0.262861
+Llama 3,h_c x 1.5,kappa_full,">=1,024",
+Llama 3,h_c x 1.5,kappa_full,M>=256,-0.262861
+Llama 3,h_c x 1.5,chin_M100,"256-1,024",-0.780051
+Llama 3,h_c x 1.5,chin_M100,">=1,024",
+Llama 3,h_c x 1.5,chin_M100,M>=256,-0.780051
+Llama 3,h_c x 1.5,chin_full,"256-1,024",-0.732503
+Llama 3,h_c x 1.5,chin_full,">=1,024",
+Llama 3,h_c x 1.5,chin_full,M>=256,-0.732503
+Llama 3,h_c x 1.5,kappa_M100,"256-1,024",-0.153874
+Llama 3,h_c x 1.5,kappa_M100,">=1,024",
+Llama 3,h_c x 1.5,kappa_M100,M>=256,-0.153874
+Llama 3,h_c x 1.5,convexity b2,,-0.0270959
+Llama 3,h_c x 1.5,"convexity b2, M < 1,024",,-0.0270959
+Llama 3,n_eff >= 10,kappa_full,"256-1,024",-0.37837
+Llama 3,n_eff >= 10,kappa_full,">=1,024",
+Llama 3,n_eff >= 10,kappa_full,M>=256,-0.37837
+Llama 3,n_eff >= 10,chin_M100,"256-1,024",-0.895561
+Llama 3,n_eff >= 10,chin_M100,">=1,024",
+Llama 3,n_eff >= 10,chin_M100,M>=256,-0.895561
+Llama 3,n_eff >= 10,chin_full,"256-1,024",-0.848013
+Llama 3,n_eff >= 10,chin_full,">=1,024",
+Llama 3,n_eff >= 10,chin_full,M>=256,-0.848013
+Llama 3,n_eff >= 10,kappa_M100,"256-1,024",-0.269384
+Llama 3,n_eff >= 10,kappa_M100,">=1,024",
+Llama 3,n_eff >= 10,kappa_M100,M>=256,-0.269384
+Llama 3,n_eff >= 10,convexity b2,,-0.0292437
+Llama 3,n_eff >= 10,"convexity b2, M < 1,024",,-0.0292437
+Llama 3,n_eff >= 6,kappa_full,"256-1,024",-0.37837
+Llama 3,n_eff >= 6,kappa_full,">=1,024",
+Llama 3,n_eff >= 6,kappa_full,M>=256,-0.37837
+Llama 3,n_eff >= 6,chin_M100,"256-1,024",-0.895561
+Llama 3,n_eff >= 6,chin_M100,">=1,024",
+Llama 3,n_eff >= 6,chin_M100,M>=256,-0.895561
+Llama 3,n_eff >= 6,chin_full,"256-1,024",-0.848013
+Llama 3,n_eff >= 6,chin_full,">=1,024",
+Llama 3,n_eff >= 6,chin_full,M>=256,-0.848013
+Llama 3,n_eff >= 6,kappa_M100,"256-1,024",-0.269384
+Llama 3,n_eff >= 6,kappa_M100,">=1,024",
+Llama 3,n_eff >= 6,kappa_M100,M>=256,-0.269384
+Llama 3,n_eff >= 6,convexity b2,,-0.0276863
+Llama 3,n_eff >= 6,"convexity b2, M < 1,024",,-0.0276863

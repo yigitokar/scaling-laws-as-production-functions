@@ -1,0 +1,2 @@
+n_runs,n_complete,n_truncated,M_min,M_max,M_median,n_recipes,n_cells,truncated
+1100,950,150,84.9872,110.103,100.046,25,38,"1B|small aux 2, 1B|small aux 3, 530M|small aux 2, 530M|small aux 3, 750M|small aux 2, 750M|small aux 3"

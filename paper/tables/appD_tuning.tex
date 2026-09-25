@@ -1,0 +1,41 @@
+% Online Appendix Table D (v3): tuning share of Farseer's convexity (R2 Major 5.2). Copy of output/tables/rb1_sigmaC_tuning.tex
+% (module rb1_sigmaC, reviewed); writer appendices.
+% [round 3, WP2, T13(h), 2026-09-25] rb1_sigmaC_tuning.csv: tuning share of the fixed (LR, batch) row -0.00246; the
+% Bjorck et al. (N, D)-rule row uses 309 points.
+\begin{table}[tp]
+\centering
+\caption{How Much of Farseer's Convexity Could Be Mis-Tuning}
+\label{tab:app-tuning}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.36\textwidth}ccccc@{}}
+\toprule
+Policy whose inefficiency gradients are applied & $\iota_n$ & $\iota_d$ & $b_2$ corrected & Tuning share & Path $a_{\rm obs}-a$ \\
+\midrule
+Step Law rule, in sample & $-$0.48 & +0.07 & 0.0200 & +0.02 & +0.0009 \\
+Step Law rule, 95\% corner ($\iota_n-$, $\iota_d+$) & $-$1.24 & +0.55 & 0.0188 & +0.08 & +0.0031 \\
+Step Law rule, 95\% corner ($\iota_n+$, $\iota_d-$) & +0.28 & $-$0.41 & 0.0213 & $-$0.04 & $-$0.0011 \\
+Random configuration (best of 1): D-biased & $-$4.38 & $-$6.95 & 0.0381 & $-$0.87 & $-$0.0036 \\
+Random configurations (best of 4) & $-$1.60 & $-$2.02 & 0.0235 & $-$0.15 & $-$0.0007 \\
+Random configurations (best of 16) & $-$0.40 & $-$0.63 & 0.0213 & $-$0.05 & $-$0.0004 \\
+One fixed (LR, batch) & $-$0.79 & $-$0.26 & 0.0204 & $-$0.00 & +0.0009 \\
+Porian et al.\ base (fixed) & +3.17 & $-$2.31 & 0.0262 & $-$0.29 & $-$0.0051 \\
+Porian et al.\ $N$-rule & +7.24 & $-$5.73 & 0.0367 & $-$0.80 & $-$0.0059 \\
+DeepSeek $C$-rule & $-$1.55 & $-$0.19 & 0.0199 & +0.02 & +0.0023 \\
+Bjorck et al.\ $(N,D)$-rule & $-$5.69 & +0.37 & 0.0158 & +0.22 & +0.0038 \\
+Stochastic frontier shape, Step Law level & varies & varies & 0.0205 & $-$0.01 & +0.0003 \\
+Stochastic frontier shape, random-configuration level & varies & varies & 0.0249 & $-$0.22 & +0.0199 \\
+\addlinespace
+Observed (no correction) & 0 & 0 & 0.0204 & 0 & 0 \\
+Breakdown: $\iota_d$ that removes all convexity ($\iota_n=0$) & 0 & +26.0 & 0 & +1.00 & \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Farseer's runs follow Step Law's hyperparameter rules. With observed loss $L^*e^{\iota(N,D)}$, the technology's elasticities are the observed ones plus the inefficiency gradients, $\varepsilon_N=\varepsilon_N^{\rm obs}+\iota_n$ and $\varepsilon_D=\varepsilon_D^{\rm obs}+\iota_d$ ($\iota_n=\partial\iota/\partial\ln N$, in units of $10^{-3}$ of log loss per log point). Each row corrects the local wedge at every point of Farseer's grid (the local quadratic of Online Appendix~\ref{app:add-modelfree}, primary bandwidth), re-locates the expansion path as the root of the corrected $\ln w$ and re-estimates $\ln w=b_1u+b_2u^2$ ($u=\ln(M/M^*(C))$; 328 points, 309 for the Bjorck et al.\ rule, $n_{\rm eff}\ge15$). Tuning share $=(b_2^{\rm obs}-b_2)/b_2^{\rm obs}$: the part of the convexity attributable to the policy's inefficiency; negative values mean correcting for it makes $\ln w$ more convex. Gradients: estimates on the Step Law grid (17 cells; $N$ 0.21--1.07B non-embedding, $D$ 4--100B, $M$ 19--466); the 95\% corners use their cluster-robust standard errors; the stochastic-frontier rows scale $\iota$ with elasticities $-0.063$ ($N$) and $-0.260$ ($D$) around the grid's centre. Path $a_{\rm obs}-a$: slope in $\ln C$ of the shift in the located $\ln N^*(C)$, the pointwise counterpart of equation~\eqref{eq:app-flexbias}; its constant-gradient form $-(\iota_n-\iota_d)E/[(\alpha+\beta)R^*(C)]$ on Farseer's Chinchilla-form fit gives values of the same sign in every row, two to seven times larger, because the fitted form is flatter than the local surface. Farseer's convexity is driven by $M$ up to 2,570, beyond Step Law's $M$ range, where the rule's inefficiency is unmeasured.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{li2025predictableb}; \citet{li2025predictablea}; author's calculations.
+\end{tablenotes}
+\end{table}

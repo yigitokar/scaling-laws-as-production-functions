@@ -1,5 +1,7 @@
-% What Optimizing Labs Reveal: Scaling Laws as Production Functions -- AER typography (AEA.cls), working-paper heads.
-% Version 2 (after referee round 1). Integration log: paper/notes/integration_log_v2.md.
+% What Optimizing Labs Reveal: Scaling Laws as Production Functions. AER typography (AEA.cls), working-paper heads.
+% Version 3 (after referee round 2). Integration log: paper/notes/integration_log_v3.md.
+% [round 3, WP8, 2026-09-25] Abstract (H1) and title footnote (H2) of paper/notes/round3_fixlist.md; log:
+% paper/notes/round3_WP8_log.md. The abstract's red TBD-m9 block does not count toward its 100 words.
 \documentclass[AER,finalmode]{AEA}
 \usepackage{natbib}
 \let\proof\relax\let\endproof\relax
@@ -12,6 +14,7 @@
 \usepackage{xcolor}
 \usepackage[section]{placeins}% keep floats inside their section
 \usepackage[colorlinks=true,citecolor=blue!50!black,linkcolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\makeatletter\g@addto@macro\UrlBreaks{\do\-}\makeatother% allow URL breaks at hyphens
 \hypersetup{pdftitle={What Optimizing Labs Reveal: Scaling Laws as Production Functions},pdfauthor={Yigit Okar}}
 \graphicspath{{figures/}{../output/figures/}}
 \newtheorem{proposition}{Proposition}
@@ -37,6 +40,8 @@
   \def\@oddhead{{\small\textit{\MakeUppercase{Okar\hfil\@shortTitle\hfil\thepage}}}}%
   \def\@evenhead{{\small\textit{\MakeUppercase{\thepage\hfil\@issueName\hfil\@pubMonth\ \@pubYear}}}}}
 \pagestyle{headings}
+% Table numbers end with a period, like figure numbers, instead of the class default dash (author's style rule).
+\def\fnum@table{\tablename\nobreakspace\thetable.\nobreakspace}
 \makeatother
 
 \begin{document}
@@ -44,27 +49,31 @@
 \title{What Optimizing Labs Reveal: Scaling Laws as Production Functions}
 \shortTitle{What Optimizing Labs Reveal}
 \author{Yigit Okar\thanks{Care AI (email: okar.yigit@gmail.com). This paper was produced in close collaboration
-with Claude, an AI system developed by Anthropic. Claude designed and carried out the analysis---the literature review,
+with Claude, an AI system developed by Anthropic. Claude designed and carried out the analysis (the literature review,
 data construction, the theory and its verification, the estimation, the Monte Carlo study, and the controlled training
-experiment---and drafted the paper with the author, who takes responsibility for its content. The author gratefully
+experiment) and drafted the paper with the author, who takes responsibility for its content. The author posed the
+research question and made the project's decisions on scope, disclosure and publication. The author gratefully
 acknowledges this contribution; under the AEA's authorship policy an AI system cannot be listed as an author. Data and
 code availability: all data used in the paper are publicly available. The replication package
-(github.com/yigitokar/scaling-laws-as-production-functions) reproduces the tables and figures from the raw downloads
-with fixed random seeds. For sources whose terms do not permit redistribution (Epoch AI's digitization of the
-Chinchilla runs, the Farseer and Step Law run files, and the digitized Llama~3 IsoFLOP points), it provides download
-scripts in place of the data.}}
+(github.com/yigitokar/scaling-laws-as-production-functions, release \texttt{v4}) reproduces the tables and figures from
+the raw downloads with fixed random seeds. For sources that carry no license permitting redistribution (Epoch AI's
+digitization of the Chinchilla runs and the Farseer and Step Law run files), it provides download scripts and SHA-256
+checksums of the files we used in place of the data.}}
 \date{September 2026}
 \pubMonth{September}
 \pubYear{2026}
 
 \begin{abstract}
-Language-model developers choose model size and training data to minimize training and serving costs. This
-optimization cuts both ways for measurement. It removes the variation that identifies the technology---information
-about curvature is fourth order in allocation errors---but makes choices informative about objectives. Designed
-experiments give, without functional-form restrictions, an elasticity of substitution between parameters and data of
-about 0.7. Inverting first-order conditions with this technology shows that open-weight models released since 2024 were
-trained as if compactness---for developers that serve them, lower serving cost---accounted for most of lifetime cost,
-up from near zero before 2023.
+Language-model developers trade off quality, training cost and the value of compactness. Optimization cuts both ways:
+it removes the variation identifying the technology, as curvature information is fourth order in allocation errors,
+but makes choices informative about objectives. Annealed designed experiments give, without functional-form
+restrictions, a parameter-data elasticity of substitution near 0.7 at $10^{19}$--$3\times10^{20}$ FLOP and about 0.6
+at two designs' largest budgets. \textcolor{red}{[TBD-m9 (Amendments~1--2, Q1): outcomes~1--2 add ``A controlled
+experiment at $2\times10^{14}$--$10^{17}$ FLOP gives [x, y] for two corpora'' with the cuts of M9-14; outcome~3 replaces
+the $\sigma^*$ clause by the range across designs, compute levels and the experiment; outcome~4: no change.]}
+Inverted first-order conditions show that most dense open-weight models with disclosed training data released since
+2023 were trained beyond training-cost minimization, though not most training compute, and that over-training rose
+steeply from 2023 to 2025.
 \end{abstract}
 \JEL{C51, D24, L86, O33}
 \Keywords{production functions, identification, elasticity of substitution, scaling laws, large language models,
@@ -93,7 +102,7 @@ revealed preference}
 \input{sections/appendix_data}
 \input{sections/appendix_mc}
 \input{sections/appendix_additional}
-\input{sections/appendix_observational}
 \input{sections/appendix_wedge}
+\input{sections/appendix_econ}
 
 \end{document}

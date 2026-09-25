@@ -1,0 +1,61 @@
+% Online Appendix table (round 3), copied from output/tables/rb3_econ2_app_trend.tex (rb3_econ2) by WP5, 2026-09-25;
+% regenerate with code/analysis/rb3_econ2/run.py and re-copy (the copy adds only these two comment lines).
+% Online Appendix table -- the trend in the revealed wedge and the uncapped frontier scenario.
+% Module rb3_econ2; sources rb3_econ2_wedge_trend.csv, _wedge_trend_lodo.csv, _wedge_trend_by_tech.csv,
+% _wedge_by_year.csv, _scenarios_by_trend.csv.
+\begin{table}[tp]
+\centering
+\caption{The Trend in the Revealed Wedge and Frontier Data Demand}
+\label{tab:app-econ-trend}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrccc@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textit{Panel A. Growth per year of the revealed wedge and the data multiple, 2023--2025}} \\[2pt]
+ & & & & \multicolumn{2}{c}{$D/D^*$ per year} \\
+ & & & & at $\sigma^*=0.70$ & at $\sigma^*=$ \\
+\cmidrule(l){5-6}
+Estimator & $n$ & $w$ per year & 95\% CI & (from $M/M^*$) & 0.60; 0.74 \\
+\midrule
+Decision units, OLS (primary) & 49 & 1.86 & [0.96, 3.54] & 2.06 & 1.59; 2.41 \\
+\quad developer fixed effects & 49 & 1.59 & [0.47, 5.59] & 1.72 & 1.42; 1.94 \\
+\quad fixed effects and log compute & 49 & 2.70 & [1.39, 5.21] & 3.19 & 2.10; 4.10 \\
+\quad above $10^{24}$ FLOP (6 developers) & 11 & 1.76 & [0.78, 4.15] & 1.93 & 1.53; 2.23 \\
+\quad compute-weighted & 49 & 2.21 & [0.38, 13.1] & 2.53 & 1.81; 3.09 \\
+Flagship runs above $10^{25}$ FLOP$^a$ & 4 & 1.70 & -- & 1.86 & 1.49; 2.12 \\
+Models, OLS & 77 & 1.99 & [0.95, 4.33] & 2.24 & 1.68; 2.67 \\
+Models, compute-weighted & 77 & 1.96 & [1.01, 3.85] & 2.19 & 1.66; 2.60 \\
+Aggregate wedge, decision units & 49 & 2.02 & -- & 2.28 & 1.69; 2.72 \\
+Median wedge, decision units & 49 & 1.53 & -- & 1.64 & 1.37; 1.83 \\
+Family-label units (version 3), OLS & 56 & 1.91 & [1.03, 3.48] & 2.13 & 1.62; 2.51 \\
+Leave one developer out (units, OLS) & -- & 1.66--2.26 & -- & -- & -- \\
+32 technologies (models, OLS) & 77 & 1.17--4.28 & -- & 1.97--2.38 & -- \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel B. The compute-weighted wedge by release year}} \\[2pt]
+ & & & & \multicolumn{2}{c}{$D/D^*$ at this $w$} \\
+\cmidrule(l){5-6}
+Release year & Units & $s$ & $w$ & $\sigma^*=0.70$ & 0.60; 0.74 \\
+\midrule
+2023 & 16 & 0.24 & 1.32 & 1.38 & 1.23; 1.48 \\
+2024 & 27 & 0.54 & 2.17 & 2.46 & 1.79; 3.00 \\
+2025 & 6 & 0.81 & 5.38 & 7.13 & 3.53; 10.98 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel C. The frontier adopts an open-weight trend without a stop}} \\[2pt]
+ & & $D/D^*$ & \multicolumn{2}{c}{$D$ over 5 years} & Years to \\
+\cmidrule(lr){4-5}
+Trend & $\sigma^*$ & per year & $4.2\times$ & $5.06\times$ & 2025 $w$ \\
+\midrule
+Decision units & 0.60 & 1.59 & 359 & 571 & 2.4 \\
+ & 0.70 & 2.06 & 1,305 & 2,074 & 2.4 \\
+ & 0.74 & 2.41 & 2,887 & 4,588 & 2.4 \\
+Within developers & 0.70 & 1.72 & 529 & 841 & 3.2 \\
+Units above $10^{24}$ FLOP & 0.70 & 1.93 & 945 & 1,502 & 2.6 \\
+Compute-weighted units & 0.70 & 2.52 & 3,580 & 5,690 & 1.9 \\
+Flagships above $10^{25}$ FLOP$^a$ & 0.70 & 1.86 & 774 & 1,230 & 2.8 \\
+\bottomrule
+\end{tabular*}
+\vspace{2pt}
+\begin{tablenotes}[Notes]
+Panel A: growth factor $\exp(\hat b)$ of the slope of $\ln w$ (reference technology) on release date; decision units as in Section~\ref{sec:wedge}; 95 percent wild cluster bootstrap-$t$ intervals by developer (Webb weights, $B=9{,}999$; 18 developers; 6 above $10^{24}$ FLOP, so that interval is indicative); developer fixed effects: the slope is identified by the 9 developers with units at more than one date; $^a$the four disclosed dense runs above $10^{25}$ FLOP in 2024--2025, descriptive (OLS, no interval; 1.31 without Pangu Ultra); aggregate and median wedge: growth between the 2023 and 2025 values, with the aggregate $w=1/(1-s)$ at the compute-weighted $s$; $D/D^*$ from $M/M^*$: $\exp(\hat b/2\theta)$, $\theta=1/\sigma^*-1$ of the reference, which needs no curvature given $M^*(C)$ and equals the conversion at the reference $\sigma^*=0.70$; $\sigma^*=0.60/0.74$: $w$ growth converted with $D/D^*=w^{\sigma^*/[2(1-\sigma^*)]}$; 32 technologies: the ex-ante technologies of Section~\ref{sec:wedge}, each in its own parameter convention, on the audited token counts (the reference gives the models row). Panel B: $s=\sum(w^+-1)C/\sum w^+C$ over decision units, $w^+=\max(w,1)$, reference technology; $w=1/(1-s)$; $D/D^*$ that a model with this wedge would use at given compute; over models, $s$ is 0.27, 0.58, 0.83. Panel C: the scenario of Table~\ref{tab:econ}, panel~B, without the stop at the 2025 wedge; $D$ over 5 years: frontier tokens in 2031 relative to September 2026; years until the frontier's wedge reaches the 2025 compute-weighted wedge of the decision units ($w=5.38$).
+\end{tablenotes}
+\end{table}

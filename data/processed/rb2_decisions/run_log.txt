@@ -1,0 +1,14 @@
+[14:02:23] 1. base: ra2 objects by import; token-count audit
+[14:02:23] base: ra2 model-free designs (wild bootstrap B = 999) and technologies (kappa-free wild bootstrap B = 399)
+[14:02:41] techs: kappa-free Chinchilla wild bootstrap
+[14:02:47] techs: Chinchilla non-embedding wild bootstrap
+[14:02:59] 2. evidence: family readings and model-level serving (quotes verified against saved sources)
+[14:02:59] 3. lab-own technologies under one rule
+[14:02:59] 4. decision units (budget level, primary; rb5 readings), headline and W2 statistics (joint bootstrap)
+[14:03:13] 5. conduct tests: model-level serving code, decision level, tiers, on-device, open-weight premium
+[14:04:54] 6. sign identification: wild bootstrap-t anchors, tilt allowance, weights, years, decision units
+[14:05:11] 7. trend from 2023 on the clean sample; 32 technologies; leave-one-developer-out; pre-2023 robustness
+[14:05:14] 8. second-output test: OLMo ladder, C4 loss vs task bits per byte (joint cell bootstrap, B = 399)
+[14:15:43] 9. post-training compute bound
+[14:15:44] 10. exhibits
+[14:15:45] done in 802s

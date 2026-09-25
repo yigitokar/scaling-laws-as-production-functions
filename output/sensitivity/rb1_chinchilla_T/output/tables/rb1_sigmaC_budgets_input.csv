@@ -1,0 +1,69 @@
+design,log10C,budget_C,y,se,nleft,nright,Mstar,source,study,porian
+Chinchilla,18.7782,6e+18,0.670204,0.0659524,3,6,29.8627,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,19,1e+19,0.703629,0.062629,4,9,24.3232,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,19.4771,3e+19,0.791017,0.0531528,3,10,19.1602,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,19.7782,6e+19,0.672429,0.0447673,7,7,16.2052,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,20,1e+20,0.76411,0.0594352,7,7,14.896,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,20.4771,3e+20,0.711619,0.0731896,5,5,15.9474,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,20.7782,6e+20,0.564433,0.0539698,5,4,22.6967,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,21,1e+21,0.616797,0.0381329,10,4,21.7687,IsoFLOP budget,Hoffmann et al. (2022),False
+Chinchilla,21.4771,3e+21,0.578771,0.0542605,3,5,28.491,IsoFLOP budget,Hoffmann et al. (2022),False
+Llama 3,18.7782,6e+18,0.681873,0.0272114,4,9,17.909,IsoFLOP budget,Grattafiori et al. (2024),False
+Llama 3,19,1e+19,0.675863,0.025731,5,11,14.242,IsoFLOP budget,Grattafiori et al. (2024),False
+Llama 3,19.4771,3e+19,0.73378,0.0232072,3,9,12.1471,IsoFLOP budget,Grattafiori et al. (2024),False
+Llama 3,19.7782,6e+19,0.749479,0.0284363,4,10,16.3098,IsoFLOP budget,Grattafiori et al. (2024),False
+Llama 3,20,1e+20,0.669879,0.0498105,8,5,11.7196,IsoFLOP budget,Grattafiori et al. (2024),False
+Llama 3,20.4771,3e+20,0.618143,0.013499,9,5,12.8104,IsoFLOP budget,Grattafiori et al. (2024),False
+Llama 3,20.7782,6e+20,0.584783,0.0151337,9,2,16.8877,IsoFLOP budget,Grattafiori et al. (2024),False
+Llama 3,21,1e+21,0.609459,0.0166275,5,4,17.5173,IsoFLOP budget,Grattafiori et al. (2024),False
+"Marin, Comma",18.4771,3e+18,0.740465,0.121783,3,2,6.0867,IsoFLOP budget,Marin (2026),False
+"Marin, Comma",18.9542,9e+18,0.718777,0.0397501,3,5,9.93061,IsoFLOP budget,Marin (2026),False
+"Marin, Comma",19.2553,1.8e+19,0.673549,0.036878,3,6,11.5386,IsoFLOP budget,Marin (2026),False
+"Marin, Comma",20.2553,1.8e+20,0.760148,0.141338,2,4,28.1978,IsoFLOP budget,Marin (2026),False
+"Marin, Comma",20.4771,3e+20,0.685774,0.0892387,2,4,20.4668,IsoFLOP budget,Marin (2026),False
+"Marin, DCLM",18.4771,3e+18,0.728336,0.153944,3,2,5.4567,IsoFLOP budget,Marin (2026),False
+"Marin, DCLM",18.9542,9e+18,0.70026,0.0446188,3,5,7.86383,IsoFLOP budget,Marin (2026),False
+"Marin, DCLM",19.2553,1.8e+19,0.690845,0.053159,3,6,10.8235,IsoFLOP budget,Marin (2026),False
+"Marin, DCLM",19.4771,3e+19,0.735267,0.112368,2,3,10.3172,IsoFLOP budget,Marin (2026),False
+"Marin, DCLM",19.9542,9e+19,0.767335,0.118124,2,3,12.8806,IsoFLOP budget,Marin (2026),False
+"Marin, DCLM",20.2553,1.8e+20,0.697319,0.0715371,2,4,12.436,IsoFLOP budget,Marin (2026),False
+"Marin, DCLM",20.4771,3e+20,0.736857,0.0599608,3,4,11.6434,IsoFLOP budget,Marin (2026),False
+"Marin, Nemotron-CC",18.4771,3e+18,0.750192,0.0946064,3,2,5.6764,IsoFLOP budget,Marin (2026),False
+"Marin, Nemotron-CC",18.9542,9e+18,0.700208,0.0446107,3,5,8.53504,IsoFLOP budget,Marin (2026),False
+"Marin, Nemotron-CC",19.2553,1.8e+19,0.712583,0.0658653,2,7,11.8926,IsoFLOP budget,Marin (2026),False
+"Marin, Nemotron-CC",19.4771,3e+19,0.713105,0.0778009,2,3,10.8967,IsoFLOP budget,Marin (2026),False
+"Marin, Nemotron-CC",19.9542,9e+19,0.722296,0.0731674,2,3,12.0423,IsoFLOP budget,Marin (2026),False
+"Marin, Nemotron-CC",20.2553,1.8e+20,0.669653,0.0425032,2,4,11.831,IsoFLOP budget,Marin (2026),False
+"Marin, Nemotron-CC",20.4771,3e+20,0.732649,0.0519995,2,5,12.4632,IsoFLOP budget,Marin (2026),False
+"Porian, RefinedWeb",16.0969,1.25e+16,0.41296,0.0456285,3,2,13.1222,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",16.3979,2.5e+16,0.446651,0.0200178,4,2,14.5254,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",16.699,5e+16,0.464173,0.0239735,4,2,16.27,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",17,1e+17,0.50487,0.0496597,4,2,17.1604,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",17.301,2e+17,0.513002,0.0293572,4,2,16.9609,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",17.6021,4e+17,0.542653,0.0375088,4,2,16.3225,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",17.9031,8e+17,0.565825,0.0433136,4,2,15.7834,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",18.2041,1.6e+18,0.524505,0.0787871,3,2,16.2744,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",18.5051,3.2e+18,0.547858,0.0412116,3,2,15.1768,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",18.8062,6.4e+18,0.528524,0.0336389,4,3,17.2269,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",19.1072,1.28e+19,0.56065,0.0215134,3,2,15.022,IsoFLOP budget,Porian et al. (2024),True
+"Porian, RefinedWeb",19.4082,2.56e+19,0.575443,0.0229229,3,2,13.3795,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",16.0969,1.25e+16,0.405575,0.030771,3,2,16.7457,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",16.3979,2.5e+16,0.433629,0.0559957,3,3,16.7843,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",16.699,5e+16,0.483396,0.0336129,3,2,16.4295,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",17,1e+17,0.477016,0.0463111,3,2,18.1652,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",17.301,2e+17,0.503506,0.0389884,4,3,18.8083,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",17.6021,4e+17,0.502883,0.0356366,4,3,19.2962,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",17.9031,8e+17,0.532026,0.0463584,3,3,17.6241,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",18.2041,1.6e+18,0.564339,0.0778702,3,2,15.352,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",18.5051,3.2e+18,0.536305,0.062355,3,2,15.8671,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",18.8062,6.4e+18,0.509817,0.047566,3,3,17.5283,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",19.1072,1.28e+19,0.522702,0.0347523,3,3,17.0476,IsoFLOP budget,Porian et al. (2024),True
+"Porian, OpenWebText2",19.4082,2.56e+19,0.578034,0.0506411,3,2,14.0206,IsoFLOP budget,Porian et al. (2024),True
+Farseer (local path),18.699,5e+18,0.761163,0.0371222,,,45.1883,Farseer local path,Li et al. (2025),False
+Farseer (local path),19,1e+19,0.715248,0.0250805,,,27.3889,Farseer local path,Li et al. (2025),False
+Farseer (local path),19.301,2e+19,0.660812,0.012258,,,31.3468,Farseer local path,Li et al. (2025),False
+Farseer (local path),19.699,5e+19,0.686902,0.021634,,,34.3619,Farseer local path,Li et al. (2025),False
+Farseer (local path),20,1e+20,0.713002,0.01687,,,31.411,Farseer local path,Li et al. (2025),False
+Farseer (local path),20.301,2e+20,0.736041,0.0118929,,,29.2211,Farseer local path,Li et al. (2025),False
+Farseer (local path),20.699,5e+20,0.72213,0.00829902,,,25.0024,Farseer local path,Li et al. (2025),False
+Farseer (local path),21,1e+21,0.657597,0.0106159,,,26.9959,Farseer local path,Li et al. (2025),False

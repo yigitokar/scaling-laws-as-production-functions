@@ -1,0 +1,54 @@
+% Online Appendix Table E5 (round 3, WP4b, fix list W1, W24(d)): copy of output/tables/rb2_decisions_readings.tex
+% (module rb2_decisions with the resolved codes data/processed/rb5_units/readings_final.csv, reviewed). Paper-facing edits:
+% the protocol reference and the agreement statistic in the note (output/tables/rb5_units_agreement.csv), and one citation
+% instead of the repeated LLaMA citation. bai2023qwen and allal2024smollm must be in references.bib (WP6).
+% [integration, 2026-09-25] The two keys were added in lit/bib/extra_round3_integration.bib. Split into two floats
+% (to the Llama 3 herd; the rest with the notes, headed "(continued)"): the single float was 92pt taller than the page.
+\begin{table}[tp]
+\centering
+\caption{Readings of Common Token Budgets}
+\label{tab:app-readings}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{2.55cm}>{\raggedright\arraybackslash}p{1.15cm}llr>{\raggedright\arraybackslash}p{6.3cm}@{}}
+\toprule
+Decision unit & $D$ (T) & Reading & Id. & $s_f$ & Evidence (one quote; all quotes, URLs and retrieval dates in the replication package) \\
+\midrule
+LLaMA (7B, 13B) & 1.00 & choice & pt & 0.46 & ``LLaMA-33B and LLaMA-65B were trained on 1.4T tokens. The smaller models were trained on 1.0T tokens.'' \\[2pt]
+LLaMA (30B, 65B) & 1.40 & cap or choice & lb$^c$ & 0.08 & ``Overall, our entire training dataset contains roughly 1.4T tokens after tokenization.'' \\[2pt]
+Llama 2 (7B, 13B, 70B) & 2.00 & choice & pt & 0.23 & ``We trained on 2 trillion tokens of data as this provides a good performance--cost trade-off'' \\[2pt]
+MPT (7B, 30B) & 1.00, 1.05 & menu & pt & 0.25 & ``The size of MPT-30B was also specifically chosen to make it easy to deploy on a single GPU'' \\[2pt]
+StableLM-Alpha (3B, 7B) & 0.80 & choice & pt & 0.53 & ``StableLM-Alpha models are trained on a new dataset that builds on The Pile, which contains 1.5 trillion tokens, roughly 3x the size of The ...'' \\[2pt]
+Qwen (14B, 72B) & 3.00 & cap or choice & lb$^c$ & 0.31 & ``Finally, we have built a dataset of up to 3 trillion tokens.'' \\[2pt]
+Yi (6B, 34B) & 3.00 & menu & pt & 0.49 & ``when choosing model scale, the desiderata is to have small enough model that is feasible for inference on consumer-grade hardware like the RTX 4090 where the bounding ...'' \\[2pt]
+DeepSeek LLM (7B, 67B) & 2.00 & cap+menu & lb & 0.18 & ``we have developed a dataset that currently consists of 2 trillion tokens and is continuously expanding.'' \\[2pt]
+Llama 3 herd (8B, 70B, 3.1 405B) & 15.00, 15.00, 15.60 & cap or choice & lb$^c$ & 0.29 & ``We pre-train Llama 3 on a corpus of about 15T multilingual tokens, compared to 1.8T tokens for Llama 2.'' \\[2pt]
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[tp]
+\centering
+{\captionstyle\captionsize Table~\ref{tab:app-readings} (continued). Readings of Common Token Budgets\par}
+\vspace{7pt}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{2.55cm}>{\raggedright\arraybackslash}p{1.15cm}llr>{\raggedright\arraybackslash}p{6.3cm}@{}}
+\toprule
+Decision unit & $D$ (T) & Reading & Id. & $s_f$ & Evidence (one quote; all quotes, URLs and retrieval dates in the replication package) \\
+\midrule
+Qwen2 (1.5B, 7B, 72B) & 7.00 & menu & pt & 0.51 & ``Considering training costs, we opted to use the higher-quality 7 trillion token dataset for training larger models, leaving further exploration for future model ...'' \\[2pt]
+SmolLM (135M, 360M) & 0.60 & cap or choice & lb & 0.86 & ``Therefore, we decided to train the 1.7B model on 1 trillion tokens and the 135M and 360M models on 600B tokens, as the performance gains after 400B tokens begin to slow ...'' \\[2pt]
+Qwen2.5 (0.5B--72B) & 18.00 & cap or choice & lb$^c$ & 0.72 & ``all models are pretrained on our latest large-scale dataset, encompassing up to 18 trillion tokens.'' \\[2pt]
+Granite 3.0 (2B, 8B) & 12.00 & cap or choice & lb$^c$ & 0.85 & ``Dense Models: 2B and 8B parameter models, trained on 12 trillion tokens in total.'' \\[2pt]
+OLMo 2 (1B, 7B) & 4.05 & choice & pt & 0.77 & ``Similar to OLMo 2 7B, we use 2000 steps of warmup, set the schedule to 5 trillion tokens but truncate at the 4 trillion mark.'' \\[2pt]
+Qwen3 (0.6B--14B) & 36.00 & cap or choice & lb$^c$ & 0.89 & ``All Qwen3 models are trained on a large and diverse dataset consisting of 119 languages and dialects, with a total of 36 trillion tokens.'' \\[2pt]
+Apertus (8B, 70B) & 15.00 & choice & pt & 0.65 & ``For all other languages, we subsample documents at random.'' \\[2pt]
+Olmo 3 (7B, 32B) & 6.03, 5.60 & choice & pt & 0.63 & ``Composition of Dolma 3 Mix including our 9T pool of data, the 6T mix we used for final model training, and the 150B mix we used for experimentation.'' \\[2pt]
+\bottomrule
+\end{tabular*}
+\medskip
+\begin{tablenotes}
+Readings, coded under a written protocol from the saved reports (Online Appendix~\ref{app:wedge-family}; a second coder who did not see the wedges agreed on 15 of the 17 readings, Cohen's kappa 0.83): cap, the budget is the developer's whole available corpus, or the corpus was repeated, or data limited the budget; choice, the budget is stated as set by cost, compute or schedule, or lies below a larger usable pool, or other models trained longer on the same data; menu, a size set by a hardware or configuration menu; cap or choice, only the corpus or budget size is stated, or evidence for both is present (SmolLM trained 600B tokens on a 252B-token corpus, a repetition that makes it a lower bound under either reading). Statements that a model was still improving are not evidence for either reading. Id.: pt, point estimate of the value of compactness; lb, lower bound; lb$^c$, lower bound that is a point estimate if the budget was chosen. $D$: the unit's token budgets in the order of the listed members; one value if shared. $s_f$: family share under the reference technology. Sources: \citet{touvron2023llama} (both LLaMA budgets), \citet{touvron2023llama2}, \citet{mosaicml2023mpt7b,mosaicml2023mpt30b}, \citet{stability2023stablelm}, \citet{bai2023qwen}, \citet{young2024yi}, \citet{bi2024deepseek}, \citet{grattafiori2024llama,meta2024llama3}, \citet{yang2024qwen2}, \citet{allal2024smollm}, \citet{qwen2024qwen25}, \citet{granite2024granite}, \citet{teamolmo2024olmo}, \citet{yang2025qwen3}, \citet{apertus2025apertus}, \citet{olmo2025olmo3}. Every quote is verified against the saved source.
+\end{tablenotes}
+\end{table}

@@ -1,4 +1,4 @@
-"""m7_theory — verify every formal claim of the paper's theory and generate the module's tables/figures.
+"""m7_theory: verify every formal claim of the paper's theory and generate the module's tables/figures.
 
 Usage:  /Users/yigitokar/scaling-laws-pf/.venv/bin/python code/analysis/m7_theory/run.py
 

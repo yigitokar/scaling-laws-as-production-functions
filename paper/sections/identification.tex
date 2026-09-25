@@ -1,238 +1,246 @@
 % =====================================================================================================
-% Section II. What Optimizing Labs' Data Identify  (version 2, after referee round 1)
-% Writer: section "identification" (writer2, 2026-09-24).
-% Binding sources: paper/notes/paper_plan_v2.md (II.A-C), paper/notes/theory_main_text_v2.md (Props. 3-5),
-% paper/sections/appendix_proofs.tex (Props. A1, A2, A10, A11; Remarks A-positioning, A-grid, A-pi-param),
-% output/memos/ra5_theory.md (+ review), ra1_modelfree.md (+ review), ra2_wedge.md, m6_montecarlo.md (+ review).
-% Numbers are verified against output/tables/*.csv; ledger in paper/notes/writer2_identification.md.
-% Integrator (v2): Monte Carlo numbers and Figure 2 notes updated to the re-run without the truth among the starting
-% values (output/memos/m6_montecarlo_v2.md; output/tables/m6_montecarlo_designA_*.csv).
+% Section II. What Optimizing Labs' Data Identify  (version 3, after referee round 2)
+% Writer: section "identification" (writer3, 2026-09-24). v2 text: sections/v2/identification.tex.
+% Binding sources: paper/notes/revision_plan_v3.md (Section 2: four formal results; Prop 2 with the rate as a Remark;
+% Prop 3 = model-free sigma* and w + the beyond-design sign result; notation varsigma, e_p, no b = 1 - a),
+% paper/notes/theory_main_text_v2.md, appendix_proofs.tex (Props. A1, A2, A10, A11; Remark A-grid),
+% output/memos/m6_montecarlo_v2.md (Figure 2), rb1_sigmaC.md and rb2_decisions.md (+ reviews).
+% Labels: prop:ident (Prop 2), rem:rate (Remark 1), prop:modelfree (Prop 3), prop:pi = alias of Prop 3(v).
+% Numbers are verified against output/tables/*.csv and data/processed/rb2_decisions/*.csv; ledger in
+% paper/notes/writer3_identification.md. Figure 2 is m6_montecarlo_fig2_v2 re-rendered with the v3 notation
+% (varsigma) by code/paper/make_ident_v3.py; same data.
+% Round 3 (WP3, fix list P4-P8, P12-P13): Prop. 3(v) with the interval anchor, joint bands and union of paths; Remark 1
+% scope; Prop. 2 wording; Figure 2 notes; general-isocost sentence; numbers from output/tables/rb5_sign_paper_numbers.csv.
+% [round-3 integration, 2026-09-25] Word-cap cuts in the text only (no number, formal result or requested item removed);
+% proof pointer added to the opener. Log: paper/notes/round3_integration_log.md.
 % =====================================================================================================
 
 \providecommand{\E}{\mathbb{E}}
+% \identpartlabel{(v)}{key}: a label that refers to one part of the current proposition, so that \ref{key} prints
+% "3(v)". Used to keep the v2 key prop:pi (partial identification beyond the design) pointing at Proposition 3(v).
+\makeatletter
+\providecommand{\identpartlabel}[2]{\protected@edef\@currentlabel{\theproposition#1}\label{#2}}
+\makeatother
 
 \section{What Optimizing Labs' Data Identify}\label{sec:ident}
 
-Section~\ref{sec:framework} described the technology by four objects: the slope $a$ of the expansion path, the
-frontier elasticity $\gamma$, the elasticity of substitution at the optimum $\sigma^*$ and the compute-optimal ratio
-$M^*(C)$. Reading developers' choices requires the last two: by equation~\eqref{eq:wM}, $M^*(C)$ is the zero point of the
-wedge and $\sigma^*$ sets its scale. This section asks which data identify them. Optimization removes the variation that
-identifies curvature (subsection~A). Designed IsoFLOP variation identifies $\sigma^*$ without a functional form
-(subsection~B). Beyond the largest designed budget, $M^*(C)$ is only partially identified, and for released models what
-survives is chiefly the sign of the wedge (subsection~C). Proofs are in Online Appendix~\ref{app:proofs}.
-
-The results use technology \eqref{eq:tech} with Hicks-neutral productivity only ($\psi_N=\psi_D=0$), and the notation of
-Section~\ref{sec:framework}: $a\equiv\beta/(\alpha+\beta)$ and $b\equiv1-a$ are the slopes of the expansion path in
-$(\ln N,\ln D)$, $\gamma\equiv\kappa\alpha\beta/(\alpha+\beta)$ is the frontier elasticity, $\sigma^*=2/(2+\alpha+\beta)$,
-and $G$ and $K$ are the constants of the path and the frontier (Proposition~\ref{prop:duality}). A sample is
-\emph{on-path} if its runs share one technology, each run minimizes training compute for its loss, so that every wedge
-equals one, and compute varies over an interval.
+Reading developers' choices requires $\sigma^*$ and $M^*(C)$, the scale and the zero point of the wedge in
+equation~\eqref{eq:wM}. This section asks which data identify them; proofs
+are in Online Appendix~\ref{app:proofs}.
 
 \subsection{Optimization Removes the Variation That Identifies Curvature}\label{sec:ident-onpath}
 
-\begin{proposition}[What optimizing labs' data identify, and how fast]\label{prop:ident}
+A sample is \emph{on-path} if its runs share one technology, each run minimizes training compute for its loss (every
+wedge equals one), and compute varies over an interval.
+
+\begin{proposition}[What optimizing labs' data identify]\label{prop:ident}
 Let runs follow \eqref{eq:tech} with $\psi_N=\psi_D=0$.
 \begin{enumerate}
-\item[(i)] (On the path.) In an on-path sample, $n_i=\ln G+a(c_i-\ln6)$ and $d_i=-\ln G+b(c_i-\ln6)$: choices reveal the
-path, that is, $a$ and $M^*(C)$, and nothing else. Outcomes satisfy $\E[y\mid c]=\gamma(c-\ln6)-\ln K+\E[\omega\mid c]$, so
-within the model $\gamma$ is identified if and only if $\E[\omega\mid c]$ is known up to a constant, as in a single-lab
-sweep. Curvature is not identified: for every $\sigma^*\in(0,1)$ some member of family \eqref{eq:tech} generates the same
-joint distribution of $(n,d,y)$, and by Lemma~\ref{lemma:sigma} no value $\sigma^*\ge1$ does.
+\item[(i)] (On the path.) In an on-path sample, $n_i$ and $d_i$ are affine in $c_i$, with slopes $a$ and $1-a$:
+choices reveal the path, that is, $a$ and $M^*(C)$, and nothing else. Outcomes satisfy
+$\E[y\mid c]=\gamma c+\mathrm{const.}+\E[\omega\mid c]$, so within the model $\gamma$ is identified if and only if
+$\E[\omega\mid c]$ is known up to a constant, as in a single-lab sweep. Curvature is not identified: for every
+$\sigma^*\in(0,1)$ some member of family \eqref{eq:tech} generates the same joint distribution of $(n,d,y)$, and by
+Lemma~\ref{lemma:sigma} no value $\sigma^*>1$ does (in family \eqref{eq:tech}, none with $\sigma^*\ge1$).
 \item[(ii)] (Global versus local identification.) Suppose also that $\E[\omega\mid c]$ is constant and $\kappa=1$.
-Globally, $\alpha=\gamma/a$ and $\beta=\gamma/b$ are identified by the functional form, and $A/B$, hence the technology's
-own cost-minimizing mix, only by imposing that the observed path is optimal. Locally, identification fails:
-perturbations that move the decay rates of the two loss terms along the path, $\alpha a$ and $\beta b$, in opposite
-directions leave on-path outcomes unchanged to first order, so the least-squares criterion is of fourth order along
-them. The errors of estimators of $\sigma^*$ should then not be expected to shrink faster than the inverse fourth root
-of the number of runs, whether or not $\alpha=\beta$, and Wald intervals are invalid. Imposing $\beta/(\alpha+\beta)=a$ restores the
-square-root rate.
+Globally, with $A,B>0$, $\alpha=\gamma/a$ and $\beta=\gamma/(1-a)$ are identified by the functional form, and $A/B$, hence the
+technology's own cost-minimizing mix, only by imposing that the observed path is optimal. Locally, identification fails:
+every perturbation that moves the decay rates of the two loss terms along the path, $\alpha a$ and $\beta(1-a)$, in
+opposite directions leaves on-path outcomes unchanged to first order once the common level is re-split between the two
+terms (at a given split only one such direction is flat). The least-squares criterion, profiled over that split, is
+therefore of fourth order along such directions, and $\sigma^*$ is not identified at first order, whether or not $\alpha=\beta$. Imposing
+$\beta/(\alpha+\beta)=a$ restores first-order identification.
 \item[(iii)] (Off the path.) Let runs deviate from the path with log wedges $\ln w_i$, with $E$ known and Gaussian noise.
-To leading order, the information about $\ln M^*$ is proportional to the residual dispersion of the $\ln w_i$. The information about
-$\sigma^*$ is bounded by a multiple of $\sum_i\Phi_i^2$, where $\Phi_i\equiv\ln\big(C_i/C_{\min}(R_i)\big)$ is run $i$'s
-Farrell allocative loss: the log of its compute relative to the least compute that attains its reducible loss
-$R_i=L_i-E$. If the deviations of a fixed design are scaled by $v\to0$, the two informations are $O(v^2)$ and $O(v^4)$,
-so the standard error of $\ln\hat M^*$ grows like $v^{-1}$ and that of $\hat\sigma^*$ like $v^{-2}$.
+To leading order, the information about the path's location ($\ln G$, and so $\ln M^*$ at a given compute) is
+proportional to the residual dispersion of the $\ln w_i$. The
+information about $\sigma^*$ is bounded by a multiple of $\sum_i\Phi_i^2$, where $\Phi_i\equiv\ln\big(C_i/C_{\min}(L_i)\big)$
+is run $i$'s Farrell allocative loss: the log of its compute relative to the least compute that attains its loss. If the
+deviations of a fixed design are scaled by $\varsigma\to0$, the two informations are $O(\varsigma^2)$ and
+$O(\varsigma^4)$, so the standard error of $\ln\hat M^*$ grows at least like $\varsigma^{-1}$ and that of $\hat\sigma^*$ at
+least like $\varsigma^{-2}$, exactly so for designs that cross several compute levels with symmetric transverse
+offsets.
 \end{enumerate}
 \end{proposition}
 
-A ray has no curvature. Because the FLOP accounting gives every lab the same log-cost weights, cost-minimizing labs that
-share a technology place every run on the expansion path, along which the family is quasi-homothetic: reducible loss is
-log-linear along the path, and all curvature lies across it. Choices trace the path and outcomes trace the frontier, but
-neither reveals how fast loss rises off the path, which is what $\sigma^*$ measures. A one-parameter set of technologies
-shares the path and the frontier and differs only off it. At five times the compute-optimal ratio, reducible loss lies
-2.0, 4.1 and 7.6 percent above the common frontier for the members with $\sigma^*=0.85$, 0.74 and 0.60 drawn in
-Figure~\ref{fig:geometry}, panel~b.
+A ray has no curvature. Facing the same log-cost weights, cost-minimizing labs that share a technology place every run
+on the expansion path, where reducible loss is log-linear in compute. Choices trace the path
+and outcomes the frontier, but neither reveals how fast loss rises off the path, which is what $\sigma^*$ measures
+(Figure~\ref{fig:geometry}, panel~b): at five times the compute-optimal ratio, reducible loss lies 2.0, 4.1 and 7.6
+percent above the frontier for three technologies that share it and the path, with $\sigma^*=0.85$, 0.74 and 0.60.
 
-Part (ii) explains why fits of the Chinchilla form to compute-optimal data can nonetheless look precise.
-Compute-optimality means that the two loss terms decay at the same rate along the path, so the data see a single
-exponential in compute; they cannot tell how its level splits between the terms, and a different split absorbs decay
-rates that move apart. The on-path model is thus the analogue of an over-fitted mixture, whose parameters can be learned
-only at the fourth-root rate \citep{chen1995optimal}. What precision remains under $\kappa=1$ comes from the restriction
-$\beta/(\alpha+\beta)=a$, which ties $\sigma^*=2/(2+\gamma/(ab))$ to the path and the frontier: functional form plus
-optimality. Simulations in Online Appendix~\ref{app:proofs} confirm the fourth-root rate, and the square-root rate with
-the restriction imposed; the rate rests on such simulations and a heuristic argument, not on a limit theorem
-\citep{sargan1983identification,rotnitzky2000likelihood}. The mechanism also reconciles our result with
-\citet{kricheli2026tokens}, who find fixed tokens-per-parameter designs ill-conditioned as $|\alpha-\beta|\to0$: the two
-terms decay at the same rate along a fixed-ratio ray if and only if $\alpha=\beta$, and along the compute-optimal path
-always.
+
+
+\begin{remark}[The rate on the path]\label{rem:rate}
+Part (ii) makes the on-path model the analogue of an over-fitted mixture, whose parameters can be learned at best at the
+rate $n^{-1/4}$ \citep{chen1995optimal}. We conjecture the same bound here for estimators of $\sigma^*$ from on-path data
+that leave $\beta/(\alpha+\beta)$ free, such as unrestricted least-squares fits of the Chinchilla form, whose Wald
+intervals, built on the near-singular Hessian, are then invalid. Imposing $\beta/(\alpha+\beta)=a$, which the optimality that defines an on-path sample
+implies under $\kappa=1$, removes the singularity: $\sigma^*=2/\{2+\gamma/[a(1-a)]\}$ is then estimated at the usual
+root-$n$ rate. The argument is heuristic: the results of
+\citet{rotnitzky2000likelihood} for singular information do not apply when $A/B$ is unidentified at the truth
+\citep[see also][]{sargan1983identification}. In simulations with 40 on-path compute levels (holding the design fixed and letting the noise
+fall, which is equivalent to replicating it $n$ times; Online Appendix Remark~\ref{rem:A-rate}), the 75th percentile of
+the error of unrestricted least-squares estimates of $\sigma^*$ shrinks as $n^{-0.24}$, and that of restricted ones as
+$n^{-0.50}$.
+\end{remark}
 
 Real ladders and labs deviate from the path. Because the frontier is a power law, output decomposes exactly as
 \begin{equation}\label{eq:ident-decomp}
-y_i \;=\; \gamma\,(c_i-\ln6)-\ln K-\gamma\,\Phi_i-\epsilon_i
+y_i \;=\; \gamma c_i+\mathrm{const.}-\gamma\,\Phi_i-\upsilon_i ,
 \end{equation}
 with $\omega$ normalized to zero. Curvature enters output only through the Farrell losses, which are Harberger triangles,
 $\Phi_i\approx\sigma^*(\ln w_i)^2/[4(1-\sigma^*)]$. A run reveals where the path lies to the extent that it is off the
-path, which is first order in its log wedge, and the path's curvature only to the extent that it wastes compute, which
-is second order. Information squares these: halving the dispersion of log wedges quarters the information about $M^*$
-and divides the information about $\sigma^*$ by sixteen. The better labs optimize, the less their data reveal.
+path, first order in its log wedge, and the path's curvature only to the extent that it wastes compute, second order. Information squares these: halving the dispersion of log wedges quarters the information about $M^*$ and
+divides the information about $\sigma^*$ by sixteen (the orders are unchanged when $E$ is estimated; Online
+Appendix~\ref{app:proofs}).
 
-Proposition~\ref{prop:ident} is the point of \citet{marschak1944random} in its cleanest form: without wedges, every
-allocation lies on one ray, and identification requires the variation in relative prices, adjustment frictions or
-optimization errors of \citet{bond2005adjustment} \citep[see also][]{gandhi2020identification}. Here these are
-heterogeneous wedges from serving demand, data costs, size-dependent prices of a FLOP and binding constraints
-(Proposition~\ref{prop:wedge}), and belief errors such as allocation by the \citet{kaplan2020scaling} law. IsoFLOP
-sweeps are different: the experimenter assigns the inputs, so their minima estimate the path from outcomes, not from
-choices. The rates in part (iii) are the design-theoretic property of estimating a curvature parameter
-\citep{box1959design,kiefer1959optimum}; what is specific here is that economic wedges generate the design's spread. The
-problem is distinct from the functional dependence of \citet{ackerberg2015identification}, which concerns the first
-stage of proxy estimators.
+Proposition~\ref{prop:ident} is the point of \citet{marschak1944random} in its cleanest form: identification requires
+the variation in relative prices, adjustment frictions or
+optimization errors of \citet{bond2005adjustment} \citep[see also][]{gandhi2020identification}; here it
+comes from heterogeneous wedges (Proposition~\ref{prop:wedge}) and belief errors such as allocation by the
+\citet{kaplan2020scaling} law. The rates in part (iii) are the standard design rates for a curvature
+parameter, whose information grows with the fourth power of the design's spread (\citealt{kiefer1959optimum} on the
+highest coefficient of a polynomial regression; \citealt{box1959design} on nonlinear models); what is specific here is
+that economic wedges generate the design's spread.
 
-The result binds for compute-optimal ladders, fixed tokens-per-parameter designs run by one lab (DataDecide trains
-every size at about 100 tokens per parameter; \citealp{magnusson2025datadecide}) and releases of the compute-optimal
-era. Released models since 2023 lie far off the path. Their heterogeneous values of compactness supply transverse
-variation, but using it requires the exclusion restriction that these values move the mix without moving the
-technology, and the variation may be confounded with factor-biased technology. We therefore take the technology from
-designed sweeps and use released models' wedges to read objectives (Section~\ref{sec:wedge}).
-
-The Chinchilla data show part (i) directly. On the 41 runs within 0.15 log points of the fitted compute-optimal size,
-the profile likelihood for $\sigma^*$ with $\kappa$ free is flat: its 95 percent confidence set runs from 0.20 to 0.99, the
-edge of the grid searched. The full 240-run design, which adds transverse variation, gives $[0.68,0.72]$ (Online
-Appendix~\ref{app:additional}).
+The Chinchilla data show part (i) directly. On the 41 runs within 0.15 log points of the fitted compute-optimal size, the
+profile likelihood for $\sigma^*$ with $\kappa$ free is flat: its 95 percent confidence set is $[0.20,0.99]$, the edge of
+the grid searched, with $\chi^2_1$ critical values (about $[0.15,0.99]$ with bootstrap ones), against $[0.69,0.71]$
+($[0.68,0.72]$) on the full 240-run design, which adds transverse variation (Online Appendix~\ref{app:additional}).
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=\textwidth]{m6_montecarlo_fig2_v2}
+\includegraphics[width=\textwidth]{m6_montecarlo_fig2_v3}
 \caption{Identification by Design: Monte Carlo Evidence}\label{fig:designs}
 \begin{figurenotes}[Notes]
 Simulations of the \citet{besiroglu2024chinchilla} technology ($\sigma^*=0.737$; $M^*=18.1$ at $10^{24}$ FLOP) with normal
-noise of standard deviation 0.0075 in $\ln L$. Every design has 90 runs on nine budgets matching Chinchilla's nominal
-IsoFLOP budgets ($6\times10^{18}$ to $3\times10^{21}$ FLOP) and the same total compute, $5.1\times10^{22}$ FLOP. Optimizing
-labs set $\ln(D/N)$ at its compute-optimal value plus a normal allocation error with standard deviation $v$; the
+noise of standard deviation 0.0075 in $\ln L$ (the Besiroglu fit's residual s.d.\ is 0.0076). Every design has 90 runs
+and the same total compute, $5.1\times10^{22}$ FLOP; except in the factorial design, the runs sit ten on each of nine
+budgets matching Chinchilla's nominal IsoFLOP budgets ($6\times10^{18}$ to $3\times10^{21}$ FLOP). Optimizing
+labs set $\ln(D/N)$ at its compute-optimal value plus a normal allocation error with standard deviation $\varsigma$; the
 IsoFLOP design places ten sizes log-spaced over $[N^*/16,16N^*]$ at each budget, and the factorial design crosses nine
-values of $N$ with ten of $D$. Panel A: root mean squared error of $\hat\sigma^*$ and of $\ln\hat M^*(10^{24})$ for
-optimizing labs, 500 replications per design. Primal: Huber ($\delta=10^{-3}$) fit of the \citet{hoffmann2022training}
-form with $\kappa=1$, started from nine values drawn at random over the region of Hoffmann et al.'s initialization grid,
-none at the truth. Dual: exponents from the path of the optima and the frontier under $\kappa=1$ and optimality.
-Horizontal lines: primal estimator under the IsoFLOP and factorial designs. Panel B: median profile likelihood-ratio
-statistic for $\sigma^*$ with $\kappa$ free, relative to the unrestricted optimum, on a 29-point grid over
-$[0.05,0.99]$ (150 replications), for on-path labs ($v=0.02$), optimizing labs with $v=0.3$ and the IsoFLOP design;
-horizontal line, the 95 percent $\chi^2_1$ critical value; dotted line, the truth.
+values of $N$ with ten of $D$, each spanning a factor of 256 around the expansion path, so that its runs range from
+$1.8\times10^{17}$ to $1.2\times10^{22}$ FLOP. Panel A: root mean squared error of $\hat\sigma^*$ and of $\ln\hat M^*(10^{24})$ for
+optimizing labs, 500 replications per design. Primal: fit of the \citet{hoffmann2022training} form with $\kappa=1$ by the
+Huber loss with threshold $10^{-3}$, started from nine values drawn at random within the region of Hoffmann et al.'s
+initialization grid (exponents on $[0.1,1.2]$ rather than $[0,2]$), none at the truth. Dual: exponents from the path of the optima and the frontier under $\kappa=1$ and
+optimality. Horizontal lines: primal estimator under the IsoFLOP and factorial designs. Panel B: median profile
+likelihood-ratio statistic for $\sigma^*$ with $\kappa$ free, relative to the unrestricted optimum, on a 29-point grid
+over $[0.05,0.99]$ (150 replications), for on-path labs ($\varsigma=0.02$), optimizing labs with $\varsigma=0.3$ and the
+IsoFLOP design; horizontal line, the 95 percent $\chi^2_1$ critical value; dotted line, the truth.
 \end{figurenotes}
 \begin{figurenotes}[Source]
-Authors' simulations; design, estimators and full tables in Online Appendix~\ref{app:mc}.
+Author's simulations; design, estimators and full tables in Online Appendix~\ref{app:mc}.
 \end{figurenotes}
 \end{figure}
 
 Figure~\ref{fig:designs} shows what the rates mean at realistic noise and design sizes, in simulated designs of 90 runs
-with equal total compute that differ only in where runs sit on their isocost lines. Optimizing labs miss the
-compute-optimal $\ln(D/N)$ by a normal error with standard deviation $v$, so their log wedges have standard deviation
-$(1/\sigma^*-1)v$. With $v=0$, a Huber fit of the Chinchilla form ends on a corner, with one power-law term
-switched off, in 87 percent of replications. As $v$ rises from 0.05 to 0.2, the root mean squared error of
-$\hat\sigma^*$ falls from 0.089 to 0.015 (panel A); an IsoFLOP design with the same compute gives 0.0036. The
-compute-optimal ratio is harder still: the root mean squared error of $\ln\hat M^*$ is 4.6 at $v=0.1$ and 0.59 at
-$v=1$, against 0.16 for the IsoFLOP design.
+with equal total compute that differ in where the runs sit. With $\varsigma=0$, a Huber fit of the Chinchilla form ends on a corner, with one power-law term switched off and its
+exponent not identified at all, in 87 percent of replications (56 percent with 64 random starts), each fitting the data at least as well as the truth.
+As $\varsigma$ rises from 0.05 to 0.2, the root mean squared error of $\hat\sigma^*$ falls from 0.089 to 0.015, against
+0.0036 for an IsoFLOP design with the same compute (panel A); for $\ln\hat M^*$ it is 4.6 at $\varsigma=0.1$ and 0.59 at
+$\varsigma=1$, against 0.16.
 
-For moderate allocation errors this precision is functional-form information, as part (ii) predicts. With $\kappa$ free
-(panel B), the 95 percent profile confidence set for $\sigma^*$ covers the entire grid searched, $[0.05,0.99]$, in 91
-percent of on-path replications. At $v=0.3$ it rules out low elasticities but still contains all of $[0.50,0.95]$ in 65
-percent of replications, against widths of 0.016 and 0.019 for the IsoFLOP and factorial designs. Standard inference
-also fails on the path: the Wald covariance is singular, or the fit sits on a corner, in 79 percent of on-path
-replications, and a bootstrap that restarts every draw from all starting values covers the true $\sigma^*$ only 78
-percent of the time. Online Appendix~\ref{app:mc} reports the full design, the sensitivity to starting values, noise
-levels and clustered noise, and a simulated industry.
+With $\kappa$ free (panel B), this precision proves to be functional-form information, as part (ii) predicts: the 95
+percent profile confidence set for $\sigma^*$ covers the entire grid searched, $[0.05,0.99]$, in 91 percent of on-path
+replications, and at $\varsigma=0.3$ it excludes low elasticities but still contains
+every value above 0.9 in 76 percent of replications, whereas the IsoFLOP and factorial designs give sets 0.016 and 0.019
+wide. On the path, standard inference also fails, and heteroskedastic noise correlated within budgets or training trunks
+leaves the ranking of the designs unchanged (Online Appendix~\ref{app:mc}).
 
-\subsection{Designed Variation Identifies Curvature without a Functional Form}\label{sec:ident-modelfree}
+\subsection{Designed Variation Identifies Curvature, and What Survives beyond the Design}\label{sec:ident-modelfree}
 
-Proposition~\ref{prop:ident} says what a design must supply: movement across the path. The next result reads the
-technology off that movement without a functional form. Let $x\equiv\ln M$, so that an IsoFLOP profile is loss as a
-function of $x$ at fixed $c$; subscripts denote partial derivatives.
+The next result reads the technology off movement across the path without a functional form, and says what survives
+where no design reaches. Let
+$x\equiv\ln M$, so that an IsoFLOP profile is loss as a function of $x$ at fixed $c$, with minimum at
+$x^*(c)\equiv\ln M^*(C)$; subscripts denote partial derivatives. A design budget is \emph{bracketed} if at least two of its IsoFLOP
+runs lie on each side of the profile's fitted minimum, within the estimation window (Online
+Appendix~\ref{app:add-modelfree}).
 
-\begin{proposition}[Model-free $\sigma^*$ and $w$]\label{prop:modelfree}
+\begin{proposition}[Model-free $\sigma^*$ and $w$, and the sign beyond the design]\label{prop:modelfree}
 Let $L$ be any measure of output that falls as quality rises (loss, bits per byte, or $\ln(L-E)$ for any $E$), and let
-the technology be smooth with positive marginal products.
+the technology be twice continuously differentiable with positive marginal products.
 \begin{enumerate}
-\item[(i)] At any point, $w=(L_c-L_x)/(L_c+L_x)$.
-\item[(ii)] At a compute-optimal point,
+\item[(i)] (Wedge.) At any point, $w=(L_c-L_x)/(L_c+L_x)$.
+\item[(ii)] (Curvature.) At a compute-optimal point,
 \begin{equation}\label{eq:ident-mf}
 \frac1{\sigma^*}-1 \;=\; \frac{L_{nn}\big|_C}{2\,\lvert dL^*/dc\rvert},
 \end{equation}
 where $L_{nn}|_C$ is the curvature of the IsoFLOP profile in $\ln N$ at its minimum and $L^*(c)$ is the loss--compute
 frontier. The ratio is invariant to strictly monotone transformations of output.
-\item[(iii)] At $M^*(C)$, $\partial\ln w/\partial\ln M|_C=1/\sigma^*-1$. In family \eqref{eq:tech}, $\ln w$ is
-exactly linear in $\ln(M/M^*(C))$ with this slope; in general the slope varies with $M$.
-\item[(iv)] Under $\kappa=1$ the curvature of every IsoFLOP profile is pinned by the slopes of the frontier and the path,
-$-y_{nn}|_C=\gamma^2/(ab)$; with $\kappa$ free it is a separate parameter.
-\item[(v)] Hence $\sigma^*$ is identified by IsoFLOP profiles together with the frontier slope, and $w$ at a point by local
-variation in two non-collinear directions around it, but only inside the design's support.
-\end{enumerate}
-\end{proposition}
-
-Part (i) is a change of coordinates: the slopes of any output measure along the isocost and along a ray of constant $M$
-give the two marginal products, and their ratio is the wedge. Part (ii) is the elasticity of substitution at the optimum
-written in observables. Along an IsoFLOP line, loss changes only through the mix. At the minimum the marginal products of
-parameters and tokens are equal; the curvature of the profile measures how fast they diverge as the mix moves, and the
-frontier slope, which by the envelope theorem is the marginal product of compute, measures their common level. A profile
-that is sharply curved relative to the frontier slope signals poor substitutes. Because both terms are measured in the
-same output units, the irreducible loss, the transformation of output and $\kappa$ cancel. Part (iv) shows what $\kappa=1$ does: it ties the curvature of every profile to $(a,\gamma)$, which is the
-functional-form information of Proposition~\ref{prop:ident}(ii). Part (iii) gives a test of the family, which
-Section~\ref{sec:wedge} applies where a factorial design reaches high $M$.
-
-Both terms of \eqref{eq:ident-mf} are familiar: the quadratic coefficient of the parabola fitted to each IsoFLOP profile,
-as in Approach~2 of \citet{hoffmann2022training}, and the slope of the frontier through the minima. Quadratics fitted over
-wide grids overstate the curvature slightly \citep{czech2026problems}; narrow windows or quartic fits remove the bias at
-some cost in variance (Online Appendix Remark~\ref{rem:A-grid}). Section~\ref{sec:tech} applies the estimator to every
-public IsoFLOP design.
-
-\subsection{Beyond the Design: What Remains Identified at Frontier Scale}\label{sec:ident-pi}
-
-Revealed demand needs the wedge at released models, and most were trained with more compute than any design. The largest
-public IsoFLOP budget is $10^{22}$ FLOP \citep{grattafiori2024llama}; 72 of the 77 models in the clean sample of
-Section~\ref{sec:wedge} used more, and only two lie inside the Chinchilla design's range of both compute and tokens per
-parameter. The zero point must therefore be extrapolated. Let $x^*(c)\equiv\ln M^*(C)$, with path slope
-$e\equiv d\ln M^*/d\ln C=1-2a$, be identified at the largest design budget $C_J$, and let $c_J\equiv\ln C_J$.
-
-\begin{proposition}[Partial identification beyond the design]\label{prop:pi}
-Consider a model with compute $C>C_J$ and ratio $M$, and write $x=\ln M$ and $\Delta c=c-c_J$.
-\begin{enumerate}
-\item[(i)] If both factor demands are nondecreasing in compute (normal inputs), then $|e|\le1$ and
-$x^*(c)\in[x^*(c_J)-\Delta c,\ x^*(c_J)+\Delta c]$.
-\item[(ii)] If $e\in[e_L,e_U]$ beyond the design, the sharp identified set for $x^*(c)$ is
-$\mathcal X^*(c)=[x^*(c_J)+e_L\Delta c,\ x^*(c_J)+e_U\Delta c]$; its width grows linearly in the log extrapolation
-distance. With sampling error, the anchor's confidence interval replaces $x^*(c_J)$.
-\item[(iii)] For any technology with single-peaked IsoFLOP profiles, which $0<\sigma<1$ everywhere guarantees,
-$\operatorname{sign}(w-1)=\operatorname{sign}\big(x-x^*(c)\big)$. Hence $w>1$ is identified if and only if
-$x>\sup\mathcal X^*(c)$, $w<1$ if and only if $x<\inf\mathcal X^*(c)$, and otherwise the sign is not identified. Neither
-$\sigma^*$ nor a functional form is needed.
-\item[(iv)] Magnitudes require a range $[k_L,k_U]$ for the slope of $\ln w$ along the isocost, which in family
-\eqref{eq:tech} is $1/\sigma^*-1$. If $x>\sup\mathcal X^*(c)$, then
+\item[(iii)] (Slope of the log wedge.) At $M^*(C)$, $\partial\ln w/\partial\ln M|_C=1/\sigma^*-1$. In family
+\eqref{eq:tech}, $\ln w$ is exactly linear in $\ln(M/M^*(C))$ with this slope; in general the slope varies with $M$.
+\item[(iv)] (What $\kappa=1$ imposes.) Under $\kappa=1$ the curvature of every IsoFLOP profile is pinned by the slopes
+of the frontier and the path, $-y_{nn}|_C=\gamma^2/[a(1-a)]$; with $\kappa$ free it is a separate parameter.
+\item[(v)]\identpartlabel{(v)}{prop:pi} (Beyond the design.) Let $c_J$ be the log of the largest bracketed design budget,
+and consider a model with log compute $c>c_J$ and log ratio $x$. Suppose that (a) every IsoFLOP profile of the
+developer's technology is single-peaked in $x$ (its only critical point is the peak), which $0<\sigma<1$ everywhere
+guarantees (Lemma~\ref{lemma:sigma}); (b)
+the anchor $x^*(c_J)$ lies in $[\underline x_J,\overline x_J]$; (c) the path slope $e_p\equiv d\ln M^*/d\ln C$ lies in
+$[e_L,e_U]$ between $c_J$ and $c$; and (d) at every compute, the developer's own compute-optimal ratio lies within a
+factor $\tau\ge1$ of the anchored technology's. Then the wedge in the developer's first-order conditions satisfies
+$\operatorname{sign}(w-1)=\operatorname{sign}\big(x-x^*_{\mathrm{dev}}(c)\big)$, where the developer's compute-optimal
+log ratio $x^*_{\mathrm{dev}}(c)$ lies in
 \[
-\ln w\in\big[k_L\big(x-\sup\mathcal X^*(c)\big),\ k_U\big(x-\inf\mathcal X^*(c)\big)\big].
+\mathcal X^*(c)\equiv\big[\,\underline x_J+e_L(c-c_J)-\ln\tau,\ \ \overline x_J+e_U(c-c_J)+\ln\tau\,\big].
 \]
-\item[(v)] Bounds $w\in[w_L,w_U]$ imply $s\in[1-1/w_L,\,1-1/w_U]$ for the expenditure share $s=(w-1)/w$ and, under
-part (ii) of Proposition~\ref{prop:wedge}, $\lambda pT/(3D)\in[w_L-1,\,w_U-1]$.
+Hence $w>1$ is identified if $x>\sup\mathcal X^*(c)$ and $w<1$ if $x<\inf\mathcal X^*(c)$; when the anchor is a point
+and the anchored technology is in family \eqref{eq:tech}, these conditions are also necessary, and otherwise the sign is
+not identified. Neither $\sigma^*$ nor a functional form is needed.
 \end{enumerate}
 \end{proposition}
 
-The sign result needs only the location of the minimum. On a single-peaked profile, a model with more tokens per
-parameter than is optimal at its compute has a higher marginal product of parameters than of tokens, so $w>1$ whatever
-the curvature. Magnitudes need the curvature as well as the distance to the minimum, and the distance is uncertain
-because the minimum is extrapolated. At frontier scale the data therefore identify a sign, not a level. With the path
-anchored at the largest IsoFLOP budgets (Section~\ref{sec:wedge}), Llama~3 8B, trained on 1,868 tokens per parameter with
-$7\times10^{23}$ FLOP, lies above every admissible compute-optimal ratio, so its over-training is identified whatever
-$\sigma^*$ is. Llama~3.1 405B, at 38 tokens per parameter and $4\times10^{25}$ FLOP, lies inside the identified set under
-every assumption considered there. A confidence interval from one fitted technology, by contrast, reflects only
-sampling error within one design and one functional form.
+Part (i) is a change of coordinates: slopes along the isocost and along a ray of constant $M$ give the two marginal
+products, whose ratio is the wedge. Part (ii) writes $\sigma^*$ in observables: at the minimum of
+an IsoFLOP profile the marginal products of parameters and tokens are equal, the profile's curvature measures how fast
+they diverge as the mix moves, and the frontier slope, the marginal
+product of compute by the envelope theorem, measures their common level. Because both terms are in the same output
+units, the irreducible loss, the transformation of output and $\kappa$ cancel. Both are familiar: the quadratic
+coefficient of the parabola fitted to each profile, as in Approach~2 of \citet{hoffmann2022training}, and the slope of
+the frontier through the minima; quadratics fitted over wide grids overstate the curvature slightly, which
+narrow windows avoid (Online Appendix Remark~\ref{rem:A-grid}; on the corresponding shift of the fitted minimum, see
+\citealp{czech2026problems}). With a known cost that is not multiplicative, the same curvature and frontier slope,
+weighted by the cost's elasticities, identify $1/\sigma^*$ less the inverse elasticity of substitution of the isocost
+itself (Online Appendix Corollary~\ref{cor:A-general}), so the estimator applies to any design that varies two inputs
+along known isocosts. Part (iii) gives a test of the family.
 
-In sum, near-optimal choices reveal the path slope $a$, and a single lab's outcomes the frontier elasticity $\gamma$. The
-curvature $\sigma^*$ requires transverse variation but no functional form. The zero point $M^*(C)$ requires optimality
-or transverse variation, and beyond the designs it is only partially identified.
+Parts (i) to (iv) hold only inside a design's support, but nearly all released models used more compute than
+$3\times10^{21}$ FLOP, the largest bracketed budget of any public design (Section~\ref{sec:wedge}); part (v) says what
+extrapolating the zero point delivers.
+
+The sign result needs only the location of the minimum: on a single-peaked profile, a model with more tokens per
+parameter than is optimal at its compute has a higher marginal product of parameters than of tokens, so $w>1$ whatever
+the curvature. Assumption (a) extends the U-shaped profiles of
+Lemma~\ref{lemma:sigma} and every bracketing design. The anchor in (b) is a compute-optimal ratio at a bracketed budget,
+for Llama~3 at $10^{21}$ FLOP rather than at its unbracketed $3\times10^{21}$ or $10^{22}$, and the path-slope range in
+(c) is the substantive extrapolation; Section~\ref{sec:wedge-pi} takes both, with their sampling error, from the designs'
+own paths. Normal inputs alone, factor demands that do not fall with compute, imply only
+$|e_p|\le1$. The allowance $\tau$ in (d) admits
+cross-lab differences in technology (Section~\ref{sec:tech}): a factor-augmenting bias $\chi$ moves $\ln M^*$ by
+$2\chi/(\alpha+\beta)$, and the largest tilt across DataDecide's recipes, 0.26,
+corresponds to $\tau\approx1.8$ under the reference exponents (we use 1.84) and to 3.4 under DataDecide's own.
+
+Given (b) to (d), a point anchor and an anchored technology in family \eqref{eq:tech}, the set is sharp: every point
+in it is the compute-optimal ratio of a technology with positive marginal products and single-peaked profiles that
+reproduces the designs up to $c_J$, shifted by a constant factor-augmenting tilt of at most $\ln\tau$ (Online Appendix
+Proposition~\ref{prop:A-pi}(ii) and (vii); \citealp{manski2003partial}). With sampling error, a confidence set replaces
+the anchor and the slope range; if it is a joint band for the level and slope of a linear path, the set covers
+$x^*_{\mathrm{dev}}(c)$ with at least the band's coverage probability, and with several anchored paths the union does
+so if the developer's technology lies within $\tau$ of at least one of them (Proposition~\ref{prop:A-pi}(viii)).
+
+What the data identify at frontier scale is therefore a sign, not a level. SmolLM2 1.7B, trained on about 6,400 tokens
+per parameter with $1.1\times10^{23}$ FLOP, has a ratio about 47 times the upper end of the set under the anchors of
+Section~\ref{sec:wedge}, so its over-training is identified for any tilt allowance below that factor. Llama~3.1 405B, at
+38 tokens per parameter and $3.8\times10^{25}$ FLOP, lies inside the set: even the sign of its wedge is not identified.
+Magnitudes need the curvature as well: if $\partial\ln w/\partial x|_c\in[\theta_L,\theta_U]$ with $\theta_L>0$, then
+for $x>\sup\mathcal X^*(c)$, $\ln w\in\big[\theta_L\big(x-\sup\mathcal X^*(c)\big),\ \theta_U\big(x-\inf\mathcal X^*(c)\big)\big]$
+(Online Appendix Proposition~\ref{prop:A-pi}(iv)); in family \eqref{eq:tech} a range for $\sigma^*$ at the model's own
+compute gives $[\theta_L,\theta_U]$, and that range is itself an extrapolation.
+
+\textit{Where the results bind.}\label{sec:ident-scope} Proposition~\ref{prop:ident} binds for compute-optimal ladders
+and for releases of the compute-optimal era; by the same mechanism, fixed tokens-per-parameter designs run by one lab are
+ill-conditioned when $\alpha\approx\beta$ \citep{kricheli2026tokens}, as under the reference technology (DataDecide trains every size to about 100
+tokens per parameter; \citealp{magnusson2025datadecide}). Released models since 2023 lie far off
+the path, but using their values of compactness as transverse variation requires that these values move the mix without
+moving the technology, which factor-biased technology would violate. We therefore take the technology from designed
+sweeps and read objectives from released models' wedges.

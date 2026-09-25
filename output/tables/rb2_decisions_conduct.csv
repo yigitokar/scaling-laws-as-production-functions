@@ -1,0 +1,20 @@
+level,sample,code,outcome,regressor,n,clusters,coef,se_crv1,t,p_wcr,B,p_floor,G_treated,G_untreated
+model,clean sample (77),developer-level code (ra2),lnw,serve_developer,77,18,0.42884079503402034,0.2730047182226936,1.5708182548120253,0.4811,9999,0.0001,7,12
+model,clean sample (77),model-level code (primary),lnw,serve_model,77,18,0.5600180151475899,0.23805191915266738,2.3525036771009575,0.4131,9999,0.0001,6,15
+model,clean sample (77),"model-level code, ambiguous = 1",lnw,serve_model_hi,77,18,0.6189964953831097,0.23911053315550768,2.5887462472451594,0.2198,9999,0.0001,7,15
+model,clean sample (77),"model-level, with on-device control",lnw,serve_model,77,18,0.5779417977153705,0.23252300926267366,2.485525194035694,0.3692,9999,0.0001,6,15
+model,clean sample (77),developer-level code (ra2),s,serve_developer,77,18,0.090017377164662,0.05430125162918954,1.6577403736357583,0.3664,9999,0.0001,7,12
+model,clean sample (77),model-level code (primary),s,serve_model,77,18,0.09454018544330575,0.055921914127212674,1.6905749189529384,0.5686,9999,0.0001,6,15
+model,clean sample (77),"model-level code, ambiguous = 1",s,serve_model_hi,77,18,0.1189123896606396,0.05134791861668454,2.3158171326929162,0.2665,9999,0.0001,7,15
+model,clean sample (77),"model-level, with on-device control",s,serve_model,77,18,0.09089848746269195,0.05631582281460409,1.614084335799134,0.5631,9999,0.0001,6,15
+model,clean sample without Alibaba,model-level,lnw,serve_model,58,17,-0.09216514092693118,0.2792480778515378,-0.3300475392204159,0.7509,9999,0.0001,5,15
+model,clean sample without Qwen2.5/Qwen3 (D unaudited),model-level,lnw,serve_model,65,18,0.16849994298919715,0.20457708990311785,0.8236501118917771,0.5964,9999,0.0001,6,15
+decision,decision units (primary),any member served (model-level code),lnw,serve_any,49,18,0.27610297943871964,0.2939437766850776,0.9393054091923435,0.6733,9999,0.0001,6,14
+decision,decision units (primary),largest member served,lnw,serve_flagship,49,18,0.27610297943871964,0.2939437766850776,0.9393054091923435,0.6733,9999,0.0001,6,14
+decision,decision units (primary),all members served,lnw,serve_all,49,18,0.4932248590707734,0.171825911222669,2.87049174109488,0.1587,9999,0.0001,4,15
+decision,decision units (primary),developer-level code,lnw,serve_developer,49,18,0.13340579420177792,0.23887143899702734,0.5584836544792536,0.7573,9999,0.0001,7,12
+decision,decision units (primary),any member served (model-level code),s,serve_any,49,18,0.05093284286753555,0.09248001742623592,0.5507443043916022,0.7021,9999,0.0001,6,14
+decision,decision units (primary),largest member served,s,serve_flagship,49,18,0.05093284286753555,0.09248001742623592,0.5507443043916022,0.7021,9999,0.0001,6,14
+decision,decision units (primary),all members served,s,serve_all,49,18,0.146839857930537,0.054908571037811486,2.674261142753455,0.1516,9999,0.0001,4,15
+decision,decision units (primary),developer-level code,s,serve_developer,49,18,0.04428767848928419,0.06421903467701263,0.6896347587911824,0.5971,9999,0.0001,7,12
+decision,decision units without Alibaba,any member served,lnw,serve_any,43,17,-0.19766536881582678,0.30230466930336747,-0.6538614480263502,0.5717,9999,0.0001,5,14

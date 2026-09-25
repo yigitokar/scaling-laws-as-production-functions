@@ -1,0 +1,4 @@
+sample,treat,n,clusters,G_treated,statistic,coef,B,p_ri_beta_two,p_ri_beta_one
+"models (77), developer level",serve_model,77,18,6,"developer-level slope, weighted by models",0.5627356284992595,9999,0.1037103710371037,0.058105810581058105
+"models (77), developer level",serve_model,77,18,6,"developer-level slope, unweighted",0.24057576101620934,9999,0.2782278227822782,0.13061306130613062
+"models without Alibaba, developer level",serve_model,58,17,5,"developer-level slope, weighted by models",0.012822547955510697,9999,0.9448944894489449,0.53005300530053

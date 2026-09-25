@@ -1,0 +1,776 @@
+{
+ "common_sigma": {
+  "sigma": 0.687259,
+  "se": 0.0147821,
+  "df": 3,
+  "source": "rb1_sigmaC_study_level.csv (study-level, HKSJ)"
+ },
+ "codes_file": "readings_final.csv",
+ "B_joint": 1197,
+ "cluster_ref": {
+  "B": 999,
+  "n_clusters": 44,
+  "n_fail": 0,
+  "point": {
+   "alpha": 0.42435902039682244,
+   "beta": 0.43052674389944556,
+   "lnG": -1.7284586607688157
+  },
+  "Mstar_576e23_wild": [
+   13.966930484263813,
+   33.87185520294336
+  ],
+  "Mstar_576e23_cluster": [
+   6.87646541490568,
+   66.99221875699284
+  ]
+ },
+ "W2_counts": {
+  "point-identified units": 29,
+  "lower-bounded units": 20,
+  "lower-bounded units, cap-type budgets": 8,
+  "lower-bounded units, members with an own cap": 12,
+  "point-identified units if 'cap or choice' is a choice": 35,
+  "point-identified units under coder B's readings": 31,
+  "point-identified units without MPT and Yi (weakest agreed choice codes)": 27,
+  "point-identified units without synthetic-flagged units (protocol rule)": 18,
+  "point-identified units without synthetic-flagged units (fix-list families)": 25,
+  "units outside tier windows (interpretation check)": 17,
+  "point-identified units outside tier windows": 9,
+  "size-specific members and singletons (units of one model)": 32,
+  "size-specific members and singletons outside tier windows": 15,
+  "size-specific members and singletons outside tier windows, without synthetic-flagged (protocol)": 7
+ },
+ "e_all": [
+  -0.15599999999999992,
+  0.31099144862852035
+ ],
+ "e_range": [
+  -0.15599999999999992,
+  0.16218667065168946
+ ],
+ "e_wide": [
+  -0.1745112143187324,
+  0.3527929876297756
+ ],
+ "models (77) | reference": {
+  "n_units": 77,
+  "median_s": 0.7491366913433287,
+  "median_s_lo": 0.6885318220514781,
+  "median_s_hi": 0.7940343685979551,
+  "share_w_gt1": 0.974025974025974,
+  "share_w_gt1_lo": 0.922077922077922,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (primary: budget level) | reference": {
+  "n_units": 49,
+  "median_s": 0.7345318547777187,
+  "median_s_lo": 0.6574848932547619,
+  "median_s_hi": 0.7822352622030433,
+  "share_w_gt1": 0.9795918367346939,
+  "share_w_gt1_lo": 0.9367346938775512,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (family label, version 3) | reference": {
+  "n_units": 56,
+  "median_s": 0.7357100432996362,
+  "median_s_lo": 0.6657419188570318,
+  "median_s_hi": 0.7844178271382749,
+  "share_w_gt1": 0.9642857142857143,
+  "share_w_gt1_lo": 0.9446428571428571,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (reading-consistent, version 3) | reference": {
+  "n_units": 66,
+  "median_s": 0.7520153417129352,
+  "median_s_lo": 0.7029411307843072,
+  "median_s_hi": 0.8035235834446991,
+  "share_w_gt1": 0.9696969696969697,
+  "share_w_gt1_lo": 0.9393939393939394,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (members of cap-type budgets split) | reference": {
+  "n_units": 66,
+  "median_s": 0.7509790414479696,
+  "median_s_lo": 0.6942445186840722,
+  "median_s_hi": 0.7977870640116007,
+  "share_w_gt1": 0.9696969696969697,
+  "share_w_gt1_lo": 0.9242424242424242,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (primary, OLMo 2 1B separate) | reference": {
+  "n_units": 50,
+  "median_s": 0.7357100432996362,
+  "median_s_lo": 0.6657419188570318,
+  "median_s_hi": 0.7844178271382749,
+  "share_w_gt1": 0.98,
+  "share_w_gt1_lo": 0.938,
+  "share_w_gt1_hi": 1.0
+ },
+ "models (77) | lab-own (one rule) where available": {
+  "n_units": 77,
+  "median_s": 0.738139568932785,
+  "median_s_lo": 0.6936064020210183,
+  "median_s_hi": 0.7886143211089747,
+  "share_w_gt1": 0.987012987012987,
+  "share_w_gt1_lo": 0.935064935064935,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (primary: budget level) | lab-own (one rule) where available": {
+  "n_units": 49,
+  "median_s": 0.7165413911661895,
+  "median_s_lo": 0.6315094639413172,
+  "median_s_hi": 0.7753563847680662,
+  "share_w_gt1": 0.9795918367346939,
+  "share_w_gt1_lo": 0.9183673469387755,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (family label, version 3) | lab-own (one rule) where available": {
+  "n_units": 56,
+  "median_s": 0.7255366229719541,
+  "median_s_lo": 0.6494360986690618,
+  "median_s_hi": 0.7772958484007741,
+  "share_w_gt1": 0.9821428571428571,
+  "share_w_gt1_lo": 0.9285714285714286,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (reading-consistent, version 3) | lab-own (one rule) where available": {
+  "n_units": 66,
+  "median_s": 0.7520153417129352,
+  "median_s_lo": 0.7045349906506999,
+  "median_s_hi": 0.7996750584866175,
+  "share_w_gt1": 0.9848484848484849,
+  "share_w_gt1_lo": 0.9393939393939394,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (members of cap-type budgets split) | lab-own (one rule) where available": {
+  "n_units": 66,
+  "median_s": 0.7478086167924514,
+  "median_s_lo": 0.6961547226806731,
+  "median_s_hi": 0.7915883492891451,
+  "share_w_gt1": 0.9848484848484849,
+  "share_w_gt1_lo": 0.9393939393939394,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (primary, OLMo 2 1B separate) | lab-own (one rule) where available": {
+  "n_units": 50,
+  "median_s": 0.7255366229719541,
+  "median_s_lo": 0.6420061591187443,
+  "median_s_hi": 0.7772958484007741,
+  "share_w_gt1": 0.98,
+  "share_w_gt1_lo": 0.92,
+  "share_w_gt1_hi": 1.0
+ },
+ "models (77) | lab-own (ra2 rule) where available": {
+  "n_units": 77,
+  "median_s": 0.7503784263709476,
+  "share_w_gt1": 0.948051948051948
+ },
+ "decision units (primary: budget level) | lab-own (ra2 rule) where available": {
+  "n_units": 49,
+  "median_s": 0.7345318547777187,
+  "share_w_gt1": 0.9591836734693877
+ },
+ "decision units (family label, version 3) | lab-own (ra2 rule) where available": {
+  "n_units": 56,
+  "median_s": 0.7357100432996362,
+  "share_w_gt1": 0.9642857142857143
+ },
+ "decision units (reading-consistent, version 3) | lab-own (ra2 rule) where available": {
+  "n_units": 66,
+  "median_s": 0.7528445205721728,
+  "share_w_gt1": 0.9545454545454546
+ },
+ "decision units (members of cap-type budgets split) | lab-own (ra2 rule) where available": {
+  "n_units": 66,
+  "median_s": 0.7509790414479696,
+  "share_w_gt1": 0.9545454545454546
+ },
+ "decision units (primary, OLMo 2 1B separate) | lab-own (ra2 rule) where available": {
+  "n_units": 50,
+  "median_s": 0.7357100432996362,
+  "share_w_gt1": 0.96
+ },
+ "models (77) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 77,
+  "median_s": 0.7491366913433287,
+  "median_s_lo": 0.5751432204411603,
+  "median_s_hi": 0.8270248915615113,
+  "share_w_gt1": 0.974025974025974,
+  "share_w_gt1_lo": 0.8831168831168831,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (primary: budget level) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 49,
+  "median_s": 0.7345318547777187,
+  "median_s_lo": 0.5123119092991177,
+  "median_s_hi": 0.8060841379929505,
+  "share_w_gt1": 0.9795918367346939,
+  "share_w_gt1_lo": 0.8367346938775511,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (family label, version 3) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 56,
+  "median_s": 0.7357100432996362,
+  "median_s_lo": 0.5257870162549699,
+  "median_s_hi": 0.8077228575085644,
+  "share_w_gt1": 0.9642857142857143,
+  "share_w_gt1_lo": 0.8392857142857143,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (reading-consistent, version 3) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 66,
+  "median_s": 0.7520153417129352,
+  "median_s_lo": 0.6157404470844727,
+  "median_s_hi": 0.8401672436030575,
+  "share_w_gt1": 0.9696969696969697,
+  "share_w_gt1_lo": 0.8787878787878788,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (members of cap-type budgets split) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 66,
+  "median_s": 0.7509790414479696,
+  "median_s_lo": 0.6026332110485793,
+  "median_s_hi": 0.8323006331151617,
+  "share_w_gt1": 0.9696969696969697,
+  "share_w_gt1_lo": 0.8636363636363636,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units (reading-consistent, version 3), cap members in tier windows dropped | reference": {
+  "n_units": 57,
+  "median_s": 0.7491366913433287,
+  "median_s_lo": 0.6905197669207813,
+  "median_s_hi": 0.7940343685979551,
+  "share_w_gt1": 0.9649122807017544,
+  "share_w_gt1_lo": 0.9298245614035088,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units | reference": {
+  "n_units": 29,
+  "median_s": 0.7372564893585437,
+  "median_s_lo": 0.6716832951631351,
+  "median_s_hi": 0.7898558705299078,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 1.0,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 29,
+  "median_s": 0.7372564893585437,
+  "median_s_lo": 0.5388507198179877,
+  "median_s_hi": 0.8240263939810138,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.9310344827586207,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: lower-bounded units | reference": {
+  "n_units": 20,
+  "median_s": 0.7104442258006307,
+  "median_s_lo": 0.6341744729833823,
+  "median_s_hi": 0.7701403968948956,
+  "share_w_gt1": 0.95,
+  "share_w_gt1_lo": 0.8450000000000001,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: lower-bounded units, cap-type budgets | reference": {
+  "n_units": 8,
+  "median_s": 0.5115011131696151,
+  "median_s_lo": 0.3897853366105272,
+  "median_s_hi": 0.6196340011839272,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.8625000000000003,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: lower-bounded units, members with an own cap | reference": {
+  "n_units": 12,
+  "median_s": 0.7206176461283129,
+  "median_s_lo": 0.6589831552084201,
+  "median_s_hi": 0.7715169845230792,
+  "share_w_gt1": 0.9166666666666666,
+  "share_w_gt1_lo": 0.8333333333333334,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units if 'cap or choice' is a choice | reference": {
+  "n_units": 35,
+  "median_s": 0.7345318547777187,
+  "median_s_lo": 0.6574848932547619,
+  "median_s_hi": 0.7875215858699898,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.9714285714285714,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units if 'cap or choice' is a choice | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 35,
+  "median_s": 0.7345318547777187,
+  "median_s_lo": 0.4924712810897652,
+  "median_s_hi": 0.8215099310662661,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.8571428571428571,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units under coder B's readings | reference": {
+  "n_units": 31,
+  "median_s": 0.7372564893585437,
+  "median_s_lo": 0.6716832951631351,
+  "median_s_hi": 0.7898558705299078,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 1.0,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units under coder B's readings | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 31,
+  "median_s": 0.7372564893585437,
+  "median_s_lo": 0.5388507198179877,
+  "median_s_hi": 0.8240263939810138,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.9032258064516129,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units without MPT and Yi (weakest agreed choice codes) | reference": {
+  "n_units": 27,
+  "median_s": 0.7452388072139551,
+  "median_s_lo": 0.6905197669207813,
+  "median_s_hi": 0.7934205194214337,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 1.0,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units without MPT and Yi (weakest agreed choice codes) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 27,
+  "median_s": 0.7452388072139551,
+  "median_s_lo": 0.5751272279599814,
+  "median_s_hi": 0.8296838476792754,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.9629629629629629,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units without synthetic-flagged units (protocol rule) | reference": {
+  "n_units": 18,
+  "median_s": 0.6750009934472421,
+  "median_s_lo": 0.6073274212231595,
+  "median_s_hi": 0.7308516763225688,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 1.0,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units without synthetic-flagged units (protocol rule) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 18,
+  "median_s": 0.6750009934472421,
+  "median_s_lo": 0.47865901334764593,
+  "median_s_hi": 0.7681324916639066,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.8888888888888888,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units without synthetic-flagged units (fix-list families) | reference": {
+  "n_units": 25,
+  "median_s": 0.6781542602752874,
+  "median_s_lo": 0.6102071027957947,
+  "median_s_hi": 0.7341880119613909,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 1.0,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units without synthetic-flagged units (fix-list families) | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 25,
+  "median_s": 0.6781542602752874,
+  "median_s_lo": 0.4791530869941754,
+  "median_s_hi": 0.7854361986528265,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 0.92,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: units outside tier windows (interpretation check) | reference": {
+  "n_units": 17,
+  "median_s": 0.8365643302052815,
+  "median_s_lo": 0.7935387837559509,
+  "median_s_hi": 0.8721115534943158,
+  "share_w_gt1": 0.9411764705882353,
+  "share_w_gt1_lo": 0.8823529411764706,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units outside tier windows | reference": {
+  "n_units": 9,
+  "median_s": 0.8365643302052815,
+  "median_s_lo": 0.7935387837559509,
+  "median_s_hi": 0.8721115534943158,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 1.0,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: point-identified units outside tier windows | reference, budget+trunk cluster bootstrap (ra1's conservative scheme)": {
+  "n_units": 9,
+  "median_s": 0.8365643302052815,
+  "median_s_lo": 0.7174727897987812,
+  "median_s_hi": 0.887585085581584,
+  "share_w_gt1": 1.0,
+  "share_w_gt1_lo": 1.0,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: size-specific members and singletons (units of one model) | reference": {
+  "n_units": 32,
+  "median_s": 0.7520153417129352,
+  "median_s_lo": 0.7029411307843072,
+  "median_s_hi": 0.7977870640116007,
+  "share_w_gt1": 0.96875,
+  "share_w_gt1_lo": 0.9375,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: size-specific members and singletons outside tier windows | reference": {
+  "n_units": 15,
+  "median_s": 0.8365643302052815,
+  "median_s_lo": 0.7935387837559509,
+  "median_s_hi": 0.8721115534943158,
+  "share_w_gt1": 0.9333333333333333,
+  "share_w_gt1_lo": 0.8666666666666667,
+  "share_w_gt1_hi": 1.0
+ },
+ "W2: size-specific members and singletons outside tier windows, without synthetic-flagged (protocol) | reference": {
+  "n_units": 7,
+  "median_s": 0.7452388072139551,
+  "median_s_lo": 0.6983918422366973,
+  "median_s_hi": 0.7911480661056491,
+  "share_w_gt1": 0.8571428571428571,
+  "share_w_gt1_lo": 0.7142857142857143,
+  "share_w_gt1_hi": 1.0
+ },
+ "decision units without Alibaba | reference": {
+  "n_units": 43,
+  "median_s": 0.7368882318215538,
+  "share_w_gt1": 0.9767441860465116
+ },
+ "decision units without Qwen2.5/Qwen3 (D unaudited) | reference": {
+  "n_units": 47,
+  "median_s": 0.7345318547777187,
+  "share_w_gt1": 0.9787234042553191
+ },
+ "decision units without synthetic-data models (version 3 flag) | reference": {
+  "n_units": 41,
+  "median_s": 0.6987202269866623,
+  "share_w_gt1": 0.975609756097561
+ },
+ "decision units without synthetic-flagged units (protocol rule) | reference": {
+  "n_units": 28,
+  "median_s": 0.6444748590237812,
+  "share_w_gt1": 0.9642857142857143
+ },
+ "decision units without synthetic-flagged units (fix-list families) | reference": {
+  "n_units": 36,
+  "median_s": 0.6750009934472421,
+  "share_w_gt1": 0.9722222222222222
+ },
+ "decision units: models outside tier windows | reference": {
+  "n_units": 23,
+  "median_s": 0.8477340696772188,
+  "share_w_gt1": 0.9565217391304348
+ },
+ "decision units, ra2 token counts (no audit) | reference": {
+  "n_units": 49,
+  "median_s": 0.7345318547777187,
+  "share_w_gt1": 0.9795918367346939
+ },
+ "sign_identified": {
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | model | tau=1.0": [
+   0.8701298701298701,
+   0.48465869666740674
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | decision | tau=1.0": [
+   0.8163265306122449,
+   0.3997397997565774
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | model | tau=1.3": [
+   0.8571428571428571,
+   0.4781493701090291
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | decision | tau=1.3": [
+   0.7959183673469388,
+   0.39208320650186607
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | model | tau=1.84": [
+   0.8181818181818182,
+   0.3437364452179669
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | decision | tau=1.84": [
+   0.7551020408163265,
+   0.31639721589655917
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | model | tau=3.4": [
+   0.6883116883116883,
+   0.23118604486418648
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | decision | tau=3.4": [
+   0.6326530612244898,
+   0.13762439151920589
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | model | tau=4.4": [
+   0.6753246753246753,
+   0.23050298984615808
+  ],
+  "PI-1 (bootstrap-t anchors; e from paths and published laws) | decision | tau=4.4": [
+   0.6122448979591837,
+   0.13694133650117749
+  ],
+  "normal inputs only (e in [-1, 1]) | model | tau=1.0": [
+   0.14285714285714285,
+   0.003286721294373417
+  ],
+  "normal inputs only (e in [-1, 1]) | decision | tau=1.0": [
+   0.14285714285714285,
+   0.0009923086277536972
+  ],
+  "normal inputs only (e in [-1, 1]) | model | tau=1.3": [
+   0.12987012987012986,
+   0.0029072722807903665
+  ],
+  "normal inputs only (e in [-1, 1]) | decision | tau=1.3": [
+   0.14285714285714285,
+   0.0009923086277536972
+  ],
+  "normal inputs only (e in [-1, 1]) | model | tau=1.84": [
+   0.1038961038961039,
+   0.0025457182975937615
+  ],
+  "normal inputs only (e in [-1, 1]) | decision | tau=1.84": [
+   0.10204081632653061,
+   0.0006307546445570919
+  ],
+  "normal inputs only (e in [-1, 1]) | model | tau=3.4": [
+   0.1038961038961039,
+   0.0025457182975937615
+  ],
+  "normal inputs only (e in [-1, 1]) | decision | tau=3.4": [
+   0.10204081632653061,
+   0.0006307546445570919
+  ],
+  "normal inputs only (e in [-1, 1]) | model | tau=4.4": [
+   0.1038961038961039,
+   0.0025457182975937615
+  ],
+  "normal inputs only (e in [-1, 1]) | decision | tau=4.4": [
+   0.10204081632653061,
+   0.0006307546445570919
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | model | tau=1.0": [
+   0.07792207792207792,
+   0.0024024003451793546
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | decision | tau=1.0": [
+   0.061224489795918366,
+   0.00048234434155915065
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | model | tau=1.3": [
+   0.05194805194805195,
+   0.002305991294748869
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | decision | tau=1.3": [
+   0.04081632653061224,
+   0.00039102764171219934
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | model | tau=1.84": [
+   0.03896103896103896,
+   0.001931938154981783
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | decision | tau=1.84": [
+   0.02040816326530612,
+   1.6974501945113444e-05
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | model | tau=3.4": [
+   0.0,
+   0.0
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | decision | tau=3.4": [
+   0.0,
+   0.0
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | model | tau=4.4": [
+   0.0,
+   0.0
+  ],
+  "PI-1 + Marin Comma anchor (5 budgets) | decision | tau=4.4": [
+   0.0,
+   0.0
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | model | tau=1.0": [
+   0.8701298701298701,
+   0.48465869666740674
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | decision | tau=1.0": [
+   0.8163265306122449,
+   0.3997397997565774
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | model | tau=1.3": [
+   0.8571428571428571,
+   0.4781493701090291
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | decision | tau=1.3": [
+   0.7959183673469388,
+   0.39208320650186607
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | model | tau=1.84": [
+   0.8181818181818182,
+   0.3437364452179669
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | decision | tau=1.84": [
+   0.7551020408163265,
+   0.31639721589655917
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | model | tau=3.4": [
+   0.6883116883116883,
+   0.23118604486418648
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | decision | tau=3.4": [
+   0.6326530612244898,
+   0.13762439151920589
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | model | tau=4.4": [
+   0.6753246753246753,
+   0.23050298984615808
+  ],
+  "PI-1 with Meta's 10-budget anchor at 1e22 | decision | tau=4.4": [
+   0.6122448979591837,
+   0.13694133650117749
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | model | tau=1.0": [
+   0.7142857142857143,
+   0.1730013620003787
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | decision | tau=1.0": [
+   0.6530612244897959,
+   0.11578325886444349
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | model | tau=1.3": [
+   0.6623376623376623,
+   0.17097332093407522
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | decision | tau=1.3": [
+   0.6122448979591837,
+   0.11462204597154488
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | model | tau=1.84": [
+   0.5974025974025974,
+   0.160038836383612
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | decision | tau=1.84": [
+   0.5510204081632653,
+   0.10542121776789129
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | model | tau=3.4": [
+   0.4675324675324675,
+   0.13227484196290618
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | decision | tau=3.4": [
+   0.40816326530612246,
+   0.09538322723299875
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | model | tau=4.4": [
+   0.4155844155844156,
+   0.11970262470454052
+  ],
+  "PI-1, e widened to the path-slope 95% intervals | decision | tau=4.4": [
+   0.3673469387755102,
+   0.08703296306106201
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | model | tau=1.0": [
+   0.8701298701298701,
+   0.48465869666740674
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | decision | tau=1.0": [
+   0.8163265306122449,
+   0.3997397997565774
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | model | tau=1.3": [
+   0.8571428571428571,
+   0.4781493701090291
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | decision | tau=1.3": [
+   0.7959183673469388,
+   0.39208320650186607
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | model | tau=1.84": [
+   0.8311688311688312,
+   0.4105104457156279
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | decision | tau=1.84": [
+   0.7551020408163265,
+   0.31639721589655917
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | model | tau=3.4": [
+   0.7012987012987013,
+   0.23161120665633592
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | decision | tau=3.4": [
+   0.6326530612244898,
+   0.13762439151920589
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | model | tau=4.4": [
+   0.6753246753246753,
+   0.23050298984615808
+  ],
+  "PI-3 own-lab anchors (Meta, Marin, DeepSeek) | decision | tau=4.4": [
+   0.6122448979591837,
+   0.13694133650117749
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | model | tau=1.0": [
+   0.23376623376623376,
+   0.027536777559981653
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | decision | tau=1.0": [
+   0.16326530612244897,
+   0.004334362999269115
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | model | tau=1.3": [
+   0.2077922077922078,
+   0.025224899835848108
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | decision | tau=1.3": [
+   0.12244897959183673,
+   0.0020224852751355715
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | model | tau=1.84": [
+   0.14285714285714285,
+   0.01006298132942807
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | decision | tau=1.84": [
+   0.10204081632653061,
+   0.0017997407260477967
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | model | tau=3.4": [
+   0.1038961038961039,
+   0.008188306331453423
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | decision | tau=3.4": [
+   0.08163265306122448,
+   0.0006119647889965151
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | model | tau=4.4": [
+   0.09090909090909091,
+   0.006435089076293856
+  ],
+  "PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors) | decision | tau=4.4": [
+   0.08163265306122448,
+   0.0006119647889965151
+  ]
+ },
+ "lab_own_one_rule_sigma": {
+  "sigma": 0.687259,
+  "se": 0.0147821,
+  "df": 3,
+  "source": "rb1_sigmaC_study_level.csv (study-level, HKSJ)"
+ },
+ "n_served_model_level": 26,
+ "n_served_developer_level": 33,
+ "family_readings": {
+  "Apertus": "choice",
+  "DeepSeek-LLM": "cap+menu",
+  "Granite-3.0": "choice",
+  "Llama-2": "choice",
+  "Llama-3 herd": "cap",
+  "MPT": "menu",
+  "Olmo-3": "choice",
+  "Qwen2.5": "cap",
+  "Qwen3": "cap",
+  "StableLM-alpha": "choice",
+  "Yi": "cap+menu"
+ },
+ "runtime_s": 802.011440038681
+}

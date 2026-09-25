@@ -1,0 +1,8 @@
+unit_kind,id_class,n
+common-budget,lower bound,2
+common-budget,lower bound (point if choice),6
+common-budget,point,9
+singleton,lower bound,4
+singleton,point,11
+size-specific member,lower bound,8
+size-specific member,point,9

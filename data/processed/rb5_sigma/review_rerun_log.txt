@@ -1,0 +1,92 @@
+13:47:17 [    0.0s] rb5_sigma run: stages ['draws', 'metareg', 'convexity', 'study', 'pidset', 'depmc', 'ddtilt', 'tables', 'figures']; QUICK=False; output root /private/tmp/claude-501/-Users-yigitokar-scaling-laws-pf/0d2513c5-45da-44dc-af1d-80b8664ef0bc/scratchpad/rerun; processes 2
+13:47:17 [    0.0s] stage draws: joint design-conditional bootstrap draws of sigma*_b (T1.1), top-budget set (T1.3)
+13:47:17 [    0.1s]   joint draws: 6 designs, B = 999, ra1's seeds, 2 processes
+13:47:33 [   16.7s]     Llama 3                k=8 RE 0.6595 (0.0227); draws with any non-finite budget: 0 of 999
+13:47:33 [   16.7s]     Marin, Comma           k=5 RE 0.7000 (0.0265); draws with any non-finite budget: 0 of 999
+13:47:33 [   16.7s]     Marin, DCLM            k=7 RE 0.7126 (0.0272); draws with any non-finite budget: 0 of 999
+13:47:33 [   16.7s]     Marin, Nemotron-CC     k=7 RE 0.7049 (0.0233); draws with any non-finite budget: 0 of 999
+13:47:33 [   16.7s]     Chinchilla             k=9 RE 0.6596 (0.0228); draws with any non-finite budget: 0 of 999
+13:47:33 [   16.7s]     Chinchilla (132 runs)  k=9 RE 0.6812 (0.0198); draws with any non-finite budget: 0 of 999
+13:47:34 [   17.5s] stage metareg: meta-regression with Marin as one cluster (T1.2)
+13:47:34 [   17.6s]     [all six designs (excl. Porian)] weighted: slope -0.0328; studies (4; Marin one cluster): CR2 p 0.114 (df 2.8), wild p 0.051 / enum 0.049; designs (6): CR2 p 0.097 (df 3.1), wild p 0.039 / enum 0.036
+13:47:34 [   17.7s]     [all six designs (excl. Porian)] unweighted: slope -0.0296; studies (4; Marin one cluster): CR2 p 0.129 (df 2.7), wild p 0.056 / enum 0.054; designs (6): CR2 p 0.050 (df 4.5), wild p 0.046 / enum 0.048
+13:47:35 [   17.9s]     [all six designs (excl. Porian)] balanced: slope -0.0337; studies (4; Marin one cluster): CR2 p 0.064 (df 2.8), wild p 0.049 / enum 0.049; designs (6): CR2 p 0.050 (df 3.3), wild p 0.032 / enum 0.033
+13:47:35 [   18.0s]     [all six designs (excl. Porian)] weighted_S: slope +0.1369; studies (4; Marin one cluster): CR2 p 0.150 (df 2.7), wild p 0.061 / enum 0.060; designs (6): CR2 p 0.126 (df 3.2), wild p 0.063 / enum 0.062
+13:47:35 [   18.0s]     [all six designs (excl. Porian)] fe_weighted: slope -0.0210; studies (4; Marin one cluster): CR2 p 0.490 (df 1.6), wild p 0.376 / enum 0.370; designs (6): CR2 p 0.489 (df 1.6), wild p 0.363 / enum 0.366
+13:47:35 [   18.1s]     [all six designs (excl. Porian)] fe_unweighted: slope -0.0263; studies (4; Marin one cluster): CR2 p 0.170 (df 2.7), wild p 0.051 / enum 0.051; designs (6): CR2 p 0.065 (df 4.5), wild p 0.073 / enum 0.073
+13:47:35 [   18.1s]     [all six designs (excl. Porian)] weighted_studyRE: slope -0.0320; studies (4; Marin one cluster): CR2 p 0.118 (df 2.8), wild p 0.054 / enum 0.051
+13:47:35 [   18.2s]     [all six designs (excl. Porian)] unweighted_studyRE: slope -0.0280; studies (4; Marin one cluster): CR2 p 0.146 (df 2.7), wild p 0.054 / enum 0.054
+13:47:35 [   18.2s]     [all six designs (excl. Porian)] fe_weighted_study: slope -0.0208; studies (4; Marin one cluster): CR2 p 0.487 (df 1.6), wild p 0.379 / enum 0.384
+13:47:35 [   18.3s]     [IsoFLOP designs only (excl. Farseer path)] weighted: slope -0.0475; studies (3; Marin one cluster): CR2 p 0.043 (df 1.8), wild p 0.096 / enum 0.093; designs (5): CR2 p 0.017 (df 2.3), wild p 0.020 / enum 0.022
+13:47:35 [   18.4s]     [IsoFLOP designs only (excl. Farseer path)] unweighted: slope -0.0330; studies (3; Marin one cluster): CR2 p 0.202 (df 1.9), wild p 0.108 / enum 0.111; designs (5): CR2 p 0.066 (df 3.5), wild p 0.103 / enum 0.108
+13:47:35 [   18.4s]     [IsoFLOP designs only (excl. Farseer path)] balanced: slope -0.0441; studies (3; Marin one cluster): CR2 p 0.034 (df 1.8), wild p 0.082 / enum 0.083; designs (5): CR2 p 0.013 (df 2.3), wild p 0.015 / enum 0.015
+13:47:35 [   18.5s]     [IsoFLOP designs only (excl. Farseer path)] weighted_S: slope +0.1991; studies (3; Marin one cluster): CR2 p 0.104 (df 1.8), wild p 0.137 / enum 0.130; designs (5): CR2 p 0.045 (df 2.5), wild p 0.082 / enum 0.078
+13:47:35 [   18.5s]     [IsoFLOP designs only (excl. Farseer path)] fe_weighted: slope -0.0504; studies (3; Marin one cluster): CR2 p 0.091 (df 1.4), wild p 0.227 / enum 0.222; designs (5): CR2 p 0.068 (df 1.5), wild p 0.232 / enum 0.232
+13:47:35 [   18.5s]     [IsoFLOP designs only (excl. Farseer path)] fe_unweighted: slope -0.0288; studies (3; Marin one cluster): CR2 p 0.274 (df 1.8), wild p 0.111 / enum 0.111; designs (5): CR2 p 0.097 (df 3.5), wild p 0.145 / enum 0.141
+13:47:35 [   18.6s]     [IsoFLOP designs only (excl. Farseer path)] weighted_studyRE: slope -0.0471; studies (3; Marin one cluster): CR2 p 0.047 (df 1.8), wild p 0.091 / enum 0.093
+13:47:35 [   18.6s]     [IsoFLOP designs only (excl. Farseer path)] unweighted_studyRE: slope -0.0307; studies (3; Marin one cluster): CR2 p 0.234 (df 1.8), wild p 0.111 / enum 0.111
+13:47:35 [   18.6s]     [IsoFLOP designs only (excl. Farseer path)] fe_weighted_study: slope -0.0495; studies (3; Marin one cluster): CR2 p 0.103 (df 1.4), wild p 0.295 / enum 0.306
+13:47:35 [   18.7s]     [budgets <= 3e20 (common window)] weighted: slope -0.0077; studies (4; Marin one cluster): CR2 p 0.577 (df 2.5), wild p 0.874 / enum 0.870; designs (6): CR2 p 0.559 (df 3.7), wild p 0.820 / enum 0.819
+13:47:36 [   18.8s]     [budgets <= 3e20 (common window)] unweighted: slope -0.0045; studies (4; Marin one cluster): CR2 p 0.446 (df 1.9), wild p 0.306 / enum 0.309; designs (6): CR2 p 0.478 (df 4.7), wild p 0.464 / enum 0.463
+13:47:36 [   18.9s]     [budgets <= 3e20 (common window)] balanced: slope -0.0102; studies (4; Marin one cluster): CR2 p 0.240 (df 2.7), wild p 0.246 / enum 0.245; designs (6): CR2 p 0.215 (df 3.5), wild p 0.287 / enum 0.286
+13:47:36 [   19.0s]     [budgets <= 3e20 (common window)] weighted_S: slope +0.0326; studies (4; Marin one cluster): CR2 p 0.560 (df 2.5), wild p 0.908 / enum 0.909; designs (6): CR2 p 0.534 (df 3.8), wild p 0.825 / enum 0.822
+13:47:36 [   19.1s]     [budgets <= 3e20 (common window)] fe_weighted: slope -0.0034; studies (4; Marin one cluster): CR2 p 0.928 (df 1.9), wild p 0.825 / enum 0.829; designs (6): CR2 p 0.927 (df 2.0), wild p 0.842 / enum 0.836
+13:47:36 [   19.1s]     [budgets <= 3e20 (common window)] fe_unweighted: slope -0.0039; studies (4; Marin one cluster): CR2 p 0.477 (df 1.9), wild p 0.321 / enum 0.312; designs (6): CR2 p 0.524 (df 4.7), wild p 0.512 / enum 0.506
+13:47:36 [   19.2s]     [budgets <= 3e20 (common window)] weighted_studyRE: slope -0.0077; studies (4; Marin one cluster): CR2 p 0.577 (df 2.5), wild p 0.872 / enum 0.870
+13:47:36 [   19.3s]     [budgets <= 3e20 (common window)] unweighted_studyRE: slope -0.0043; studies (4; Marin one cluster): CR2 p 0.456 (df 1.9), wild p 0.314 / enum 0.307
+13:47:36 [   19.3s]     [budgets <= 3e20 (common window)] fe_weighted_study: slope -0.0031; studies (4; Marin one cluster): CR2 p 0.933 (df 1.9), wild p 0.877 / enum 0.875
+13:47:36 [   19.4s]     [leave out each design's largest budget] weighted: slope -0.0302; studies (4; Marin one cluster): CR2 p 0.201 (df 2.8), wild p 0.282 / enum 0.285; designs (6): CR2 p 0.189 (df 3.2), wild p 0.272 / enum 0.272
+13:47:36 [   19.5s]     [leave out each design's largest budget] unweighted: slope -0.0283; studies (4; Marin one cluster): CR2 p 0.112 (df 2.7), wild p 0.151 / enum 0.153; designs (6): CR2 p 0.062 (df 4.4), wild p 0.144 / enum 0.143
+13:47:36 [   19.6s]     [leave out each design's largest budget] balanced: slope -0.0288; studies (4; Marin one cluster): CR2 p 0.136 (df 2.9), wild p 0.069 / enum 0.069; designs (6): CR2 p 0.121 (df 3.4), wild p 0.022 / enum 0.022
+13:47:36 [   19.7s]     [leave out each design's largest budget] weighted_S: slope +0.1250; studies (4; Marin one cluster): CR2 p 0.242 (df 2.8), wild p 0.281 / enum 0.276; designs (6): CR2 p 0.227 (df 3.2), wild p 0.274 / enum 0.274
+13:47:36 [   19.8s]     [leave out each design's largest budget] fe_weighted: slope -0.0105; studies (4; Marin one cluster): CR2 p 0.814 (df 1.5), wild p 0.643 / enum 0.640; designs (6): CR2 p 0.814 (df 1.5), wild p 0.642 / enum 0.637
+13:47:37 [   19.8s]     [leave out each design's largest budget] fe_unweighted: slope -0.0228; studies (4; Marin one cluster): CR2 p 0.178 (df 2.8), wild p 0.054 / enum 0.052; designs (6): CR2 p 0.103 (df 4.4), wild p 0.183 / enum 0.187
+13:47:37 [   19.9s]     [leave out each design's largest budget] weighted_studyRE: slope -0.0299; studies (4; Marin one cluster): CR2 p 0.204 (df 2.8), wild p 0.283 / enum 0.284
+13:47:37 [   20.0s]     [leave out each design's largest budget] unweighted_studyRE: slope -0.0259; studies (4; Marin one cluster): CR2 p 0.132 (df 2.7), wild p 0.122 / enum 0.128
+13:47:37 [   20.0s]     [leave out each design's largest budget] fe_weighted_study: slope -0.0104; studies (4; Marin one cluster): CR2 p 0.813 (df 1.5), wild p 0.633 / enum 0.639
+13:47:37 [   20.3s] stage convexity: extrapolation decomposition, leave-corner-out, percentile intervals (T1.9, T16)
+13:48:28 [   71.1s]     [Marin, Comma | primary] n = 85; b2 +0.0324; dlin 256-1,024 -0.444; draws 999 (0 failed)
+13:49:06 [  109.7s]     [Marin, DCLM | primary] n = 84; b2 +0.0274; dlin 256-1,024 -0.440; draws 999 (0 failed)
+13:49:47 [  150.1s]     [Marin, Nemotron-CC | primary] n = 88; b2 +0.0275; dlin 256-1,024 -0.396; draws 999 (0 failed)
+13:50:38 [  200.9s]     [Llama 3 | primary] n = 133; b2 -0.0292; dlin 256-1,024 +0.006; draws 999 (0 failed)
+13:51:27 [  250.3s]     [Marin, Comma | corner_largestM] n = 78; b2 +0.0215; dlin 256-1,024 -0.439; draws 999 (0 failed)
+13:52:05 [  288.3s]     [Marin, DCLM | corner_largestM] n = 77; b2 +0.0162; dlin 256-1,024 -0.388; draws 999 (0 failed)
+13:52:44 [  327.4s]     [Marin, Nemotron-CC | corner_largestM] n = 80; b2 +0.0166; dlin 256-1,024 -0.304; draws 999 (0 failed)
+13:53:32 [  375.0s]     [Marin, Comma | corner_M1000] n = 82; b2 +0.0277; dlin 256-1,024 -0.472; draws 999 (0 failed)
+13:54:08 [  411.4s]     [Marin, DCLM | corner_M1000] n = 82; b2 +0.0275; dlin 256-1,024 -0.553; draws 999 (0 failed)
+13:54:48 [  451.1s]     [Marin, Nemotron-CC | corner_M1000] n = 85; b2 +0.0215; dlin 256-1,024 -0.364; draws 999 (0 failed)
+13:55:33 [  496.4s]     [Farseer] b1 0.41282 b2 +0.02039; dlin 256-1,024 -0.169; FD <= 3e20 0.7098; draws 999 (0 failed)
+13:55:36 [  499.1s] stage study: study-level variants (T1.4-T1.6, T1.10)
+13:55:36 [  499.1s]   study-level primary 0.687259 [0.640215, 0.734302] Q 8.2512 (rb1: 0.687259 [0.640215, 0.734302] Q 8.2512)
+13:55:36 [  499.3s] stage pidset: identified set for sigma*(C) beyond the designs (T1.7)
+13:55:36 [  499.3s] stage depmc: coverage under noise shared within a budget (T1.8)
+13:56:31 [  553.9s]     MC Chinchilla [ra1, rho 0.0]: R 100; bias RE -0.0046; coverage RE 0.920 (MC s.e. 0.027); FE 0.850; budgets 0.898
+13:59:14 [  717.1s]     MC Chinchilla [independent, rho 0.0]: R 500; bias RE -0.0063; coverage RE 0.936 (MC s.e. 0.011); FE 0.906; budgets 0.923
+14:01:47 [  870.3s]     MC Chinchilla [budget, rho 0.5]: R 499; bias RE -0.0027; coverage RE 0.932 (MC s.e. 0.011); FE 0.884; budgets 0.894
+14:02:50 [  933.2s]     MC Chinchilla [budget, rho 0.25]: R 200; bias RE -0.0033; coverage RE 0.955 (MC s.e. 0.015); FE 0.895; budgets 0.899
+14:03:54 [  997.4s]     MC Chinchilla [budget, rho 0.75]: R 199; bias RE +0.0017; coverage RE 0.930 (MC s.e. 0.018); FE 0.910; budgets 0.876
+14:04:54 [ 1056.9s]     MC Chinchilla [smooth, rho 0.5]: R 200; bias RE -0.0044; coverage RE 0.895 (MC s.e. 0.022); FE 0.860; budgets 0.862
+14:05:27 [ 1090.3s]     MC Llama 3 [ra1, rho 0.0]: R 100; bias RE -0.0007; coverage RE 0.980 (MC s.e. 0.014); FE 0.910; budgets 0.915
+14:08:27 [ 1270.3s]     MC Llama 3 [independent, rho 0.0]: R 500; bias RE -0.0008; coverage RE 0.932 (MC s.e. 0.011); FE 0.868; budgets 0.895
+14:11:13 [ 1436.5s]     MC Llama 3 [budget, rho 0.5]: R 500; bias RE +0.0008; coverage RE 0.938 (MC s.e. 0.011); FE 0.900; budgets 0.902
+14:12:28 [ 1510.9s]     MC Llama 3 [budget, rho 0.25]: R 200; bias RE -0.0000; coverage RE 0.910 (MC s.e. 0.020); FE 0.855; budgets 0.892
+14:13:47 [ 1590.4s]     MC Llama 3 [budget, rho 0.75]: R 200; bias RE +0.0007; coverage RE 0.960 (MC s.e. 0.014); FE 0.925; budgets 0.908
+14:15:10 [ 1673.2s]     MC Llama 3 [smooth, rho 0.5]: R 200; bias RE +0.0004; coverage RE 0.925 (MC s.e. 0.019); FE 0.865; budgets 0.878
+14:15:42 [ 1705.7s]     MC Marin, DCLM [ra1, rho 0.0]: R 100; bias RE +0.0054; coverage RE 0.930 (MC s.e. 0.026); FE 0.820; budgets 0.922
+14:18:03 [ 1846.6s]     MC Marin, DCLM [independent, rho 0.0]: R 500; bias RE +0.0020; coverage RE 0.954 (MC s.e. 0.009); FE 0.846; budgets 0.924
+14:20:24 [ 1986.9s]     MC Marin, DCLM [budget, rho 0.5]: R 500; bias RE +0.0059; coverage RE 0.942 (MC s.e. 0.010); FE 0.822; budgets 0.903
+14:21:21 [ 2044.0s]     MC Marin, DCLM [budget, rho 0.25]: R 200; bias RE +0.0050; coverage RE 0.940 (MC s.e. 0.017); FE 0.820; budgets 0.899
+14:22:19 [ 2102.2s]     MC Marin, DCLM [budget, rho 0.75]: R 200; bias RE +0.0093; coverage RE 0.885 (MC s.e. 0.023); FE 0.775; budgets 0.875
+14:23:15 [ 2157.9s]     MC Marin, DCLM [smooth, rho 0.5]: R 200; bias RE +0.0060; coverage RE 0.895 (MC s.e. 0.022); FE 0.785; budgets 0.864
+14:25:33 [ 2296.7s]     MC Chinchilla (N_F) [independent, rho 0.0]: R 500; bias RE -0.0059; coverage RE 0.936 (MC s.e. 0.011); FE 0.880; budgets 0.917
+14:27:48 [ 2431.1s]     MC Chinchilla (N_F) [budget, rho 0.5]: R 500; bias RE -0.0025; coverage RE 0.918 (MC s.e. 0.012); FE 0.882; budgets 0.882
+14:27:48 [ 2431.1s] stage ddtilt: DataDecide recipe tilt from final checkpoints (T14)
+14:27:50 [ 2433.5s]   DataDecide final checkpoints: 950 complete runs of 1100 (25 recipes; M 85-110)
+14:29:25 [ 2528.7s]     [nls] alpha 0.859 beta 0.094; tilt range 0.698 [0.495, 1.262]; tau own 4.33, ref 5.12
+14:33:46 [ 2789.6s]     [huber] alpha 0.936 beta 0.095; tilt range 0.565 [0.265, 1.418]; tau own 2.99, ref 3.75
+14:34:50 [ 2852.9s] stage tables: writing CSV outputs
+14:34:50 [ 2853.2s]   tables written to /private/tmp/claude-501/-Users-yigitokar-scaling-laws-pf/0d2513c5-45da-44dc-af1d-80b8664ef0bc/scratchpad/rerun/output/tables (342 headline numbers)
+14:34:50 [ 2853.2s] stage figures (previews)
+14:34:56 [ 2859.2s]   figures: /private/tmp/claude-501/-Users-yigitokar-scaling-laws-pf/0d2513c5-45da-44dc-af1d-80b8664ef0bc/scratchpad/rerun/output/figures/rb5_sigma_preview_fig5.pdf; Figure 3: study-level 0.687 [0.640, 0.734]; variant range 0.663-0.700; pooled slopes -0.0328 / -0.0296
+14:34:56 [ 2859.2s] done
+exit 0

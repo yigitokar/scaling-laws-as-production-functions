@@ -1,0 +1,60 @@
+% Online Appendix table (round 3), copied from output/tables/rb3_econ2_app_gamma.tex (rb3_econ2) by WP5, 2026-09-25;
+% regenerate with code/analysis/rb3_econ2/run.py and re-copy (the copy adds only these two comment lines).
+% Online Appendix table -- the frontier elasticity gamma for growth calibrations; fleet shares by service life;
+% synthetic-token prices. Module rb3_econ2; sources rb3_econ2_gamma*.csv, _fleet.csv, _synthetic*.csv.
+\begin{table}[tp]
+\centering
+\caption{Growth Calibration, Fleet Shares and Synthetic Tokens}
+\label{tab:app-econ-gamma}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcccccc@{}}
+\toprule
+\multicolumn{8}{@{}l}{\textit{Panel A. The frontier elasticity $\gamma$ and the compute needed to halve reducible loss}} \\[2pt]
+ & & & & & \multicolumn{2}{c}{Years at} & Total \\
+\cmidrule(lr){6-7}
+Technology & $E$ from & $\gamma$ & (s.e.) & $2^{1/\gamma}$ [95\% CI] & $4.2\times$ & $5.06\times$ & elast. \\
+\midrule
+Chinchilla, $\kappa$ free (reference) & joint fit & 0.165 & (0.006) & 66 [50, 90] & 2.9 & 2.6 & 0.007 \\
+Chinchilla, $\kappa=1$ & joint fit & 0.178 & (0.006) & 49 [39, 63] & 2.7 & 2.4 & 0.006 \\
+Chinchilla, frontier & frontier & 0.168 & (0.007) & 62 [44, 91] & 2.9 & 2.5 & -- \\
+Hoffmann et al. (published) & joint fit & 0.155 &  & 88  & 3.1 & 2.8 & -- \\
+Llama 3, frontier (Meta) & frontier & 0.136 & (0.006) & 161 [108, 259] & 3.5 & 3.1 & -- \\
+Llama 3, runs, $\kappa=1$ & joint fit & 0.149 & (0.005) & 104 [77, 146] & 3.2 & 2.9 & -- \\
+Farseer, $\kappa=1$ & joint fit & 0.148 & (0.009) & 109 [66, 209] & 3.3 & 2.9 & 0.009 \\
+Farseer, $\kappa$ free & joint fit & 0.096 & (0.003) & 1,351 [950, 1,996] & 5.0 & 4.4 & 0.021 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel B. $E$-profiles of the IsoFLOP frontier (model-free minima)}} \\[2pt]
+Design & Budgets & Decades & $\hat E$ & 95\% set for $E$ & $\hat\gamma$ & \multicolumn{2}{c}{$\gamma$ over the set} \\
+\midrule
+Chinchilla & 9 & 2.7 & 1.74 & [1.68, 1.80] & 0.168 & \multicolumn{2}{c}{[0.157, 0.180]} \\
+Llama 3 & 8 & 2.2 & 0.56 & [0.52, 0.59] & 0.127 & \multicolumn{2}{c}{[0.111, 0.143]} \\
+Marin, DCLM & 7 & 2.0 & 1.65 & [1.28, 1.90] & 0.102 & \multicolumn{2}{c}{[0.083, 0.120]} \\
+Marin, Nemotron-CC & 7 & 2.0 & 1.51 & [1.37, 1.64] & 0.100 & \multicolumn{2}{c}{[0.092, 0.107]} \\
+Marin, Comma & 5 & 2.0 & 1.44 & [0.00, 2.42] & 0.083 & \multicolumn{2}{c}{[0.049, 0.161]} \\
+\multicolumn{8}{@{}l}{Chinchilla at $E=1.76$: local $\gamma$ 0.169 (low budgets), 0.173 (high); drift $-$0.0007/decade} \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel C. Fleet share of AI compute implied by the 2025 wedge, by service life}} \\[2pt]
+ & & \multicolumn{3}{c}{$\varrho=1$} & \multicolumn{3}{c}{$\varrho=2$} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-8}
+Service life & $\phi$ & $\Lambda=1$ & $4.4$ & $10.4$ & $\Lambda=1$ & $4.4$ & $10.4$ \\
+\midrule
+1 year & 0.49 & 0.68 & 0.33 & 0.17 & 0.81 & 0.50 & 0.29 \\
+2 years & 0.30 & 0.57 & 0.23 & 0.11 & 0.72 & 0.37 & 0.20 \\
+3 years & 0.20 & 0.47 & 0.17 & 0.08 & 0.64 & 0.29 & 0.15 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel D. The shadow value of a unique token beside the cost of a synthetic token}} \\[2pt]
+ & & \multicolumn{3}{c}{Shadow value (\$/M)} & \multicolumn{3}{c}{Break-even $r$: generation} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-8}
+Compute (FLOP) & $N^*$ & $r=2$ & $r=4$ & $r=8$ & own & \$0.60 & \$3.96 \\
+\midrule
+$1.0\times10^{26}$ & 0.9T & 0.5 & 2.8 & 14 & 3.5--4.8 & 2.1 & 4.6 \\
+$9.4\times10^{26}$ & 2.8T & 1.6 & 8.8 & 45 & 3.5--4.8 & 1.5 & 2.9 \\
+\bottomrule
+\end{tabular*}
+\vspace{2pt}
+\begin{tablenotes}[Notes]
+Panel A: $\gamma$, compute elasticity of reducible loss on the frontier $L^*(C)=E+K(C/6)^{-\gamma}$; joint fit: $E$ estimated from all runs of the design (off-path runs vary both inputs); frontier: $E$ from the IsoFLOP minima alone. $2^{1/\gamma}$: compute multiple that halves reducible loss (interval from $\gamma\pm1.96$ s.e.); years of frontier compute growth at 4.2- and 5.06-fold a year; total-loss elasticity (total elast.) $\gamma(L^*-E)/L^*$ at $10^{26}$ FLOP, where available. Loss units: Chinchilla, natural-log loss per token on MassiveText (the smoothed final training loss, which \citet{hoffmann2022training} treat as an unbiased estimate of held-out loss); Llama 3, unstated units and data; Farseer, its own validation set. Farseer's $\kappa$-free $E$ lies on a ridge along which $E$ and $\gamma$ trade off. Panel B: nonlinear least squares of the per-budget minima on $\ln K$ and $\gamma$ with $E$ fixed on a grid; 95 percent set: SSR within $F(0.95;1,n-3)/(n-3)$ of its minimum; minima of the budgets bracketed on both sides (Llama~3: 8 budgets, to $10^{21}$ FLOP; Meta's frontier fit in panel A uses 10 minima, to $10^{22}$); Chinchilla's minima in FLOP-effective parameters (in total parameters, $\hat E=1.74$ and $\hat\gamma=0.167$ [0.156, 0.179]); Comma's set reaches the grid's lower limit, $E=0$. Panel C: $s_{\rm fleet}=\varrho m\phi/(\varrho m\phi+\Lambda)$, $m=4.38$ (2025 compute-weighted wedge of the decision units, minus one), $\phi=(1-e^{-gL})/(gL)$ at $g=\ln5.06$ (at $g=\ln4.2$, $\phi$ is 0.53, 0.33, 0.23), $\Lambda$ the R\&D multiple of final training runs ($\Lambda=1$: none; 4.4 and 10.4 from \citealp{denain2026final}), $\varrho$ the relative price of an inference FLOP. Panel D: break-even scarcity at which generating a token costs its shadow value, with the trainee's own compute (self-generation) or at the posted API price; reference technology, compute-optimal run, data decay only; shadow value at \$$1.0\times10^{-18}$ per FLOP (cloud prices about 3.7 times higher). Self-generation: a generator of the trainee's size decoding at $\varrho=1$ to 2 times the price of a training FLOP costs $\varrho/3$ of the processing cost of a token. API: posted prices per million output tokens of DeepSeek-V4.1-Flash (off-peak) and DeepSeek-V4-Pro (peak) on 24 September 2026 \citep{deepseek2026pricing}. A synthetic token is not a perfect substitute for a fresh token, so the break-even scarcities are lower bounds.
+\end{tablenotes}
+\end{table}

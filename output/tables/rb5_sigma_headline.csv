@@ -1,0 +1,372 @@
+item,quantity,value,source,note
+T1.1,CL3 FE drift per decade,-0.057584,rb5_sigma_joint_linear.csv,
+T1.1,CL3 FE drift: model-based s.e. (scaled),0.0126068,rb5_sigma_joint_linear.csv,
+T1.1,"CL3 FE drift: bootstrap s.e., independent budgets",0.00889399,rb5_sigma_joint_linear.csv,
+T1.1,"CL3 FE drift: bootstrap s.e., joint draws",0.00947569,rb5_sigma_joint_linear.csv,
+T1.1,CL3 FE drift: joint bootstrap s.e. x sqrt(residual dispersion),0.0134314,rb5_sigma_joint_linear.csv,residual dispersion s2 = 2.009
+T1.1,top-budget mean,0.593781,rb5_sigma_joint_linear.csv,
+T1.1,top-budget mean: s.e. independent (= model-based),0.0102968,rb5_sigma_joint_linear.csv,
+T1.1,top-budget mean: s.e. joint,0.0118992,rb5_sigma_joint_linear.csv,
+T1.1,"top-budget mean: modified HKSJ interval with joint s.e., lo",0.560743,rb5_sigma_joint_linear.csv,t_4
+T1.1,"top-budget mean: modified HKSJ interval with joint s.e., hi",0.626818,rb5_sigma_joint_linear.csv,t_4
+T1.1,"top-budget mean: percentile interval, lo",0.569467,rb5_sigma_joint_linear.csv,
+T1.1,"top-budget mean: percentile interval, hi",0.614547,rb5_sigma_joint_linear.csv,
+T1.1,"top-budget mean: normal interval, lo",0.570458,rb5_sigma_joint_linear.csv,
+T1.1,"top-budget mean: normal interval, hi",0.617103,rb5_sigma_joint_linear.csv,
+T1.3,Llama 3 weight share in the top-budget mean,0.846414,rb5_sigma_joint_linear.csv,
+T1.3,Farseer local path level at 5e+20 FLOP: fixed-effect mean,0.72213,rb5_sigma_top_budget.csv,
+T1.3,Farseer local path level at 1e+21 FLOP: fixed-effect mean,0.657597,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla + Llama 3, budgets >= 6e20 (primary): fixed-effect mean",0.593781,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla + Llama 3, budgets >= 6e20 (primary): random-effects mean",0.593781,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla + Llama 3, budgets >= 6e20 (primary): Q",2.45889,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla + Llama 3 + Farseer 1e21: fixed-effect mean,0.624715,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla + Llama 3 + Farseer 1e21: random-effects mean,0.606495,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla + Llama 3 + Farseer 1e21: Q,21.0785,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla + Llama 3 + Farseer 5e20 and 1e21 (all levels above 3e20): fixed-effect mean,0.667805,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla + Llama 3 + Farseer 5e20 and 1e21 (all levels above 3e20): random-effects mean,0.62209,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla + Llama 3 + Farseer 5e20 and 1e21 (all levels above 3e20): Q,97.9157,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla (132 runs) + Llama 3, budgets >= 6e20: fixed-effect mean",0.597869,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla (132 runs) + Llama 3, budgets >= 6e20: random-effects mean",0.597869,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla (132 runs) + Llama 3, budgets >= 6e20: Q",2.66749,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla (132 runs) + Llama 3 + Farseer 1e21: fixed-effect mean,0.62709,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla (132 runs) + Llama 3 + Farseer 1e21: random-effects mean,0.616584,rb5_sigma_top_budget.csv,
+T1.3,Chinchilla (132 runs) + Llama 3 + Farseer 1e21: Q,18.836,rb5_sigma_top_budget.csv,
+T1.3,"Llama 3 only, budgets >= 6e20: fixed-effect mean",0.595963,rb5_sigma_top_budget.csv,
+T1.3,"Llama 3 only, budgets >= 6e20: random-effects mean",0.59616,rb5_sigma_top_budget.csv,
+T1.3,"Llama 3 only, budgets >= 6e20: Q",1.2046,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla only, budgets >= 6e20 (137 runs): fixed-effect mean",0.581753,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla only, budgets >= 6e20 (137 runs): random-effects mean",0.581753,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla only, budgets >= 6e20 (137 runs): Q",1.00672,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla only, budgets >= 6e20 (132 runs): fixed-effect mean",0.609747,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla only, budgets >= 6e20 (132 runs): random-effects mean",0.609747,rb5_sigma_top_budget.csv,
+T1.3,"Chinchilla only, budgets >= 6e20 (132 runs): Q",1.2532,rb5_sigma_top_budget.csv,
+T1.2,"p range [Marin one cluster (4 clusters): RE, balanced, S-scale and design-FE rows]: min",0.0486,rb5_sigma_metareg_prange.csv,
+T1.2,"p range [Marin one cluster (4 clusters): RE, balanced, S-scale and design-FE rows]: max",0.489606,rb5_sigma_metareg_prange.csv,
+T1.2,p range [Marin one cluster (4 clusters): all rows incl. study-RE and study-FE]: min,0.0486,rb5_sigma_metareg_prange.csv,
+T1.2,p range [Marin one cluster (4 clusters): all rows incl. study-RE and study-FE]: max,0.489606,rb5_sigma_metareg_prange.csv,
+T1.2,"p range [Six design clusters: RE, balanced, S-scale and design-FE rows]: min",0.0317,rb5_sigma_metareg_prange.csv,
+T1.2,"p range [Six design clusters: RE, balanced, S-scale and design-FE rows]: max",0.488576,rb5_sigma_metareg_prange.csv,
+T1.2,p range [Six design clusters: without FE rows (rb1's published range)]: min,0.0317,rb5_sigma_metareg_prange.csv,
+T1.2,p range [Six design clusters: without FE rows (rb1's published range)]: max,0.12559,rb5_sigma_metareg_prange.csv,
+T1.2,"p range [Four to six clusters: RE, balanced, S-scale and design-FE rows]: min",0.0317,rb5_sigma_metareg_prange.csv,
+T1.2,"p range [Four to six clusters: RE, balanced, S-scale and design-FE rows]: max",0.489606,rb5_sigma_metareg_prange.csv,
+T1.2,p range [Four to six clusters: all rows]: min,0.0317,rb5_sigma_metareg_prange.csv,
+T1.2,p range [Four to six clusters: all rows]: max,0.489606,rb5_sigma_metareg_prange.csv,
+T1.2,"p range [IsoFLOP designs only, five design clusters (R3's round-2 sample)]: min",0.0127122,rb5_sigma_metareg_prange.csv,
+T1.2,"p range [IsoFLOP designs only, five design clusters (R3's round-2 sample)]: max",0.232253,rb5_sigma_metareg_prange.csv,
+T1.2,"pooled line at 1e19, CR2 by study: estimate",0.712991,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e19, CR2 by study: lo",0.707359,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e19, CR2 by study: hi",0.718624,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e20, CR2 by study: estimate",0.680212,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e20, CR2 by study: lo",0.638215,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e20, CR2 by study: hi",0.722208,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e21, CR2 by study: estimate",0.647432,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e21, CR2 by study: lo",0.55435,rb5_sigma_metareg_predictions.csv,
+T1.2,"pooled line at 1e21, CR2 by study: hi",0.740514,rb5_sigma_metareg_predictions.csv,
+primary,PRIMARY (reproduces rb1): one estimate per study: mean_re,0.687259,rb5_sigma_study_level.csv,
+primary,PRIMARY (reproduces rb1): one estimate per study: lo_hksj,0.640215,rb5_sigma_study_level.csv,
+primary,PRIMARY (reproduces rb1): one estimate per study: hi_hksj,0.734302,rb5_sigma_study_level.csv,
+primary,PRIMARY (reproduces rb1): one estimate per study: Q,8.2512,rb5_sigma_study_level.csv,
+primary,PRIMARY (reproduces rb1): one estimate per study: p_Q,0.0410957,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20 FLOP (primary: Farseer first-derivative estimate on its path points <= 3e20): mean_re",0.707736,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20 FLOP (primary: Farseer first-derivative estimate on its path points <= 3e20): lo_hksj",0.689705,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20 FLOP (primary: Farseer first-derivative estimate on its path points <= 3e20): hi_hksj",0.725767,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20 FLOP (primary: Farseer first-derivative estimate on its path points <= 3e20): Q",1.01681,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20 FLOP (primary: Farseer first-derivative estimate on its path points <= 3e20): p_Q",0.797185,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer Hessian path, RE over its levels <= 3e20: mean_re",0.701827,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer Hessian path, RE over its levels <= 3e20: lo_hksj",0.668126,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer Hessian path, RE over its levels <= 3e20: hi_hksj",0.735528,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer Hessian path, RE over its levels <= 3e20: Q",0.593051,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer Hessian path, RE over its levels <= 3e20: p_Q",0.898021,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer at its full-path first-derivative estimate: mean_re",0.706658,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer at its full-path first-derivative estimate: lo_hksj",0.692084,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer at its full-path first-derivative estimate: hi_hksj",0.721232,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer at its full-path first-derivative estimate: Q",0.84847,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer at its full-path first-derivative estimate: p_Q",0.837842,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; IsoFLOP studies only (k = 3): mean_re",0.696818,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; IsoFLOP studies only (k = 3): lo_hksj",0.635872,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; IsoFLOP studies only (k = 3): hi_hksj",0.757764,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; IsoFLOP studies only (k = 3): Q",0.309555,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; IsoFLOP studies only (k = 3): p_Q",0.856606,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer first-derivative estimate with its bandwidth range as uncertainty (T1.6 treatment) [review]: mean_re",0.7014,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer first-derivative estimate with its bandwidth range as uncertainty (T1.6 treatment) [review]: lo_hksj",0.665129,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer first-derivative estimate with its bandwidth range as uncertainty (T1.6 treatment) [review]: hi_hksj",0.737672,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer first-derivative estimate with its bandwidth range as uncertainty (T1.6 treatment) [review]: Q",0.606396,rb5_sigma_study_level.csv,
+T1.4,"Study-level mean, budgets <= 3e20; Farseer first-derivative estimate with its bandwidth range as uncertainty (T1.6 treatment) [review]: p_Q",0.894967,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint of the bandwidth range, uniform: mean_re",0.680333,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint of the bandwidth range, uniform: lo_hksj",0.643429,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint of the bandwidth range, uniform: hi_hksj",0.717237,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint of the bandwidth range, uniform: Q",3.28761,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint of the bandwidth range, uniform: p_Q",0.34937,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: primary-bandwidth Hessian path mean, uniform: mean_re",0.68361,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: primary-bandwidth Hessian path mean, uniform: lo_hksj",0.640345,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: primary-bandwidth Hessian path mean, uniform: hi_hksj",0.726876,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: primary-bandwidth Hessian path mean, uniform: Q",4.47497,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: primary-bandwidth Hessian path mean, uniform: p_Q",0.214534,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: first-derivative estimate, uniform: mean_re",0.683938,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: first-derivative estimate, uniform: lo_hksj",0.639922,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: first-derivative estimate, uniform: hi_hksj",0.727954,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: first-derivative estimate, uniform: Q",4.62813,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: first-derivative estimate, uniform: p_Q",0.201142,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint, range read as +-1.96 s.e.: mean_re",0.681261,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint, range read as +-1.96 s.e.: lo_hksj",0.644877,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint, range read as +-1.96 s.e.: hi_hksj",0.717645,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint, range read as +-1.96 s.e.: Q",3.4353,rb5_sigma_study_level.csv,
+T1.6,"Farseer's bandwidth range [0.664, 0.727] as uncertainty: midpoint, range read as +-1.96 s.e.: p_Q",0.329251,rb5_sigma_study_level.csv,
+T1.5,"Chinchilla windows/order/frontier/centring grid, 137 runs, N_F (k >= 8 budgets): mean_min",0.685017,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows/order/frontier/centring grid, 137 runs, N_F (k >= 8 budgets): mean_max",0.701663,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows/order/frontier/centring grid, 137 runs, N_F (k >= 8 budgets): Q_min",4.41578,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows/order/frontier/centring grid, 137 runs, N_F (k >= 8 budgets): Q_max",11.2977,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows/order/frontier/centring grid, 137 runs, N_F (k >= 8 budgets): p_Q_min",0.0102206,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows/order/frontier/centring grid, 137 runs, N_F (k >= 8 budgets): p_Q_max",0.219926,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla grid, 132 runs (five highest-loss runs dropped), N_F (k >= 8 budgets): mean_min",0.674222,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla grid, 132 runs (five highest-loss runs dropped), N_F (k >= 8 budgets): mean_max",0.699926,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla grid, 132 runs (five highest-loss runs dropped), N_F (k >= 8 budgets): Q_min",4.66114,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla grid, 132 runs (five highest-loss runs dropped), N_F (k >= 8 budgets): Q_max",14.7703,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla grid, 132 runs (five highest-loss runs dropped), N_F (k >= 8 budgets): p_Q_min",0.00202388,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla grid, 132 runs (five highest-loss runs dropped), N_F (k >= 8 budgets): p_Q_max",0.198359,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla R11-R13 (count-free N_F, T4-consistent membership, 132 runs): mean_min",0.69138,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla R11-R13 (count-free N_F, T4-consistent membership, 132 runs): mean_max",0.693782,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla R11-R13 (count-free N_F, T4-consistent membership, 132 runs): Q_min",5.77946,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla R11-R13 (count-free N_F, T4-consistent membership, 132 runs): Q_max",6.28743,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla R11-R13 (count-free N_F, T4-consistent membership, 132 runs): p_Q_min",0.0984333,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla R11-R13 (count-free N_F, T4-consistent membership, 132 runs): p_Q_max",0.122847,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows, samples and profile memberships: both grids and R11-R13 (k >= 8): mean_min",0.674222,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows, samples and profile memberships: both grids and R11-R13 (k >= 8): mean_max",0.701663,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows, samples and profile memberships: both grids and R11-R13 (k >= 8): Q_min",4.41578,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows, samples and profile memberships: both grids and R11-R13 (k >= 8): Q_max",14.7703,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows, samples and profile memberships: both grids and R11-R13 (k >= 8): p_Q_min",0.00202388,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla windows, samples and profile memberships: both grids and R11-R13 (k >= 8): p_Q_max",0.219926,rb5_sigma_study_ranges.csv,
+T1.5,Chinchilla grid incl. the h = 0.6 window with seven budgets (137 runs): mean_min,0.674027,rb5_sigma_study_ranges.csv,
+T1.5,Chinchilla grid incl. the h = 0.6 window with seven budgets (137 runs): mean_max,0.701663,rb5_sigma_study_ranges.csv,
+T1.5,Chinchilla grid incl. the h = 0.6 window with seven budgets (137 runs): Q_min,4.41578,rb5_sigma_study_ranges.csv,
+T1.5,Chinchilla grid incl. the h = 0.6 window with seven budgets (137 runs): Q_max,14.0552,rb5_sigma_study_ranges.csv,
+T1.5,Chinchilla grid incl. the h = 0.6 window with seven budgets (137 runs): p_Q_min,0.00283093,rb5_sigma_study_ranges.csv,
+T1.5,Chinchilla grid incl. the h = 0.6 window with seven budgets (137 runs): p_Q_max,0.219926,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla only: counts and conventions (rb4 rows), windows, samples and memberships (grids k >= 8, R11-R13): mean_min",0.674222,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla only: counts and conventions (rb4 rows), windows, samples and memberships (grids k >= 8, R11-R13): mean_max",0.701663,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla only: counts and conventions (rb4 rows), windows, samples and memberships (grids k >= 8, R11-R13): Q_min",4.41578,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla only: counts and conventions (rb4 rows), windows, samples and memberships (grids k >= 8, R11-R13): Q_max",14.8904,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla only: counts and conventions (rb4 rows), windows, samples and memberships (grids k >= 8, R11-R13): p_Q_min",0.00191272,rb5_sigma_study_ranges.csv,
+T1.5,"Chinchilla only: counts and conventions (rb4 rows), windows, samples and memberships (grids k >= 8, R11-R13): p_Q_max",0.219926,rb5_sigma_study_ranges.csv,
+T1.5,"rb1's published variant rows (accounting, conventions, aggregation, estimators): mean_min",0.662912,rb5_sigma_study_ranges.csv,
+T1.5,"rb1's published variant rows (accounting, conventions, aggregation, estimators): mean_max",0.699742,rb5_sigma_study_ranges.csv,
+T1.5,"rb1's published variant rows (accounting, conventions, aggregation, estimators): Q_min",0.378037,rb5_sigma_study_ranges.csv,
+T1.5,"rb1's published variant rows (accounting, conventions, aggregation, estimators): Q_max",46.479,rb5_sigma_study_ranges.csv,
+T1.5,"rb1's published variant rows (accounting, conventions, aggregation, estimators): p_Q_min",4.48589e-10,rb5_sigma_study_ranges.csv,
+T1.5,"rb1's published variant rows (accounting, conventions, aggregation, estimators): p_Q_max",0.944741,rb5_sigma_study_ranges.csv,
+T1.5,"All: rb1's rows, Chinchilla's grids (k >= 8) and R11-R13: mean_min",0.662912,rb5_sigma_study_ranges.csv,
+T1.5,"All: rb1's rows, Chinchilla's grids (k >= 8) and R11-R13: mean_max",0.701663,rb5_sigma_study_ranges.csv,
+T1.5,"All: rb1's rows, Chinchilla's grids (k >= 8) and R11-R13: Q_min",0.378037,rb5_sigma_study_ranges.csv,
+T1.5,"All: rb1's rows, Chinchilla's grids (k >= 8) and R11-R13: Q_max",46.479,rb5_sigma_study_ranges.csv,
+T1.5,"All: rb1's rows, Chinchilla's grids (k >= 8) and R11-R13: p_Q_min",4.48589e-10,rb5_sigma_study_ranges.csv,
+T1.5,"All: rb1's rows, Chinchilla's grids (k >= 8) and R11-R13: p_Q_max",0.944741,rb5_sigma_study_ranges.csv,
+T1.5,All plus Farseer's bandwidth range as uncertainty (T1.6): mean_min,0.662912,rb5_sigma_study_ranges.csv,
+T1.5,All plus Farseer's bandwidth range as uncertainty (T1.6): mean_max,0.701663,rb5_sigma_study_ranges.csv,
+T1.5,All plus Farseer's bandwidth range as uncertainty (T1.6): Q_min,0.378037,rb5_sigma_study_ranges.csv,
+T1.5,All plus Farseer's bandwidth range as uncertainty (T1.6): Q_max,46.479,rb5_sigma_study_ranges.csv,
+T1.5,All plus Farseer's bandwidth range as uncertainty (T1.6): p_Q_min,4.48589e-10,rb5_sigma_study_ranges.csv,
+T1.5,All plus Farseer's bandwidth range as uncertainty (T1.6): p_Q_max,0.944741,rb5_sigma_study_ranges.csv,
+T1.7,"lower bound at 1e+23, anchor 1e21 (rb1)",0.478613,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+24, anchor 1e21 (rb1)",0.421029,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+23, anchor precision-weighted centre of the five budgets",0.473082,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+24, anchor precision-weighted centre of the five budgets",0.415498,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+23, anchor compute-weighted centre (weights proportional to C)",0.489434,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+24, anchor compute-weighted centre (weights proportional to C)",0.43185,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+23, anchor unweighted centre of log10 C",0.478998,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+24, anchor unweighted centre of log10 C",0.421414,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+23, anchor 1e21 (rb1); sigma_top and drift at their lower 95 percent limits",0.402639,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+24, anchor 1e21 (rb1); sigma_top and drift at their lower 95 percent limits",0.31873,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+23, anchor precision-weighted centre of the five budgets; sigma_top and drift at their lower 95 percent limits",0.39458,rb5_sigma_pi_set.csv,
+T1.7,"lower bound at 1e+24, anchor precision-weighted centre of the five budgets; sigma_top and drift at their lower 95 percent limits",0.310671,rb5_sigma_pi_set.csv,
+T1.7,sigma_top,0.593781,rb5_sigma_pi_set.csv,
+T1.7,drift,-0.057584,rb5_sigma_pi_set.csv,
+T1.7,se_drift_used,0.0134314,rb5_sigma_pi_set.csv,
+T1.7,drift_lo,-0.0839095,rb5_sigma_pi_set.csv,
+T1.7,sigma_top_lo,0.570458,rb5_sigma_pi_set.csv,
+T1.7,study_le3e20,0.707736,rb5_sigma_pi_set.csv,
+T1.7,study_le3e20_lo,0.689705,rb5_sigma_pi_set.csv,
+T1.7,study_le3e20_hi,0.725767,rb5_sigma_pi_set.csv,
+T1.7,centre|1e21 (rb1),21,rb5_sigma_pi_set.csv,
+T1.7,centre|precision-weighted centre of the five budgets,20.904,rb5_sigma_pi_set.csv,
+T1.7,centre|compute-weighted centre (weights proportional to C),21.1879,rb5_sigma_pi_set.csv,
+T1.7,centre|unweighted centre of log10 C,21.0067,rb5_sigma_pi_set.csv,
+T1.8,"coverage RE, Chinchilla, ra1, rho 0.0",0.92,rb5_sigma_mc_dependence.csv,R = 100
+T1.8,"bias RE, Chinchilla, ra1, rho 0.0",-0.00456736,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Chinchilla, independent, rho 0.0",0.936,rb5_sigma_mc_dependence.csv,R = 500
+T1.8,"bias RE, Chinchilla, independent, rho 0.0",-0.00627758,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Chinchilla, budget, rho 0.5",0.931864,rb5_sigma_mc_dependence.csv,R = 499
+T1.8,"bias RE, Chinchilla, budget, rho 0.5",-0.0027045,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Chinchilla, budget, rho 0.25",0.955,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Chinchilla, budget, rho 0.25",-0.00326517,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Chinchilla, budget, rho 0.75",0.929648,rb5_sigma_mc_dependence.csv,R = 199
+T1.8,"bias RE, Chinchilla, budget, rho 0.75",0.00169301,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Chinchilla, smooth, rho 0.5",0.895,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Chinchilla, smooth, rho 0.5",-0.00443155,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Llama 3, ra1, rho 0.0",0.98,rb5_sigma_mc_dependence.csv,R = 100
+T1.8,"bias RE, Llama 3, ra1, rho 0.0",-0.000692995,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Llama 3, independent, rho 0.0",0.932,rb5_sigma_mc_dependence.csv,R = 500
+T1.8,"bias RE, Llama 3, independent, rho 0.0",-0.000792455,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Llama 3, budget, rho 0.5",0.938,rb5_sigma_mc_dependence.csv,R = 500
+T1.8,"bias RE, Llama 3, budget, rho 0.5",0.000788218,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Llama 3, budget, rho 0.25",0.91,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Llama 3, budget, rho 0.25",-2.66185e-06,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Llama 3, budget, rho 0.75",0.96,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Llama 3, budget, rho 0.75",0.000662524,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Llama 3, smooth, rho 0.5",0.925,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Llama 3, smooth, rho 0.5",0.000445418,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Marin, DCLM, ra1, rho 0.0",0.93,rb5_sigma_mc_dependence.csv,R = 100
+T1.8,"bias RE, Marin, DCLM, ra1, rho 0.0",0.00540939,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Marin, DCLM, independent, rho 0.0",0.954,rb5_sigma_mc_dependence.csv,R = 500
+T1.8,"bias RE, Marin, DCLM, independent, rho 0.0",0.00200448,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Marin, DCLM, budget, rho 0.5",0.942,rb5_sigma_mc_dependence.csv,R = 500
+T1.8,"bias RE, Marin, DCLM, budget, rho 0.5",0.00592104,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Marin, DCLM, budget, rho 0.25",0.94,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Marin, DCLM, budget, rho 0.25",0.00502386,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Marin, DCLM, budget, rho 0.75",0.885,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Marin, DCLM, budget, rho 0.75",0.00930431,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Marin, DCLM, smooth, rho 0.5",0.895,rb5_sigma_mc_dependence.csv,R = 200
+T1.8,"bias RE, Marin, DCLM, smooth, rho 0.5",0.00602909,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Chinchilla (N_F), independent, rho 0.0",0.936,rb5_sigma_mc_dependence.csv,R = 500
+T1.8,"bias RE, Chinchilla (N_F), independent, rho 0.0",-0.00592596,rb5_sigma_mc_dependence.csv,
+T1.8,"coverage RE, Chinchilla (N_F), budget, rho 0.5",0.918,rb5_sigma_mc_dependence.csv,R = 500
+T1.8,"bias RE, Chinchilla (N_F), budget, rho 0.5",-0.00252957,rb5_sigma_mc_dependence.csv,
+T1.9,"convexity component, Farseer [primary], 256-1,024",0.16898,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.149, 0.175]; points 42"
+T1.9,"convexity component, Farseer [primary], >=1,024",0.373043,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.342, 0.464]; points 13"
+T1.9,"convexity component, Farseer [primary], M>=256",0.217213,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.202, 0.235]; points 55"
+T1.9,"convexity component, Marin, Comma [primary], 256-1,024",0.444067,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.287, 0.459]; points 6"
+T1.9,"convexity component, Marin, Comma [primary], >=1,024",0.918167,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.736, 1.197]; points 2"
+T1.9,"convexity component, Marin, Comma [primary], M>=256",0.562592,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.437, 0.608]; points 8"
+T1.9,"convexity component, Marin, DCLM [primary], 256-1,024",0.439996,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.264, 0.552]; points 7"
+T1.9,"convexity component, Marin, DCLM [primary], >=1,024",1.14257,rb5_sigma_extrap_decomposition.csv,"95% percentile [1.052, 1.375]; points 1"
+T1.9,"convexity component, Marin, DCLM [primary], M>=256",0.527817,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.384, 0.628]; points 8"
+T1.9,"convexity component, Marin, Nemotron-CC [primary], 256-1,024",0.396487,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.302, 0.413]; points 6"
+T1.9,"convexity component, Marin, Nemotron-CC [primary], >=1,024",1.00186,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.788, 1.347]; points 2"
+T1.9,"convexity component, Marin, Nemotron-CC [primary], M>=256",0.547829,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.436, 0.627]; points 8"
+T1.9,"convexity component, Llama 3 [primary], 256-1,024",-0.00578585,rb5_sigma_extrap_decomposition.csv,"95% percentile [-0.130, 0.145]; points 2"
+T1.9,"convexity component, Llama 3 [primary], M>=256",-0.00578585,rb5_sigma_extrap_decomposition.csv,"95% percentile [-0.130, 0.145]; points 2"
+T1.9,"convexity component, Marin, Comma [corner_largestM], 256-1,024",0.438877,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.288, 0.472]; points 3"
+T1.9,"convexity component, Marin, Comma [corner_largestM], M>=256",0.438877,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.288, 0.472]; points 3"
+T1.9,"convexity component, Marin, DCLM [corner_largestM], 256-1,024",0.388258,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.270, 0.436]; points 2"
+T1.9,"convexity component, Marin, DCLM [corner_largestM], M>=256",0.388258,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.270, 0.436]; points 2"
+T1.9,"convexity component, Marin, Nemotron-CC [corner_largestM], 256-1,024",0.304092,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.253, 0.339]; points 3"
+T1.9,"convexity component, Marin, Nemotron-CC [corner_largestM], M>=256",0.304092,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.253, 0.339]; points 3"
+T1.9,"convexity component, Marin, Comma [corner_M1000], 256-1,024",0.472426,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.326, 0.494]; points 6"
+T1.9,"convexity component, Marin, Comma [corner_M1000], M>=256",0.472426,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.326, 0.494]; points 6"
+T1.9,"convexity component, Marin, DCLM [corner_M1000], 256-1,024",0.553203,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.142, 1.328]; points 6"
+T1.9,"convexity component, Marin, DCLM [corner_M1000], M>=256",0.553203,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.142, 1.328]; points 6"
+T1.9,"convexity component, Marin, Nemotron-CC [corner_M1000], 256-1,024",0.364415,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.277, 0.398]; points 6"
+T1.9,"convexity component, Marin, Nemotron-CC [corner_M1000], M>=256",0.364415,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.277, 0.398]; points 6"
+T1.9,"convexity component, Marin, three corpora pooled [primary], 256-1,024",0.42685,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.317, 0.445]; points 19"
+T1.9,"convexity component, Marin, three corpora pooled [primary], >=1,024",1.02086,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.937, 1.207]; points 5"
+T1.9,"convexity component, Marin, three corpora pooled [primary], M>=256",0.546079,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.453, 0.585]; points 24"
+T1.9,"convexity component, Marin, three corpora pooled [corner_largestM], 256-1,024",0.377076,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.293, 0.388]; points 8"
+T1.9,"convexity component, Marin, three corpora pooled [corner_largestM], M>=256",0.377076,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.293, 0.388]; points 8"
+T1.9,"convexity component, Marin, three corpora pooled [corner_M1000], 256-1,024",0.463348,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.286, 0.687]; points 18"
+T1.9,"convexity component, Marin, three corpora pooled [corner_M1000], M>=256",0.463348,rb5_sigma_extrap_decomposition.csv,"95% percentile [0.286, 0.687]; points 18"
+T1.9,"b1, Farseer [primary]",0.412815,rb5_sigma_extrap_lin.csv,"[0.4100, 0.4189]"
+T1.9,"b2, Farseer [primary]",0.0203927,rb5_sigma_extrap_lin.csv,"[0.0190, 0.0225]"
+T1.9,"sigma_slope, Farseer [primary]",0.707807,rb5_sigma_extrap_lin.csv,"[0.7048, 0.7092]"
+T1.9,"b1, Marin, Comma [primary]",0.502368,rb5_sigma_extrap_lin.csv,"[0.4856, 0.5133]"
+T1.9,"b2, Marin, Comma [primary]",0.0324141,rb5_sigma_extrap_lin.csv,"[0.0176, 0.0354]"
+T1.9,"sigma_slope, Marin, Comma [primary]",0.665616,rb5_sigma_extrap_lin.csv,"[0.6608, 0.6731]"
+T1.9,"b1, Marin, DCLM [primary]",0.500176,rb5_sigma_extrap_lin.csv,"[0.4922, 0.5239]"
+T1.9,"b2, Marin, DCLM [primary]",0.0274102,rb5_sigma_extrap_lin.csv,"[0.0146, 0.0334]"
+T1.9,"sigma_slope, Marin, DCLM [primary]",0.666589,rb5_sigma_extrap_lin.csv,"[0.6562, 0.6702]"
+T1.9,"b1, Marin, Nemotron-CC [primary]",0.479831,rb5_sigma_extrap_lin.csv,"[0.4701, 0.5043]"
+T1.9,"b2, Marin, Nemotron-CC [primary]",0.0274779,rb5_sigma_extrap_lin.csv,"[0.0191, 0.0302]"
+T1.9,"sigma_slope, Marin, Nemotron-CC [primary]",0.675753,rb5_sigma_extrap_lin.csv,"[0.6648, 0.6802]"
+T1.9,"b1, Llama 3 [primary]",0.589608,rb5_sigma_extrap_lin.csv,"[0.5514, 0.6086]"
+T1.9,"b2, Llama 3 [primary]",-0.0292437,rb5_sigma_extrap_lin.csv,"[-0.0353, -0.0092]"
+T1.9,"sigma_slope, Llama 3 [primary]",0.629086,rb5_sigma_extrap_lin.csv,"[0.6217, 0.6446]"
+T1.9,"b1, Marin, Comma [corner_largestM]",0.463027,rb5_sigma_extrap_lin.csv,"[0.4327, 0.4656]"
+T1.9,"b2, Marin, Comma [corner_largestM]",0.0214839,rb5_sigma_extrap_lin.csv,"[-0.0012, 0.0262]"
+T1.9,"sigma_slope, Marin, Comma [corner_largestM]",0.683514,rb5_sigma_extrap_lin.csv,"[0.6823, 0.6980]"
+T1.9,"b1, Marin, DCLM [corner_largestM]",0.468427,rb5_sigma_extrap_lin.csv,"[0.4530, 0.4840]"
+T1.9,"b2, Marin, DCLM [corner_largestM]",0.0162199,rb5_sigma_extrap_lin.csv,"[-0.0019, 0.0214]"
+T1.9,"sigma_slope, Marin, DCLM [corner_largestM]",0.681001,rb5_sigma_extrap_lin.csv,"[0.6738, 0.6882]"
+T1.9,"b1, Marin, Nemotron-CC [corner_largestM]",0.450372,rb5_sigma_extrap_lin.csv,"[0.4385, 0.4682]"
+T1.9,"b2, Marin, Nemotron-CC [corner_largestM]",0.0166259,rb5_sigma_extrap_lin.csv,"[0.0058, 0.0193]"
+T1.9,"sigma_slope, Marin, Nemotron-CC [corner_largestM]",0.689478,rb5_sigma_extrap_lin.csv,"[0.6811, 0.6952]"
+T1.9,"b1, Marin, Comma [corner_M1000]",0.486461,rb5_sigma_extrap_lin.csv,"[0.4605, 0.4955]"
+T1.9,"b2, Marin, Comma [corner_M1000]",0.0276724,rb5_sigma_extrap_lin.csv,"[0.0088, 0.0305]"
+T1.9,"sigma_slope, Marin, Comma [corner_M1000]",0.672739,rb5_sigma_extrap_lin.csv,"[0.6687, 0.6847]"
+T1.9,"b1, Marin, DCLM [corner_M1000]",0.502384,rb5_sigma_extrap_lin.csv,"[0.4841, 0.5621]"
+T1.9,"b2, Marin, DCLM [corner_M1000]",0.0275374,rb5_sigma_extrap_lin.csv,"[0.0035, 0.0548]"
+T1.9,"sigma_slope, Marin, DCLM [corner_M1000]",0.665609,rb5_sigma_extrap_lin.csv,"[0.6402, 0.6738]"
+T1.9,"b1, Marin, Nemotron-CC [corner_M1000]",0.465737,rb5_sigma_extrap_lin.csv,"[0.4519, 0.4879]"
+T1.9,"b2, Marin, Nemotron-CC [corner_M1000]",0.0214524,rb5_sigma_extrap_lin.csv,"[0.0116, 0.0227]"
+T1.9,"sigma_slope, Marin, Nemotron-CC [corner_M1000]",0.68225,rb5_sigma_extrap_lin.csv,"[0.6721, 0.6887]"
+T1.9,"b1, Marin, three corpora pooled [primary]",0.494125,rb5_sigma_extrap_lin.csv,"[0.4869, 0.5077]"
+T1.9,"b2, Marin, three corpora pooled [primary]",0.0291007,rb5_sigma_extrap_lin.csv,"[0.0201, 0.0305]"
+T1.9,"sigma_slope, Marin, three corpora pooled [primary]",0.669319,rb5_sigma_extrap_lin.csv,"[0.6633, 0.6726]"
+T1.9,"b1, Marin, three corpora pooled [corner_largestM]",0.460609,rb5_sigma_extrap_lin.csv,"[0.4468, 0.4666]"
+T1.9,"b2, Marin, three corpora pooled [corner_largestM]",0.0181099,rb5_sigma_extrap_lin.csv,"[0.0052, 0.0187]"
+T1.9,"sigma_slope, Marin, three corpora pooled [corner_largestM]",0.684664,rb5_sigma_extrap_lin.csv,"[0.6819, 0.6912]"
+T1.9,"b1, Marin, three corpora pooled [corner_M1000]",0.484861,rb5_sigma_extrap_lin.csv,"[0.4724, 0.5046]"
+T1.9,"b2, Marin, three corpora pooled [corner_M1000]",0.0255541,rb5_sigma_extrap_lin.csv,"[0.0121, 0.0316]"
+T1.9,"sigma_slope, Marin, three corpora pooled [corner_M1000]",0.673533,rb5_sigma_extrap_lin.csv,"[0.6649, 0.6793]"
+T1.10,Marin IsoFLOP curvature sigma*: min,0.699969,rb5_sigma_marin_estimator_gap.csv,
+T1.10,Marin IsoFLOP curvature sigma*: max,0.712588,rb5_sigma_marin_estimator_gap.csv,
+T1.10,Marin local first-derivative sigma*: min,0.665616,rb5_sigma_marin_estimator_gap.csv,
+T1.10,Marin local first-derivative sigma*: max,0.675753,rb5_sigma_marin_estimator_gap.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: alpha",0.858787,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: beta",0.0941138,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: tilt_range",0.698079,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: tau_own",4.32826,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: tau_ref",5.11998,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: objective",0.00992621,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: objective_minus_global",9.84744e-05,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [nls]: spearman_tilt_vs_allcheckpoints",0.749231,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: alpha",0.146433,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: beta",1.05542,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tilt_range",0.781194,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tau_own",3.66925,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tau_ref",6.21894,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tilt_range_lo",0.476154,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tilt_range_hi",1.32479,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tau_own_lo",1.94547,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tau_own_hi",11.5633,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tau_ref_lo",3.04643,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: tau_ref_hi",22.2781,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: objective",0.00982774,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: objective_minus_global",0,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: spearman_tilt_vs_allcheckpoints",-0.752308,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [nls]: share_draws_beta_gt_alpha",0.59799,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [nls]: alpha",0.265573,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [nls]: beta",0.14714,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [nls]: tilt_range",0.221973,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [nls]: tau_own",2.93198,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [nls]: tau_ref",1.68086,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [nls]: tilt_range_lo",0.132922,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [nls]: tilt_range_hi",0.322517,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: alpha",0.936385,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: beta",0.0953304,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: tilt_range",0.564829,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: tau_own",2.98898,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: tau_ref",3.74872,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: objective",0.00269628,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: objective_minus_global",0.000103949,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode alpha > beta [huber]: spearman_tilt_vs_allcheckpoints",0.759231,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: alpha",0.155019,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: beta",1.22765,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tilt_range",0.496047,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tau_own",2.04935,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tau_ref",3.19152,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tilt_range_lo",0.257447,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tilt_range_hi",1.6695,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tau_own_lo",1.53597,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tau_own_hi",6.76916,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tau_ref_lo",1.82631,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: tau_ref_hi",49.7347,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: objective",0.00259233,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: objective_minus_global",0,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: spearman_tilt_vs_allcheckpoints",-0.824615,rb5_sigma_dd_tilt.csv,
+T14,"final checkpoints, complete schedules; mode beta > alpha [huber]: share_draws_beta_gt_alpha",0.773869,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [huber]: alpha",0.284435,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [huber]: beta",0.13092,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [huber]: tilt_range",0.256116,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [huber]: tau_own",3.43233,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [huber]: tau_ref",1.82063,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [huber]: tilt_range_lo",0.176505,rb5_sigma_dd_tilt.csv,
+T14,"all checkpoints with D/N >= 5 (m2, published) [huber]: tilt_range_hi",0.471472,rb5_sigma_dd_tilt.csv,

@@ -1,0 +1,158 @@
+% Online Appendix Tables B3 and B4: power, size and coverage of the controlled experiment's inference, computed from the
+% design alone. Study 1 (24 September, before any estimation; label tab:app-power1): Panels A-B from
+% output/tables/m9_sweeps_power.csv, Panel C from m9_sweeps_power_coverage.csv (s = 0.005, rho = 0.5, 40 replications).
+% Writer appendices (v3), 2026-09-24.
+% [round 3, WP1, X7, 2026-09-25] Study 2 (25 September, before any FineWeb technology estimate; reads no endpoint loss;
+% code/analysis/m9_sweeps/m9_power_v2.py, m9_coverage_v2.py; label tab:app-power, the table the main text cites):
+% Panel A from m9_sweeps_power_v2_coverage.csv (mc_sd, FineWeb-Edu design; cells chin_s002_r5, chin_s005_r5,
+% chin_s010_r5) and m9_sweeps_power_v2_q3null.csv (rho = 0.5, 500 replications); Panel B from
+% m9_sweeps_power_v2_coverage.csv (cell chin_s005_r5, both corpora' designs pooled, 1,000 replications; the difference
+% 500); Panel C from m9_sweeps_power_v2_tilt.csv (500 replications per chi); Panel D from m9_sweeps_power_v2_factors.csv
+% and _coverage.csv (mde80_*). Monte Carlo standard errors in parentheses.
+% [round 3, WP1 review, 2026-09-25] Every number checked against the CSVs; Panel B's fourth column renamed (it is the
+% cell's MC s.d./boot. s.e., not the fixed factor of Panel D); note on why calibrated coverage stays below 0.95
+% (checked by rerunning replications with 999 draws; paper/notes/round3_WP1_review.md).
+\begin{table}[tp]
+\centering
+\caption{Power, Size and Coverage in the Controlled Experiment, Study 1 (Computed before Estimation)}
+\label{tab:app-power1}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+& \multicolumn{3}{c}{Log-loss noise s.d.} \\
+\cmidrule(lr){2-4}
+Statistic & 0.002 & 0.005 & 0.010 \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Panel A. Expected standard errors (Monte Carlo s.d.), FineWeb-Edu design}} \\[1pt]
+$\sigma^*_\kappa$, convention P / T & 0.003 / 0.004 & 0.007 / 0.007 & 0.014 / 0.014 \\
+Model-free $\sigma^*$, P, FLOP-optimal path / $w=1$ path & 0.009 / 0.005 & 0.019 / 0.013 & 0.028 / 0.020 \\
+Model-free $\sigma^*$, T & 0.008 & 0.018 & 0.034 \\
+Q3 slope, P, with high-$M$ runs / main grid only & 0.030 / 0.030 & 0.062 / 0.073 & 0.107 / 0.119 \\
+Q3 slope, T, with high-$M$ runs & 0.018 & 0.044 & 0.088 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\emph{Panel B. Between-corpus tilt $\hat\chi$, convention P (s.e.\ and detectable tilt: Monte Carlo s.d.\ with a}} \\
+\multicolumn{4}{@{}l}{\emph{normal approximation; probabilities: plan's wild bootstrap and decision rule)}} \\[1pt]
+S.e.\ of $\hat\chi$ & 0.007 & 0.018 & 0.038 \\
+Minimum detectable $\chi$ (80\% power) & 0.020 & 0.051 & 0.107 \\
+Pr(``factor-biased'' $\mid\chi=0.22$) & 1.00 & 1.00 & 1.00 \\
+Pr(``factor-biased'' $\mid\chi=0$) & 0.17 & 0.08 & 0.12 \\
+Pr(``neutral'' $\mid\chi=0$) & 0.57 & 0.50 & 0.58 \\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.36\textwidth}cccc@{}}
+\midrule
+\multicolumn{5}{@{}l}{\emph{Panel C. Coverage of nominal 95 percent intervals and size, noise s.d.\ 0.005}} \\[1pt]
+& Plan & CR2, & CR2 & MC s.d./ \\
+& (wild) & fixed $h$ & scheme & boot.\ s.e. \\
+\cmidrule(lr){2-5}
+$\sigma^*_\kappa$ & 0.83 & 0.88 & -- & 1.12 \\
+Model-free $\sigma^*$, FLOP-optimal path & 0.40 & 0.58 & 0.65 & 1.73 \\
+Model-free $\sigma^*$, $w=1$ path & 0.45 & 0.65 & 0.70 & 1.57 \\
+Q3 slope & 0.55 & 0.75 & 0.68 & 1.39--1.75 \\
+Tilt $\hat\chi$, $\chi=0.22$ / $\chi=0$ & 0.68 / 0.80 & 0.78 / 0.93 & -- & 1.41 / 0.95 \\
+Size of the interval test of $\chi=0$ & 0.20 & 0.075 & -- & \\
+Size of the restricted test, raw / CR2 & \multicolumn{2}{c}{0.075 / 0.050} & & \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Monte Carlo from the design alone (design: \texttt{code/sweep/run\_grid.py}; code:
+\texttt{code/analysis/m9\_sweeps/m9\_power.py} and \texttt{m9\_coverage.py}), computed on 24 September 2026 between 15:52
+and 17:03, before any estimation on the experiment's results (first estimation at 17:12). Truth: the Chinchilla form with
+the exponents of \citet{besiroglu2024chinchilla} ($\sigma^*=0.737$) in non-embedding parameters, anchored at $M^*=20$ and
+3.8 nats at the design's central compute; FineWeb-Edu differs from FineWeb by a data-augmenting shift $\chi$. Noise: $\ln
+L$ error with a component common to each training trunk (share 0.5 of the variance) and a second validation set with
+noise correlated 0.8. Panels A--B: 150 replications per cell; the decision-rule rows use 60 replications with 199 Webb
+draws each and the plan's rule on two validation sets. Panel C: 40 replications (Monte Carlo error of a coverage rate
+about $\pm0.07$); coverage is measured against each estimator's noise-free value on the design. Plan: wild cluster
+bootstrap by width on the residuals of the unrestricted fit. CR2: the same draws on bias-reduced (CR2) cluster
+residuals; CR2 scheme: for model-free statistics and the Q3 slope, with the bandwidth $h$ re-selected in each draw
+(deviation D8). Restricted test: wild cluster bootstrap that imposes $\chi=0$. Last column: the factor by which the best
+scheme's standard error understates the Monte Carlo standard deviation. Table~\ref{tab:app-power} replaces these
+estimates with more replications. Convention P: non-embedding parameters with compute measured in actual training FLOPs;
+T: total parameters with $C=6ND$.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Author's calculations.
+\end{tablenotes}
+\end{table}
+
+\begin{table}[tp]
+\centering
+\caption{Power, Size and Coverage in the Controlled Experiment, Study 2 (Computed from the Design before Any FineWeb Technology Estimate)}
+\label{tab:app-power}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.46\textwidth}ccc@{}}
+\toprule
+& \multicolumn{3}{c}{Log-loss noise s.d.} \\
+\cmidrule(lr){2-4}
+Statistic & 0.002 & 0.005 & 0.010 \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Panel A. Monte Carlo s.d.\ and null values, FineWeb-Edu design (FineWeb in brackets)}} \\[1pt]
+Model-free $\sigma^*$, $N_F$ & 0.009 & 0.019 & 0.036 \\
+$\sigma^*_{\rm edu}-\sigma^*_{\rm web}$, model-free, $N_F$ & 0.010 & 0.024 & 0.047 \\
+Null of the Q3 slope, P, with high-$M$ runs & $-$0.023 [$-$0.014] & $-$0.052 [$-$0.034] & $-$0.092 [$-$0.045] \\
+Null of the Q3 slope, T, main grid only & $-$0.094 [$-$0.084] & $-$0.124 [$-$0.109] & $-$0.159 [$-$0.133] \\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.40\textwidth}cccc@{}}
+\midrule
+\multicolumn{5}{@{}l}{\emph{Panel B. Coverage of nominal 95 percent intervals, noise s.d.\ 0.005}} \\[1pt]
+& Plan & CR2 & MC s.d./ & Calibrated \\
+& (wild) & scheme & boot.\ s.e. & CR2 \\
+\cmidrule(lr){2-5}
+Model-free $\sigma^*$, $N_F$ & 0.52 (0.02) & 0.74 (0.01) & 1.44 (0.04) & 0.92 (0.01) \\
+Model-free $\sigma^*$, P, FLOP-optimal path & 0.52 (0.02) & 0.75 (0.01) & 1.38 (0.04) & 0.93 (0.01) \\
+Model-free $\sigma^*$, P, $w=1$ path & 0.63 (0.02) & 0.81 (0.01) & 1.30 (0.04) & 0.95 (0.01) \\
+Model-free $\sigma^*$, T & 0.53 (0.02) & 0.76 (0.01) & 1.42 (0.04) & 0.93 (0.01) \\
+Q3 slope, P & 0.51 (0.02) & 0.71 (0.01) & 1.37 (0.05) & 0.91 (0.01) \\
+$\sigma^*_{\rm edu}-\sigma^*_{\rm web}$, $N_F$ & 0.52 (0.02) & 0.74 (0.02) & 1.43 (0.05) & 0.92 (0.01) \\
+\quad rejects $\sigma^*_{\rm edu}=\sigma^*_{\rm web}$ & 0.46 (0.02) & 0.26 (0.02) & & 0.10 (0.01) \\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.66\textwidth}cc@{}}
+\midrule
+\multicolumn{3}{@{}l}{\emph{Panel C. Tests of $\chi=0$, noise s.d.\ 0.005}} \\[1pt]
+& Rate at $\chi=0$ & Rate at $\chi=0.22$ \\
+\cmidrule(lr){2-3}
+Plan's interval excludes zero (one set) & 0.270 (0.020) & 1.000 (0.000) \\
+CR2 interval excludes zero (one set) & 0.214 (0.018) & 1.000 (0.000) \\
+Plan's interval covers $\chi$ (one set) & 0.730 (0.020) & 0.756 (0.019) \\
+CR2 interval covers $\chi$ (one set) & 0.786 (0.018) & 0.820 (0.017) \\
+Restricted test on raw residuals, $p<0.05$ (one set) & 0.124 (0.015) & 0.974 (0.007) \\
+Restricted test on CR2 residuals, $p<0.05$ (D8; one set) & 0.092 (0.013) & 0.652 (0.021) \\
+CR2 interval $\times1.25$ excludes zero (Amendment~2; one set) & 0.118 (0.014) & 1.000 (0.000) \\
+``Factor-biased'': plan's rule / D8's rule & 0.134 / 0.030 & 1.000 / 0.468 \\
+``Factor-biased'': Amendment~2's rule & 0.054 (0.010) & 1.000 (0.000) \\
+``Neutral'': plan's rule / D8's rule & 0.624 / 0.848 & 0.000 / 0.148 \\
+``Neutral'': Amendment~2's rule & 0.818 (0.017) & 0.000 (0.000) \\
+\addlinespace[1pt]
+\multicolumn{3}{@{}l}{\emph{Panel D. Calibration factors fixed by Amendment~2}} \\[1pt]
+Model-free $\sigma^*$ (largest over cells, conventions and truths) & \multicolumn{2}{c}{1.74 (0.13)} \\
+Q3 slope (largest 1.50 (0.10); floor 1.75) & \multicolumn{2}{c}{1.75} \\
+$\sigma^*_{\rm edu}-\sigma^*_{\rm web}$, $N_F$ (largest) & \multicolumn{2}{c}{1.64 (0.10)} \\
+Tilt, CR2 interval (largest) & \multicolumn{2}{c}{1.25} \\
+Detectable difference (80\% power): correct size / CR2 / calibrated & \multicolumn{2}{c}{0.068 / 0.054 / 0.075} \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Monte Carlo from the design alone (code: \texttt{m9\_power\_v2.py} and \texttt{m9\_coverage\_v2.py} in
+\texttt{code/analysis/m9\_sweeps}), computed on 25 September 2026 before any FineWeb technology estimate or tilt,
+reading no endpoint loss. Data-generating process as in Table~\ref{tab:app-power1}, plus $\kappa$-family truths
+($\sigma^*_\kappa=0.70$; $\kappa=0.36$, the FineWeb-Edu dry-run estimate, or 0.6) and $N_F=C/(6D)$. Panels A and B: Chinchilla-form truth, within-trunk share 0.5; 500 replications per corpus design at
+noise s.d.\ 0.005 (pooled over the two designs in Panel B) and 150 at 0.002 and 0.010, with 99 bootstrap draws (49 in
+cells of 150--200 replications); Q3 nulls from 500 replications (Monte Carlo s.e.\ at most 0.013). Panel C: 500
+replications per value of $\chi$, 99 draws, two validation sets with noise correlated 0.8. Panel D: the largest ratio
+of the Monte Carlo s.d.\ to the mean CR2-scheme bootstrap s.e.\ across noise s.d.\ 0.002--0.010, within-trunk shares 0.5
+and 0.9, the $\kappa=0.36$ truth and conventions $N_F$, P and T (for Q3 at least 1.75). Coverage is of each estimator's
+noise-free value; a calibrated interval has its half-width multiplied by the factor of Panel D, and covers less than
+0.95 because the CR2-scheme half-width is only about 1.85 bootstrap s.e.\ (light tails with eight clusters, also
+with 999 draws). ``Factor-biased'': zero excluded on both validation sets with the same sign;
+``neutral'': zero included on both with a half-width below 0.10 (D8: restricted-test $p\ge0.05$ and a CR2 half-width
+below 0.10). The noise-free $\sigma^*_{\rm edu}-\sigma^*_{\rm web}$ on the design is 0.005, which adds to its rejection
+rates. Detectable differences: normal approximation with the Monte Carlo s.d.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+Author's calculations.
+\end{tablenotes}
+\end{table}

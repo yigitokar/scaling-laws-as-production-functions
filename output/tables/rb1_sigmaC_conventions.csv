@@ -1,0 +1,27 @@
+study,design,convention,sigma,se
+Hoffmann et al. (2022),Chinchilla,"FLOP-effective N_F = F_T4/6, rebuilt from the architecture table (rb4; primary)",0.659649,0.0227991
+Hoffmann et al. (2022),Chinchilla,"[rb4] NF_A|corr: N_F (A), runs moved to exact A-isocosts (budgets in T4)",0.662732,0.01869
+Hoffmann et al. (2022),Chinchilla,"[rb4] NF_X|corr: N_F (X), runs moved to exact X-isocosts (budgets in T4)",0.665838,0.0196461
+Hoffmann et al. (2022),Chinchilla,"[rb4] NF_A: N_F, Appendix F as printed (A); runs at nominal budgets",0.648181,0.0170825
+Hoffmann et al. (2022),Chinchilla,"[rb4] NF_X: N_F, executed FLOPs (X); runs at nominal budgets",0.658442,0.0189007
+Hoffmann et al. (2022),Chinchilla,"[rb4] P: P, non-embedding parameters (T - Vd)",0.689936,0.02873
+Hoffmann et al. (2022),Chinchilla,"[rb4] T: T, total parameters (architecture count)",0.673785,0.0273898
+Hoffmann et al. (2022),Chinchilla,"[rb4] P|corr: P, runs moved to exact 6PD isocosts (budgets in T4)",0.66919,0.0270643
+Hoffmann et al. (2022),Chinchilla,"[rb4] T|corr: T, runs moved to exact 6TD isocosts (budgets in T4)",0.659683,0.025648
+Hoffmann et al. (2022),Chinchilla,[rb4] NF_T4|6ND: N_F (T4) if tokens had been set by D = C_b/(6T) (rejected by coords test),0.671359,0.024367
+Hoffmann et al. (2022),Chinchilla,"[rb4] R11: R11 count-free N_F = C_b/(6 D_dig) (RE sigma* (137 runs, ra1's estimator and seed))",0.676048,0.0207
+Hoffmann et al. (2022),Chinchilla,"[rb4] R12: R12 T4-consistent profile membership (RE sigma*, N_F (147 runs))",0.668447,0.027
+Hoffmann et al. (2022),Chinchilla,"[rb4] R13: R13 five highest-loss runs dropped (RE sigma*, N_F (132 runs))",0.681247,0.0198
+Grattafiori et al. (2024),Llama 3,FLOP-implied N_F = C/(6D),0.659508,0.0226928
+Grattafiori et al. (2024),Llama 3,FLOP-accounting eta = -0.1,0.61073,0.0226928
+Grattafiori et al. (2024),Llama 3,FLOP-accounting eta = +0.1,0.700928,0.0226928
+Marin (2026),Comma,FLOP-implied N_F = C/(6D),0.699969,0.0265002
+Marin (2026),DCLM,FLOP-implied N_F = C/(6D),0.712588,0.0271711
+Marin (2026),Nemotron-CC,FLOP-implied N_F = C/(6D),0.704925,0.0232614
+Marin (2026),Comma,configuration N (eta = 0.087),0.65834,0.0221035
+Marin (2026),DCLM,configuration N (eta = 0.087),0.641925,0.0195888
+Marin (2026),Nemotron-CC,configuration N (eta = 0.087),0.654545,0.0203664
+Li et al. (2025),Farseer,"non-embedding N, first-derivative path",0.707807,0.00483939
+Li et al. (2025),Farseer,"incl. embeddings (total N), first-derivative path",0.670049,0.00483939
+Li et al. (2025),Farseer,"non-embedding N, Hessian-based path mean, primary bandwidth",0.706612,0.00483939
+Li et al. (2025),Farseer,"non-embedding N, Hessian-based path mean, extended-grid CV bandwidth",0.663833,0.00483939

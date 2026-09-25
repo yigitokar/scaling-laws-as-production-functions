@@ -1,0 +1,72 @@
+statistic,current,rebuilt,change,note
+Chinchilla model-free sigma* (RE over budgets),0.673458,0.659649,-0.0138087,T -> N_F (T4)
+  s.e.,0.027258,0.0227991,-0.00445898,
+Chinchilla fixed-effect pooled sigma*,0.684317,0.665518,-0.0187985,
+Chinchilla drift per decade,-0.072403,-0.0612978,0.0111052,
+  s.e.,0.0256715,0.0249355,-0.000735978,
+Chinchilla Q across budgets,15.6152,12.6949,-2.92033,
+"Chinchilla sigma* RE, NF_A",0.673458,0.648181,-0.0252764,"N_F, Appendix F as printed (A); runs at nominal budgets"
+"Chinchilla sigma* RE, NF_X",0.673458,0.658442,-0.0150154,"N_F, executed FLOPs (X); runs at nominal budgets"
+"Chinchilla sigma* RE, P",0.673458,0.689936,0.0164779,"P, non-embedding parameters (T - Vd)"
+"Chinchilla sigma* RE, T",0.673458,0.673785,0.000327221,"T, total parameters (architecture count)"
+"Chinchilla sigma* RE, NF_A|corr",0.673458,0.662732,-0.0107259,"N_F (A), runs moved to exact A-isocosts (budgets in T4)"
+"Chinchilla sigma* RE, NF_X|corr",0.673458,0.665838,-0.00761949,"N_F (X), runs moved to exact X-isocosts (budgets in T4)"
+"Chinchilla sigma* RE, T|corr",0.673458,0.659683,-0.0137744,"T, runs moved to exact 6TD isocosts (budgets in T4)"
+"Chinchilla sigma* RE, P|corr",0.673458,0.66919,-0.00426762,"P, runs moved to exact 6PD isocosts (budgets in T4)"
+"Chinchilla sigma* RE, NF_T4|6ND",0.673458,0.671359,-0.00209887,N_F (T4) if tokens had been set by D = C_b/(6T) (rejected by coords test)
+"Chinchilla sigma* RE, NF_A|6ND",0.673458,0.682991,0.00953364,N_F (A) if tokens had been set by D = C_b/(6T) (rejected by coords test)
+Chinchilla kappa-free sigma* (same runs),0.666932,0.655998,-0.010934,
+Chinchilla kappa = 1 sigma* (same runs),0.691913,0.689623,-0.00229046,
+Reference technology (240 runs) kappa-free sigma*,0.700553,0.700299,-0.000254592,N_F: tokens per FLOP-effective parameter
+Reference technology kappa = 1 sigma*,0.736789,0.739824,0.00303574,N_F: tokens per FLOP-effective parameter
+Reference technology a (kappa = 1),0.5139,0.519611,0.00571108,N_F: tokens per FLOP-effective parameter
+"Reference technology M*(1e23), kappa free",21.9279,20.4395,-1.4884,N_F: tokens per FLOP-effective parameter
+"Reference technology M*(1e23), kappa = 1",18.8149,14.9494,-3.86553,N_F: tokens per FLOP-effective parameter
+Study-level mean,0.69289,0.687259,-0.00563107,
+  HKSJ lower,0.652846,0.640215,-0.0126303,
+  HKSJ upper,0.732934,0.734302,0.0013682,
+  tau,0.0173337,0.0229547,0.00562107,
+  Q,5.69327,8.2512,2.55793,
+  p(Q),0.127525,0.0410957,-0.0864294,
+"Variant means, min (rb1 rows)",0.663336,0.660289,-0.00304695,
+"Variant means, max (rb1 rows)",0.707635,0.707196,-0.000438894,
+"Variant means, min (eta for Meta only; Chinchilla accountings added)",,0.662912,,
+"Variant means, max (eta for Meta only; Chinchilla accountings added)",,0.699742,,
+"Drift slope, 3-level RE (44 budgets)",-0.0324815,-0.0327797,-0.000298203,
+  CR2 s.e.,0.0139057,0.0140092,0.000103542,
+  CR2 p,0.0964227,0.0970852,0.000662524,
+  wild p,0.0421,0.0387,-0.0034,
+"Drift slope, unweighted",-0.0305644,-0.0295944,0.000970034,
+Drift slope on S scale,0.136932,0.136885,-4.66443e-05,
+"Drift, Chinchilla + Llama 3 FE",-0.058056,-0.057584,0.000472078,
+  model s.e.,0.0130794,0.0126068,-0.000472517,
+"Drift, budgets <= 3e20",-0.00720926,-0.00765212,-0.000442859,
+"Drift, IsoFLOP designs FE (R3)",-0.0506868,-0.0503645,0.000322232,
+"Drift, leave top budget out",-0.0290849,-0.0302048,-0.00111984,
+sigma* at 1e19 (pooled line),0.715325,0.712991,-0.00233369,
+sigma* at 1e20 (pooled line),0.682844,0.680212,-0.00263189,
+sigma* at 1e21 (pooled line),0.650362,0.647432,-0.0029301,
+sigma* at 1e22 (pooled line),0.61788,0.614652,-0.0032283,
+sigma* at 1e24 (pooled line),0.552917,0.549093,-0.0038247,
+  1e21 CR2 lower,0.564623,0.560256,-0.00436726,
+  1e21 CR2 upper,0.736101,0.734608,-0.00149293,
+PI lower bound at 1e+23 (Chinchilla-Llama drift),0.479601,0.478613,-0.000988414,
+PI lower bound at 1e+24 (Chinchilla-Llama drift),0.421545,0.421029,-0.000516336,
+"median s: Reference (kappa-free Chinchilla, sigma* = 0.701) -> Reference (kappa-free Chinchil",0.749137,0.749137,0,
+median s: Constant sigma* = 0.65 -> Constant sigma* = 0.65,0.824832,0.824832,0,
+median s: Constant sigma* = 0.624 -> Constant sigma* = 0.622,0.857639,0.859993,0.00235356,
+median s: Constant sigma* = 0.6 -> Constant sigma* = 0.6,0.884302,0.884302,0,
+"median s: sigma*(C_i): primary meta-regression line (linear drift, poo -> sigma*(C_i): primary meta-regr",0.906392,0.909627,0.003235,
+"median s: sigma*(C_i) = PI lower bound, top-budget value + drift (drif -> sigma*(C_i) = PI lower bound, ",0.977736,0.978021,0.000284873,
+"median s: sigma*(C_i) = PI lower bound, top-budget value + drift (pool -> sigma*(C_i) = PI lower bound, ",0.948175,0.949488,0.00131256,
+sigma*_top (budgets >= 6e20),0.595713,0.593781,-0.00193257,
+  HKSJ lower,0.567006,0.565192,-0.00181373,
+  HKSJ upper,0.624421,0.622369,-0.00205141,
+"Study-level mean, Chinchilla in NF_X|corr",0.69289,0.688211,-0.00467903,
+"Drift slope, Chinchilla in NF_X|corr",-0.0324815,-0.0320972,0.00038431,
+"Study-level mean, Chinchilla in NF_A|corr",0.69289,0.686816,-0.00607373,
+"Drift slope, Chinchilla in NF_A|corr",-0.0324815,-0.0320022,0.000479374,
+"Study-level mean, Chinchilla in P",0.69289,0.697183,0.0042928,
+"Drift slope, Chinchilla in P",-0.0324815,-0.0333503,-0.000868713,
+"Study-level mean, Chinchilla in T",0.69289,0.693011,0.000121537,
+"Drift slope, Chinchilla in T",-0.0324815,-0.0325003,-1.87299e-05,

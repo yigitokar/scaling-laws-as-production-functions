@@ -1,0 +1,14 @@
+scenario,d6_a_bias_mean,d6_a_bias_min,d6_a_bias_max,pointwise_path_exponent_shift
+Step Law rule (in-sample point estimate),0.00182538,0.0010993,0.00275165,0.000910402
+"Step Law rule, 95% corner (iota_n -, iota_d -)",0.00273213,0.00164537,0.00411852,0.00137365
+"Step Law rule, 95% corner (iota_n -, iota_d +)",0.00593047,0.0035715,0.00893981,0.00305003
+"Step Law rule, 95% corner (iota_n +, iota_d -)",-0.00227971,-0.00343652,-0.00137291,-0.00108564
+"Step Law rule, 95% corner (iota_n +, iota_d +)",0.00091863,0.000553226,0.00138478,0.000454151
+"Random configuration, best of 1 (D-biased)",-0.00850715,-0.012824,-0.00512325,-0.00363056
+"Random configurations, best of 4",-0.00139206,-0.00209844,-0.00083834,-0.000670553
+"Random configurations, best of 16",-0.000762703,-0.00114973,-0.000459322,-0.000370197
+"One fixed (LR, batch)",0.00173519,0.00104498,0.00261568,0.00086469
+"Porian base (fixed LR 3e-3, 0.5M batch)",-0.0181322,-0.0273332,-0.0109197,-0.00514984
+Porian N-rule,-0.0428965,-0.0646638,-0.0258335,-0.00588357
+DeepSeek C-rule,0.00449805,0.00270885,0.00678052,0.00229249
+"Bjorck (N, D)-rule",0.0200426,0.0120703,0.030213,0.00384149

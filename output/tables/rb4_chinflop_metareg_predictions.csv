@@ -1,0 +1,95 @@
+run,log10C,est,se_model,lo_model,hi_model,se_cr2,df_cr2,lo_cr2,hi_cr2,spec,spec_key
+old,18.5,0.731566,0.0173677,0.697525,0.765607,0.00966037,4.03687,0.704841,0.758291,"3-level RE, inverse-variance (primary)",weighted
+old,19,0.715325,0.0134549,0.688953,0.741697,0.00380609,4.19814,0.704952,0.725699,"3-level RE, inverse-variance (primary)",weighted
+old,20,0.682844,0.0100076,0.663229,0.702458,0.0121188,3.73491,0.648233,0.717454,"3-level RE, inverse-variance (primary)",weighted
+old,21,0.650362,0.0152654,0.620442,0.680282,0.0258066,2.78996,0.564623,0.736101,"3-level RE, inverse-variance (primary)",weighted
+old,21.5,0.634121,0.0194842,0.595932,0.67231,0.0327194,2.75795,0.524628,0.743615,"3-level RE, inverse-variance (primary)",weighted
+old,22,0.61788,0.0240764,0.570691,0.66507,0.0396463,2.78396,0.485984,0.749777,"3-level RE, inverse-variance (primary)",weighted
+old,23,0.585399,0.0337651,0.519219,0.651579,0.0535202,2.85715,0.410153,0.760645,"3-level RE, inverse-variance (primary)",weighted
+old,24,0.552917,0.0437522,0.467163,0.638672,0.0674072,2.916,0.334859,0.770976,"3-level RE, inverse-variance (primary)",weighted
+old,18.5,0.736467,0.0134992,0.710009,0.762926,0.00747657,4.97297,0.717217,0.755718,"Design RE, unweighted (LMM)",unweighted
+old,19,0.721185,0.010191,0.701211,0.74116,0.00353713,4.96145,0.712071,0.730299,"Design RE, unweighted (LMM)",unweighted
+old,20,0.690621,0.00794209,0.675054,0.706187,0.0101746,4.60009,0.663767,0.717475,"Design RE, unweighted (LMM)",unweighted
+old,21,0.660056,0.0133009,0.633987,0.686126,0.0207746,3.88828,0.601717,0.718396,"Design RE, unweighted (LMM)",unweighted
+old,21.5,0.644774,0.0170826,0.611292,0.678256,0.0261632,3.92176,0.571559,0.71799,"Design RE, unweighted (LMM)",unweighted
+old,22,0.629492,0.0211037,0.588129,0.670855,0.0315705,3.98363,0.541696,0.717288,"Design RE, unweighted (LMM)",unweighted
+old,23,0.598928,0.0294693,0.541168,0.656687,0.042413,4.09056,0.482191,0.715664,"Design RE, unweighted (LMM)",unweighted
+old,24,0.568363,0.038028,0.493828,0.642898,0.0532736,4.16353,0.422715,0.714011,"Design RE, unweighted (LMM)",unweighted
+old,18.5,0.735864,0.0484537,0.640894,0.830833,0.00534982,3.58384,0.720305,0.751423,Design-balanced weights (CE-RVE),balanced
+old,19,0.7195,0.0357843,0.649362,0.789637,0.00366593,3.57587,0.708827,0.730172,Design-balanced weights (CE-RVE),balanced
+old,20,0.686772,0.0252136,0.637353,0.73619,0.012868,2.95641,0.645476,0.728067,Design-balanced weights (CE-RVE),balanced
+old,21,0.654044,0.0444655,0.566891,0.741196,0.0236871,2.77619,0.575103,0.732984,Design-balanced weights (CE-RVE),balanced
+old,21.5,0.63768,0.0582474,0.523515,0.751845,0.0291562,2.85686,0.542205,0.733154,Design-balanced weights (CE-RVE),balanced
+old,22,0.621316,0.0728347,0.47856,0.764072,0.0346399,2.92372,0.509431,0.733201,Design-balanced weights (CE-RVE),balanced
+old,23,0.588588,0.103048,0.386614,0.790562,0.0456302,3.01238,0.443709,0.733467,Design-balanced weights (CE-RVE),balanced
+old,24,0.55586,0.133862,0.29349,0.81823,0.0566361,3.06492,0.377759,0.733961,Design-balanced weights (CE-RVE),balanced
+old,19,0.717725,,0.69039,0.747315,,4.28185,0.704572,0.73138,"3-level RE on S, mapped to sigma*",weighted_S
+old,20,0.684108,,0.664977,0.704373,,3.75162,0.648864,0.723401,"3-level RE on S, mapped to sigma*",weighted_S
+old,21,0.6535,,0.626268,0.683207,,2.86191,0.57914,0.749767,"3-level RE on S, mapped to sigma*",weighted_S
+old,21.5,0.6392,,0.606246,0.675943,,2.83286,0.550738,0.761519,"3-level RE on S, mapped to sigma*",weighted_S
+old,22,0.625513,,0.586971,0.669472,,2.85403,0.525672,0.77217,"3-level RE on S, mapped to sigma*",weighted_S
+old,23,0.599825,,0.551287,0.657734,,2.91582,0.482459,0.792649,"3-level RE on S, mapped to sigma*",weighted_S
+old,24,0.576163,,0.519381,0.646884,,2.96631,0.446033,0.813502,"3-level RE on S, mapped to sigma*",weighted_S
+old,20.5,0.701173,0.0103364,0.680914,0.721432,0.00757317,4.08337,0.680315,0.722031,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+old,21,0.625545,0.0181598,0.589951,0.661138,0.0210004,2.00885,0.535568,0.715521,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+old,21.5,0.549916,0.0358689,0.479613,0.620219,0.0350472,1.94384,0.394867,0.704965,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+old,22,0.474287,0.054564,0.367342,0.581233,0.0491856,1.99002,0.261639,0.686936,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+new,18.5,0.729381,0.0174076,0.695262,0.7635,0.00865733,4.09597,0.705565,0.753197,"3-level RE, inverse-variance (primary)",weighted
+new,19,0.712991,0.0136568,0.686224,0.739759,0.00223288,4.28988,0.706954,0.719029,"3-level RE, inverse-variance (primary)",weighted
+new,20,0.680212,0.0104459,0.659738,0.700686,0.0126272,3.88601,0.644744,0.71568,"3-level RE, inverse-variance (primary)",weighted
+new,21,0.647432,0.0154675,0.617116,0.677748,0.0265786,2.84912,0.560256,0.734608,"3-level RE, inverse-variance (primary)",weighted
+new,21.5,0.631042,0.019548,0.592728,0.669356,0.0335724,2.77628,0.51916,0.742924,"3-level RE, inverse-variance (primary)",weighted
+new,22,0.614652,0.0240184,0.567576,0.661728,0.0405699,2.77948,0.479548,0.749757,"3-level RE, inverse-variance (primary)",weighted
+new,23,0.581872,0.0334969,0.516219,0.647526,0.0545704,2.83184,0.402223,0.761522,"3-level RE, inverse-variance (primary)",weighted
+new,24,0.549093,0.043298,0.464229,0.633957,0.0685744,2.88257,0.325741,0.772444,"3-level RE, inverse-variance (primary)",weighted
+new,18.5,0.732877,0.0138741,0.705684,0.76007,0.00519965,4.98329,0.719497,0.746257,"Design RE, unweighted (LMM)",unweighted
+new,19,0.71808,0.0110487,0.696424,0.739735,0.0020101,4.97891,0.712906,0.723254,"Design RE, unweighted (LMM)",unweighted
+new,20,0.688486,0.00929668,0.670264,0.706707,0.0119379,4.8055,0.657421,0.71955,"Design RE, unweighted (LMM)",unweighted
+new,21,0.658891,0.0138215,0.631801,0.685981,0.0229551,4.15224,0.596069,0.721714,"Design RE, unweighted (LMM)",unweighted
+new,21.5,0.644094,0.0172026,0.610377,0.677811,0.0284848,4.09412,0.565719,0.722468,"Design RE, unweighted (LMM)",unweighted
+new,22,0.629297,0.0208779,0.588376,0.670218,0.0340193,4.09958,0.535742,0.722852,"Design RE, unweighted (LMM)",unweighted
+new,23,0.599702,0.028653,0.543543,0.655862,0.0450959,4.15201,0.476283,0.723122,"Design RE, unweighted (LMM)",unweighted
+new,24,0.570108,0.0366926,0.49819,0.642026,0.0561776,4.20236,0.417052,0.723164,"Design RE, unweighted (LMM)",unweighted
+new,18.5,0.734891,0.0482031,0.640413,0.829369,0.00421232,3.62961,0.722709,0.747072,Design-balanced weights (CE-RVE),balanced
+new,19,0.718033,0.0356256,0.648207,0.787859,0.00293374,3.62363,0.709543,0.726523,Design-balanced weights (CE-RVE),balanced
+new,20,0.684318,0.0250538,0.635213,0.733424,0.0132143,3.00275,0.642286,0.72635,Design-balanced weights (CE-RVE),balanced
+new,21,0.650603,0.044074,0.564218,0.736988,0.0242146,2.80259,0.570378,0.730828,Design-balanced weights (CE-RVE),balanced
+new,21.5,0.633745,0.0577368,0.520581,0.74691,0.029738,2.88245,0.536884,0.730607,Design-balanced weights (CE-RVE),balanced
+new,22,0.616888,0.0722056,0.475365,0.758411,0.0352673,2.94971,0.503561,0.730215,Design-balanced weights (CE-RVE),balanced
+new,23,0.583173,0.102182,0.382897,0.783449,0.0463351,3.03963,0.436796,0.72955,Design-balanced weights (CE-RVE),balanced
+new,24,0.549458,0.132759,0.289251,0.809665,0.0574091,3.09319,0.369831,0.729084,Design-balanced weights (CE-RVE),balanced
+new,19,0.71478,,0.687542,0.744265,,4.31573,0.706951,0.722785,"3-level RE on S, mapped to sigma*",weighted_S
+new,20,0.681443,,0.662029,0.702031,,3.83929,0.64583,0.721213,"3-level RE on S, mapped to sigma*",weighted_S
+new,21,0.651077,,0.624012,0.680596,,2.8784,0.575811,0.748978,"3-level RE on S, mapped to sigma*",weighted_S
+new,21.5,0.636887,,0.604324,0.673159,,2.82097,0.547107,0.761916,"3-level RE on S, mapped to sigma*",weighted_S
+new,22,0.623302,,0.585335,0.666535,,2.82626,0.521889,0.773634,"3-level RE on S, mapped to sigma*",weighted_S
+new,23,0.5978,,0.550114,0.654537,,2.87315,0.478647,0.795937,"3-level RE on S, mapped to sigma*",weighted_S
+new,24,0.574302,,0.518563,0.643466,,2.91751,0.442341,0.818474,"3-level RE on S, mapped to sigma*",weighted_S
+new,20.5,0.698574,0.0103943,0.678202,0.718947,0.00753256,4.15188,0.677959,0.71919,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+new,21,0.622348,0.0181383,0.586797,0.657899,0.021509,2.02444,0.530865,0.713832,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+new,21.5,0.546122,0.0356439,0.47626,0.615984,0.0359038,1.94371,0.387273,0.704971,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+new,22,0.469896,0.0541527,0.363756,0.576035,0.0503594,1.98528,0.25167,0.688122,"3-level RE, hinge at 3e20 (value flat at and below 3e20)",weighted_hinge
+alt_NF_X_corr,19,0.712848,0.013482,0.686424,0.739273,0.0022075,4.28071,0.706874,0.718822,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_X_corr,20,0.680751,0.0102995,0.660564,0.700938,0.0124644,3.8632,0.645655,0.715846,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_X_corr,21,0.648654,0.0152569,0.61875,0.678557,0.0262634,2.82848,0.56213,0.735177,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_X_corr,22,0.616556,0.0237033,0.570098,0.663015,0.040101,2.76038,0.482435,0.750677,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_X_corr,23,0.584459,0.033065,0.519652,0.649267,0.0539474,2.81286,0.406128,0.76279,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_X_corr,24,0.552362,0.0427449,0.468582,0.636142,0.0677973,2.86351,0.330664,0.77406,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_A_corr,19,0.711476,0.0135878,0.684844,0.738108,0.00216804,4.36826,0.705652,0.717301,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_A_corr,20,0.679474,0.0106025,0.658693,0.700255,0.0128228,3.95135,0.643699,0.715249,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_A_corr,21,0.647472,0.0154386,0.617212,0.677732,0.0264682,2.87959,0.56121,0.733734,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_A_corr,22,0.61547,0.0237158,0.568987,0.661953,0.0401638,2.76949,0.481416,0.749523,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_A_corr,23,0.583468,0.0329345,0.518916,0.648019,0.0538713,2.80685,0.405154,0.761781,"3-level RE, inverse-variance (primary)",weighted
+alt_NF_A_corr,24,0.551465,0.0424862,0.468193,0.634738,0.0675834,2.8514,0.329903,0.773028,"3-level RE, inverse-variance (primary)",weighted
+alt_P,19,0.718745,0.0134705,0.692343,0.745148,0.00717011,4.18983,0.699189,0.738302,"3-level RE, inverse-variance (primary)",weighted
+alt_P,20,0.685395,0.0099749,0.665844,0.704946,0.0119122,3.71316,0.651289,0.719501,"3-level RE, inverse-variance (primary)",weighted
+alt_P,21,0.652045,0.0153097,0.622038,0.682052,0.0253503,2.78676,0.567761,0.736328,"3-level RE, inverse-variance (primary)",weighted
+alt_P,22,0.618694,0.0242099,0.571243,0.666146,0.039416,2.79164,0.487789,0.7496,"3-level RE, inverse-variance (primary)",weighted
+alt_P,23,0.585344,0.0339808,0.518742,0.651947,0.0536176,2.86814,0.410184,0.760504,"3-level RE, inverse-variance (primary)",weighted
+alt_P,24,0.551994,0.0440467,0.465662,0.638326,0.0678699,2.92822,0.332975,0.771013,"3-level RE, inverse-variance (primary)",weighted
+alt_T,19,0.715221,0.0134575,0.688845,0.741598,0.00370295,4.20284,0.705133,0.72531,"3-level RE, inverse-variance (primary)",weighted
+alt_T,20,0.682721,0.0100222,0.663078,0.702365,0.0121312,3.74015,0.648096,0.717346,"3-level RE, inverse-variance (primary)",weighted
+alt_T,21,0.650221,0.015261,0.620309,0.680132,0.0258045,2.79315,0.564549,0.735892,"3-level RE, inverse-variance (primary)",weighted
+alt_T,22,0.617721,0.0240513,0.57058,0.664861,0.0396211,2.78506,0.485941,0.7495,"3-level RE, inverse-variance (primary)",weighted
+alt_T,23,0.58522,0.0337215,0.519126,0.651315,0.05347,2.85791,0.410167,0.760274,"3-level RE, inverse-variance (primary)",weighted
+alt_T,24,0.55272,0.0436913,0.467085,0.638355,0.0673313,2.91677,0.334941,0.770499,"3-level RE, inverse-variance (primary)",weighted

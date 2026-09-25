@@ -1,0 +1,13 @@
+design,statistic,mine,ra1,abs_diff
+Chinchilla,coverage_re,0.92,0.92,0
+Chinchilla,bias_re,-0.00456736,-0.00456736,1.64799e-17
+Chinchilla,coverage_fe,0.85,0.85,0
+Chinchilla,bias_fe,-0.00375718,-0.00375718,4.11997e-17
+Llama 3,coverage_re,0.98,0.98,0
+Llama 3,bias_re,-0.000692995,-0.000692995,1.26852e-17
+Llama 3,coverage_fe,0.91,0.91,0
+Llama 3,bias_fe,-0.000215488,-0.000215488,2.24972e-18
+"Marin, DCLM",coverage_re,0.93,0.93,0
+"Marin, DCLM",bias_re,0.00540939,0.00540939,1.73472e-17
+"Marin, DCLM",coverage_fe,0.82,0.82,0
+"Marin, DCLM",bias_fe,0.00105332,0.00105332,7.28584e-17

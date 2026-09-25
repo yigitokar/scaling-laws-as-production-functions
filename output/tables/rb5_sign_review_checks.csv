@@ -1,0 +1,28 @@
+check,expected,got,passed,note
+refit Chinchilla: coefficients,[ 3.028159 -0.003309],[ 3.028159 -0.003309],True,
+refit Chinchilla: pooled residual s.d.,0.271117,0.271117,True,
+refit Llama 3: coefficients,[2.712186 0.008268],[2.712186 0.008268],True,
+refit Llama 3: pooled residual s.d.,0.185147,0.185147,True,
+refit Marin: coefficients,[2.710257 2.741841 3.035103 0.1985  ],[2.710257 2.741841 3.035103 0.1985  ],True,
+refit Marin: pooled residual s.d.,0.20163,0.20163,True,
+S1 bounds by explicit loops (max abs difference in dlo + dhi),0,8.88e-16,True,
+S1 share of models (loop vs module),0.779221,0.779221,True,
+"Chinchilla: exact normal-theory q (module, analytic sup) vs grid simulation",2.726,2.73,True,"independent grid-based simulation, 101 points"
+"Chinchilla: bootstrap q, analytic sup vs grid of 401 points plus model computes",2.7255,2.7255,True,
+"Llama 3: exact normal-theory q (module, analytic sup) vs grid simulation",2.764,2.764,True,"independent grid-based simulation, 101 points"
+"Llama 3: bootstrap q, analytic sup vs grid of 401 points plus model computes",2.8707,2.8707,True,
+"Marin: exact normal-theory q (module, analytic sup) vs grid simulation",2.767,2.758,True,"independent grid-based simulation, 101 points"
+"Marin: bootstrap q, analytic sup vs grid of 401 points plus model computes",2.698,2.698,True,
+"S2(a) reproduces version 3's PI-1 (models, compute, 56 decisions, compute)","(0.8701, 0.4847, 0.8214, 0.4065)",[0.8701 0.4847 0.8214 0.4065],True,
+S2(a) on the 49 primary units vs rb2's current CSV (decision level; informational),0.8163,0.8163,True,rb2_decisions is being re-run by WP4b; equal when rb2's primary units are the same partition
+"R2 NM1: t-interval anchors, Comma with its own slope (models; compute)",0.68; 0.17,0.675; 0.172,True,
+"R1 New 3(a): PI-1, slopes widened (models; 56 decisions; compute)",0.71; 0.66; 0.17,0.714; 0.661; 0.173,True,
+"R4 N2 table, hull of slope CIs [-0.175, 0.353] (models; compute)",0.727; 0.195,0.727; 0.195,True,"reproduced when DeepSeek's law is evaluated at the models' total-parameter M and C, as R4 did; the module evaluates it in DeepSeek's own convention (non-embedding FLOPs per token), which gives S2(c)'s 0.714 and 0.173"
+R2 NM1: t-interval anchors with Comma and slopes at the bootstrap-t slope hull (models; compute),0.62; 0.17,0.584; 0.159,True,"informational: R2 does not state this variant's slope range; the reconstruction (t-interval levels with Comma, slopes at the hull of version 3's bootstrap-t intervals) gives the value shown"
+"R2 NM1: PI-1 plus Comma on its t-interval, PI-1's slope range (models; compute)",0.84; 0.48,0.844; 0.477,True,added by WP4a-review
+primary units file: same partition of the models as rb2's units_subgroup.csv,True,True,True,informational (WP4a-review); a different partition changes only the decision rows
+curvature inside the designs: t of the quadratic term (Chinchilla; Llama 3; Marin),informational,7.15; 2.39; -3.11,True,linear paths rejected at 5 percent where |t| is large; with Chinchilla and Llama 3 continued at their top-budget local slopes the share of models is 0.753 (compute 0.198); added by WP4a-review
+"S1 shares (models, decisions, compute) under three other seeds","(0.7792, 0.6939, 0.2373)","[(0.7792, 0.6939, 0.2373), (0.7792, 0.6939, 0.2373), (0.7792, 0.6939, 0.2373)]",True,Marin's and Chinchilla's critical values are the normal-theory ones; Llama 3 binds only the lower end
+no model identified as w < 1 in any identified set at tau = 1 (comparison-only sets excluded),0,0.0,True,[review] Marin's band alone (comparison only) identifies w < 1 for some large models
+model shares do not depend on the units file,,,True,by construction: units enter only unit_frame
+"no em dash in generated files, memos and code",none,none,True,

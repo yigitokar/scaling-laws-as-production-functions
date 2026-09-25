@@ -1,0 +1,105 @@
+{
+ "g_hat": 5.06181663761696,
+ "C_now": 9.398037560015233e+26,
+ "mD0": 1.2508928117367921,
+ "wF0": 1.2109105903868502,
+ "g_w": 1.8575361699154302,
+ "g_w_ci": [
+  0.9612472490583075,
+  3.544283054712018
+ ],
+ "w_target": 5.384300243966818,
+ "w_agg25_grid": 5.38,
+ "units_file": "data/processed/rb5_units/units_primary.csv",
+ "n_units": 49,
+ "ra1_budgets_file": "data/processed/rb4_chinflop/override_new_isoflop_budgets.csv",
+ "usd_per_flop": {
+  "amortized": 1.0154157441105432e-18,
+  "cloud": 3.772128734980443e-18
+ },
+ "vintage": [
+  {
+   "sample": "Database of 31 May 2024",
+   "growth": 4.131088967828056,
+   "growth_lo": 3.7467149380205,
+   "growth_hi": 4.5540759616858395
+  },
+  {
+   "sample": "Database of 31 May 2024, notable models only",
+   "growth": 4.158764778516775,
+   "growth_lo": 3.7265556489388785,
+   "growth_hi": 4.6310539974182205
+  },
+  {
+   "sample": "31 May 2024 + compute revisions to Sep. 2026",
+   "growth": 4.7601682764212,
+   "growth_lo": 3.6928455127759148,
+   "growth_hi": 6.130413137115924
+  },
+  {
+   "sample": "31 May 2024 + compute revisions to Sep. 2026, notable models only",
+   "growth": 4.663041597428693,
+   "growth_lo": 3.447241544953232,
+   "growth_hi": 6.383746428928559
+  },
+  {
+   "sample": "31 May 2024 + entries added after May 2024",
+   "growth": 4.4579973372694575,
+   "growth_lo": 3.7701974268357,
+   "growth_hi": 5.286583111753731
+  },
+  {
+   "sample": "31 May 2024 + entries added after May 2024, notable models only",
+   "growth": 4.452745174057006,
+   "growth_lo": 3.7250414466079795,
+   "growth_hi": 5.327007205044016
+  },
+  {
+   "sample": "Database of 23 Sep. 2026",
+   "growth": 5.2261092204731465,
+   "growth_lo": 4.022991912762177,
+   "growth_hi": 6.797665325653781
+  },
+  {
+   "sample": "Database of 23 Sep. 2026, notable models only",
+   "growth": 4.947229687373921,
+   "growth_lo": 4.068393150581114,
+   "growth_hi": 6.0128260988418685
+  },
+  {
+   "sample": "Database of 23 Sep. 2026, Jan. 2018 to Sep. 2026 (Section V)",
+   "growth": 5.06181663761696,
+   "growth_lo": 4.268007997361104,
+   "growth_hi": 6.023543784980856
+  }
+ ],
+ "vintage_decomposition": [
+  {
+   "component": "total",
+   "dln_growth": 0.23512602150495088,
+   "factor": 1.2650681844842484,
+   "share": 1.0
+  },
+  {
+   "component": "revisions",
+   "dln_growth": 0.15035470182093202,
+   "factor": 1.1622464205455898,
+   "share": 0.6394643215522027
+  },
+  {
+   "component": "additions",
+   "dln_growth": 0.08477131968401885,
+   "factor": 1.0884681270004612,
+   "share": 0.3605356784477973
+  }
+ ],
+ "gamma_recommended": {
+  "gamma": 0.1654426056376968,
+  "se": 0.0058578884386106,
+  "mult_halving": 65.99991355863654,
+  "mult_lo": 50.28800040956772,
+  "mult_hi": 90.20561174054559,
+  "years_4p2": 2.919447153444343,
+  "years_5p06": 2.5834542233384528
+ }
+}

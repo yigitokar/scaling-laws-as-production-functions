@@ -1,0 +1,2 @@
+lo,hi,primary,se_path,variants
+0.663833,0.726784,0.706612,0.00483939,"primary (CV bandwidth, n_eff >= 15): 0.7066; n_eff >= 25: 0.7066; bandwidth x 1.5: 0.7255; bandwidth x 2: 0.7268; h_N x 0.75 (h_D unchanged): 0.6828; extended-grid CV optimum: 0.6638"

@@ -1,4 +1,6 @@
 % Online Appendix Table F4: parameter-count conventions and mixture-of-experts bounds
+% [round 3, WP4b, fix list W24(b)] Panel A on the audited token counts: output/tables/rb2_decisions_conventions.csv
+% (Farseer total-count and MiniCPM rows changed; the other five rows are unchanged).
 % (output/tables/ra2_wedge_conventions.csv; ra2_wedge_models.csv columns w_chin_q, wtotalN_chin_q). Writer appendix_D_F.
 \begin{table}[tp]
 \centering
@@ -14,11 +16,11 @@ Technology & Convention of $N$ & $w$ & head FLOPs & $w>1$ & $s$ & $N<1$B ($n=8$)
 \midrule
 Chinchilla, $\kappa$ free (reference) & Total & 3.99 &  & 0.97 & 0.75 & 15.10 \\
 Chinchilla, $\kappa=1$ & Total & 3.34 &  & 1.00 & 0.70 & 9.96 \\
-Farseer, $\kappa=1$ & Total & 2.64 &  & 0.88 & 0.62 & 10.67 \\
+Farseer, $\kappa=1$ & Total & 2.50 &  & 0.88 & 0.60 & 10.67 \\
 Chinchilla, $\kappa=1$ (refit) & Non-embedding & 3.65 & 3.74 & 1.00 & 0.73 & 9.13 \\
 Farseer, $\kappa=1$ & Non-embedding & 2.74 & 2.86 & 1.00 & 0.63 & 6.85 \\
 Farseer, $\kappa$ free & Non-embedding & 3.91 & 4.15 & 1.00 & 0.74 & 14.26 \\
-MiniCPM (published law) & Non-embedding & 1.20 & 1.27 & 0.64 & 0.17 & 3.04 \\
+MiniCPM (published law) & Non-embedding & 1.17 & 1.24 & 0.62 & 0.14 & 3.04 \\
 \end{tabular*}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrrr@{}}
 \midrule
@@ -45,7 +47,7 @@ Median (12 models) & & & & 5.14 & 2.07 & 0.80 & 0.52 \\
 \end{tabular*}
 \par\smallskip
 \begin{tablenotes}
-Panel A: medians over the clean inference-demand sample, each technology evaluated at the model's own count in the
+Panel A: medians over the clean sample (audited token counts), each technology evaluated at the model's own count in the
 technology's convention (non-embedding counts from each model's configuration file). With the output head counted in
 FLOPs, the lifetime-to-training ratio for a non-embedding technology is $w(1+N_{\rm head}/N_{\rm ne})$. Last column:
 the eight clean models below one billion parameters; comparing like with like, the non-embedding count lowers their
@@ -56,6 +58,6 @@ as parameter-augmenting and overstates its wedge; at total parameters it ignores
 two columns bound the wedge under a dense technology; neither is an estimate from a mixture-of-experts scaling law.
 \end{tablenotes}
 \begin{tablenotes}[Source]
-Model cards, technical reports and Hugging Face configuration files; authors' calculations.
+Model cards, technical reports and Hugging Face configuration files; author's calculations.
 \end{tablenotes}
 \end{table}

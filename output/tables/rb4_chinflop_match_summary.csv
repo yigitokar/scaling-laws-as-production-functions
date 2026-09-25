@@ -1,0 +1,2 @@
+n_runs,n_profile,models_matched,models_matched_profile,max_abs_log_err,p99_abs_log_err,median_abs_log_err,max_match_ratio,n_ambiguous,n_ambiguous_profile,smallest_model_M,largest_model_M,arxiv_sha256,transcription_source_present,transcription_a9_rows,transcription_a9_equal,transcription_a4_equal
+245,137,43,35,0.00584599,0.00245071,0.000275802,0.0757981,0,0,57,16183,6571e76a9ec57ab9d52cef6ff62e01887306c1c549a57eb148f9a407c57d9900,True,50,True,True

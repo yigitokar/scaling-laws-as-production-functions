@@ -1,0 +1,31 @@
+check,claim,passed,metric
+A.interior.delta=mD=0,"interior optimum: w = (1+delta+m_N)/(1+m_D), v_N = m_N",True,w=3.813767 formula=3.813767
+A.sizecap.delta=mD=0,"size cap: w = (1+delta+v_N)/(1+m_D), nu_N = xi/X_T (KKT = envelope), sign of nu_N",True,w=5.425618 formula=5.425618 nu_N=2.3945 xi_env/xi_kkt=1.000000; w-1=4.4256 = v_N=4.4256 >= m_N=2.0311
+A.sizefloor.delta=mD=0,"size floor: w = (1+delta+v_N)/(1+m_D), nu_N = xi/X_T (KKT = envelope), sign of nu_N",True,w=2.677004 formula=2.677005 nu_N=-2.2338 xi_env/xi_kkt=1.000000
+A.latency.delta=mD=0,latency objective: case (b) with nu_N = ell*xi_Z/X_T,True,w=5.056764 formula=5.056764 nu_N=1.8894
+A.menucap.delta=mD=0,size menu (menu binds as a cap): w-1 identifies v_N whatever the sign of the menu's shadow value,True,w=4.712767 formula=4.712766 nu_N=1.3996
+A.menufloor.delta=mD=0,size menu (menu binds as a floor): w-1 identifies v_N whatever the sign of the menu's shadow value,True,w=3.195849 formula=3.195849 nu_N=-1.1199
+A.tokencap.delta=mD=0,token cap: w = (1+delta+v_N)/(1+m_D+mu); w-1 bounds v_N from below,True,w=2.981990 formula=2.981989 mu=0.8911 env/kkt=1.000000 v_N=4.6391
+A.bothcaps.delta=mD=0,size and token caps both bind: w = (1+delta+v_N)/(1+m_D+mu); w-1 <= v_N,True,w=3.646305 formula=3.646305 nu_N=3.2598 mu=1.3195
+"A.interior.delta=0.08,qD>0","interior optimum: w = (1+delta+m_N)/(1+m_D), v_N = m_N",True,w=3.340004 formula=3.340005
+"A.sizecap.delta=0.08,qD>0","size cap: w = (1+delta+v_N)/(1+m_D), nu_N = xi/X_T (KKT = envelope), sign of nu_N",True,w=4.524271 formula=4.524271 nu_N=3.8042 xi_env/xi_kkt=1.000000
+"A.sizefloor.delta=0.08,qD>0","size floor: w = (1+delta+v_N)/(1+m_D), nu_N = xi/X_T (KKT = envelope), sign of nu_N",True,w=2.416288 formula=2.416288 nu_N=-2.7341 xi_env/xi_kkt=1.000000
+"A.latency.delta=0.08,qD>0",latency objective: case (b) with nu_N = ell*xi_Z/X_T,True,w=4.265342 formula=4.265343 nu_N=2.9017
+"A.menucap.delta=0.08,qD>0",size menu (menu binds as a cap): w-1 identifies v_N whatever the sign of the menu's shadow value,True,w=4.017621 formula=4.017621 nu_N=2.0819
+"A.menufloor.delta=0.08,qD>0",size menu (menu binds as a floor): w-1 identifies v_N whatever the sign of the menu's shadow value,True,w=2.847423 formula=2.847423 nu_N=-1.4413
+"A.tokencap.delta=0.08,qD>0",token cap: w = (1+delta+v_N)/(1+m_D+mu); w-1 bounds v_N from below,True,w=2.627585 formula=2.627585 mu=1.3466 env/kkt=1.000000 v_N=6.2135
+"A.bothcaps.delta=0.08,qD>0",size and token caps both bind: w = (1+delta+v_N)/(1+m_D+mu); w-1 <= v_N,True,w=3.193345 formula=3.193345 nu_N=4.1854 mu=1.8288
+B.remark.Dstar,family optimum (sizes interior): sum pi(1+v_N) = W_H; member inversions T_hat/T,True,"inversions 6.901, 2.277, 0.651; lhs=7.370321 rhs=7.370319"
+B.cap30,"token cap at 30% of D*: sum pi(1+v_N) = (1+mu)W_H; member bound w_i-1 <= v_N,i iff rho_i >= 1",True,"mu=3.6034 lhs=21.293227 rhs=21.293227 rho=[0.917, 2.292, 7.108] w-1=[4.676, 4.327, 3.082] v_N=[4.203, 11.208, 28.02] violators=1"
+B.cap50,"token cap at 50% of D*: sum pi(1+v_N) = (1+mu)W_H; member bound w_i-1 <= v_N,i iff rho_i >= 1",True,"mu=1.3784 lhs=13.369382 rhs=13.369382 rho=[0.499, 1.187, 3.598] w-1=[6.058, 5.51, 3.95] v_N=[2.522, 6.725, 16.812] violators=1"
+B.cap80,"token cap at 80% of D*: sum pi(1+v_N) = (1+mu)W_H; member bound w_i-1 <= v_N,i iff rho_i >= 1",True,"mu=0.3159 lhs=8.879775 rhs=8.879775 rho=[0.295, 0.66, 1.941] w-1=[7.73, 6.882, 4.929] v_N=[1.576, 4.203, 10.507] violators=2"
+B.remark.viol,"one of three members violates the member bound at 30 and 50 percent, two at 80 percent",True,"{0.3: 1, 0.5: 1, 0.8: 2}"
+B.iii.Bes.cD0,"Besiroglu, m_D = 0, D chosen, member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D)W_H; xi_cap > 0 > xi_floor",True,"lhs=6.051455 rhs=6.051456 D-FOC resid=-2.4e-07 nu_N=[3.3775, -0.0, -4.3506]; sum pi v_N=5.05145 = W_H-1=5.05146 (sum pi m_N=8.39018)"
+B.vi.Bes.cD0,"Besiroglu, token cap binds with member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D+mu)W_H; member w_i <= (1+v_N,i)/(1+m_D) iff rho_i >= 1+m_D",True,"mu=0.9817 lhs=9.946819 rhs=9.946820 rho=[1.03, 1.121, 2.363]"
+B.iii.Bes.cD1,"Besiroglu, m_D > 0, D chosen, member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D)W_H; xi_cap > 0 > xi_floor",True,"lhs=10.295925 rhs=10.295926 D-FOC resid=-2.3e-07 nu_N=[4.659, -0.0, -7.7206]"
+B.vi.Bes.cD1,"Besiroglu, token cap binds with member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D+mu)W_H; member w_i <= (1+v_N,i)/(1+m_D) iff rho_i >= 1+m_D",True,"mu=2.1369 lhs=17.017328 rhs=17.017329 rho=[1.949, 2.434, 5.163]"
+B.iii.ref.cD0,"reference (kappa free), m_D = 0, D chosen, member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D)W_H; xi_cap > 0 > xi_floor",True,"lhs=7.366564 rhs=7.366565 D-FOC resid=-1.2e-07 nu_N=[3.6953, -0.0, -5.3542]; sum pi v_N=6.36656 = W_H-1=6.36657 (sum pi m_N=10.57886)"
+B.vi.ref.cD0,"reference (kappa free), token cap binds with member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D+mu)W_H; member w_i <= (1+v_N,i)/(1+m_D) iff rho_i >= 1+m_D",True,"mu=1.0415 lhs=12.070504 rhs=12.070505 rho=[0.861, 1.079, 2.486]"
+B.iii.ref.cD1,"reference (kappa free), m_D > 0, D chosen, member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D)W_H; xi_cap > 0 > xi_floor",True,"lhs=11.944393 rhs=11.944393 D-FOC resid=-1.4e-07 nu_N=[5.1026, -0.0, -8.9443]"
+B.vi.ref.cD1,"reference (kappa free), token cap binds with member 1 capped and member 3 at a floor: sum pi(1+v_N) = (1+m_D+mu)W_H; member w_i <= (1+v_N,i)/(1+m_D) iff rho_i >= 1+m_D",True,"mu=2.1586 lhs=19.623349 rhs=19.623350 rho=[1.622, 2.242, 5.178]"
+B.sizecap.member,cap on tokens and a size cap on member 1: with rho_1 >= 1 its w-1 bounds v_N (not m_N),True,rho_1=1.005 w-1=8.004 v_N=8.047 m_N=2.522

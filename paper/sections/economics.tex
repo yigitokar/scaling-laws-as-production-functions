@@ -1,133 +1,112 @@
 % =====================================================================================================
-% Section V: Economic Implications. Writer: economics writer (v2), 2026-09-24.
-% Module ra3_econ (memo + review). Numbers and sources: paper/notes/writer2_economics.md
+% Section V: Economic Implications. Writer: economics writer (v3), 2026-09-24; round-3 revision by WP5, 2026-09-25
+% (fix list E1-E3: 49 budget-level decision units, trend variants, fleet share moved to Online Appendix F).
+% Module rb3_econ2 (memo output/memos/rb3_econ2.md; round-3 changes in output/memos/rb5_econ.md).
+% Table 3 = paper/tables/table3_econ.tex (copy of output/tables/rb3_econ2_table.tex). The economics figure and three
+% supporting tables are in the Online Appendix (sections/appendix_econ.tex). Numbers and sources:
+% paper/notes/round3_WP5_log.md. Version 2 of this file: sections/v2/economics.tex.
 % =====================================================================================================
 
 \section{Economic Implications}\label{sec:econ}
 
-Three economic questions turn on the objects estimated in Sections~\ref{sec:tech} and~\ref{sec:wedge}: how fast the
-demand for training data grows, what a binding limit on unique text costs, and how much of AI compute goes to serving
-models rather than training them. Each loads on a different object. The allocation exponent $a$, the least portable
-object, governs the first. The curvature $\sigma^*$, the best-measured object, barely matters for the second. The
-level of the third rests on the zero point $M^*(C)$. Table~\ref{tab:econ} and Figure~\ref{fig:econ} collect the
-numbers.
+Three economic questions turn on the objects of Sections~\ref{sec:tech} and~\ref{sec:wedge}: how fast frontier
+training's demand for data grows, what a limit on unique text costs, and how the returns to compute should enter models
+of growth. The answers load on different objects, and the object on which the designs agree most closely matters least.
+Compute-optimal data demand depends on the allocation exponent $a$ and the compute-optimal ratio $M^*(C)$, not on
+$\sigma^*$; the cost of a data wall depends mainly on how fast repeated data lose value. The curvature sets the scale of
+the revealed value of compactness, and it converts that value into data: at given compute $D/D^*(C)=[M/M^*(C)]^{1/2}$,
+so by equation~\eqref{eq:wM} a model with wedge $w$ processes
+\begin{equation}\label{eq:econ-DD}
+\frac{D}{D^*(C)}=w^{\sigma^*/[2(1-\sigma^*)]}
+\end{equation}
+times the compute-optimal tokens.
 
 \subsection{The Growth of Data Demand}\label{sec:econ-demand}
 
-Along the expansion path, compute-optimal data grow as $D^*(C)\propto C^{1-a}$, where $a$ is the compute elasticity of
-the optimal model size (Proposition~\ref{prop:duality}). Frontier training compute has grown 5.1-fold a year since
-2018 (95 percent confidence interval 4.3 to 5.9), close to the four- to fivefold rate reported by
-\citet{sevilla2024training}.\footnote{We regress $\log_{10}C$ on the release date of the running top-ten training runs
-in \citet{epochai2026data} (snapshot of September 23, 2026; 92 runs, 2018--2026); the interval is a wild cluster
-bootstrap over 27 developers \citep{webb2023reworking}. Excluding runs whose compute Epoch rates as speculative gives
-4.8-fold. For January 2018 to May 2024 we obtain 5.2-fold, against Epoch's published 4.2-fold, probably a vintage
-effect of the database.} Across ten technologies, $a$ runs from 0.36 (Farseer's own form, locally at $10^{22}$ to
-$10^{23}$ FLOP) to 0.57 (the RefinedWeb sweep of \citealt{gadre2024language}). Compute-optimal data demand therefore
-grows 2.0-fold to 2.8-fold a year, or 34-fold to 183-fold over five years; $\sigma^*$ does not enter. The level is not
-portable either: at the fitted frontier compute of September 2026, $9.4\times10^{26}$ FLOP, compute-optimal data range
-from 9 to 519 trillion tokens. The designs of Section~\ref{sec:tech} agree on curvature but not on the expansion
-path, and that disagreement becomes a factor of more than five in five-year data needs.
+Along the expansion path, compute-optimal data grow as $D^*(C)\propto C^{1-a}$. Frontier training compute grew
+5.06-fold a year from 2018 to 2026 on the current Epoch AI database (95 percent confidence interval 4.27 to 6.02),
+faster than the 4.2-fold rate that \citet{sevilla2024training} published for 2018 to May 2024; the difference is a
+vintage effect, and we report both rates.\footnote{We regress $\log_{10}C$ on release date for the running top ten of training compute at release in \citet{epochai2026data} (92 runs by 27 developers), with a wild
+cluster bootstrap-$t$ interval by developer \citep{webb2023reworking}. On Epoch's public file of May 31, 2024
+\citep{epochai2024dataarchive}, the same estimator gives 4.13-fold for January 2018 to May 2024, against 5.23-fold on
+the current file for the same window; revised compute estimates explain 64 percent of that gap and entries added later
+the rest (Online Appendix Table~\ref{tab:app-econ-growth}).} Across technologies, $a$ runs from 0.36 (Farseer's own
+form, beyond its design) to 0.57 (the RefinedWeb sweep of \citealt{gadre2024language}), so compute-optimal data demand
+grows 2.0-fold to 2.8-fold a year at 5.06-fold compute growth and 1.9-fold to 2.5-fold at the published rate
+(Table~\ref{tab:econ}, panel~A). The top of these ranges rests on two imprecise slopes, Farseer's and the OLMo
+ladder's; the model-free IsoFLOP paths of Section~\ref{sec:tech} give 2.3-fold to 2.9-fold. Levels are not portable
+either: at the fitted frontier compute of September 2026, $9.4\times10^{26}$ FLOP, compute-optimal data range from 9
+to 519 trillion tokens.
 
-These forecasts bear on whether frontier training will exhaust public text, whose quality-adjusted stock
-\citet{villalobos2022run} put at about 100 trillion tokens in 2024 (95 percent interval 22 to 490 trillion). Because
-the technologies disagree about levels, we anchor each at the data use of the four disclosed dense training runs above
-$10^{25}$ FLOP. Frontier runs then reach 100 trillion unique tokens between mid-2026 and late 2027 under every
-technology, and the repetition-adjusted stock of 320 trillion tokens between late 2027 and mid-2029, close to Villalobos
-et al.'s median of 2028 (Figure~\ref{fig:econ}, panel a). The size of the stock dominates the uncertainty: under the
-Chinchilla technology, the 5--95 percent range of the first date runs from 2025.7 to 2029.4, whereas $a$ moves the dates
-by only about a year.
+We therefore anchor each technology at the observed data use of the four disclosed dense training runs above $10^{25}$
+FLOP, whose median lies close to the expansion path ($w=1.21$ under the reference). Frontier runs then reach the
+quality-adjusted stock of public text, about 100 trillion tokens \citep{villalobos2022run}, between 2026.6 and 2027.8
+across technologies at 5.06-fold compute growth, and the repetition-adjusted stock of 320 trillion tokens between 2027.8
+and 2029.6 (2028.0 and 2030.0 at the published rate). The stock's size matters more than $a$: at its lower bound,
+today's frontier runs already process 2.2 to 4.9 times the stock.
+
+\textit{Rising wedges.} These forecasts hold the frontier's data multiple $D/D^*$ fixed, but the wedges revealed by
+open-weight releases rose. Under the reference technology, a regression of $\ln w$ on release date over the 49 decision
+units gives growth of 1.86-fold a year from 2023 to 2025 (95 percent confidence interval 0.96 to 3.54). If the frontier
+adopts this trend, a scenario across populations since the trend comes mostly from small models,
+equation~\eqref{eq:econ-DD} makes its data multiple grow 2.06-fold a year at $\sigma^*=0.70$, and frontier data demand
+4.6-fold a year rather than 2.2-fold (Table~\ref{tab:econ}, panel~B). At the point estimate the wedge trend adds about
+as much to the growth of data demand as compute growth does, but its interval includes no growth, as do those of the
+trends within developers, above $10^{24}$ FLOP and weighted by compute (1.59-fold, 1.76-fold and 2.21-fold a year).
+Extrapolating the trend in $M/M^*(C)$ instead needs no curvature and gives 1.97-fold to 2.38-fold a year for the data
+multiple over the 77 models under the 32 technologies (2.24 under the reference); the $\sigma^*$ rows of panel~B
+convert a projected value of compactness into data and are not a forecast interval. If the rise stops at the 2025
+compute-weighted wedge of the decision units, 5.38, which rests largely on Alibaba's Qwen3, five-year frontier data
+demand is 171 to 468 times today's (114 to 215 without Alibaba), against 56 times with the wedge held.
 
 \subsection{The Data Wall}\label{sec:econ-wall}
 
-A data wall concerns unique tokens, whereas $D$ counts tokens processed, including repetitions. We therefore combine
-the technology with the repetition model of \citet{muennighoff2023scaling}, in which repeated tokens lose value
-exponentially: effective data are $D'=U+UR^*_D(1-e^{-R/R^*_D})$, where $U$ is unique tokens, $R=D/U-1$ the number of
-repetitions, and $R^*_D=15.4$ their estimated decay scale. Scarcity is $r\equiv D^*(C)/U$, the ratio of
-compute-optimal to unique tokens; the cost of a cap on $U$ and the shadow value of a unique token,
-$-\partial C/\partial U$ at fixed loss, depend on $r$ alone (Table~\ref{tab:econ}, panel B).
+A data wall concerns unique tokens $U$, whereas $D$ counts tokens processed, including repetitions. We combine the
+technology with the repetition model of \citet{muennighoff2023scaling}, in which effective data are
+$D'=U+UR^*_D(1-e^{-R/R^*_D})$ with $R=D/U-1$ repetitions: the data-decay scale $R^*_D=15.4$ alone is the most favorable
+case, their data-only fit has $R^*_D=2.9$, and in their full model excess parameters also lose value. The cost of the
+wall is the increase in lifetime cost, training plus a value of compactness proportional to $N$ that reproduces the
+developer's wedge, at the loss of its unconstrained choice; for a compute-optimal run it depends on scarcity
+$r\equiv D^*(C)/U$ alone. At $r=4$ it is
+7.7, 7.4 and 7.2 percent for $\sigma^*=0.60$, 0.70 and 0.74 if repeated data decay slowly, but 51, 40 and 35 percent
+under the data-only fit (Table~\ref{tab:econ}, panel~C). The repetition technology, not the curvature, drives the cost of the wall.
 
-The curvature barely matters. At $r=4$, reaching the unconstrained frontier loss costs 7.2 percent more compute under
-the Chinchilla refit with $\kappa=1$ ($\sigma^*=0.74$), 7.4 percent with $\kappa$ free ($\sigma^*=0.70$), and 7.7
-percent under a member of the $\kappa=1$ refit's observationally equivalent family that shares its expansion path and
-frontier but has $\sigma^*=0.60$ (Proposition~\ref{prop:ident}). Curvature matters only near the hard wall, the
-scarcity beyond which the frontier loss is unattainable: $r=117$, 83, and 47 for the three technologies. The repetition
-technology matters far more. Our primary specification, which uses Muennighoff et al.'s data-decay scale without their
-decay of excess parameters, is the most favorable case. Under their full model, in which excess parameters also lose
-value, the cost at $r=4$ is 43 percent and the hard wall falls to $r\approx9$; the gap between $\sigma^*=0.74$ and 0.70
-stays small (43 versus 40 percent).
+Over-training brings the wall forward. A model with the 2025 aggregate wedge processes about 7.2 times the
+compute-optimal tokens at given compute, and at $r=4$ it pays 16 percent more lifetime cost rather than 7.4 (Online
+Appendix Table~\ref{tab:app-econ-wall}). Today's frontier runs, at their observed data use, process 0.5 to 1.1 times the
+100-trillion-token stock, so the wall costs them less than 0.1 percent. It binds within the forecast horizon: with the
+wedge held and 5.06-fold compute growth, frontier runs process 3.5 times the stock in 2029, and the wall costs 4.6
+percent of lifetime cost if repeated data decay slowly (about \$2 billion at \$$10^{-18}$ per FLOP, the median amortized
+cost of 2024--2025 frontier runs; \citealp{epochai2026data}) and 23 percent under the data-only fit. With the wedge
+rising, they process 18 times the stock, at a cost of 10.4 or 48 percent. At the 2026 frontier, the shadow value of a
+unique token exceeds posted prices of generated tokens \citep{deepseek2026pricing} once compute-optimal data exceed 1.5
+to 2.9 times the stock, a lower bound because synthetic tokens are imperfect substitutes (Online Appendix
+Table~\ref{tab:app-econ-gamma}).
 
-The elasticity that governs the wall is thus not $\sigma^*$, which describes substitution between parameters and tokens
-processed, but the elasticity of substitution between compute and unique tokens, which combines $\sigma^*$ with the
-returns to repetition. Under Muennighoff et al.'s estimates it rises from 0.28 to 0.58 as $r$ increases from 1.5 to
-16, almost independently of $\sigma^*$; it is implied by the two models, not estimated. Behind the wall the return to
-compute falls, but slowly: the compute elasticity of reducible loss is $0.95\gamma$ at $r=4$ and $0.82\gamma$ at
-$r=16$, where $\gamma$ is the frontier elasticity. Whether the wall binds today depends on $M^*$ rather than
-$\sigma^*$: at the 2026 frontier, compute-optimal $r$ against a 100-trillion-token stock ranges from 0.09 to 5.2 across
-technologies, while frontier runs at observed data use process 0.6 to 1.2 times the stock.
+\textit{Feedback on measured wedges.} A binding cap on tokens adds a term to the denominator of the wedge
+(Proposition~\ref{prop:wedge}(iii)), so measured wedges understate the value of compactness as the wall approaches. When
+a developer with the 2025 aggregate wedge would process four times the unique stock, its measured wedge falls short of
+the wedge it would reveal without the wall by 4 percent if repeated data decay slowly, by 15 percent under the data-only
+fit and by 53 percent under a hard cap (Online Appendix Table~\ref{tab:app-econ-wall}, panel~B). As releases approach
+the stock, measured wedges should therefore flatten even if the value of compactness keeps rising, so a flattening among
+2026 and 2027 releases would not by itself show that compactness has become less valuable (except under the
+full repetition model; Online Appendix~\ref{app:econ}).
 
-At $10^{26}$ FLOP and $r=4$, a unique token is worth 0.43 of the compute cost of processing one token: about \$3 per
-million tokens at \$$10^{-18}$ per FLOP, the median amortized hardware and energy cost of 2024--2025 frontier runs
-\citep{epochai2026data}. At $r=16$ it is worth \$88 per million; at $r\le1$, nothing (Figure~\ref{fig:econ}, panel c).
-These are private values to one run; because data are nonrival \citep{jones2020nonrivalry}, a token that several
-developers use is worth more to society.
-
-Where $\sigma^*$ does matter is in translating serving demand into data demand. At given compute, a model with wedge
-$w$ uses $D/D^*(C)=w^{\sigma^*/[2(1-\sigma^*)]}$ times the compute-optimal data, because
-$\ln w=(1/\sigma^*-1)\ln[M/M^*(C)]$ in the $\kappa$ family (Proposition~\ref{prop:modelfree}). At $w=3$ the multiple is 4.7 under $\sigma^*=0.74$ but 2.3 under $\sigma^*=0.60$.
-Forecasts that start from observed tokens per parameter do not depend on $\sigma^*$; forecasts that start from
-projected serving demand do.
-
-\input{tables/table4_econ}
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=\textwidth]{ra3_econ_figure}
-\caption{Data Demand, the Data Wall, and the Shadow Value of Data}\label{fig:econ}
-\begin{figurenotes}
-Panel a: training tokens of frontier runs, 2020--2032, anchored at the data use of disclosed dense frontier runs
-(``obs.\ $M$'' in Table~\ref{tab:econ}) and growing at $5.06^{1-a}$ per year, for four allocation exponents $a$. Gray
-dots: dense models in the verified sample above $10^{24}$ FLOP. Solid and dashed gray lines: the quality-adjusted
-(100T) and repetition-adjusted (320T) stocks of public text of \citet{villalobos2022run}, growing 5 percent per year;
-shading: the 95 percent interval of the unique stock with stock growth between 0 and 10 percent. Panel b: extra compute
-needed to reach the unconstrained frontier loss as a function of scarcity $r=D^*(C)/U$, under data-only repetition
-($R^*_D=15.4$) for the Chinchilla refit with $\kappa=1$ ($\sigma^*=0.74$), the refit with $\kappa$ free
-($\sigma^*=0.70$), and the member of the $\kappa=1$ refit's equivalent family with $\sigma^*=0.60$; and, for
-$\kappa=1$, under the full repetition model of \citet{muennighoff2023scaling} (dashed) and their data-only fit
-(dash-dotted). Dotted vertical line: the hard wall $r_{\max}=47$ for $\sigma^*=0.60$ (the others lie beyond the axis).
-Panel c: shadow value of a unique token, $-\partial C/\partial U$ at fixed loss, in units of the compute cost of
-processing one token.
-\end{figurenotes}
-\end{figure}
-
-\subsection{The Serving Share of AI Compute}\label{sec:econ-share}
-
-Aggregated over models, the share $s=(w-1)/w$ of Section~\ref{sec:wedge} measures the value developers placed on
-compact models relative to lifetime cost; for developers that serve their models, it is the planned serving share of
-lifetime cost (Proposition~\ref{prop:wedge}). Weighted by training compute, it rose from 0.04 for open-weight models
-released in 2019--2022 to 0.54 in 2024 and 0.82 in 2025 (Table~\ref{tab:econ}, panel C). Fleet disclosures are of the
-same order: inference took about three-fifths of Google's machine-learning energy in 2019--2021
-\citep{patterson2022carbon}, 70 percent of Meta's AI power capacity \citep{wu2022sustainable}, and about 40 percent of
-Nvidia's data-center revenue in fiscal 2024 \citep{nvidia2024q4call}.
-
-The objects differ, however, and the differences cut against agreement. The share $s$ compares planned serving with a
-model's own final training run, whereas fleet shares mix vintages and include research compute. For OpenAI in 2024,
-press-reported inference spending was about a quarter of all compute spending but four-fifths of inference plus final
-training runs \citep{you2025openai}. Two adjustments convert the 2025 planned
-multiple, $w-1=4.5$, into a fleet share. Fivefold annual growth of training compute roughly halves the serving flow
-relative to current training when models are served for a year, and final training runs account for only 10 to 23
-percent of developers' research compute \citep{denain2026final}. Together they imply fleet shares of 0.18 to 0.34 at
-equal cost per FLOP; the disclosed range is reached only if research compute is small. The comparison is therefore a
-loose check, not a validation. Because the level of $s$ depends on the technology but its rising trend does not
-(Section~\ref{sec:wedge-trends}), $s$ is a revealed-preference indicator of expected deployment---for energy and
-capital-expenditure planning and for the market for inference \citep{demirer2025emerging}---in its trend if not in its
-level.
+\input{tables/table3_econ}
 
 \subsection{Growth Models}\label{sec:econ-growth}
 
-For models of AI and growth that map compute into capability, the relevant elasticity is $\gamma$, not $\sigma^*$:
-near the expansion path, compute is a sufficient statistic for the input bundle (Proposition~\ref{prop:duality}), and
-$\sigma^*$ enters only when the mix is constrained, as behind a data wall. Halving reducible loss requires $2^{1/\gamma}$
-times the compute: 49 times under the Chinchilla refit with $\kappa=1$ ($\gamma=0.178$) and 161 times under Meta's Llama~3 IsoFLOP
-frontier ($\gamma=0.136$), or 2.4 to 3.1 years of frontier compute growth. Integrated-assessment models such as GATE
-\citep{erdil2025gate} map compute into automation through capability thresholds rather than loss, so these numbers
-discipline only their input side.
+For models of AI and growth that map compute into capability, the relevant elasticity is $\gamma$, the compute
+elasticity of reducible loss along the frontier; near the expansion path compute is a sufficient statistic for the
+input bundle, and $\sigma^*$ enters only when the input mix is constrained, as behind a data wall. For calibrations at
+$10^{25}$ to $10^{27}$ FLOP we recommend the reference value, $\gamma=0.165$ (standard error 0.006). Halving reducible
+loss then takes 66 times the compute (95 percent confidence interval 50 to 90), or 2.6 years of frontier compute growth
+at 5.06-fold a year and 2.9 years at 4.2-fold. Because $\gamma$ is cardinal in reducible loss, it needs the irreducible
+loss $E$, and the Chinchilla design \citep{hoffmann2022training} alone has known loss units (it defines its loss as
+per-token log loss on MassiveText, that is, nats per token) and identifies $E$ twice, from off-path runs and from its
+IsoFLOP minima (Online Appendix~\ref{app:econ}); unlike $\sigma^*$, its local $\gamma$ does not drift with compute.
+Other fits, of Chinchilla with $\kappa=1$ and of the Llama~3 and Farseer designs, give 0.14 to 0.18, or 49 to 161 times
+the compute per halving (Online Appendix Table~\ref{tab:app-econ-gamma}). The recommendation extrapolates three to five decades beyond the design, and loss is not capability: at $10^{26}$ FLOP
+reducible loss is about 4 percent of total loss in Chinchilla's units, so a calibration must say which loss it maps into
+output. Integrated-assessment models such as GATE \citep{erdil2025gate} can use these numbers only on their input
+side.

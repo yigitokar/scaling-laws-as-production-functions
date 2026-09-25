@@ -1,0 +1,8 @@
+budget,x_P,unit,source_key,quote
+DeepSeek-V3 (all post-training),0.0018768768768768769,"GPU hours, H800",deepseek_v3_report,"Combined with 119K GPU hours for the context length extension and 5K GPU hours for post-training, DeepSeek-V3 costs only 2.788M GPU hours for its full training."
+Tulu 3 SFT on Llama 3.1 8B (final run),0.0003783571606475716,FLOPs at 40% MFU / 6ND,tulu3_report,The final 8B model is trained on 32 GPUs for 6 hours and the 70B model was trained on 64 GPUs for 50 hours.
+Tulu 3 SFT on Llama 3.1 70B (final run),0.0007172351274787536,FLOPs at 40% MFU / 6ND,tulu3_report,The final 8B model is trained on 32 GPUs for 6 hours and the 70B model was trained on 64 GPUs for 50 hours.
+"Olmo 3 Think 32B, RL (initial release)",0.025887573964497042,GPU days; 224 GPUs,olmo3_report,The final RL runs for the initial Olmo 3 Think 32B spanned approximately 5 days with at least a day of training time lost due to stability issues.
+"Olmo 3.1 Think 32B, RL incl. 21-day continuation",0.1346153846153846,GPU days,olmo3_report,we continued our best RL run for another 21 days on 224 GPUs to produce Olmo 3.1 Think 32B.
+"Olmo 3 Think 32B, all post-training, upper bound",0.21301775147928995,"GPU days; 9 days x 1,024 GPUs",olmo3_report,"Post-training: ∼9 days(SFT, DPO, and RL)"
+"Olmo 3.1 Think 32B, all post-training incl. 21-day continuation, upper bound",0.3217455621301775,"GPU days; 9 days x 1,024 GPUs + 21 days x 224 GPUs",olmo3_report,we continued our best RL run for another 21 days on 224 GPUs to produce Olmo 3.1 Think 32B.

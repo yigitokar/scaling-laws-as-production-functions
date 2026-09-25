@@ -1,0 +1,7 @@
+log10C,est,se_model,lo_model,hi_model,se_cr2,df_cr2,lo_cr2,hi_cr2,clusters,spec
+19,0.712991,0.0136568,0.686224,0.739759,0.00164228,2.65482,0.707359,0.718624,studies (4; Marin one cluster),"3-level RE (design intercepts), inverse-variance (primary)"
+20,0.680212,0.0104459,0.659738,0.700686,0.0129726,2.91237,0.638215,0.722208,studies (4; Marin one cluster),"3-level RE (design intercepts), inverse-variance (primary)"
+21,0.647432,0.0154675,0.617116,0.677748,0.0273607,2.68793,0.55435,0.740514,studies (4; Marin one cluster),"3-level RE (design intercepts), inverse-variance (primary)"
+19,0.712991,0.0136568,0.686224,0.739759,0.00223288,4.28988,0.706954,0.719029,designs (6),"3-level RE (design intercepts), inverse-variance (primary)"
+20,0.680212,0.0104459,0.659738,0.700686,0.0126272,3.88601,0.644744,0.71568,designs (6),"3-level RE (design intercepts), inverse-variance (primary)"
+21,0.647432,0.0154675,0.617116,0.677748,0.0265786,2.84912,0.560256,0.734608,designs (6),"3-level RE (design intercepts), inverse-variance (primary)"

@@ -1,0 +1,4 @@
+family,largest_factor,largest_factor_mc_se,at_cell,at_statistic,at_corpus,applied_factor
+modelfree,1.743444986930914,0.125006106790959,chin_s005_r9,mf_F,edu,1.743444986930914
+q3,1.5034698428098239,0.101996474174263,chin_s002_r5,q3,edu,1.75
+equality,1.6406726604174067,0.10468822605946006,chin_s005_r9,diff_mf_F,edu-web,1.6406726604174067

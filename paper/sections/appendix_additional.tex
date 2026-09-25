@@ -1,445 +1,279 @@
 % =====================================================================================================
-% Online Appendix D: The Technology: Additional Results (v2).
-% Writer appendix_D_F, 2026-09-24. Sources: output/memos/ra1_modelfree (+review), m1_chinchilla, m2_techpanel,
-% m8_measurement (+reviews), ra5_theory; tables in paper/tables/appD_*.tex. Numbers and sources:
-% paper/notes/writer2_appendix_D_F.md.
+% Online Appendix D: The Technology: Additional Results (v3, writer "appendices", 2026-09-24; v2 in paper/sections/v2/).
+% v3: trimmed. Kept: dictionary, Chinchilla estimators and inference, model-free estimator (specification sensitivity),
+% the budget-level estimates and sigma*(C) meta-regression (module rb1_sigmaC; R2 Major 1, R1 New 2, R3 N1), tests across
+% sweeps, the compute cost of over-training (practitioner table), condensed measurement/flexible inputs with the tuning
+% share of Farseer's convexity (rb1; R2 Major 5.2). Dropped to the replication package: tables of exclusion rules,
+% duality, lab-own designs, finite grids, kappa=1 robustness, Farseer functional forms, Porian decomposition, Step Law,
+% and the three figures (their key numbers are in the text). Sources: output/memos/ra1_modelfree, m1, m2, m8,
+% rb1_sigmaC (+ reviews); v2 numbers as audited in round 2 (paper/referee/round2_R4_auditor.md).
+% [rb4 integration, 2026-09-24] Chinchilla in FLOP-effective parameters (rb4_chinflop, + review): D2 text, the new
+% table tables/appD_chinflop (tab:app-chinflop; copy of output/tables/rb4_chinflop.tex with paper-facing notes), and
+% the rb1 numbers regenerated with RB1_CHINCHILLA = rb4. Log: paper/notes/integration_log_rb4.md.
+% [round 3, WP2, 2026-09-25] Items T12 and T14 of paper/notes/round3_fixlist.md: sigma* numbers from module rb5_sigma
+% after its independent review (output/memos/rb5_sigma_review.md, section 8; output/tables/rb5_sigma_*.csv), the Wald test
+% of equal slopes from rb1_sigmaC_metareg_design_slopes.csv (budgets <= 3e20, N_F), the DataDecide final-checkpoint
+% fits from rb5_sigma_dd_tilt.csv (review section 2). Log: paper/notes/round3_WP2_log.md.
 % =====================================================================================================
 
-\section{The Technology: Additional Results}\label{app:additional}
+\section[The Technology: Additional Results]{Appendix \thesection. The Technology: Additional Results}\label{app:additional}
 \setlength{\emergencystretch}{2em}% allow looser lines in the online appendix
 
-This appendix supports Sections~\ref{sec:framework} through~\ref{sec:tech}. Appendix~\ref{app:add-dictionary} gives
-the full dictionary between scaling-law practice and production economics. Appendix~\ref{app:add-chinchilla} reports
-estimators, inference, exclusion rules and duality tests on the Chinchilla data, and the same comparisons on the IsoFLOP
-designs that labs have published. Appendix~\ref{app:add-modelfree} documents the finite-grid properties and the
-specification sensitivity of the model-free estimator of Proposition~\ref{prop:modelfree} and its application to
-Farseer's grid. Appendix~\ref{app:add-tech} collects robustness results for
-the parametric technologies across sweeps, Appendix~\ref{app:add-overhead} translates the elasticity of substitution
-into the compute cost of over-training, and Appendix~\ref{app:add-measurement} treats input measurement and flexible
-inputs.
+This appendix supports Sections~\ref{sec:framework} through~\ref{sec:tech}: a dictionary between scaling-law practice and
+production economics; estimators and inference on the Chinchilla data; the model-free estimator, its budget-level
+estimates and their drift with compute; specification tests across sweeps; the compute cost of over-training; and input
+measurement and flexible inputs.
 
-% -----------------------------------------------------------------------------------------------------
+% =====================================================================================================
 \subsection{A Dictionary}\label{app:add-dictionary}
 
-Table~\ref{tab:app-dictionary} lists nineteen correspondences between scaling-law concepts and concepts of production
-theory and IO econometrics. The entries in panel~A are identities of duality theory once training compute is measured
-by the FLOP-accounting approximation $C\approx6ND$. The others are analogies: the econometric problem is the same, but
-its source can differ.
-
-Three analogies break down. First, parameters and tokens have no market prices. FLOP accounting gives every lab the
-same log-cost weights, which is why optimizing labs share one expansion path, but a FLOP is not a dollar, and
-size-dependent prices of training and serving FLOPs enter the first-order conditions as wedges
-(Proposition~\ref{prop:wedge}). Second, returns to scale measured in loss depend on how output is cardinalized, so
-``diminishing returns to compute'' has no unit-free content; the elasticity of substitution, the optimal mix and the
-wedge do. Third, the inputs of a designed sweep are assigned, not chosen. An IsoFLOP sweep is designed variation in the
-input mix, not a shock to relative prices, and it elicits no behavioral response; the endogeneity machinery of IO
-applies to cross-lab data (Online Appendix~\ref{app:obs}), not to single-lab experiments.
-
-Two correspondences are narrower than their names suggest. The collinearity of inputs along the expansion path is the
-problem of optimizing firms that face common prices \citep{marschak1944random}, in the sharp form of
-\citet{bond2005adjustment}: identification requires relative-price variation, adjustment frictions or optimization
-errors. It is not the functional dependence of \citet{ackerberg2015identification}, which concerns the first stage of
-proxy estimators and arises here only in cross-lab data (Online Appendix~\ref{app:proofs},
-Proposition~\ref{prop:proxy}). And the wedge $w=\varepsilon_N/\varepsilon_D$ is the ratio statistic of
-\citet{raval2023testing} with FLOP-cost weights in place of revenue shares. Raval reads a ratio different from one as
-misspecification; Proposition~\ref{prop:wedge} reads it as a value of compactness. Cross-lab factor bias is therefore
-the first threat to the inversion (Online Appendix~\ref{app:wedge}).
+Table~\ref{tab:app-dictionary} lists nineteen correspondences. Three analogies break down: parameters and tokens have no
+market prices, so size-dependent prices of training and serving FLOPs enter the first-order conditions as wedges; returns
+to scale measured in loss depend on how output is cardinalized, whereas the elasticity of substitution, the optimal mix
+and the wedge do not; and the inputs of a designed sweep are assigned, not chosen, so the endogeneity machinery of IO
+applies to cross-lab data (the companion paper), not to single-lab experiments.
 
 \input{tables/appD_dictionary}
 
-% -----------------------------------------------------------------------------------------------------
+% =====================================================================================================
 \subsection{The Chinchilla Data}\label{app:add-chinchilla}
 
-\emph{Design.}---Epoch AI's digitization of Figure~4 of \citet{hoffmann2022training} contains 245 runs with training
-compute from $1.4\times10^{18}$ to $1.3\times10^{22}$ FLOP \citep{besiroglu2024chinchilla}. Only 137 of them lie on
-the nine IsoFLOP profiles, whose budgets run from $6\times10^{18}$ to $3\times10^{21}$ FLOP. The other 108 are
-off-profile runs that form 35 streaks of fixed model size: the training-horizon runs that Hoffmann et al.\ pool into
-their Approach~3. The baseline sample drops the five highest-loss runs ($n=240$, with 132 profile runs). In it, 33
-percent of the variance of centered $(\ln N,\ln D)$ lies across the expansion path: 37 percent among the profile runs
-and 21 percent among the off-profile runs. The IsoFLOP-minima objects below use the 132 profile runs; the primal uses
-all 240.
+\textit{Estimators and inference.} On the 240-run sample (Online Appendix~\ref{app:chinchilla}; total parameters), Huber loss with
+$\delta=10^{-3}$, the estimator of \citet{besiroglu2024chinchilla}, is least absolute deviations in practice. Least squares,
+on log loss or in levels, gives a larger data exponent (paired differences in $\beta$ of 0.039 and 0.060) and
+compute-optimal ratios at $5.76\times10^{23}$ FLOP lower by 3.7 and 7.6 tokens per parameter. Estimating the loss equation
+jointly with the nine IsoFLOP argmins under the restrictions of Lemma~\ref{lem:alloc} leaves the estimates unchanged
+($p=0.60$). The 41 runs within 0.15 log points of the expansion path carry less than 1 percent of their input variance
+across the path, and the condition number of the Jacobian rises from 62 on the full design to 413 on them, against 69 to 95
+for random subsamples of the same size. The restriction $\kappa=1$ is rejected at 1 percent under every bootstrap scheme
+except nine budget clusters that assign each off-profile run to the nearest budget ($p=0.052$); clustering off-profile runs
+by their model-size trunk gives $p=0.004$ and a 95 percent interval for $M^*(5.76\times10^{23})$ of $[5.2,106]$. The CES
+restriction $\alpha=\beta$ is not rejected at 5 percent by tests robust to the heavy tails of the residuals
+(restricted-bootstrap $p=0.17$ for the Gaussian likelihood ratio; heteroskedasticity-robust Wald $p=0.06$--0.09). With
+$\kappa$ free, the Huber profile over $\sigma^*$ has its minimum at 0.701, with a bootstrap-calibrated 95 percent set of
+$[0.68,0.72]$; on the 41 on-path runs the profile is flat (95 percent set $[0.20,0.99]$ with $\chi^2_1$ critical values,
+the edge of the grid; about $[0.15,0.99]$ with bootstrap critical values). The
+Chinchilla-70B wedge contains one under every scheme, an internal-consistency check with little power because DeepMind
+sized that model on these runs.
 
-\emph{Estimators.}---Table~\ref{tab:app-estimators} fits the Chinchilla form with five estimators. Huber loss with
-$\delta=10^{-3}$ on log loss, the estimator of \citet{besiroglu2024chinchilla}, is least absolute deviations in practice:
-84 percent of its residuals lie in the linear region of the loss, and the two agree to the third decimal. Least squares,
-on log loss or in levels, weights the few large residuals more heavily and gives a larger data exponent; the paired
-differences in $\beta$, 0.039 and 0.060, are two to three bootstrap standard errors. The implied compute-optimal ratios
-at $5.76\times10^{23}$ FLOP are lower by 3.7 and 7.6 tokens per parameter, less than one and a half standard errors.
-Estimating the loss equation jointly with the nine IsoFLOP argmins under the cross-equation restrictions of
-Proposition~\ref{prop:duality} leaves the estimates unchanged; the restrictions are not rejected ($p=0.60$). Panel~B
-restates Proposition~\ref{prop:ident} on these data. The 41 runs within 0.15 log points of the expansion path carry less
-than 1 percent of their input variance across the path, and the condition number of the Jacobian rises from 62 on the
-full design to 413 on them, against 69 to 95 for random subsamples of the same size. In raw parameters the condition
-number of the full design is about 2,000, which is why the standard errors that \citet{besiroglu2024chinchilla} report
-for $A$ and $B$ (125 and 1,293) are large: they measure the levels at $N=D=1$, far outside the design, and are not
-evidence that the design fails to identify the technology.
+\textit{Exclusion rules, duality and lab designs.} As the $j$ highest-loss runs are dropped, $\beta$ falls from 0.453
+with all 245 runs to 0.347 at $j=15$, while $\alpha$ stays between 0.345 and 0.349; the five runs that Besiroglu et al.\ drop
+are data-starved runs whose influence is leverage, not truncation bias (a truncated-Gaussian likelihood,
+\citealp{hausman1977social}, returns the same $\beta$). The Chinchilla-70B wedge is 1.54 with them and 0.95 to 1.06 under
+ten of twelve rules that remove all or most of them (the $j$ highest-loss runs, the largest residuals, or runs with $D/N$
+below 0.4, 1 or 2); dropping the whole $10^{19}$ budget gives 0.78, and the 132 IsoFLOP-profile runs without them give
+1.16. Against design-consistent nulls, which allow for the finite-grid bias of fitted parabolas
+\citep{czech2026problems}, our refit is consistent with the IsoFLOP argmins ($p\ge0.16$). Our argmin fit reproduces Meta's
+Llama~3 law; on its eight bracketed budgets the allocation exponent is 0.50 (a path slope $e_p$ near zero) and $M^*(10^{24})$ is 15
+to 16 instead of 31. For the Marin
+ladders the design-consistent tests do not reject ($p$ between 0.33 and 0.54).
 
-\emph{Inference.}---Table~\ref{tab:app-chin-inference} compares six bootstrap schemes for the Huber refit. Because it
-behaves as a median-type estimator, the wild bootstraps use the weights of \citet{feng2011wild}. The restriction
-$\kappa=1$ is rejected at 1 percent under every scheme except nine budget clusters that assign each off-profile run
-to the nearest budget ($p=0.052$). That assignment is not a model of the
-dependence in the data, because an off-profile run from a $10^{22}$-FLOP trunk is not part of the $3\times10^{21}$
-IsoFLOP experiment. Clustering the off-profile runs by their model-size trunk lowers the standard error of $\beta$ from
-0.050 to 0.042 and moves $p(\kappa=1)$ to 0.004. It also narrows the 95 percent interval for $M^*$ at
-$5.76\times10^{23}$ FLOP from [3.7, 179] to [5.2, 106]. Treating the off-profile runs as singleton clusters gives nearly
-the same answers. Our preferred scheme is the design-conditional wild bootstrap; the budget-and-trunk clusters are the conservative
-check.
+% =====================================================================================================
+\subsection{The Model-Free Estimator and the Elasticity by Compute}\label{app:add-modelfree}
 
-The CES restriction $\alpha=\beta$ is not rejected by any test that is robust to the heavy tails of the residuals, whose
-MAD-based standard deviation is 0.0049 against a standard deviation of 0.0076. The Gaussian likelihood ratio of 10.4 has
-a $\chi^2_1$ $p$-value of 0.001, but its restricted-bootstrap 95 percent critical value is 20.2, not 3.84, which gives
-$p=0.17$. Heteroskedasticity-robust Wald tests give 0.060 and 0.089, so the evidence against CES is borderline at 10
-percent and absent at 5. The Chinchilla-70B wedge contains one under every scheme, and it excludes the values of 0.62
-to 0.71 that Hoffmann et al.'s published parameters imply only under the pairs and wild schemes. Because DeepMind sized
-that model with Approaches 1 and 2 on these same runs, $w(70\text{B})\approx1$ is an internal-consistency check with
-little power, not a test of revealed preference.
+\textit{Specification.} The primary estimator of Section~\ref{sec:tech} fits a quadratic in $\ln N$ to the runs within one
+log point of a pooled IsoFLOP-argmin path, on budgets whose minimum is bracketed by at least two runs on each side, and
+pools budgets by a random-effects mean. By Remark~\ref{rem:A-grid}, the noise-free finite-grid bias of such a quadratic is
+about $-0.003$ in $\sigma^*$ on a grid spanning a factor of 9 in $N$ and below 0.001 on grids narrower than a factor of
+about 3; the primary window spans a factor of $e^2\approx7.4$, and on each design's own fitted technologies the bias is
+at most 0.006. In the specification checks, pooled $F$ tests of a cubic term never reject at 5 percent, and across
+windows, polynomial orders, frontier smoothers and window centering the random-effects $\sigma^*$ ranges over
+0.656--0.702 for Chinchilla (0.665--0.714 in total parameters; 0.58 with the narrowest window, which keeps seven of nine
+budgets), 0.642--0.677 for Llama~3 and 0.66--0.72 for Marin (0.64 with DCLM's narrowest window, which keeps four
+budgets); an independent re-implementation, with Chinchilla in total parameters, gives 0.669--0.694. In a Monte Carlo at
+the fitted $\kappa$-family technologies of Chinchilla (in total parameters), Llama~3 and Marin's DCLM ladder, the
+random-effects interval covers the truth in 93 to 95 percent of 500 replications with a bias of at most 0.006, and in
+93 to 94 percent when half the noise variance is shared within a budget. It covers 90 to 97 percent also when the
+shared half attaches to model size across budgets or to a smooth distortion in size, but such a distortion, which a
+digitized figure can produce, makes the within-design drift test reject a true zero drift 14 to 19 percent of the time
+(200 replications). On a $\kappa$-family fit to Porian et al.'s runs the noise-free bias is about $+0.05$. The estimator needs exact isocosts, so each design is analyzed in FLOP-effective parameters, the
+convention in which its profiles are exact isocosts. On Marin, whose accounting is observed, the configuration count
+gives 0.04 to 0.07 less.
 
-\emph{Profiles.}---Figure~\ref{fig:app-kappa-profile} plots the profile likelihood over $\sigma^*$ with $\kappa$ free,
-relative to the unconstrained optimum. On the full design, the Huber (Laplace quasi-likelihood) profile has its minimum
-at $\hat\sigma^*=0.701$ and a $\chi^2$-based 95 percent set of [0.69, 0.71]. A restricted wild bootstrap of the
-statistic widens the set to [0.68, 0.72] and rejects the value that $\kappa=1$ implies, 0.74 (likelihood ratio 29.0,
-$p=0.003$, the smallest value the bootstrap can deliver). The Gaussian profile has its minimum at 0.680 and a set of
-[0.67, 0.69], which belongs with the Gaussian point estimate rather than the Huber one. On the 41 runs within 0.15 log points of the expansion path,
-the profile is flat: the quasi-likelihood ratio stays below 1.21 between 0.25 and 0.94, and the 95 percent set reaches
-the upper edge of the grid. On-path runs carry no information about $\sigma^*$, as Proposition~\ref{prop:ident}
-implies.
+\textit{FLOP accounting.} If FLOPs per token of the measured parameter count vary with size with elasticity $\eta$, a
+design's $\sigma^*$ shifts by about $0.44\eta$. Meta's accounting is unobserved, and $\eta=\pm0.1$ for Meta moves the
+study-level mean to 0.673 or 0.700; in Marin, counting configuration parameters lowers the mean to 0.673, and counting
+Farseer's embeddings lowers it to 0.670. For Chinchilla, FLOPs per token rebuilt from Hoffmann et al.'s architecture
+table (Online Appendix~\ref{app:chinchilla}) have an elasticity with respect to $N$ between $-0.04$ and 0.00 by budget,
+and Chinchilla's $\sigma^*$ is 0.660 against 0.673 in total parameters (Table~\ref{tab:app-chinflop}). It is
+0.648--0.660 across Hoffmann et al.'s printed, implemented and executed counts on the nominal budgets, and 0.690 in
+non-embedding parameters; moved onto each count's own exact isocosts, every count and convention gives 0.660--0.669. Of
+Hoffmann et al.'s counts, only the rebuilt one reproduces their Table A4 and fits the FLOP coordinates of their
+Figure~4. On the 137 profile runs the rebuilt count gives less than the total count in every specification of the grid,
+by 0.008 to 0.018 in the eleven specifications that use all nine budgets and by 0.022 with the narrowest window.
+At the primary specification about a third of the difference comes from one run that enters the $3\times10^{19}$ window.
+The level is less robust than the direction. The five high-loss runs lie outside every window but move the window
+centers: without them the primary specification gives 0.681 (0.674 in total parameters). With profile membership drawn
+on the corrected coordinates it gives 0.668, and with $N_F$ read directly off the digitized coordinates, as for
+Llama~3, 0.676. Put in place of 0.660, these values give study-level means of 0.691 to 0.694
+(Table~\ref{tab:app-chinflop-prop}), and Cochran's statistic across studies falls from 8.3 ($p=0.04$) to 5.8--6.3 ($p$
+between 0.10 and 0.12). Across all of Chinchilla's windows, samples and memberships the study-level mean runs from 0.674
+to 0.702 and $Q$ from 4.4 to 14.8, so we build no claim on the heterogeneity across studies. The reference technology of Section~\ref{sec:wedge} stays in total parameters; refitted
+in $N_F$, its $\sigma^*$ is 0.700 with $\kappa$ free, against 0.701.
 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=\textwidth]{ra1_modelfree_kappa_profile}
-\caption{Profile Likelihood over the Elasticity of Substitution: Full Design and On-Path Runs}\label{fig:app-kappa-profile}
-\begin{figurenotes}
-Profile of the $\kappa$-family objective over $\sigma^*=2/(2+a_1+b_1)$ on the Chinchilla data, each point re-estimating
-$E$, $A$, $B$ and $\kappa$, measured relative to the unconstrained optimum (log scale above one). Panel (a): the 240-run
-design. Panel (b): the 41 runs within 0.15 log points of the expansion path. Laplace quasi-LR and Koenker--Bassett
-statistics come from the Huber objective; the Gaussian LR from least squares on $\ln L$. Dashed line: $\chi^2_1$ 95
-percent critical value; restricted-bootstrap critical values are larger (7.7--11.4 on the full design).
-\end{figurenotes}
-\begin{figurenotes}[Source]
-\citet{besiroglu2024chinchilla}; authors' calculations.
-\end{figurenotes}
-\end{figure}
+\input{tables/appD_chinflop}
 
-\emph{Exclusion rules.}---Table~\ref{tab:app-selection} shows how the estimates move as the $k$ highest-loss runs are
-dropped. The data exponent $\beta$ falls almost monotonically, from 0.453 with all 245 runs to 0.347 at $k=15$, while
-$\alpha$ stays between 0.345 and 0.349. The five runs that \citet{besiroglu2024chinchilla} drop are the most
-data-starved runs of the $10^{19}$ budget ($D/N$ between 0.04 and 0.40), with log residuals 9 to 45 times the residual
-standard deviation. Their influence is leverage in the $D/N\to0$ corner of the design, not truncation bias: a
-truncated-Gaussian likelihood that conditions on the exclusion rule \citep{hausman1977social} returns the estimate that
-ignores truncation ($\beta=0.406$ in both), and dropping runs by their data-to-parameter ratio rather than their loss
-gives the same answer as dropping them by loss. The Chinchilla-70B wedge is 1.54 with the outliers. Across twelve rules
-that remove them it lies between 0.95 and 1.06 for ten; dropping the whole $10^{19}$ budget gives 0.78, and the
-IsoFLOP-profile runs alone give 1.16.
+\textit{Budget-level estimates.} Tables~\ref{tab:app-budgets} and~\ref{tab:app-budgets-b} list every bracketed budget with its runs on each side of
+the minimum. Fixed-effect and random-effects pooling agree on Marin (0.70--0.71) and nearly so on Chinchilla (0.666 against
+0.660), but not on Llama~3 (0.628 against 0.660), whose precise large budgets pull the fixed-effect mean down. Cochran's $Q$ rejects homogeneity within Llama~3 ($p=0.001$), but
+not within Chinchilla ($Q=12.7$, bootstrap $p=0.06$) or Marin's corpora.
 
-\emph{Duality.}---Table~\ref{tab:app-duality} reports the objects that each estimation approach delivers and tests the
-cross-equation restrictions of Proposition~\ref{prop:duality}. We call the curve fitted through the nine IsoFLOP minima
-the IsoFLOP-minima frontier. It is not Hoffmann et al.'s Approach~1, whose training-curve envelopes the digitization
-does not contain and which reports allocation exponents as well as a frontier. Tests must be design-consistent.
-Comparing the IsoFLOP argmins with the analytic primal path rejects even our own refit under the stratified bootstrap,
-because parabolas fitted on a finite grid are biased \citep{czech2026problems}. Against design-consistent nulls, our
-refit and Besiroglu et al.'s parameters are consistent with the argmins ($p\ge0.16$ in every bootstrap-calibrated and
-classical variant). Hoffmann et al.'s published Approach~3 is marginally inconsistent (classical $p=0.040$; calibrated
-$p=0.060$), mainly because its compute-optimal model size at the center of the design is about 12 percent below the
-argmins. The frontier restrictions are rejected under the stratified bootstrap but not under the wild bootstrap. The
-IsoFLOP-minima frontier lies 0.005 to 0.008 nats below every primal frontier, a gap of the order of the quantization of the
-digitized losses, which are read from a color map, and we do not interpret it.
+\textit{Drift with compute.} Table~\ref{tab:app-sigmaC} pools the 44 budget-level estimates of six designs (Farseer's local
+path counts as a sixth design) in a three-level random-effects meta-regression on $\log_{10}C$
+\citep{konstantopoulos2011fixed}. The slope is $-0.033$ per decade. With Marin's three corpora as one cluster there are
+four clusters, and six with the corpora apart, so the cluster-robust (CR2) standard errors
+\citep{bell2002bias,pustejovsky2018small} have about three degrees of freedom and a wild cluster bootstrap-$t$ with
+Webb weights has only $6^4=1{,}296$ distinct draws with four clusters; we enumerate them. In the primary row with Marin
+as one cluster the two tests disagree (CR2 $p=0.11$, wild $p=0.049$), and across weighting, scale, test, cluster
+definition and design fixed effects the $p$-value lies between 0.03 and 0.49. The design fixed-effects rows, which use
+only variation within designs, give $-0.021$ (inverse-variance weights; CR2 $p=0.49$, wild $p=0.37$) and $-0.026$
+(unweighted; 0.17 and 0.051 with Marin as one cluster, 0.065 and 0.073 with six).
 
-\emph{Lab-own designs.}---Table~\ref{tab:app-labs} applies the same comparison to the IsoFLOP experiments that labs have
-published. Our argmin fit reproduces Meta's Llama~3 law exactly. The primal fitted to the same runs implies a steeper
-path ($a=0.527$ against 0.463), in which $M^*$ falls rather than rises with compute; the difference is significant at 5
-percent once the primal's own sampling error is included ($t=-2.11$) and not under the wild bootstrap. Two of Meta's ten
-budgets do not bracket their minimum. Fitted on the other eight, the path slope is 0.50 and $M^*(10^{24})$ is 15 instead
-of 31 (Online Appendix Table~\ref{tab:app-labown}). For the Marin ladders the design-consistent tests do not reject
-($p$ between 0.33 and 0.54). About three-quarters of the naive discrepancy is finite-grid parabola bias and the rest is
-FLOP accounting: $6ND$ differs from Marin's nominal budgets by $-7$ to $+35$ percent. The Marin primal exponents
-($\alpha$ between 0.64 and 0.69) are far from Chinchilla's, a first indication that exponents are specific to the
-recipe.
+The drift comes from the budgets above $3\times10^{20}$ FLOP, which only Chinchilla and Llama~3 reach. Across all 17 of
+their budgets $\sigma^*$ falls by 0.058 per decade, with a standard error of 0.014 from the joint bootstrap draws of the
+budget-level estimates, which share each design's frontier derivative, scaled for the budgets' excess dispersion (0.009
+from sampling error alone; model-based 0.013). A hinge at $3\times10^{20}$ gives $-0.152$ above the knot. At or below
+$3\times10^{20}$ FLOP the pooled slope is $-0.008$ ($p$ between 0.56 and 0.87 in the primary row), but the designs' own
+slopes differ there (Wald 13.9, $p=0.016$), and Llama~3's is $-0.050$ (s.e.\ 0.017). Leaving out each design's largest
+budget gives $-0.030$ ($p$ between 0.19 and 0.29). The five budgets at $6\times10^{20}$ FLOP and above have an
+inverse-variance mean of 0.594, 85 percent of it from Llama~3 (46 percent at $6\times10^{20}$ and 38 percent at
+$10^{21}$); with the variance of the joint draws, its modified Hartung--Knapp--Sidik--Jonkman interval is [0.561, 0.627].
+Without Chinchilla's five highest-loss runs, which move its $6\times10^{20}$ estimate from 0.550 to 0.665, the mean is
+0.598. Farseer's local path, which reaches $10^{21}$ FLOP without bracketed budgets, gives 0.722 (0.008) at
+$5\times10^{20}$ and 0.658 (0.011) at $10^{21}$; with the latter the six top estimates are heterogeneous ($Q=21.1$,
+$p<0.001$; random-effects mean 0.606, fixed-effect mean 0.625). With Marin as one cluster the pooled line gives 0.680 at
+$10^{20}$ FLOP, with a CR2 interval of [0.638, 0.722]. At $10^{19}$ the CR2 standard error is an eighth of the
+model-based one, a small-sample artifact, so we report only the point estimate there, 0.713.
 
-\input{tables/appD_estimators}
-\input{tables/appD_chin_inference}
-\input{tables/appD_selection}
-\input{tables/appD_duality}
-\input{tables/appD_labs}
+In a Monte Carlo on the grids of Chinchilla (in total parameters), Llama~3 and Marin's DCLM ladder with a known path of
+$\sigma^*(C)$, the estimator creates no drift when there is none and attenuates true drifts by at most 20 percent, but a
+single design has little power against $-0.06$ per decade: 0.31 on Marin's grid and 0.37 on Chinchilla's, against 0.72
+on Llama~3's. Count-symmetric windows and a power-law frontier with $E$ fitted leave the Chinchilla and Llama~3 drift at
+$-0.049$ to $-0.064$, and Porian et al.'s unannealed profiles drift the other way ($+0.040$), so the estimator does not
+force a negative slope.
 
-% -----------------------------------------------------------------------------------------------------
-\subsection{The Model-Free Estimator}\label{app:add-modelfree}
+\textit{The level.} One estimate per study (Marin one study) gives a mean of 0.687 with a modified
+Hartung--Knapp--Sidik--Jonkman interval of $[0.640,0.734]$. Restricted to budgets up to $3\times10^{20}$ FLOP, it is
+0.708, with an interval of [0.690, 0.726] in which Farseer's first-derivative estimate carries 84 percent of the weight.
+With Farseer's bandwidth range treated as uncertainty, the restricted mean is 0.701, with an interval of [0.665, 0.738],
+and the mean over all budgets 0.680. Across FLOP accounting, conventions, Chinchilla's windows, samples and memberships,
+estimators and Farseer's bandwidths the mean ranges over 0.663--0.702, and the lowest interval end is 0.596
+(Table~\ref{tab:app-sigma-study}).
 
-\emph{Finite grids.}---A least-squares quadratic fitted to an IsoFLOP profile on a finite grid overstates the curvature
-at the minimum, because the profile's quartic term loads on the quadratic coefficient. To leading order the bias is
-$(f^{(4)}/24)\kappa_4(h)$, where $\kappa_4$ depends only on the moments of the grid (Online Appendix~\ref{app:proofs},
-remark after Proposition~\ref{prop:A-modelfree}). Table~\ref{tab:app-finite-grid} evaluates it for nine runs centered at
-the minimum of the Chinchilla profile at $10^{21}$ FLOP. A grid spanning a factor of 9 in $N$ overstates the curvature by
-1.3 percent and gives $\hat\sigma^*=0.7345$ against a true 0.7370. A grid spanning a factor of 100 overstates it by 5.9
-percent ($\hat\sigma^*=0.7257$). A quartic removes the bias in both cases, at the cost of variance. Within a span of
-about 3 in $N$, the bias of a quadratic is below 0.3 percent of the curvature. The argmin is biased too; this is the
-finite-grid bias of IsoFLOP argmins documented by \citet{czech2026problems}, and it is why the duality tests of
-Appendix~\ref{app:add-chinchilla} use design-consistent nulls.
+\textit{Farseer's local expansion path.} Farseer's grid has no IsoFLOP profiles, so we estimate the loss surface locally: a
+Gaussian product-kernel local quadratic of $\ln L$ in $(\ln N,\ln D)$, with cross-validated bandwidths, gives the local
+wedge $w=(L_c-L_x)/(L_c+L_x)$ of Proposition~\ref{prop:A-modelfree}(i) everywhere, and the point with $w=1$ lies inside the
+design on eight isocosts from $5\times10^{18}$ to $10^{21}$ FLOP. The elasticity there, from the local Hessian, has a
+random-effects mean of 0.703 (simple mean 0.707) and moves between 0.66 and 0.73 with the bandwidth. A first-derivative estimator is more robust: by
+Proposition~\ref{prop:A-modelfree}(iii) the slope of $\ln w$ in $u=\ln(M/M^*(C))$ at $u=0$ equals $1/\sigma^*-1$, and a
+regression of the local $\ln w$ on $u$ and $u^2$ gives $\sigma^*=0.708$, between 0.701 and 0.711 under every bandwidth and
+0.670 with embedding parameters counted. The quadratic coefficient, 0.020 (s.e.\ 0.001), shows that $\ln w$ is convex in $u$,
+which no member of the $\kappa$ family allows. Porian et al.'s unannealed profiles give $\sigma^*$ near 0.51 and are
+window-sensitive (0.45 to 0.55 across windows of 0.8 to 1.5 log points; 0.33--0.34 with a global quadratic); the gap between an unannealed and an annealed loss plausibly varies with $D/N$ at fixed
+compute, so we keep them out of the range reported in Section~\ref{sec:tech}.
 
-\emph{Specification.}---The primary estimator of Section~\ref{sec:tech} fits a quadratic in $\ln N$ to the runs within
-one log point of a pooled Approach-2 path, on budgets whose minimum is bracketed by at least two runs on each side, and
-pools the budgets by a random-effects mean. Table~\ref{tab:app-mf-sens} reports its sensitivity. Pooled $F$ tests of a
-cubic term never reject at 5 percent. Across window widths, polynomial orders, frontier smoothers and window centering,
-the random-effects $\sigma^*$ ranges over 0.665--0.714 for Chinchilla (0.603 with the narrowest window, which keeps seven
-budgets), 0.642--0.677 for Llama~3 and 0.64--0.72 for Marin. An independent re-implementation that shares no code gives
-0.669--0.694 on the same five designs. In a Monte Carlo at each design's own fitted $\kappa$-family technology, the
-random-effects interval covers the truth in 92 to 98 percent of replications, with a bias of at most 0.005. The pooled
-design-conditional interval under-covers (82 to 91 percent), which is why the random-effects summary is primary.
-Without noise, the pooled bias is at most 0.006 in absolute value on every design except the strongly curved
-$\kappa$-family fit to Porian et al.'s profiles ($+0.047$ to $+0.050$).
+\input{tables/appD_budgets}
+\input{tables/appD_sigmaC}
 
-The estimator needs exact isocosts, so each design is analyzed in the parameter convention in which its budgets equal
-$6ND$. The convention matters where FLOP accounting varies with size. On Marin, whose accounting is observed, the
-configuration count gives $\sigma^*$ of 0.64 to 0.66, 0.04 to 0.07 below the FLOP-implied count. If Chinchilla's
-FLOPs per token varied with $N$ with elasticity $\eta_C$, the measured curvature would rescale by $(1+\eta_C)^{-2}$ and
-$\sigma^*$ would move by about $0.44\eta_C$, at most 0.04 for $|\eta_C|\le0.1$. Rebuilding $D$ from Hoffmann et al.'s
-architecture table would remove this uncertainty; we have not done so.
-
-\emph{Farseer's local expansion path.}---Farseer's grid has no IsoFLOP profiles, so we estimate the loss surface
-locally. A Gaussian product-kernel local quadratic of $\ln L$ in $(\ln N,\ln D)$, with bandwidths of 0.24 and 0.74 in
-logs from leave-one-out cross-validation, gives the two output elasticities at every point and hence the local wedge
-$w=(L_c-L_x)/(L_c+L_x)$ of Proposition~\ref{prop:modelfree}(i), which is invariant to monotone transformations of the
-loss. On ten isocosts from $10^{18}$ to $10^{21}$ FLOP we locate the point inside the design where $w=1$; it exists on
-eight, from $5\times10^{18}$ FLOP up, with compute-optimal ratios of 25 to 45. Two estimators of $\sigma^*$ follow. The
-first evaluates the elasticity of substitution from the local gradient and Hessian at these points: a random-effects
-mean of 0.703 (standard error 0.013) that falls by 0.015 per decade of compute (0.008). Second derivatives need more
-smoothing than the surface itself, and this estimate moves between 0.66 and 0.73 with the bandwidth; at the narrower
-cross-validated optimum on an extended grid it is 0.664. The second estimator uses only first derivatives. By
-Proposition~\ref{prop:modelfree}(iii), the slope of $\ln w$ in $u=\ln(M/M^*(C))$ at $u=0$ equals $1/\sigma^*-1$ for any
-smooth technology, so a regression of the local $\ln w$ on $u$ and $u^2$ gives $\sigma^*=1/(1+b_1)$ from the linear
-coefficient $b_1$: 0.708 (wild cluster standard error by model size 0.001), between 0.701 and 0.711 under every bandwidth,
-and 0.670 with embedding parameters counted. Section~\ref{sec:tech} reports this estimate; its standard error treats the
-grid points as the design and excludes smoothing bias. The quadratic coefficient, 0.020 (0.001), shows that $\ln w$ is
-convex in $u$, which no member of the $\kappa$ family allows, since each makes $\ln w$ linear in $u$; Online
-Appendix~\ref{app:wedge-pi} uses the convexity to sign the error of parametric wedges at high $M$.
-
-\emph{Drift with compute.}---Within Chinchilla and Llama~3 the per-budget estimates fall with compute, by 0.072 (s.e.\
-0.026) and 0.053 (0.010) per decade. Marin shows no drift over its two decades, and Porian et al.'s unannealed profiles
-drift the other way. Neither the Chinchilla form nor the $\kappa$ family lets $\sigma^*$ vary along the path, and under
-those constant-$\sigma^*$ technologies fitted to Chinchilla and Llama~3 the estimator's noise-free per-budget bias lies
-within $[-0.005,+0.002]$, so the drift is not a finite-grid artifact. It is, however, window-sensitive in Chinchilla
-($-0.034$ to $-0.096$ per decade), and no design spans more than 2.7 decades of compute.
-
-\emph{Porian et al.'s profiles.}---These give $\sigma^*$ near 0.51, well below every other design, and are
-window-sensitive: 0.45 to 0.55 across windows and 0.33 with a global quadratic. They are read off constant-learning-rate
-runs without cooldown. The gap between such a loss and an annealed loss plausibly varies with $D/N$ at fixed compute,
-which bends the profile. We therefore treat them as IsoFLOP-like rather than IsoFLOP designs and keep them out of the
-range reported in Section~\ref{sec:tech}; with them, the random-effects mean across designs falls from 0.695 to 0.646 and
-heterogeneity becomes large ($Q=189$ on 7 degrees of freedom).
-
-\input{tables/appD_finite_grid}
-\input{tables/appD_mf_sens}
-
-% -----------------------------------------------------------------------------------------------------
+% =====================================================================================================
 \subsection{The Technology across Sweeps}\label{app:add-tech}
 
-\emph{Specification tests.}---Table~\ref{tab:app-spec-tests} reports the tests for the seven sweep--corpus technologies
-from five studies. The restriction $\kappa=1$ is rejected in every sweep. CES is not rejected by the Huber-based Wald
-test in any sweep ($p$ between 0.22 and 0.90). The Gaussian likelihood ratio rejects it on Chinchilla and is borderline
-on Farseer ($p=0.052$) and the OLMo ladder (0.067), but on Chinchilla the rejection does not survive calibration for
-heavy tails (Appendix~\ref{app:add-chinchilla}). Rank-one curvature, which the $\kappa$ family imposes on a translog in
-$\ln(L-E)$, is rejected in two sweeps when $E$ comes from the Chinchilla form and in one (Farseer) when it comes from
-the $\kappa$ family.
+Across the seven sweep--corpus technologies from five studies, the restriction $\kappa=1$ is rejected in every sweep
+(Wald $p<0.001$; $\hat\kappa$ from 0.22 on the OLMo ladder to 0.77 on Chinchilla). CES is not rejected by the Huber-based
+Wald test in any sweep ($p$ between 0.22 and 0.90), and rank-one curvature, which the $\kappa$ family imposes, is rejected
+in one to two sweeps depending on the estimate of $E$. Table~\ref{tab:app-kappa-robust} reports $\sigma^*_\kappa$ under
+changes of sample, convention and irreducible loss. On Farseer it is stable across size exclusions (0.694 to 0.716) except
+for the parameter-count convention (0.668 with both embedding matrices counted). On Chinchilla it falls to 0.690 and 0.648
+when the smallest tenth and quarter of the runs are dropped. The small sweeps are fragile: on Gadre et al.'s corpora it moves
+between 0.48 and 0.70 when one or two of the six sizes are dropped, so the heterogeneity of $\sigma^*_\kappa$ across sweeps
+may partly reflect how the $\kappa$ family fits small designs without IsoFLOP profiles. In the Chinchilla form, conventions
+matter most for the allocation exponent: counting Farseer's two untied embedding matrices moves $a$ from 0.526 to 0.411.
+With task bits per byte instead of C4 cross-entropy, the OLMo ladder's $\sigma^*_\kappa$ falls from 0.544 to 0.512: two
+outputs can have different isoquants (Online Appendix~\ref{app:wedge-output}).
 
-\emph{The outer exponent free.}---Table~\ref{tab:app-kappa-robust} reports $\sigma^*_\kappa$ with design-conditional
-wild standard errors and under changes of sample, convention and irreducible loss. On Farseer it is stable across
-size exclusions and samples (0.694 to 0.716) except for the parameter-count convention: counting both embedding matrices
-lowers it to 0.668. On Chinchilla it falls to 0.690 and 0.648 when the smallest tenth and quarter of the runs are
-dropped, and to 0.664 when the five outliers are kept. The small sweeps are fragile. On Gadre et al.'s corpora
-$\sigma^*_\kappa$ moves between 0.48 and 0.70 when one or two of the six sizes are dropped, leaving 18 to 27 runs. The
-trade-off between $E$ and $\kappa$ is immaterial inside the confidence sets for $E$ on Chinchilla, Farseer and the OLMo
-ladder (at most 0.006) but material on Gadre et al.'s RedPajama (0.606 to 0.685) and on Muennighoff et al.\ (0.503 to
-0.555). Only one variant moves a small sweep near 0.70: RedPajama without its two smallest sizes, from 19 runs with a
-standard error of 0.097. The heterogeneity of $\sigma^*_\kappa$ across sweeps in Section~\ref{sec:tech} may therefore
-partly reflect how the $\kappa$ family fits small designs without IsoFLOP profiles, rather than technology.
+\textit{Neutrality of data quality.} What matters for allocation and for the wedge is the tilt $\ln(A_r/B_r)$ between
+recipes, which is ordinal; asymptote shifts and neutral scalings of reducible loss leave the isoquant map unchanged. On a
+common C4 validation output, across the three web corpora of \citet{gadre2024language} a Hicks-neutral scaling with
+corpus-specific asymptotes is not rejected ($p=0.90$), but neither are the factor-augmenting alternatives. Across the 25
+DataDecide recipes \citep{magnusson2025datadecide} every restriction is rejected at the resolution of the bootstrap
+($p$ at its floor with 19 or 99 draws); asymptote shifts alone explain 98.1 percent of the cross-recipe variation in fit,
+and the remaining tilt, 0.22 to 0.26, implies compute-optimal ratios that differ by a factor of 2.9 to 3.4 and moves
+revealed wedges by a factor of 1.25 to 1.29 at the same inputs. DataDecide's losses are taken before the learning-rate
+schedule ends (Online Appendix~\ref{app:data}), and on a common validation set part of any corpus difference is
+distribution match. On final checkpoints only, one ray at $M$ of about 100, the recipes' tilt is not identified: the fit
+has two optima of almost equal fit that exchange the roles of the two power terms and reverse the ranking of the
+recipes' tilts, so we do not report a final-checkpoint allowance. The sign result's breakdown frontier (Online Appendix
+Figure~\ref{fig:app-breakdown}) does not depend on DataDecide. \citet{bi2024deepseek} report that higher-quality data
+shift the compute-optimal allocation toward model size.
 
-\emph{The Chinchilla form.}---Table~\ref{tab:app-robust} reports the $\kappa=1$ estimates under alternative
-conventions, outputs and samples. Conventions matter most for the allocation exponent. Counting Farseer's two untied
-embedding matrices moves $a$ from 0.526 to 0.411 and $\sigma^*$ from 0.772 to 0.724. Dropping the two single-epoch runs
-in which \citet{muennighoff2023scaling} trained 1.1 and 2.8 billion parameters on 100 million tokens moves $a$ from 0.535
-to 0.360 and $M^*(10^{21})$ from 60 to 139. With task bits per byte instead of C4 cross-entropy, the OLMo ladder's
-$\sigma^*$ falls from 0.825 to 0.763 (and $\sigma^*_\kappa$ from 0.544 to 0.512). Ordinality guarantees invariance only
-to transformations of the same output; two outputs can have different isoquants, so such differences can reflect
-technology as well as sampling noise and misspecification.
-
-\emph{Neutrality of data quality.}---Table~\ref{tab:app-neutrality} nests hypotheses about how better data enter. What
-matters for allocation and for the wedge is the tilt $\ln(A_r/B_r)$, which is ordinal; asymptote shifts and neutral
-scalings of reducible loss leave the isoquant map unchanged. Across the three web corpora of \citet{gadre2024language},
-a Hicks-neutral scaling of reducible loss with corpus-specific asymptotes is not rejected ($p=0.90$) and explains 96.8
-percent of the cross-corpus variation. The test has little power: the data- and parameter-augmenting alternatives are
-not rejected either ($p=0.13$ and 0.15). Across the 25 DataDecide recipes \citep{magnusson2025datadecide} every
-restriction is rejected, at the resolution of the bootstrap (0.01 with 99 draws, 0.05 with 19 draws). Asymptote shifts
-alone explain 98.1 percent of the variation, and a neutral scale brings this to 99.7 percent. The remaining tilt is
-small in fit but not in allocation: it spans 0.22 to 0.26 across recipes, implies compute-optimal ratios that differ by a
-factor of 2.9 to 3.4, and moves revealed wedges by a factor of 1.25 to 1.29 at the same inputs. Because DataDecide's
-checkpoints come before the learning-rate schedule ends, the comparison assumes that the unfinished schedule affects all
-recipes alike. \citet{bi2024deepseek} report the related finding that higher-quality data shift the compute-optimal
-allocation toward model size.
-
-\emph{Functional form on Farseer.}---Table~\ref{tab:app-farseer} compares the Chinchilla form with richer forms on the
-Farseer grid \citep{li2025predictableb}. The Chinchilla form extrapolates poorly in compute: its out-of-sample error on
-the top decile of compute is 8 to 10 times that of Farseer's nine-parameter form. On the local expansion path, the
-model-free estimate of $\sigma^*$ is 0.708, against 0.710 with $\kappa$ free and 0.772 in the Chinchilla form.
-
-\input{tables/appD_spec_tests}
 \input{tables/appD_kappa_robust}
-\input{tables/appD_robust}
-\input{tables/appD_neutrality}
-\input{tables/appD_farseer}
 
-% -----------------------------------------------------------------------------------------------------
+% =====================================================================================================
 \subsection{The Compute Cost of Over-Training}\label{app:add-overhead}
 
 Practitioners use the elasticity of substitution through one quantity: the extra training compute needed to reach the
-loss of the compute-optimal model while training at $k$ times the compute-optimal ratio $M^*$.
-Table~\ref{tab:app-overhead} reports it. Over-training by a factor of 10 costs 39 percent ($\sigma^*=0.8$) to 124 percent
-($\sigma^*=0.6$) more compute; by a factor of 100 it costs 3.5 to 14 times the minimum, and by 1,000 it costs 14 to 129
-times. The curvature matters more as $k$ grows. At $k=100$, $\sigma^*=0.70$ implies 7.2 times the minimum compute, and
-$\sigma^*=0.74$, the value that the Chinchilla form imposes on the Chinchilla data, implies 5.4 times. The entries
-assume a homothetic split of the exponents; the splits of \citet{besiroglu2024chinchilla} and
-\citet{hoffmann2022training} change them by at most 4.5 and 19 percent for $k\le100$.
-
-Figure~\ref{fig:app-overhead} compares these curves with the compute-overhead curve of \citet{devries2023go}, which lies
-between our curves for $\sigma^*=0.74$ and 0.80; with his parameters, a model at 30 percent of the compute-optimal size
-needs 99 percent more compute, as our formula implies. The implied wedge $w=k^{1/\sigma^*-1}$ links the table to
-Section~\ref{sec:wedge}. A developer who trains 100 times beyond $M^*$ reveals an expenditure share of the value of
-compactness, $s=(w-1)/w$, of 0.68 to 0.95, depending on $\sigma^*$.
+loss of the compute-optimal model while training at $k$ times the compute-optimal ratio $M^*$. Table~\ref{tab:app-overhead}
+reports it. Over-training by a factor of 10 costs 39 percent ($\sigma^*=0.8$) to 124 percent ($\sigma^*=0.6$) more
+compute; by a factor of 100 it costs 3.5 to 14 times the minimum, and by 1,000 it costs 14 to 129 times. At $k=100$,
+$\sigma^*=0.70$ implies 7.2 times the minimum compute and $\sigma^*=0.74$, the value that the Chinchilla form imposes on
+the Chinchilla data, 5.4 times. The entries assume a homothetic split of the exponents; the splits of
+\citet{besiroglu2024chinchilla} and \citet{hoffmann2022training} change them by at most 4.5 and 19 percent for $k\le100$.
+The compute-overhead curve of \citet{devries2023go} lies between our curves for $\sigma^*=0.74$ and 0.80. The implied
+wedge $w=k^{1/\sigma^*-1}$ links the table to Section~\ref{sec:wedge}: a developer that trains 100 times beyond $M^*$
+reveals a share $s=(w-1)/w$ of 0.68 to 0.95, depending on $\sigma^*$.
 
 \input{tables/appD_overhead}
 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.62\textwidth]{ra1_modelfree_overhead}
-\caption{The Compute Cost of Over-Training}\label{fig:app-overhead}
-\begin{figurenotes}
-Training compute relative to the minimum needed to reach the compute-optimal loss, against the over-training factor
-$k=M/M^*$, for four values of $\sigma^*$ (homothetic case, as in Table~\ref{tab:app-overhead}). Dots: the curve of
-\citet{devries2023go}, computed from his parameters ($\sigma^*=0.77$) and expressed in the same units.
-\end{figurenotes}
-\begin{figurenotes}[Source]
-Authors' calculations; \citet{devries2023go}.
-\end{figurenotes}
-\end{figure}
-
-% -----------------------------------------------------------------------------------------------------
+% =====================================================================================================
 \subsection{Measurement and Flexible Inputs}\label{app:add-measurement}
 
+\input{tables/appD_tuning}
+
 The largest disagreement in the scaling literature concerns the allocation exponent: $N^*\propto C^{0.73}$ in
-\citet{kaplan2020scaling} against about 0.5 in \citet{hoffmann2022training}. \citet{porian2024resolving} trace it to a
-sequence of changes in training practice, and \citet{pearce2024reconciling} to the treatment of embedding parameters.
-Both are classic problems in production-function estimation. Counting the parameters that cost FLOPs, such as the
-output head, is input measurement, whose bias depends on how the measurement error correlates with scale
-\citep{collardwexler2016production}. Warmup, learning-rate schedule, learning rate and batch size are flexible inputs;
-when they are not re-optimized at each scale, they are not concentrated out of the production function
-\citep{ackerberg2015identification,gandhi2020identification}.
+\citet{kaplan2020scaling} against about 0.5 in \citet{hoffmann2022training}. Counting the parameters that cost FLOPs is input
+measurement \citep{collardwexler2016production}, and warmup, schedule, learning rate and batch size are flexible inputs,
+which are not concentrated out of the production function unless re-optimized at each scale
+\citep{ackerberg2015identification,gandhi2020identification}. On the 975 released runs of \citet{porian2024resolving}, whose
+ten published exponents we reproduce to within 0.003, the exponent falls from 0.837 to 0.496 on RefinedWeb; counting the
+head accounts for 39 percent of the drop (47 on OpenWebText2) and flexible inputs for the rest.
 
-\emph{Decomposition.}---Re-estimating Porian et al.'s path from their 975 released runs reproduces all ten published
-exponents to within 0.003 (Table~\ref{tab:app-measurement}, panel~A). The exponent falls from 0.837 to 0.496 on
-RefinedWeb and from 0.862 to 0.517 on OpenWebText2. Counting the head accounts for 39 and 47 percent of the drop, and
-flexible inputs for the remaining 53 to 61 percent. Because a sequential decomposition depends on the order of the
-steps, panel~B holds the runs fixed and changes only the count. Counting the head lowers $a$ by 0.12 to 0.17 whether or
-not the runs are tuned, and tuning lowers it by 0.19 to 0.23 under every count, so the two components are nearly
-additive. The switch from training to validation loss between steps 1 and 2 accounts for at most 0.005 of the
-measurement step. These models have 5M to 901M parameters, and the shares need not hold at larger scale.
-
-\emph{Input measurement.}\label{app:add-biasformulas}---Let the true technology be $L=E+AN^{-\alpha}+BD^{-\beta}$, and
-let the researcher count $N_m$ parameters when the true count is $N=N_m+X(N_m)$. The omitted component has share
-$q\equiv X/N$ and a constant scale elasticity $\theta_X\equiv d\ln X/d\ln N_m<1$. The researcher measures compute as
-$C_m=6N_mD$ and takes the IsoFLOP argmin in measured units: $n_m\equiv\ln N_m$ minimizes $L$ subject to
-$\ln D=c_m-\ln6-n_m$, with $c_m\equiv\ln C_m$. Because $d\ln N/dn_m=1-q(1-\theta_X)\equiv\vartheta$, the first-order
-condition is $\alpha u\vartheta=\beta v$, with $u=AN^{-\alpha}$ and $v=BD^{-\beta}$. Differentiating its log along the
-researcher's path, with $d\ln u/dn_m=-\alpha\vartheta$, $d\ln v=\beta\,(dn_m-dc_m)$ and $\zeta\equiv d\ln\vartheta/dn_m$,
-gives $(\zeta-\alpha\vartheta)\,dn_m/dc_m=\beta\,dn_m/dc_m-\beta$, so the local measured allocation exponent is
+\textit{Input measurement.}\label{app:add-biasformulas} Let the true technology be $L=E+AN^{-\alpha}+BD^{-\beta}$ and let
+the researcher count $N_m$ parameters when the true count is $N=N_m+X(N_m)$, with omitted share $q\equiv X/N$ and a constant
+scale elasticity $\theta_X\equiv d\ln X/d\ln N_m<1$. Taking the IsoFLOP argmin in measured units, with $C_m=6N_mD$,
+$\vartheta\equiv d\ln N/dn_m=1-q(1-\theta_X)$ and $\zeta\equiv d\ln\vartheta/dn_m$, the local measured allocation exponent is
 \begin{equation}\label{eq:app-measbias}
-a_m\equiv\frac{dn_m}{dc_m}=\frac{\beta}{\beta+\alpha\vartheta-\zeta},\quad
-\vartheta\equiv1-q(1-\theta_X),\quad \zeta=\frac{(1-\theta_X)\,q\,(\vartheta-\theta_X)}{\vartheta}\ge0 .
+a_m=\frac{\beta}{\beta+\alpha\vartheta-\zeta},\qquad
+\zeta=\frac{(1-\theta_X)\,q\,(\vartheta-\theta_X)}{\vartheta}\ge0 .
 \end{equation}
-Since $\vartheta\le1$ and $\zeta\ge0$, $a_m\ge a=\beta/(\alpha+\beta)$, with equality when $q=0$ or $\theta_X=1$. A
-proportional error ($\theta_X=1$) moves only the level of the path. The bias comes from the part of the error that is
-correlated with scale, as in \citet{collardwexler2016production}, and it vanishes at scale as the omitted share falls:
-a local elasticity estimated over a restricted size range is not the structural one, which is the functional-form lesson
-of \citet{nerlove1963returns}. As $q\to1$, $a_m\to\beta/(\beta+\alpha\theta_X)$, the small-scale limit of
-\citet{pearce2024reconciling}. The closed form matches brute-force argmins to within $2\times10^{-7}$ in $\ln N$.
+Since $\vartheta\le1$ and $\zeta\ge0$, $a_m\ge a$, with equality when $q=0$ or $\theta_X=1$: only the part of the error
+that is correlated with scale biases the exponent, and the bias vanishes at scale as the omitted share falls, the
+functional-form lesson of \citet{nerlove1963returns}. As $q\to1$, $a_m\to\beta/(\beta+\alpha\theta_X)$, the small-scale limit
+of \citet{pearce2024reconciling}; with their embedding map ($\theta_X=1/3$) the formula predicts 0.792 over Kaplan et al.'s
+size range under Besiroglu et al.'s parameters, against the 0.78 they obtain by simulation.
 
-With Pearce and Song's embedding map ($\theta_X=1/3$), equation~\eqref{eq:app-measbias} predicts a measured exponent over
-Kaplan et al.'s size range of 0.792 under Besiroglu et al.'s parameters and 0.757 under Hoffmann et al.'s, against the
-0.78 and 0.74 that Pearce and Song obtain by simulation. The small-scale limit is sensitive to how the omitted component
-scales: under Besiroglu et al.'s parameters it is 0.76 at $\theta_X=1/3$ and 0.68 at $\theta_X=1/2$. On Porian et al.'s
-ladder, where the omitted component is the head (its share falls from 0.94 at 5M parameters to 0.08 at 901M, with a
-fitted $\theta_X$ of 0.36), the formula gets the sign and order of magnitude of the measurement bias right but
-over-predicts it, by 20 to 50 percent in a semi-synthetic check on the actual design. The Chinchilla data are not
-immune: with non-embedding counts the allocation exponent rises from 0.514 to 0.556 (paired difference 0.042, s.e.\
-0.006) and $\sigma^*$ from 0.737 to 0.753.
-
-\emph{Flexible inputs.}\label{app:add-flexible}---Let observed loss be $L_{\rm obs}=L^*e^{\iota(N,D)}$, where $L^*$ is
-the technology with the hyperparameters concentrated out and $\iota\ge0$ is the inefficiency of the researcher's
-hyperparameter policy. Along the IsoFLOP curve at compute $C$, write $f(n)$ for $L^*$ at $d=c-\ln6-n$, with minimizer
-$n^*(c)$. Then $f'=-\alpha u+\beta v$ and $f''=\alpha^2u+\beta^2v$, and at the minimizer $\alpha u=\beta v=\gamma R^*$,
-with $R^*$ the reducible loss on the frontier, so $f''=(\alpha+\beta)\gamma R^*$. The observed argmin solves
-$f'(n)+\Delta(n)=0$, where $\Delta\equiv\partial(L_{\rm obs}-L^*)/\partial n$ at fixed compute. To first order in
-$\Delta$, the log argmin shifts by $-\Delta(C)/f''(C)$, and differentiating in $\ln C$ gives
+\textit{Flexible inputs.}\label{app:add-flexible} Let observed loss be $L_{\rm obs}=L^*e^{\iota(N,D)}$, where $L^*$ is the
+technology with the hyperparameters concentrated out and $\iota\ge0$ is the inefficiency of the researcher's policy. Along
+the IsoFLOP curve at compute $C$ the observed argmin solves $f'(n)+\Delta(n)=0$, with $f$ the true profile, $f''=(\alpha+\beta)\gamma R^*$
+at the minimizer and $\Delta\equiv\partial(L_{\rm obs}-L^*)/\partial n$ at fixed compute. To first order the log argmin
+shifts by $-\Delta(C)/f''(C)$, so
 \begin{equation}\label{eq:app-flexbias}
-a_{\rm obs}-a=-\frac{\partial\,[\Delta/f'']}{\partial\ln C}.
+a_{\rm obs}-a=-\frac{\partial\,[\Delta/f'']}{\partial\ln C},
 \end{equation}
-At the minimizer $\Delta=L^*e^{\iota}(\iota_n-\iota_d)$, with $\iota_n\equiv\partial\iota/\partial\ln N$ and
-$\iota_d\equiv\partial\iota/\partial\ln D$, so inefficiency that depends on the inputs only through compute
-($\iota_n=\iota_d$) leaves $a$ unbiased. With small, constant log-gradients, $L^*=E+R^*$ and $R^*\propto C^{-\gamma}$
-give $a_{\rm obs}-a=-(\iota_n-\iota_d)E/[(\alpha+\beta)R^*(C)]$. The bias in $a$ is first order in the gradient,
-although by the envelope theorem the effect on the loss level is second order in the hyperparameter error. Under the
-\citet{besiroglu2024chinchilla} technology, equation~\eqref{eq:app-flexbias} matches simulated IsoFLOP argmins to within
-0.003 in $a$.
+with $\Delta=L^*e^{\iota}(\iota_n-\iota_d)$ at the minimizer. Inefficiency that depends on the inputs only through compute
+($\iota_n=\iota_d$) leaves $a$ unbiased; with small constant gradients,
+$a_{\rm obs}-a=-(\iota_n-\iota_d)E/[(\alpha+\beta)R^*(C)]$, first order in the gradient although the effect on the loss level
+is second order. On Porian et al.'s runs it explains 47 to 114 percent of the three flexible-input steps.
 
-On Porian et al.'s runs the formula explains about half to all (47 to 114 percent, depending on how $f''$ is estimated)
-of the three flexible-input steps. The mechanism is Kaplan et al.'s fixed warmup of 1.57 billion tokens and large
-batch, which leave short runs with too few useful steps. At $2.5\times10^{16}$ FLOP the untuned runs' excess loss at the
-tuned optimum is 1.57 nats (the coincidence with the warmup length is numerical), and it vanishes by about
-$3\times10^{18}$ FLOP. A penalty of this kind pushes small-budget argmins toward smaller models, by 0.7 to 1.2 log
-points, and steepens the fitted path (Figure~\ref{fig:app-measurement}, panel b).
+On the Step Law grid of \citet{li2025predictablea}, inefficiency falls with training tokens (elasticity $-0.23$ to $-0.26$) but not detectably with parameters,
+and one random configuration per cell biases $\sigma^*$ by $-0.051$. Holding the batch fixed shrinks the token elasticity of
+the optimal learning rate to 0.02--0.05 \citep[the conditional demand of][]{milgrom1996lechatelier}, which closes 26 to 43
+percent of the gap to the estimate of $-0.32$ of \citet{bjorck2024scaling}, and 17 to 40 percent of the gap to their steeper
+estimates for 125M and 350M parameters.
 
-\emph{Hyperparameters on the Step Law grid.}---The Step Law grid of \citet{li2025predictablea}, 1,911 runs in 17
-$(N,D)$ cells with up to 120 learning-rate and batch-size configurations per cell, shows the flexible inputs directly.
-Table~\ref{tab:app-steplaw} shows that this design does not identify the allocation exponent: the sum of squared
-residuals varies by less than 17 percent for $E$ between 0.6 and 1.7, over which $a$ ranges from 0.76 to 0.45. Holding
-$E$ fixed, published hyperparameter rules shift $a$ by $-0.041$ to $+0.076$, all within 0.7 residual-bootstrap standard
-errors. Choosing one random configuration per cell costs mainly precision for $a$ (median bias $-0.3$ standard errors)
-but biases $\sigma^*$ by $-0.051$, or $-3.7$ standard errors. These data therefore give no reason to regard $\sigma^*$ as
-the more robust object: relative to its own sampling error it moves more than $a$ along the profile in $E$ (7.0 against
-2.8 standard errors).
+\textit{How much of Farseer's convexity could be mis-tuning?} Farseer's runs follow the Step Law rules, so the measured
+inefficiency gradients bound what tuning could produce (Table~\ref{tab:app-tuning}). Step Law's own rule changes the
+convexity of $\ln w$ by $-4$ to $+8$ percent; untuned configurations, whose inefficiency falls with $D$, would make it larger;
+and producing all of it would take an inefficiency that rises with $D$ at 47 times the upper bound of the rule's measured
+gradient. The gradients are measured only at $M\le466$; Farseer's grid reaches 2,570.
 
-Inefficiency falls with training tokens but not detectably with parameters (Table~\ref{tab:app-hyper}, panel~A): the scale of
-inefficiency has an elasticity of $-0.23$ to $-0.26$ with respect to $D$ and an insignificant one with respect to $N$, so
-longer horizons flatten the loss surface in the hyperparameters. Because the grid is designed, its minimum measures the
-frontier directly, and the stochastic frontier adds only this variance function. By equation~\eqref{eq:app-flexbias},
-the implied bias for a researcher who uses random configurations is small ($-0.012$ in $a$). Panel~B of the same table
-estimates the demand for the flexible inputs themselves. The unconditional learning-rate demand is close to Step Law's
-published rule. Holding the batch fixed, the positive token elasticity of the optimal learning rate shrinks to between
-0.02 and 0.05, the distinction between conditional and unconditional demand of \citet{milgrom1996lechatelier}. This
-removes the positive sign of Step Law's elasticity but not the gap to the negative elasticity of \citet{bjorck2024scaling}:
-conditioning closes 26 to 43 percent of the gap to their joint estimate of $-0.32$, and less against their steeper
-per-size estimates for small models.
-
-The allocation exponent is thus the object most exposed to measurement conventions and to flexible inputs that are not
-re-optimized at each scale. Section~\ref{sec:concl} draws the implications for how scaling studies should report it.
-
-\input{tables/appD_measurement}
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=\textwidth]{m8_measurement_fig1}
-\caption{Measurement and Flexible Inputs in the Allocation Exponent}\label{fig:app-measurement}
-\begin{figurenotes}
-Panel (a): the allocation exponent re-estimated from Porian et al.'s released runs at each step of their decomposition,
-with 95 percent intervals, against their published values. Panel (b): the observed shift of the IsoFLOP argmin between
-untuned (step 2) and tuned (step 5) RefinedWeb runs, and the first-order prediction $-\Delta/f''$ of
-equation~\eqref{eq:app-flexbias} with $f''$ from the fitted technology or from local quadratics. Panel (c): the local
-measured exponent $a_m$ of equation~\eqref{eq:app-measbias} when embeddings are omitted from $N$, under two published
-technologies, with Kaplan et al.'s size range shaded and the true exponents dashed.
-\end{figurenotes}
-\begin{figurenotes}[Source]
-\citet{porian2024resolving}; \citet{pearce2024reconciling}; authors' calculations.
-\end{figurenotes}
-\end{figure}
-
-\input{tables/appD_steplaw}
-\input{tables/appD_hyper}
-
-\clearpage
+\FloatBarrier% v3 integrator: was \clearpage

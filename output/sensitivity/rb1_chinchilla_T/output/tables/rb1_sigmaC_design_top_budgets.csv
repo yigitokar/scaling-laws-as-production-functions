@@ -1,0 +1,7 @@
+design,study,top_budget,log10C_top,sigma_raw_top,se_raw_top,fitted_top_blup,fitted_top_population,design_intercept_1e20,n_budgets,Cmin,Cmax
+Chinchilla,Hoffmann et al. (2022),3e+21,21.4771,0.578771,0.0542605,0.632497,0.634864,0.680477,9,6e+18,3e+21
+Llama 3,Grattafiori et al. (2024),1e+21,21,0.609459,0.0166275,0.63976,0.650362,0.672241,8,6e+18,1e+21
+"Marin, Comma",Marin (2026),3e+20,20.4771,0.685774,0.0892387,0.666505,0.667346,0.682002,5,3e+18,3e+20
+"Marin, DCLM",Marin (2026),3e+20,20.4771,0.736857,0.0599608,0.669654,0.667346,0.685152,7,3e+18,3e+20
+"Marin, Nemotron-CC",Marin (2026),3e+20,20.4771,0.732649,0.0519995,0.670013,0.667346,0.685511,7,3e+18,3e+20
+Farseer (local path),Li et al. (2025),1e+21,21,0.657597,0.0106159,0.659197,0.650362,0.691678,8,5e+18,1e+21

@@ -1,0 +1,14 @@
+check,value,reference,passed
+"w = 1 reproduces ra3 wall penalty, r = 2",0.015583027545976957,0.015583027545976957,True
+"w = 1 reproduces ra3 wall penalty, r = 4",0.0738288217945764,0.0738288217945764,True
+"w = 1 reproduces ra3 wall penalty, r = 8",0.22224986943684444,0.22224986943685288,True
+"uncapped lifetime optimum = closed form (N*, D*) w^(-/+e), wedge = w; kq, w = 1.5",1.6334700347897524e-07,0.0,True
+"uncapped lifetime optimum = closed form (N*, D*) w^(-/+e), wedge = w; kq, w = 5.38",8.786129435112144e-08,0.0,True
+"uncapped lifetime optimum = closed form (N*, D*) w^(-/+e), wedge = w; q60, w = 1.5",1.7635422744355367e-07,0.0,True
+"uncapped lifetime optimum = closed form (N*, D*) w^(-/+e), wedge = w; q60, w = 5.38",2.0797976718611721e-07,0.0,True
+"uncapped lifetime optimum = closed form (N*, D*) w^(-/+e), wedge = w; q74, w = 1.5",3.351839028553627e-09,0.0,True
+"uncapped lifetime optimum = closed form (N*, D*) w^(-/+e), wedge = w; q74, w = 5.38",3.273620530208632e-08,0.0,True
+"scale invariance 1e25 vs 1e27, w = 3, r_obs = 4",1.3812982979644062e-09,0.0,True
+"mu_eff = 1/eta - 1 (Prop. 1(iii) under soft repetition), w = 3, r_obs = 4",0.12209372171796717,0.12209376615969725,True
+"scale invariance 1e25 vs 1e27, w = 5.38, r_obs = 8",2.295271180896563e-07,0.0,True
+"mu_eff = 1/eta - 1 (Prop. 1(iii) under soft repetition), w = 5.38, r_obs = 8",0.2657321850155383,0.265731997598347,True

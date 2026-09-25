@@ -1,42 +1,55 @@
-% Online Appendix table relabelled from output/tables/ra2_wedge_conduct.tex (writer appendix_D_F, 2026-09-24).
-% The aggregate-share block of the module table is dropped: Table 4, panel C, reports it (ra3_econ_inference_share.csv).
+% Online Appendix Table E6 (round 3, WP4b, fix list W14, W23(l), W24(h)): copy of output/tables/rb2_decisions_conduct.tex
+% (49 budget-level decision units; rb2_decisions re-run, reviewed) with Panel D added from
+% output/tables/rb5_units_serving_ri.csv and rb5_units_serving_ri_dev.csv (rb5_units, reviewed).
 \begin{table}[tp]
 \centering
-\caption{Conduct Tests and Derivative Counts}
+\caption{Conduct Tests with Model-Level Serving and Decision Units}
 \label{tab:app-conduct}
 \footnotesize
-\setlength{\tabcolsep}{2.5pt}
-\ifdefined\ratabbox\else\newsavebox{\ratabbox}\fi
-\sbox{\ratabbox}{%
-\begin{tabular}{@{}llrrrrrl@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrll@{}}
 \toprule
-Test & Sample & $n$ & $G$ & Coef. & (s.e.) & $p$ (WCR) & Note \\
+& $n$ & Clusters & Treated & Coef. & (s.e.) & WCR $p$ \\
 \midrule
-\multicolumn{8}{@{}l}{\textit{Panel A. Conduct tests; outcome $\ln w$ (reference), controls year effects and $\ln C$}} \\[1pt]
-(a) Open weights & universe & 186 & 67 & 0.52 & (0.18) & 0.011 & {\footnotesize $G_0$=23 closed} \\
-\quad 2023 and later & universe & 150 & 60 & 0.71 & (0.17) & 0.001 & {\footnotesize $G_0$=15 closed} \\
-(b) Developer serves & clean & 77 & 18 & 0.45 & (0.26) & 0.390 & {\footnotesize $G_1$=7} \\
-\quad On-device target & clean & 77 & 18 & 0.22 & (0.23) & 0.410 & {\footnotesize $G_1$=2} \\
-\quad Local target & clean & 77 & 18 & 0.04 & (0.25) & 0.878 & {\footnotesize $G_1$=3} \\
-\quad Developer serves & clean + suites & 136 & 26 & 0.47 & (0.17) & 0.070 & {\footnotesize $G_1$=8} \\
-\quad On-device target & clean + suites & 136 & 26 & 0.57 & (0.24) & 0.209 & {\footnotesize $G_1$=2} \\
-(c) In a tier window & clean & 75 & 18 & $-$0.39 & (0.28) & 0.340 & {\footnotesize placebo $p$ 1.00} \\
- & open, 2023+ & 133 & 52 & $-$0.16 & (0.21) & 0.523 & {\footnotesize placebo $p$ 0.59} \\
-\quad ln distance to cap & clean & 75 & 18 & 0.46 & (0.20) & 0.059 & {\footnotesize placebo $p$ 0.61} \\
- & open, 2023+ & 133 & 52 & 0.62 & (0.16) & 0.005 & {\footnotesize placebo $p$ 0.37} \\
-(c) Excess mass & open 2023--26 & 220 & & 82.6 & (9.8) & & {\footnotesize share 0.51 vs 0.13} \\
-(c) Excess mass & clean & 77 & & 37.2 & (5.5) & & {\footnotesize share 0.58 vs 0.10} \\
+\multicolumn{7}{@{}l}{\textit{Panel A. Serving, outcome $\ln\hat w$ given $\ln C$ and year effects}} \\[1pt]
+Models: developer-level code & 77 & 18 & 7 & 0.43 & (0.27) & 0.481 \\
+Models: model-level code & 77 & 18 & 6 & 0.56 & (0.24) & 0.413 \\
+Models: model-level, ambiguous sizes served & 77 & 18 & 7 & 0.62 & (0.24) & 0.220 \\
+Models without Alibaba & 58 & 17 & 5 & $-$0.09 & (0.28) & 0.751 \\
+Decisions: any member served & 49 & 18 & 6 & 0.28 & (0.29) & 0.673 \\
+Decisions: all members served & 49 & 18 & 4 & 0.49 & (0.17) & 0.159 \\
+Decisions without Alibaba & 43 & 17 & 5 & $-$0.20 & (0.30) & 0.572 \\
 \addlinespace
-\multicolumn{8}{@{}l}{\textit{Panel B. Hugging Face derivative repositories}} \\[1pt]
-HF quantizations on $\ln M$ & clean & 74 & 16 & 0.61 & (0.11) & 0.018 & {\footnotesize } \\
-HF fine-tunes on $\ln M$ & clean & 74 & 16 & 0.87 & (0.18) & 0.029 & {\footnotesize } \\
-HF adapters on $\ln M$ & clean & 74 & 16 & 0.90 & (0.25) & 0.075 & {\footnotesize } \\
-HF all derivatives on $\ln M$ & clean & 74 & 16 & 0.80 & (0.17) & 0.031 & {\footnotesize } \\
-HF all on $\ln(T/D)$ & clean & 74 & 16 & 0.60 & (0.22) & 0.086 & {\footnotesize } \\
+\multicolumn{7}{@{}l}{\textit{Panel B. Open-weight premium, production-scale universe, outcome $\ln\hat w$}} \\[1pt]
+Models & 186 & 67 & 55 & 0.51 & (0.18) & 0.012 \\
+Decisions & 159 & 67 & 55 & 0.45 & (0.17) & 0.018 \\
+Decisions, 2023 and later & 123 & 60 & 52 & 0.63 & (0.15) & 0.001 \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel C. Descriptive: median $s$ (reference)}} \\[1pt]
+Served (model-level) & 26 & 6 & & 0.83 & {\scriptsize[0.63, 0.91]} & \\
+Not served & 51 & 15 & & 0.74 & {\scriptsize[0.60, 0.84]} & \\
+Served, without Alibaba & 7 & 5 & & 0.55 & {\scriptsize[0.21, 0.78]} & \\
+Served, in a tier window & 18 & 5 & & 0.74 & {\scriptsize[0.57, 0.86]} & \\
+On-device target & 9 & 2 & & 0.90 & {\scriptsize[0.84, 0.92]} & \\
+Server or unspecified & 65 & 16 & & 0.70 & {\scriptsize[0.57, 0.85]} & \\
+Decisions, served & 11 & 6 & & 0.68 & {\scriptsize[0.30, 0.79]} & \\
+Decisions, not served & 38 & 14 & & 0.74 & {\scriptsize[0.61, 0.84]} & \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel D. Randomization inference for the serving coefficient of Panel A (two-sided)}} \\[1pt]
+& $n$ & Strata & Treated & Coef. & RI $p$ & RI-$t$ $p$ \\
+Models, strata: year $\times$ compute tercile & 77 & 9 & 6 & 0.56 & $<$0.001 & 0.06 \\
+Models, strata: year $\times$ compute half & 77 & 6 & 6 & 0.56 & $<$0.001 & 0.07 \\
+Models, strata: year & 77 & 3 & 6 & 0.56 & $<$0.001 & 0.07 \\
+Models without Alibaba, year $\times$ tercile & 58 & 9 & 5 & $-$0.09 & 0.63 & 0.76 \\
+Decisions, year $\times$ tercile & 49 & 9 & 6 & 0.28 & 0.17 & 0.38 \\
+Decisions, strata: year & 49 & 3 & 6 & 0.28 & 0.11 & 0.40 \\
+Developers, slope weighted by models & 77 & 18 & 6 & 0.56 & 0.10 & \\
+Developers, unweighted slope & 77 & 18 & 6 & 0.24 & 0.28 & \\
+Developers without Alibaba, weighted & 58 & 17 & 5 & 0.01 & 0.94 & \\
 \bottomrule
-\end{tabular}%
-}
-\ifdim\wd\ratabbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\ratabbox}}\else\usebox{\ratabbox}\fi\par
-\begin{tablenotes}$G$: developer clusters. s.e.: cluster-robust (CRV1) standard error. $p$ (WCR): restricted wild cluster bootstrap-$t$ with Webb six-point weights, 9,999 draws (floor $10^{-4}$), clustered by developer. (a) Production-scale universe ($6ND\ge10^{21}$ FLOP, 2019--2026; open-weight and closed models), confident $N$ and $D$ only (Epoch `Confident' or documented), no mixture-of-experts or non-transformer models, clean-sample exclusions for verified models; ``open, 2023+'': its open-weight models released 2023--2025. (b) Serving: developer operated a commercial API or consumer product serving its own language models at the model's release (coding and sources in the replication package); on-device/local: stated target in the model card. Both entered jointly; clean + suites adds the research suites and replications. $G_1$ ($G_0$): developer clusters with (without) the attribute, e.g.\ closed models in (a); with $G_1\le3$ the wild cluster bootstrap is unreliable \citep{mackinnon2018wild} and the on-device and local rows are not informative. (c) Tier windows at quantized memory boundaries: 2.4--3.3B, 6.5--9.5B, 11.5--14.9B, 26--32.9B, 65--72.9B parameters; placebo = share of 999 shifted tier menus (edges multiplied by $e^{u}$, $u\sim U(-0.69,0.69)$) giving a coefficient at least as favorable to the tier story; because $\ln w$ is a deterministic function of $(N,C)$ under one technology, tier regressors correlate with $\ln w$ mechanically and only the placebo comparison is informative. Excess mass: open-weight production-scale models released 2023--2026 (total parameters; non-transformers excluded) and the clean sample, against a polynomial (degree 5) counterfactual of the $\log_{10}N$ histogram (0.1 bins) excluding the windows; bootstrap s.e.\ (999). Panel B: HF = number of derivative repositories (quantizations, fine-tunes, adapters, merges) of the base and official post-trained releases, $\ln(1+\cdot)$.\end{tablenotes}
-\begin{tablenotes}[Source]Epoch AI \citep{epochai2026data}; model cards; Hugging Face model tree; authors' calculations.\end{tablenotes}
+\end{tabular}
+\medskip
+\begin{tablenotes}
+Panels A--B: restricted wild cluster bootstrap-t by developer, Webb weights, $B=9{,}999$; CRV1 standard errors in parentheses; treated = developer clusters with the attribute (with three or fewer the $p$-value is not interpretable). Model-level serving code: this size served first-party (per-token API or consumer product) within 180 days of release; ambiguous: Meta AI ``built with Llama 3'' (8B, 70B) and 01.AI's early-access API (Yi-34B). Decisions: members of a family that share one token budget enter once (family share; total compute; first release year); in Panel B, the clean sample's common budgets enter once and other models of the production-scale universe are decisions of their own. Panel C: interquartile range in brackets; columns 2--3 give $n$ and developers. Panel D: randomization inference \citep{mackinnon2020randomization}, 9,999 permutations; RI $p$ for the coefficient, RI-$t$ $p$ for its CRV1 $t$-statistic. The rows for models and decisions permute the serving code across units within the strata shown (column 3: number of strata), which treats each size as a separate assignment although one developer decides for all its sizes; the developer rows permute the developers' shares of served models across the 18 developers (column 3: developers) and use the developer-level slope of the residuals of $\ln\hat w$ on $\ln C$ and year effects.
+\end{tablenotes}
 \end{table}

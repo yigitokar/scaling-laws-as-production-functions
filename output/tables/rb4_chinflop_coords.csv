@@ -1,0 +1,5 @@
+accounting,label,n,mean_offset_dex,sd_resid_dex,within_sd_dex,slope_resid_on_log10N,se_hc1,se_cr1_budget,t_cr1,p_cr1,coef_on_minus_log10r,se_coef_cr1,range_log10r,mean_log10r
+T4,"N_F, Hoffmann's implemented count (reproduces Table A4)",137,-0.00644132,0.0162033,0.0163371,-0.00242889,0.00361441,0.00693387,-0.350294,0.735163,0.700734,0.187367,0.070079,0.0165732
+A,"N_F, Appendix F as printed (embedding matmul + logits)",137,0.0445742,0.0410229,0.0192865,-0.0651354,0.00574781,0.0121082,-5.37945,0.000662073,0.206941,0.0622876,0.218243,0.0675887
+X,"N_F, executed FLOPs (unembedding matmul; embedding lookup free)",137,0.0201837,0.0267462,0.0169875,-0.036321,0.00445632,0.00896438,-4.0517,0.00367553,0.343238,0.0973679,0.133461,0.0431982
+6T,6ND (budgets = 6 T D; r = 1),137,-0.0230146,0.0181001,0.0162665,0.0204562,0.00391338,0.00449057,4.55537,0.0018612,,,0,0

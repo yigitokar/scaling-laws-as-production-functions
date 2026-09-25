@@ -1,0 +1,2 @@
+design,n_budgets,C_min,C_max,decades,E_hat,gamma_hat,E_lo,E_hi,E_at_boundary,gamma_lo,gamma_hi,L_min,convention,joint_E_q_in_set
+Chinchilla,9,6e+18,3e+21,2.6989700043360187,1.7408027723064274,0.16746174806981418,1.678434706702193,1.7958334184278109,False,0.15576412045017424,0.17930201849690008,2.2013258448553352,total parameters (ra1 minima),True

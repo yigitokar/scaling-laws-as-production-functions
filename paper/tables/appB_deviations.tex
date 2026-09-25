@@ -1,0 +1,63 @@
+% Online Appendix Table B-deviations (round-3 fix list, item X6; WP1, 2026-09-25). Source: output/memos/m9_sweeps.md,
+% section 6 (D1-D16 and A1-A4, with the source of each time); git log (commit times); data/processed/sweep/overnight.log,
+% extras.log, queue_e.log (queue timestamps); `last reboot` (system reboot records); output/tables/m9_sweeps_power*.csv
+% and m9_sweeps_q1_sigma.csv / _q3_extrap.csv (file times); paper/notes/m9_preanalysis_amendment1.md and _amendment2.md.
+% [round 3, WP1 review, 2026-09-25] Times rechecked against git log, the queue logs and `last reboot`; D8 and A4 rows
+% now name the replaced tilt test (Amendment 2, item 6). Split into two floats (Panel A; Panel B and notes), since one
+% float was 101pt taller than the page in the test build.
+\begin{table}[p]
+\centering
+\caption{Deviations from the Pre-Analysis Plan of the Controlled Experiment}
+\label{tab:app-deviations}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.06\textwidth}>{\raggedright\arraybackslash}p{0.45\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}@{}}
+\toprule
+No. & Deviation (reason) & Time (source) & Effect on the questions \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Panel A. Departures from the plan}}\\[1pt]
+D1 & High-$M$ runs trimmed (GPU time): FineWeb has only the $(128,4)$ shape; $(128,2)$ not continued to 3.2B & 07:48 (commit) & Less reach for Q3 on FineWeb; high-$M$ tuning checks on FineWeb-Edu only, to 1.6B \\
+D2 & Reboot (hardware); interrupted trunks rerun, same seed and data order & 15:32 (system); 15:37 (log) & Endpoints of a trunk from two runs; duplicates checked \\
+D3--D7, D9--D11 & Details the plan left open: bytes per scored token (D3); $\sigma^*$ identity under P, and P6 (D4); bandwidths, compute levels (D5); intervals, joint draws (D6); WikiText-103 via matched cells (D7); power-study truth (D9); Q6 bins (D10); Q5 argmins (D11) & 17:44 (commit); D9 16:44 (file) & FineWeb validation levels (D3); quality label from matched cells (D7); else none \\
+D8 & CR2 scheme beside the plan's intervals (which cover 40--83 percent): CR2 residuals, bandwidth re-selected, restricted tilt test, calibration factors & 17:05 (account); 16:55--17:02 (file); 17:44 (commit) & Robust only under all three schemes; factors and tilt test replaced by Amendment~2 \\
+D12 & Clusters are architectures; duplicated cells ($(256,4)$ at 0.2B and 0.8B; width-128 seed run at 0.2B) left out of the fits & 17:44 (commit) & Duplicates check nondeterminism \\
+D13 & Neutral-set losses computed after training from saved weights (FineWeb widths 320--640, FineWeb-Edu $(256,4)$, seed replicates): job lists predated the update of 17:44 & 23:07 (commit); 00:49$^{\dagger}$ (commit) & No neutral-set tilt on the main grid; matched-cell sign checks \\
+D14 & Second reboot (hardware): FineWeb trunks at width 640 (200M) and $(128,4)$ (1.6B, 3.2B) rerun; the rerun width-640 endpoint has all five sets & 03:17$^{\dagger}$ (system); 10:07$^{\dagger}$ (log) & As D2 \\
+D15 & Amendment~1: $N_F=C/(6D)$, not total parameters, is the comparison convention (referee request) & 17:40 (account); 17:44 (commit) & Made after FineWeb-Edu's total-parameter value was seen: its Q1, Q3 arms exploratory \\
+D16 & FineWeb-Edu widths 384 and 512 retrained with every evaluation set and saved weights (matched neutral-set cells) & 11:34$^{\dagger}$ (log); 11:35$^{\dagger}$ (commit) & Exploratory; originals stay in the fits \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+Panel B and the notes follow on the next page.
+\end{tablenotes}
+\end{table}
+
+\begin{table}[tp]
+\centering
+{\small\textsc{Table~\ref{tab:app-deviations} (continued). Deviations from the Pre-Analysis Plan of the Controlled
+Experiment}\par}
+\vspace{6pt}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.06\textwidth}>{\raggedright\arraybackslash}p{0.45\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}@{}}
+\toprule
+No. & Deviation (reason) & Time (source) & Effect on the questions \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Panel B. Changes to the outcome-to-headline map of Amendment~1}}\\[1pt]
+A1 & Window of the headline $\sigma^*$ narrowed from $10^{19}$--$10^{21}$ FLOP & 22:27 (commit) & Public designs only \\
+A2 & Chinchilla's $\sigma^*$ in $N_F$: 0.673 to 0.660; study-level mean 0.693 to 0.687 & 00:21$^{\dagger}$ (commit) & Band unchanged \\
+A3 & Q3: three public recipes, then a recipe-dependent direction beyond the designs & 22:27 (commit); round 3$^{\dagger}$ & Map restated in Amendment~2 \\
+A4 & Amendment~2: definitions, restated map, Q2 robustness, calibration factors, CR2-scheme tilt rule, added runs & 11:45$^{\dagger}$ (account); [[X1: time]] (commit) & Before any FineWeb technology estimate \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+Times are UTC+3 on 24 September 2026, or 25 September ($^{\dagger}$). Time sources: commit, the git time of the first
+commit with the change; log, a queue-script timestamp; file, a file time; system, the reboot record; account, our
+account. Seen before Amendment~1 (files of 17:26--17:28): FineWeb-Edu's model-free $\sigma^*$ of 0.666 (P), 0.665 (P6)
+and 0.607 (T), $\kappa$-family values of 0.662 and 0.605, a Q3 slope of $-0.29$ and a level gap of $-0.69$; FineWeb's
+learning-rate calibration; between-corpus loss differences at matched cells. Before Amendment~2, also raw losses in the
+queue logs. No FineWeb technology estimate or tilt existed before either. Source: analysis memo, section 6.
+\end{tablenotes}
+\end{table}

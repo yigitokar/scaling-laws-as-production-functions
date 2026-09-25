@@ -1,0 +1,281 @@
+set,tau,rationale,level,year,n,share_identified,share_identified_cw
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,model,all,77,0.8701298701298701,0.48465869666740674
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,model,2023,24,0.7083333333333334,0.1973461477169958
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,model,2024,40,0.925,0.39682083140205643
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,model,2025,13,1.0,1.0
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,decision,all,49,0.8163265306122449,0.3997397997565774
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,decision,2023,16,0.625,0.13748086488482097
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,decision,2024,27,0.8888888888888888,0.28848817211870986
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.0,none,decision,2025,6,1.0,1.0
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,model,all,77,0.8571428571428571,0.4781493701090291
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,model,2023,24,0.6666666666666666,0.12795983020040147
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,model,2024,40,0.925,0.39682083140205643
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,model,2025,13,1.0,1.0
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,decision,all,49,0.7959183673469388,0.39208320650186607
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,decision,2023,16,0.5625,0.05586523139304761
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,decision,2024,27,0.8888888888888888,0.28848817211870986
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.3,tokenizer,decision,2025,6,1.0,1.0
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),model,all,77,0.8181818181818182,0.3437364452179669
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),model,2023,24,0.625,0.11920581733460503
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),model,2024,40,0.9,0.3052916612987132
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),model,2025,13,0.9230769230769231,0.6217493998083929
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),decision,all,49,0.7551020408163265,0.31639721589655917
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),decision,2023,16,0.5,0.04257919653673691
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),decision,2024,27,0.8888888888888888,0.28848817211870986
+PI-1 (bootstrap-t anchors; e from paths and published laws),1.84,DataDecide tilt (0.26 x reference),decision,2025,6,0.8333333333333334,0.5776951653774789
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,model,all,77,0.6883116883116883,0.23118604486418648
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,model,2023,24,0.3333333333333333,0.0543984176093201
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,model,2024,40,0.875,0.19210574132196373
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,model,2025,13,0.7692307692307693,0.48646881457147517
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,decision,all,49,0.6326530612244898,0.13762439151920589
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,decision,2023,16,0.3125,0.031147342302149033
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,decision,2024,27,0.8518518518518519,0.08157910141232513
+PI-1 (bootstrap-t anchors; e from paths and published laws),3.4,DataDecide M* factor,decision,2025,6,0.5,0.42637120327361794
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),model,all,77,0.6753246753246753,0.23050298984615808
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),model,2023,24,0.2916666666666667,0.047117376792398226
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),model,2024,40,0.875,0.19210574132196373
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),model,2025,13,0.7692307692307693,0.48646881457147517
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),decision,all,49,0.6122448979591837,0.13694133650117749
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),decision,2023,16,0.25,0.02386630148522716
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),decision,2024,27,0.8518518518518519,0.08157910141232513
+PI-1 (bootstrap-t anchors; e from paths and published laws),4.4,both (3.4 x 1.3),decision,2025,6,0.5,0.42637120327361794
+"normal inputs only (e in [-1, 1])",1.0,none,model,all,77,0.14285714285714285,0.003286721294373417
+"normal inputs only (e in [-1, 1])",1.0,none,model,2023,24,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.0,none,model,2024,40,0.225,0.0021292770286514516
+"normal inputs only (e in [-1, 1])",1.0,none,model,2025,13,0.15384615384615385,0.009812285840115176
+"normal inputs only (e in [-1, 1])",1.0,none,decision,all,49,0.14285714285714285,0.0009923086277536972
+"normal inputs only (e in [-1, 1])",1.0,none,decision,2023,16,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.0,none,decision,2024,27,0.25925925925925924,0.001359480768755231
+"normal inputs only (e in [-1, 1])",1.0,none,decision,2025,6,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,model,all,77,0.12987012987012986,0.0029072722807903665
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,model,2023,24,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,model,2024,40,0.225,0.0021292770286514516
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,model,2025,13,0.07692307692307693,0.007664249498882077
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,decision,all,49,0.14285714285714285,0.0009923086277536972
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,decision,2023,16,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,decision,2024,27,0.25925925925925924,0.001359480768755231
+"normal inputs only (e in [-1, 1])",1.3,tokenizer,decision,2025,6,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),model,all,77,0.1038961038961039,0.0025457182975937615
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),model,2023,24,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),model,2024,40,0.175,0.0016336838968500614
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),model,2025,13,0.07692307692307693,0.007664249498882077
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),decision,all,49,0.10204081632653061,0.0006307546445570919
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),decision,2023,16,0.0,0.0
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),decision,2024,27,0.18518518518518517,0.0008641452720405544
+"normal inputs only (e in [-1, 1])",1.84,DataDecide tilt (0.26 x reference),decision,2025,6,0.0,0.0
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,model,all,77,0.1038961038961039,0.0025457182975937615
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,model,2023,24,0.0,0.0
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,model,2024,40,0.175,0.0016336838968500614
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,model,2025,13,0.07692307692307693,0.007664249498882077
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,decision,all,49,0.10204081632653061,0.0006307546445570919
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,decision,2023,16,0.0,0.0
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,decision,2024,27,0.18518518518518517,0.0008641452720405544
+"normal inputs only (e in [-1, 1])",3.4,DataDecide M* factor,decision,2025,6,0.0,0.0
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),model,all,77,0.1038961038961039,0.0025457182975937615
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),model,2023,24,0.0,0.0
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),model,2024,40,0.175,0.0016336838968500614
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),model,2025,13,0.07692307692307693,0.007664249498882077
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),decision,all,49,0.10204081632653061,0.0006307546445570919
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),decision,2023,16,0.0,0.0
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),decision,2024,27,0.18518518518518517,0.0008641452720405544
+"normal inputs only (e in [-1, 1])",4.4,both (3.4 x 1.3),decision,2025,6,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,model,all,77,0.07792207792207792,0.0024024003451793546
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,model,2023,24,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,model,2024,40,0.125,0.0014372335846381905
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,model,2025,13,0.07692307692307693,0.007664249498882077
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,decision,all,49,0.061224489795918366,0.00048234434155915065
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,decision,2023,16,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,decision,2024,27,0.1111111111111111,0.000660820472509619
+PI-1 + Marin Comma anchor (5 budgets),1.0,none,decision,2025,6,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,model,all,77,0.05194805194805195,0.002305991294748869
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,model,2023,24,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,model,2024,40,0.075,0.0013050827428346835
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,model,2025,13,0.07692307692307693,0.007664249498882077
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,decision,all,49,0.04081632653061224,0.00039102764171219934
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,decision,2023,16,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,decision,2024,27,0.07407407407407407,0.0005357149419962455
+PI-1 + Marin Comma anchor (5 budgets),1.3,tokenizer,decision,2025,6,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),model,all,77,0.03896103896103896,0.001931938154981783
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),model,2023,24,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),model,2024,40,0.05,0.0007923566338361593
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),model,2025,13,0.07692307692307693,0.007664249498882077
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),decision,all,49,0.02040816326530612,1.6974501945113444e-05
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),decision,2023,16,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),decision,2024,27,0.037037037037037035,2.325537469710266e-05
+PI-1 + Marin Comma anchor (5 budgets),1.84,DataDecide tilt (0.26 x reference),decision,2025,6,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,model,all,77,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,model,2023,24,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,model,2024,40,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,model,2025,13,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,decision,all,49,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,decision,2023,16,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,decision,2024,27,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),3.4,DataDecide M* factor,decision,2025,6,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),model,all,77,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),model,2023,24,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),model,2024,40,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),model,2025,13,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),decision,all,49,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),decision,2023,16,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),decision,2024,27,0.0,0.0
+PI-1 + Marin Comma anchor (5 budgets),4.4,both (3.4 x 1.3),decision,2025,6,0.0,0.0
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,model,all,77,0.8701298701298701,0.48465869666740674
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,model,2023,24,0.7083333333333334,0.1973461477169958
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,model,2024,40,0.925,0.39682083140205643
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,model,2025,13,1.0,1.0
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,decision,all,49,0.8163265306122449,0.3997397997565774
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,decision,2023,16,0.625,0.13748086488482097
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,decision,2024,27,0.8888888888888888,0.28848817211870986
+PI-1 with Meta's 10-budget anchor at 1e22,1.0,none,decision,2025,6,1.0,1.0
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,model,all,77,0.8571428571428571,0.4781493701090291
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,model,2023,24,0.6666666666666666,0.12795983020040147
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,model,2024,40,0.925,0.39682083140205643
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,model,2025,13,1.0,1.0
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,decision,all,49,0.7959183673469388,0.39208320650186607
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,decision,2023,16,0.5625,0.05586523139304761
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,decision,2024,27,0.8888888888888888,0.28848817211870986
+PI-1 with Meta's 10-budget anchor at 1e22,1.3,tokenizer,decision,2025,6,1.0,1.0
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),model,all,77,0.8181818181818182,0.3437364452179669
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),model,2023,24,0.625,0.11920581733460503
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),model,2024,40,0.9,0.3052916612987132
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),model,2025,13,0.9230769230769231,0.6217493998083929
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),decision,all,49,0.7551020408163265,0.31639721589655917
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),decision,2023,16,0.5,0.04257919653673691
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),decision,2024,27,0.8888888888888888,0.28848817211870986
+PI-1 with Meta's 10-budget anchor at 1e22,1.84,DataDecide tilt (0.26 x reference),decision,2025,6,0.8333333333333334,0.5776951653774789
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,model,all,77,0.6883116883116883,0.23118604486418648
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,model,2023,24,0.3333333333333333,0.0543984176093201
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,model,2024,40,0.875,0.19210574132196373
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,model,2025,13,0.7692307692307693,0.48646881457147517
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,decision,all,49,0.6326530612244898,0.13762439151920589
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,decision,2023,16,0.3125,0.031147342302149033
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,decision,2024,27,0.8518518518518519,0.08157910141232513
+PI-1 with Meta's 10-budget anchor at 1e22,3.4,DataDecide M* factor,decision,2025,6,0.5,0.42637120327361794
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),model,all,77,0.6753246753246753,0.23050298984615808
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),model,2023,24,0.2916666666666667,0.047117376792398226
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),model,2024,40,0.875,0.19210574132196373
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),model,2025,13,0.7692307692307693,0.48646881457147517
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),decision,all,49,0.6122448979591837,0.13694133650117749
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),decision,2023,16,0.25,0.02386630148522716
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),decision,2024,27,0.8518518518518519,0.08157910141232513
+PI-1 with Meta's 10-budget anchor at 1e22,4.4,both (3.4 x 1.3),decision,2025,6,0.5,0.42637120327361794
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,model,all,77,0.7142857142857143,0.1730013620003787
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,model,2023,24,0.5,0.06887840943264799
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,model,2024,40,0.825,0.11048819947479054
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,model,2025,13,0.7692307692307693,0.48646881457147517
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,decision,all,49,0.6530612244897959,0.11578325886444349
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,decision,2023,16,0.4375,0.03638735909383759
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,decision,2024,27,0.8148148148148148,0.050982880048311856
+"PI-1, e widened to the path-slope 95% intervals",1.0,none,decision,2025,6,0.5,0.42637120327361794
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,model,all,77,0.6623376623376623,0.17097332093407522
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,model,2023,24,0.3333333333333333,0.047260458619884566
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,model,2024,40,0.825,0.11048819947479054
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,model,2025,13,0.7692307692307693,0.48646881457147517
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,decision,all,49,0.6122448979591837,0.11462204597154488
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,decision,2023,16,0.3125,0.024009383312713503
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,decision,2024,27,0.8148148148148148,0.050982880048311856
+"PI-1, e widened to the path-slope 95% intervals",1.3,tokenizer,decision,2025,6,0.5,0.42637120327361794
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),model,all,77,0.5974025974025974,0.160038836383612
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),model,2023,24,0.2916666666666667,0.038196414638856084
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),model,2024,40,0.725,0.09666553080820554
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),model,2025,13,0.7692307692307693,0.48646881457147517
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),decision,all,49,0.5510204081632653,0.10542121776789129
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),decision,2023,16,0.3125,0.024009383312713503
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),decision,2024,27,0.7037037037037037,0.03837757898607769
+"PI-1, e widened to the path-slope 95% intervals",1.84,DataDecide tilt (0.26 x reference),decision,2025,6,0.5,0.42637120327361794
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,model,all,77,0.4675324675324675,0.13227484196290618
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,model,2023,24,0.08333333333333333,0.01013779009171165
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,model,2024,40,0.6,0.06221669022978804
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,model,2025,13,0.7692307692307693,0.48646881457147517
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,decision,all,49,0.40816326530612246,0.09538322723299875
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,decision,2023,16,0.125,0.01013779009171165
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,decision,2024,27,0.5555555555555556,0.026408200637960715
+"PI-1, e widened to the path-slope 95% intervals",3.4,DataDecide M* factor,decision,2025,6,0.5,0.42637120327361794
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),model,all,77,0.4155844155844156,0.11970262470454052
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),model,2023,24,0.041666666666666664,0.007520465894132805
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),model,2024,40,0.55,0.0491261467515039
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),model,2025,13,0.6923076923076923,0.47075048707443057
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),decision,all,49,0.3673469387755102,0.08703296306106201
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),decision,2023,16,0.0625,0.007520465894132804
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),decision,2024,27,0.5185185185185185,0.015304579980646871
+"PI-1, e widened to the path-slope 95% intervals",4.4,both (3.4 x 1.3),decision,2025,6,0.5,0.42637120327361794
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,model,all,77,0.8701298701298701,0.48465869666740674
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,model,2023,24,0.7083333333333334,0.1973461477169958
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,model,2024,40,0.925,0.39682083140205643
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,model,2025,13,1.0,1.0
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,decision,all,49,0.8163265306122449,0.3997397997565774
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,decision,2023,16,0.625,0.13748086488482097
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,decision,2024,27,0.8888888888888888,0.28848817211870986
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.0,none,decision,2025,6,1.0,1.0
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,model,all,77,0.8571428571428571,0.4781493701090291
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,model,2023,24,0.6666666666666666,0.12795983020040147
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,model,2024,40,0.925,0.39682083140205643
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,model,2025,13,1.0,1.0
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,decision,all,49,0.7959183673469388,0.39208320650186607
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,decision,2023,16,0.5625,0.05586523139304761
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,decision,2024,27,0.8888888888888888,0.28848817211870986
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.3,tokenizer,decision,2025,6,1.0,1.0
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),model,all,77,0.8311688311688312,0.4105104457156279
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),model,2023,24,0.625,0.11920581733460503
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),model,2024,40,0.925,0.39682083140205643
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),model,2025,13,0.9230769230769231,0.6217493998083929
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),decision,all,49,0.7551020408163265,0.31639721589655917
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),decision,2023,16,0.5,0.04257919653673691
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),decision,2024,27,0.8888888888888888,0.28848817211870986
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",1.84,DataDecide tilt (0.26 x reference),decision,2025,6,0.8333333333333334,0.5776951653774789
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,model,all,77,0.7012987012987013,0.23161120665633592
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,model,2023,24,0.375,0.05893043959983435
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,model,2024,40,0.875,0.19210574132196373
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,model,2025,13,0.7692307692307693,0.48646881457147517
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,decision,all,49,0.6326530612244898,0.13762439151920589
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,decision,2023,16,0.3125,0.031147342302149033
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,decision,2024,27,0.8518518518518519,0.08157910141232513
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",3.4,DataDecide M* factor,decision,2025,6,0.5,0.42637120327361794
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),model,all,77,0.6753246753246753,0.23050298984615808
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),model,2023,24,0.2916666666666667,0.047117376792398226
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),model,2024,40,0.875,0.19210574132196373
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),model,2025,13,0.7692307692307693,0.48646881457147517
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),decision,all,49,0.6122448979591837,0.13694133650117749
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),decision,2023,16,0.25,0.02386630148522716
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),decision,2024,27,0.8518518518518519,0.08157910141232513
+"PI-3 own-lab anchors (Meta, Marin, DeepSeek)",4.4,both (3.4 x 1.3),decision,2025,6,0.5,0.42637120327361794
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,model,all,77,0.23376623376623376,0.027536777559981653
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,model,2023,24,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,model,2024,40,0.325,0.014509831926085646
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,model,2025,13,0.38461538461538464,0.09596024165154965
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,decision,all,49,0.16326530612244897,0.004334362999269115
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,decision,2023,16,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,decision,2024,27,0.25925925925925924,0.002961012844845988
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.0,none,decision,2025,6,0.16666666666666666,0.012328080303949846
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,model,all,77,0.2077922077922078,0.025224899835848108
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,model,2023,24,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,model,2024,40,0.3,0.014319561578168705
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,model,2025,13,0.3076923076923077,0.08365864251211033
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,decision,all,49,0.12244897959183673,0.0020224852751355715
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,decision,2023,16,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,decision,2024,27,0.2222222222222222,0.002770841409352241
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.3,tokenizer,decision,2025,6,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),model,all,77,0.14285714285714285,0.01006298132942807
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),model,2023,24,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),model,2024,40,0.225,0.006580791226138694
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),model,2025,13,0.15384615384615385,0.02978809425604108
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),decision,all,49,0.10204081632653061,0.0017997407260477967
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),decision,2023,16,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),decision,2024,27,0.18518518518518517,0.0024656773481313114
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),1.84,DataDecide tilt (0.26 x reference),decision,2025,6,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,model,all,77,0.1038961038961039,0.008188306331453423
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,model,2023,24,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,model,2024,40,0.15,0.004011116719605021
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,model,2025,13,0.15384615384615385,0.02978809425604108
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,decision,all,49,0.08163265306122448,0.0006119647889965151
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,decision,2023,16,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,decision,2024,27,0.14814814814814814,0.0008384028300544177
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),3.4,DataDecide M* factor,decision,2025,6,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),model,all,77,0.09090909090909091,0.006435089076293856
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),model,2023,24,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),model,2024,40,0.125,0.0016079280656432504
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),model,2025,13,0.15384615384615385,0.02978809425604108
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),decision,all,49,0.08163265306122448,0.0006119647889965151
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),decision,2023,16,0.0,0.0
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),decision,2024,27,0.14814814814814814,0.0008384028300544177
+PI-4 all ex-ante technologies as anchors (with bootstrap-t IsoFLOP anchors),4.4,both (3.4 x 1.3),decision,2025,6,0.0,0.0

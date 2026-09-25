@@ -1,0 +1,75 @@
+\begin{table}[tp]
+\centering
+\caption{Parametric Extrapolation against the Model-Free Wedge in Three Recipes}
+\label{tab:sigmaC-extrap}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.19\textwidth}ccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{$M=D/N$} \\
+\cmidrule(l){2-6}
+ & $<$16 & 16--64 & 64--256 & 256--1,024 & $\ge$1,024 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Farseer: non-embedding $N$, 404 runs; $b_2=$ +0.020 [0.019, 0.022]}} \\[1pt]
+Local $\ln w$ & $-$0.69 & 0.06 & 0.68 & 1.37 & 2.01 \\
+$\kappa$ free, all runs & $-$0.02 & +0.05 & +0.00 & $-$0.14 & $-$0.36 \\
+ & [$-$0.03, $-$0.01] & [0.05, 0.06] & [0.00, 0.01] & [$-$0.15, $-$0.13] & [$-$0.43, $-$0.28] \\
+$\kappa=1$, all runs & +0.16 & +0.01 & $-$0.19 & $-$0.49 & $-$0.82 \\
+ & [0.15, 0.17] & [0.00, 0.01] & [$-$0.21, $-$0.18] & [$-$0.50, $-$0.47] & [$-$0.90, $-$0.75] \\
+$\kappa=1$, $M\le100$ & +0.08 & $-$0.23 & $-$0.55 & $-$0.95 & $-$1.36 \\
+ & [0.07, 0.09] & [$-$0.24, $-$0.22] & [$-$0.56, $-$0.53] & [$-$0.97, $-$0.93] & [$-$1.44, $-$1.28] \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Marin, Comma: 85 runs; $b_2=$ +0.032 [0.024, 0.042]}} \\[1pt]
+Local $\ln w$ (points) & $-$0.65 (54) & 0.44 (20) & 1.21 (13) & 2.06 (6) & 2.95 (2) \\
+$\kappa$ free, all runs & $-$0.10 & +0.08 & $-$0.09 & $-$0.43 & $-$0.92 \\
+ & [$-$0.12, $-$0.03] & [0.01, 0.07] & [$-$0.20, $-$0.12] & [$-$0.62, $-$0.44] & [$-$1.29, $-$0.74] \\
+$\kappa=1$, all runs & $-$0.09 & +0.02 & $-$0.18 & $-$0.56 & $-$1.07 \\
+ & [$-$0.14, $-$0.05] & [$-$0.02, 0.04] & [$-$0.27, $-$0.15] & [$-$0.68, $-$0.50] & [$-$1.32, $-$0.84] \\
+$\kappa=1$, $M\le100$ & $-$0.05 & $-$0.22 & $-$0.58 & $-$1.09 & $-$1.70 \\
+ & [$-$0.08, $-$0.01] & [$-$0.28, $-$0.19] & [$-$0.69, $-$0.53] & [$-$1.26, $-$1.02] & [$-$1.96, $-$1.47] \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Marin, DCLM: 84 runs (1 screened); $b_2=$ +0.027 [0.019, 0.038]}} \\[1pt]
+Local $\ln w$ (points) & $-$0.58 (55) & 0.58 (20) & 1.36 (13) & 2.28 (7) & 3.46 (1) \\
+$\kappa$ free, all runs & $-$0.09 & +0.06 & $-$0.09 & $-$0.45 & $-$1.16 \\
+ & [$-$0.12, $-$0.04] & [0.02, 0.05] & [$-$0.18, $-$0.10] & [$-$0.62, $-$0.39] & [$-$1.45, $-$0.97] \\
+$\kappa=1$, all runs & $-$0.08 & $-$0.01 & $-$0.19 & $-$0.57 & $-$1.30 \\
+ & [$-$0.12, $-$0.05] & [$-$0.04, 0.00] & [$-$0.26, $-$0.14] & [$-$0.70, $-$0.44] & [$-$1.54, $-$1.09] \\
+$\kappa=1$, $M\le100$ & $-$0.07 & $-$0.16 & $-$0.46 & $-$0.95 & $-$1.74 \\
+ & [$-$0.09, $-$0.02] & [$-$0.24, $-$0.14] & [$-$0.59, $-$0.40] & [$-$1.18, $-$0.82] & [$-$2.06, $-$1.52] \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Marin, Nemotron-CC: 88 runs; $b_2=$ +0.027 [0.022, 0.033]}} \\[1pt]
+Local $\ln w$ (points) & $-$0.45 (64) & 0.53 (24) & 1.31 (13) & 2.17 (6) & 3.18 (2) \\
+$\kappa$ free, all runs & $-$0.08 & +0.06 & $-$0.08 & $-$0.39 & $-$1.00 \\
+ & [$-$0.10, $-$0.04] & [0.02, 0.06] & [$-$0.14, $-$0.09] & [$-$0.53, $-$0.35] & [$-$1.35, $-$0.68] \\
+$\kappa=1$, all runs & $-$0.09 & +0.01 & $-$0.14 & $-$0.47 & $-$1.09 \\
+ & [$-$0.12, $-$0.05] & [$-$0.03, 0.02] & [$-$0.21, $-$0.13] & [$-$0.59, $-$0.42] & [$-$1.42, $-$0.76] \\
+$\kappa=1$, $M\le100$ & $-$0.09 & $-$0.24 & $-$0.57 & $-$1.04 & $-$1.75 \\
+ & [$-$0.12, $-$0.05] & [$-$0.30, $-$0.21] & [$-$0.67, $-$0.51] & [$-$1.14, $-$0.98] & [$-$2.03, $-$1.49] \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Llama 3: 133 runs; $b_2=$ $-$0.029 [$-$0.040, $-$0.014]}} \\[1pt]
+Local $\ln w$ (points) & $-$0.80 (70) & 0.29 (38) & 0.97 (16) & 1.70 (2) & -- \\
+$\kappa$ free, all runs & +0.27 & +0.04 & $-$0.08 & $-$0.38 & -- \\
+ & [0.22, 0.35] & [0.02, 0.07] & [$-$0.15, $-$0.05] & [$-$0.57, $-$0.23] &  \\
+$\kappa=1$, all runs & +0.42 & $-$0.09 & $-$0.40 & $-$0.85 & -- \\
+ & [0.31, 0.47] & [$-$0.13, $-$0.06] & [$-$0.43, $-$0.36] & [$-$0.96, $-$0.67] &  \\
+$\kappa=1$, $M\le100$ & +0.37 & $-$0.16 & $-$0.46 & $-$0.90 & -- \\
+ & [0.29, 0.44] & [$-$0.19, $-$0.11] & [$-$0.49, $-$0.42] & [$-$1.02, $-$0.72] &  \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Marin, three corpora pooled (equal weights)}} \\[1pt]
+$\kappa$ free, all runs & $-$0.09 & +0.07 & $-$0.09 & $-$0.43 & $-$1.03 \\
+ & [$-$0.09, $-$0.05] & [0.03, 0.05] & [$-$0.16, $-$0.12] & [$-$0.55, $-$0.43] & [$-$1.27, $-$0.93] \\
+$\kappa=1$, all runs & $-$0.09 & +0.01 & $-$0.17 & $-$0.53 & $-$1.15 \\
+ & [$-$0.11, $-$0.06] & [$-$0.02, 0.01] & [$-$0.23, $-$0.16] & [$-$0.61, $-$0.49] & [$-$1.33, $-$1.01] \\
+$\kappa=1$, $M\le100$ & $-$0.07 & $-$0.21 & $-$0.53 & $-$1.03 & $-$1.73 \\
+ & [$-$0.08, $-$0.04] & [$-$0.25, $-$0.20] & [$-$0.61, $-$0.51] & [$-$1.15, $-$0.98] & [$-$1.93, $-$1.61] \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Entries: $\Delta=\ln(w_{\rm param}/w_{\rm local})$ averaged over the evaluation points in each bin of $M=D/N$; 95\% basic bootstrap intervals below. Negative values mean that the parametric form understates the wedge. Local wedge: on an IsoFLOP design, with $x=\ln M$ and $c=\ln C$, $w=(f_c-f_x)/(f_c+f_x)$ for $f=\ln L$, from a kernel-weighted local quadratic in $(x,c)$ with a Gaussian product kernel; it needs no functional form and no loss units. Bandwidths: leave-one-out cross-validation over multiples of the coordinate standard deviations, with the $c$-bandwidth at least half the largest gap between adjacent budgets; one bandwidth for Marin's three corpora (pooled criterion, smallest $c$-multiple within 1\% of the minimum); Llama~3 its own. Evaluation points: 14 log-spaced $M$ on every budget line inside the budget's observed range, kernel effective sample size at least 8 (number of points in parentheses). Parametric comparators: the $\kappa$ family with $\kappa$ free and the Chinchilla form ($\kappa=1$), fitted by Huber loss on $\ln L$ to all runs or to the runs with $M\le100$ only, in the same FLOP-implied parameter convention. Intervals: wild cluster bootstrap by budget (Webb weights, 999 draws) around the pilot local surface, every fit recomputed in each draw. Basic intervals correct for the estimator's bootstrap bias; on Marin's 84--88 runs this bias is of the order of the sampling spread for the $\kappa$-free comparator and points towards a larger understatement, so an interval can lie below its point estimate (CSV: bias, run-level intervals). $b_2$: coefficient on $u^2$ in $\ln w_{\rm local}=b_1u+b_2u^2$, $u=\ln(M/M^*_{\rm local}(C))$, with $M^*_{\rm local}(C)$ the root of $\ln w_{\rm local}=0$ on each budget line; $b_2>0$ means $\ln w$ is convex, which a linear-in-$u$ form cannot capture. Screening: a Marin run whose loss exceeds that of the same configuration trained on fewer tokens is dropped (DCLM, 157M configuration at $1.8\times10^{20}$ FLOP); results with it are in the CSV. The local wedge is evaluated up to $M\approx1,112$ on Marin (runs reach 3,706) and $M\approx290$ on Llama~3 (runs reach 643); beyond, the kernel effective sample size falls below 8. The $M\ge1{,}024$ bin rests on 1--2 corner points per corpus (effective sample size 8--11) and is fragile; Llama~3's 256--1,024 bin is two points at the lower end of the bin. Smoothing bias is not in the intervals (bandwidth sensitivity in the CSV). Farseer rows reproduce module ra1 (wild cluster bootstrap by model size).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+\citet{li2025predictableb}; \citet{marin2026ladders}; \citet{grattafiori2024llama}; \citet{czech2026llama3isoflop}; authors' calculations.
+\end{tablenotes}
+\end{table}

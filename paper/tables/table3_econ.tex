@@ -1,0 +1,65 @@
+% Table 3 (round 3): copied from output/tables/rb3_econ2_table.tex (module rb3_econ2), placed by WP5, 2026-09-25.
+% Regenerate with code/analysis/rb3_econ2/run.py and re-copy (the copy adds only these two comment lines).
+% Table 3 (revised) -- Economic implications: data demand, the data wall and the revealed wedge (Section V).
+% Module rb3_econ2 (code/analysis/rb3_econ2/run.py); sources: rb3_econ2_demand.csv, _scenarios.csv,
+% _wall_compute_optimal.csv, _frontier_wall.csv, _wedge_by_year.csv, _wedge_trend.csv, _fleet.csv, _gamma.csv.
+\begin{table}[tp]
+\centering
+\caption{Economic Implications: Data Demand, the Data Wall and the Revealed Wedge}
+\label{tab:econ}
+\footnotesize
+\setlength{\tabcolsep}{1.8pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\toprule
+\multicolumn{8}{@{}l}{\textit{Panel A. Compute-optimal data demand}} \\[2pt]
+ & & $D^*$ in & \multicolumn{2}{c}{$D^*$ per year} & \multicolumn{2}{c}{$D^*$ over 5 years} & 100T \\
+ & & 2026 & \multicolumn{2}{c}{if $C$ grows} & \multicolumn{2}{c}{if $C$ grows} & reached \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Technology & $a$ & (T) & $4.2\times$ & $5.06\times$ & $4.2\times$ & $5.06\times$ & (year) \\
+\midrule
+Chinchilla, $\kappa$ free (reference) & 0.50 & 57 & 2.04 & 2.24 & 35 & 56 & 2027.4 \\
+Chinchilla, $\kappa=1$ & 0.51 & 48 & 2.01 & 2.20 & 33 & 52 & 2027.4 \\
+Llama 3 (Meta's law) & 0.46 & 90 & 2.16 & 2.39 & 47 & 78 & 2027.1 \\
+Farseer, own form (local) & 0.36 & 419 & 2.52 & 2.84 & 101 & 183 & 2026.6 \\
+Gadre et al., RefinedWeb & 0.57 & 9.3 & 1.87 & 2.02 & 23 & 34 & 2027.8 \\
+OLMo ladder (AI2) & 0.37 & 519 & 2.47 & 2.78 & 92 & 165 & 2026.7 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel B. Scenario: the frontier adopts the open-weight trend}} \\[2pt]
+ & & $D/D^*$ & \multicolumn{2}{c}{$D$ per year} & \multicolumn{2}{c}{$D$ over 5 years$^a$} & 100T \\
+ & & per & \multicolumn{2}{c}{if $C$ grows} & \multicolumn{2}{c}{if $C$ grows} & reached \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Trend: $w$ per year [95\% CI] & $\sigma^*$ & year & $4.2\times$ & $5.06\times$ & $4.2\times$ & $5.06\times$ & (year) \\
+\midrule
+None: wedge held ($w=1.21$) & -- & 1.00 & 2.04 & 2.24 & 35 & 56 & 2027.4 \\
+Decision units: 1.86 [0.96, 3.54] & 0.60 & 1.59 & 3.24 & 3.56 & 108 & 171 & 2027.1 \\
+ & 0.70 & 2.06 & 4.20 & 4.61 & 201 & 319 & 2027.1 \\
+ & 0.74 & 2.41 & 4.92 & 5.40 & 294 & 468 & 2027.0 \\
+Within developers: 1.59 [0.47, 5.59] & 0.70 & 1.72 & 3.51 & 3.85 & 201 & 319 & 2027.1 \\
+Units above $10^{24}$ FLOP: 1.76 [0.78, 4.15] & 0.70 & 1.93 & 3.94 & 4.32 & 201 & 319 & 2027.1 \\
+Compute-weighted units: 2.21 [0.38, 13.1] & 0.70 & 2.52 & 5.14 & 5.64 & 201 & 319 & 2027.0 \\
+Flagships above $10^{25}$ FLOP: 1.70$^b$ & 0.70 & 1.86 & 3.78 & 4.15 & 201 & 319 & 2027.1 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Panel C. The data wall at compute-optimal and at observed allocations}} \\[2pt]
+ & & & \multicolumn{3}{c}{Extra cost (\%), repetition:} & Shadow & Measured \\
+ & & & $R^*_D=$ & $R^*_D=$ & Full & value & wedge \\
+\cmidrule(lr){4-6}
+ & $\sigma^*$ & Scarcity & 15.4 & 2.9 & model & (\$/M) & ratio$^c$ \\
+\midrule
+\multicolumn{8}{@{}l}{\quad\textit{Compute-optimal run ($w=1$), $10^{26}$ FLOP; scarcity $r=D^*(C)/U$}} \\
+\quad $r=4$ & 0.60 & 4 & 7.7 & 51.4 & 42.0 & 3.0 & 0.93 \\
+ & 0.70 & 4 & 7.4 & 39.8 & 40.3 & 2.8 & 0.92 \\
+ & 0.74 & 4 & 7.2 & 35.3 & 39.5 & 2.7 & 0.91 \\
+\multicolumn{8}{@{}l}{\quad\textit{Projected frontier at its observed allocation, 100T stock; scarcity $D/U$}} \\
+\quad 2029, wedge held ($w=1.21$) & 0.70 & 3.5 & 4.6 & 23.0 & 13.2 & 31.4 & 0.93 \\
+\quad 2029, wedge rises ($w=4.95$) & 0.70 & 17.9 & 10.4 & 48.3 & 10.4 & 175 & 0.71 \\
+\bottomrule
+\end{tabular*}
+\vspace{2pt}
+\begin{tablenotes}[Notes]
+$C$ grows 4.2-fold a year (Epoch's published rate) or 5.06-fold (our estimate). Panel A: $a$, allocation exponent ($D^*\propto C^{1-a}$); Farseer's own form: local slope at $10^{22}$--$10^{23}$ FLOP, beyond its design; OLMo: bootstrap interval for $a$ [0.11, 0.82]; model-free IsoFLOP paths ($a=0.35$--0.50): 2.06--2.53 and 2.26--2.86-fold a year; $D^*$ at the fitted frontier compute of September 2026 ($9.4\times10^{26}$ FLOP); 100T reached (at $5.06\times$): year frontier runs, at the median $D/D^*$ of the four disclosed dense runs above $10^{25}$ FLOP, reach the quality-adjusted stock of public text (100T tokens in 2024, growing 5 percent a year). Panel B: from September 2026 the frontier's wedge ($w=1.21$, $D/D^*=1.25$) grows at an open-weight trend of 2023--2025 (OLS of $\ln w$ on release date, with 95 percent wild cluster bootstrap-$t$ intervals by developer; 6 developers above $10^{24}$ FLOP; Online Appendix Table~\ref{tab:app-econ-trend}) and $D/D^*=w^{\sigma^*/[2(1-\sigma^*)]}$; tokens per parameter give the $\sigma^*=0.70$ row whatever $\sigma^*$ (1.97--2.38-fold a year across 32 technologies). $^a$The rise stops at the 2025 wedge ($w=5.38$; 3.11 without Alibaba's Qwen3), reached after 1.9 to 3.2 years. $^b$Four disclosed dense runs above $10^{25}$ FLOP, 2024--2025; descriptive (1.31 without Pangu Ultra). Panel C: the developer minimizes training cost plus a value of compactness proportional to $N$ at the loss of its uncapped choice; extra cost relative to that choice; repetition model of \citet{muennighoff2023scaling} (full model: excess parameters also decay); shadow value of a unique token at \$$10^{-18}$ per FLOP; $^c\hat w/(1+m_N)$: the wedge measured from the capped choice relative to one plus the value of compactness there ($\hat w/w$ is 0.86 in 2029 on the rising path); $\sigma^*=0.60$, 0.74: same path and frontier as the reference; frontier rows: $5.06\times$.
+\end{tablenotes}
+\begin{tablenotes}[Source]
+\citet{epochai2026data}; \citet{sevilla2024training}; \citet{hoffmann2022training}; \citet{besiroglu2024chinchilla}; \citet{grattafiori2024llama}; \citet{li2025predictableb}; \citet{gadre2024language}; \citet{bhagia2024establishing}; \citet{villalobos2022run}; \citet{muennighoff2023scaling}; author's calculations.
+\end{tablenotes}
+\end{table}

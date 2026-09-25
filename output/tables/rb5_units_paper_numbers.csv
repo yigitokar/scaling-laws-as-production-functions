@@ -1,0 +1,191 @@
+item,quantity,value,formatted,source,note
+"W5(b), W6, W21",decision units (budget level),49,49,output/tables/rb2_decisions_headline.csv,
+W5(b),units that are families sharing one budget,17,17,output/tables/rb2_decisions_headline.csv,
+W1,size-specific members (own units),17,17,data/processed/rb2_decisions/decision_units.csv,
+W1,singletons,15,15,data/processed/rb2_decisions/decision_units.csv,
+W6,"median w, decision units (reference)",3.766930300291516,3.77,output/tables/rb2_decisions_headline.csv,
+W6,"median s, decision units (reference)",0.7345318547777187,0.735,output/tables/rb2_decisions_headline.csv,
+W6,median s interval (joint wild bootstrap),"[0.657, 0.782]","[0.657, 0.782]",output/tables/rb2_decisions_headline.csv,
+W6,median s interval (budget+trunk cluster bootstrap),"[0.512, 0.806]","[0.512, 0.806]",output/tables/rb2_decisions_headline.csv,
+"W6, W20","marginal value of compactness of the median decision, w - 1 (percent of training cost per percent of size)",2.766930300291516,2.77,output/tables/rb2_decisions_headline.csv,a model one percent smaller at the same loss is worth w - 1 percent of training cost
+W6,share of decisions over-trained (w > 1),0.979591836734694,0.980,output/tables/rb2_decisions_headline.csv,
+W6,share over-trained interval (wild),"[0.937, 1.000]","[0.937, 1.000]",output/tables/rb2_decisions_headline.csv,
+"W6, W22(c)",median s over the 77 models (n = 77),0.7491366913433287,0.749,output/tables/rb2_decisions_headline.csv,"interval [0.689, 0.794]"
+"W6, W22(c)",median s over the 56 family-label units (n = 56),0.7357100432996362,0.736,output/tables/rb2_decisions_headline.csv,"interval [0.666, 0.784]"
+"W6, W22(c)","median s, cap-type budgets split into members (n = 66)",0.7509790414479696,0.751,output/tables/rb2_decisions_headline.csv,"interval [0.694, 0.798]"
+"W6, W22(c)","median s, version 3's 66 reading-consistent units (n = 66)",0.7520153417129352,0.752,output/tables/rb2_decisions_headline.csv,"interval [0.703, 0.804]"
+"W6, W22(c)","median s, OLMo 2 1B as its own unit (n = 50)",0.7357100432996362,0.736,output/tables/rb2_decisions_headline.csv,"interval [0.666, 0.784]"
+W16,"median s over all decisions, lab-own where available, reference elsewhere",0.7165413911661895,0.717,output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",point-identified units: n,29,29,output/tables/rb2_decisions_headline.csv,
+"W2, W6",point-identified units: median s,0.7372564893585437,0.737,output/tables/rb2_decisions_headline.csv,"wild interval [0.672, 0.790]; median w 3.81"
+W2,point-identified units: cluster interval,"[0.539, 0.824]","[0.539, 0.824]",output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",lower-bounded units: n,20,20,output/tables/rb2_decisions_headline.csv,
+"W2, W6",lower-bounded units: median s,0.7104442258006307,0.710,output/tables/rb2_decisions_headline.csv,"wild interval [0.634, 0.770]; median w 3.46"
+"W2, W5(b), W6","lower-bounded units, cap-type budgets: n",8,8,output/tables/rb2_decisions_headline.csv,
+"W2, W6","lower-bounded units, cap-type budgets: median s",0.5115011131696151,0.512,output/tables/rb2_decisions_headline.csv,"wild interval [0.390, 0.620]; median w 2.48"
+"W2, W5(b), W6","lower-bounded units, members with an own cap: n",12,12,output/tables/rb2_decisions_headline.csv,
+"W2, W6","lower-bounded units, members with an own cap: median s",0.7206176461283129,0.721,output/tables/rb2_decisions_headline.csv,"wild interval [0.659, 0.772]; median w 3.59"
+"W2, W5(b), W6",point-identified units if 'cap or choice' is a choice: n,35,35,output/tables/rb2_decisions_headline.csv,
+"W2, W6",point-identified units if 'cap or choice' is a choice: median s,0.7345318547777187,0.735,output/tables/rb2_decisions_headline.csv,"wild interval [0.657, 0.788]; median w 3.77"
+W2,point-identified units if 'cap or choice' is a choice: cluster interval,"[0.492, 0.822]","[0.492, 0.822]",output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",point-identified units under coder B's readings: n,31,31,output/tables/rb2_decisions_headline.csv,
+"W2, W6",point-identified units under coder B's readings: median s,0.7372564893585437,0.737,output/tables/rb2_decisions_headline.csv,"wild interval [0.672, 0.790]; median w 3.81"
+W2,point-identified units under coder B's readings: cluster interval,"[0.539, 0.824]","[0.539, 0.824]",output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",point-identified units without MPT and Yi (weakest agreed choice codes): n,27,27,output/tables/rb2_decisions_headline.csv,
+"W2, W6",point-identified units without MPT and Yi (weakest agreed choice codes): median s,0.7452388072139551,0.745,output/tables/rb2_decisions_headline.csv,"wild interval [0.691, 0.793]; median w 3.93"
+W2,point-identified units without MPT and Yi (weakest agreed choice codes): cluster interval,"[0.575, 0.830]","[0.575, 0.830]",output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",point-identified units without synthetic-flagged units (protocol rule): n,18,18,output/tables/rb2_decisions_headline.csv,
+"W2, W6",point-identified units without synthetic-flagged units (protocol rule): median s,0.6750009934472421,0.675,output/tables/rb2_decisions_headline.csv,"wild interval [0.607, 0.731]; median w 3.08"
+W2,point-identified units without synthetic-flagged units (protocol rule): cluster interval,"[0.479, 0.768]","[0.479, 0.768]",output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",point-identified units without synthetic-flagged units (fix-list families): n,25,25,output/tables/rb2_decisions_headline.csv,
+"W2, W6",point-identified units without synthetic-flagged units (fix-list families): median s,0.6781542602752874,0.678,output/tables/rb2_decisions_headline.csv,"wild interval [0.610, 0.734]; median w 3.11"
+W2,point-identified units without synthetic-flagged units (fix-list families): cluster interval,"[0.479, 0.785]","[0.479, 0.785]",output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",units outside tier windows (interpretation check): n,17,17,output/tables/rb2_decisions_headline.csv,
+"W2, W6",units outside tier windows (interpretation check): median s,0.8365643302052815,0.837,output/tables/rb2_decisions_headline.csv,"wild interval [0.794, 0.872]; median w 6.12"
+"W2, W5(b), W6",point-identified units outside tier windows: n,9,9,output/tables/rb2_decisions_headline.csv,
+"W2, W6",point-identified units outside tier windows: median s,0.8365643302052815,0.837,output/tables/rb2_decisions_headline.csv,"wild interval [0.794, 0.872]; median w 6.12"
+W2,point-identified units outside tier windows: cluster interval,"[0.717, 0.888]","[0.717, 0.888]",output/tables/rb2_decisions_headline.csv,
+"W2, W5(b), W6",size-specific members and singletons (units of one model): n,32,32,output/tables/rb2_decisions_headline.csv,
+"W2, W6",size-specific members and singletons (units of one model): median s,0.7520153417129352,0.752,output/tables/rb2_decisions_headline.csv,"wild interval [0.703, 0.798]; median w 4.03"
+"W2, W5(b), W6",size-specific members and singletons outside tier windows: n,15,15,output/tables/rb2_decisions_headline.csv,
+"W2, W6",size-specific members and singletons outside tier windows: median s,0.8365643302052815,0.837,output/tables/rb2_decisions_headline.csv,"wild interval [0.794, 0.872]; median w 6.12"
+"W2, W5(b), W6","size-specific members and singletons outside tier windows, without synthetic-flagged (protocol): n",7,7,output/tables/rb2_decisions_headline.csv,
+"W2, W6","size-specific members and singletons outside tier windows, without synthetic-flagged (protocol): median s",0.7452388072139551,0.745,output/tables/rb2_decisions_headline.csv,"wild interval [0.698, 0.791]; median w 3.93"
+W23(i),"median s, decision units without Alibaba (n = 43)",0.7368882318215538,0.737,output/tables/rb2_decisions_headline.csv,
+W23(i),"median s, decision units without Qwen2.5/Qwen3 (D unaudited) (n = 47)",0.7345318547777187,0.735,output/tables/rb2_decisions_headline.csv,
+W23(i),"median s, decision units without synthetic-data models (version 3 flag) (n = 41)",0.6987202269866623,0.699,output/tables/rb2_decisions_headline.csv,
+W23(i),"median s, decision units without synthetic-flagged units (protocol rule) (n = 28)",0.6444748590237812,0.644,output/tables/rb2_decisions_headline.csv,
+W23(i),"median s, decision units without synthetic-flagged units (fix-list families) (n = 36)",0.6750009934472421,0.675,output/tables/rb2_decisions_headline.csv,
+W23(i),"median s, decision units: models outside tier windows (n = 23)",0.8477340696772188,0.848,output/tables/rb2_decisions_headline.csv,
+W23(i),"median s, decision units, ra2 token counts (no audit) (n = 49)",0.7345318547777187,0.735,output/tables/rb2_decisions_headline.csv,
+"W1(c), W23(h)","coder agreement, reading (common-budget units, n = 17): Cohen's kappa",0.8265306122448979,0.83,output/tables/rb5_units_agreement.csv,raw agreement 0.882
+"W1(c), W23(h)","coder agreement, D_margin (common-budget units, n = 17): Cohen's kappa",0.7792207792207791,0.78,output/tables/rb5_units_agreement.csv,raw agreement 0.882
+"W1(c), W23(h)","coder agreement, own_cap (all units, n = 49): Cohen's kappa",0.8955223880597014,0.90,output/tables/rb5_units_agreement.csv,raw agreement 0.959
+"W1(c), W23(h)","coder agreement, R_CO (all units, n = 49): Cohen's kappa",0.8463949843260187,0.85,output/tables/rb5_units_agreement.csv,raw agreement 0.980
+"W1(c), W23(h)","coder agreement, R_INF (all units, n = 49): Cohen's kappa",0.9585798816568046,0.96,output/tables/rb5_units_agreement.csv,raw agreement 0.980
+"W1(c), W23(h)","coder agreement, R_DEV (all units, n = 49): Cohen's kappa",1.0,1.00,output/tables/rb5_units_agreement.csv,raw agreement 1.000
+"W1(c), W23(h)","coder agreement, synthetic (all units, n = 49): Cohen's kappa",1.0,1.00,output/tables/rb5_units_agreement.csv,raw agreement 1.000
+"W1(c), W23(h)","coder agreement, N_margin (common-budget units, n = 17): Cohen's kappa",1.0,1.00,output/tables/rb5_units_agreement.csv,raw agreement 1.000
+"W1(c), W23(h)","coder agreement, own_cap (size-specific member or singleton units, n = 32): Cohen's kappa",1.0,1.00,output/tables/rb5_units_agreement.csv,raw agreement 1.000
+"W1(c), W23(h)","coder agreement, R_NONE (all units, n = 49): Cohen's kappa",0.9574283231972197,0.96,output/tables/rb5_units_agreement.csv,raw agreement 0.980
+"W1(c), W23(h)","coder agreement, deployment_rationale (all units, n = 49): Cohen's kappa",1.0,1.00,output/tables/rb5_units_agreement.csv,raw agreement 1.000
+W1(c),unit-field disagreements resolved (units),5,5,data/processed/rb5_units/readings_final.csv,DeepSeek-LLM: own_cap; R_CO; R_NONE; Granite-3.0: D_margin; D_rule; reading; Llama-3 herd: D_margin; D_rule; reading; SmolLM#1: own_cap; B:stabilityai/stablelm-2-1_6b: R_INF
+W14,"developer-level RI p-value (models (77), developer level; developer-level slope, weighted by models)",0.1037103710371037,0.10,output/tables/rb5_units_serving_ri_dev.csv,slope 0.56; 6 of 18 developers served a size
+W14,"developer-level RI p-value (models (77), developer level; developer-level slope, unweighted)",0.2782278227822782,0.28,output/tables/rb5_units_serving_ri_dev.csv,slope 0.24; 6 of 18 developers served a size
+W14,"developer-level RI p-value (models without Alibaba, developer level; developer-level slope, weighted by models)",0.9448944894489449,0.94,output/tables/rb5_units_serving_ri_dev.csv,slope 0.01; 5 of 17 developers served a size
+W14,"serving coefficient, models (ln w on the model-level code, ln C, year effects)",0.5600180151486084,0.56,output/tables/rb5_units_serving_ri.csv,CRV1 s.e. 0.24; WCR p 0.41 (rb2_decisions_conduct.csv)
+W14,treated developers,6,6,output/tables/rb5_units_serving_ri.csv,
+W14,"randomization-inference p-value, coefficient (two-sided; year x compute-tercile strata)",0.0,< 0.001,output/tables/rb5_units_serving_ri.csv,t-statistic version 0.06; B = 9999
+"W14, W23(l)","RI p-value, models (77), year x 2 compute bins (coef 0.56)",0.0,< 0.001,output/tables/rb5_units_serving_ri.csv,RI-t 0.07
+"W14, W23(l)","RI p-value, models (77), year (coef 0.56)",0.00010001000100010001,< 0.001,output/tables/rb5_units_serving_ri.csv,RI-t 0.07
+"W14, W23(l)","RI p-value, models without Alibaba, year x 3 compute bins (coef -0.09)",0.6310631063106311,0.63,output/tables/rb5_units_serving_ri.csv,RI-t 0.76
+"W14, W23(l)","RI p-value, decision units (49), any member served, year x 3 compute bins (coef 0.28)",0.16801680168016803,0.17,output/tables/rb5_units_serving_ri.csv,RI-t 0.38
+"W14, W23(l)","RI p-value, decision units (49), any member served, year (coef 0.28)",0.1147114711471147,0.11,output/tables/rb5_units_serving_ri.csv,RI-t 0.40
+W14,"serving coefficient, models without Alibaba",-0.0921651409269311,-0.09,output/tables/rb2_decisions_conduct.csv,CRV1 s.e. 0.28; WCR p 0.75; treated 5
+W14,"serving coefficient, decisions (49), any member served",0.2761029794387196,0.28,output/tables/rb2_decisions_conduct.csv,CRV1 s.e. 0.29; WCR p 0.67; treated 6
+"W19(i), W19 text (a)",trend: s_agg_units_2023,0.24168170584229384,0.242,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.09, 0.51]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: s_agg_units_2024,0.5384500202871144,0.538,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.34, 0.79]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: s_agg_units_2025,0.814274844512894,0.814,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.65, 0.89]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: s_agg_units_d2324,0.29676831444482055,0.297,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.02, 0.65]; share of draws <= 0: 0.015"
+"W19(i), W19 text (a)",trend: s_agg_units_d2425,0.2758248242257796,0.276,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [-0.12, 0.44]; share of draws <= 0: 0.104"
+"W19(i), W19 text (a)",trend: s_agg_units_d2325,0.5725931386706001,0.573,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.19, 0.72]; share of draws <= 0: 0.002"
+"W19(i), W19 text (a)",trend: median_s_units_2023,0.48732276107047223,0.487,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.24, 0.59]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_units_2024,0.7736156415553738,0.774,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.73, 0.85]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_units_2025,0.7446735224229226,0.745,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.63, 0.89]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_units_d2324,0.28629288048490154,0.286,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.19, 0.57]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_units_d2425,-0.02894211913245115,-0.029,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [-0.19, 0.13]; share of draws <= 0: 0.556"
+"W19(i), W19 text (a)",trend: median_s_units_d2325,0.2573507613524504,0.257,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.07, 0.59]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: s_agg_models_2023,0.27073534599212346,0.271,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.10, 0.53]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: s_agg_models_2024,0.5847245285923777,0.585,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.40, 0.80]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: s_agg_models_2025,0.8291467257178425,0.829,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.67, 0.90]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: s_agg_models_d2324,0.3139891826002542,0.314,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.04, 0.65]; share of draws <= 0: 0.009"
+"W19(i), W19 text (a)",trend: s_agg_models_d2425,0.24442219712546487,0.244,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [-0.10, 0.39]; share of draws <= 0: 0.103"
+"W19(i), W19 text (a)",trend: s_agg_models_d2325,0.5584113797257191,0.558,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.18, 0.71]; share of draws <= 0: 0.002"
+"W19(i), W19 text (a)",trend: median_s_models_2023,0.5535544164609436,0.554,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.41, 0.62]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_models_2024,0.8206948197148135,0.821,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.75, 0.85]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_models_2025,0.8679236578309063,0.868,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.74, 0.92]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_models_d2324,0.2671404032538699,0.267,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.18, 0.39]; share of draws <= 0: 0.000"
+"W19(i), W19 text (a)",trend: median_s_models_d2425,0.0472288381160928,0.047,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [-0.05, 0.10]; share of draws <= 0: 0.106"
+"W19(i), W19 text (a)",trend: median_s_models_d2325,0.3143692413699627,0.314,output/tables/rb5_units_trend_boot.csv,"developer-cluster bootstrap 95% [0.19, 0.44]; share of draws <= 0: 0.000"
+"W19(ii), W19 text (b)","annual growth of the unit wedge, pooled OLS",1.8575361691990508,1.86,output/tables/rb5_units_within_dev.csv,"developer-cluster bootstrap [1.25, 2.80]; 6 developers with units in more than one year"
+"W19(ii), W19 text (b)","annual growth of the unit wedge, pooled OLS, ln C",2.138451796406108,2.14,output/tables/rb5_units_within_dev.csv,"developer-cluster bootstrap [1.68, 3.04]; 6 developers with units in more than one year"
+"W19(ii), W19 text (b)","annual growth of the unit wedge, developer FE",1.5913072088869455,1.59,output/tables/rb5_units_within_dev.csv,"developer-cluster bootstrap [0.91, 2.61]; 6 developers with units in more than one year"
+"W19(ii), W19 text (b)","annual growth of the unit wedge, developer FE, ln C",2.697254579802419,2.70,output/tables/rb5_units_within_dev.csv,"developer-cluster bootstrap [1.24, 4.54]; 6 developers with units in more than one year"
+"W19(iii), W19 text (b) fifth","MoE added, active parameters, 2024: compute-weighted share over units",0.5574867627993219,0.56,output/tables/rb5_units_moe.csv,dense only 0.54; 6 MoE models; MoE share of the year's compute 0.06
+"W19(iii), W19 text (b) fifth","MoE added, active parameters, 2025: compute-weighted share over units",0.8249874560481156,0.82,output/tables/rb5_units_moe.csv,dense only 0.81; 6 MoE models; MoE share of the year's compute 0.53
+"W19(iii), W19 text (b) fifth","MoE added, total parameters, 2024: compute-weighted share over units",0.5248990803349703,0.52,output/tables/rb5_units_moe.csv,dense only 0.54; 6 MoE models; MoE share of the year's compute 0.06
+"W19(iii), W19 text (b) fifth","MoE added, total parameters, 2025: compute-weighted share over units",0.7290984667640515,0.73,output/tables/rb5_units_moe.csv,dense only 0.81; 6 MoE models; MoE share of the year's compute 0.53
+"W19(iv), W23(e)",2025 compute-weighted share without synthetic-flagged units (protocol rule),,nan,output/tables/rb5_units_synthetic.csv,"median nan; 2023 0.24, 2024 0.39; 21 units flagged; 2025 units kept 0"
+"W19(iv), W23(e)",2025 compute-weighted share without synthetic-flagged units (fix-list families),0.6729491004827745,0.67,output/tables/rb5_units_synthetic.csv,"median 0.65; 2023 0.24, 2024 0.43; 13 units flagged; 2025 units kept 3"
+"W19(v), W19 text (d)","share of decisions citing a compute-optimal target, 2023",0.125,0.12,output/tables/rb5_units_rationale.csv,compute-weighted 0.45; n = 16
+"W19(v), W19 text (d)","share of decisions with a deployment rationale, 2023",0.375,0.38,output/tables/rb5_units_rationale.csv,compute-weighted 0.22
+"W19(v), W19 text (d)","median s among decisions with a deployment rationale, 2023",0.4775398220094298,0.48,output/tables/rb5_units_rationale.csv,n = 6; compute-weighted 0.35; without a deployment rationale: median 0.50 (n = 10); no rationale stated: median 0.55 (n = 8)
+"W19(v), W19 text (d)","share of decisions citing a compute-optimal target, 2024",0.037037037037037035,0.04,output/tables/rb5_units_rationale.csv,compute-weighted 0.65; n = 27
+"W19(v), W19 text (d)","share of decisions with a deployment rationale, 2024",0.6666666666666666,0.67,output/tables/rb5_units_rationale.csv,compute-weighted 0.96
+"W19(v), W19 text (d)","median s among decisions with a deployment rationale, 2024",0.8279827310578913,0.83,output/tables/rb5_units_rationale.csv,n = 18; compute-weighted 0.53; without a deployment rationale: median 0.75 (n = 9); no rationale stated: median 0.75 (n = 9)
+"W19(v), W19 text (d)","share of decisions citing a compute-optimal target, 2025",0.0,0.00,output/tables/rb5_units_rationale.csv,compute-weighted 0.00; n = 6
+"W19(v), W19 text (d)","share of decisions with a deployment rationale, 2025",0.5,0.50,output/tables/rb5_units_rationale.csv,compute-weighted 0.47
+"W19(v), W19 text (d)","median s among decisions with a deployment rationale, 2025",0.887811120034247,0.89,output/tables/rb5_units_rationale.csv,n = 3; compute-weighted 0.88; without a deployment rationale: median 0.65 (n = 3); no rationale stated: median 0.65 (n = 3)
+"W19(v), W19 text (d)","share of decisions citing a compute-optimal target, all",0.061224489795918366,0.06,output/tables/rb5_units_rationale.csv,compute-weighted 0.52; n = 49
+"W19(v), W19 text (d)","share of decisions with a deployment rationale, all",0.5510204081632653,0.55,output/tables/rb5_units_rationale.csv,compute-weighted 0.81
+"W19(v), W19 text (d)","median s among decisions with a deployment rationale, all",0.7736156415553738,0.77,output/tables/rb5_units_rationale.csv,n = 27; compute-weighted 0.63; without a deployment rationale: median 0.68 (n = 22); no rationale stated: median 0.69 (n = 20)
+W19 text (b) fifth,share of 2023 clean-sample compute in tier windows,0.4655542682937989,0.47,data/processed/rb2_decisions/clean_models.csv,
+W19 text (b) fifth,share of 2024 clean-sample compute in tier windows,0.4374035510495849,0.44,data/processed/rb2_decisions/clean_models.csv,
+W19 text (b) fifth,share of 2025 clean-sample compute in tier windows,0.9163413574878897,0.92,data/processed/rb2_decisions/clean_models.csv,
+W19 text (b) third,median decision share 2024 -> 2025 without Alibaba,0.80 -> 0.65,0.80 -> 0.65,output/tables/rb2_decisions_trend_lodo.csv,
+W19 text (b) third,median decision share 2024 -> 2025 without Hugging Face,0.76 -> 0.65,0.76 -> 0.65,output/tables/rb2_decisions_trend_lodo.csv,
+W19 text (b) third,median decision share 2024 -> 2025 without Marin,0.77 -> 0.65,0.77 -> 0.65,output/tables/rb2_decisions_trend_lodo.csv,
+W19,leave-one-developer-out samples in which the compute-weighted unit share rises in both steps,18/18,18/18,output/tables/rb2_decisions_trend_lodo.csv,
+W19,technologies (of 32) under which s_agg_units rises in both steps,32,32,output/tables/rb2_decisions_trend_monotone.csv,
+W19,technologies (of 32) under which median_s_units rises in both steps,1,1,output/tables/rb2_decisions_trend_monotone.csv,
+W19,technologies (of 32) under which s_agg_models rises in both steps,32,32,output/tables/rb2_decisions_trend_monotone.csv,
+W19,technologies (of 32) under which median_s_models rises in both steps,31,31,output/tables/rb2_decisions_trend_monotone.csv,
+W19,"median M, models, 2023",145.62996779959934,146,output/tables/rb2_decisions_trend_by_tech.csv,
+W19,"n decision units, 2023",16,16,output/tables/rb2_decisions_trend_by_tech.csv,
+W19,"median M, models, 2024",1217.4237713709067,"1,217",output/tables/rb2_decisions_trend_by_tech.csv,
+W19,"n decision units, 2024",27,27,output/tables/rb2_decisions_trend_by_tech.csv,
+W19,"median M, models, 2025",2437.6524345322396,"2,438",output/tables/rb2_decisions_trend_by_tech.csv,
+W19,"n decision units, 2025",6,6,output/tables/rb2_decisions_trend_by_tech.csv,
+W19,share of 2024 compute in its largest model,0.5475732280217414,0.55,output/tables/rb2_decisions_trend_by_tech.csv,Llama-3.1-405B
+W19 text (b) second,"share of 2023 compute identified as over-trained (PI-1, version 3's anchors; S1 replaces it)",0.1973461477169958,0.20,output/tables/rb2_decisions_sign_identified.csv,placeholder until WP4a's S1 by-year shares
+W19(e),"pre-2023 compute-weighted share: 2019-2022 universe (ra2/ra3: 8 models) | reference (Chinchilla, kappa free)",0.0393204273960368,0.04,output/tables/rb2_decisions_pre2023.csv,
+W19(e),"pre-2023 compute-weighted share: 2019-2022 universe (ra2/ra3: 8 models) | Kaplan-believed (Kaplan path, reference curva",0.1866860418120428,0.19,output/tables/rb2_decisions_pre2023.csv,
+W19(e),"pre-2023 compute-weighted share: 2019-2022 universe (ra2/ra3: 8 models) | Kaplan-believed (Kaplan path, Kaplan joint-la",0.4286415398429513,0.43,output/tables/rb2_decisions_pre2023.csv,
+W19(e),"pre-2023 compute-weighted share: 2019-2022 universe, clean exclusions app | reference (Chinchilla, kappa free)",0.0575019511034907,0.06,output/tables/rb2_decisions_pre2023.csv,
+W19(e),"pre-2023 compute-weighted share: 2019-2022 universe, clean exclusions app | Kaplan-believed (Kaplan path, reference curva",0.2900605850934674,0.29,output/tables/rb2_decisions_pre2023.csv,
+W19(e),"pre-2023 compute-weighted share: 2019-2022 universe, clean exclusions app | Kaplan-believed (Kaplan path, Kaplan joint-la",0.5670818404494337,0.57,output/tables/rb2_decisions_pre2023.csv,
+W19(e),"pre-2023 compute-weighted share: clean sample 2023-2025 (contrast) | Kaplan-believed (Kaplan path, reference curva",0.9280646960116118,0.93,output/tables/rb2_decisions_pre2023.csv,
+W16(a)-(b),"lab-own technologies, all lab-own models (n = 22): median s one rule / reference",0.52 / 0.65,0.52 / 0.65,output/tables/rb5_units_labown_rerun.csv,
+W16(a)-(b),"lab-own technologies, without Llama 1 and 2 (n = 15): median s one rule / reference",0.53 / 0.70,0.53 / 0.70,output/tables/rb5_units_labown_rerun.csv,
+W16(a)-(b),"lab-own technologies, without Llama 1 and 2 and without AI2 (n = 6): median s one rule / reference",0.71 / 0.65,0.71 / 0.65,output/tables/rb5_units_labown_rerun.csv,
+W16(a)-(b),"lab-own technologies, without AI2 (version 3 set) (n = 13): median s one rule / reference",0.64 / 0.56,0.64 / 0.56,output/tables/rb5_units_labown_rerun.csv,
+W16(b),"median s over the 49 decisions, lab-own where available (Llama 1 and 2 excluded), reference elsewhere",0.7165413911661895,0.717,output/tables/rb2_decisions_labown_models.csv,with Llama 1 and 2 on Meta's path: 0.717 (rb2_decisions_headline.csv)
+"W18(a), W23(q)",x_P disclosed: DeepSeek-V3 (all post-training),0.0018768768768768,0.0019,output/tables/rb2_decisions_posttrain_disclosed.csv,
+"W18(a), W23(q)",x_P disclosed: Tulu 3 SFT on Llama 3.1 8B (final run),0.0003783571606475,0.0004,output/tables/rb2_decisions_posttrain_disclosed.csv,
+"W18(a), W23(q)",x_P disclosed: Tulu 3 SFT on Llama 3.1 70B (final run),0.0007172351274787,0.0007,output/tables/rb2_decisions_posttrain_disclosed.csv,
+"W18(a), W23(q)","x_P disclosed: Olmo 3 Think 32B, RL (initial release)",0.025887573964497,0.0259,output/tables/rb2_decisions_posttrain_disclosed.csv,
+"W18(a), W23(q)","x_P disclosed: Olmo 3.1 Think 32B, RL incl. 21-day continuation",0.1346153846153846,0.1346,output/tables/rb2_decisions_posttrain_disclosed.csv,
+"W18(a), W23(q)","x_P disclosed: Olmo 3 Think 32B, all post-training, upper bound",0.2130177514792899,0.2130,output/tables/rb2_decisions_posttrain_disclosed.csv,
+"W18(a), W23(q)","x_P disclosed: Olmo 3.1 Think 32B, all post-training incl. 21-day continuation, upper bound",0.3217455621301775,0.3217,output/tables/rb2_decisions_posttrain_disclosed.csv,
+W18(b),median model share at x_P = 0,0.7491366913433287,0.749,output/tables/rb2_decisions_posttrain_effect.csv,
+W18(b),median model share at x_P = 0.32,0.7272405860468341,0.727,output/tables/rb2_decisions_posttrain_effect.csv,
+W18(b),fall of the median decision share at x_P = 0.32,0.024645060697614185,0.025,output/tables/rb2_decisions_posttrain_effect.csv,0.735 -> 0.710
+W19(b) fourth,"2025 compute-weighted share over models at x_P = 0.32, m/(1+m)",0.8192654151252412,0.82,output/tables/rb2_decisions_posttrain_effect.csv,x_P = 0: 0.83
+W19(b) fourth,"2025 compute-weighted share over models at x_P = 0.32, post-training in the cost base",0.7744736779475521,0.77,output/tables/rb2_decisions_posttrain_effect.csv,
+W18,share with m_N > 0 at x_P = 0.32 (models),0.9090909090909092,0.909,output/tables/rb2_decisions_posttrain_effect.csv,
+W24(f),MPT-30B tokens (T),1.05,1.05,data/processed/rb2_decisions/d_audit.csv,
+W24(f),MPT-30B w (reference),1.2236408900427946,1.22,data/processed/rb2_decisions/clean_models.csv,was 1.198 at 1.00T
+W24(f),MPT family share s_f (reference),0.2495267789180395,0.250,data/processed/rb2_decisions/decision_units.csv,was 0.24 in version 3
+"W23(f), W24(a)","range of median s over models, 32 technologies (audited)",0.14 to 0.84,0.14 to 0.84,output/tables/rb2_decisions_technologies_models.csv,
+"W7, W23(f)","range of median s over the 49 decision units, 32 technologies",0.04 to 0.80,0.04 to 0.80,output/tables/rb2_decisions_technologies_units.csv,
+W7,"range of the share of decision units with w > 1, 32 technologies",0.57 to 1.00,0.57 to 1.00,output/tables/rb2_decisions_technologies_units.csv,
+"W23(f), W7","median s over models, reference, Farseer kappa free, DeepSeek law, developers' paths with model-free curvature (keys found: 7)",0.67 to 0.79,0.67 to 0.79,output/tables/rb2_decisions_technologies_models.csv,over decision units 0.62 to 0.75
+"W23(f), W7","median s over models, kappa-free fits of the smaller designs (Gadre, OLMo ladder, Muennighoff) (keys found: 5)",0.74 to 0.84,0.74 to 0.84,output/tables/rb2_decisions_technologies_models.csv,over decision units 0.66 to 0.80
+"W24(c), W23(e)",all 32 technologies put w > 1 for this share of clean models (audited),0.6233766233766234,0.623,output/tables/rb2_decisions_cleaning.csv,union of 95% intervals above one: 0.182
+W24(b),Table E4 row farseer_emb: median w / headFLOP w / share w>1 / median s,2.50 / 2.50 / 0.88 / 0.60,2.50 / 2.50 / 0.88 / 0.60,output/tables/rb2_decisions_conventions.csv,
+W24(b),Table E4 row minicpm: median w / headFLOP w / share w>1 / median s,1.17 / 1.24 / 0.62 / 0.14,1.17 / 1.24 / 0.62 / 0.14,output/tables/rb2_decisions_conventions.csv,
+W24(e),repetition: stablelm-3b-4e1t w with Muennighoff effective data,5.778652605907914,5.78,output/tables/rb5_units_repetition.csv,D_eff 3.73T; w at D 5.96; s 0.83 -> 0.83
+W24(e),repetition: TinyLlama_v1.1 w with Muennighoff effective data,6.515132024740762,6.52,output/tables/rb5_units_repetition.csv,D_eff 1.96T; w at D 6.57; s 0.85 -> 0.85
+W24(e),median s over decision units with both repeated-data models at effective data,0.7345318547777187,0.735,output/tables/rb5_units_repetition.csv,
+W24(e),"median decision share with sigma* 0.667 (kappa-free fit, 137 Chinchilla profile runs, T (ra1 reproduction)), zero points fixed",0.7876538239533334,0.788,output/tables/rb5_units_level_sensitivity.csv,reference sigma* 0.701; models 0.801
+W24(e),"median decision share with sigma* 0.656 (kappa-free fit, 137 Chinchilla profile runs, N_F (T4)), zero points fixed",0.8034976693197695,0.803,output/tables/rb5_units_level_sensitivity.csv,reference sigma* 0.701; models 0.817

@@ -1,0 +1,157 @@
+% Table 1 (Section III, version 3): designs, the elasticity of substitution on the expansion path, the study-level
+% summary with its convention/accounting/estimator ranges, and sigma* by compute level.
+% Sources (every cell):
+%   [rb4 integration, 2026-09-24] Chinchilla, Panel A: rb4_chinflop_summary.csv (variant NF_T4: sigma_re 0.6596,
+%     se 0.0228), rb4_chinflop_param.csv (convention 'N_F (T4)': kappa free 0.6560 (0.0282), kappa = 1 0.6896 (0.0149)),
+%     rb4_chinflop_ranges.csv ('N_F (T4), D from the digitization': N 57.3M-15.8B, M 0.036-294, spread 1.650; without
+%     the five high-loss runs M from 0.444, spread 1.479); 0.681 without them: rb4_chinflop_review_checks.csv (R13).
+%     Chinchilla, Panel B (reference technology) stays in total parameters; N_F refit 0.700 / 0.740:
+%     rb4_chinflop_reference_fit.csv (stated in Online Appendix D, not in the note, for space).
+%   Panel A model-free (other designs): output/tables/ra1_modelfree_isoflop_summary.csv (sigma_re, se_sigma_re, k_valid, k_budgets);
+%     Farseer: rb1_sigmaC_conventions.csv (first-derivative path estimate 0.7078, path-mean s.e. 0.0048) and
+%     ra1_modelfree_farseer_sigma_slope.csv (0.7008-0.7114 across bandwidths).
+%   Panel A same-run parametric: ra1_modelfree_isoflop_param.csv (Feng-He-Hu wild s.e.); Farseer and Panel B:
+%     m2_table3_technology.csv (Huber rows; sigma_star_q = kappa free, sigma_star = kappa = 1; pairs/cell bootstrap s.e.,
+%     reported in Online Appendix Table tab:app-kappa-robust with wild s.e.).
+%   Runs, N, M, off-path spread: recomputed with the ra1 loaders (ra1_common.isoflop_designs; spread = OLS residual
+%     s.d. of ln M on ln(6ND)).
+%   Panel C (rb1_sigmaC run with RB1_CHINCHILLA = rb4, the default; identical to rb4_chinflop_*.csv, run = new):
+%     rows 1-5: rb1_sigmaC_study_level.csv (DL mean, modified HKSJ interval, tau, Q, p_Q): headline 0.6873
+%     [0.6402, 0.7343], tau 0.0230, Q 8.25 (p 0.041); conventions: Marin config N 0.6735, Farseer total N 0.6703, both
+%     0.6683; eta = -0.1 (Meta only) 0.6729 [0.5980, 0.7478]; eta = +0.1 (Meta only) 0.6997; Chinchilla's other counts
+%     and conventions 0.6816-0.6972, windows and membership (R11-R13) 0.6914-0.6938 (Q 5.78-6.29, p 0.098-0.123);
+%     local first derivative 0.6698 [0.6027, 0.7369].
+%   Panel C, rows 6-11: rb1_sigmaC_metareg_slopes.csv (slope, lo/hi_cr2_design, p_wcr_design),
+%     rb1_sigmaC_metareg_predictions.csv (weighted rows: est, lo_cr2, hi_cr2), rb1_sigmaC_top_budget_sigma.csv (row 1).
+%   Before the rb4 integration (Chinchilla in total parameters): headline 0.6929 [0.6528, 0.7329], Q 5.7 (p 0.13);
+%     output/sensitivity/rb1_chinchilla_T/output/tables/rb1_sigmaC_*.csv.
+% [round 3, WP2, T11, 2026-09-25] Panel C from module rb5_sigma after its independent review (output/memos/rb5_sigma_review.md,
+%   section 8): study-level rows rb5_sigma_study_level.csv (T1.4 primary 0.7077 [0.6897, 0.7258], Q 1.02, Farseer weight
+%   0.84; bandwidth-robust 0.7014 [0.6651, 0.7377]; T1.6 midpoint row 0.6803 [0.6434, 0.7172]); Chinchilla's counts,
+%   conventions, windows and samples rb5_sigma_study_ranges.csv (family 'Chinchilla only: ...': 0.6742-0.7017, Q
+%   4.42-14.89); all variants 0.6629-0.7017 (family 'All'); slope rows with Marin as one cluster
+%   rb5_sigma_metareg_slopes.csv (weighted, studies (4)): -0.0328, CR2 [-0.0807, 0.0152], enumerated wild p 0.0494;
+%   budgets <= 3e20: -0.0077 [-0.0504, 0.0351], wild p 0.870; p range 0.0317-0.4896 rb5_sigma_metareg_prange.csv;
+%   pooled line at 1e21 with Marin as one cluster 0.6474 [0.5544, 0.7405] rb5_sigma_metareg_predictions.csv;
+%   Chinchilla + Llama 3 drift s.e. 0.014 (joint draws scaled for excess dispersion, 0.0136-0.0141: review section 5;
+%   model-based 0.0126; sampling only 0.0095) rb5_sigma_joint_linear.csv; top budgets 0.5938 [0.5607, 0.6268] (modified
+%   HKSJ, joint variance), with Farseer 1e21 RE 0.6065 [0.5583, 0.6547], Q 21.08 rb5_sigma_headline.csv,
+%   _top_budget.csv. Porian N 0.90B (numbers_appB #21).
+% Writer notes: paper/notes/round3_WP2_log.md (earlier: paper/notes/writer3_technology.md).
+\begin{table}[tp]
+\centering
+\caption{Designs and the Elasticity of Substitution on the Expansion Path}
+\label{tab:designs}
+\footnotesize
+\setlength{\tabcolsep}{1.6pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrcccccccc@{}}
+\toprule
+ & & & & & Off-path & & \multicolumn{3}{c}{$\sigma^*$} \\
+\cmidrule(l){8-10}
+Design & Runs & Budgets & $N$ & $M=D/N$ & spread & Conv. & Model-free & $\kappa$ free & $\kappa=1$ \\
+\midrule
+\multicolumn{10}{@{}l}{\textit{Panel A. IsoFLOP designs and Farseer's factorial grid}}\\[1pt]
+Chinchilla, profiles$^{a}$ & 137 & 9/9 & 57M--16B & 0.04--294 & 1.65 & F & 0.660 & 0.656 & 0.690 \\
+ & & & & & & & (0.023) & (0.028) & (0.015) \\
+Llama 3 & 133 & 8/10 & 59M--17B & 0.44--643 & 1.38 & F & 0.660 & 0.693 & 0.769 \\
+ & & & & & & & (0.023) & (0.020) & (0.006) \\
+Marin, Comma & 85 & 5/7 & 0.12--13B & 0.09--3,706 & 2.46 & F & 0.700 & 0.678 & 0.690 \\
+ & & & & & & & (0.027) & (0.015) & (0.015) \\
+Marin, DCLM & 85 & 7/7 & 0.12--13B & 0.09--3,706 & 2.46 & F & 0.713 & 0.663 & 0.673 \\
+ & & & & & & & (0.027) & (0.013) & (0.013) \\
+Marin, Nemotron-CC & 88 & 7/8 & 0.12--13B & 0.09--3,706 & 2.42 & F & 0.705 & 0.677 & 0.684 \\
+ & & & & & & & (0.023) & (0.014) & (0.014) \\
+Porian, RefinedWeb$^{b}$ & 121 & 12/12 & 5.2M--0.90B & 0.02--346 & 2.29 & NH & 0.518 & 0.345 & 0.599 \\
+ & & & & & & & (0.017) & (0.141) & (0.032) \\
+Porian, OWT2$^{b}$ & 116 & 12/12 & 5.2M--0.90B & 0.02--194 & 2.20 & NH & 0.505 & 0.347 & 0.609 \\
+ & & & & & & & (0.014) & (0.160) & (0.039) \\
+Farseer & 404 & 8$^{c}$ & 0.10--6.4B & 0.31--2,570 & 1.97 & NE & 0.708$^{c}$ & 0.710 & 0.772 \\
+ & & & & & & & (0.005) & (0.003) & (0.010) \\
+\multicolumn{10}{@{}l}{\textit{Panel B. Other sweep--corpus technologies (parametric fits to all runs)$^{d}$}}\\[1pt]
+Chinchilla, all runs & 240 & -- & 57M--16B & 0.46--341 & 1.35 & T & -- & 0.701 & 0.737 \\
+Gadre, C4 & 34 & -- & 11M--6.9B & 5--640 & 1.46 & T & -- & 0.607 & 0.795 \\
+Gadre, RedPajama & 35 & -- & 11M--6.9B & 5--640 & 1.47 & T & -- & 0.623 & 0.795 \\
+Gadre, RefinedWeb & 35 & -- & 11M--6.9B & 5--640 & 1.47 & T & -- & 0.594 & 0.796 \\
+OLMo ladder & 30 & -- & 0.19--3.2B & 10--200 & 0.94 & NI & -- & 0.544 & 0.825 \\
+Muennighoff & 33 & -- & 7.1M--8.7B & 0.04--303 & 1.97 & A & -- & 0.511 & 0.735 \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Budgets: bracketed budgets used by the model-free estimator, of all. Conv.: parameter count that makes
+each profile an exact isocost; T, total; F, FLOP-implied $C/(6D)$ in the study's own FLOP count (Chinchilla's rebuilt,
+Online Appendix Table~\ref{tab:app-chinflop}); NH, non-embedding plus output head; NE,
+non-embedding; NI, without the input embedding; A, the authors' count. Off-path spread: residual s.d.\ of $\ln M$ given
+$\ln C$. Model-free: equation~\eqref{eq:ident-mf} per budget, random-effects mean. Parametric: Huber loss,
+same runs in Panel A. Standard errors: design-conditional wild bootstrap (Farseer's parametric columns: pairs or cell).
+$^{a}$Five high-loss runs lie outside every model-free window; without them, 132 runs, $M$ from 0.44, spread 1.48,
+$\sigma^*=0.681$.
+$^{b}$Constant-learning-rate runs without cooldown; OWT2, OpenWebText2.
+$^{c}$Local-path compute levels; first-derivative estimate (0.701--0.711 across bandwidths), s.e.\ of its mean;
+Panel C's slopes use level-wise Hessian estimates (simple mean 0.707; random-effects mean 0.703).
+$^{d}$Wild-bootstrap s.e.\ of the $\kappa$-free fits: Online Appendix Table~\ref{tab:app-kappa-robust}.
+Panel C and notes $e$ to $k$ follow on the next page.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Studies in Panels A and B (subsection~\ref{sec:tech:designs}); author's calculations.
+\end{tablenotes}
+\end{table}
+
+\begin{table}[tp]
+\centering
+{\captionstyle\captionsize Table~\ref{tab:designs} (continued). Designs and the Elasticity of Substitution on the
+Expansion Path\par}
+\vspace{7pt}
+\footnotesize
+\setlength{\tabcolsep}{1.6pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccl@{}}
+\toprule
+\multicolumn{4}{@{}l}{\textit{Panel C. Model-free $\sigma^*$: study-level summary and dependence on compute}}\\[1pt]
+\midrule
+ & Estimate & 95\% CI & Diagnostics \\
+\midrule
+Study-level mean$^{e}$ & 0.687 & [0.640, 0.734] & $k=4$, $\hat\varphi=0.023$, $Q=8.3$ ($p=0.04$) \\
+\quad Budgets $\le3\times10^{20}$ FLOP$^{i}$ & 0.708 & [0.690, 0.726] & $Q=1.0$ \\
+\quad Other parameter conventions & 0.668--0.673 & & Marin, Farseer \\
+\quad FLOP accounting, $\eta=\pm0.1$ & 0.673--0.700 & [0.598, 0.748]$^{f}$ & Meta \\
+\quad Chinchilla's variants$^{l}$ & 0.674--0.702 & & $Q=4.4$--14.9 \\
+\quad Farseer's bandwidths$^{j}$ & 0.680 & [0.643, 0.717] & Farseer \\
+\quad First-derivative estimator & 0.670 & [0.603, 0.737] & Marin, Meta \\
+Slope per decade of compute$^{g}$ & $-$0.033 & [$-$0.081, 0.015] & 44 budgets, wild $p=0.049$ \\
+\quad Budgets $\le3\times10^{20}$ FLOP & $-$0.008 & [$-$0.050, 0.035] & 37 budgets, wild $p=0.87$ \\
+\quad Chinchilla and Llama~3$^{h}$ & $-$0.058 & (0.014) & 17 budgets \\
+$\sigma^*$ at $10^{21}$ FLOP, pooled line & 0.647 & [0.554, 0.741] & \\
+$\sigma^*$, budgets $\ge6\times10^{20}$ FLOP$^{k}$ & 0.594 & [0.561, 0.627] & Chinchilla, Llama~3; $Q=2.5$ \\
+\quad With Farseer's $10^{21}$ level & 0.606 & [0.558, 0.655] & $Q=21.1$ ($p<0.001$) \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+$^{e}$One estimate per study (Marin one; not Porian) in Panel A's conventions; DerSimonian--Laird mean, modified
+Hartung--Knapp--Sidik--Jonkman interval (\citealp{knapp2003improved}). $k$: number of studies; $\hat\varphi$:
+between-study s.d.; $Q$: Cochran's statistic. All variants give 0.663--0.702, and several variants' intervals reach about
+0.60. Within Marin the first-derivative estimator gives 0.666--0.676.
+$^{f}$$\eta=-0.1$ for Meta; $\eta$, elasticity of FLOP per token in the parameter count.
+$^{g}$Three-level random-effects meta-regression on $\log_{10}C$ (Farseer a sixth design); CR2 interval, about 3
+degrees of freedom, and wild cluster bootstrap-$t$ (Webb weights, enumerated), both with Marin as one cluster. The CR2
+interval and the wild $p$-value disagree about significance, and $p$ is 0.03--0.49 across weighting, scale, test and
+design fixed effects; no $p$-value is reliable with four to six clusters.
+$^{h}$Design fixed effects; s.e.\ from the joint design-conditional bootstrap draws, scaled for the budgets' excess
+dispersion (model-based 0.013).
+$^{i}$Each IsoFLOP design's random-effects mean over its budgets up to $3\times10^{20}$ FLOP; Farseer's first-derivative
+estimate on its path up to $3\times10^{20}$, which carries 84 percent of the weight. With the uncertainty of
+Farseer's bandwidth range (s.e.\ 0.019; note $j$) the mean is 0.701 [0.665, 0.738].
+$^{j}$Farseer at the midpoint of its Hessian path mean over six bandwidths (0.664--0.727), the range treated as uniform
+uncertainty.
+$^{k}$Inverse-variance mean of Chinchilla's three and Llama~3's two budgets (Llama~3 85 percent of the weight);
+modified Hartung--Knapp--Sidik--Jonkman interval with the variance of the joint bootstrap draws. Farseer's local path
+gives 0.722 (0.008) at $5\times10^{20}$ and 0.658 (0.011) at $10^{21}$ FLOP; next row: random-effects mean with the
+latter.
+$^{l}$Chinchilla's FLOP counts, parameter conventions, windows, samples and profile memberships (38 variants).
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Studies in Panel A (subsection~\ref{sec:tech:designs}); author's calculations.
+\end{tablenotes}
+\end{table}

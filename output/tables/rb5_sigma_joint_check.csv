@@ -1,0 +1,37 @@
+design,column,n_budgets,n_ref,max_abs_diff,tolerance,ok
+Chinchilla,sigma,9,9,0,1e-09,True
+Chinchilla,se_sigma,9,9,8.32667e-17,1e-09,True
+Chinchilla,lo_sigma,9,9,5.55112e-17,1e-09,True
+Chinchilla,hi_sigma,9,9,0,1e-09,True
+Llama 3,sigma,8,8,0,1e-09,True
+Llama 3,se_sigma,8,8,9.02056e-17,1e-09,True
+Llama 3,lo_sigma,8,8,0,1e-09,True
+Llama 3,hi_sigma,8,8,0,1e-09,True
+"Marin, Comma",sigma,5,5,0,1e-09,True
+"Marin, Comma",se_sigma,5,5,9.02056e-17,1e-09,True
+"Marin, Comma",lo_sigma,5,5,0,1e-09,True
+"Marin, Comma",hi_sigma,5,5,0,1e-09,True
+"Marin, DCLM",sigma,7,7,0,1e-09,True
+"Marin, DCLM",se_sigma,7,7,6.93889e-17,1e-09,True
+"Marin, DCLM",lo_sigma,7,7,0,1e-09,True
+"Marin, DCLM",hi_sigma,7,7,0,1e-09,True
+"Marin, Nemotron-CC",sigma,7,7,0,1e-09,True
+"Marin, Nemotron-CC",se_sigma,7,7,6.93889e-17,1e-09,True
+"Marin, Nemotron-CC",lo_sigma,7,7,0,1e-09,True
+"Marin, Nemotron-CC",hi_sigma,7,7,0,1e-09,True
+Chinchilla,summary sigma_re,9,9,0,1e-09,True
+Chinchilla,summary se_sigma_re,9,9,7.28584e-17,1e-09,True
+Chinchilla,summary sigma_fe,9,9,0,1e-09,True
+Llama 3,summary sigma_re,8,8,0,1e-09,True
+Llama 3,summary se_sigma_re,8,8,2.77556e-17,1e-09,True
+Llama 3,summary sigma_fe,8,8,0,1e-09,True
+"Marin, Comma",summary sigma_re,5,5,0,1e-09,True
+"Marin, Comma",summary se_sigma_re,5,5,2.08167e-17,1e-09,True
+"Marin, Comma",summary sigma_fe,5,5,0,1e-09,True
+"Marin, DCLM",summary sigma_re,7,7,0,1e-09,True
+"Marin, DCLM",summary se_sigma_re,7,7,6.93889e-18,1e-09,True
+"Marin, DCLM",summary sigma_fe,7,7,0,1e-09,True
+"Marin, Nemotron-CC",summary sigma_re,7,7,0,1e-09,True
+"Marin, Nemotron-CC",summary se_sigma_re,7,7,3.1225e-17,1e-09,True
+"Marin, Nemotron-CC",summary sigma_fe,7,7,0,1e-09,True
+Chinchilla (132 runs),summary sigma_re vs rb4 review R13,9,9,1.45324e-07,1e-06,True

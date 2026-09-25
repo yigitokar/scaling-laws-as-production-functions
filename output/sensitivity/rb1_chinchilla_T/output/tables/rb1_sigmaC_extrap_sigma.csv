@@ -1,0 +1,21 @@
+design,spec,sigma_star
+"Marin, Comma",chin_full,0.689546
+"Marin, Comma",kappa_full,0.678162
+"Marin, Comma",chin_M100,0.744501
+"Marin, Comma",kappa_M100,0.709082
+"Marin, Comma",local first-derivative 1/(1+b1),0.665616
+"Marin, DCLM",chin_full,0.680403
+"Marin, DCLM",kappa_full,0.668226
+"Marin, DCLM",chin_M100,0.715014
+"Marin, DCLM",kappa_M100,0.694989
+"Marin, DCLM",local first-derivative 1/(1+b1),0.666589
+"Marin, Nemotron-CC",chin_full,0.684317
+"Marin, Nemotron-CC",kappa_full,0.676642
+"Marin, Nemotron-CC",chin_M100,0.740731
+"Marin, Nemotron-CC",kappa_M100,0.699721
+"Marin, Nemotron-CC",local first-derivative 1/(1+b1),0.675753
+Llama 3,chin_full,0.769475
+Llama 3,kappa_full,0.692662
+Llama 3,chin_M100,0.773736
+Llama 3,kappa_M100,0.680255
+Llama 3,local first-derivative 1/(1+b1),0.629086

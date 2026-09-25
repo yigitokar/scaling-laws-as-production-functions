@@ -1,0 +1,21 @@
+level,group,n,n_developers,median_w,median_s,q25_s,q75_s,share_w_gt1,developers
+model,served (model-level),26,6,5.841434665754548,0.8285574821710469,0.6287853883564479,0.9062237847568444,1.0,Alibaba; DeepSeek; Google; IBM; Meta; MosaicML
+model,not served (model-level),51,15,3.8006661842726315,0.7368882318215538,0.5982832969373885,0.8403852994192922,0.9607843137254902,01.AI; AI2; Cerebras; DeepSeek; Google; H2O.ai; Hugging Face; M-A-P; Marin; Meta; Microsoft; Stability AI; Swiss AI; TII; TinyLlama
+model,"served (developer-level, ra2)",33,7,4.954946435161385,0.7981814711651006,0.6261166096800928,0.8974769275928524,1.0,Alibaba; DeepSeek; Google; IBM; Meta; Microsoft; MosaicML
+model,"not served (developer-level, ra2)",44,12,3.7982348204473113,0.7367187076214845,0.5853760898910028,0.8422994582754834,0.9545454545454546,01.AI; AI2; Cerebras; H2O.ai; Hugging Face; M-A-P; Marin; Meta; Stability AI; Swiss AI; TII; TinyLlama
+model,"served, outside tier windows and not common-D",2,1,14.851770804462276,0.9236753544091121,0.9105761410009822,0.9367745678172419,1.0,Alibaba
+model,"served, inside a tier window (w - 1 upper bound)",18,5,3.8864971506691584,0.7424551405743332,0.5678964483564288,0.8579884171231058,1.0,Alibaba; DeepSeek; Google; IBM; MosaicML
+model,"served, common-D family member",18,5,7.506178523636692,0.8667663641936957,0.6750238412507162,0.9200588210565591,1.0,Alibaba; DeepSeek; IBM; Meta; MosaicML
+model,"served, without Alibaba",7,5,2.2219596870208873,0.5499468303402214,0.2051749146540578,0.7848291558003433,1.0,DeepSeek; Google; IBM; Meta; MosaicML
+model,on-device target (card),9,2,9.54032853240347,0.8951818067267258,0.8404879211415716,0.9182225201262866,1.0,H2O.ai; Hugging Face
+model,local target (card),3,1,4.417266311464716,0.7736156415553738,0.7540737481665463,0.7961261980208412,1.0,Google
+model,server or unspecified target,65,16,3.3823441819031577,0.704347060435072,0.5655156916805294,0.8511464610367326,0.9692307692307692,01.AI; AI2; Alibaba; Cerebras; DeepSeek; H2O.ai; IBM; M-A-P; Marin; Meta; Microsoft; MosaicML; Stability AI; Swiss AI; TII; TinyLlama
+model,inside a tier window,49,15,3.1070785676869286,0.6781542602752874,0.5709494921606031,0.821988507519126,0.9795918367346939,AI2; Alibaba; Cerebras; DeepSeek; Google; Hugging Face; IBM; M-A-P; Marin; Meta; Microsoft; MosaicML; Stability AI; Swiss AI; TII
+model,outside tier windows,28,10,7.083407429533742,0.8580719991401584,0.736987598490014,0.9253378164963968,0.9642857142857143,01.AI; AI2; Alibaba; H2O.ai; Hugging Face; Meta; Microsoft; Stability AI; TII; TinyLlama
+model,"inside a tier window, literal windows (<=3.3B, 7-9.5B, 12-14.9B, 27-32.9B, 65-72.9B)",61,17,4.954946435161385,0.7981814711651006,0.6217453024050509,0.8723630121406716,0.9836065573770492,AI2; Alibaba; Cerebras; DeepSeek; Google; H2O.ai; Hugging Face; IBM; M-A-P; Marin; Meta; Microsoft; MosaicML; Stability AI; Swiss AI; TII; TinyLlama
+model,"served, inside a literal tier window",23,5,6.065254501907896,0.8351264568229678,0.6640299532429632,0.9040456494789643,1.0,Alibaba; DeepSeek; Google; IBM; MosaicML
+model,neither common-D nor tier window,19,8,6.567457328636474,0.8477340696772188,0.748844917057417,0.904654186306146,0.9473684210526315,AI2; Alibaba; H2O.ai; Hugging Face; Microsoft; Stability AI; TII; TinyLlama
+decision,served (any member),11,6,3.1070785676869286,0.6781542602752874,0.30010437002288415,0.7924695839651421,1.0,Alibaba; DeepSeek; Google; IBM; Meta; MosaicML
+decision,not served,38,14,3.8656188790637738,0.7412476482862493,0.6087729476123946,0.83935309082408,0.9736842105263158,01.AI; AI2; Cerebras; Google; H2O.ai; Hugging Face; M-A-P; Marin; Meta; Microsoft; Stability AI; Swiss AI; TII; TinyLlama
+decision,on-device target,8,2,10.127725738651307,0.8998212825268433,0.8506242099903355,0.9210463655432337,1.0,H2O.ai; Hugging Face
+decision,not on-device,41,17,3.1070785676869286,0.6781542602752874,0.4919591934588733,0.7736156415553738,0.975609756097561,01.AI; AI2; Alibaba; Cerebras; DeepSeek; Google; H2O.ai; IBM; M-A-P; Marin; Meta; Microsoft; MosaicML; Stability AI; Swiss AI; TII; TinyLlama

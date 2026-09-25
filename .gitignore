@@ -1,11 +1,12 @@
+# Written by code/export_public.sh for the public replication package.
 .venv/
-data/raw/
-data/processed/sweep/*.bin
-tools/
+/tools/
 __pycache__/
 *.pyc
 .DS_Store
-*.aux
-*.log
+paper/**/*.aux
+paper/**/*.log
+data/raw/*
+!data/raw/MANIFEST.sha256
+data/processed/sweep/*.bin
 data/processed/sweep/ckpt/
-_public_export/

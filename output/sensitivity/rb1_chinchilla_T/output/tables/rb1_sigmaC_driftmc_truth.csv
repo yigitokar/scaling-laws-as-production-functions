@@ -1,0 +1,79 @@
+design,target_drift,C,sigma_true
+Chinchilla,0,6e+18,0.673
+Chinchilla,0,1e+19,0.673
+Chinchilla,0,3e+19,0.673
+Chinchilla,0,6e+19,0.673
+Chinchilla,0,1e+20,0.673
+Chinchilla,0,3e+20,0.673
+Chinchilla,0,6e+20,0.673
+Chinchilla,0,1e+21,0.673
+Chinchilla,0,3e+21,0.673
+Chinchilla,-0.03,6e+18,0.713485
+Chinchilla,-0.03,1e+19,0.706829
+Chinchilla,-0.03,3e+19,0.692515
+Chinchilla,-0.03,6e+19,0.683485
+Chinchilla,-0.03,1e+20,0.676829
+Chinchilla,-0.03,3e+20,0.662515
+Chinchilla,-0.03,6e+20,0.653485
+Chinchilla,-0.03,1e+21,0.646829
+Chinchilla,-0.03,3e+21,0.632515
+Chinchilla,-0.06,6e+18,0.753969
+Chinchilla,-0.06,1e+19,0.740658
+Chinchilla,-0.06,3e+19,0.712031
+Chinchilla,-0.06,6e+19,0.693969
+Chinchilla,-0.06,1e+20,0.680658
+Chinchilla,-0.06,3e+20,0.652031
+Chinchilla,-0.06,6e+20,0.633969
+Chinchilla,-0.06,1e+21,0.620658
+Chinchilla,-0.06,3e+21,0.592031
+Llama 3,0,6e+18,0.66
+Llama 3,0,1e+19,0.66
+Llama 3,0,3e+19,0.66
+Llama 3,0,6e+19,0.66
+Llama 3,0,1e+20,0.66
+Llama 3,0,3e+20,0.66
+Llama 3,0,6e+20,0.66
+Llama 3,0,1e+21,0.66
+Llama 3,0,3e+21,0.66
+Llama 3,0,1e+22,0.66
+Llama 3,-0.03,6e+18,0.708328
+Llama 3,-0.03,1e+19,0.701672
+Llama 3,-0.03,3e+19,0.687359
+Llama 3,-0.03,6e+19,0.678328
+Llama 3,-0.03,1e+20,0.671672
+Llama 3,-0.03,3e+20,0.657359
+Llama 3,-0.03,6e+20,0.648328
+Llama 3,-0.03,1e+21,0.641672
+Llama 3,-0.03,3e+21,0.627359
+Llama 3,-0.03,1e+22,0.611672
+Llama 3,-0.06,6e+18,0.756655
+Llama 3,-0.06,1e+19,0.743345
+Llama 3,-0.06,3e+19,0.714717
+Llama 3,-0.06,6e+19,0.696655
+Llama 3,-0.06,1e+20,0.683345
+Llama 3,-0.06,3e+20,0.654717
+Llama 3,-0.06,6e+20,0.636655
+Llama 3,-0.06,1e+21,0.623345
+Llama 3,-0.06,3e+21,0.594717
+Llama 3,-0.06,1e+22,0.563345
+"Marin, DCLM",0,3e+18,0.713
+"Marin, DCLM",0,9e+18,0.713
+"Marin, DCLM",0,1.8e+19,0.713
+"Marin, DCLM",0,3e+19,0.713
+"Marin, DCLM",0,9e+19,0.713
+"Marin, DCLM",0,1.8e+20,0.713
+"Marin, DCLM",0,3e+20,0.713
+"Marin, DCLM",-0.03,3e+18,0.743
+"Marin, DCLM",-0.03,9e+18,0.728686
+"Marin, DCLM",-0.03,1.8e+19,0.719655
+"Marin, DCLM",-0.03,3e+19,0.713
+"Marin, DCLM",-0.03,9e+19,0.698686
+"Marin, DCLM",-0.03,1.8e+20,0.689655
+"Marin, DCLM",-0.03,3e+20,0.683
+"Marin, DCLM",-0.06,3e+18,0.773
+"Marin, DCLM",-0.06,9e+18,0.744373
+"Marin, DCLM",-0.06,1.8e+19,0.726311
+"Marin, DCLM",-0.06,3e+19,0.713
+"Marin, DCLM",-0.06,9e+19,0.684373
+"Marin, DCLM",-0.06,1.8e+20,0.666311
+"Marin, DCLM",-0.06,3e+20,0.653

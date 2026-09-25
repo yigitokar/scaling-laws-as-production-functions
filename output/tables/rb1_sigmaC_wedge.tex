@@ -1,0 +1,55 @@
+\begin{table}[tp]
+\centering
+\caption{Curvature at Frontier Compute and the Size of the Revealed Wedges}
+\label{tab:sigmaC-wedge}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.31\textwidth}cccccc@{}}
+\toprule
+\multicolumn{7}{@{}l}{\textit{Panel A. $\sigma^*(C)$ beyond the designs and the wedge scale $k=1/\sigma^*-1$}} \\[1pt]
+Compute (FLOP) & $10^{21}$ & $10^{22}$ & $10^{23}$ & $10^{24}$ & $10^{25}$ & $10^{26}$ \\
+\midrule
+$\sigma^*$, upper bound$^{a}$ & 0.594 & 0.594 & 0.594 & 0.594 & 0.594 & 0.594 \\
+$\sigma^*$, lower bound, Chinchilla--Llama 3 drift ($-$0.058) & 0.594 & 0.536 & 0.479 & 0.421 & 0.363 & 0.306 \\
+$\sigma^*$, lower bound, pooled drift ($-$0.033) & 0.594 & 0.561 & 0.528 & 0.495 & 0.463 & 0.430 \\
+$k$ at the upper bound & 0.684 & 0.684 & 0.684 & 0.684 & 0.684 & 0.684 \\
+$k$ at the lower bound (Chinchilla--Llama 3) & 0.684 & 0.865 & 1.089 & 1.375 & 1.751 & 2.269 \\
+Memo: $k$ at $\sigma^*=0.70$ & 0.429 & 0.429 & 0.429 & 0.429 & 0.429 & 0.429 \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel B. Revealed wedges and shares on the clean sample (77 models)}} \\[1pt]
+ & \multicolumn{3}{c}{Median} & Llama 3 & OLMo 2 & SmolLM2 \\
+\cmidrule(lr){2-4}
+Curvature & $w$ & $s$ & $s$, units$^{b}$ & herd $s_f$ & 7B $w$ & 1.7B $w$ \\
+\midrule
+Reference ($\sigma^*=0.701$) & 3.99 & 0.749 & 0.736 & 0.294 & 4.0 & 11.3 \\
+$\sigma^*=0.70$ & 4.00 & 0.750 & 0.737 & 0.294 & 4.0 & 11.4 \\
+$\sigma^*=0.65$ & 5.71 & 0.825 & 0.813 & 0.349 & 5.7 & 21.3 \\
+Top budgets, 95\% upper ($\sigma^*=0.622$) & 7.14 & 0.860 & 0.849 & 0.380 & 7.1 & 31.6 \\
+Top budgets ($\sigma^*=0.594$) & 9.13 & 0.890 & 0.881 & 0.412 & 9.1 & 48.6 \\
+$\sigma^*=0.60$ & 8.64 & 0.884 & 0.874 & 0.405 & 8.6 & 44.2 \\
+$\sigma^*=0.55$ & 14.11 & 0.929 & 0.922 & 0.464 & 14.1 & 104.4 \\
+$\sigma^*(C_i)$, pooled line & 11.07 & 0.910 & 0.890 & 0.525 & 11.1 & 61.1 \\
+$\sigma^*(C_i)$, lower bound (Chin.--Llama) & 45.50 & 0.978 & 0.963 & 0.750 & 41.8 & 526.0 \\
+$\sigma^*(C_i)$, lower bound (pooled) & 19.80 & 0.949 & 0.935 & 0.594 & 19.8 & 165.6 \\
+\addlinespace
+\multicolumn{7}{@{}l}{\textit{Panel C. Bounds on the median $s$ (Proposition 5(iv))}} \\[1pt]
+ & \multicolumn{2}{c}{PI-1} & \multicolumn{2}{c}{PI-2} & \multicolumn{2}{c}{PI-3} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+Curvature range & Lower & Upper & Lower & Upper & Lower & Upper \\
+\midrule
+$k\in[0.40,0.52]$ (round 2) & 0.589 & 0.933 & 0.589 & 0.887 & 0.545 & 0.941 \\
+$k\in[0.40,0.67]$ & 0.589 & 0.969 & 0.589 & 0.940 & 0.545 & 0.974 \\
+$k\in[0.40,k_{\rm lin}(C_i)]$ & 0.589 & 0.998 & 0.589 & 0.992 & 0.545 & 0.998 \\
+$k\in[0.68,k_{\rm lin}(C_i)]$ & 0.779 & 0.998 & 0.779 & 0.992 & 0.737 & 0.998 \\
+$k\in[0.61,k_{\rm lin}(C_i)]^{c}$ & 0.737 & 0.998 & 0.737 & 0.992 & 0.694 & 0.998 \\
+\bottomrule
+\end{tabular*}
+
+\begin{tablenotes}
+Panel A: $^{a}$Partial identification \citep{manski2003partial}. For compute above the largest bracketed budgets ($\approx10^{21}$ FLOP), $\sigma^*(C)\in[\sigma_{\rm lin}(C),\sigma_{\rm top}]$ if $\sigma^*$ does not rise with compute beyond the designs (upper bound $\sigma_{\rm top}=0.594$: inverse-variance mean of Chinchilla's and Llama~3's estimates at $6\times10^{20}$ FLOP and above, placed at $10^{21}$) and falls no faster than the within-design drift measured where it is observed (lower bound: linear continuation from $\sigma_{\rm top}$, truncated to $(0,1)$). If the drift is not real (Marin shows none up to $3\times10^{20}$), the design average 0.70 applies; the drift-agnostic set is $[\sigma_{\rm lin}(C),0.70]$. Panel B: $\ln w=k\ln(M/M^*_{\rm ref}(C))$, each model's reference zero point held fixed (module ra2); $s=(w-1)/w$. $\sigma^*(C_i)$ rows evaluate the curvature at each model's training compute (median $2\times10^{23}$ FLOP; 76 of 77 models above $10^{21}$). $^{b}$Decision units: one family-level share per common-$D$ family ($W_f=[\sum_j\omega_j/w_j]^{-1}$, 11 families) plus the 45 members of size-specific families and singletons. The share with $w>1$ (0.974) does not depend on $k$. For $w>1$, $\ln w$ increases with $k$: if $\sigma^*$ falls with compute, the reference level is a lower bound on the wedge, not a midpoint. Panel C: medians of the per-model bounds on $s$ under module ra2's sets for $M^*(C)$ (PI-1: IsoFLOP anchors, path elasticity $e\in[-0.16,0.19]$; PI-2: plus $M^*$ nondecreasing; PI-3: own-lab anchors) and the stated curvature range; $k_{\rm lin}(C_i)$ uses the Chinchilla--Llama~3 drift (CSV: pooled drift). The first row reproduces module ra2. $^{c}$Lower curvature bound at the upper end of the 95\% HKSJ interval of $\sigma_{\rm top}$ (0.622), allowing for sampling error in the top-budget value. The lower bound on $\sigma^*(C)$ assumes a linear decline at the Chinchilla--Llama~3 rate; a hinge fit gives a steeper decline above $3\times10^{20}$, so that bound is not conservative against acceleration.
+\end{tablenotes}
+
+\begin{tablenotes}[Source]
+Modules ra1 (budget-level $\sigma^*_b$) and ra2 (clean sample, reference zero points, bounds on $M^*(C)$); authors' calculations.
+\end{tablenotes}
+\end{table}

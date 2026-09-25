@@ -1,0 +1,4 @@
+set,k,members,mean_fixed,se_fixed,mean_re,lo_hksj,hi_hksj,tau,Q,p_Q,plain_mean
+"Chinchilla + Llama 3, budgets >= 6e20",5,Chinchilla 6e+20: 0.564; Chinchilla 1e+21: 0.617; Chinchilla 3e+21: 0.579; Llama 3 6e+20: 0.585; Llama 3 1e+21: 0.609,0.595713,0.0103396,0.595713,0.567006,0.624421,0,1.94419,0.746023,0.590849
+"Chinchilla + Llama 3 + Farseer path, budgets >= 6e20",6,Chinchilla 6e+20: 0.564; Chinchilla 1e+21: 0.617; Chinchilla 3e+21: 0.579; Llama 3 6e+20: 0.585; Llama 3 1e+21: 0.609; Farseer (local path) 1e+21: 0.658,0.625839,0.00740696,0.610771,0.564006,0.657537,0.0344695,19.3826,0.00163082,0.601973
+"Chinchilla + Llama 3, largest bracketed budget of each",2,Chinchilla 3e+21: 0.579; Llama 3 1e+21: 0.609,0.606825,0.0158978,0.606825,0.404824,0.808826,0,0.292418,0.588675,0.594115
